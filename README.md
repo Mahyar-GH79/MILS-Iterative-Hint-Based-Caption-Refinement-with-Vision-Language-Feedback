@@ -69,3 +69,13 @@ python plot_and_dataset_eval.py \
 ```
 This script evaluates the refined captions using standard captioning metrics and generates plots summarizing the results. Java is required for SPICE evaluation.
 
+## Evaluating BLEU4 (Optional)
+run the following command in the project directory to add **BLEU4** to the already computed metrics:
+```bash
+python add_bleu4_to_metrics.py \
+  --traces_dir hint_only_results_qwenllm/per_image_traces \
+  --metrics_dir hint_only_results_qwenllm/per_image_metrics \
+  --ann_file /home/mahyar/UMD_FinalProject/data/captions_val2017.json \
+  --num_steps 10
+```
+
