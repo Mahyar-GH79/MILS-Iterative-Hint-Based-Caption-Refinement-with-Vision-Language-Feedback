@@ -40,6 +40,11 @@ python3 -m venv env
 source env/bin/activate
 ```
 
+Install the requirements by executing the following command:
+```bash
+pip install requirements.txt
+```
+
 
 
 
