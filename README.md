@@ -44,7 +44,16 @@ Install the requirements by executing the following command:
 ```bash
 pip install requirements.txt
 ```
+## Running the Pipeline
+Example command to run the batch caption refinement:
 
-
+```bash
+python run_batches.py \
+  --coco_images_dir data/coco/images/val2017 \
+  --ann_file data/coco/annotations/captions_val2017.json \
+  --results_dir outputs/hint_only_results_qwenllm \
+  --max_images 1000 \
+  --num_steps 10
+```
 
 
