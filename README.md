@@ -30,6 +30,16 @@ data/val2017
 Extract and place the captions under:
 data/captions_val2017.json
 
+## Environment Setup
+
+From the project root, create and activate a virtual environment.
+
+On Linux or macOS:
+```bash
+python3 -m venv env
+source env/bin/activate
+
+
 
 
 
