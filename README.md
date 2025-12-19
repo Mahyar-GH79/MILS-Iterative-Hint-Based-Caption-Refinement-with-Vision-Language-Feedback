@@ -21,7 +21,12 @@ This project uses the **COCO 2017 validation dataset**.
 
 ### Step 1: Download COCO images
 
-Download **val2017 images** from the official COCO website:
+Download **val2017 images** from the official COCO website, and put them under the directory data/
 https://cocodataset.org/#download
+
+Extract and place:
+data/coco/annotations/captions_val2017.json
+
+
 
 
