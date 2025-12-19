@@ -67,6 +67,5 @@ python plot_and_dataset_eval.py \
   --meteor_timeout_sec 60 \
   --image_timeout_sec 240
 ```
-```markdown
 This script evaluates the refined captions using standard captioning metrics and generates plots summarizing the results. Java is required for SPICE evaluation.
 
