@@ -24,4 +24,4 @@ This project uses the **COCO 2017 validation dataset**.
 Download **val2017 images** from the official COCO website:
 https://cocodataset.org/#download
 
-File:
+
