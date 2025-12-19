@@ -56,4 +56,17 @@ python run_batches.py \
   --num_steps 10
 ```
 
+Evaluate captions using standard captioning metrics, then visualize them in plots using:
+```bash
+python plot_and_dataset_eval.py \
+  -r outputs/hint_only_results_qwenllm \
+  -a data/coco/annotations/captions_val2017.json \
+  -n 10 \
+  -j /usr/bin/java \
+  --spice_timeout_sec 180 \
+  --meteor_timeout_sec 60 \
+  --image_timeout_sec 240
+```
+```markdown
+This script evaluates the refined captions using standard captioning metrics and generates plots summarizing the results. Java is required for SPICE evaluation.
 
