@@ -1,0 +1,252 @@
+{
+  "image_id": 87038,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000087038.jpg",
+  "objects": [
+    "skateboard",
+    "bike",
+    "skateboarder",
+    "bike rider",
+    "graffiti",
+    "building",
+    "ramp",
+    "bench",
+    "people",
+    "street",
+    "sky",
+    "clouds",
+    "sign",
+    "window",
+    "door",
+    "wall",
+    "roof",
+    "ground",
+    "parking lot",
+    "park"
+  ],
+  "template": "We have an image with these objects: ['skateboard', 'bike', 'skateboarder', 'bike rider', 'graffiti', 'building', 'ramp', 'bench', 'people', 'street', 'sky', 'clouds', 'sign', 'window', 'door', 'wall', 'roof', 'ground', 'parking lot', 'park']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Skateboarder and bike rider on graffiti-covered street",
+      "vlm_hint": {
+        "missing_objects": [
+          "ramp",
+          "bench",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "sign",
+          "window",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder and bike rider on graffiti-covered street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ramp\", \"bench\", \"people\"],\n  \"hallucinated_objects\": [\"sign\", \"window\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Skateboarder and bike rider on graffiti-covered street by ramp and bench with people nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bike",
+          "people",
+          "ramp",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "skateboarder",
+          "bike rider"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their positions.",
+        "edit_instructions": [
+          "Provide specific details about the objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder and bike rider on graffiti-covered street by ramp and bench with people nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bike\", \"people\", \"ramp\", \"bench\"],\n  \"hallucinated_objects\": [\"skateboarder\", \"bike rider\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their positions.\",\n  \"edit_instructions\": \"Provide specific details about the objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Graffiti-adorned bike rider and skateboarder near ramp and bench on busy street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bike",
+          "ramp",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "street",
+          "park"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of ramp, the exact location of the bench, and the number of people present."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Graffiti-adorned bike rider and skateboarder near ramp and bench on busy street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bike\", \"ramp\", \"bench\"],\n  \"hallucinated_objects\": [\"people\", \"street\", \"park\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of ramp, the exact location of the bench, and the number of people present.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Graffiti-covered skateboarder and bike rider beside concrete ramp and wooden bench on busy street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bike",
+          "people",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "skateboarder",
+          "bike rider",
+          "concrete ramp",
+          "wooden bench",
+          "busy street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Graffiti-covered skateboarder and bike rider beside concrete ramp and wooden bench on busy street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bike\", \"people\", \"parking lot\"],\n  \"hallucinated_objects\": [\"skateboarder\", \"bike rider\", \"concrete ramp\", \"wooden bench\", \"busy street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Skateboarder and bike rider stand near graffiti on building by street with clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ramp",
+          "bench",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "sign",
+          "window",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder and bike rider stand near graffiti on building by street with clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ramp\", \"bench\", \"people\"],\n  \"hallucinated_objects\": [\"sign\", \"window\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Skateboarder and bike rider on ramp near graffiti-covered building in street with clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "ramp",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bike rider"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their positions.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder and bike rider on ramp near graffiti-covered building in street with clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"ramp\", \"bench\"],\n  \"hallucinated_objects\": [\"bike rider\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their positions.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Skateboarder on ramp near graffiti-covered building with bench and people in the street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bike",
+          "bike rider"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bike and the exact location of the people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on ramp near graffiti-covered building with bench and people in the street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bike\", \"bike rider\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bike and the exact location of the people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Skateboarder on ramp near graffiti-covered building with bike rider on street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "ramp",
+          "bike",
+          "skateboarder"
+        ],
+        "hallucinated_objects": [
+          "bike rider",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their positions.",
+        "edit_instructions": [
+          "Provide specific details about the objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on ramp near graffiti-covered building with bike rider on street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"ramp\", \"bike\", \"skateboarder\"],\n  \"hallucinated_objects\": [\"bike rider\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their positions.\",\n  \"edit_instructions\": \"Provide specific details about the objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Skateboarder on ramp near graffiti-covered building with bike nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "ramp",
+          "bike"
+        ],
+        "hallucinated_objects": [
+          "skateboarder",
+          "building",
+          "graffiti"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their positions.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on ramp near graffiti-covered building with bike nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"ramp\", \"bike\"],\n  \"hallucinated_objects\": [\"skateboarder\", \"building\", \"graffiti\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their positions.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Skateboarder on ramp near bike in graffiti-filled parking lot.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "ramp",
+          "bike"
+        ],
+        "hallucinated_objects": [
+          "skateboarder",
+          "bike rider"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their positions.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, bike, skateboarder, bike rider, graffiti, building, ramp, bench, people, street, sky, clouds, sign, window, door, wall, roof, ground, parking lot, park]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on ramp near bike in graffiti-filled parking lot.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"ramp\", \"bike\"],\n  \"hallucinated_objects\": [\"skateboarder\", \"bike rider\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their positions.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 87038,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000087038.jpg",
+    "final_caption": "Skateboarder on ramp near bike in graffiti-filled parking lot.",
+    "total_time_sec": 32.94
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"skateboard\",\n    \"bike\",\n    \"skateboarder\",\n    \"bike rider\",\n    \"graffiti\",\n    \"building\",\n    \"ramp\",\n    \"bench\",\n    \"people\",\n    \"street\",\n    \"sky\",\n    \"clouds\",\n    \"sign\",\n    \"window\",\n    \"door\",\n    \"wall\",\n    \"roof\",\n    \"ground\",\n    \"parking lot\",\n    \"park\"\n  ]\n}"
+}

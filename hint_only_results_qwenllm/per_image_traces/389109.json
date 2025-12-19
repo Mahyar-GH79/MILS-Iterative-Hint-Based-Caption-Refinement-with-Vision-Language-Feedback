@@ -1,0 +1,246 @@
+{
+  "image_id": 389109,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000389109.jpg",
+  "objects": [
+    "pizza",
+    "plate",
+    "tablecloth",
+    "napkin",
+    "phone",
+    "wallet",
+    "table",
+    "chairs",
+    "people",
+    "restaurant",
+    "cityscape",
+    "night",
+    "buildings",
+    "lights",
+    "windows",
+    "doors",
+    "street",
+    "sky",
+    "trees",
+    "streetlights"
+  ],
+  "template": "We have an image with these objects: ['pizza', 'plate', 'tablecloth', 'napkin', 'phone', 'wallet', 'table', 'chairs', 'people', 'restaurant', 'cityscape', 'night', 'buildings', 'lights', 'windows', 'doors', 'street', 'sky', 'trees', 'streetlights']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Nighttime pizza restaurant with lit buildings and tables",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "wallet"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the phone and wallet on the table, and the streetlights and trees in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Nighttime pizza restaurant with lit buildings and tables\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"wallet\"],\n  \"hallucinated_objects\": [\"streetlights\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the phone and wallet on the table, and the streetlights and trees in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Pizza on a plate near a wallet and phone at a table in a nighttime restaurant with buildings and lights.",
+      "vlm_hint": {
+        "missing_objects": [
+          "napkin",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "cityscape",
+          "lights",
+          "buildings",
+          "street",
+          "trees",
+          "streetlights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a napkin and tablecloth, and remove the generic terms like 'cityscape' and 'lights'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate near a wallet and phone at a table in a nighttime restaurant with buildings and lights.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"napkin\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"cityscape\", \"lights\", \"buildings\", \"street\", \"trees\", \"streetlights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a napkin and tablecloth, and remove the generic terms like 'cityscape' and 'lights'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Pizza on a plate with a napkin and tablecloth at a table in a nighttime restaurant with buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "wallet"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and mention streetlights and trees in the background."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate with a napkin and tablecloth at a table in a nighttime restaurant with buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"wallet\"],\n  \"hallucinated_objects\": [\"streetlights\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and mention streetlights and trees in the background.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Pizza on a plate with a napkin and tablecloth at a table, phone and wallet nearby, under streetlights and among trees in a nighttime restaurant with buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cityscape",
+          "trees",
+          "streetlights"
+        ],
+        "hallucinated_objects": [
+          "doors",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment, such as the presence of trees, streetlights, and a cityscape."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate with a napkin and tablecloth at a table, phone and wallet nearby, under streetlights and among trees in a nighttime restaurant with buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cityscape\", \"trees\", \"streetlights\"],\n  \"hallucinated_objects\": [\"doors\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment, such as the presence of trees, streetlights, and a cityscape.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Pizza on a plate under streetlights among trees in a nighttime restaurant with cityscape buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "wallet"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "trees",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and the exact location of the streetlights and trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate under streetlights among trees in a nighttime restaurant with cityscape buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"wallet\"],\n  \"hallucinated_objects\": [\"streetlights\", \"trees\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and the exact location of the streetlights and trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Pizza on a plate near phone and wallet on a table under streetlights among trees in a nighttime restaurant with cityscape buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "napkin",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "trees",
+          "doors",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a napkin and tablecloth, and remove the generic references to streetlights, trees, doors, and street."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate near phone and wallet on a table under streetlights among trees in a nighttime restaurant with cityscape buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"napkin\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"streetlights\", \"trees\", \"doors\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a napkin and tablecloth, and remove the generic references to streetlights, trees, doors, and street.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Pizza on a plate with napkin and tablecloth on a table under night lights in a restaurant with city buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "wallet"
+        ],
+        "hallucinated_objects": [
+          "streetlights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and mention the streetlights in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate with napkin and tablecloth on a table under night lights in a restaurant with city buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"wallet\"],\n  \"hallucinated_objects\": [\"streetlights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and mention the streetlights in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Pizza on a plate with napkin and tablecloth on a table, night lights, phone, wallet, city buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cityscape",
+          "lights",
+          "doors",
+          "streetlights"
+        ],
+        "hallucinated_objects": [
+          "phone",
+          "wallet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and objects.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and objects, and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate with napkin and tablecloth on a table, night lights, phone, wallet, city buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cityscape\", \"lights\", \"doors\", \"streetlights\"],\n  \"hallucinated_objects\": [\"phone\", \"wallet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and objects.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and objects, and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Pizza on a plate with napkin and tablecloth at a table in a city restaurant, night lights and tall buildings outside.",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "wallet"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and mention the streetlights and trees outside."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate with napkin and tablecloth at a table in a city restaurant, night lights and tall buildings outside.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"wallet\"],\n  \"hallucinated_objects\": [\"streetlights\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a phone and wallet on the table, and mention the streetlights and trees outside.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Pizza on a plate with napkin and tablecloth, phone and wallet nearby, streetlights and trees outside in a city restaurant at night.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cityscape",
+          "trees",
+          "streetlights"
+        ],
+        "hallucinated_objects": [
+          "phone",
+          "wallet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, tablecloth, napkin, phone, wallet, table, chairs, people, restaurant, cityscape, night, buildings, lights, windows, doors, street, sky, trees, streetlights]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on a plate with napkin and tablecloth, phone and wallet nearby, streetlights and trees outside in a city restaurant at night.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cityscape\", \"trees\", \"streetlights\"],\n  \"hallucinated_objects\": [\"phone\", \"wallet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 389109,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000389109.jpg",
+    "final_caption": "Pizza on a plate with napkin and tablecloth, phone and wallet nearby, streetlights and trees outside in a city restaurant at night.",
+    "total_time_sec": 36.43
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"pizza\",\n    \"plate\",\n    \"tablecloth\",\n    \"napkin\",\n    \"phone\",\n    \"wallet\",\n    \"table\",\n    \"chairs\",\n    \"people\",\n    \"restaurant\",\n    \"cityscape\",\n    \"night\",\n    \"buildings\",\n    \"lights\",\n    \"windows\",\n    \"doors\",\n    \"street\",\n    \"sky\",\n    \"trees\",\n    \"streetlights\"\n  ]\n}"
+}

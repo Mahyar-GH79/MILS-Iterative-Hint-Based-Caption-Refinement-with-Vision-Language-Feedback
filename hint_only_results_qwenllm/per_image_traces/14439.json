@@ -1,0 +1,307 @@
+{
+  "image_id": 14439,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000014439.jpg",
+  "objects": [
+    "kite",
+    "people",
+    "grass",
+    "park",
+    "soccer goal",
+    "bench",
+    "trees",
+    "children",
+    "adults",
+    "backpack",
+    "hat",
+    "shoes",
+    "jeans",
+    "sweatshirt",
+    "shorts",
+    "sneakers",
+    "watch",
+    "phone",
+    "water bottle"
+  ],
+  "template": "We have an image with these objects: ['kite', 'people', 'grass', 'park', 'soccer goal', 'bench', 'trees', 'children', 'adults', 'backpack', 'hat', 'shoes', 'jeans', 'sweatshirt', 'shorts', 'sneakers', 'watch', 'phone', 'water bottle']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People play near a soccer goal in a park with a kite flying overhead",
+      "vlm_hint": {
+        "missing_objects": [
+          "soccer goal",
+          "bench",
+          "trees",
+          "children",
+          "adults",
+          "backpack",
+          "hat",
+          "shoes",
+          "jeans",
+          "sweatshirt",
+          "shorts",
+          "sneakers",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic caption and provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People play near a soccer goal in a park with a kite flying overhead\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soccer goal\", \"bench\", \"trees\", \"children\", \"adults\", \"backpack\", \"hat\", \"shoes\", \"jeans\", \"sweatshirt\", \"shorts\", \"sneakers\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic caption and provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Kite flies as children and adults enjoy by soccer goal in park with trees and bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "soccer goal",
+          "bench",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of clothing and accessories the people are wearing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kite flies as children and adults enjoy by soccer goal in park with trees and bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"soccer goal\", \"bench\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of clothing and accessories the people are wearing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Kite soars as children in shorts and sneakers play near trees, adults in jeans and hats watch with phones and water bottles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soccer goal",
+          "bench",
+          "trees",
+          "children",
+          "adults",
+          "backpack",
+          "hat",
+          "shoes",
+          "jeans",
+          "sweatshirt",
+          "shorts",
+          "sneakers",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kite soars as children in shorts and sneakers play near trees, adults in jeans and hats watch with phones and water bottles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soccer goal\", \"bench\", \"trees\", \"children\", \"adults\", \"backpack\", \"hat\", \"shoes\", \"jeans\", \"sweatshirt\", \"shorts\", \"sneakers\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Children in shorts and sneakers play near a soccer goal while adults in jeans and hats watch with phones and water bottles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite"
+        ],
+        "hallucinated_objects": [
+          "soccer goal",
+          "bench",
+          "trees",
+          "children",
+          "adults",
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "genericity_hint": "The caption is too generic and does not accurately describe the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Children in shorts and sneakers play near a soccer goal while adults in jeans and hats watch with phones and water bottles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite\"],\n  \"hallucinated_objects\": [\"soccer goal\", \"bench\", \"trees\", \"children\", \"adults\", \"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"genericity_hint\": \"The caption is too generic and does not accurately describe the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People fly a kite on grass near a bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soccer goal",
+          "trees",
+          "children",
+          "adults",
+          "backpack",
+          "hat",
+          "shoes",
+          "jeans",
+          "sweatshirt",
+          "shorts",
+          "sneakers",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "bench"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly a kite on grass near a bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soccer goal\", \"trees\", \"children\", \"adults\", \"backpack\", \"hat\", \"shoes\", \"jeans\", \"sweatshirt\", \"shorts\", \"sneakers\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"bench\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People fly a kite near a soccer goal among trees with children in jeans and sweatshirts.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "soccer goal",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of clothing and accessories the people are wearing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly a kite near a soccer goal among trees with children in jeans and sweatshirts.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"soccer goal\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of clothing and accessories the people are wearing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People fly a kite on grass by a bench with children in jeans and sweatshirts wearing hats and watches.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soccer goal",
+          "trees",
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "bench"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a soccer goal, trees, a backpack, a hat, a watch, a phone, and a water bottle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly a kite on grass by a bench with children in jeans and sweatshirts wearing hats and watches.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soccer goal\", \"trees\", \"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"bench\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a soccer goal, trees, a backpack, a hat, a watch, a phone, and a water bottle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People fly a kite among trees while children in jeans and sweatshirts carry backpacks, wear hats and watches near a soccer goal.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "soccer goal"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of backpacks, hats, watches, and phones, and the presence of a soccer goal."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly a kite among trees while children in jeans and sweatshirts carry backpacks, wear hats and watches near a soccer goal.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"soccer goal\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of backpacks, hats, watches, and phones, and the presence of a soccer goal.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People fly a kite among trees while children in jeans and sweatshirts carrying backpacks, wearing hats and watches, stand near a soccer goal.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "soccer goal"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of backpacks, hats, watches, and phones, and the presence of a soccer goal."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly a kite among trees while children in jeans and sweatshirts carrying backpacks, wearing hats and watches, stand near a soccer goal.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"soccer goal\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of backpacks, hats, watches, and phones, and the presence of a soccer goal.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People fly a kite among trees as children in jeans and sweatshirts with backpacks, hats, and watches stand near a grassy area.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soccer goal",
+          "bench",
+          "trees",
+          "children",
+          "adults",
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "hallucinated_objects": [
+          "soccer goal",
+          "bench",
+          "trees",
+          "children",
+          "adults",
+          "backpack",
+          "hat",
+          "watch",
+          "phone",
+          "water bottle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color and design of the kite, the clothing and accessories of the people, and the location of the soccer goal and bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, people, grass, park, soccer goal, bench, trees, children, adults, backpack, hat, shoes, jeans, sweatshirt, shorts, sneakers, watch, phone, water bottle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly a kite among trees as children in jeans and sweatshirts with backpacks, hats, and watches stand near a grassy area.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soccer goal\", \"bench\", \"trees\", \"children\", \"adults\", \"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"hallucinated_objects\": [\"soccer goal\", \"bench\", \"trees\", \"children\", \"adults\", \"backpack\", \"hat\", \"watch\", \"phone\", \"water bottle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color and design of the kite, the clothing and accessories of the people, and the location of the soccer goal and bench.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 14439,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000014439.jpg",
+    "final_caption": "People fly a kite among trees as children in jeans and sweatshirts with backpacks, hats, and watches stand near a grassy area.",
+    "total_time_sec": 41.69
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"kite\",\n    \"people\",\n    \"grass\",\n    \"park\",\n    \"soccer goal\",\n    \"bench\",\n    \"trees\",\n    \"children\",\n    \"adults\",\n    \"backpack\",\n    \"hat\",\n    \"shoes\",\n    \"jeans\",\n    \"sweatshirt\",\n    \"shorts\",\n    \"sneakers\",\n    \"watch\",\n    \"phone\",\n    \"water bottle\"\n  ]\n}"
+}

@@ -1,0 +1,210 @@
+{
+  "image_id": 4495,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000004495.jpg",
+  "objects": [
+    "chair",
+    "couch",
+    "television",
+    "speaker",
+    "speaker",
+    "picture",
+    "whiteboard",
+    "wall",
+    "floor",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer",
+    "drawer"
+  ],
+  "template": "We have an image with these objects: ['chair', 'couch', 'television', 'speaker', 'speaker', 'picture', 'whiteboard', 'wall', 'floor', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer', 'drawer']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Modern room with TV speakers and many drawers",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "coffee table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of room or the furniture.",
+        "edit_instructions": [
+          "Add more specific details about the room and the furniture."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern room with TV speakers and many drawers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"coffee table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of room or the furniture.\",\n  \"edit_instructions\": \"Add more specific details about the room and the furniture.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Modern living room with TV, speakers, and multiple drawers on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "speaker",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "speaker",
+          "drawer"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of drawers or speakers.",
+        "edit_instructions": [
+          "Specify the number of drawers and speakers in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern living room with TV, speakers, and multiple drawers on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"speaker\", \"drawer\"],\n  \"hallucinated_objects\": [\"speaker\", \"drawer\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of drawers or speakers.\",\n  \"edit_instructions\": \"Specify the number of drawers and speakers in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Modern living room with two TVs two speakers and nine drawers on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "speaker",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "two TVs",
+          "nine drawers"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the two TVs and nine drawers. The caption should be more general."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern living room with two TVs two speakers and nine drawers on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"speaker\", \"drawer\"],\n  \"hallucinated_objects\": [\"two TVs\", \"nine drawers\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the two TVs and nine drawers. The caption should be more general.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Modern room with couch chair and TV speakers on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "picture"
+        ],
+        "hallucinated_objects": [
+          "drawer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the room.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the picture and avoids generic terms like 'drawer'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern room with couch chair and TV speakers on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"picture\"],\n  \"hallucinated_objects\": [\"drawer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the room.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the picture and avoids generic terms like 'drawer'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Modern room with couch, chair, TV, speakers, and picture on floor",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern room with couch, chair, TV, speakers, and picture on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"whiteboard\", \"wall\", \"floor\", \"drawer\"],\n  \"hallucinated_objects\": [\"speaker\", \"speaker\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer\", \"drawer"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Modern room with couch, chair, TV, and speakers on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "speaker"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of drawers.",
+        "edit_instructions": [
+          "Specify the number of drawers and remove the word 'modern'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern room with couch, chair, TV, and speakers on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"speaker\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of drawers.\",\n  \"edit_instructions\": \"Specify the number of drawers and remove the word 'modern'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cluttered room with couch chair TV and six speakers on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "speaker"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the specific number of speakers and add a drawer."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cluttered room with couch chair TV and six speakers on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"drawer\"],\n  \"hallucinated_objects\": [\"speaker\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the specific number of speakers and add a drawer.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cluttered room with couch chair TV and several drawers on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "speaker",
+          "speaker"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of drawers.",
+        "edit_instructions": [
+          "Specify the number of drawers and remove the repetition of 'drawer'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cluttered room with couch chair TV and several drawers on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"speaker\", \"speaker\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of drawers.\",\n  \"edit_instructions\": \"Specify the number of drawers and remove the repetition of 'drawer'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cluttered room with couch chair TV and two speakers many drawers on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "picture"
+        ],
+        "hallucinated_objects": [
+          "many drawers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the room's layout and objects.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the picture on the wall and the exact number of drawers."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cluttered room with couch chair TV and two speakers many drawers on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"picture\"],\n  \"hallucinated_objects\": [\"many drawers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the room's layout and objects.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the picture on the wall and the exact number of drawers.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Wall picture and nine drawers on floor near couch and TV speakers",
+      "vlm_hint": {
+        "missing_objects": [
+          "speaker"
+        ],
+        "hallucinated_objects": [
+          "drawer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and their correct positions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, couch, television, speaker, speaker, picture, whiteboard, wall, floor, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wall picture and nine drawers on floor near couch and TV speakers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"speaker\"],\n  \"hallucinated_objects\": [\"drawer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and their correct positions.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 4495,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000004495.jpg",
+    "final_caption": "Wall picture and nine drawers on floor near couch and TV speakers",
+    "total_time_sec": 31.29
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"chair\",\n    \"couch\",\n    \"television\",\n    \"speaker\",\n    \"speaker\",\n    \"picture\",\n    \"whiteboard\",\n    \"wall\",\n    \"floor\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\",\n    \"drawer\"\n  ]\n}"
+}

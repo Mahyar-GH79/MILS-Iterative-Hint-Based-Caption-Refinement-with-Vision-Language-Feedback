@@ -1,0 +1,275 @@
+{
+  "image_id": 125405,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000125405.jpg",
+  "objects": [
+    "dog",
+    "collar",
+    "grass",
+    "dirt",
+    "shadow",
+    "paw",
+    "fur",
+    "ear",
+    "nose",
+    "mouth",
+    "tooth",
+    "tail",
+    "leg",
+    "paw",
+    "grass",
+    "dirt",
+    "shadow",
+    "paw",
+    "fur",
+    "ear"
+  ],
+  "template": "We have an image with these objects: ['dog', 'collar', 'grass', 'dirt', 'shadow', 'paw', 'fur', 'ear', 'nose', 'mouth', 'tooth', 'tail', 'leg', 'paw', 'grass', 'dirt', 'shadow', 'paw', 'fur', 'ear']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Dog in grass with raised paw and shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "collar"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the collar to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog in grass with raised paw and shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"collar\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the collar to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Dog with collar in grass raising paw and shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "hallucinated_objects": [
+          "collar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the grass, shadow, and fur details, and remove the mention of the collar."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog with collar in grass raising paw and shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"hallucinated_objects\": [\"collar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the grass, shadow, and fur details, and remove the mention of the collar.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Brown dog in grass lifting paw with noticeable shadow and fur",
+      "vlm_hint": {
+        "missing_objects": [
+          "collar",
+          "tooth",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "dirt",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's collar and teeth.",
+        "edit_instructions": [
+          "Add details about the collar and teeth to make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog in grass lifting paw with noticeable shadow and fur\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"collar\", \"tooth\", \"tail\"],\n  \"hallucinated_objects\": [\"grass\", \"dirt\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's collar and teeth.\",\n  \"edit_instructions\": \"Add details about the collar and teeth to make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Brown dog with collar lifting paw showing teeth and fur-shadow on grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "dirt",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "hallucinated_objects": [
+          "collar",
+          "tooth",
+          "tail",
+          "leg"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of collar, the position of the dog's paw, and the shape of the dog's ear."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with collar lifting paw showing teeth and fur-shadow on grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"dirt\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"hallucinated_objects\": [\"collar\", \"tooth\", \"tail\", \"leg\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of collar, the position of the dog's paw, and the shape of the dog's ear.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Brown dog with red collar lifting paw in grassy shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "shadow",
+          "paw",
+          "fur",
+          "ear",
+          "nose",
+          "mouth",
+          "tooth",
+          "tail",
+          "leg"
+        ],
+        "hallucinated_objects": [
+          "collar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's appearance and the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the dog's appearance and the environment, such as the color of the dog's fur, the type of collar, and the presence of grass and shadows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with red collar lifting paw in grassy shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"shadow\", \"paw\", \"fur\", \"ear\", \"nose\", \"mouth\", \"tooth\", \"tail\", \"leg\"],\n  \"hallucinated_objects\": [\"collar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's appearance and the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the dog's appearance and the environment, such as the color of the dog's fur, the type of collar, and the presence of grass and shadows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Brown dog with fur and ear in grassy shadow lifting paw",
+      "vlm_hint": {
+        "missing_objects": [
+          "collar",
+          "tooth",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "dirt",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's appearance and the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the dog's appearance and the environment, and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with fur and ear in grassy shadow lifting paw\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"collar\", \"tooth\", \"tail\"],\n  \"hallucinated_objects\": [\"grass\", \"dirt\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's appearance and the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the dog's appearance and the environment, and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown dog with collar lifts its paw in shaded grass tooth visible tail wagging",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "shadow",
+          "paw",
+          "fur",
+          "ear",
+          "nose",
+          "mouth",
+          "tooth",
+          "tail",
+          "leg"
+        ],
+        "hallucinated_objects": [
+          "collar"
+        ],
+        "genericity_hint": "The caption is too specific and misses many details.",
+        "edit_instructions": [
+          "Remove the collar and add more details about the dog's appearance and the environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with collar lifts its paw in shaded grass tooth visible tail wagging\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"shadow\", \"paw\", \"fur\", \"ear\", \"nose\", \"mouth\", \"tooth\", \"tail\", \"leg\"],\n  \"hallucinated_objects\": [\"collar\"],\n  \"genericity_hint\": \"The caption is too specific and misses many details.\",\n  \"edit_instructions\": \"Remove the collar and add more details about the dog's appearance and the environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Brown dog lifts paw in shaded grass shadow evident fur ear visible",
+      "vlm_hint": {
+        "missing_objects": [
+          "collar",
+          "tooth",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "dirt",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the collar on the dog and the tooth in its mouth."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog lifts paw in shaded grass shadow evident fur ear visible\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"collar\", \"tooth\", \"tail\"],\n  \"hallucinated_objects\": [\"grass\", \"dirt\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the collar on the dog and the tooth in its mouth.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Brown dog with collar lifts paw showing tooth and ear in shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "dirt",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "hallucinated_objects": [
+          "tooth"
+        ],
+        "genericity_hint": "The caption is too specific and misses important details.",
+        "edit_instructions": [
+          "Remove the tooth and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with collar lifts paw showing tooth and ear in shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"dirt\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"hallucinated_objects\": [\"tooth\"],\n  \"genericity_hint\": \"The caption is too specific and misses important details.\",\n  \"edit_instructions\": \"Remove the tooth and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Brown dog with collar lifts paw in shadow on grass and dirt",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "dirt",
+          "shadow",
+          "paw",
+          "fur",
+          "ear"
+        ],
+        "hallucinated_objects": [
+          "collar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the grass, dirt, shadow, and the dog's paw, fur, ear, and collar."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, collar, grass, dirt, shadow, paw, fur, ear, nose, mouth, tooth, tail, leg, paw, grass, dirt, shadow, paw, fur, ear]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with collar lifts paw in shadow on grass and dirt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"dirt\", \"shadow\", \"paw\", \"fur\", \"ear\"],\n  \"hallucinated_objects\": [\"collar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the grass, dirt, shadow, and the dog's paw, fur, ear, and collar.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 125405,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000125405.jpg",
+    "final_caption": "Brown dog with collar lifts paw in shadow on grass and dirt",
+    "total_time_sec": 33.89
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"dog\",\n    \"collar\",\n    \"grass\",\n    \"dirt\",\n    \"shadow\",\n    \"paw\",\n    \"fur\",\n    \"ear\",\n    \"nose\",\n    \"mouth\",\n    \"tooth\",\n    \"tail\",\n    \"leg\",\n    \"paw\",\n    \"grass\",\n    \"dirt\",\n    \"shadow\",\n    \"paw\",\n    \"fur\",\n    \"ear\"\n  ]\n}"
+}

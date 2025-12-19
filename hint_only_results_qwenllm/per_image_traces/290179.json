@@ -1,0 +1,366 @@
+{
+  "image_id": 290179,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000290179.jpg",
+  "objects": [
+    "Big Ben",
+    "River Thames",
+    "London Eye",
+    "Westminster Bridge",
+    "Boats",
+    "Buildings",
+    "Trees",
+    "Clouds",
+    "Cityscape",
+    "Skyscrapers",
+    "London",
+    "Architecture",
+    "Water",
+    "Transportation",
+    "Urban",
+    "Historical",
+    "City",
+    "England",
+    "Europe"
+  ],
+  "template": "We have an image with these objects: ['Big Ben', 'River Thames', 'London Eye', 'Westminster Bridge', 'Boats', 'Buildings', 'Trees', 'Clouds', 'Cityscape', 'Skyscrapers', 'London', 'Architecture', 'Water', 'Transportation', 'Urban', 'Historical', 'City', 'England', 'Europe']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Big Ben River Thames London Eye cityscape",
+      "vlm_hint": {
+        "missing_objects": [
+          "Boats",
+          "Trees",
+          "Clouds"
+        ],
+        "hallucinated_objects": [
+          "London Eye"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the London Eye and add specific details about the boats, trees, and clouds."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben River Thames London Eye cityscape\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Boats\", \"Trees\", \"Clouds\"],\n  \"hallucinated_objects\": [\"London Eye\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the London Eye and add specific details about the boats, trees, and clouds.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Big Ben boats trees clouds river Thames",
+      "vlm_hint": {
+        "missing_objects": [
+          "London Eye",
+          "Westminster Bridge",
+          "Boats",
+          "Buildings",
+          "Trees",
+          "Clouds",
+          "River Thames",
+          "Cityscape",
+          "Skyscrapers",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [
+          "Big Ben",
+          "Boats",
+          "Trees",
+          "Clouds",
+          "River Thames",
+          "Cityscape",
+          "Skyscrapers",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, River Thames, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, and Europe."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben boats trees clouds river Thames\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"London Eye\", \"Westminster Bridge\", \"Boats\", \"Buildings\", \"Trees\", \"Clouds\", \"River Thames\", \"Cityscape\", \"Skyscrapers\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [\"Big Ben\", \"Boats\", \"Trees\", \"Clouds\", \"River Thames\", \"Cityscape\", \"Skyscrapers\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, River Thames, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, and Europe.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "London Eye and skyscrapers over River Thames with boats and buildings in bustling cityscape.",
+      "vlm_hint": {
+        "missing_objects": [
+          "London Eye",
+          "Boats",
+          "Buildings",
+          "Trees",
+          "Cityscape",
+          "Skyscrapers",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [
+          "River Thames",
+          "Big Ben"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the exact location or objects.",
+        "edit_instructions": [
+          "Remove the hallucinated objects and add the missing objects to make the caption more specific."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: London Eye and skyscrapers over River Thames with boats and buildings in bustling cityscape.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"London Eye\", \"Boats\", \"Buildings\", \"Trees\", \"Cityscape\", \"Skyscrapers\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [\"River Thames\", \"Big Ben\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the exact location or objects.\",\n  \"edit_instructions\": \"Remove the hallucinated objects and add the missing objects to make the caption more specific.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "London Eye skyscrapers boats trees architecture city England",
+      "vlm_hint": {
+        "missing_objects": [
+          "Big Ben",
+          "Westminster Bridge",
+          "Boats",
+          "Trees",
+          "Cityscape",
+          "Skyscrapers",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [
+          "London Eye"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the exact location or landmarks.",
+        "edit_instructions": [
+          "Remove the London Eye and add Big Ben, Westminster Bridge, Boats, Trees, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, and England."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: London Eye skyscrapers boats trees architecture city England\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Big Ben\", \"Westminster Bridge\", \"Boats\", \"Trees\", \"Cityscape\", \"Skyscrapers\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [\"London Eye\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the exact location or landmarks.\",\n  \"edit_instructions\": \"Remove the London Eye and add Big Ben, Westminster Bridge, Boats, Trees, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, and England.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Big Ben Westminster Bridge boats trees skyscrapers architecture London England",
+      "vlm_hint": {
+        "missing_objects": [
+          "London Eye",
+          "Water",
+          "Transportation"
+        ],
+        "hallucinated_objects": [
+          "River Thames",
+          "Boats",
+          "Trees",
+          "Clouds",
+          "Cityscape",
+          "Skyscrapers",
+          "Architecture",
+          "London",
+          "England",
+          "Urban",
+          "Historical",
+          "City"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben Westminster Bridge boats trees skyscrapers architecture London England\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"London Eye\", \"Water\", \"Transportation\"],\n  \"hallucinated_objects\": [\"River Thames\", \"Boats\", \"Trees\", \"Clouds\", \"Cityscape\", \"Skyscrapers\", \"Architecture\", \"London\", \"England\", \"Urban\", \"Historical\", \"City\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Big Ben Westminster Bridge London Eye water transportation",
+      "vlm_hint": {
+        "missing_objects": [
+          "London Eye",
+          "Boats",
+          "Trees",
+          "Cityscape",
+          "Skyscrapers",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [
+          "River Thames",
+          "Westminster Bridge",
+          "Big Ben",
+          "Buildings",
+          "Clouds",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the London Eye, Boats, Trees, Cityscape, Skyscrapers, England, and Europe."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben Westminster Bridge London Eye water transportation\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"London Eye\", \"Boats\", \"Trees\", \"Cityscape\", \"Skyscrapers\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [\"River Thames\", \"Westminster Bridge\", \"Big Ben\", \"Buildings\", \"Clouds\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the London Eye, Boats, Trees, Cityscape, Skyscrapers, England, and Europe.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "London Eye Boats trees cityscape Skyscrapers England Europe",
+      "vlm_hint": {
+        "missing_objects": [
+          "Big Ben",
+          "River Thames",
+          "Westminster Bridge",
+          "Boats",
+          "Buildings",
+          "Trees",
+          "Clouds",
+          "Cityscape",
+          "Skyscrapers",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact location or objects present in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact location and objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: London Eye Boats trees cityscape Skyscrapers England Europe\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Big Ben\", \"River Thames\", \"Westminster Bridge\", \"Boats\", \"Buildings\", \"Trees\", \"Clouds\", \"Cityscape\", \"Skyscrapers\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact location or objects present in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact location and objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Big Ben Thames London Eye buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "River Thames",
+          "Boats",
+          "Trees",
+          "Clouds",
+          "Cityscape",
+          "Skyscrapers",
+          "London Eye",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [
+          "Big Ben",
+          "Westminster Bridge"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the River Thames, Boats, Trees, Clouds, Cityscape, Skyscrapers, London Eye, London, Architecture, Water, Transportation, Urban, Historical, City, England, and Europe."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben Thames London Eye buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"River Thames\", \"Boats\", \"Trees\", \"Clouds\", \"Cityscape\", \"Skyscrapers\", \"London Eye\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [\"Big Ben\", \"Westminster Bridge\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the River Thames, Boats, Trees, Clouds, Cityscape, Skyscrapers, London Eye, London, Architecture, Water, Transportation, Urban, Historical, City, England, and Europe.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "River Thames boats trees clouds cityscape skyscrapers London Eye Architecture",
+      "vlm_hint": {
+        "missing_objects": [
+          "Big Ben",
+          "Westminster Bridge",
+          "Boats",
+          "Buildings",
+          "Trees",
+          "Clouds",
+          "Cityscape",
+          "Skyscrapers",
+          "London Eye",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects present in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: River Thames boats trees clouds cityscape skyscrapers London Eye Architecture\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Big Ben\", \"Westminster Bridge\", \"Boats\", \"Buildings\", \"Trees\", \"Clouds\", \"Cityscape\", \"Skyscrapers\", \"London Eye\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects present in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Big Ben Thames boats London Eye skyscrapers",
+      "vlm_hint": {
+        "missing_objects": [
+          "London Eye",
+          "Westminster Bridge",
+          "Boats",
+          "Trees",
+          "Cityscape",
+          "Skyscrapers",
+          "London",
+          "Architecture",
+          "Water",
+          "Transportation",
+          "Urban",
+          "Historical",
+          "City",
+          "England",
+          "Europe"
+        ],
+        "hallucinated_objects": [
+          "River Thames",
+          "Big Ben"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location or objects present in the image.",
+        "edit_instructions": [
+          "Add specific objects and locations mentioned in the image to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, River Thames, London Eye, Westminster Bridge, Boats, Buildings, Trees, Clouds, Cityscape, Skyscrapers, London, Architecture, Water, Transportation, Urban, Historical, City, England, Europe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben Thames boats London Eye skyscrapers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"London Eye\", \"Westminster Bridge\", \"Boats\", \"Trees\", \"Cityscape\", \"Skyscrapers\", \"London\", \"Architecture\", \"Water\", \"Transportation\", \"Urban\", \"Historical\", \"City\", \"England\", \"Europe\"],\n  \"hallucinated_objects\": [\"River Thames\", \"Big Ben\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location or objects present in the image.\",\n  \"edit_instructions\": \"Add specific objects and locations mentioned in the image to the caption.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 290179,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000290179.jpg",
+    "final_caption": "Big Ben Thames boats London Eye skyscrapers",
+    "total_time_sec": 45.18
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"Big Ben\",\n    \"River Thames\",\n    \"London Eye\",\n    \"Westminster Bridge\",\n    \"Boats\",\n    \"Buildings\",\n    \"Trees\",\n    \"Clouds\",\n    \"Cityscape\",\n    \"Skyscrapers\",\n    \"London\",\n    \"Architecture\",\n    \"Water\",\n    \"Transportation\",\n    \"Urban\",\n    \"Historical\",\n    \"City\",\n    \"England\",\n    \"Europe\"\n  ]\n}"
+}

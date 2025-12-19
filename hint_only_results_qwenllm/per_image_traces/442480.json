@@ -1,0 +1,353 @@
+{
+  "image_id": 442480,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000442480.jpg",
+  "objects": [
+    "airplane",
+    "truck",
+    "cone",
+    "lights",
+    "water",
+    "propeller",
+    "wing",
+    "tarmac",
+    "building",
+    "reflection",
+    "night",
+    "airport",
+    "ground",
+    "aviation",
+    "transportation",
+    "aviation",
+    "airport"
+  ],
+  "template": "We have an image with these objects: ['airplane', 'truck', 'cone', 'lights', 'water', 'propeller', 'wing', 'tarmac', 'building', 'reflection', 'night', 'airport', 'ground', 'aviation', 'transportation', 'aviation', 'airport']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Night airport with airplane and truck on tarmac",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "building",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "cone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of airplane, the presence of lights, and the specific location (airport)."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airport with airplane and truck on tarmac\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"building\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"truck\", \"cone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of airplane, the presence of lights, and the specific location (airport).\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Night airport with plane and lights on runways",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "cone",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "building",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "airplane"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airport with plane and lights on runways\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"cone\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"building\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"airplane\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Night airport with trucks, cones, and runway lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "water",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the image.",
+        "edit_instructions": [
+          "Add specific details about the water and reflection in the image, and remove the lights as they are not visible in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airport with trucks, cones, and runway lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\", \"reflection\"],\n  \"hallucinated_objects\": [\"lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the image.\",\n  \"edit_instructions\": \"Add specific details about the water and reflection in the image, and remove the lights as they are not visible in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Night airport with trucks cones and water reflection",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "building",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "cone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airport with trucks cones and water reflection\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"building\", \"reflection\"],\n  \"hallucinated_objects\": [\"truck\", \"cone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Night airport lights reflecting on water near aviation wing",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "cone",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "building",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "airplane"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airport lights reflecting on water near aviation wing\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"cone\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"building\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"airplane\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Night airport lights reflecting on water beside wing and cone",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "building",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "cone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, reflection, night, airport, ground, aviation, and transportation."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airport lights reflecting on water beside wing and cone\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"building\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"truck\", \"cone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, reflection, night, airport, ground, aviation, and transportation.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Night lights reflect on water near airplane wing and cone at airport",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "building",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "cone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of truck, the color of the cone, and the specific location of the lights and water."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night lights reflect on water near airplane wing and cone at airport\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"building\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"truck\", \"cone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of truck, the color of the cone, and the specific location of the lights and water.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Night aviation lights reflect on water near airplane wing and red cone at airport tarmac.",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "building",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "building",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, and transportation."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night aviation lights reflect on water near airplane wing and red cone at airport tarmac.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"building\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"truck\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"building\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, and transportation.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Night airplane lights reflect on water near wing and cone at airport tarmac.",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "building",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "cone",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, reflection, night, airport, ground, aviation, and transportation."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airplane lights reflect on water near wing and cone at airport tarmac.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"building\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"truck\", \"cone\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, reflection, night, airport, ground, aviation, and transportation.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Night airplane lights reflect on water near wing and cone on airport tarmac.",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "building",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "cone",
+          "lights",
+          "water",
+          "propeller",
+          "wing",
+          "tarmac",
+          "reflection",
+          "night",
+          "airport",
+          "ground",
+          "aviation",
+          "transportation"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, reflection, night, airport, ground, aviation, and transportation."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, truck, cone, lights, water, propeller, wing, tarmac, building, reflection, night, airport, ground, aviation, transportation, aviation, airport]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night airplane lights reflect on water near wing and cone on airport tarmac.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"building\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"hallucinated_objects\": [\"truck\", \"cone\", \"lights\", \"water\", \"propeller\", \"wing\", \"tarmac\", \"reflection\", \"night\", \"airport\", \"ground\", \"aviation\", \"transportation\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the airplane, truck, cone, lights, water, propeller, wing, tarmac, reflection, night, airport, ground, aviation, and transportation.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 442480,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000442480.jpg",
+    "final_caption": "Night airplane lights reflect on water near wing and cone on airport tarmac.",
+    "total_time_sec": 41.63
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n\"objects\": [\n\"airplane\",\n\"truck\",\n\"cone\",\n\"lights\",\n\"water\",\n\"propeller\",\n\"wing\",\n\"tarmac\",\n\"building\",\n\"reflection\",\n\"night\",\n\"airport\",\n\"ground\",\n\"aviation\",\n\"transportation\",\n\"aviation\",\n\"airport\"\n]\n}"
+}

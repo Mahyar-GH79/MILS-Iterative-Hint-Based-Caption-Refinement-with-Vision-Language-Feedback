@@ -1,0 +1,265 @@
+{
+  "image_id": 281414,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000281414.jpg",
+  "objects": [
+    "woman",
+    "tank top",
+    "jeans",
+    "socks",
+    "phone",
+    "bracelet",
+    "necklace",
+    "purse",
+    "brick wall",
+    "tree",
+    "bench",
+    "car",
+    "parking lot",
+    "street",
+    "parking meter",
+    "parking sign",
+    "parking lot",
+    "parking lot",
+    "parking lot",
+    "parking lot"
+  ],
+  "template": "We have an image with these objects: ['woman', 'tank top', 'jeans', 'socks', 'phone', 'bracelet', 'necklace', 'purse', 'brick wall', 'tree', 'bench', 'car', 'parking lot', 'street', 'parking meter', 'parking sign', 'parking lot', 'parking lot', 'parking lot', 'parking lot']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman with accessories stands near parked cars on street",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "bracelet"
+        ],
+        "hallucinated_objects": [
+          "parked cars",
+          "street",
+          "parking lot",
+          "parking meter",
+          "parking sign"
+        ],
+        "genericity_hint": "The image shows a woman with accessories, but the caption includes objects that are not present in the image.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and focus on the woman with accessories."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman with accessories stands near parked cars on street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"bracelet\"],\n  \"hallucinated_objects\": [\"parked cars\", \"street\", \"parking lot\", \"parking meter\", \"parking sign\"],\n  \"genericity_hint\": \"The image shows a woman with accessories, but the caption includes objects that are not present in the image.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and focus on the woman with accessories.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman in tank top jeans wears bracelet necklace",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "parking meter",
+          "parking sign"
+        ],
+        "genericity_hint": "The image is specific to a woman sitting on a brick wall with a phone, but the caption is too generic.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top jeans wears bracelet necklace\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"parking lot\"],\n  \"hallucinated_objects\": [\"parking meter\", \"parking sign\"],\n  \"genericity_hint\": \"The image is specific to a woman sitting on a brick wall with a phone, but the caption is too generic.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman on brick wall with tree phones purse",
+      "vlm_hint": {
+        "missing_objects": [
+          "bracelet",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "street",
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the bracelet on the woman's wrist and the parking meter in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman on brick wall with tree phones purse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bracelet\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"car\", \"street\", \"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the bracelet on the woman's wrist and the parking meter in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Woman in tank top and jeans with bracelet by brick wall and tree, parking meter nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "car",
+          "parking lot",
+          "street",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "bench"
+        ],
+        "genericity_hint": "The parking lot is not mentioned in the candidate caption.",
+        "edit_instructions": [
+          "Remove the parking lot, street, parking meter, and parking sign from the candidate caption. Also, remove the bench."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans with bracelet by brick wall and tree, parking meter nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"car\", \"parking lot\", \"street\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"bench\"],\n  \"genericity_hint\": \"The parking lot is not mentioned in the candidate caption.\",\n  \"edit_instructions\": \"Remove the parking lot, street, parking meter, and parking sign from the candidate caption. Also, remove the bench.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman in tank top and jeans with bracelet near brick wall and tree, car passing by",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "parking lot",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "bench",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, the presence of a parking lot, and the specific location of the parking meter and parking sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans with bracelet near brick wall and tree, car passing by\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"parking lot\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"bench\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, the presence of a parking lot, and the specific location of the parking meter and parking sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman in tank top and jeans wearing a bracelet by brick wall with purse, near parking lot, meter, and sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "socks"
+        ],
+        "hallucinated_objects": [
+          "bench",
+          "car",
+          "street",
+          "parking meter",
+          "parking sign"
+        ],
+        "genericity_hint": "The parking lot is not visible in the image.",
+        "edit_instructions": [
+          "Remove the parking lot, meter, and sign. Add a phone and socks. Remove the bench."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans wearing a bracelet by brick wall with purse, near parking lot, meter, and sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"socks\"],\n  \"hallucinated_objects\": [\"bench\", \"car\", \"street\", \"parking meter\", \"parking sign\"],\n  \"genericity_hint\": \"The parking lot is not visible in the image.\",\n  \"edit_instructions\": \"Remove the parking lot, meter, and sign. Add a phone and socks. Remove the bench.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Woman in tank top and jeans with bracelet by brick wall holding phone and wearing socks",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "tree",
+          "bench",
+          "car",
+          "parking lot",
+          "street",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "bracelet",
+          "necklace"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, the color of the car, and the location of the parking lot."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans with bracelet by brick wall holding phone and wearing socks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"tree\", \"bench\", \"car\", \"parking lot\", \"street\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"bracelet\", \"necklace\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, the color of the car, and the location of the parking lot.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Woman in tank top and jeans sits on bench near tree, holding phone by brick wall in brown purse beside parked car in parking lot along street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bracelet",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "street"
+        ],
+        "genericity_hint": "The parking lot is not visible in the image.",
+        "edit_instructions": [
+          "Remove the car and street from the caption."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans sits on bench near tree, holding phone by brick wall in brown purse beside parked car in parking lot along street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bracelet\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"car\", \"street\"],\n  \"genericity_hint\": \"The parking lot is not visible in the image.\",\n  \"edit_instructions\": \"Remove the car and street from the caption.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Woman in tank top and jeans sits on bench near tree, holding phone by brick wall with bracelet, near parking meter and sign in parking lot.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "car",
+          "street",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "tree",
+          "bench",
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, the color of the car, and the type of parking meter and sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans sits on bench near tree, holding phone by brick wall with bracelet, near parking meter and sign in parking lot.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"car\", \"street\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"tree\", \"bench\", \"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, the color of the car, and the type of parking meter and sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Woman in tank top and jeans stands by brick wall with bracelet, checking phone near red car and blue purse on street with parking meter and sign in parking lot.",
+      "vlm_hint": {
+        "missing_objects": [
+          "socks",
+          "purse",
+          "tree",
+          "bench",
+          "car",
+          "parking meter",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, the color of the car, and the presence of a bench and tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, tank top, jeans, socks, phone, bracelet, necklace, purse, brick wall, tree, bench, car, parking lot, street, parking meter, parking sign, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in tank top and jeans stands by brick wall with bracelet, checking phone near red car and blue purse on street with parking meter and sign in parking lot.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"socks\", \"purse\", \"tree\", \"bench\", \"car\", \"parking meter\", \"parking sign\"],\n  \"hallucinated_objects\": [\"street\", \"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, the color of the car, and the presence of a bench and tree.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 281414,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000281414.jpg",
+    "final_caption": "Woman in tank top and jeans stands by brick wall with bracelet, checking phone near red car and blue purse on street with parking meter and sign in parking lot.",
+    "total_time_sec": 37.65
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"woman\",\n    \"tank top\",\n    \"jeans\",\n    \"socks\",\n    \"phone\",\n    \"bracelet\",\n    \"necklace\",\n    \"purse\",\n    \"brick wall\",\n    \"tree\",\n    \"bench\",\n    \"car\",\n    \"parking lot\",\n    \"street\",\n    \"parking meter\",\n    \"parking sign\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\"\n  ]\n}"
+}

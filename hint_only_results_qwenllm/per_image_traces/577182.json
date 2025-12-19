@@ -1,0 +1,258 @@
+{
+  "image_id": 577182,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000577182.jpg",
+  "objects": [
+    "bird",
+    "bench",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush",
+    "grass",
+    "bush"
+  ],
+  "template": "We have an image with these objects: ['bird', 'bench', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush', 'grass', 'bush']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bird perches on bench among bushes and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "grass"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of bushes and grass.",
+        "edit_instructions": [
+          "Add more details to the caption to specify the number of bushes and grass."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird perches on bench among bushes and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"grass\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of bushes and grass.\",\n  \"edit_instructions\": \"Add more details to the caption to specify the number of bushes and grass.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bird perches on bench amidst numerous bushes and grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "grass"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the number of bushes and the color of the grass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird perches on bench amidst numerous bushes and grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"grass\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the number of bushes and the color of the grass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Seven bushes and lush grass surround a bird on the bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "grass",
+          "grass",
+          "grass",
+          "grass",
+          "grass",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact number of bushes and grass in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Seven bushes and lush grass surround a bird on the bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\"],\n  \"hallucinated_objects\": [\"grass\", \"grass\", \"grass\", \"grass\", \"grass\", \"grass\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact number of bushes and grass in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Sixteen bushes and abundant grass surround a bird on the bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [
+          "bush"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of bushes.",
+        "edit_instructions": [
+          "Remove the number of bushes and specify the bird on the bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sixteen bushes and abundant grass surround a bird on the bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [\"bush\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of bushes.\",\n  \"edit_instructions\": \"Remove the number of bushes and specify the bird on the bench.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Grass and bushes surround a bird perched on the bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "bird"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grass and bushes surround a bird perched on the bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\"],\n  \"hallucinated_objects\": [\"bird\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bushes and grass surround a bench with a bird perched nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "grass"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact number of bushes and grass in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bushes and grass surround a bench with a bird perched nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"grass\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact number of bushes and grass in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Seven bushes and sixteen patches of grass surround a bench with a bird perched nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "grass"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not account for the actual number of bushes and patches of grass.",
+        "edit_instructions": [
+          "Remove the specific numbers and focus on the overall scene."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Seven bushes and sixteen patches of grass surround a bench with a bird perched nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"grass\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not account for the actual number of bushes and patches of grass.\",\n  \"edit_instructions\": \"Remove the specific numbers and focus on the overall scene.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bushes and grass surround a bench with a bird.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "bird"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of bushes or the presence of a bird.",
+        "edit_instructions": [
+          "Remove the bird from the caption and specify the number of bushes surrounding the bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bushes and grass surround a bench with a bird.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\", \"bush\"],\n  \"hallucinated_objects\": [\"bird\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of bushes or the presence of a bird.\",\n  \"edit_instructions\": \"Remove the bird from the caption and specify the number of bushes surrounding the bench.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bench surrounded by many bushes and grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of bench or the number of bushes.",
+        "edit_instructions": [
+          "Add more specificity to the caption by mentioning the type of bench and the number of bushes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bench surrounded by many bushes and grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bench or the number of bushes.\",\n  \"edit_instructions\": \"Add more specificity to the caption by mentioning the type of bench and the number of bushes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Wooden bench flanked by numerous green bushes and grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses the bird.",
+        "edit_instructions": [
+          "Add the bird to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, bench, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush, grass, bush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden bench flanked by numerous green bushes and grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses the bird.\",\n  \"edit_instructions\": \"Add the bird to the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 577182,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000577182.jpg",
+    "final_caption": "Wooden bench flanked by numerous green bushes and grass.",
+    "total_time_sec": 32.74
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bird\",\n    \"bench\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\",\n    \"grass\",\n    \"bush\"\n  ]\n}"
+}

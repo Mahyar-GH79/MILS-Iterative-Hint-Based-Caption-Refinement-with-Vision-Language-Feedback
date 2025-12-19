@@ -1,0 +1,295 @@
+{
+  "image_id": 340930,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000340930.jpg",
+  "objects": [
+    "orange scissors",
+    "green marker",
+    "pink marker",
+    "blue marker",
+    "black marker",
+    "black pen",
+    "orange pen",
+    "black stapler",
+    "white background",
+    "metallic container",
+    "pink marker cap",
+    "green marker cap",
+    "black marker cap",
+    "orange pen cap",
+    "black pen cap",
+    "metallic pen cap",
+    "orange scissors handle",
+    "green marker body",
+    "pink marker body",
+    "blue marker body"
+  ],
+  "template": "We have an image with these objects: ['orange scissors', 'green marker', 'pink marker', 'blue marker', 'black marker', 'black pen', 'orange pen', 'black stapler', 'white background', 'metallic container', 'pink marker cap', 'green marker cap', 'black marker cap', 'orange pen cap', 'black pen cap', 'metallic pen cap', 'orange scissors handle', 'green marker body', 'pink marker body', 'blue marker body']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Orange scissors green marker dominate scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "black pen",
+          "orange pen",
+          "black stapler",
+          "metallic container",
+          "pink marker cap",
+          "green marker cap",
+          "black marker cap",
+          "orange pen cap",
+          "black pen cap",
+          "metallic pen cap"
+        ],
+        "hallucinated_objects": [
+          "white background"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific colors and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Orange scissors green marker dominate scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black pen\", \"orange pen\", \"black stapler\", \"metallic container\", \"pink marker cap\", \"green marker cap\", \"black marker cap\", \"orange pen cap\", \"black pen cap\", \"metallic pen cap\"],\n  \"hallucinated_objects\": [\"white background\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific colors and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Scissors markers pen stapler container dominate scene",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors markers pen stapler container dominate scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen\", \"black pen cap\", \"metallic pen cap\", \"orange scissors handle\", \"green marker body\", \"pink marker cap\", \"green marker cap\", \"black marker cap\", \"orange pen cap\", \"black pen cap\", \"metallic pen cap\"],\n  \"hallucinated_objects\": [\"orange scissors\", \"green marker\", \"pink marker\", \"blue marker\", \"black marker\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen\", \"black pen\", \"orange pen"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Orange scissors green marker blue pen dominate scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen",
+          "black stapler",
+          "metallic container",
+          "pink marker cap",
+          "green marker cap",
+          "black marker cap",
+          "orange pen cap",
+          "black pen cap",
+          "metallic pen cap"
+        ],
+        "hallucinated_objects": [
+          "orange scissors",
+          "green marker",
+          "pink marker",
+          "blue marker",
+          "black marker",
+          "orange pen",
+          "black pen",
+          "black stapler",
+          "white background"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Orange scissors green marker blue pen dominate scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen\", \"black stapler\", \"metallic container\", \"pink marker cap\", \"green marker cap\", \"black marker cap\", \"orange pen cap\", \"black pen cap\", \"metallic pen cap\"],\n  \"hallucinated_objects\": [\"orange scissors\", \"green marker\", \"pink marker\", \"blue marker\", \"black marker\", \"orange pen\", \"black pen\", \"black stapler\", \"white background\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Metallic container holds markers and pens on desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen",
+          "black stapler"
+        ],
+        "hallucinated_objects": [
+          "metallic pen cap"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Specify the exact objects in the image and remove the generic language."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Metallic container holds markers and pens on desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen\", \"black stapler\"],\n  \"hallucinated_objects\": [\"metallic pen cap\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Specify the exact objects in the image and remove the generic language.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Metallic container holds orange scissors green marker pink marker black pen on desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen cap",
+          "orange pen cap",
+          "black pen cap",
+          "metallic pen cap"
+        ],
+        "hallucinated_objects": [
+          "orange scissors handle",
+          "green marker body",
+          "pink marker body",
+          "blue marker body"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Metallic container holds orange scissors green marker pink marker black pen on desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen cap\", \"orange pen cap\", \"black pen cap\", \"metallic pen cap\"],\n  \"hallucinated_objects\": [\"orange scissors handle\", \"green marker body\", \"pink marker body\", \"blue marker body\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Metallic container holds orange scissors pink and green markers black pen on desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen cap",
+          "orange pen cap",
+          "metallic pen cap"
+        ],
+        "hallucinated_objects": [
+          "black marker",
+          "black marker cap",
+          "orange pen",
+          "black pen",
+          "black pen cap",
+          "orange pen cap",
+          "metallic pen cap"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Metallic container holds orange scissors pink and green markers black pen on desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen cap\", \"orange pen cap\", \"metallic pen cap\"],\n  \"hallucinated_objects\": [\"black marker\", \"black marker cap\", \"orange pen\", \"black pen\", \"black pen cap\", \"orange pen cap\", \"metallic pen cap\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Metallic container holds orange scissors green and pink markers orange pen on white\u80cc\u666f\u684c\u9762",
+      "vlm_hint": {
+        "missing_objects": [
+          "black pen",
+          "black stapler",
+          "orange pen cap",
+          "black pen cap",
+          "metallic pen cap",
+          "orange scissors handle",
+          "green marker body",
+          "pink marker body",
+          "blue marker body"
+        ],
+        "hallucinated_objects": [
+          "white background",
+          "desktop"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific objects and background, and make the caption more generic."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Metallic container holds orange scissors green and pink markers orange pen on white\u80cc\u666f\u684c\u9762\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black pen\", \"black stapler\", \"orange pen cap\", \"black pen cap\", \"metallic pen cap\", \"orange scissors handle\", \"green marker body\", \"pink marker body\", \"blue marker body\"],\n  \"hallucinated_objects\": [\"white background\", \"desktop\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific objects and background, and make the caption more generic.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Metallic container holds scissors markers pens on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen",
+          "black stapler"
+        ],
+        "hallucinated_objects": [
+          "metallic container"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Remove the generic container and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Metallic container holds scissors markers pens on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen\", \"black stapler\"],\n  \"hallucinated_objects\": [\"metallic container\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Remove the generic container and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Black stapler orange scissors green pink blue markers black pens on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen",
+          "metallic pen cap",
+          "orange scissors handle",
+          "green marker body",
+          "pink marker body",
+          "blue marker body"
+        ],
+        "hallucinated_objects": [
+          "black marker",
+          "black pen",
+          "orange pen",
+          "black pen cap",
+          "metallic pen cap",
+          "orange scissors handle",
+          "green marker body",
+          "pink marker body",
+          "blue marker body"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black stapler orange scissors green pink blue markers black pens on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen\", \"metallic pen cap\", \"orange scissors handle\", \"green marker body\", \"pink marker body\", \"blue marker body\"],\n  \"hallucinated_objects\": [\"black marker\", \"black pen\", \"orange pen\", \"black pen cap\", \"metallic pen cap\", \"orange scissors handle\", \"green marker body\", \"pink marker body\", \"blue marker body\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Orange scissors green pink blue markers black pen on white background",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange pen",
+          "black pen cap",
+          "metallic pen cap",
+          "orange scissors handle",
+          "green marker body",
+          "pink marker cap",
+          "blue marker cap",
+          "orange pen cap",
+          "black pen cap",
+          "metallic pen cap"
+        ],
+        "hallucinated_objects": [
+          "black marker",
+          "black marker cap",
+          "orange pen",
+          "orange pen cap",
+          "black pen",
+          "black pen cap",
+          "metallic pen",
+          "metallic pen cap"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors, caps, and bodies."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange scissors, green marker, pink marker, blue marker, black marker, black pen, orange pen, black stapler, white background, metallic container, pink marker cap, green marker cap, black marker cap, orange pen cap, black pen cap, metallic pen cap, orange scissors handle, green marker body, pink marker body, blue marker body]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Orange scissors green pink blue markers black pen on white background\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange pen\", \"black pen cap\", \"metallic pen cap\", \"orange scissors handle\", \"green marker body\", \"pink marker cap\", \"blue marker cap\", \"orange pen cap\", \"black pen cap\", \"metallic pen cap\"],\n  \"hallucinated_objects\": [\"black marker\", \"black marker cap\", \"orange pen\", \"orange pen cap\", \"black pen\", \"black pen cap\", \"metallic pen\", \"metallic pen cap\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors, caps, and bodies.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 340930,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000340930.jpg",
+    "final_caption": "Orange scissors green pink blue markers black pen on white background",
+    "total_time_sec": 44.15
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"orange scissors\",\n    \"green marker\",\n    \"pink marker\",\n    \"blue marker\",\n    \"black marker\",\n    \"black pen\",\n    \"orange pen\",\n    \"black stapler\",\n    \"white background\",\n    \"metallic container\",\n    \"pink marker cap\",\n    \"green marker cap\",\n    \"black marker cap\",\n    \"orange pen cap\",\n    \"black pen cap\",\n    \"metallic pen cap\",\n    \"orange scissors handle\",\n    \"green marker body\",\n    \"pink marker body\",\n    \"blue marker body\",\n    \"black marker body\"\n  ]\n}"
+}

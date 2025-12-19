@@ -1,0 +1,213 @@
+{
+  "image_id": 439522,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000439522.jpg",
+  "objects": [
+    "ski poles",
+    "ski boots",
+    "snow",
+    "gloves",
+    "sunglasses",
+    "earphones",
+    "vest",
+    "pants",
+    "hat",
+    "snowboard"
+  ],
+  "template": "We have an image with these objects: ['ski poles', 'ski boots', 'snow', 'gloves', 'sunglasses', 'earphones', 'vest', 'pants', 'hat', 'snowboard']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Ski boots snowboard on snowy slope",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski poles",
+          "gloves",
+          "sunglasses",
+          "earphones",
+          "vest",
+          "pants",
+          "hat"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption and remove the snowboard."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots snowboard on snowy slope\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski poles\", \"gloves\", \"sunglasses\", \"earphones\", \"vest\", \"pants\", \"hat\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption and remove the snowboard.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Ski boots ski poles gloves sunglassesvest on snowy slope",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowy slope"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snow activity.",
+        "edit_instructions": [
+          "Remove the snowboard and specify the type of snow activity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots ski poles gloves sunglassesvest on snowy slope\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowy slope\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snow activity.\",\n  \"edit_instructions\": \"Remove the snowboard and specify the type of snow activity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Ski boots ski poles gloves sunglasses on snowy slope",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowy slope"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snow activity.",
+        "edit_instructions": [
+          "Remove the snowboard and specify the type of snow activity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots ski poles gloves sunglasses on snowy slope\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowy slope\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snow activity.\",\n  \"edit_instructions\": \"Remove the snowboard and specify the type of snow activity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Ski boots ski poles gloves sunglasses in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "earphones"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the snowboard."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots ski poles gloves sunglasses in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"earphones\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the snowboard.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Ski boots poles gloves sunglasses hat earphones in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snowboard.",
+        "edit_instructions": [
+          "Remove the snowboard from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots poles gloves sunglasses hat earphones in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snowboard.\",\n  \"edit_instructions\": \"Remove the snowboard from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Ski boots poles gloves sunglasses hat in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snowboard.",
+        "edit_instructions": [
+          "Remove the snowboard from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots poles gloves sunglasses hat in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snowboard.\",\n  \"edit_instructions\": \"Remove the snowboard from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Ski boots poles gloves sunglasses hat in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snowboard.",
+        "edit_instructions": [
+          "Remove the snowboard from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots poles gloves sunglasses hat in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snowboard.\",\n  \"edit_instructions\": \"Remove the snowboard from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Ski boots poles gloves sunglasses hat in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snowboard.",
+        "edit_instructions": [
+          "Remove the snowboard from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots poles gloves sunglasses hat in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snowboard.\",\n  \"edit_instructions\": \"Remove the snowboard from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Ski boots poles gloves sunglasses hat in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snowboard.",
+        "edit_instructions": [
+          "Remove the snowboard from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots poles gloves sunglasses hat in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snowboard.\",\n  \"edit_instructions\": \"Remove the snowboard from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Ski boots poles gloves sunglasses hat in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of snowboard.",
+        "edit_instructions": [
+          "Remove the snowboard from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, snow, gloves, sunglasses, earphones, vest, pants, hat, snowboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski boots poles gloves sunglasses hat in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of snowboard.\",\n  \"edit_instructions\": \"Remove the snowboard from the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 439522,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000439522.jpg",
+    "final_caption": "Ski boots poles gloves sunglasses hat in snow",
+    "total_time_sec": 24.91
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"ski poles\",\n    \"ski boots\",\n    \"snow\",\n    \"gloves\",\n    \"sunglasses\",\n    \"earphones\",\n    \"vest\",\n    \"pants\",\n    \"hat\",\n    \"snowboard\"\n  ]\n}"
+}

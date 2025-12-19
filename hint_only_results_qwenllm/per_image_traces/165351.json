@@ -1,0 +1,201 @@
+{
+  "image_id": 165351,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000165351.jpg",
+  "objects": [
+    "banana slices",
+    "nut butter",
+    "pancake",
+    "chocolate chips",
+    "plate"
+  ],
+  "template": "We have an image with these objects: ['banana slices', 'nut butter', 'pancake', 'chocolate chips', 'plate']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Pancake with banana slices nut butter chocolate chips",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "chocolate chips"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the plate.",
+        "edit_instructions": [
+          "Add the plate to the caption and remove the chocolate chips."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pancake with banana slices nut butter chocolate chips\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\"],\n  \"hallucinated_objects\": [\"chocolate chips\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the plate.\",\n  \"edit_instructions\": \"Add the plate to the caption and remove the chocolate chips.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Pancake with banana slices and nut butter on a plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "chocolate chips"
+        ],
+        "hallucinated_objects": [
+          "plate"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the ingredients.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pancake with banana slices and nut butter on a plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chocolate chips\"],\n  \"hallucinated_objects\": [\"plate\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the ingredients.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Pancake with banana slices nut butter and chocolate chips",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "chocolate chips"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of pancake or the presence of a plate.",
+        "edit_instructions": [
+          "Specify the type of pancake and include the plate in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pancake with banana slices nut butter and chocolate chips\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\"],\n  \"hallucinated_objects\": [\"chocolate chips\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of pancake or the presence of a plate.\",\n  \"edit_instructions\": \"Specify the type of pancake and include the plate in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Buttery pancake on plate with banana slices and nut butter",
+      "vlm_hint": {
+        "missing_objects": [
+          "chocolate chips"
+        ],
+        "hallucinated_objects": [
+          "plate"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the ingredients.",
+        "edit_instructions": [
+          "Add specific details about the ingredients and remove the generic term 'plate'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Buttery pancake on plate with banana slices and nut butter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chocolate chips\"],\n  \"hallucinated_objects\": [\"plate\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the ingredients.\",\n  \"edit_instructions\": \"Add specific details about the ingredients and remove the generic term 'plate'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Banana slices and nut butter on pancake with chocolate chips",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "chocolate chips"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Banana slices and nut butter on pancake with chocolate chips\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\"],\n  \"hallucinated_objects\": [\"chocolate chips\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Banana slices and nut butter atop a pancake.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chocolate chips"
+        ],
+        "hallucinated_objects": [
+          "plate"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the ingredients and the plate.",
+        "edit_instructions": [
+          "Add more specific details about the ingredients and the plate to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Banana slices and nut butter atop a pancake.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chocolate chips\"],\n  \"hallucinated_objects\": [\"plate\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the ingredients and the plate.\",\n  \"edit_instructions\": \"Add more specific details about the ingredients and the plate to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Banana slices and nut butter with chocolate chips on a pancake.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chocolate chips"
+        ],
+        "hallucinated_objects": [
+          "nut butter"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the chocolate chips and remove the nut butter."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Banana slices and nut butter with chocolate chips on a pancake.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chocolate chips\"],\n  \"hallucinated_objects\": [\"nut butter\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the chocolate chips and remove the nut butter.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Banana slices and chocolate chips on a pancake.",
+      "vlm_hint": {
+        "missing_objects": [
+          "nut butter"
+        ],
+        "hallucinated_objects": [
+          "chocolate chips"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of pancake or the presence of nut butter.",
+        "edit_instructions": [
+          "Add 'nut butter' to the caption and remove 'chocolate chips'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Banana slices and chocolate chips on a pancake.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"nut butter\"],\n  \"hallucinated_objects\": [\"chocolate chips\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of pancake or the presence of nut butter.\",\n  \"edit_instructions\": \"Add 'nut butter' to the caption and remove 'chocolate chips'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Banana slices with nut butter on a pancake",
+      "vlm_hint": {
+        "missing_objects": [
+          "chocolate chips"
+        ],
+        "hallucinated_objects": [
+          "plate"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the ingredients and presentation.",
+        "edit_instructions": [
+          "Add more specific details about the ingredients and presentation, and remove the mention of the plate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Banana slices with nut butter on a pancake\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chocolate chips\"],\n  \"hallucinated_objects\": [\"plate\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the ingredients and presentation.\",\n  \"edit_instructions\": \"Add more specific details about the ingredients and presentation, and remove the mention of the plate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Banana slices and chocolate chips in nut butter atop a pancake",
+      "vlm_hint": {
+        "missing_objects": [
+          "chocolate chips"
+        ],
+        "hallucinated_objects": [
+          "nut butter"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the chocolate chips and the nut butter to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [banana slices, nut butter, pancake, chocolate chips, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Banana slices and chocolate chips in nut butter atop a pancake\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chocolate chips\"],\n  \"hallucinated_objects\": [\"nut butter\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the chocolate chips and the nut butter to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 165351,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000165351.jpg",
+    "final_caption": "Banana slices and chocolate chips in nut butter atop a pancake",
+    "total_time_sec": 26.31
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"banana slices\",\n    \"nut butter\",\n    \"pancake\",\n    \"chocolate chips\",\n    \"plate\"\n  ]\n}"
+}

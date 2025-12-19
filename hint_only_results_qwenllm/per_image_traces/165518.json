@@ -1,0 +1,235 @@
+{
+  "image_id": 165518,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000165518.jpg",
+  "objects": [
+    "motorcycle",
+    "person",
+    "helmet",
+    "headlight",
+    "road",
+    "fog",
+    "trees",
+    "leaves",
+    "handlebars",
+    "seat",
+    "tire",
+    "tailpipe",
+    "tail light",
+    "foggy",
+    "darkness",
+    "wet",
+    "wheels",
+    "tires",
+    "handlebars",
+    "seat"
+  ],
+  "template": "We have an image with these objects: ['motorcycle', 'person', 'helmet', 'headlight', 'road', 'fog', 'trees', 'leaves', 'handlebars', 'seat', 'tire', 'tailpipe', 'tail light', 'foggy', 'darkness', 'wet', 'wheels', 'tires', 'handlebars', 'seat']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Motorcycle on foggy road at night",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the motorcycle and the road conditions.",
+        "edit_instructions": [
+          "Add more specific details about the motorcycle and the road conditions to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle on foggy road at night\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the motorcycle and the road conditions.\",\n  \"edit_instructions\": \"Add more specific details about the motorcycle and the road conditions to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Motorcycle with headlight on foggy wet road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the motorcycle.",
+        "edit_instructions": [
+          "Add more specific details about the environment and the motorcycle to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle with headlight on foggy wet road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"leaves\"],\n  \"hallucinated_objects\": [\"tailpipe\", \"tail light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the motorcycle.\",\n  \"edit_instructions\": \"Add more specific details about the environment and the motorcycle to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Motorcycle with headlight on foggy wet road among trees and leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the motorcycle and the road conditions.",
+        "edit_instructions": [
+          "Provide more specific details about the motorcycle and the road conditions, and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle with headlight on foggy wet road among trees and leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the motorcycle and the road conditions.\",\n  \"edit_instructions\": \"Provide more specific details about the motorcycle and the road conditions, and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Motorcycle with headlight on foggy wet road and tailpipe, tail light visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too specific and includes objects that are not visible in the image.",
+        "edit_instructions": [
+          "Remove the tailpipe and tail light from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle with headlight on foggy wet road and tailpipe, tail light visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too specific and includes objects that are not visible in the image.\",\n  \"edit_instructions\": \"Remove the tailpipe and tail light from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Motorcycle on foggy wet road with headlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "leaves",
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "foggy",
+          "darkness"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the presence of trees and leaves, and include the tailpipe and tail light."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle on foggy wet road with headlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"leaves\", \"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"foggy\", \"darkness\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the presence of trees and leaves, and include the tailpipe and tail light.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person on motorcycle in fog trees visible headlights tailpipes lights wet",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the motorcycle and the rider.",
+        "edit_instructions": [
+          "Provide more specific details about the motorcycle and the rider, and remove the generic terms."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person on motorcycle in fog trees visible headlights tailpipes lights wet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the motorcycle and the rider.\",\n  \"edit_instructions\": \"Provide more specific details about the motorcycle and the rider, and remove the generic terms.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person on motorcycle in fog headlights tailpipe wet",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the motorcycle.",
+        "edit_instructions": [
+          "Add more specific details about the environment and the motorcycle, such as the presence of trees and leaves, and the type of motorcycle."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person on motorcycle in fog headlights tailpipe wet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"leaves\"],\n  \"hallucinated_objects\": [\"tailpipe\", \"tail light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the motorcycle.\",\n  \"edit_instructions\": \"Add more specific details about the environment and the motorcycle, such as the presence of trees and leaves, and the type of motorcycle.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person riding a motorcycle through fog by trees and wet road",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the motorcycle and the rider.",
+        "edit_instructions": [
+          "Provide more specific details about the motorcycle and the rider, and remove the generic mention of trees and leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person riding a motorcycle through fog by trees and wet road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the motorcycle and the rider.\",\n  \"edit_instructions\": \"Provide more specific details about the motorcycle and the rider, and remove the generic mention of trees and leaves.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person in helmet riding motorcycle through fog on wet road with tailpipe and tail light",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too specific and includes objects that are not visible in the image.",
+        "edit_instructions": [
+          "Remove the tailpipe and tail light from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in helmet riding motorcycle through fog on wet road with tailpipe and tail light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too specific and includes objects that are not visible in the image.\",\n  \"edit_instructions\": \"Remove the tailpipe and tail light from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person in helmet riding motorcycle through fog on wet road",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailpipe",
+          "tail light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is specific about the foggy and wet conditions, but the image does not show the tailpipe or tail light.",
+        "edit_instructions": [
+          "Remove the mention of the tailpipe and tail light from the caption."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, person, helmet, headlight, road, fog, trees, leaves, handlebars, seat, tire, tailpipe, tail light, foggy, darkness, wet, wheels, tires, handlebars, seat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in helmet riding motorcycle through fog on wet road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailpipe\", \"tail light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is specific about the foggy and wet conditions, but the image does not show the tailpipe or tail light.\",\n  \"edit_instructions\": \"Remove the mention of the tailpipe and tail light from the caption.\",\n  \"score\": 6\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 165518,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000165518.jpg",
+    "final_caption": "Person in helmet riding motorcycle through fog on wet road",
+    "total_time_sec": 31.68
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"motorcycle\",\n    \"person\",\n    \"helmet\",\n    \"headlight\",\n    \"road\",\n    \"fog\",\n    \"trees\",\n    \"leaves\",\n    \"handlebars\",\n    \"seat\",\n    \"tire\",\n    \"tailpipe\",\n    \"tail light\",\n    \"foggy\",\n    \"darkness\",\n    \"wet\",\n    \"wheels\",\n    \"tires\",\n    \"handlebars\",\n    \"seat\"\n  ]\n}"
+}

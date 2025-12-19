@@ -1,0 +1,231 @@
+{
+  "image_id": 50326,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000050326.jpg",
+  "objects": [
+    "man",
+    "shorts",
+    "watch",
+    "hat",
+    "beach",
+    "ocean",
+    "waves",
+    "kite",
+    "handle",
+    "sand",
+    "shoes",
+    "sky",
+    "clouds",
+    "water",
+    "seaweed",
+    "seaweed",
+    "seaweed",
+    "seaweed",
+    "seaweed"
+  ],
+  "template": "We have an image with these objects: ['man', 'shorts', 'watch', 'hat', 'beach', 'ocean', 'waves', 'kite', 'handle', 'sand', 'shoes', 'sky', 'clouds', 'water', 'seaweed', 'seaweed', 'seaweed', 'seaweed', 'seaweed']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man flies kite at beach by ocean waves",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite"
+        ],
+        "hallucinated_objects": [
+          "handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the handle."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man flies kite at beach by ocean waves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite\"],\n  \"hallucinated_objects\": [\"handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the handle.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in shorts flies kite on sandy beach by ocean waves",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "hat",
+          "kite",
+          "handle",
+          "sand",
+          "water",
+          "seaweed"
+        ],
+        "hallucinated_objects": [
+          "ocean",
+          "waves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and corrects the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts flies kite on sandy beach by ocean waves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"hat\", \"kite\", \"handle\", \"sand\", \"water\", \"seaweed\"],\n  \"hallucinated_objects\": [\"ocean\", \"waves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and corrects the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in shorts hat watches kite fly on sandy beach with seaweed",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts hat watches kite fly on sandy beach with seaweed\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in shorts and hat watches kite fly over sand by ocean waves",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the man's watch and the handle of the kite."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches kite fly over sand by ocean waves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the man's watch and the handle of the kite.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in shorts and hat watches kite flying by ocean waves on sandy beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches kite flying by ocean waves on sandy beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in shorts and hat watches kite flying on ocean waves by sandy beach with watch and handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of watch and handle, and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches kite flying on ocean waves by sandy beach with watch and handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of watch and handle, and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in shorts and hat watches kite flying on ocean waves by sandy beach with digital watch and kite handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "digital watch",
+          "kite handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of watch and the shape of the kite handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches kite flying on ocean waves by sandy beach with digital watch and kite handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"digital watch\", \"kite handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of watch and the shape of the kite handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with analog watch and kite handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of watch and the presence of a handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with analog watch and kite handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of watch and the presence of a handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with analog watch and kite handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of watch and the presence of a handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with analog watch and kite handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of watch and the presence of a handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with a wristwatch and kite handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "seaweed"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of watch and handle, and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shorts, watch, hat, beach, ocean, waves, kite, handle, sand, shoes, sky, clouds, water, seaweed, seaweed, seaweed, seaweed, seaweed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with a wristwatch and kite handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"handle\"],\n  \"hallucinated_objects\": [\"seaweed\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of watch and handle, and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 50326,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000050326.jpg",
+    "final_caption": "Man in shorts and hat watches colorful kite flying over ocean waves on sandy beach with a wristwatch and kite handle",
+    "total_time_sec": 30.65
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"shorts\",\n    \"watch\",\n    \"hat\",\n    \"beach\",\n    \"ocean\",\n    \"waves\",\n    \"kite\",\n    \"handle\",\n    \"sand\",\n    \"shoes\",\n    \"sky\",\n    \"clouds\",\n    \"water\",\n    \"seaweed\",\n    \"seaweed\",\n    \"seaweed\",\n    \"seaweed\",\n    \"seaweed\"\n  ]\n}"
+}

@@ -1,0 +1,273 @@
+{
+  "image_id": 572678,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000572678.jpg",
+  "objects": [
+    "couch",
+    "lamp",
+    "picture frame",
+    "sofa",
+    "pillow",
+    "table",
+    "chair",
+    "glass",
+    "plate",
+    "napkin",
+    "bottle",
+    "candle",
+    "window",
+    "curtain",
+    "balcony",
+    "tablecloth",
+    "fork",
+    "spoon",
+    "bowl"
+  ],
+  "template": "We have an image with these objects: ['couch', 'lamp', 'picture frame', 'sofa', 'pillow', 'table', 'chair', 'glass', 'plate', 'napkin', 'bottle', 'candle', 'window', 'curtain', 'balcony', 'tablecloth', 'fork', 'spoon', 'bowl']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sofa and chairs around coffee table with glass and plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "picture frame",
+          "pillow",
+          "glass",
+          "plate",
+          "napkin",
+          "bowl"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "lamp",
+          "table",
+          "chair",
+          "candle",
+          "window",
+          "curtain",
+          "balcony",
+          "tablecloth",
+          "fork",
+          "spoon"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa and chairs around coffee table with glass and plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"picture frame\", \"pillow\", \"glass\", \"plate\", \"napkin\", \"bowl\"],\n  \"hallucinated_objects\": [\"couch\", \"lamp\", \"table\", \"chair\", \"candle\", \"window\", \"curtain\", \"balcony\", \"tablecloth\", \"fork\", \"spoon\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Sofa with pillows near table holding glass and plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "picture frame",
+          "candle",
+          "window",
+          "curtain",
+          "balcony",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "glass",
+          "plate",
+          "napkin",
+          "bowl"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and relationships."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa with pillows near table holding glass and plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"picture frame\", \"candle\", \"window\", \"curtain\", \"balcony\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"glass\", \"plate\", \"napkin\", \"bowl\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and relationships.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Couch by table with candle and picture frame nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "napkin",
+          "fork",
+          "spoon",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and relationships."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couch by table with candle and picture frame nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"napkin\", \"fork\", \"spoon\", \"bottle\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and relationships.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Sofa beside table with candle and picture frame nearby, napkin on chair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "fork",
+          "spoon",
+          "napkin",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and interactions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa beside table with candle and picture frame nearby, napkin on chair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"fork\", \"spoon\", \"napkin\", \"bottle\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and interactions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Couch next to table with candle and picture frame, napkin on chair, bottle nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "fork",
+          "spoon",
+          "napkin",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and relationships."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couch next to table with candle and picture frame, napkin on chair, bottle nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"fork\", \"spoon\", \"napkin\", \"bottle\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and relationships.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Sofa beside table with candle and picture frame, napkin on chair, bottle nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "fork",
+          "spoon",
+          "napkin",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa beside table with candle and picture frame, napkin on chair, bottle nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"fork\", \"spoon\", \"napkin\", \"bottle\"],\n  \"hallucinated_objects\": [\"picture frame\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Sofa next to table with candle, napkin on chair, bottle nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "fork",
+          "spoon",
+          "napkin",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "glass",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa next to table with candle, napkin on chair, bottle nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"fork\", \"spoon\", \"napkin\", \"bottle\"],\n  \"hallucinated_objects\": [\"picture frame\", \"glass\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Sofa beside table with candle and bottles, chairs with napkins nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "fork",
+          "spoon"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, the number of chairs, and the specific items on the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa beside table with candle and bottles, chairs with napkins nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"fork\", \"spoon\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, the number of chairs, and the specific items on the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Sofa near wooden table with candle and bottles, chairs beside napkins and forks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "napkin",
+          "fork",
+          "spoon",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "glass",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa near wooden table with candle and bottles, chairs beside napkins and forks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"napkin\", \"fork\", \"spoon\", \"bottle\"],\n  \"hallucinated_objects\": [\"picture frame\", \"glass\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Sofa by table with candles and bottles, chairs next to napkins and forks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "napkin",
+          "fork",
+          "spoon"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, picture frame, sofa, pillow, table, chair, glass, plate, napkin, bottle, candle, window, curtain, balcony, tablecloth, fork, spoon, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sofa by table with candles and bottles, chairs next to napkins and forks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"napkin\", \"fork\", \"spoon\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 572678,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000572678.jpg",
+    "final_caption": "Sofa by table with candles and bottles, chairs next to napkins and forks.",
+    "total_time_sec": 35.28
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"couch\",\n    \"lamp\",\n    \"picture frame\",\n    \"sofa\",\n    \"pillow\",\n    \"table\",\n    \"chair\",\n    \"glass\",\n    \"plate\",\n    \"napkin\",\n    \"bottle\",\n    \"candle\",\n    \"window\",\n    \"curtain\",\n    \"balcony\",\n    \"tablecloth\",\n    \"fork\",\n    \"spoon\",\n    \"bowl\"\n  ]\n}"
+}

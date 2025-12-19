@@ -1,0 +1,281 @@
+{
+  "image_id": 93353,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000093353.jpg",
+  "objects": [
+    "hand",
+    "hot dog",
+    "bun",
+    "window",
+    "table",
+    "book",
+    "chair",
+    "building",
+    "trees",
+    "grass",
+    "carpet",
+    "light",
+    "wall",
+    "door",
+    "furniture",
+    "tablecloth",
+    "table",
+    "chair",
+    "book",
+    "building"
+  ],
+  "template": "We have an image with these objects: ['hand', 'hot dog', 'bun', 'window', 'table', 'book', 'chair', 'building', 'trees', 'grass', 'carpet', 'light', 'wall', 'door', 'furniture', 'tablecloth', 'table', 'chair', 'book', 'building']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Hand holds hot dog near table by building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the missing object 'bun' and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds hot dog near table by building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bun\"],\n  \"hallucinated_objects\": [\"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the missing object 'bun' and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Hand holds hot dog and bun on table near building",
+      "vlm_hint": {
+        "missing_objects": [
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "trees",
+          "grass"
+        ],
+        "genericity_hint": "The image is not specific about the location or the type of table.",
+        "edit_instructions": [
+          "Remove the building, trees, and grass. Also, remove the carpet, light, wall, door, and furniture. The tablecloth is not visible."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds hot dog and bun on table near building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"building\", \"trees\", \"grass\"],\n  \"genericity_hint\": \"The image is not specific about the location or the type of table.\",\n  \"edit_instructions\": \"Remove the building, trees, and grass. Also, remove the carpet, light, wall, door, and furniture. The tablecloth is not visible.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Hand holds hot dog and bun on table near window",
+      "vlm_hint": {
+        "missing_objects": [
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "trees",
+          "grass"
+        ],
+        "genericity_hint": "The image is specific to a hand holding a hot dog and bun on a table near a window.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the objects that are missing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds hot dog and bun on table near window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"building\", \"trees\", \"grass\"],\n  \"genericity_hint\": \"The image is specific to a hand holding a hot dog and bun on a table near a window.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the objects that are missing.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Hand holds hot dog and bun on table near window with light and carpet",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog",
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "building",
+          "trees",
+          "grass",
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds hot dog and bun on table near window with light and carpet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\", \"bun\"],\n  \"hallucinated_objects\": [\"table\", \"building\", \"trees\", \"grass\", \"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Hand holds hot dog and bun on table near window with light",
+      "vlm_hint": {
+        "missing_objects": [
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "trees",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, the color of the carpet, and the presence of a light source."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds hot dog and bun on table near window with light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"building\", \"trees\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, the color of the carpet, and the presence of a light source.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Hand holds a hot dog and bun on a wooden table near a window with a white light shining.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog",
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "wooden table",
+          "white light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the hot dog and bun, and remove the mention of a wooden table and white light."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds a hot dog and bun on a wooden table near a window with a white light shining.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\", \"bun\"],\n  \"hallucinated_objects\": [\"wooden table\", \"white light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the hot dog and bun, and remove the mention of a wooden table and white light.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Hand holds a hot dog and bun near a window with light shining.",
+      "vlm_hint": {
+        "missing_objects": [
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "trees",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of furniture, the color of the carpet, and the presence of a tablecloth."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds a hot dog and bun near a window with light shining.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"building\", \"trees\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of furniture, the color of the carpet, and the presence of a tablecloth.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Hand holds a hot dog and bun on a table near a window with light shining through.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog",
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "building",
+          "trees",
+          "grass",
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds a hot dog and bun on a table near a window with light shining through.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\", \"bun\"],\n  \"hallucinated_objects\": [\"table\", \"building\", \"trees\", \"grass\", \"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Hand holds a hot dog and bun on a table by a window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "carpet",
+          "light",
+          "wall",
+          "door",
+          "furniture",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "trees",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, the color of the carpet, and the presence of a light source."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds a hot dog and bun on a table by a window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carpet\", \"light\", \"wall\", \"door\", \"furniture\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"building\", \"trees\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, the color of the carpet, and the presence of a light source.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Hand holds a hot dog and bun on a wooden table under a lamp, near a window and carpet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog",
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "lamp",
+          "wooden table",
+          "carpet"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hand, hot dog, bun, window, table, book, chair, building, trees, grass, carpet, light, wall, door, furniture, tablecloth, table, chair, book, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds a hot dog and bun on a wooden table under a lamp, near a window and carpet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\", \"bun\"],\n  \"hallucinated_objects\": [\"lamp\", \"wooden table\", \"carpet\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 93353,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000093353.jpg",
+    "final_caption": "Hand holds a hot dog and bun on a wooden table under a lamp, near a window and carpet.",
+    "total_time_sec": 35.91
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"hand\",\n    \"hot dog\",\n    \"bun\",\n    \"window\",\n    \"table\",\n    \"book\",\n    \"chair\",\n    \"building\",\n    \"trees\",\n    \"grass\",\n    \"carpet\",\n    \"light\",\n    \"wall\",\n    \"door\",\n    \"furniture\",\n    \"tablecloth\",\n    \"table\",\n    \"chair\",\n    \"book\",\n    \"building\"\n  ]\n}"
+}

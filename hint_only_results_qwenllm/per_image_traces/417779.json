@@ -1,0 +1,319 @@
+{
+  "image_id": 417779,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000417779.jpg",
+  "objects": [
+    "fire hydrant",
+    "street",
+    "car",
+    "sidewalk",
+    "tree",
+    "house",
+    "sign",
+    "trash can",
+    "person",
+    "fence",
+    "street light",
+    "street sign",
+    "leaves",
+    "driveway",
+    "building",
+    "road",
+    "parking meter",
+    "parking lot",
+    "street lamp"
+  ],
+  "template": "We have an image with these objects: ['fire hydrant', 'street', 'car', 'sidewalk', 'tree', 'house', 'sign', 'trash can', 'person', 'fence', 'street light', 'street sign', 'leaves', 'driveway', 'building', 'road', 'parking meter', 'parking lot', 'street lamp']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cars trees houses line street",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant",
+          "trash can",
+          "street light",
+          "street lamp",
+          "parking meter",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "car",
+          "sidewalk",
+          "tree",
+          "house",
+          "sign",
+          "person",
+          "fence",
+          "street light",
+          "street lamp",
+          "driveway",
+          "building",
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption to make it more accurate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars trees houses line street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fire hydrant\", \"trash can\", \"street light\", \"street lamp\", \"parking meter\", \"parking lot\"],\n  \"hallucinated_objects\": [\"street\", \"car\", \"sidewalk\", \"tree\", \"house\", \"sign\", \"person\", \"fence\", \"street light\", \"street lamp\", \"driveway\", \"building\", \"road\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption to make it more accurate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Fire hydrant trash can line road",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street light",
+          "trash can",
+          "street lamp"
+        ],
+        "hallucinated_objects": [
+          "fire hydrant",
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car, street light, trash can, and street lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant trash can line road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street light\", \"trash can\", \"street lamp\"],\n  \"hallucinated_objects\": [\"fire hydrant\", \"road\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car, street light, trash can, and street lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Car trash can street light line sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant",
+          "tree",
+          "house",
+          "sign",
+          "trash can",
+          "person",
+          "fence",
+          "street light",
+          "street sign",
+          "leaves",
+          "driveway",
+          "building",
+          "road",
+          "parking meter",
+          "parking lot",
+          "street lamp"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "line"
+        ],
+        "genericity_hint": "The image is specific to a fire hydrant, but the candidate caption is too generic.",
+        "edit_instructions": [
+          "Add specific objects related to the fire hydrant and its surroundings."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car trash can street light line sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fire hydrant\", \"tree\", \"house\", \"sign\", \"trash can\", \"person\", \"fence\", \"street light\", \"street sign\", \"leaves\", \"driveway\", \"building\", \"road\", \"parking meter\", \"parking lot\", \"street lamp\"],\n  \"hallucinated_objects\": [\"car\", \"line\"],\n  \"genericity_hint\": \"The image is specific to a fire hydrant, but the candidate caption is too generic.\",\n  \"edit_instructions\": \"Add specific objects related to the fire hydrant and its surroundings.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Fire hydrant tree house street sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "trash can",
+          "person",
+          "fence",
+          "street light",
+          "street lamp",
+          "parking meter",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "fire hydrant",
+          "tree",
+          "house",
+          "street sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant tree house street sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"trash can\", \"person\", \"fence\", \"street light\", \"street lamp\", \"parking meter\", \"parking lot\"],\n  \"hallucinated_objects\": [\"fire hydrant\", \"tree\", \"house\", \"street sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Person trash can car fence street lamp parking meter on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant",
+          "street",
+          "house",
+          "sign",
+          "trash can",
+          "leaves",
+          "driveway",
+          "building",
+          "road",
+          "parking lot",
+          "street lamp"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "fence",
+          "street lamp",
+          "parking meter"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person trash can car fence street lamp parking meter on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fire hydrant\", \"street\", \"house\", \"sign\", \"trash can\", \"leaves\", \"driveway\", \"building\", \"road\", \"parking lot\", \"street lamp\"],\n  \"hallucinated_objects\": [\"car\", \"fence\", \"street lamp\", \"parking meter\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person next to trash can and fire hydrant on sidewalk near street and house",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street light",
+          "street lamp"
+        ],
+        "hallucinated_objects": [
+          "parking meter",
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the street light and street lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person next to trash can and fire hydrant on sidewalk near street and house\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street light\", \"street lamp\"],\n  \"hallucinated_objects\": [\"parking meter\", \"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the street light and street lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person near trash can and fire hydrant on sidewalk by street and house with street light and street lamp.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street light",
+          "street lamp"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "parking meter",
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the trash can, street light, and street lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person near trash can and fire hydrant on sidewalk by street and house with street light and street lamp.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street light\", \"street lamp\"],\n  \"hallucinated_objects\": [\"car\", \"parking meter\", \"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the trash can, street light, and street lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person near trash can by street with street light and street lamp near house.",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant",
+          "car",
+          "sidewalk",
+          "tree",
+          "house",
+          "sign",
+          "trash can",
+          "person",
+          "fence",
+          "street light",
+          "street lamp",
+          "leaves",
+          "driveway",
+          "building",
+          "road",
+          "parking meter",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "car",
+          "sidewalk",
+          "tree",
+          "house",
+          "sign",
+          "trash can",
+          "person",
+          "fence",
+          "street light",
+          "street lamp",
+          "leaves",
+          "driveway",
+          "building",
+          "road",
+          "parking meter",
+          "parking lot"
+        ],
+        "genericity_hint": "The image is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person near trash can by street with street light and street lamp near house.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fire hydrant\", \"car\", \"sidewalk\", \"tree\", \"house\", \"sign\", \"trash can\", \"person\", \"fence\", \"street light\", \"street lamp\", \"leaves\", \"driveway\", \"building\", \"road\", \"parking meter\", \"parking lot\"],\n  \"hallucinated_objects\": [\"street\", \"car\", \"sidewalk\", \"tree\", \"house\", \"sign\", \"trash can\", \"person\", \"fence\", \"street light\", \"street lamp\", \"leaves\", \"driveway\", \"building\", \"road\", \"parking meter\", \"parking lot\"],\n  \"genericity_hint\": \"The image is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person next to fire hydrant on street near house and street lamp.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street light",
+          "parking meter",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a trash can, street light, parking meter, and parking lot."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person next to fire hydrant on street near house and street lamp.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street light\", \"parking meter\", \"parking lot\"],\n  \"hallucinated_objects\": [\"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a trash can, street light, parking meter, and parking lot.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person next to fire hydrant on street near house trash can and parking meter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "parking meter"
+        ],
+        "hallucinated_objects": [
+          "street light",
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the fire hydrant, the type of street, and the specific location of the trash can and parking meter."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, street, car, sidewalk, tree, house, sign, trash can, person, fence, street light, street sign, leaves, driveway, building, road, parking meter, parking lot, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person next to fire hydrant on street near house trash can and parking meter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"parking meter\"],\n  \"hallucinated_objects\": [\"street light\", \"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the fire hydrant, the type of street, and the specific location of the trash can and parking meter.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 417779,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000417779.jpg",
+    "final_caption": "Person next to fire hydrant on street near house trash can and parking meter.",
+    "total_time_sec": 40.02
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"fire hydrant\",\n    \"street\",\n    \"car\",\n    \"sidewalk\",\n    \"tree\",\n    \"house\",\n    \"sign\",\n    \"trash can\",\n    \"person\",\n    \"fence\",\n    \"street light\",\n    \"street sign\",\n    \"leaves\",\n    \"driveway\",\n    \"building\",\n    \"road\",\n    \"parking meter\",\n    \"parking lot\",\n    \"street lamp\"\n  ]\n}"
+}

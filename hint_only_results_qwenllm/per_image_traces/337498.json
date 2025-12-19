@@ -1,0 +1,246 @@
+{
+  "image_id": 337498,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000337498.jpg",
+  "objects": [
+    "deep dish pizza",
+    "tomato sauce",
+    "cheese",
+    "green pepper",
+    "white plate",
+    "green rim",
+    "table",
+    "drink",
+    "straw",
+    "dark liquid",
+    "black utensil",
+    "red bowl",
+    "black surface",
+    "white plate",
+    "green rim",
+    "table",
+    "drink",
+    "straw",
+    "dark liquid",
+    "black utensil"
+  ],
+  "template": "We have an image with these objects: ['deep dish pizza', 'tomato sauce', 'cheese', 'green pepper', 'white plate', 'green rim', 'table', 'drink', 'straw', 'dark liquid', 'black utensil', 'red bowl', 'black surface', 'white plate', 'green rim', 'table', 'drink', 'straw', 'dark liquid', 'black utensil']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Deep dish pizza slices cheese tomato sauce on white plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "straw",
+          "dark liquid",
+          "black utensil",
+          "red bowl"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza.",
+        "edit_instructions": [
+          "Add specific details about the pizza toppings and remove the objects that are not present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza slices cheese tomato sauce on white plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"straw\", \"dark liquid\", \"black utensil\", \"red bowl\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza.\",\n  \"edit_instructions\": \"Add specific details about the pizza toppings and remove the objects that are not present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Deep dish pizza with tomato sauce cheese green peppers on white plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "black utensil",
+          "dark liquid",
+          "straw",
+          "red bowl",
+          "black surface"
+        ],
+        "hallucinated_objects": [
+          "green rim"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the plate, the presence of a drink, and the type of utensil used."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with tomato sauce cheese green peppers on white plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black utensil\", \"dark liquid\", \"straw\", \"red bowl\", \"black surface\"],\n  \"hallucinated_objects\": [\"green rim\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the plate, the presence of a drink, and the type of utensil used.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Deep dish pizza with tomato sauce and cheese, cut into slices on a white plate with a black utensil nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "straw",
+          "dark liquid",
+          "red bowl",
+          "black surface"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza toppings.",
+        "edit_instructions": [
+          "Add the missing green pepper to the caption and remove the unnecessary objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with tomato sauce and cheese, cut into slices on a white plate with a black utensil nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"straw\", \"dark liquid\", \"red bowl\", \"black surface\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza toppings.\",\n  \"edit_instructions\": \"Add the missing green pepper to the caption and remove the unnecessary objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Deep dish pizza with tomato sauce, cheese, and green pepper on a white plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "straw",
+          "dark liquid",
+          "black utensil"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza.",
+        "edit_instructions": [
+          "Add specific details about the pizza toppings and remove the generic objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with tomato sauce, cheese, and green pepper on a white plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"straw\", \"dark liquid\", \"black utensil\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza.\",\n  \"edit_instructions\": \"Add specific details about the pizza toppings and remove the generic objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Deep dish pizza topped with tomato sauce, cheese, and green peppers on a white plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "straw",
+          "dark liquid",
+          "black utensil"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza toppings.",
+        "edit_instructions": [
+          "Add specific details about the pizza toppings, such as the type of cheese and the presence of green peppers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza topped with tomato sauce, cheese, and green peppers on a white plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"straw\", \"dark liquid\", \"black utensil\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza toppings.\",\n  \"edit_instructions\": \"Add specific details about the pizza toppings, such as the type of cheese and the presence of green peppers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Deep dish pizza with marinara sauce and mozzarella cheese topped with green peppers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "straw",
+          "dark liquid",
+          "black utensil"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza toppings.",
+        "edit_instructions": [
+          "Add specific details about the pizza toppings, such as the type of cheese and the presence of green peppers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with marinara sauce and mozzarella cheese topped with green peppers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"straw\", \"dark liquid\", \"black utensil\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza toppings.\",\n  \"edit_instructions\": \"Add specific details about the pizza toppings, such as the type of cheese and the presence of green peppers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Deep dish pizza with tomato sauce and mozzarella cheese topped with green peppers on a white plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "straw",
+          "dark liquid",
+          "black utensil"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza toppings.",
+        "edit_instructions": [
+          "Add specific details about the pizza toppings, such as the type of cheese and the presence of green peppers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with tomato sauce and mozzarella cheese topped with green peppers on a white plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"straw\", \"dark liquid\", \"black utensil\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza toppings.\",\n  \"edit_instructions\": \"Add specific details about the pizza toppings, such as the type of cheese and the presence of green peppers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Deep dish pizza with tomato sauce and mozzarella cheese featuring green peppers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green rim",
+          "table",
+          "drink",
+          "straw",
+          "dark liquid",
+          "black utensil",
+          "red bowl",
+          "black surface"
+        ],
+        "hallucinated_objects": [
+          "white plate"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the green rim, table, drink, straw, dark liquid, black utensil, red bowl, and black surface."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with tomato sauce and mozzarella cheese featuring green peppers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green rim\", \"table\", \"drink\", \"straw\", \"dark liquid\", \"black utensil\", \"red bowl\", \"black surface\"],\n  \"hallucinated_objects\": [\"white plate\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the green rim, table, drink, straw, dark liquid, black utensil, red bowl, and black surface.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Deep dish pizza on green-rimmed plate beside red bowl, drink, and utensils on black surface.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper",
+          "black utensil",
+          "dark liquid",
+          "straw",
+          "red bowl"
+        ],
+        "hallucinated_objects": [
+          "white plate",
+          "green rim"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects to make the caption more specific."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza on green-rimmed plate beside red bowl, drink, and utensils on black surface.\nReturn only JSON.\nassistant\n{\n\"missing_objects\": [\"green pepper\", \"black utensil\", \"dark liquid\", \"straw\", \"red bowl\"],\n\"hallucinated_objects\": [\"white plate\", \"green rim\"],\n\"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n\"edit_instructions\": \"Remove the generic objects and add the missing objects to make the caption more specific.\",\n\"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Deep dish pizza with tomato sauce and cheese next to green pepper drink and straw on table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "green pepper"
+        ],
+        "hallucinated_objects": [
+          "green rim"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the pizza and drink.",
+        "edit_instructions": [
+          "Remove the green rim and add a specific detail about the green pepper on the pizza."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, tomato sauce, cheese, green pepper, white plate, green rim, table, drink, straw, dark liquid, black utensil, red bowl, black surface, white plate, green rim, table, drink, straw, dark liquid, black utensil]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza with tomato sauce and cheese next to green pepper drink and straw on table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green pepper\"],\n  \"hallucinated_objects\": [\"green rim\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the pizza and drink.\",\n  \"edit_instructions\": \"Remove the green rim and add a specific detail about the green pepper on the pizza.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 337498,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000337498.jpg",
+    "final_caption": "Deep dish pizza with tomato sauce and cheese next to green pepper drink and straw on table.",
+    "total_time_sec": 34.07
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"deep dish pizza\",\n    \"tomato sauce\",\n    \"cheese\",\n    \"green pepper\",\n    \"white plate\",\n    \"green rim\",\n    \"table\",\n    \"drink\",\n    \"straw\",\n    \"dark liquid\",\n    \"black utensil\",\n    \"red bowl\",\n    \"black surface\",\n    \"white plate\",\n    \"green rim\",\n    \"table\",\n    \"drink\",\n    \"straw\",\n    \"dark liquid\",\n    \"black utensil\"\n  ]\n}"
+}

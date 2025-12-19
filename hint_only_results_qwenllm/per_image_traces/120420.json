@@ -1,0 +1,226 @@
+{
+  "image_id": 120420,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000120420.jpg",
+  "objects": [
+    "man",
+    "camera",
+    "tree",
+    "umbrella",
+    "watch",
+    "lanyard",
+    "park",
+    "people",
+    "grass",
+    "path",
+    "leaves",
+    "park bench",
+    "backpack",
+    "umbrella",
+    "trees",
+    "people",
+    "grass",
+    "path",
+    "leaves",
+    "park bench"
+  ],
+  "template": "We have an image with these objects: ['man', 'camera', 'tree', 'umbrella', 'watch', 'lanyard', 'park', 'people', 'grass', 'path', 'leaves', 'park bench', 'backpack', 'umbrella', 'trees', 'people', 'grass', 'path', 'leaves', 'park bench']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man and people in park under trees near bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera",
+          "lanyard"
+        ],
+        "hallucinated_objects": [
+          "umbrella",
+          "park bench"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the camera and lanyard, and remove the umbrella and park bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and people in park under trees near bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\", \"lanyard\"],\n  \"hallucinated_objects\": [\"umbrella\", \"park bench\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the camera and lanyard, and remove the umbrella and park bench.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man with camera and lanyard among trees and people on grass path",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with camera and lanyard among trees and people on grass path\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man with camera and umbrella amidst trees and people on grassy path",
+      "vlm_hint": {
+        "missing_objects": [
+          "lanyard",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "umbrella"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the man's lanyard and backpack, and remove the umbrella as it is not visible in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with camera and umbrella amidst trees and people on grassy path\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lanyard\", \"backpack\"],\n  \"hallucinated_objects\": [\"umbrella\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the man's lanyard and backpack, and remove the umbrella as it is not visible in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man with camera and lanyard amid trees and people on grassy path with backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of camera, the color of the lanyard, and the specific type of backpack."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with camera and lanyard amid trees and people on grassy path with backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of camera, the color of the lanyard, and the specific type of backpack.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man with black camera and red lanyard among trees and people on grassy path with backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "lanyard",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "red lanyard"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with black camera and red lanyard among trees and people on grassy path with backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lanyard\", \"backpack\"],\n  \"hallucinated_objects\": [\"red lanyard\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man with camera and backpack amidst trees and people on grassy path",
+      "vlm_hint": {
+        "missing_objects": [
+          "lanyard",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "camera"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the lanyard and backpack, and correct the camera object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with camera and backpack amidst trees and people on grassy path\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lanyard\", \"backpack\"],\n  \"hallucinated_objects\": [\"camera\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the lanyard and backpack, and correct the camera object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man with lanyard and backpack among trees and people on grassy path",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera",
+          "umbrella",
+          "park bench"
+        ],
+        "hallucinated_objects": [
+          "lanyard",
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the camera, umbrella, and park bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with lanyard and backpack among trees and people on grassy path\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\", \"umbrella\", \"park bench\"],\n  \"hallucinated_objects\": [\"lanyard\", \"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the camera, umbrella, and park bench.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man with camera and umbrella near park bench on grassy path",
+      "vlm_hint": {
+        "missing_objects": [
+          "lanyard",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "park bench"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the man's lanyard and backpack, and the park bench."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with camera and umbrella near park bench on grassy path\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lanyard\", \"backpack\"],\n  \"hallucinated_objects\": [\"park bench\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the man's lanyard and backpack, and the park bench.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man with camera and umbrella wears lanyard and backpack on grassy path near trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "lanyard",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "umbrella"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the camera, the type of lanyard, and the type of backpack."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with camera and umbrella wears lanyard and backpack on grassy path near trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lanyard\", \"backpack\"],\n  \"hallucinated_objects\": [\"umbrella\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the camera, the type of lanyard, and the type of backpack.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in park with black camera and red lanyard walks beside grassy path under tall trees and backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera",
+          "lanyard"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "people",
+          "park bench",
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of camera and the color of the lanyard."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, camera, tree, umbrella, watch, lanyard, park, people, grass, path, leaves, park bench, backpack, umbrella, trees, people, grass, path, leaves, park bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in park with black camera and red lanyard walks beside grassy path under tall trees and backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\", \"lanyard\"],\n  \"hallucinated_objects\": [\"man\", \"people\", \"park bench\", \"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of camera and the color of the lanyard.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 120420,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000120420.jpg",
+    "final_caption": "Man in park with black camera and red lanyard walks beside grassy path under tall trees and backpack",
+    "total_time_sec": 32.05
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"camera\",\n    \"tree\",\n    \"umbrella\",\n    \"watch\",\n    \"lanyard\",\n    \"park\",\n    \"people\",\n    \"grass\",\n    \"path\",\n    \"leaves\",\n    \"park bench\",\n    \"backpack\",\n    \"umbrella\",\n    \"trees\",\n    \"people\",\n    \"grass\",\n    \"path\",\n    \"leaves\",\n    \"park bench\"\n  ]\n}"
+}

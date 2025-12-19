@@ -1,0 +1,262 @@
+{
+  "image_id": 102707,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000102707.jpg",
+  "objects": [
+    "bottle",
+    "glass",
+    "whisk",
+    "funnel",
+    "spatula",
+    "pot",
+    "sink",
+    "tile",
+    "wall",
+    "counter",
+    "stove",
+    "heart",
+    "handle",
+    "spout",
+    "spout",
+    "spout",
+    "spout",
+    "spout",
+    "spout",
+    "spout"
+  ],
+  "template": "We have an image with these objects: ['bottle', 'glass', 'whisk', 'funnel', 'spatula', 'pot', 'sink', 'tile', 'wall', 'counter', 'stove', 'heart', 'handle', 'spout', 'spout', 'spout', 'spout', 'spout', 'spout', 'spout']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Heart covered by pot near stove on tiled counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "whisk",
+          "spatula",
+          "sink",
+          "stove",
+          "tile",
+          "wall",
+          "counter",
+          "heart",
+          "handle",
+          "spout"
+        ],
+        "hallucinated_objects": [
+          "bottle",
+          "glass"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the bottle and glass, and include the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Heart covered by pot near stove on tiled counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"whisk\", \"spatula\", \"sink\", \"stove\", \"tile\", \"wall\", \"counter\", \"heart\", \"handle\", \"spout\"],\n  \"hallucinated_objects\": [\"bottle\", \"glass\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the bottle and glass, and include the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Heart near pot with handles on tiled counter by stove",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "sink",
+          "stove"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the heart and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Heart near pot with handles on tiled counter by stove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"sink\", \"stove\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the heart and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bottle glass and spatula on tiled counter by sink and stove",
+      "vlm_hint": {
+        "missing_objects": [
+          "whisk",
+          "funnel"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle glass and spatula on tiled counter by sink and stove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"whisk\", \"funnel\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Whisk bottle and funnel on tiled counter near sink and stove",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "heart"
+        ],
+        "hallucinated_objects": [
+          "spout"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Whisk bottle and funnel on tiled counter near sink and stove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"heart\"],\n  \"hallucinated_objects\": [\"spout\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Heart-shaped spatula next to bottle and funnel on tiled counter by sink and stove",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "sink",
+          "stove"
+        ],
+        "hallucinated_objects": [
+          "heart-shaped spatula"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Heart-shaped spatula next to bottle and funnel on tiled counter by sink and stove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"sink\", \"stove\"],\n  \"hallucinated_objects\": [\"heart-shaped spatula\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Whisk, funnel, bottle near sink and stove on tiled counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "pot",
+          "sink",
+          "stove",
+          "tile",
+          "wall",
+          "counter",
+          "spout"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Whisk, funnel, bottle near sink and stove on tiled counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"pot\", \"sink\", \"stove\", \"tile\", \"wall\", \"counter\", \"spout\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Whisk and funnel near bottle on tiled counter by stove",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "sink",
+          "stove"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Whisk and funnel near bottle on tiled counter by stove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"sink\", \"stove\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Whisk bottle and funnel beside spatula near sink stove on tiled counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "sink",
+          "stove",
+          "tile",
+          "wall",
+          "counter",
+          "bottle",
+          "funnel",
+          "spatula",
+          "sink",
+          "stove",
+          "tile",
+          "wall",
+          "counter"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Whisk bottle and funnel beside spatula near sink stove on tiled counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"sink\", \"stove\", \"tile\", \"wall\", \"counter\", \"bottle\", \"funnel\", \"spatula\", \"sink\", \"stove\", \"tile\", \"wall\", \"counter\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Whisk bottle and funnel near sink stove on tiled counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "sink",
+          "stove",
+          "tile",
+          "wall",
+          "counter",
+          "spout"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Whisk bottle and funnel near sink stove on tiled counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"sink\", \"stove\", \"tile\", \"wall\", \"counter\", \"spout\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Whisk bottle funnel and spouts on tiled counter near stove",
+      "vlm_hint": {
+        "missing_objects": [
+          "spatula",
+          "sink",
+          "stove"
+        ],
+        "hallucinated_objects": [
+          "heart"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bottle, glass, whisk, funnel, spatula, pot, sink, tile, wall, counter, stove, heart, handle, spout, spout, spout, spout, spout, spout, spout]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Whisk bottle funnel and spouts on tiled counter near stove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"spatula\", \"sink\", \"stove\"],\n  \"hallucinated_objects\": [\"heart\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 102707,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000102707.jpg",
+    "final_caption": "Whisk bottle funnel and spouts on tiled counter near stove",
+    "total_time_sec": 32.81
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bottle\",\n    \"glass\",\n    \"whisk\",\n    \"funnel\",\n    \"spatula\",\n    \"pot\",\n    \"sink\",\n    \"tile\",\n    \"wall\",\n    \"counter\",\n    \"stove\",\n    \"heart\",\n    \"handle\",\n    \"spout\",\n    \"spout\",\n    \"spout\",\n    \"spout\",\n    \"spout\",\n    \"spout\",\n    \"spout\"\n  ]\n}"
+}

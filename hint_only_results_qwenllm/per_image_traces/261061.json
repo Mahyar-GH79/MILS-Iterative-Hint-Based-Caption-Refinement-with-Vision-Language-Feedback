@@ -1,0 +1,237 @@
+{
+  "image_id": 261061,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000261061.jpg",
+  "objects": [
+    "frisbee",
+    "shorts",
+    "tank top",
+    "grass",
+    "bucket",
+    "plant",
+    "wall",
+    "fence",
+    "ground",
+    "frisbee",
+    "shorts",
+    "tank top",
+    "grass",
+    "bucket",
+    "plant",
+    "wall",
+    "fence",
+    "ground",
+    "frisbee",
+    "shorts"
+  ],
+  "template": "We have an image with these objects: ['frisbee', 'shorts', 'tank top', 'grass', 'bucket', 'plant', 'wall', 'fence', 'ground', 'frisbee', 'shorts', 'tank top', 'grass', 'bucket', 'plant', 'wall', 'fence', 'ground', 'frisbee', 'shorts']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Frisbees fly among grass shorts and tank tops",
+      "vlm_hint": {
+        "missing_objects": [
+          "plant",
+          "wall",
+          "fence",
+          "ground"
+        ],
+        "hallucinated_objects": [
+          "frisbee",
+          "frisbee"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frisbees fly among grass shorts and tank tops\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plant\", \"wall\", \"fence\", \"ground\"],\n  \"hallucinated_objects\": [\"frisbee\", \"frisbee\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Shorts tank tops among grass by wall fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "frisbee"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the frisbee and the plant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shorts tank tops among grass by wall fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"frisbee\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the frisbee and the plant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Frisbee shorts tank tops among grass near wall fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "plant",
+          "wall",
+          "fence",
+          "ground"
+        ],
+        "hallucinated_objects": [
+          "frisbee",
+          "shorts",
+          "tank top"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frisbee shorts tank tops among grass near wall fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plant\", \"wall\", \"fence\", \"ground\"],\n  \"hallucinated_objects\": [\"frisbee\", \"shorts\", \"tank top\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Plant wall fence near grass ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "frisbee",
+          "bucket",
+          "plant",
+          "wall",
+          "fence",
+          "ground"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the frisbee, bucket, plant, wall, fence, and ground."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plant wall fence near grass ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"frisbee\", \"bucket\", \"plant\", \"wall\", \"fence\", \"ground\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the frisbee, bucket, plant, wall, fence, and ground.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Frisbee and plant near fence and ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "wall",
+          "fence",
+          "ground"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Add the missing objects to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frisbee and plant near fence and ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wall\", \"fence\", \"ground\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Add the missing objects to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Frisbees, plants, fences, grass near ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "wall",
+          "bucket",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "frisbee",
+          "frisbee"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frisbees, plants, fences, grass near ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wall\", \"bucket\", \"plant\"],\n  \"hallucinated_objects\": [\"frisbee\", \"frisbee\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Shorts, tank top, plants by fence, grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "frisbee",
+          "wall",
+          "ground"
+        ],
+        "hallucinated_objects": [
+          "plant"
+        ],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Include the frisbee, wall, and ground in the caption. Mention the plants by the fence."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shorts, tank top, plants by fence, grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"frisbee\", \"wall\", \"ground\"],\n  \"hallucinated_objects\": [\"plant\"],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Include the frisbee, wall, and ground in the caption. Mention the plants by the fence.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Frisbees on grass near plants by fence and wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "frisbee"
+        ],
+        "hallucinated_objects": [
+          "plant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frisbees on grass near plants by fence and wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"frisbee\"],\n  \"hallucinated_objects\": [\"plant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Frisbees lie on grass near fence and wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "plant",
+          "wall",
+          "fence",
+          "ground"
+        ],
+        "hallucinated_objects": [
+          "frisbee",
+          "shorts",
+          "tank top"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their locations and relationships."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frisbees lie on grass near fence and wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plant\", \"wall\", \"fence\", \"ground\"],\n  \"hallucinated_objects\": [\"frisbee\", \"shorts\", \"tank top\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their locations and relationships.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Plant and fence by grass where frisbees rest",
+      "vlm_hint": {
+        "missing_objects": [
+          "wall",
+          "ground"
+        ],
+        "hallucinated_objects": [
+          "plant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the wall and ground, and remove the plant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts, tank top, grass, bucket, plant, wall, fence, ground, frisbee, shorts]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plant and fence by grass where frisbees rest\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wall\", \"ground\"],\n  \"hallucinated_objects\": [\"plant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the wall and ground, and remove the plant.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 261061,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000261061.jpg",
+    "final_caption": "Plant and fence by grass where frisbees rest",
+    "total_time_sec": 29.51
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"frisbee\",\n    \"shorts\",\n    \"tank top\",\n    \"grass\",\n    \"bucket\",\n    \"plant\",\n    \"wall\",\n    \"fence\",\n    \"ground\",\n    \"frisbee\",\n    \"shorts\",\n    \"tank top\",\n    \"grass\",\n    \"bucket\",\n    \"plant\",\n    \"wall\",\n    \"fence\",\n    \"ground\",\n    \"frisbee\",\n    \"shorts\",\n    \"tank top\",\n    \"grass\",\n    \"bucket\",\n    \"plant\",\n    \"wall\",\n    \"fence\",\n    \"ground\"\n  ]\n}"
+}

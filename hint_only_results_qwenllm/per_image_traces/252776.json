@@ -1,0 +1,276 @@
+{
+  "image_id": 252776,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000252776.jpg",
+  "objects": [
+    "tennis player",
+    "tennis racket",
+    "tennis court",
+    "green fence",
+    "boy",
+    "blue and yellow shirt",
+    "white and black shorts",
+    "white socks",
+    "white shoes",
+    "green and white sign",
+    "black and white stripes",
+    "black and white stripes on shirt",
+    "black and white stripes on shorts",
+    "black and white stripes on socks",
+    "black and white stripes on shoes",
+    "black and white stripes on racket",
+    "black and white stripes on fence",
+    "black and white stripes on court",
+    "black and white stripes on ground"
+  ],
+  "template": "We have an image with these objects: ['tennis player', 'tennis racket', 'tennis court', 'green fence', 'boy', 'blue and yellow shirt', 'white and black shorts', 'white socks', 'white shoes', 'green and white sign', 'black and white stripes', 'black and white stripes on shirt', 'black and white stripes on shorts', 'black and white stripes on socks', 'black and white stripes on shoes', 'black and white stripes on racket', 'black and white stripes on fence', 'black and white stripes on court', 'black and white stripes on ground']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Tennis player serves on court near striped fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis racket",
+          "green fence",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign",
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis racket, green fence, black and white stripes on fence, black and white stripes on court, and black and white stripes on ground."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player serves on court near striped fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis racket\", \"green fence\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\", \"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis racket, green fence, black and white stripes on fence, black and white stripes on court, and black and white stripes on ground.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Tennis player swings racket on striped court near green fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "green and white sign",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "black and white stripes on fence",
+          "black and white stripes on court"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and location of the sign, and the specific stripes on the court and fence."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player swings racket on striped court near green fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green and white sign\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"black and white stripes on fence\", \"black and white stripes on court\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and location of the sign, and the specific stripes on the court and fence.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Tennis player in blue and yellow shirt swings racket on striped court near green fence and white sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and patterns."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt swings racket on striped court near green fence and white sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and patterns.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Tennis player in blue and yellow shirt swings black and white striped racket on striped court near green fence and white sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign"
+        ],
+        "genericity_hint": "The caption is too specific and includes details that are not present in the image.",
+        "edit_instructions": [
+          "Remove the details about the black and white stripes and focus on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt swings black and white striped racket on striped court near green fence and white sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\"],\n  \"genericity_hint\": \"The caption is too specific and includes details that are not present in the image.\",\n  \"edit_instructions\": \"Remove the details about the black and white stripes and focus on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Tennis player in blue and yellow shirt swings racket on striped court near green fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis racket",
+          "green fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket",
+          "black and white stripes on fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis racket, green fence, and black and white stripes on the court and ground."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt swings racket on striped court near green fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis racket\", \"green fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\", \"black and white stripes on fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis racket, green fence, and black and white stripes on the court and ground.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Tennis player swings racket on striped court near green fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "green and white sign",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "black and white stripes on fence",
+          "black and white stripes on court"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and location of the sign, and the specific stripes on the court and fence."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player swings racket on striped court near green fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green and white sign\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"black and white stripes on fence\", \"black and white stripes on court\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and location of the sign, and the specific stripes on the court and fence.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tennis player in blue and yellow shirt swings racket on striped court near green fence and green sign.",
+      "vlm_hint": {
+        "missing_objects": [
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, including their colors and patterns."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt swings racket on striped court near green fence and green sign.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, including their colors and patterns.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Tennis player in blue and yellow shirt swings black and white striped racket on striped court near green fence and sign.",
+      "vlm_hint": {
+        "missing_objects": [
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, including their colors and patterns."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt swings black and white striped racket on striped court near green fence and sign.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, including their colors and patterns.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tennis player in blue and yellow shirt swings black and white striped racket on striped court near green fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "black and white stripes on shirt",
+          "black and white stripes on shorts",
+          "black and white stripes on socks",
+          "black and white stripes on shoes",
+          "black and white stripes on racket",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign"
+        ],
+        "genericity_hint": "The caption is too specific and includes details that are not present in the image.",
+        "edit_instructions": [
+          "Remove the details about the stripes and focus on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt swings black and white striped racket on striped court near green fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black and white stripes on shirt\", \"black and white stripes on shorts\", \"black and white stripes on socks\", \"black and white stripes on shoes\", \"black and white stripes on racket\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\"],\n  \"genericity_hint\": \"The caption is too specific and includes details that are not present in the image.\",\n  \"edit_instructions\": \"Remove the details about the stripes and focus on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tennis player in blue and yellow shirt hits ball on court near green fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis racket",
+          "green fence",
+          "black and white stripes on fence",
+          "black and white stripes on court",
+          "black and white stripes on ground"
+        ],
+        "hallucinated_objects": [
+          "green and white sign",
+          "black and white stripes on sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and location of the fence, the court, and the ground."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis player, tennis racket, tennis court, green fence, boy, blue and yellow shirt, white and black shorts, white socks, white shoes, green and white sign, black and white stripes, black and white stripes on shirt, black and white stripes on shorts, black and white stripes on socks, black and white stripes on shoes, black and white stripes on racket, black and white stripes on fence, black and white stripes on court, black and white stripes on ground]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in blue and yellow shirt hits ball on court near green fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis racket\", \"green fence\", \"black and white stripes on fence\", \"black and white stripes on court\", \"black and white stripes on ground\"],\n  \"hallucinated_objects\": [\"green and white sign\", \"black and white stripes on sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and location of the fence, the court, and the ground.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 252776,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000252776.jpg",
+    "final_caption": "Tennis player in blue and yellow shirt hits ball on court near green fence.",
+    "total_time_sec": 46.65
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"tennis player\",\n    \"tennis racket\",\n    \"tennis court\",\n    \"green fence\",\n    \"boy\",\n    \"blue and yellow shirt\",\n    \"white and black shorts\",\n    \"white socks\",\n    \"white shoes\",\n    \"green and white sign\",\n    \"black and white stripes\",\n    \"black and white stripes on shirt\",\n    \"black and white stripes on shorts\",\n    \"black and white stripes on socks\",\n    \"black and white stripes on shoes\",\n    \"black and white stripes on racket\",\n    \"black and white stripes on fence\",\n    \"black and white stripes on court\",\n    \"black and white stripes on ground\"\n  ]\n}"
+}

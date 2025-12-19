@@ -1,0 +1,301 @@
+{
+  "image_id": 202228,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000202228.jpg",
+  "objects": [
+    "man",
+    "jacket",
+    "hat",
+    "mirror",
+    "door",
+    "light",
+    "toilet paper",
+    "table",
+    "phone",
+    "wall",
+    "socket",
+    "door handle",
+    "wall outlet",
+    "floor",
+    "wall corner",
+    "wall corner",
+    "wall corner",
+    "wall corner",
+    "wall corner",
+    "wall corner"
+  ],
+  "template": "We have an image with these objects: ['man', 'jacket', 'hat', 'mirror', 'door', 'light', 'toilet paper', 'table', 'phone', 'wall', 'socket', 'door handle', 'wall outlet', 'floor', 'wall corner', 'wall corner', 'wall corner', 'wall corner', 'wall corner', 'wall corner']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in jacket stands near mirror on wall corner",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "phone",
+          "table",
+          "wall outlet"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "socket",
+          "door handle",
+          "floor"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the man's hat, the phone he is holding, the table he is standing near, and the wall outlet on the wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket stands near mirror on wall corner\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"phone\", \"table\", \"wall outlet\"],\n  \"hallucinated_objects\": [\"light\", \"socket\", \"door handle\", \"floor\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the man's hat, the phone he is holding, the table he is standing near, and the wall outlet on the wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in jacket wears hat near mirror with phone on table near wall outlet",
+      "vlm_hint": {
+        "missing_objects": [
+          "light",
+          "toilet paper",
+          "table",
+          "phone",
+          "wall outlet",
+          "floor",
+          "wall corner"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket",
+          "hat",
+          "mirror",
+          "door",
+          "socket",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and actions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket wears hat near mirror with phone on table near wall outlet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light\", \"toilet paper\", \"table\", \"phone\", \"wall outlet\", \"floor\", \"wall corner\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\", \"hat\", \"mirror\", \"door\", \"socket\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and actions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Toilet paper on floor near wall corner with phone and light nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "jacket",
+          "hat",
+          "mirror",
+          "door",
+          "light",
+          "table",
+          "phone",
+          "wall",
+          "socket",
+          "door handle",
+          "wall outlet",
+          "floor",
+          "wall corner"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, jacket, hat, mirror, door, light, table, phone, wall, socket, door handle, wall outlet, floor, and wall corner."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Toilet paper on floor near wall corner with phone and light nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"jacket\", \"hat\", \"mirror\", \"door\", \"light\", \"table\", \"phone\", \"wall\", \"socket\", \"door handle\", \"wall outlet\", \"floor\", \"wall corner\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, jacket, hat, mirror, door, light, table, phone, wall, socket, door handle, wall outlet, floor, and wall corner.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in jacket and hat stands near mirror with light and door by table and phone on floor by wall corner.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "light",
+          "door",
+          "table",
+          "phone",
+          "floor",
+          "wall corner"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's hat, the mirror, the light, the door, the table, the phone, the floor, and the wall corner."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket and hat stands near mirror with light and door by table and phone on floor by wall corner.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"light\", \"door\", \"table\", \"phone\", \"floor\", \"wall corner\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's hat, the mirror, the light, the door, the table, the phone, the floor, and the wall corner.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in hat stands before mirror with light, near door, by table and phone on floor at wall corner.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "door",
+          "light",
+          "table",
+          "phone",
+          "floor",
+          "wall corner"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's hat, the mirror he is standing in front of, the door, the light, the table, the phone, the floor, and the wall corner."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat stands before mirror with light, near door, by table and phone on floor at wall corner.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"door\", \"light\", \"table\", \"phone\", \"floor\", \"wall corner\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's hat, the mirror he is standing in front of, the door, the light, the table, the phone, the floor, and the wall corner.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in hat stands before mirror with light, near door, on table by phone at wall corner.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "light",
+          "door",
+          "table",
+          "phone",
+          "wall",
+          "wall corner"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's hat, the mirror he is standing in front of, the light above the mirror, the door behind him, the table with the phone on it, and the wall corner."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat stands before mirror with light, near door, on table by phone at wall corner.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"light\", \"door\", \"table\", \"phone\", \"wall\", \"wall corner\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's hat, the mirror he is standing in front of, the light above the mirror, the door behind him, the table with the phone on it, and the wall corner.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in hat stands in front of mirror with light above, near door, on table by phone at wall corner.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "light",
+          "door",
+          "table",
+          "phone",
+          "wall",
+          "wall corner"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's hat, the mirror he is standing in front of, the light above the mirror, the door, the table, the phone, and the wall corner."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat stands in front of mirror with light above, near door, on table by phone at wall corner.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"light\", \"door\", \"table\", \"phone\", \"wall\", \"wall corner\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's hat, the mirror he is standing in front of, the light above the mirror, the door, the table, the phone, and the wall corner.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "light",
+          "door",
+          "table",
+          "phone"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket",
+          "wall",
+          "wall corner"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man wearing a hat, the mirror with a light above it, the door at the wall corner, the table with a phone, and the wall outlet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"light\", \"door\", \"table\", \"phone\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\", \"wall\", \"wall corner\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man wearing a hat, the mirror with a light above it, the door at the wall corner, the table with a phone, and the wall outlet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "light",
+          "door",
+          "table",
+          "phone"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket",
+          "wall",
+          "wall corner"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man wearing a hat, the mirror with a light above it, the door at the wall corner, the table with a phone, and the wall outlet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"light\", \"door\", \"table\", \"phone\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\", \"wall\", \"wall corner\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man wearing a hat, the mirror with a light above it, the door at the wall corner, the table with a phone, and the wall outlet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "mirror",
+          "light",
+          "door",
+          "table",
+          "phone"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "jacket",
+          "wall",
+          "wall corner"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man wearing a hat, the mirror with a light above it, the door at the wall corner, the table with a phone, and the wall outlet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, mirror, door, light, toilet paper, table, phone, wall, socket, door handle, wall outlet, floor, wall corner, wall corner, wall corner, wall corner, wall corner, wall corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"mirror\", \"light\", \"door\", \"table\", \"phone\"],\n  \"hallucinated_objects\": [\"man\", \"jacket\", \"wall\", \"wall corner\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man wearing a hat, the mirror with a light above it, the door at the wall corner, the table with a phone, and the wall outlet.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 202228,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000202228.jpg",
+    "final_caption": "Man in hat stands in front of mirror with light above, near door at wall corner, by table and phone.",
+    "total_time_sec": 43.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"jacket\",\n    \"hat\",\n    \"mirror\",\n    \"door\",\n    \"light\",\n    \"toilet paper\",\n    \"table\",\n    \"phone\",\n    \"wall\",\n    \"socket\",\n    \"door handle\",\n    \"wall outlet\",\n    \"floor\",\n    \"wall corner\",\n    \"wall corner\",\n    \"wall corner\",\n    \"wall corner\",\n    \"wall corner\",\n    \"wall corner\"\n  ]\n}"
+}

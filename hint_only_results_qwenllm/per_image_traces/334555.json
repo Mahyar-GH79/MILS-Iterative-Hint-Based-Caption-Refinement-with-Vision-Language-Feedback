@@ -1,0 +1,258 @@
+{
+  "image_id": 334555,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000334555.jpg",
+  "objects": [
+    "cow",
+    "street",
+    "car",
+    "man",
+    "building",
+    "sign",
+    "pole",
+    "person",
+    "shirt",
+    "jeans",
+    "tie",
+    "hat",
+    "door",
+    "window",
+    "streetlight",
+    "street",
+    "car",
+    "person",
+    "shirt",
+    "jeans"
+  ],
+  "template": "We have an image with these objects: ['cow', 'street', 'car', 'man', 'building', 'sign', 'pole', 'person', 'shirt', 'jeans', 'tie', 'hat', 'door', 'window', 'streetlight', 'street', 'car', 'person', 'shirt', 'jeans']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cows on street near cars people buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "tie",
+          "hat",
+          "door",
+          "window",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "shirt",
+          "jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of cars, the specific buildings, and the people's clothing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows on street near cars people buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tie\", \"hat\", \"door\", \"window\", \"streetlight\"],\n  \"hallucinated_objects\": [\"person\", \"shirt\", \"jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of cars, the specific buildings, and the people's clothing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cows on street near cars and building with streetlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "tie",
+          "hat",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows on street near cars and building with streetlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tie\", \"hat\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in shirt and jeans walks on street near car and building with door and window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cow"
+        ],
+        "hallucinated_objects": [
+          "man in shirt and jeans"
+        ],
+        "genericity_hint": "The image contains a cow, but the caption does not mention it.",
+        "edit_instructions": [
+          "Remove the man in shirt and jeans and add the cow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and jeans walks on street near car and building with door and window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cow\"],\n  \"hallucinated_objects\": [\"man in shirt and jeans\"],\n  \"genericity_hint\": \"The image contains a cow, but the caption does not mention it.\",\n  \"edit_instructions\": \"Remove the man in shirt and jeans and add the cow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cow grazes on street near car and building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "tie",
+          "hat",
+          "door",
+          "window",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "person",
+          "shirt",
+          "jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the man, tie, hat, door, window, and streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cow grazes on street near car and building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"tie\", \"hat\", \"door\", \"window\", \"streetlight\"],\n  \"hallucinated_objects\": [\"car\", \"person\", \"shirt\", \"jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the man, tie, hat, door, window, and streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in tie and hat stands by building with visible door and window near streetlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cow"
+        ],
+        "hallucinated_objects": [
+          "man in tie and hat"
+        ],
+        "genericity_hint": "The image contains a cow, but the caption does not mention it.",
+        "edit_instructions": [
+          "Remove the man in tie and hat and add the cow to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in tie and hat stands by building with visible door and window near streetlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cow\"],\n  \"hallucinated_objects\": [\"man in tie and hat\"],\n  \"genericity_hint\": \"The image contains a cow, but the caption does not mention it.\",\n  \"edit_instructions\": \"Remove the man in tie and hat and add the cow to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cow stands by building near streetlight on street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "shirt",
+          "jeans",
+          "tie",
+          "hat",
+          "door",
+          "window",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "person",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, shirt, jeans, tie, hat, door, window, and streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cow stands by building near streetlight on street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"shirt\", \"jeans\", \"tie\", \"hat\", \"door\", \"window\", \"streetlight\"],\n  \"hallucinated_objects\": [\"car\", \"person\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, shirt, jeans, tie, hat, door, window, and streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in shirt and jeans stands near building with window and streetlight on street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cow"
+        ],
+        "hallucinated_objects": [
+          "man in shirt and jeans"
+        ],
+        "genericity_hint": "The image contains a cow, but the caption does not mention it.",
+        "edit_instructions": [
+          "Remove the man in shirt and jeans and add the cow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and jeans stands near building with window and streetlight on street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cow\"],\n  \"hallucinated_objects\": [\"man in shirt and jeans\"],\n  \"genericity_hint\": \"The image contains a cow, but the caption does not mention it.\",\n  \"edit_instructions\": \"Remove the man in shirt and jeans and add the cow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cow on street near building with window and streetlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "tie",
+          "hat",
+          "door",
+          "window",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "person",
+          "shirt",
+          "jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, tie, hat, door, window, and streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cow on street near building with window and streetlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"tie\", \"hat\", \"door\", \"window\", \"streetlight\"],\n  \"hallucinated_objects\": [\"car\", \"person\", \"shirt\", \"jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, tie, hat, door, window, and streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in tie and hat near building with window and streetlight on street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cow"
+        ],
+        "hallucinated_objects": [
+          "man in tie and hat"
+        ],
+        "genericity_hint": "The image contains a cow, but the caption does not mention it.",
+        "edit_instructions": [
+          "Remove the man in tie and hat and add the cow to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in tie and hat near building with window and streetlight on street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cow\"],\n  \"hallucinated_objects\": [\"man in tie and hat\"],\n  \"genericity_hint\": \"The image contains a cow, but the caption does not mention it.\",\n  \"edit_instructions\": \"Remove the man in tie and hat and add the cow to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cow on street near building with window and streetlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "tie",
+          "hat",
+          "door",
+          "window",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "person",
+          "shirt",
+          "jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, tie, hat, door, window, and streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cow, street, car, man, building, sign, pole, person, shirt, jeans, tie, hat, door, window, streetlight, street, car, person, shirt, jeans]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cow on street near building with window and streetlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"tie\", \"hat\", \"door\", \"window\", \"streetlight\"],\n  \"hallucinated_objects\": [\"car\", \"person\", \"shirt\", \"jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, tie, hat, door, window, and streetlight.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 334555,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000334555.jpg",
+    "final_caption": "Cow on street near building with window and streetlight.",
+    "total_time_sec": 32.23
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cow\",\n    \"street\",\n    \"car\",\n    \"man\",\n    \"building\",\n    \"sign\",\n    \"pole\",\n    \"person\",\n    \"shirt\",\n    \"jeans\",\n    \"tie\",\n    \"hat\",\n    \"door\",\n    \"window\",\n    \"streetlight\",\n    \"street\",\n    \"car\",\n    \"person\",\n    \"shirt\",\n    \"jeans\"\n  ]\n}"
+}

@@ -1,0 +1,221 @@
+{
+  "image_id": 511599,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000511599.jpg",
+  "objects": [
+    "boats",
+    "people",
+    "bags",
+    "water",
+    "houses",
+    "trees",
+    "road",
+    "boats",
+    "people",
+    "bags",
+    "water",
+    "houses",
+    "trees",
+    "road",
+    "boats",
+    "people",
+    "bags",
+    "water",
+    "houses",
+    "trees"
+  ],
+  "template": "We have an image with these objects: ['boats', 'people', 'bags', 'water', 'houses', 'trees', 'road', 'boats', 'people', 'bags', 'water', 'houses', 'trees', 'road', 'boats', 'people', 'bags', 'water', 'houses', 'trees']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Boats people water houses",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add 'trees' and 'road' to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water houses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add 'trees' and 'road' to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boats people water houses trees road",
+      "vlm_hint": {
+        "missing_objects": [
+          "boats",
+          "people",
+          "bags",
+          "water",
+          "houses",
+          "trees",
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water houses trees road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boats\", \"people\", \"bags\", \"water\", \"houses\", \"trees\", \"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boats people water houses trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the road to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water houses trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the road to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Boats people water houses trees along the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "boats",
+          "people",
+          "bags",
+          "water",
+          "houses",
+          "trees",
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the boats, people, bags, water, houses, trees, and road."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water houses trees along the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boats\", \"people\", \"bags\", \"water\", \"houses\", \"trees\", \"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the boats, people, bags, water, houses, trees, and road.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Boats people bags water houses trees by the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "boats",
+          "people",
+          "bags",
+          "water",
+          "houses",
+          "trees",
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the details of the image, such as the number of boats, people, bags, water, houses, trees, and the road."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people bags water houses trees by the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boats\", \"people\", \"bags\", \"water\", \"houses\", \"trees\", \"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the details of the image, such as the number of boats, people, bags, water, houses, trees, and the road.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Boats people bags water houses trees by the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "boats",
+          "people",
+          "bags",
+          "water",
+          "houses",
+          "trees",
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the details of the image, such as the number of boats, people, bags, water, houses, trees, and the road."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people bags water houses trees by the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boats\", \"people\", \"bags\", \"water\", \"houses\", \"trees\", \"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the details of the image, such as the number of boats, people, bags, water, houses, trees, and the road.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Several boats people and bags by water near houses and trees on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the road.",
+        "edit_instructions": [
+          "Add the road to the caption to make it more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Several boats people and bags by water near houses and trees on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the road.\",\n  \"edit_instructions\": \"Add the road to the caption to make it more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Boats people and bags by water near houses and trees on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the road.",
+        "edit_instructions": [
+          "Add the road to the caption to make it more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people and bags by water near houses and trees on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the road.\",\n  \"edit_instructions\": \"Add the road to the caption to make it more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Boats people and bags by water near houses and trees along the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the road.",
+        "edit_instructions": [
+          "Add the road to the caption to make it more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people and bags by water near houses and trees along the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the road.\",\n  \"edit_instructions\": \"Add the road to the caption to make it more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Boats people and bags by water near houses and trees along the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "road"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the road.",
+        "edit_instructions": [
+          "Add the road to the caption to make it more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees, road, boats, people, bags, water, houses, trees]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people and bags by water near houses and trees along the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"road\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the road.\",\n  \"edit_instructions\": \"Add the road to the caption to make it more specific.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 511599,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000511599.jpg",
+    "final_caption": "Boats people and bags by water near houses and trees along the road",
+    "total_time_sec": 28.31
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"boats\",\n    \"people\",\n    \"bags\",\n    \"water\",\n    \"houses\",\n    \"trees\",\n    \"road\",\n    \"boats\",\n    \"people\",\n    \"bags\",\n    \"water\",\n    \"houses\",\n    \"trees\",\n    \"road\",\n    \"boats\",\n    \"people\",\n    \"bags\",\n    \"water\",\n    \"houses\",\n    \"trees\"\n  ]\n}"
+}

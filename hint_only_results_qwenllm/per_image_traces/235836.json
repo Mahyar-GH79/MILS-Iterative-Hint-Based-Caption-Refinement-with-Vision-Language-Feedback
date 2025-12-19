@@ -1,0 +1,278 @@
+{
+  "image_id": 235836,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000235836.jpg",
+  "objects": [
+    "bat",
+    "ball",
+    "chair",
+    "shirt",
+    "helmet",
+    "grass",
+    "house",
+    "window",
+    "tree",
+    "glove",
+    "shoe",
+    "sweater",
+    "leg",
+    "arm",
+    "toothbrush",
+    "toothpaste",
+    "toothbrush",
+    "toothpaste",
+    "toothbrush",
+    "toothpaste"
+  ],
+  "template": "We have an image with these objects: ['bat', 'ball', 'chair', 'shirt', 'helmet', 'grass', 'house', 'window', 'tree', 'glove', 'shoe', 'sweater', 'leg', 'arm', 'toothbrush', 'toothpaste', 'toothbrush', 'toothpaste', 'toothbrush', 'toothpaste']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Baseball game outside grass house",
+      "vlm_hint": {
+        "missing_objects": [
+          "bat",
+          "ball"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball game outside grass house\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bat\", \"ball\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bat ball game on grass near house",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of ball, the color of the shirt, and the type of chair."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bat ball game on grass near house\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of ball, the color of the shirt, and the type of chair.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bat and ball game on grass near house with glove",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add a specific object that is present in the image and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bat and ball game on grass near house with glove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add a specific object that is present in the image and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bat ball game on grass near house with helmet",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of ball, the color of the shirt, and the type of helmet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bat ball game on grass near house with helmet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of ball, the color of the shirt, and the type of helmet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bat and ball game on grass near house with helmet and glove",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bat and ball game on grass near house with helmet and glove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bat ball game on grass near house with helmet glove",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of ball and the color of the glove."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bat ball game on grass near house with helmet glove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of ball and the color of the glove.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown bat and orange ball game on green grass near white house with yellow helmet and glove",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "brown bat",
+          "orange ball"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their colors."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown bat and orange ball game on green grass near white house with yellow helmet and glove\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"brown bat\", \"orange ball\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their colors.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Gray glove and blue toothbrush beside green grass near white house with toothpaste",
+      "vlm_hint": {
+        "missing_objects": [
+          "bat",
+          "ball",
+          "chair",
+          "shirt",
+          "helmet",
+          "grass",
+          "house",
+          "window",
+          "tree",
+          "glove",
+          "shoe",
+          "sweater",
+          "leg",
+          "arm",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray glove and blue toothbrush beside green grass near white house with toothpaste\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bat\", \"ball\", \"chair\", \"shirt\", \"helmet\", \"grass\", \"house\", \"window\", \"tree\", \"glove\", \"shoe\", \"sweater\", \"leg\", \"arm\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Gray glove and blue toothpaste beside green grass near white house",
+      "vlm_hint": {
+        "missing_objects": [
+          "bat",
+          "ball",
+          "chair",
+          "shirt",
+          "helmet",
+          "grass",
+          "house",
+          "window",
+          "tree",
+          "glove",
+          "shoe",
+          "sweater",
+          "leg",
+          "arm",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "toothbrush",
+          "toothpaste"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray glove and blue toothpaste beside green grass near white house\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bat\", \"ball\", \"chair\", \"shirt\", \"helmet\", \"grass\", \"house\", \"window\", \"tree\", \"glove\", \"shoe\", \"sweater\", \"leg\", \"arm\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"toothbrush\", \"toothpaste\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Gray glove and blue toothpaste beside green grass near white house with bat and ball",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "shirt",
+          "helmet",
+          "grass",
+          "house",
+          "window",
+          "tree",
+          "glove",
+          "shoe",
+          "sweater",
+          "leg",
+          "arm",
+          "toothbrush",
+          "toothpaste"
+        ],
+        "hallucinated_objects": [
+          "bat",
+          "ball"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and positions."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bat, ball, chair, shirt, helmet, grass, house, window, tree, glove, shoe, sweater, leg, arm, toothbrush, toothpaste, toothbrush, toothpaste, toothbrush, toothpaste]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray glove and blue toothpaste beside green grass near white house with bat and ball\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"shirt\", \"helmet\", \"grass\", \"house\", \"window\", \"tree\", \"glove\", \"shoe\", \"sweater\", \"leg\", \"arm\", \"toothbrush\", \"toothpaste\"],\n  \"hallucinated_objects\": [\"bat\", \"ball\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and positions.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 235836,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000235836.jpg",
+    "final_caption": "Gray glove and blue toothpaste beside green grass near white house with bat and ball",
+    "total_time_sec": 34.45
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bat\",\n    \"ball\",\n    \"chair\",\n    \"shirt\",\n    \"helmet\",\n    \"grass\",\n    \"house\",\n    \"window\",\n    \"tree\",\n    \"glove\",\n    \"shoe\",\n    \"sweater\",\n    \"leg\",\n    \"arm\",\n    \"toothbrush\",\n    \"toothpaste\",\n    \"toothbrush\",\n    \"toothpaste\",\n    \"toothbrush\",\n    \"toothpaste\"\n  ]\n}"
+}

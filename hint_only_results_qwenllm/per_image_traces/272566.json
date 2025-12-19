@@ -1,0 +1,209 @@
+{
+  "image_id": 272566,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000272566.jpg",
+  "objects": [
+    "apples",
+    "bananas",
+    "basket",
+    "man",
+    "child",
+    "wall",
+    "vegetables",
+    "fruit",
+    "basket",
+    "fruit",
+    "basket",
+    "fruit",
+    "basket",
+    "fruit",
+    "basket",
+    "fruit",
+    "basket",
+    "fruit",
+    "basket",
+    "fruit"
+  ],
+  "template": "We have an image with these objects: ['apples', 'bananas', 'basket', 'man', 'child', 'wall', 'vegetables', 'fruit', 'basket', 'fruit', 'basket', 'fruit', 'basket', 'fruit', 'basket', 'fruit', 'basket', 'fruit', 'basket', 'fruit']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man and child with baskets of fruits and vegetables beside bananas and apples",
+      "vlm_hint": {
+        "missing_objects": [
+          "vegetables"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "child"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables present.",
+        "edit_instructions": [
+          "Remove the man and child from the caption and specify the type of vegetables present."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and child with baskets of fruits and vegetables beside bananas and apples\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vegetables\"],\n  \"hallucinated_objects\": [\"man\", \"child\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables present.\",\n  \"edit_instructions\": \"Remove the man and child from the caption and specify the type of vegetables present.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Baskets of fruits and vegetables including bananas, apples, and leafy greens beside the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "vegetables"
+        ],
+        "hallucinated_objects": [
+          "leafy greens"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables present.",
+        "edit_instructions": [
+          "Remove the mention of 'leafy greens' and specify the type of vegetables present."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baskets of fruits and vegetables including bananas, apples, and leafy greens beside the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vegetables\"],\n  \"hallucinated_objects\": [\"leafy greens\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables present.\",\n  \"edit_instructions\": \"Remove the mention of 'leafy greens' and specify the type of vegetables present.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Baskets of fruits and vegetables like bananas, apples, and carrots beside the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "carrots"
+        ],
+        "hallucinated_objects": [
+          "vegetables"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables present.",
+        "edit_instructions": [
+          "Remove the word 'vegetables' and specify the type of vegetables present."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baskets of fruits and vegetables like bananas, apples, and carrots beside the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carrots\"],\n  \"hallucinated_objects\": [\"vegetables\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables present.\",\n  \"edit_instructions\": \"Remove the word 'vegetables' and specify the type of vegetables present.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Baskets of fruits and carrots beside the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "carrots"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables present.",
+        "edit_instructions": [
+          "Add the correct type of vegetables to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baskets of fruits and carrots beside the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carrots\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables present.\",\n  \"edit_instructions\": \"Add the correct type of vegetables to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Baskets of apples and bananas beside the wall with vegetables",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "child"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the exact location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the man and child in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baskets of apples and bananas beside the wall with vegetables\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"child\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the man and child in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and child with baskets of fruit beside the wall vegetables",
+      "vlm_hint": {
+        "missing_objects": [
+          "vegetables"
+        ],
+        "hallucinated_objects": [
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables.",
+        "edit_instructions": [
+          "Remove the 'wall' and add a specific type of vegetables."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and child with baskets of fruit beside the wall vegetables\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vegetables\"],\n  \"hallucinated_objects\": [\"wall\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables.\",\n  \"edit_instructions\": \"Remove the 'wall' and add a specific type of vegetables.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man and child with baskets of fruit and carrots beside vegetables",
+      "vlm_hint": {
+        "missing_objects": [
+          "carrots"
+        ],
+        "hallucinated_objects": [
+          "vegetables"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables present.",
+        "edit_instructions": [
+          "Remove the mention of carrots and specify the type of vegetables present."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and child with baskets of fruit and carrots beside vegetables\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carrots\"],\n  \"hallucinated_objects\": [\"vegetables\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables present.\",\n  \"edit_instructions\": \"Remove the mention of carrots and specify the type of vegetables present.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man and child with baskets of fruit and carrots beside potatoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "carrots",
+          "potatoes"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific about the types of vegetables present.",
+        "edit_instructions": [
+          "Remove the mention of carrots and potatoes from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and child with baskets of fruit and carrots beside potatoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carrots\", \"potatoes\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific about the types of vegetables present.\",\n  \"edit_instructions\": \"Remove the mention of carrots and potatoes from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and child with baskets of fruit beside the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "vegetables"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of fruit.",
+        "edit_instructions": [
+          "Add the type of fruit to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and child with baskets of fruit beside the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vegetables\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of fruit.\",\n  \"edit_instructions\": \"Add the type of fruit to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man and child with baskets of apples and bananas beside the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "vegetables"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of vegetables present.",
+        "edit_instructions": [
+          "Add the type of vegetables present in the image to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [apples, bananas, basket, man, child, wall, vegetables, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit, basket, fruit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and child with baskets of apples and bananas beside the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vegetables\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vegetables present.\",\n  \"edit_instructions\": \"Add the type of vegetables present in the image to the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 272566,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000272566.jpg",
+    "final_caption": "Man and child with baskets of apples and bananas beside the wall",
+    "total_time_sec": 26.49
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"apples\",\n    \"bananas\",\n    \"basket\",\n    \"man\",\n    \"child\",\n    \"wall\",\n    \"vegetables\",\n    \"fruit\",\n    \"basket\",\n    \"fruit\",\n    \"basket\",\n    \"fruit\",\n    \"basket\",\n    \"fruit\",\n    \"basket\",\n    \"fruit\",\n    \"basket\",\n    \"fruit\",\n    \"basket\",\n    \"fruit\"\n  ]\n}"
+}

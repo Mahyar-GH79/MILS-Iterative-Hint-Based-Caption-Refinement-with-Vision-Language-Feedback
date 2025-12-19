@@ -1,0 +1,237 @@
+{
+  "image_id": 134882,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000134882.jpg",
+  "objects": [
+    "bed",
+    "plaid blanket",
+    "cat",
+    "books",
+    "shelf",
+    "stuffed animals",
+    "frame",
+    "cords",
+    "laptop",
+    "wall",
+    "bedside table",
+    "bedspread",
+    "pillow",
+    "bookshelf",
+    "frame",
+    "bed",
+    "bed",
+    "bed",
+    "bed"
+  ],
+  "template": "We have an image with these objects: ['bed', 'plaid blanket', 'cat', 'books', 'shelf', 'stuffed animals', 'frame', 'cords', 'laptop', 'wall', 'bedside table', 'bedspread', 'pillow', 'bookshelf', 'frame', 'bed', 'bed', 'bed', 'bed']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bed with plaid blanket and stuffed animals",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "frame",
+          "bedspread",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "bedside table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket and stuffed animals\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"frame\", \"bedspread\", \"pillow\"],\n  \"hallucinated_objects\": [\"bedside table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bed with plaid blanket pillow and stuffed animals frame",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "cords"
+        ],
+        "hallucinated_objects": [
+          "bedspread",
+          "pillow",
+          "bedside table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket pillow and stuffed animals frame\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"cords\"],\n  \"hallucinated_objects\": [\"bedspread\", \"pillow\", \"bedside table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bed with plaid blanket and stuffed animals near laptop cords",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedspread",
+          "pillow",
+          "frame"
+        ],
+        "hallucinated_objects": [
+          "bedside table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the visible objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket and stuffed animals near laptop cords\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedspread\", \"pillow\", \"frame\"],\n  \"hallucinated_objects\": [\"bedside table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the visible objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bed with plaid blanket pillows and stuffed animals near laptop cords and framed photos",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedspread",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "bedside table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the blanket, the presence of a pillow, and the exact location of the bedside table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket pillows and stuffed animals near laptop cords and framed photos\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedspread\", \"pillow\"],\n  \"hallucinated_objects\": [\"bedside table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the blanket, the presence of a pillow, and the exact location of the bedside table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Plaid blanket bed with pillows stuffed animals near laptop cords framed photos bedspread",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedspread",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "bedside table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bedspread and the presence of a pillow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plaid blanket bed with pillows stuffed animals near laptop cords framed photos bedspread\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedspread\", \"pillow\"],\n  \"hallucinated_objects\": [\"bedside table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bedspread and the presence of a pillow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Plaid blanket bed with red bedspread and pillow near laptop cords",
+      "vlm_hint": {
+        "missing_objects": [
+          "plaid blanket",
+          "bedspread",
+          "pillow",
+          "laptop cords"
+        ],
+        "hallucinated_objects": [
+          "red bedspread"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the blanket and the presence of a laptop cord."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plaid blanket bed with red bedspread and pillow near laptop cords\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plaid blanket\", \"bedspread\", \"pillow\", \"laptop cords\"],\n  \"hallucinated_objects\": [\"red bedspread\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the blanket and the presence of a laptop cord.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Plaid blanket bed with bedspread and pillows near laptop cords",
+      "vlm_hint": {
+        "missing_objects": [
+          "stuffed animals",
+          "frame",
+          "bedspread",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "laptop cords"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plaid blanket bed with bedspread and pillows near laptop cords\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"stuffed animals\", \"frame\", \"bedspread\", \"pillow\"],\n  \"hallucinated_objects\": [\"laptop cords\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bed with plaid blanket and bedspread beside stuffed animals and framed photos",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "bedside table"
+        ],
+        "hallucinated_objects": [
+          "frame",
+          "bedspread"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the laptop and bedside table, and remove the frame and bedspread."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket and bedspread beside stuffed animals and framed photos\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"bedside table\"],\n  \"hallucinated_objects\": [\"frame\", \"bedspread\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the laptop and bedside table, and remove the frame and bedspread.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bed with plaid blanket pillows beside laptop on bedside table",
+      "vlm_hint": {
+        "missing_objects": [
+          "stuffed animals",
+          "frame",
+          "bedspread",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "bedside table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket pillows beside laptop on bedside table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"stuffed animals\", \"frame\", \"bedspread\", \"pillow\"],\n  \"hallucinated_objects\": [\"bedside table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bed with plaid blanket and bedspread beside stuffed animals and pillow on shelf frame",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "cords"
+        ],
+        "hallucinated_objects": [
+          "bedspread"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, plaid blanket, cat, books, shelf, stuffed animals, frame, cords, laptop, wall, bedside table, bedspread, pillow, bookshelf, frame, bed, bed, bed, bed]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bed with plaid blanket and bedspread beside stuffed animals and pillow on shelf frame\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"cords\"],\n  \"hallucinated_objects\": [\"bedspread\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 134882,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000134882.jpg",
+    "final_caption": "Bed with plaid blanket and bedspread beside stuffed animals and pillow on shelf frame",
+    "total_time_sec": 32.49
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bed\",\n    \"plaid blanket\",\n    \"cat\",\n    \"books\",\n    \"shelf\",\n    \"stuffed animals\",\n    \"frame\",\n    \"cords\",\n    \"laptop\",\n    \"wall\",\n    \"bedside table\",\n    \"bedspread\",\n    \"pillow\",\n    \"bookshelf\",\n    \"frame\",\n    \"bed\",\n    \"bed\",\n    \"bed\",\n    \"bed\"\n  ]\n}"
+}

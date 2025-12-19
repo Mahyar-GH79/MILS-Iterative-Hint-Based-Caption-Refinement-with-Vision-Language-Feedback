@@ -1,0 +1,297 @@
+{
+  "image_id": 77460,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000077460.jpg",
+  "objects": [
+    "kites",
+    "people",
+    "grass",
+    "clouds",
+    "sky",
+    "trees",
+    "park",
+    "outdoor",
+    "activity",
+    "fun",
+    "leisure",
+    "recreation",
+    "community",
+    "event",
+    "flying",
+    "entertainment",
+    "social",
+    "interaction",
+    "nature"
+  ],
+  "template": "We have an image with these objects: ['kites', 'people', 'grass', 'clouds', 'sky', 'trees', 'park', 'outdoor', 'activity', 'fun', 'leisure', 'recreation', 'community', 'event', 'flying', 'entertainment', 'social', 'interaction', 'nature']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People fly kites enjoying sunny outdoors in a park",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "park",
+          "activity",
+          "fun",
+          "leisure",
+          "recreation",
+          "community",
+          "event",
+          "flying",
+          "entertainment",
+          "social",
+          "interaction",
+          "nature"
+        ],
+        "hallucinated_objects": [
+          "kites",
+          "people",
+          "grass",
+          "clouds",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes the missing objects and describes the scene more accurately."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly kites enjoying sunny outdoors in a park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"park\", \"activity\", \"fun\", \"leisure\", \"recreation\", \"community\", \"event\", \"flying\", \"entertainment\", \"social\", \"interaction\", \"nature\"],\n  \"hallucinated_objects\": [\"kites\", \"people\", \"grass\", \"clouds\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes the missing objects and describes the scene more accurately.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People enjoy flying kites among trees in a park filled with social activity.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "park"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees and the type of park."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People enjoy flying kites among trees in a park filled with social activity.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"park\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees and the type of park.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People fly kites among tall trees under a clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "park",
+          "activity",
+          "fun",
+          "leisure",
+          "recreation",
+          "community",
+          "event",
+          "flying",
+          "entertainment",
+          "social",
+          "interaction",
+          "nature"
+        ],
+        "hallucinated_objects": [
+          "clear sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly kites among tall trees under a clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"park\", \"activity\", \"fun\", \"leisure\", \"recreation\", \"community\", \"event\", \"flying\", \"entertainment\", \"social\", \"interaction\", \"nature\"],\n  \"hallucinated_objects\": [\"clear sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People fly kites in a park among tall trees and playful children.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "park",
+          "activity",
+          "fun",
+          "leisure",
+          "recreation",
+          "community",
+          "event",
+          "flying",
+          "entertainment",
+          "social",
+          "interaction",
+          "nature"
+        ],
+        "hallucinated_objects": [
+          "tall trees",
+          "playful children"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects mentioned in the caption.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image and focus on the objects that are present."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly kites in a park among tall trees and playful children.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"park\", \"activity\", \"fun\", \"leisure\", \"recreation\", \"community\", \"event\", \"flying\", \"entertainment\", \"social\", \"interaction\", \"nature\"],\n  \"hallucinated_objects\": [\"tall trees\", \"playful children\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects mentioned in the caption.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image and focus on the objects that are present.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People fly kites among grass and clouds in a park.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "park",
+          "activity",
+          "fun",
+          "leisure",
+          "recreation",
+          "community",
+          "event",
+          "flying",
+          "entertainment",
+          "social",
+          "interaction",
+          "nature"
+        ],
+        "hallucinated_objects": [
+          "kites",
+          "people",
+          "grass",
+          "clouds",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes the missing objects and their arrangement."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly kites among grass and clouds in a park.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"park\", \"activity\", \"fun\", \"leisure\", \"recreation\", \"community\", \"event\", \"flying\", \"entertainment\", \"social\", \"interaction\", \"nature\"],\n  \"hallucinated_objects\": [\"kites\", \"people\", \"grass\", \"clouds\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes the missing objects and their arrangement.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People enjoy kite-flying in a park filled with trees and trees, adding to the community event's fun and recreation.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "park",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People enjoy kite-flying in a park filled with trees and trees, adding to the community event's fun and recreation.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"park\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People fly kites under cloudy skies amidst grass and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "park"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add more specific details about the location and the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly kites under cloudy skies amidst grass and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"park\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add more specific details about the location and the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People fly colorful kites under fluffy clouds amidst lush grass and trees in a vibrant outdoor event.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "park",
+          "activity",
+          "fun",
+          "leisure",
+          "recreation",
+          "community",
+          "event",
+          "flying",
+          "entertainment",
+          "social",
+          "interaction",
+          "nature"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly colorful kites under fluffy clouds amidst lush grass and trees in a vibrant outdoor event.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"park\", \"activity\", \"fun\", \"leisure\", \"recreation\", \"community\", \"event\", \"flying\", \"entertainment\", \"social\", \"interaction\", \"nature\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People fly colorful kites among clouds beneath lush trees in the grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "park",
+          "activity",
+          "fun",
+          "leisure",
+          "recreation",
+          "community",
+          "event",
+          "flying",
+          "entertainment",
+          "social",
+          "interaction",
+          "nature"
+        ],
+        "hallucinated_objects": [
+          "clouds",
+          "sky"
+        ],
+        "genericity_hint": "The image is specific to a park setting with people flying kites.",
+        "edit_instructions": [
+          "Remove the missing objects and hallucinated objects from the caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly colorful kites among clouds beneath lush trees in the grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"park\", \"activity\", \"fun\", \"leisure\", \"recreation\", \"community\", \"event\", \"flying\", \"entertainment\", \"social\", \"interaction\", \"nature\"],\n  \"hallucinated_objects\": [\"clouds\", \"sky\"],\n  \"genericity_hint\": \"The image is specific to a park setting with people flying kites.\",\n  \"edit_instructions\": \"Remove the missing objects and hallucinated objects from the caption.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People fly colorful kites among trees in the park.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "park"
+        ],
+        "genericity_hint": "The caption is too general and lacks specific details about the location.",
+        "edit_instructions": [
+          "Specify the location and add more details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kites, people, grass, clouds, sky, trees, park, outdoor, activity, fun, leisure, recreation, community, event, flying, entertainment, social, interaction, nature]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fly colorful kites among trees in the park.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"park\"],\n  \"genericity_hint\": \"The caption is too general and lacks specific details about the location.\",\n  \"edit_instructions\": \"Specify the location and add more details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 77460,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000077460.jpg",
+    "final_caption": "People fly colorful kites among trees in the park.",
+    "total_time_sec": 34.98
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"kites\",\n    \"people\",\n    \"grass\",\n    \"clouds\",\n    \"sky\",\n    \"trees\",\n    \"park\",\n    \"outdoor\",\n    \"activity\",\n    \"fun\",\n    \"leisure\",\n    \"recreation\",\n    \"community\",\n    \"event\",\n    \"flying\",\n    \"entertainment\",\n    \"social\",\n    \"interaction\",\n    \"nature\"\n  ]\n}"
+}

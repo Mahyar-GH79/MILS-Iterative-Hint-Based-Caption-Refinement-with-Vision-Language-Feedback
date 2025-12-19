@@ -1,0 +1,262 @@
+{
+  "image_id": 347693,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000347693.jpg",
+  "objects": [
+    "bed",
+    "curtains",
+    "window",
+    "bucket",
+    "bench",
+    "pillow",
+    "hangers",
+    "gloves",
+    "metal frame",
+    "wall",
+    "furniture",
+    "hanging",
+    "medical",
+    "equipment",
+    "hospital",
+    "room",
+    "medical supplies",
+    "medical equipment",
+    "medical gloves",
+    "medical supplies"
+  ],
+  "template": "We have an image with these objects: ['bed', 'curtains', 'window', 'bucket', 'bench', 'pillow', 'hangers', 'gloves', 'metal frame', 'wall', 'furniture', 'hanging', 'medical', 'equipment', 'hospital', 'room', 'medical supplies', 'medical equipment', 'medical gloves', 'medical supplies']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Medical equipment hang near a hospital bed",
+      "vlm_hint": {
+        "missing_objects": [
+          "gloves",
+          "medical supplies"
+        ],
+        "hallucinated_objects": [
+          "metal frame"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical equipment hang near a hospital bed\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gloves\", \"medical supplies\"],\n  \"hallucinated_objects\": [\"metal frame\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Medical equipment and supplies hang by a hospital bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "gloves",
+          "medical supplies"
+        ],
+        "hallucinated_objects": [
+          "metal frame"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical equipment and supplies hang by a hospital bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gloves\", \"medical supplies\"],\n  \"hallucinated_objects\": [\"metal frame\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Medical supplies and gloves hang by a hospital bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "hangers"
+        ],
+        "genericity_hint": "The image is not specific about the type of medical supplies or gloves.",
+        "edit_instructions": [
+          "Remove the hangers and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang by a hospital bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"hangers\"],\n  \"genericity_hint\": \"The image is not specific about the type of medical supplies or gloves.\",\n  \"edit_instructions\": \"Remove the hangers and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Medical supplies and gloves hang near a hospital bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "metal frame",
+          "wall",
+          "furniture",
+          "medical",
+          "equipment",
+          "hospital",
+          "room",
+          "medical supplies",
+          "medical equipment",
+          "medical gloves"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of medical supplies or gloves.",
+        "edit_instructions": [
+          "Specify the type of medical supplies and gloves in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang near a hospital bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"metal frame\", \"wall\", \"furniture\", \"medical\", \"equipment\", \"hospital\", \"room\", \"medical supplies\", \"medical equipment\", \"medical gloves\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of medical supplies or gloves.\",\n  \"edit_instructions\": \"Specify the type of medical supplies and gloves in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Medical supplies and gloves hang by a bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "hangers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang by a bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"hangers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Medical supplies and gloves hang near a bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "metal frame",
+          "wall",
+          "furniture",
+          "medical",
+          "equipment",
+          "hospital",
+          "room",
+          "medical supplies",
+          "medical equipment",
+          "medical gloves"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of medical supplies or gloves.",
+        "edit_instructions": [
+          "Specify the type of medical supplies and gloves in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang near a bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"metal frame\", \"wall\", \"furniture\", \"medical\", \"equipment\", \"hospital\", \"room\", \"medical supplies\", \"medical equipment\", \"medical gloves\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of medical supplies or gloves.\",\n  \"edit_instructions\": \"Specify the type of medical supplies and gloves in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Medical supplies and gloves hang near a bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "metal frame",
+          "wall",
+          "furniture",
+          "medical",
+          "equipment",
+          "hospital",
+          "room",
+          "medical supplies",
+          "medical equipment",
+          "medical gloves"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of medical supplies or gloves.",
+        "edit_instructions": [
+          "Specify the type of medical supplies and gloves in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang near a bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"metal frame\", \"wall\", \"furniture\", \"medical\", \"equipment\", \"hospital\", \"room\", \"medical supplies\", \"medical equipment\", \"medical gloves\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of medical supplies or gloves.\",\n  \"edit_instructions\": \"Specify the type of medical supplies and gloves in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Medical supplies and gloves hang by a bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "hangers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang by a bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"hangers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Medical supplies and gloves hang by a bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "hangers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang by a bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"hangers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Medical supplies and gloves hang near a bed with curtains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "medical supplies",
+          "gloves"
+        ],
+        "hallucinated_objects": [
+          "metal frame",
+          "wall",
+          "furniture",
+          "medical",
+          "equipment",
+          "hospital",
+          "room",
+          "medical supplies",
+          "medical equipment",
+          "medical gloves"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of medical supplies or gloves.",
+        "edit_instructions": [
+          "Specify the type of medical supplies and gloves in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, curtains, window, bucket, bench, pillow, hangers, gloves, metal frame, wall, furniture, hanging, medical, equipment, hospital, room, medical supplies, medical equipment, medical gloves, medical supplies]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Medical supplies and gloves hang near a bed with curtains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"medical supplies\", \"gloves\"],\n  \"hallucinated_objects\": [\"metal frame\", \"wall\", \"furniture\", \"medical\", \"equipment\", \"hospital\", \"room\", \"medical supplies\", \"medical equipment\", \"medical gloves\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of medical supplies or gloves.\",\n  \"edit_instructions\": \"Specify the type of medical supplies and gloves in the caption.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 347693,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000347693.jpg",
+    "final_caption": "Medical supplies and gloves hang near a bed with curtains.",
+    "total_time_sec": 31.94
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bed\",\n    \"curtains\",\n    \"window\",\n    \"bucket\",\n    \"bench\",\n    \"pillow\",\n    \"hangers\",\n    \"gloves\",\n    \"metal frame\",\n    \"wall\",\n    \"furniture\",\n    \"hanging\",\n    \"medical\",\n    \"equipment\",\n    \"hospital\",\n    \"room\",\n    \"medical supplies\",\n    \"medical equipment\",\n    \"medical gloves\",\n    \"medical supplies\"\n  ]\n}"
+}

@@ -1,0 +1,251 @@
+{
+  "image_id": 508730,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000508730.jpg",
+  "objects": [
+    "two children",
+    "bathroom",
+    "tile wall",
+    "toilet",
+    "brush",
+    "sink",
+    "pipes",
+    "wall",
+    "floor",
+    "light",
+    "mirror",
+    "hair",
+    "ears",
+    "nose",
+    "mouth",
+    "eyes",
+    "hands",
+    "feet",
+    "diapers",
+    "toothbrush"
+  ],
+  "template": "We have an image with these objects: ['two children', 'bathroom', 'tile wall', 'toilet', 'brush', 'sink', 'pipes', 'wall', 'floor', 'light', 'mirror', 'hair', 'ears', 'nose', 'mouth', 'eyes', 'hands', 'feet', 'diapers', 'toothbrush']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Two children play near the toilet in a bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "mirror",
+          "light",
+          "hair",
+          "ears",
+          "nose",
+          "mouth",
+          "eyes",
+          "hands",
+          "feet",
+          "diapers",
+          "toothbrush"
+        ],
+        "hallucinated_objects": [
+          "brush",
+          "pipes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the sink, mirror, light, hair, ears, nose, mouth, hands, feet, diapers, and toothbrush."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play near the toilet in a bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"mirror\", \"light\", \"hair\", \"ears\", \"nose\", \"mouth\", \"eyes\", \"hands\", \"feet\", \"diapers\", \"toothbrush\"],\n  \"hallucinated_objects\": [\"brush\", \"pipes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the sink, mirror, light, hair, ears, nose, mouth, hands, feet, diapers, and toothbrush.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Two children play near the toilet with sink and mirror in the bright bathroom, showing hair and hands.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "brush",
+          "pipes",
+          "wall",
+          "floor",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the sink and mirror, and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play near the toilet with sink and mirror in the bright bathroom, showing hair and hands.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"mirror\"],\n  \"hallucinated_objects\": [\"brush\", \"pipes\", \"wall\", \"floor\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the sink and mirror, and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Two children play by the toilet near the sink and mirror in the bathroom, showing hair and hands.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "sink",
+          "toothbrush"
+        ],
+        "hallucinated_objects": [
+          "brush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the mirror, sink, and toothbrush."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play by the toilet near the sink and mirror in the bathroom, showing hair and hands.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"sink\", \"toothbrush\"],\n  \"hallucinated_objects\": [\"brush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the mirror, sink, and toothbrush.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Two children play by the sink and toilet near the mirror in the bathroom, showing hands and teeth.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "toothbrush"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "toilet",
+          "pipes",
+          "wall",
+          "floor",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the mirror, toothbrush, and specific parts of the bathroom."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play by the sink and toilet near the mirror in the bathroom, showing hands and teeth.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"toothbrush\"],\n  \"hallucinated_objects\": [\"sink\", \"toilet\", \"pipes\", \"wall\", \"floor\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the mirror, toothbrush, and specific parts of the bathroom.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Two children brush their teeth near the mirror in the tiled bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "toothbrush"
+        ],
+        "hallucinated_objects": [
+          "brush",
+          "sink",
+          "pipes",
+          "wall",
+          "floor",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children brush their teeth near the mirror in the tiled bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"toothbrush\"],\n  \"hallucinated_objects\": [\"brush\", \"sink\", \"pipes\", \"wall\", \"floor\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Two children use toothbrushes by the mirror in the tiled bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "toothbrushes"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the toothbrushes and the mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children use toothbrushes by the mirror in the tiled bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"toothbrushes\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the toothbrushes and the mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Two children play with toothbrushes near the tile wall in the bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "toothbrushes"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the toothbrushes and the mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play with toothbrushes near the tile wall in the bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"toothbrushes\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the toothbrushes and the mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two children play with toothbrushes by the tile wall near the toilet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "sink",
+          "toothbrush"
+        ],
+        "hallucinated_objects": [
+          "brush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the mirror, sink, and toothbrush."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play with toothbrushes by the tile wall near the toilet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"sink\", \"toothbrush\"],\n  \"hallucinated_objects\": [\"brush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the mirror, sink, and toothbrush.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Two children play with toothbrushes near the sink and mirror by the tile wall near the toilet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "sink",
+          "toothbrush"
+        ],
+        "hallucinated_objects": [
+          "brush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the mirror, sink, and toothbrush in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play with toothbrushes near the sink and mirror by the tile wall near the toilet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"sink\", \"toothbrush\"],\n  \"hallucinated_objects\": [\"brush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the mirror, sink, and toothbrush in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Two children play with toothbrushes near the sink and mirror by the tiled bathroom wall near the toilet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "toothbrushes"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of toothbrushes and the exact location of the mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two children, bathroom, tile wall, toilet, brush, sink, pipes, wall, floor, light, mirror, hair, ears, nose, mouth, eyes, hands, feet, diapers, toothbrush]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two children play with toothbrushes near the sink and mirror by the tiled bathroom wall near the toilet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"toothbrushes\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of toothbrushes and the exact location of the mirror.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 508730,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000508730.jpg",
+    "final_caption": "Two children play with toothbrushes near the sink and mirror by the tiled bathroom wall near the toilet.",
+    "total_time_sec": 34.02
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"two children\",\n    \"bathroom\",\n    \"tile wall\",\n    \"toilet\",\n    \"brush\",\n    \"sink\",\n    \"pipes\",\n    \"wall\",\n    \"floor\",\n    \"light\",\n    \"mirror\",\n    \"hair\",\n    \"ears\",\n    \"nose\",\n    \"mouth\",\n    \"eyes\",\n    \"hands\",\n    \"feet\",\n    \"diapers\",\n    \"toothbrush\"\n  ]\n}"
+}

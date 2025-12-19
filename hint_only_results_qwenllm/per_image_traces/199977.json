@@ -1,0 +1,199 @@
+{
+  "image_id": 199977,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000199977.jpg",
+  "objects": [
+    "airplane",
+    "smoke",
+    "sky"
+  ],
+  "template": "We have an image with these objects: ['airplane', 'smoke', 'sky']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Airplane trail against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "smoke"
+        ],
+        "hallucinated_objects": [
+          "airplane"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific elements of the image.",
+        "edit_instructions": [
+          "Add the missing object 'smoke' and remove the hallucinated object 'airplane'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane trail against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"smoke\"],\n  \"hallucinated_objects\": [\"airplane\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific elements of the image.\",\n  \"edit_instructions\": \"Add the missing object 'smoke' and remove the hallucinated object 'airplane'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Smoke against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "airplane"
+        ],
+        "hallucinated_objects": [
+          "none"
+        ],
+        "genericity_hint": "The caption is too generic and misses the main subject of the image.",
+        "edit_instructions": [
+          "Add the airplane to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Smoke against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"airplane\",\n  \"hallucinated_objects\": \"none\",\n  \"genericity_hint\": \"The caption is too generic and misses the main subject of the image.\",\n  \"edit_instructions\": \"Add the airplane to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Airplane against smoky sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "No missing objects"
+        ],
+        "hallucinated_objects": [
+          "No hallucinated objects"
+        ],
+        "genericity_hint": "The caption is too generic. It does not specify the type of airplane or the nature of the smoke.",
+        "edit_instructions": [
+          "Specify the type of airplane and the nature of the smoke in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane against smoky sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"No missing objects\",\n  \"hallucinated_objects\": \"No hallucinated objects\",\n  \"genericity_hint\": \"The caption is too generic. It does not specify the type of airplane or the nature of the smoke.\",\n  \"edit_instructions\": \"Specify the type of airplane and the nature of the smoke in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Military airplane against thick smoke-filled sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "No missing objects"
+        ],
+        "hallucinated_objects": [
+          "No hallucinated objects"
+        ],
+        "genericity_hint": "The caption is too specific. It should be more general.",
+        "edit_instructions": [
+          "Remove the word 'military' and 'thick'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Military airplane against thick smoke-filled sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"No missing objects\",\n  \"hallucinated_objects\": \"No hallucinated objects\",\n  \"genericity_hint\": \"The caption is too specific. It should be more general.\",\n  \"edit_instructions\": \"Remove the word 'military' and 'thick'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Airplane amid smoke in sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "No missing objects"
+        ],
+        "hallucinated_objects": [
+          "No hallucinated objects"
+        ],
+        "genericity_hint": "The caption is specific to the image",
+        "edit_instructions": [
+          "Keep the caption specific to the image"
+        ],
+        "score": 8,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane amid smoke in sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"No missing objects\",\n  \"hallucinated_objects\": \"No hallucinated objects\",\n  \"genericity_hint\": \"The caption is specific to the image\",\n  \"edit_instructions\": \"Keep the caption specific to the image\",\n  \"score\": 8\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Airplane amidst thick smoke against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "No missing objects"
+        ],
+        "hallucinated_objects": [
+          "No hallucinated objects"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes details about the airplane and the smoke."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane amidst thick smoke against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"No missing objects\",\n  \"hallucinated_objects\": \"No hallucinated objects\",\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes details about the airplane and the smoke.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Airplane surrounded by dense smoke in the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "The image does not show any other objects besides the airplane and smoke."
+        ],
+        "hallucinated_objects": [
+          "There are no hallucinated objects in the image."
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of airplane and the action it is performing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane surrounded by dense smoke in the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"The image does not show any other objects besides the airplane and smoke.\",\n  \"hallucinated_objects\": \"There are no hallucinated objects in the image.\",\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of airplane and the action it is performing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Military jet streaks through dense smoke in the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "biplane"
+        ],
+        "hallucinated_objects": [
+          "military jet"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the words 'military jet' and 'dense smoke'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Military jet streaks through dense smoke in the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"biplane\"],\n  \"hallucinated_objects\": [\"military jet\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the words 'military jet' and 'dense smoke'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Airplane leaves trail in bright sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "No missing objects"
+        ],
+        "hallucinated_objects": [
+          "No hallucinated objects"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of airplane or the nature of the smoke trail.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of airplane and the nature of the smoke trail."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane leaves trail in bright sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"No missing objects\",\n  \"hallucinated_objects\": \"No hallucinated objects\",\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of airplane or the nature of the smoke trail.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of airplane and the nature of the smoke trail.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Fuselage leaves thick white trail in clear blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "The image does not show the propeller of the airplane."
+        ],
+        "hallucinated_objects": [
+          "There is no indication of a smoke trail being emitted from the airplane."
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Remove the mention of the smoke trail and focus on the airplane and its position in the sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, smoke, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fuselage leaves thick white trail in clear blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"The image does not show the propeller of the airplane.\",\n  \"hallucinated_objects\": \"There is no indication of a smoke trail being emitted from the airplane.\",\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Remove the mention of the smoke trail and focus on the airplane and its position in the sky.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 199977,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000199977.jpg",
+    "final_caption": "Fuselage leaves thick white trail in clear blue sky",
+    "total_time_sec": 25.57
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"airplane\",\n    \"smoke\",\n    \"sky\"\n  ]\n}"
+}

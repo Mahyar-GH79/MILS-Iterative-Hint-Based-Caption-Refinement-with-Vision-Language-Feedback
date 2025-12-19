@@ -1,0 +1,248 @@
+{
+  "image_id": 385190,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000385190.jpg",
+  "objects": [
+    "mural",
+    "man",
+    "building",
+    "street",
+    "crosswalk",
+    "sign",
+    "clock",
+    "trash can",
+    "street light",
+    "tree",
+    "people",
+    "street sign",
+    "building",
+    "street",
+    "crosswalk",
+    "sign",
+    "clock",
+    "trash can",
+    "street light",
+    "tree"
+  ],
+  "template": "We have an image with these objects: ['mural', 'man', 'building', 'street', 'crosswalk', 'sign', 'clock', 'trash can', 'street light', 'tree', 'people', 'street sign', 'building', 'street', 'crosswalk', 'sign', 'clock', 'trash can', 'street light', 'tree']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Mural adorns busy street corner with trees/people.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "clock",
+          "trash can",
+          "street light",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "crosswalk",
+          "sign",
+          "street sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, clock, trash can, street light, and tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mural adorns busy street corner with trees/people.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"clock\", \"trash can\", \"street light\", \"tree\"],\n  \"hallucinated_objects\": [\"street\", \"crosswalk\", \"sign\", \"street sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, clock, trash can, street light, and tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man checks mural under clock near trash can and street light by tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "clock",
+          "trash can",
+          "street light",
+          "tree"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man and the mural, and remove the objects that are not present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man checks mural under clock near trash can and street light by tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"clock\", \"trash can\", \"street light\", \"tree\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man and the mural, and remove the objects that are not present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man examines mural on building near street and crosswalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "trash can",
+          "street light",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The caption is too specific and misses important objects in the image.",
+        "edit_instructions": [
+          "Remove the man and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man examines mural on building near street and crosswalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"trash can\", \"street light\", \"tree\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The caption is too specific and misses important objects in the image.\",\n  \"edit_instructions\": \"Remove the man and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Mural on building near street, crosswalk, clock, trash can, street light, tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "people"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mural on building near street, crosswalk, clock, trash can, street light, tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"people\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and people by mural on building near crosswalk and street sign.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "trash can",
+          "street light",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the clock, trash can, street light, and tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and people by mural on building near crosswalk and street sign.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"trash can\", \"street light\", \"tree\"],\n  \"hallucinated_objects\": [\"man\", \"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the clock, trash can, street light, and tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Mural on building near crosswalk, street sign, clock, trash can, street light, tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "people"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the man's appearance and the people's actions."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mural on building near crosswalk, street sign, clock, trash can, street light, tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"people\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the man's appearance and the people's actions.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man admires mural next to busy crosswalk, street sign, clock, trash can, street light, tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "crosswalk",
+          "street",
+          "sign",
+          "clock",
+          "trash can",
+          "street light",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "mural"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man admires mural next to busy crosswalk, street sign, clock, trash can, street light, tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"crosswalk\", \"street\", \"sign\", \"clock\", \"trash can\", \"street light\", \"tree\"],\n  \"hallucinated_objects\": [\"mural\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man stands near crosswalk on street with sign, clock, trash can, street light, tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mural",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific elements in the image.",
+        "edit_instructions": [
+          "Include the mural and people in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man stands near crosswalk on street with sign, clock, trash can, street light, tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mural\", \"people\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific elements in the image.\",\n  \"edit_instructions\": \"Include the mural and people in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Mural and people near crosswalk on street with sign, clock, trash can, street light, tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "building",
+          "street",
+          "crosswalk",
+          "sign",
+          "clock",
+          "trash can",
+          "street light",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "mural"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mural and people near crosswalk on street with sign, clock, trash can, street light, tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"building\", \"street\", \"crosswalk\", \"sign\", \"clock\", \"trash can\", \"street light\", \"tree\"],\n  \"hallucinated_objects\": [\"mural\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man near mural on street with crosswalk, sign, clock, trash can, street light, tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the man, the number of people, and the specific details of the mural and sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mural, man, building, street, crosswalk, sign, clock, trash can, street light, tree, people, street sign, building, street, crosswalk, sign, clock, trash can, street light, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man near mural on street with crosswalk, sign, clock, trash can, street light, tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"people\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the man, the number of people, and the specific details of the mural and sign.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 385190,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000385190.jpg",
+    "final_caption": "Man near mural on street with crosswalk, sign, clock, trash can, street light, tree.",
+    "total_time_sec": 32.27
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"mural\",\n    \"man\",\n    \"building\",\n    \"street\",\n    \"crosswalk\",\n    \"sign\",\n    \"clock\",\n    \"trash can\",\n    \"street light\",\n    \"tree\",\n    \"people\",\n    \"street sign\",\n    \"building\",\n    \"street\",\n    \"crosswalk\",\n    \"sign\",\n    \"clock\",\n    \"trash can\",\n    \"street light\",\n    \"tree\"\n  ]\n}"
+}

@@ -1,0 +1,212 @@
+{
+  "image_id": 236784,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000236784.jpg",
+  "objects": [
+    "black dog",
+    "brown couch",
+    "white dog",
+    "pillow",
+    "couch cushion",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest",
+    "couch backrest",
+    "couch armrest"
+  ],
+  "template": "We have an image with these objects: ['black dog', 'brown couch', 'white dog', 'pillow', 'couch cushion', 'couch armrest', 'couch backrest', 'couch armrest', 'couch backrest', 'couch armrest', 'couch backrest', 'couch armrest', 'couch backrest', 'couch armrest', 'couch backrest', 'couch armrest', 'couch backrest', 'couch armrest', 'couch backrest', 'couch armrest']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Black and white dogs on a brown couch",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of dogs or their colors.",
+        "edit_instructions": [
+          "Specify the number of dogs and their colors in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white dogs on a brown couch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of dogs or their colors.\",\n  \"edit_instructions\": \"Specify the number of dogs and their colors in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Two black and one brown dog on a couch with pillows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown dog"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the dog on the right.",
+        "edit_instructions": [
+          "Remove the 'pillow' object and specify the color of the dog on the right."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two black and one brown dog on a couch with pillows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown dog\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the dog on the right.\",\n  \"edit_instructions\": \"Remove the 'pillow' object and specify the color of the dog on the right.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Two black dogs and one white dog on a couch with armrests and backrests.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "couch armrest",
+          "couch backrest"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of dogs or the color of the couch.",
+        "edit_instructions": [
+          "Specify the number of dogs and the color of the couch in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two black dogs and one white dog on a couch with armrests and backrests.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [\"couch armrest\", \"couch backrest\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of dogs or the color of the couch.\",\n  \"edit_instructions\": \"Specify the number of dogs and the color of the couch in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Three dogs on a brown couch with armrests.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "couch armrest",
+          "couch backrest"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of dogs or their colors.",
+        "edit_instructions": [
+          "Specify the number of dogs and their colors in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three dogs on a brown couch with armrests.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [\"couch armrest\", \"couch backrest\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of dogs or their colors.\",\n  \"edit_instructions\": \"Specify the number of dogs and their colors in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Two black and one white dog on a brown couch with armrests and a pillow.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown couch"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the couch.",
+        "edit_instructions": [
+          "Specify the color of the couch and remove the mention of a pillow."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two black and one white dog on a brown couch with armrests and a pillow.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown couch\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the couch.\",\n  \"edit_instructions\": \"Specify the color of the couch and remove the mention of a pillow.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Two black and one white dog on a black couch with armrests.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown couch"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the color of the couch.",
+        "edit_instructions": [
+          "Specify the color of the couch in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two black and one white dog on a black couch with armrests.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown couch\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the color of the couch.\",\n  \"edit_instructions\": \"Specify the color of the couch in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Black and white dogs on a brown couch with armrests.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of dogs or their colors.",
+        "edit_instructions": [
+          "Specify the number of dogs and their colors in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white dogs on a brown couch with armrests.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of dogs or their colors.\",\n  \"edit_instructions\": \"Specify the number of dogs and their colors in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two black and one white dog on a brown couch with armrests and a pillow.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown couch"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the couch.",
+        "edit_instructions": [
+          "Specify the color of the couch and remove the mention of a pillow."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two black and one white dog on a brown couch with armrests and a pillow.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown couch\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the couch.\",\n  \"edit_instructions\": \"Specify the color of the couch and remove the mention of a pillow.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Black and white dogs on a black couch with armrests.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown couch"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the couch.",
+        "edit_instructions": [
+          "Specify the color of the couch in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white dogs on a black couch with armrests.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown couch\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the couch.\",\n  \"edit_instructions\": \"Specify the color of the couch in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Black and white dogs on a brown couch with armrests.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of dogs or their colors.",
+        "edit_instructions": [
+          "Specify the number of dogs and their colors in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [black dog, brown couch, white dog, pillow, couch cushion, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest, couch backrest, couch armrest]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white dogs on a brown couch with armrests.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of dogs or their colors.\",\n  \"edit_instructions\": \"Specify the number of dogs and their colors in the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 236784,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000236784.jpg",
+    "final_caption": "Black and white dogs on a brown couch with armrests.",
+    "total_time_sec": 28.66
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"black dog\",\n    \"brown couch\",\n    \"white dog\",\n    \"pillow\",\n    \"couch cushion\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\",\n    \"couch backrest\",\n    \"couch armrest\"\n  ]\n}"
+}

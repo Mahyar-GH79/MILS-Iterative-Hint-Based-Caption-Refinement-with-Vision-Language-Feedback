@@ -1,0 +1,229 @@
+{
+  "image_id": 338986,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000338986.jpg",
+  "objects": [
+    "train",
+    "station",
+    "sign",
+    "car",
+    "streetlight",
+    "sky",
+    "clouds",
+    "tracks",
+    "building",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map",
+    "map"
+  ],
+  "template": "We have an image with these objects: ['train', 'station', 'sign', 'car', 'streetlight', 'sky', 'clouds', 'tracks', 'building', 'map', 'map', 'map', 'map', 'map', 'map', 'map', 'map', 'map', 'map', 'map']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Train at station under sky with maps",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of train or the station.",
+        "edit_instructions": [
+          "Specify the type of train and the station in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Train at station under sky with maps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of train or the station.\",\n  \"edit_instructions\": \"Specify the type of train and the station in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Subway at subway station under sky with maps and streetlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The image contains a train, a station, a sign, a car, a streetlight, the sky, clouds, tracks, a building, and a map. The candidate caption is missing the car and streetlight, and it also includes a map that is not present in the image.",
+        "edit_instructions": [
+          "Remove the car and streetlight from the candidate caption. Also, remove the map as it is not present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Subway at subway station under sky with maps and streetlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The image contains a train, a station, a sign, a car, a streetlight, the sky, clouds, tracks, a building, and a map. The candidate caption is missing the car and streetlight, and it also includes a map that is not present in the image.\",\n  \"edit_instructions\": \"Remove the car and streetlight from the candidate caption. Also, remove the map as it is not present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Train at station under sky with signtracks building clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of train, the name of the station, and the color of the building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Train at station under sky with signtracks building clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of train, the name of the station, and the color of the building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Red train at busy station under blue sky with sign and streetlight next to tracks and tall building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the train, the name of the station, and the type of building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at busy station under blue sky with sign and streetlight next to tracks and tall building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the train, the name of the station, and the type of building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Red train at busy station under blue sky with streetlights near tracks and tall building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at busy station under blue sky with streetlights near tracks and tall building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Red train at busy station under blue sky with multiple streetlights near tracks and tall buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at busy station under blue sky with multiple streetlights near tracks and tall buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Red train at a busy station with multiple streetlights and tall buildings under a clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at a busy station with multiple streetlights and tall buildings under a clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Red train at a station with multiple streetlights and tall buildings under a clear sky with clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at a station with multiple streetlights and tall buildings under a clear sky with clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Red train at a station with multiple streetlights and tall buildings under a cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at a station with multiple streetlights and tall buildings under a cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Red train at a station with several streetlights and buildings under a cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "streetlight",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "map"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [train, station, sign, car, streetlight, sky, clouds, tracks, building, map, map, map, map, map, map, map, map, map, map, map]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red train at a station with several streetlights and buildings under a cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"streetlight\", \"building\"],\n  \"hallucinated_objects\": [\"map\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the train, the type of station, and the number of streetlights and buildings.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 338986,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000338986.jpg",
+    "final_caption": "Red train at a station with several streetlights and buildings under a cloudy sky.",
+    "total_time_sec": 34.39
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"train\",\n    \"station\",\n    \"sign\",\n    \"car\",\n    \"streetlight\",\n    \"sky\",\n    \"clouds\",\n    \"tracks\",\n    \"building\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\",\n    \"map\"\n  ]\n}"
+}

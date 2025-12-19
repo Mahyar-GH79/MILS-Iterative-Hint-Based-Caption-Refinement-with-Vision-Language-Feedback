@@ -1,0 +1,330 @@
+{
+  "image_id": 536947,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000536947.jpg",
+  "objects": [
+    "refrigerator",
+    "trash can",
+    "chair",
+    "truck",
+    "water",
+    "cans",
+    "bottle",
+    "wooden fence",
+    "wooden post",
+    "window",
+    "grass",
+    "sunlight",
+    "reflection",
+    "trash",
+    "garbage",
+    "pavement",
+    "sidewalk",
+    "building",
+    "doorway",
+    "tree"
+  ],
+  "template": "We have an image with these objects: ['refrigerator', 'trash can', 'chair', 'truck', 'water', 'cans', 'bottle', 'wooden fence', 'wooden post', 'window', 'grass', 'sunlight', 'reflection', 'trash', 'garbage', 'pavement', 'sidewalk', 'building', 'doorway', 'tree']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sunlight reflects off refrigerator and trash can near wooden fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garbage",
+          "bottle",
+          "water",
+          "cans",
+          "reflection",
+          "trash",
+          "garbage",
+          "water",
+          "cans"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "wooden fence",
+          "wooden post",
+          "window",
+          "grass",
+          "sunlight",
+          "reflection",
+          "trash can",
+          "garbage",
+          "water",
+          "cans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and corrects the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunlight reflects off refrigerator and trash can near wooden fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garbage\", \"bottle\", \"water\", \"cans\", \"reflection\", \"trash\", \"garbage\", \"water\", \"cans\"],\n  \"hallucinated_objects\": [\"truck\", \"wooden fence\", \"wooden post\", \"window\", \"grass\", \"sunlight\", \"reflection\", \"trash can\", \"garbage\", \"water\", \"cans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and corrects the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Trash and bottles near a refrigerator on a sidewalk in sunlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "truck",
+          "garbage",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the truck, garbage, and water in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trash and bottles near a refrigerator on a sidewalk in sunlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"truck\", \"garbage\", \"water\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the truck, garbage, and water in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Trash cans and bottles near a refrigerator by garbage and water on a sidewalk under sunlight. Truck parked nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "bottle",
+          "garbage",
+          "water",
+          "sidewalk",
+          "sunlight",
+          "truck"
+        ],
+        "hallucinated_objects": [
+          "trash",
+          "garbage",
+          "water",
+          "sidewalk",
+          "sunlight",
+          "truck"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of trash cans, bottles, and garbage, and the exact location of the truck and sunlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trash cans and bottles near a refrigerator by garbage and water on a sidewalk under sunlight. Truck parked nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"bottle\", \"garbage\", \"water\", \"sidewalk\", \"sunlight\", \"truck\"],\n  \"hallucinated_objects\": [\"trash\", \"garbage\", \"water\", \"sidewalk\", \"sunlight\", \"truck\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of trash cans, bottles, and garbage, and the exact location of the truck and sunlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Trash cans and bottles near a refrigerator by wooden fence on the sidewalk under sunlight with a truck parked nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "bottle",
+          "garbage",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "wooden fence",
+          "wooden post",
+          "window",
+          "grass",
+          "sunlight",
+          "pavement",
+          "sidewalk",
+          "building",
+          "doorway",
+          "tree"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of trash cans and bottles, the presence of a reflection, and the exact location of the truck and wooden fence."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trash cans and bottles near a refrigerator by wooden fence on the sidewalk under sunlight with a truck parked nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"bottle\", \"garbage\", \"reflection\"],\n  \"hallucinated_objects\": [\"truck\", \"wooden fence\", \"wooden post\", \"window\", \"grass\", \"sunlight\", \"pavement\", \"sidewalk\", \"building\", \"doorway\", \"tree\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of trash cans and bottles, the presence of a reflection, and the exact location of the truck and wooden fence.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Trash cans and bottles near a refrigerator by a wooden post in front of a door under sunlight with a truck parked nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "bottle",
+          "garbage",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "wooden fence",
+          "wooden post",
+          "doorway",
+          "tree"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of trash cans and bottles, and the exact location of the wooden post and truck."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trash cans and bottles near a refrigerator by a wooden post in front of a door under sunlight with a truck parked nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"bottle\", \"garbage\", \"reflection\"],\n  \"hallucinated_objects\": [\"truck\", \"wooden fence\", \"wooden post\", \"doorway\", \"tree\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of trash cans and bottles, and the exact location of the wooden post and truck.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cans and bottles beside a refrigerator near a trash can and garbage, under sunlight, by a wooden post with a truck parked nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garbage",
+          "water",
+          "cans",
+          "bottle",
+          "wooden fence",
+          "wooden post",
+          "truck",
+          "window",
+          "grass",
+          "sunlight",
+          "reflection",
+          "trash",
+          "garbage",
+          "pavement",
+          "sidewalk",
+          "building",
+          "doorway",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cans and bottles beside a refrigerator near a trash can and garbage, under sunlight, by a wooden post with a truck parked nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garbage\", \"water\", \"cans\", \"bottle\", \"wooden fence\", \"wooden post\", \"truck\", \"window\", \"grass\", \"sunlight\", \"reflection\", \"trash\", \"garbage\", \"pavement\", \"sidewalk\", \"building\", \"doorway\", \"tree\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cans bottles trash near refrigerator sunlight reflection wooden post truck",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "garbage",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "truck"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of cans and bottles, and the exact location of the truck."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cans bottles trash near refrigerator sunlight reflection wooden post truck\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"garbage\", \"water\"],\n  \"hallucinated_objects\": [\"truck\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of cans and bottles, and the exact location of the truck.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cans bottles garbage near refrigerator sunlight through tree branches",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "chair",
+          "truck",
+          "water",
+          "cans",
+          "bottle",
+          "wooden fence",
+          "wooden post",
+          "window",
+          "grass",
+          "reflection",
+          "trash",
+          "garbage",
+          "pavement",
+          "sidewalk",
+          "building",
+          "doorway",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "sunlight through tree branches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cans bottles garbage near refrigerator sunlight through tree branches\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"chair\", \"truck\", \"water\", \"cans\", \"bottle\", \"wooden fence\", \"wooden post\", \"window\", \"grass\", \"reflection\", \"trash\", \"garbage\", \"pavement\", \"sidewalk\", \"building\", \"doorway\", \"tree\"],\n  \"hallucinated_objects\": [\"sunlight through tree branches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Trash cans bottles garbage near refrigerator truck sunlight on pavement",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "wooden fence",
+          "wooden post",
+          "window",
+          "grass",
+          "reflection",
+          "trash",
+          "garbage",
+          "pavement",
+          "sidewalk",
+          "building",
+          "doorway",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "truck"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trash cans bottles garbage near refrigerator truck sunlight on pavement\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"wooden fence\", \"wooden post\", \"window\", \"grass\", \"reflection\", \"trash\", \"garbage\", \"pavement\", \"sidewalk\", \"building\", \"doorway\", \"tree\"],\n  \"hallucinated_objects\": [\"truck\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Trash cans and bottles near window grass sunlight on pavement",
+      "vlm_hint": {
+        "missing_objects": [
+          "refrigerator",
+          "truck",
+          "wooden fence",
+          "wooden post",
+          "garbage",
+          "reflection",
+          "trash",
+          "water",
+          "cans",
+          "bottle",
+          "sidewalk",
+          "building",
+          "doorway",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the refrigerator, trash cans, bottles, window, grass, sunlight, pavement, and other visible objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [refrigerator, trash can, chair, truck, water, cans, bottle, wooden fence, wooden post, window, grass, sunlight, reflection, trash, garbage, pavement, sidewalk, building, doorway, tree]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trash cans and bottles near window grass sunlight on pavement\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"refrigerator\", \"truck\", \"wooden fence\", \"wooden post\", \"garbage\", \"reflection\", \"trash\", \"water\", \"cans\", \"bottle\", \"sidewalk\", \"building\", \"doorway\", \"tree\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the refrigerator, trash cans, bottles, window, grass, sunlight, pavement, and other visible objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 536947,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000536947.jpg",
+    "final_caption": "Trash cans and bottles near window grass sunlight on pavement",
+    "total_time_sec": 42.55
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"refrigerator\",\n    \"trash can\",\n    \"chair\",\n    \"truck\",\n    \"water\",\n    \"cans\",\n    \"bottle\",\n    \"wooden fence\",\n    \"wooden post\",\n    \"window\",\n    \"grass\",\n    \"sunlight\",\n    \"reflection\",\n    \"trash\",\n    \"garbage\",\n    \"pavement\",\n    \"sidewalk\",\n    \"building\",\n    \"doorway\",\n    \"tree\"\n  ]\n}"
+}

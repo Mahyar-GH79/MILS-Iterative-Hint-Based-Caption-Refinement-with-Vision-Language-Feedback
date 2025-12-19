@@ -1,0 +1,333 @@
+{
+  "image_id": 176778,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000176778.jpg",
+  "objects": [
+    "toilet",
+    "bathtub",
+    "cat",
+    "tile",
+    "faucet",
+    "handle",
+    "cabinet",
+    "toilet paper",
+    "sink",
+    "wall",
+    "floor",
+    "water",
+    "light",
+    "bathroom",
+    "home",
+    "interior",
+    "clean",
+    "modern",
+    "design"
+  ],
+  "template": "We have an image with these objects: ['toilet', 'bathtub', 'cat', 'tile', 'faucet', 'handle', 'cabinet', 'toilet paper', 'sink', 'wall', 'floor', 'water', 'light', 'bathroom', 'home', 'interior', 'clean', 'modern', 'design']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Modern bathroom with clean tiles and a cat relaxing near the toilet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet",
+          "cabinet",
+          "toilet paper",
+          "water",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "tile",
+          "handle",
+          "wall",
+          "floor"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bathroom with clean tiles and a cat relaxing near the toilet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\", \"cabinet\", \"toilet paper\", \"water\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"hallucinated_objects\": [\"tile\", \"handle\", \"wall\", \"floor\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Modern bathroom with a cat near the toilet and sink filled with clean water.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet",
+          "handle",
+          "cabinet",
+          "toilet paper"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "water",
+          "home",
+          "interior",
+          "design"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the exact location of the sink, faucet, and handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bathroom with a cat near the toilet and sink filled with clean water.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\", \"handle\", \"cabinet\", \"toilet paper\"],\n  \"hallucinated_objects\": [\"light\", \"water\", \"home\", \"interior\", \"design\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the exact location of the sink, faucet, and handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat by toilet near sink with white faucet and handle, modern bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "cat",
+          "toilet",
+          "bathtub",
+          "tile",
+          "cabinet",
+          "toilet paper",
+          "water",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by toilet near sink with white faucet and handle, modern bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\", \"handle\"],\n  \"hallucinated_objects\": [\"cat\", \"toilet\", \"bathtub\", \"tile\", \"cabinet\", \"toilet paper\", \"water\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Toilet sink with white faucet and handle.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "tile",
+          "faucet",
+          "handle",
+          "cabinet",
+          "toilet paper",
+          "sink",
+          "wall",
+          "floor",
+          "water",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "toilet",
+          "bathtub"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic caption and specify the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Toilet sink with white faucet and handle.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"tile\", \"faucet\", \"handle\", \"cabinet\", \"toilet paper\", \"sink\", \"wall\", \"floor\", \"water\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"hallucinated_objects\": [\"toilet\", \"bathtub\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic caption and specify the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Clean modern bathroom with cat near sink and toilet paper.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "toilet paper"
+        ],
+        "hallucinated_objects": [
+          "cat",
+          "sink"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the sink and toilet paper, and remove the cat and sink from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Clean modern bathroom with cat near sink and toilet paper.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"toilet paper\"],\n  \"hallucinated_objects\": [\"cat\", \"sink\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the sink and toilet paper, and remove the cat and sink from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Clean modern bathroom with toilet paper by the toilet near the sink.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet",
+          "handle",
+          "cabinet",
+          "toilet paper",
+          "sink",
+          "water",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "tile",
+          "wall",
+          "floor"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the sink, faucet, handle, cabinet, toilet paper, and water. Also, mention the light and the bathroom, home, interior, clean, modern, and design."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Clean modern bathroom with toilet paper by the toilet near the sink.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\", \"handle\", \"cabinet\", \"toilet paper\", \"sink\", \"water\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"hallucinated_objects\": [\"tile\", \"wall\", \"floor\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the sink, faucet, handle, cabinet, toilet paper, and water. Also, mention the light and the bathroom, home, interior, clean, modern, and design.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Clean modern bathroom with toilet paper by the toilet near the sink and faucet, light above",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet",
+          "handle",
+          "cabinet",
+          "toilet paper",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "tile",
+          "wall",
+          "floor",
+          "water",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the sink, faucet, handle, cabinet, toilet paper, light, and the specific design elements of the bathroom."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Clean modern bathroom with toilet paper by the toilet near the sink and faucet, light above\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\", \"handle\", \"cabinet\", \"toilet paper\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"hallucinated_objects\": [\"tile\", \"wall\", \"floor\", \"water\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the sink, faucet, handle, cabinet, toilet paper, light, and the specific design elements of the bathroom.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Modern bathroom with toilet paper by the toilet near sink and faucet, light overhead and cabinet nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet",
+          "cabinet",
+          "toilet paper"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bathroom with toilet paper by the toilet near sink and faucet, light overhead and cabinet nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\", \"cabinet\", \"toilet paper\"],\n  \"hallucinated_objects\": [\"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat by toilet near bathtub and tile with faucet and handle, cabinet beside.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "toilet paper",
+          "cabinet",
+          "water",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "toilet paper",
+          "cabinet",
+          "water",
+          "light",
+          "bathroom",
+          "home",
+          "interior",
+          "clean",
+          "modern",
+          "design"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the sink, toilet paper, cabinet, water, light, bathroom, home, interior, clean, modern, and design."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by toilet near bathtub and tile with faucet and handle, cabinet beside.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"toilet paper\", \"cabinet\", \"water\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"hallucinated_objects\": [\"sink\", \"toilet paper\", \"cabinet\", \"water\", \"light\", \"bathroom\", \"home\", \"interior\", \"clean\", \"modern\", \"design\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the sink, toilet paper, cabinet, water, light, bathroom, home, interior, clean, modern, and design.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat on toilet near bathtub tile with faucet handle and clean modern bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "cabinet",
+          "toilet paper"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a sink, cabinet, and toilet paper, and include information about the lighting and water in the bathroom."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cat, tile, faucet, handle, cabinet, toilet paper, sink, wall, floor, water, light, bathroom, home, interior, clean, modern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on toilet near bathtub tile with faucet handle and clean modern bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"cabinet\", \"toilet paper\"],\n  \"hallucinated_objects\": [\"light\", \"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a sink, cabinet, and toilet paper, and include information about the lighting and water in the bathroom.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 176778,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000176778.jpg",
+    "final_caption": "Cat on toilet near bathtub tile with faucet handle and clean modern bathroom.",
+    "total_time_sec": 41.08
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"toilet\",\n    \"bathtub\",\n    \"cat\",\n    \"tile\",\n    \"faucet\",\n    \"handle\",\n    \"cabinet\",\n    \"toilet paper\",\n    \"sink\",\n    \"wall\",\n    \"floor\",\n    \"water\",\n    \"light\",\n    \"bathroom\",\n    \"home\",\n    \"interior\",\n    \"clean\",\n    \"modern\",\n    \"design\"\n  ]\n}"
+}

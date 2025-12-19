@@ -1,0 +1,281 @@
+{
+  "image_id": 143931,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000143931.jpg",
+  "objects": [
+    "bus",
+    "Scott Brown",
+    "he's for us",
+    "www.ScottBrown.com",
+    "American flag",
+    "stars",
+    "pole",
+    "street",
+    "tire",
+    "wheel",
+    "light",
+    "sign",
+    "bus",
+    "Scott Brown",
+    "he's for us",
+    "www.ScottBrown.com",
+    "American flag",
+    "stars",
+    "pole",
+    "street"
+  ],
+  "template": "We have an image with these objects: ['bus', 'Scott Brown', \"he's for us\", 'www.ScottBrown.com', 'American flag', 'stars', 'pole', 'street', 'tire', 'wheel', 'light', 'sign', 'bus', 'Scott Brown', \"he's for us\", 'www.ScottBrown.com', 'American flag', 'stars', 'pole', 'street']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bus and flag on street with campaign signs",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "wheel"
+        ],
+        "genericity_hint": "The image is specific to a political campaign bus for Scott Brown.",
+        "edit_instructions": [
+          "Remove the light and wheel, and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and flag on street with campaign signs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"light\", \"wheel\"],\n  \"genericity_hint\": \"The image is specific to a political campaign bus for Scott Brown.\",\n  \"edit_instructions\": \"Remove the light and wheel, and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Scott Brown's campaign bus and flag on the street with signs",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "sign"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown's campaign bus and flag on the street with signs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"light\", \"sign\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Scott Brown's bus and flag on the street with \"he's for us\" signs",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the bus, flag, and street."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown's bus and flag on the street with \"he's for us\" signs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the bus, flag, and street.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Scott Brown's bus and flag on a street with \"he's for us\" signs",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the bus, the design of the American flag, and the specific location of the street."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown's bus and flag on a street with \"he's for us\" signs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the bus, the design of the American flag, and the specific location of the street.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Red bus with \"he's for us\" sticker beside American flag on busy street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "he's for us",
+          "light",
+          "wheel"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red bus with \"he's for us\" sticker beside American flag on busy street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"bus\", \"he's for us\", \"light\", \"wheel\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Scott Brown with \"he's for us\" near American flag on busy street pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "tire",
+          "wheel",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown with \"he's for us\" near American flag on busy street pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"bus\", \"tire\", \"wheel\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Scott Brown with \"he's for us\" near American flag on street pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "tire",
+          "wheel",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown with \"he's for us\" near American flag on street pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"bus\", \"tire\", \"wheel\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Scott Brown with \"he's for us\" near American flag on street pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "tire",
+          "wheel",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown with \"he's for us\" near American flag on street pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"bus\", \"tire\", \"wheel\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Scott Brown with \"he's for us\" near American flag on street pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "tire",
+          "wheel",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown with \"he's for us\" near American flag on street pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"bus\", \"tire\", \"wheel\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Scott Brown with \"he's for us\" near American flag on street pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "Scott Brown",
+          "he's for us",
+          "www.ScottBrown.com",
+          "American flag",
+          "stars",
+          "pole",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "tire",
+          "wheel",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street, tire, wheel, light, sign, bus, Scott Brown, he's for us, www.ScottBrown.com, American flag, stars, pole, street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scott Brown with \"he's for us\" near American flag on street pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Scott Brown\", \"he's for us\", \"www.ScottBrown.com\", \"American flag\", \"stars\", \"pole\", \"street\"],\n  \"hallucinated_objects\": [\"bus\", \"tire\", \"wheel\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 143931,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000143931.jpg",
+    "final_caption": "Scott Brown with \"he's for us\" near American flag on street pole",
+    "total_time_sec": 35.45
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bus\",\n    \"Scott Brown\",\n    \"he's for us\",\n    \"www.ScottBrown.com\",\n    \"American flag\",\n    \"stars\",\n    \"pole\",\n    \"street\",\n    \"tire\",\n    \"wheel\",\n    \"light\",\n    \"sign\",\n    \"bus\",\n    \"Scott Brown\",\n    \"he's for us\",\n    \"www.ScottBrown.com\",\n    \"American flag\",\n    \"stars\",\n    \"pole\",\n    \"street\"\n  ]\n}"
+}

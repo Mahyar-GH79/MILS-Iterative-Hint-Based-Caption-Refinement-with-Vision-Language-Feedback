@@ -1,0 +1,200 @@
+{
+  "image_id": 213224,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000213224.jpg",
+  "objects": [
+    "vase",
+    "flowers",
+    "table",
+    "candle",
+    "vase",
+    "flowers",
+    "table",
+    "candle",
+    "vase",
+    "flowers",
+    "table",
+    "candle",
+    "vase",
+    "flowers",
+    "table",
+    "candle",
+    "vase",
+    "flowers",
+    "table",
+    "candle"
+  ],
+  "template": "We have an image with these objects: ['vase', 'flowers', 'table', 'candle', 'vase', 'flowers', 'table', 'candle', 'vase', 'flowers', 'table', 'candle', 'vase', 'flowers', 'table', 'candle', 'vase', 'flowers', 'table', 'candle']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Flowers vases and candles adorn a table",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of vases, flowers, or candles.",
+        "edit_instructions": [
+          "Specify the number of vases, flowers, and candles in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Flowers vases and candles adorn a table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of vases, flowers, or candles.\",\n  \"edit_instructions\": \"Specify the number of vases, flowers, and candles in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Four vases with flowers and three candles adorn the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candles"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of candles.",
+        "edit_instructions": [
+          "Remove the mention of candles and specify the number of vases and flowers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four vases with flowers and three candles adorn the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candles\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of candles.\",\n  \"edit_instructions\": \"Remove the mention of candles and specify the number of vases and flowers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Five vases with flowers decorate the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of vases and flowers.",
+        "edit_instructions": [
+          "Specify the number of vases and flowers in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Five vases with flowers decorate the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of vases and flowers.\",\n  \"edit_instructions\": \"Specify the number of vases and flowers in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Six vases with flowers and candles on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candles"
+        ],
+        "hallucinated_objects": [
+          "six vases"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of vases or candles.",
+        "edit_instructions": [
+          "Remove the number of vases and add the correct number of candles."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six vases with flowers and candles on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candles\"],\n  \"hallucinated_objects\": [\"six vases\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of vases or candles.\",\n  \"edit_instructions\": \"Remove the number of vases and add the correct number of candles.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Flowers and multiple candles on a table with vases.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candles"
+        ],
+        "hallucinated_objects": [
+          "vases"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of candles or vases.",
+        "edit_instructions": [
+          "Remove the word 'vases' and specify the number of candles."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Flowers and multiple candles on a table with vases.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candles\"],\n  \"hallucinated_objects\": [\"vases\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of candles or vases.\",\n  \"edit_instructions\": \"Remove the word 'vases' and specify the number of candles.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Flowers and four candles on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of candles.",
+        "edit_instructions": [
+          "Specify the number of candles in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Flowers and four candles on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of candles.\",\n  \"edit_instructions\": \"Specify the number of candles in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Four candles and flowers on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of candles.",
+        "edit_instructions": [
+          "Specify the number of candles in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four candles and flowers on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of candles.\",\n  \"edit_instructions\": \"Specify the number of candles in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Six candles and flowers on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of candles.",
+        "edit_instructions": [
+          "Specify the number of candles in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six candles and flowers on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of candles.\",\n  \"edit_instructions\": \"Specify the number of candles in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Eight candles and flowers on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of candles.",
+        "edit_instructions": [
+          "Specify the number of candles in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Eight candles and flowers on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of candles.\",\n  \"edit_instructions\": \"Specify the number of candles in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Sixteen candles and flowers on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "candle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific. There are only two vases and two flower arrangements.",
+        "edit_instructions": [
+          "Remove the mention of candles."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle, vase, flowers, table, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sixteen candles and flowers on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"candle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific. There are only two vases and two flower arrangements.\",\n  \"edit_instructions\": \"Remove the mention of candles.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 213224,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000213224.jpg",
+    "final_caption": "Sixteen candles and flowers on a table.",
+    "total_time_sec": 25.29
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"vase\",\n    \"flowers\",\n    \"table\",\n    \"candle\",\n    \"vase\",\n    \"flowers\",\n    \"table\",\n    \"candle\",\n    \"vase\",\n    \"flowers\",\n    \"table\",\n    \"candle\",\n    \"vase\",\n    \"flowers\",\n    \"table\",\n    \"candle\",\n    \"vase\",\n    \"flowers\",\n    \"table\",\n    \"candle\"\n  ]\n}"
+}

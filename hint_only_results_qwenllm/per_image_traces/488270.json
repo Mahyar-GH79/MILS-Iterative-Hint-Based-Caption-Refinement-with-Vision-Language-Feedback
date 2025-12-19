@@ -1,0 +1,200 @@
+{
+  "image_id": 488270,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000488270.jpg",
+  "objects": [
+    "airplane",
+    "beach",
+    "water",
+    "mountains",
+    "sky",
+    "clouds"
+  ],
+  "template": "We have an image with these objects: ['airplane', 'beach', 'water', 'mountains', 'sky', 'clouds']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Airplane above beach near mountains sky clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "airplane"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the type of beach.",
+        "edit_instructions": [
+          "Add more specific details about the location and the type of beach."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane above beach near mountains sky clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"airplane\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the type of beach.\",\n  \"edit_instructions\": \"Add more specific details about the location and the type of beach.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Beach with water near mountains under cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "airplane"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the presence of an airplane.",
+        "edit_instructions": [
+          "Add the airplane to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach with water near mountains under cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"airplane\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the presence of an airplane.\",\n  \"edit_instructions\": \"Add the airplane to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Airplane against cloudy sky near mountains and water",
+      "vlm_hint": {
+        "missing_objects": [
+          "sand"
+        ],
+        "hallucinated_objects": [
+          "mountains"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the type of airplane and the color of the sand."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane against cloudy sky near mountains and water\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sand\"],\n  \"hallucinated_objects\": [\"mountains\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the type of airplane and the color of the sand.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "White airplane flying over blue water near sandy beach with white clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the color of the airplane and the type of terrain."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane flying over blue water near sandy beach with white clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the color of the airplane and the type of terrain.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "White airplane flying over blue water near sandy beach under fluffy clouds with rugged mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "airplane"
+        ],
+        "hallucinated_objects": [
+          "flying"
+        ],
+        "genericity_hint": "The caption suggests the airplane is flying, but the image shows the airplane on the ground.",
+        "edit_instructions": [
+          "Remove the word 'flying' from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane flying over blue water near sandy beach under fluffy clouds with rugged mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"airplane\"],\n  \"hallucinated_objects\": [\"flying\"],\n  \"genericity_hint\": \"The caption suggests the airplane is flying, but the image shows the airplane on the ground.\",\n  \"edit_instructions\": \"Remove the word 'flying' from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "White airplane sitting near blue water and sandy beach under fluffy clouds with rugged mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "fluffy clouds"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the mountains and remove the generic language."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane sitting near blue water and sandy beach under fluffy clouds with rugged mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"fluffy clouds\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the mountains and remove the generic language.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "White airplane rests near blue water and sandy beach under white clouds beside towering mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the mountains and the water to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane rests near blue water and sandy beach under white clouds beside towering mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the mountains and the water to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "White airplane sits by calm water at the beach under white clouds beside tall mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the mountains and the water."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane sits by calm water at the beach under white clouds beside tall mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the mountains and the water.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "White airplane rests on calm beach under white clouds near vast mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "mountains"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the water and remove the mountains."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane rests on calm beach under white clouds near vast mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"mountains\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the water and remove the mountains.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "White airplane sits on calm beach under white clouds beside peaceful water.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image and remove the generic language."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, beach, water, mountains, sky, clouds]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White airplane sits on calm beach under white clouds beside peaceful water.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image and remove the generic language.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 488270,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000488270.jpg",
+    "final_caption": "White airplane sits on calm beach under white clouds beside peaceful water.",
+    "total_time_sec": 25.25
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"airplane\",\n    \"beach\",\n    \"water\",\n    \"mountains\",\n    \"sky\",\n    \"clouds\"\n  ]\n}"
+}

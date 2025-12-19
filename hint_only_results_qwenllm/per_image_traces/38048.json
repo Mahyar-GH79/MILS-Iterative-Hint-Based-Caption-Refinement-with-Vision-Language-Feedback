@@ -1,0 +1,197 @@
+{
+  "image_id": 38048,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000038048.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown object dominates scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant"
+        ],
+        "hallucinated_objects": [
+          "unknown object"
+        ],
+        "genericity_hint": "The image contains a fire hydrant, but the caption incorrectly identifies it as an unknown object.",
+        "edit_instructions": [
+          "Replace 'unknown object' with 'fire hydrant'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object dominates scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"fire hydrant\",\n  \"hallucinated_objects\": \"unknown object\",\n  \"genericity_hint\": \"The image contains a fire hydrant, but the caption incorrectly identifies it as an unknown object.\",\n  \"edit_instructions\": \"Replace 'unknown object' with 'fire hydrant'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Fire hydrant dominates scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "person",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the unknown object and add a person and a building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant dominates scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"person\", \"building\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the unknown object and add a person and a building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Fire hydrant person building dominate scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "person"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the pedestrian and the building in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant person building dominate scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\", \"building\"],\n  \"hallucinated_objects\": [\"person\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the pedestrian and the building in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Building dominates scene with fire hydrant and pedestrian nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fire hydrant and the pedestrian."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Building dominates scene with fire hydrant and pedestrian nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fire hydrant and the pedestrian.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Fire hydrant near building with pedestrian",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location of the pedestrian.",
+        "edit_instructions": [
+          "Add a specific location for the pedestrian, such as 'in front of the building' or 'on the sidewalk'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant near building with pedestrian\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location of the pedestrian.\",\n  \"edit_instructions\": \"Add a specific location for the pedestrian, such as 'in front of the building' or 'on the sidewalk'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Fire hydrant in front of building with pedestrian",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location of the pedestrian.",
+        "edit_instructions": [
+          "Add a specific location for the pedestrian, such as 'in front of the building'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant in front of building with pedestrian\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location of the pedestrian.\",\n  \"edit_instructions\": \"Add a specific location for the pedestrian, such as 'in front of the building'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Fire hydrant in front of building near pedestrian",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the pedestrian and the building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant in front of building near pedestrian\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the pedestrian and the building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Fire hydrant near building with pedestrian",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location of the pedestrian.",
+        "edit_instructions": [
+          "Add a specific location for the pedestrian, such as 'in front of the building' or 'on the sidewalk'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant near building with pedestrian\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location of the pedestrian.\",\n  \"edit_instructions\": \"Add a specific location for the pedestrian, such as 'in front of the building' or 'on the sidewalk'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Fire hydrant in front of building with pedestrian",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location of the pedestrian.",
+        "edit_instructions": [
+          "Add a specific location for the pedestrian, such as 'in front of the building'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant in front of building with pedestrian\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location of the pedestrian.\",\n  \"edit_instructions\": \"Add a specific location for the pedestrian, such as 'in front of the building'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Fire hydrant next to building with pedestrian in front",
+      "vlm_hint": {
+        "missing_objects": [
+          "pedestrian"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the pedestrian and the building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant next to building with pedestrian in front\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pedestrian\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the pedestrian and the building.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 38048,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000038048.jpg",
+    "final_caption": "Fire hydrant next to building with pedestrian in front",
+    "total_time_sec": 30.1
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"fire hydrant\",\n    \"sign\",\n    \"sidewalk\",\n    \"tree\",\n    \"street\",\n    \"building\",\n    \"person\",\n    \"chair\",\n    \"grass\",\n    \"pole\",\n    \"street light\",\n    \"street sign\",\n    \"street lamp\",\n    \"street lamp post\",\n    \"street lamp pole\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post\",\n    \"street lamp post"
+}

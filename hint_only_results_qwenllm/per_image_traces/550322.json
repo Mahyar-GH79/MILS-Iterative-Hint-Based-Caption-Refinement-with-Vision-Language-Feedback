@@ -1,0 +1,205 @@
+{
+  "image_id": 550322,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000550322.jpg",
+  "objects": [
+    "scissors",
+    "ladle",
+    "cup",
+    "package",
+    "clock",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['scissors', 'ladle', 'cup', 'package', 'clock', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Clock and scissors on a table near a cup",
+      "vlm_hint": {
+        "missing_objects": [
+          "package"
+        ],
+        "hallucinated_objects": [
+          "clock"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the full content of the image.",
+        "edit_instructions": [
+          "Remove the clock and add the package to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Clock and scissors on a table near a cup\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"package\"],\n  \"hallucinated_objects\": [\"clock\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the full content of the image.\",\n  \"edit_instructions\": \"Remove the clock and add the package to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Scissors and package on a table near a cup",
+      "vlm_hint": {
+        "missing_objects": [
+          "ladle"
+        ],
+        "hallucinated_objects": [
+          "clock"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the clock and add the ladle to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and package on a table near a cup\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ladle\"],\n  \"hallucinated_objects\": [\"clock\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the clock and add the ladle to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Scissors and package near a cup with a ladle on the table",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "package"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects.",
+        "edit_instructions": [
+          "Remove the 'package' and add a 'clock' to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and package near a cup with a ladle on the table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"package\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects.\",\n  \"edit_instructions\": \"Remove the 'package' and add a 'clock' to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Scissors and ladle near a cup on a table with a clock",
+      "vlm_hint": {
+        "missing_objects": [
+          "package"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and ladle near a cup on a table with a clock\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"package\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Scissors and ladle near a cup with a package",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Remove the clock and specify the exact objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and ladle near a cup with a package\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Remove the clock and specify the exact objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Scissors and ladle beside a cup next to a package",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of scissors or the type of ladle.",
+        "edit_instructions": [
+          "Add more specific details to the caption, such as the type of scissors and ladle, and remove the generic objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and ladle beside a cup next to a package\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of scissors or the type of ladle.\",\n  \"edit_instructions\": \"Add more specific details to the caption, such as the type of scissors and ladle, and remove the generic objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Craftsmanship scissors and copper ladle by a ceramic cup near a package with clocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "ceramic cup"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Craftsmanship scissors and copper ladle by a ceramic cup near a package with clocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"ceramic cup\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Scissors and ladle sit on a table next to a package with clocks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ladle"
+        ],
+        "hallucinated_objects": [
+          "package",
+          "clock"
+        ],
+        "genericity_hint": "The caption is too generic and does not accurately describe the objects in the image.",
+        "edit_instructions": [
+          "Remove the incorrect objects and provide a more specific caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and ladle sit on a table next to a package with clocks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ladle\"],\n  \"hallucinated_objects\": [\"package\", \"clock\"],\n  \"genericity_hint\": \"The caption is too generic and does not accurately describe the objects in the image.\",\n  \"edit_instructions\": \"Remove the incorrect objects and provide a more specific caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Scissors and ladle sit on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "package",
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and ladle sit on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"package\", \"clock\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Scissors and ladle near a package with a clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [
+          "package",
+          "clock"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of scissors or ladle.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of scissors and ladle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, ladle, cup, package, clock, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Scissors and ladle near a package with a clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [\"package\", \"clock\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of scissors or ladle.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of scissors and ladle.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 550322,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000550322.jpg",
+    "final_caption": "Scissors and ladle near a package with a clock.",
+    "total_time_sec": 25.52
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"scissors\",\n    \"ladle\",\n    \"cup\",\n    \"package\",\n    \"clock\",\n    \"table\"\n  ]\n}"
+}

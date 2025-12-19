@@ -1,0 +1,239 @@
+{
+  "image_id": 67310,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000067310.jpg",
+  "objects": [
+    "skateboard",
+    "skateboarder",
+    "helmet",
+    "trees",
+    "fence",
+    "sign",
+    "people",
+    "sneakers",
+    "jeans",
+    "watch",
+    "sunglasses",
+    "ramp",
+    "sweatshirt",
+    "shorts",
+    "hat",
+    "watch",
+    "sneakers",
+    "jeans",
+    "sweatshirt"
+  ],
+  "template": "We have an image with these objects: ['skateboard', 'skateboarder', 'helmet', 'trees', 'fence', 'sign', 'people', 'sneakers', 'jeans', 'watch', 'sunglasses', 'ramp', 'sweatshirt', 'shorts', 'hat', 'watch', 'sneakers', 'jeans', 'sweatshirt']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Skateboarder on ramp trees nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "sunglasses",
+          "hat",
+          "shorts"
+        ],
+        "hallucinated_objects": [
+          "ramp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of helmet, the color of the jeans, and the type of ramp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on ramp trees nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"sunglasses\", \"hat\", \"shorts\"],\n  \"hallucinated_objects\": [\"ramp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of helmet, the color of the jeans, and the type of ramp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Skateboarder in sweatshirt and jeans wearing helmet and sunglasses near fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "sunglasses"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of helmet, the color of the jeans, and the style of the sweatshirt."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in sweatshirt and jeans wearing helmet and sunglasses near fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"sunglasses\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of helmet, the color of the jeans, and the style of the sweatshirt.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Skateboarder in red sweatshirt and blue jeans wearing white helmet near fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "sunglasses",
+          "hat"
+        ],
+        "hallucinated_objects": [
+          "red sweatshirt"
+        ],
+        "genericity_hint": "The candidate caption is too specific and misses some objects in the image.",
+        "edit_instructions": [
+          "Remove the red sweatshirt and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in red sweatshirt and blue jeans wearing white helmet near fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"sunglasses\", \"hat\"],\n  \"hallucinated_objects\": [\"red sweatshirt\"],\n  \"genericity_hint\": \"The candidate caption is too specific and misses some objects in the image.\",\n  \"edit_instructions\": \"Remove the red sweatshirt and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Skateboarder with sunglasses and hat near fence and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "sneakers",
+          "jeans",
+          "sweatshirt",
+          "shorts",
+          "hat"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "ramp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the skateboarder's attire and the objects near the fence and trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder with sunglasses and hat near fence and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"sneakers\", \"jeans\", \"sweatshirt\", \"shorts\", \"hat\"],\n  \"hallucinated_objects\": [\"people\", \"ramp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the skateboarder's attire and the objects near the fence and trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Skateboarder in sweatshirt and jeans near fence and trees wearing helmet and sunglasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "hat",
+          "sneakers",
+          "jeans",
+          "sweatshirt",
+          "shorts",
+          "hat",
+          "sneakers",
+          "jeans",
+          "sweatshirt"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "ramp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of helmet, the color of the jeans, and the style of the sweatshirt."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in sweatshirt and jeans near fence and trees wearing helmet and sunglasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"hat\", \"sneakers\", \"jeans\", \"sweatshirt\", \"shorts\", \"hat\", \"sneakers\", \"jeans\", \"sweatshirt\"],\n  \"hallucinated_objects\": [\"people\", \"ramp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of helmet, the color of the jeans, and the style of the sweatshirt.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Skateboarder in blue jeans and gray sweatshirt near fence and trees wearing black helmet and sunglasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "sunglasses"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the helmet, the type of the sweatshirt, and the type of the jeans."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in blue jeans and gray sweatshirt near fence and trees wearing black helmet and sunglasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"sunglasses\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the helmet, the type of the sweatshirt, and the type of the jeans.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Skateboarder in blue jeans and gray sweatshirt rides a skateboard near a fence and trees, wearing a black helmet and sunglasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sunglasses",
+          "hat"
+        ],
+        "hallucinated_objects": [
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the skateboarder's attire and accessories.",
+        "edit_instructions": [
+          "Provide more specific details about the skateboarder's attire and accessories, and remove the watch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in blue jeans and gray sweatshirt rides a skateboard near a fence and trees, wearing a black helmet and sunglasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sunglasses\", \"hat\"],\n  \"hallucinated_objects\": [\"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the skateboarder's attire and accessories.\",\n  \"edit_instructions\": \"Provide more specific details about the skateboarder's attire and accessories, and remove the watch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Skateboarder in blue jeans and gray sweatshirt rides a skateboard near a fence and trees, wearing a black helmet and sunglasses, hat on.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "sunglasses"
+        ],
+        "hallucinated_objects": [
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of helmet, the type of skateboard, and the specific clothing items."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in blue jeans and gray sweatshirt rides a skateboard near a fence and trees, wearing a black helmet and sunglasses, hat on.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"sunglasses\"],\n  \"hallucinated_objects\": [\"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of helmet, the type of skateboard, and the specific clothing items.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Skateboarder in blue jeans and gray sweatshirt rides a skateboard near a fence and trees, wearing a black helmet and sunglasses, hat on.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "sunglasses"
+        ],
+        "hallucinated_objects": [
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of helmet, the type of skateboard, and the specific clothing items."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in blue jeans and gray sweatshirt rides a skateboard near a fence and trees, wearing a black helmet and sunglasses, hat on.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"sunglasses\"],\n  \"hallucinated_objects\": [\"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of helmet, the type of skateboard, and the specific clothing items.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Skateboarder in jeans and sweatshirt rides a skateboard near trees and a fence, wearing a black helmet and sunglasses, hat on.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sunglasses",
+          "hat"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the helmet and the type of clothing the skateboarder is wearing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboard, skateboarder, helmet, trees, fence, sign, people, sneakers, jeans, watch, sunglasses, ramp, sweatshirt, shorts, hat, watch, sneakers, jeans, sweatshirt]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder in jeans and sweatshirt rides a skateboard near trees and a fence, wearing a black helmet and sunglasses, hat on.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sunglasses\", \"hat\"],\n  \"hallucinated_objects\": [\"trees\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the helmet and the type of clothing the skateboarder is wearing.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 67310,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000067310.jpg",
+    "final_caption": "Skateboarder in jeans and sweatshirt rides a skateboard near trees and a fence, wearing a black helmet and sunglasses, hat on.",
+    "total_time_sec": 36.36
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"skateboard\",\n    \"skateboarder\",\n    \"helmet\",\n    \"trees\",\n    \"fence\",\n    \"sign\",\n    \"people\",\n    \"sneakers\",\n    \"jeans\",\n    \"watch\",\n    \"sunglasses\",\n    \"ramp\",\n    \"sweatshirt\",\n    \"shorts\",\n    \"hat\",\n    \"watch\",\n    \"sneakers\",\n    \"jeans\",\n    \"sweatshirt\"\n  ]\n}"
+}

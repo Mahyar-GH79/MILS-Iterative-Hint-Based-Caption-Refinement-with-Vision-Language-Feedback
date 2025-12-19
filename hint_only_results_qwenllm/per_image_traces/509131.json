@@ -1,0 +1,201 @@
+{
+  "image_id": 509131,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000509131.jpg",
+  "objects": [
+    "bananas",
+    "apples",
+    "oranges",
+    "plant",
+    "bookshelf",
+    "vase",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['bananas', 'apples', 'oranges', 'plant', 'bookshelf', 'vase', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Fruits and plants adorn a tabletop near a bookshelf.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fruits and plants adorn a tabletop near a bookshelf.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bananas apples oranges sit on a table beside a plant and vase.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bookshelf"
+        ],
+        "hallucinated_objects": [
+          "vase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the bookshelf and vase from the caption and provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples oranges sit on a table beside a plant and vase.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bookshelf\"],\n  \"hallucinated_objects\": [\"vase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the bookshelf and vase from the caption and provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bananas apples oranges sit on a table near a plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the exact location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples oranges sit on a table near a plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bananas apples oranges sit on a table next to a plant and a vase.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bookshelf"
+        ],
+        "hallucinated_objects": [
+          "vase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples oranges sit on a table next to a plant and a vase.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bookshelf\"],\n  \"hallucinated_objects\": [\"vase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bananas, apples, and oranges pile up on a table near a plant and bookshelf.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and describes the arrangement of the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, and oranges pile up on a table near a plant and bookshelf.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and describes the arrangement of the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bananas, apples, and oranges sit on a shelf next to a vase and plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [
+          "bookshelf"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, and oranges sit on a shelf next to a vase and plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [\"bookshelf\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bananas, apples, oranges sit on a table beside a vase and plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bookshelf"
+        ],
+        "hallucinated_objects": [
+          "vase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, oranges sit on a table beside a vase and plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bookshelf\"],\n  \"hallucinated_objects\": [\"vase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bananas, apples, oranges on a table near a plant and bookshelf.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the vase and the table."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, oranges on a table near a plant and bookshelf.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the vase and the table.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bananas, apples, oranges in a vase on a table by a plant and bookshelf.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "bookshelf"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the vase and table, and remove the bookshelf."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, oranges in a vase on a table by a plant and bookshelf.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"table\"],\n  \"hallucinated_objects\": [\"bookshelf\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the vase and table, and remove the bookshelf.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bananas, apples, oranges in a vase on a table near a plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bookshelf"
+        ],
+        "hallucinated_objects": [
+          "vase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the bookshelf and describes the arrangement of the objects more clearly."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, oranges, plant, bookshelf, vase, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, oranges in a vase on a table near a plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bookshelf\"],\n  \"hallucinated_objects\": [\"vase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the bookshelf and describes the arrangement of the objects more clearly.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 509131,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000509131.jpg",
+    "final_caption": "Bananas, apples, oranges in a vase on a table near a plant.",
+    "total_time_sec": 27.11
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bananas\",\n    \"apples\",\n    \"oranges\",\n    \"plant\",\n    \"bookshelf\",\n    \"vase\",\n    \"table\"\n  ]\n}"
+}

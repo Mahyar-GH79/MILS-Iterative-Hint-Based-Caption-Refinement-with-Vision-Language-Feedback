@@ -1,0 +1,254 @@
+{
+  "image_id": 366141,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000366141.jpg",
+  "objects": [
+    "couch",
+    "lamp",
+    "cat",
+    "table",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch",
+    "lamp",
+    "couch"
+  ],
+  "template": "We have an image with these objects: ['couch', 'lamp', 'cat', 'table', 'lamp', 'couch', 'lamp', 'couch', 'lamp', 'couch', 'lamp', 'couch', 'lamp', 'couch', 'lamp', 'couch', 'lamp', 'couch', 'lamp', 'couch']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Couches and lamps fill room cat rests nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "cat"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches, lamps, or the presence of a cat.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact number of couches, lamps, and the presence of a cat."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couches and lamps fill room cat rests nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\"],\n  \"hallucinated_objects\": [\"cat\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches, lamps, or the presence of a cat.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact number of couches, lamps, and the presence of a cat.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Six couches and twenty-one lamps in the room with no cat.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat"
+        ],
+        "hallucinated_objects": [
+          "couch"
+        ],
+        "genericity_hint": "The caption is too specific and misses important details.",
+        "edit_instructions": [
+          "Remove the incorrect couches and add the missing cat."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six couches and twenty-one lamps in the room with no cat.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\"],\n  \"hallucinated_objects\": [\"couch\"],\n  \"genericity_hint\": \"The caption is too specific and misses important details.\",\n  \"edit_instructions\": \"Remove the incorrect couches and add the missing cat.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Twenty-one lamps and one cat by the couch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "couch"
+        ],
+        "genericity_hint": "The caption is too specific and misses important objects.",
+        "edit_instructions": [
+          "Remove the redundant 'couch' and add the missing 'table' and 'lamp'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Twenty-one lamps and one cat by the couch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"lamp\"],\n  \"hallucinated_objects\": [\"couch\"],\n  \"genericity_hint\": \"The caption is too specific and misses important objects.\",\n  \"edit_instructions\": \"Remove the redundant 'couch' and add the missing 'table' and 'lamp'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Table with twenty lamps and a cat.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat"
+        ],
+        "hallucinated_objects": [
+          "twenty lamps"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific number of lamps and mention the cat."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with twenty lamps and a cat.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\"],\n  \"hallucinated_objects\": [\"twenty lamps\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific number of lamps and mention the cat.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Couches and lamps with a cat.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "cat"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches, lamps, or the presence of a cat.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the number of couches, lamps, and the presence of a cat."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couches and lamps with a cat.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\", \"lamp\"],\n  \"hallucinated_objects\": [\"cat\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches, lamps, or the presence of a cat.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the number of couches, lamps, and the presence of a cat.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Multiple couches and lamps with a cat.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "lamp"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches and lamps.",
+        "edit_instructions": [
+          "Specify the number of couches and lamps in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple couches and lamps with a cat.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"lamp\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches and lamps.\",\n  \"edit_instructions\": \"Specify the number of couches and lamps in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Four couches and five lamps with a cat.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "couch"
+        ],
+        "hallucinated_objects": [
+          "cat"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the cat and add a table."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four couches and five lamps with a cat.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"couch\"],\n  \"hallucinated_objects\": [\"cat\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the cat and add a table.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Four couches a table and five lamps",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat"
+        ],
+        "hallucinated_objects": [
+          "five lamps"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches and lamps.",
+        "edit_instructions": [
+          "Remove the cat and the number of lamps. Specify the exact number of couches and lamps."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four couches a table and five lamps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\"],\n  \"hallucinated_objects\": [\"five lamps\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches and lamps.\",\n  \"edit_instructions\": \"Remove the cat and the number of lamps. Specify the exact number of couches and lamps.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Two couches eight lamps",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of objects.",
+        "edit_instructions": [
+          "Specify the number of objects in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two couches eight lamps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of objects.\",\n  \"edit_instructions\": \"Specify the number of objects in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Four couches five lamps one cat table",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat"
+        ],
+        "hallucinated_objects": [
+          "five lamps"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Remove the incorrect number of lamps and add the missing cat."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, lamp, cat, table, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch, lamp, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four couches five lamps one cat table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\"],\n  \"hallucinated_objects\": [\"five lamps\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Remove the incorrect number of lamps and add the missing cat.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 366141,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000366141.jpg",
+    "final_caption": "Four couches five lamps one cat table",
+    "total_time_sec": 29.68
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"couch\",\n    \"lamp\",\n    \"cat\",\n    \"table\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\",\n    \"lamp\",\n    \"couch\"\n  ]\n}"
+}

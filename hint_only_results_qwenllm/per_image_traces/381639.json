@@ -1,0 +1,350 @@
+{
+  "image_id": 381639,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000381639.jpg",
+  "objects": [
+    "airplane",
+    "orange traffic cones",
+    "young girl",
+    "flowered dress",
+    "red shorts",
+    "brown shoes",
+    "white backpack",
+    "yellow lines",
+    "airport tarmac",
+    "building in background",
+    "trees in background",
+    "airplane stairs",
+    "people boarding plane",
+    "orange and white traffic cones",
+    "yellow lines on tarmac",
+    "airport environment",
+    "young girl standing",
+    "orange traffic cone",
+    "young girl holding a toy"
+  ],
+  "template": "We have an image with these objects: ['airplane', 'orange traffic cones', 'young girl', 'flowered dress', 'red shorts', 'brown shoes', 'white backpack', 'yellow lines', 'airport tarmac', 'building in background', 'trees in background', 'airplane stairs', 'people boarding plane', 'orange and white traffic cones', 'yellow lines on tarmac', 'airport environment', 'young girl standing', 'orange traffic cone', 'young girl holding a toy']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Young girl in flowered dress stands near airplane at airport tarmac",
+      "vlm_hint": {
+        "missing_objects": [
+          "white backpack",
+          "yellow lines on tarmac",
+          "airport environment",
+          "orange traffic cone",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "airport tarmac"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the white backpack, yellow lines on the tarmac, airport environment, orange traffic cone, and the young girl holding a toy."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in flowered dress stands near airplane at airport tarmac\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white backpack\", \"yellow lines on tarmac\", \"airport environment\", \"orange traffic cone\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"airport tarmac\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the white backpack, yellow lines on the tarmac, airport environment, orange traffic cone, and the young girl holding a toy.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Young girl in flowered dress holds toy near airplane on yellow-lined tarmac at airport with orange traffic cone and backpack.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white backpack",
+          "orange and white traffic cones",
+          "airport environment",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane stairs",
+          "people boarding plane"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the young girl's attire, the color and position of the traffic cones, and the environment of the airport."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in flowered dress holds toy near airplane on yellow-lined tarmac at airport with orange traffic cone and backpack.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white backpack\", \"orange and white traffic cones\", \"airport environment\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane stairs\", \"people boarding plane\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the young girl's attire, the color and position of the traffic cones, and the environment of the airport.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Young girl in flowered dress holds toy near orange and white traffic cones on yellow-lined tarmac at airport.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white backpack",
+          "building in background",
+          "trees in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "yellow lines on tarmac",
+          "airport environment",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane",
+          "orange traffic cones",
+          "young girl",
+          "flowered dress",
+          "red shorts",
+          "brown shoes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in flowered dress holds toy near orange and white traffic cones on yellow-lined tarmac at airport.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white backpack\", \"building in background\", \"trees in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"yellow lines on tarmac\", \"airport environment\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane\", \"orange traffic cones\", \"young girl\", \"flowered dress\", \"red shorts\", \"brown shoes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Young girl in white backpack stands near orange and white traffic cones on yellow-lined tarmac at busy airport.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "building in background",
+          "trees in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane",
+          "orange traffic cones",
+          "young girl",
+          "flowered dress",
+          "red shorts",
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "building in background",
+          "trees in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "young girl standing",
+          "orange traffic cone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes the missing objects and corrects the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in white backpack stands near orange and white traffic cones on yellow-lined tarmac at busy airport.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"building in background\", \"trees in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane\", \"orange traffic cones\", \"young girl\", \"flowered dress\", \"red shorts\", \"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"building in background\", \"trees in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"young girl standing\", \"orange traffic cone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes the missing objects and corrects the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Young girl in white backpack stands near orange and white traffic cones on yellow-lined tarmac at airport, with trees and buildings in background, holding a toy.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "trees in background",
+          "building in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane",
+          "orange traffic cones",
+          "young girl",
+          "flowered dress",
+          "red shorts",
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "trees in background",
+          "building in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "young girl holding a toy"
+        ],
+        "genericity_hint": "The image is generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in white backpack stands near orange and white traffic cones on yellow-lined tarmac at airport, with trees and buildings in background, holding a toy.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"trees in background\", \"building in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane\", \"orange traffic cones\", \"young girl\", \"flowered dress\", \"red shorts\", \"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"trees in background\", \"building in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"young girl holding a toy\"],\n  \"genericity_hint\": \"The image is generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Young girl in white backpack stands near orange and white traffic cones on yellow-lined tarmac at airport, with trees and buildings in background.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown shoes",
+          "white backpack",
+          "yellow lines on tarmac",
+          "airport environment",
+          "young girl standing",
+          "orange traffic cone",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane",
+          "orange traffic cones",
+          "young girl",
+          "flowered dress",
+          "red shorts",
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "building in background",
+          "trees in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "yellow lines on tarmac",
+          "airport environment",
+          "young girl standing",
+          "orange traffic cone",
+          "young girl holding a toy"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes the young girl's clothing, the color of her shoes, the presence of a white backpack, and the specific details of the airport environment such as the tarmac, traffic cones, and yellow lines."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in white backpack stands near orange and white traffic cones on yellow-lined tarmac at airport, with trees and buildings in background.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown shoes\", \"white backpack\", \"yellow lines on tarmac\", \"airport environment\", \"young girl standing\", \"orange traffic cone\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane\", \"orange traffic cones\", \"young girl\", \"flowered dress\", \"red shorts\", \"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"building in background\", \"trees in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"yellow lines on tarmac\", \"airport environment\", \"young girl standing\", \"orange traffic cone\", \"young girl holding a toy\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes the young girl's clothing, the color of her shoes, the presence of a white backpack, and the specific details of the airport environment such as the tarmac, traffic cones, and yellow lines.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Young girl in flowered dress and white backpack stands near orange traffic cone on yellow-lined airport tarmac, brown shoes visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white backpack",
+          "brown shoes"
+        ],
+        "hallucinated_objects": [
+          "orange traffic cone",
+          "yellow lines on tarmac"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the backpack, and the exact location of the traffic cones and yellow lines."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in flowered dress and white backpack stands near orange traffic cone on yellow-lined airport tarmac, brown shoes visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white backpack\", \"brown shoes\"],\n  \"hallucinated_objects\": [\"orange traffic cone\", \"yellow lines on tarmac\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the backpack, and the exact location of the traffic cones and yellow lines.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Young girl in flowered dress and brown shoes holds white backpack near orange and white traffic cones on yellow-lined airport tarmac.",
+      "vlm_hint": {
+        "missing_objects": [
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane stairs",
+          "people boarding plane"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the young girl holding a toy, the airplane stairs, and people boarding the plane."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in flowered dress and brown shoes holds white backpack near orange and white traffic cones on yellow-lined airport tarmac.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane stairs\", \"people boarding plane\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the young girl holding a toy, the airplane stairs, and people boarding the plane.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Young girl in flowered dress holds toy near orange traffic cones on yellow-lined airport tarmac.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white backpack",
+          "building in background",
+          "trees in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "yellow lines on tarmac",
+          "airport environment",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane",
+          "orange traffic cones",
+          "young girl",
+          "flowered dress",
+          "red shorts",
+          "brown shoes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in flowered dress holds toy near orange traffic cones on yellow-lined airport tarmac.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white backpack\", \"building in background\", \"trees in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"yellow lines on tarmac\", \"airport environment\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane\", \"orange traffic cones\", \"young girl\", \"flowered dress\", \"red shorts\", \"brown shoes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Young girl in white backpack stands near orange and white traffic cones on yellow-lined airport tarmac amidst trees and a building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "trees in background",
+          "building in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "young girl holding a toy"
+        ],
+        "hallucinated_objects": [
+          "airplane",
+          "orange traffic cones",
+          "young girl",
+          "flowered dress",
+          "red shorts",
+          "brown shoes",
+          "white backpack",
+          "yellow lines",
+          "airport tarmac",
+          "building in background",
+          "trees in background",
+          "airplane stairs",
+          "people boarding plane",
+          "orange and white traffic cones",
+          "young girl standing",
+          "orange traffic cone"
+        ],
+        "genericity_hint": "The image is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, orange traffic cones, young girl, flowered dress, red shorts, brown shoes, white backpack, yellow lines, airport tarmac, building in background, trees in background, airplane stairs, people boarding plane, orange and white traffic cones, yellow lines on tarmac, airport environment, young girl standing, orange traffic cone, young girl holding a toy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Young girl in white backpack stands near orange and white traffic cones on yellow-lined airport tarmac amidst trees and a building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"trees in background\", \"building in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"young girl holding a toy\"],\n  \"hallucinated_objects\": [\"airplane\", \"orange traffic cones\", \"young girl\", \"flowered dress\", \"red shorts\", \"brown shoes\", \"white backpack\", \"yellow lines\", \"airport tarmac\", \"building in background\", \"trees in background\", \"airplane stairs\", \"people boarding plane\", \"orange and white traffic cones\", \"young girl standing\", \"orange traffic cone\"],\n  \"genericity_hint\": \"The image is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 381639,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000381639.jpg",
+    "final_caption": "Young girl in white backpack stands near orange and white traffic cones on yellow-lined airport tarmac amidst trees and a building.",
+    "total_time_sec": 52.89
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"airplane\",\n    \"orange traffic cones\",\n    \"young girl\",\n    \"flowered dress\",\n    \"red shorts\",\n    \"brown shoes\",\n    \"white backpack\",\n    \"yellow lines\",\n    \"airport tarmac\",\n    \"building in background\",\n    \"trees in background\",\n    \"airplane stairs\",\n    \"people boarding plane\",\n    \"orange and white traffic cones\",\n    \"yellow lines on tarmac\",\n    \"airport environment\",\n    \"young girl standing\",\n    \"orange traffic cone\",\n    \"young girl holding a toy\"\n  ]\n}"
+}

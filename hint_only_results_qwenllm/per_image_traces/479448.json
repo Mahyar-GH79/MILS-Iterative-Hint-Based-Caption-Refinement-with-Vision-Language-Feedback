@@ -1,0 +1,223 @@
+{
+  "image_id": 479448,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000479448.jpg",
+  "objects": [
+    "waffle",
+    "banana slices",
+    "strawberry",
+    "syrup",
+    "orange slice",
+    "plate",
+    "napkin",
+    "spoon",
+    "butter",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['waffle', 'banana slices', 'strawberry', 'syrup', 'orange slice', 'plate', 'napkin', 'spoon', 'butter', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Waffle with fruits and syrup on a table",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange slice",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "napkin",
+          "butter",
+          "spoon"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic caption and specify the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waffle with fruits and syrup on a table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange slice\", \"table\"],\n  \"hallucinated_objects\": [\"napkin\", \"butter\", \"spoon\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic caption and specify the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Waffle with banana slices strawberry and orange slice on a table",
+      "vlm_hint": {
+        "missing_objects": [
+          "syrup",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "napkin",
+          "butter",
+          "spoon"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects present in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waffle with banana slices strawberry and orange slice on a table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"syrup\", \"table\"],\n  \"hallucinated_objects\": [\"napkin\", \"butter\", \"spoon\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects present in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Waffle with banana slices, strawberry, and orange slice on a plate with syrup on the table",
+      "vlm_hint": {
+        "missing_objects": [
+          "napkin",
+          "spoon",
+          "butter"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waffle with banana slices, strawberry, and orange slice on a plate with syrup on the table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"napkin\", \"spoon\", \"butter\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Waffle with banana slices strawberry and orange slice on a plate with syrup and butter nearby a napkin and spoon",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [
+          "butter",
+          "napkin",
+          "spoon"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the butter, napkin, and spoon from the caption. Also, specify the table as a missing object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waffle with banana slices strawberry and orange slice on a plate with syrup and butter nearby a napkin and spoon\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [\"butter\", \"napkin\", \"spoon\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the butter, napkin, and spoon from the caption. Also, specify the table as a missing object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Waffle with banana slices and strawberry on a plate near syrup and a table",
+      "vlm_hint": {
+        "missing_objects": [
+          "napkin",
+          "spoon",
+          "butter"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic language."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waffle with banana slices and strawberry on a plate near syrup and a table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"napkin\", \"spoon\", \"butter\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic language.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Waffle with banana slices and strawberry drizzled with syrup and butter on a plate with a spoon and napkin.",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange slice",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "butter"
+        ],
+        "genericity_hint": "The caption is too specific and does not mention all the objects in the image.",
+        "edit_instructions": [
+          "Remove the butter and add the orange slice and table to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waffle with banana slices and strawberry drizzled with syrup and butter on a plate with a spoon and napkin.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange slice\", \"table\"],\n  \"hallucinated_objects\": [\"butter\"],\n  \"genericity_hint\": \"The caption is too specific and does not mention all the objects in the image.\",\n  \"edit_instructions\": \"Remove the butter and add the orange slice and table to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Orange slice and banana slices on waffle with syrup drizzled on a table with a spoon and napkin.",
+      "vlm_hint": {
+        "missing_objects": [
+          "butter"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Orange slice and banana slices on waffle with syrup drizzled on a table with a spoon and napkin.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"butter\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Strawberry and banana slices on waffle with syrup and butter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "napkin",
+          "spoon",
+          "butter"
+        ],
+        "hallucinated_objects": [
+          "orange slice"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic language."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry and banana slices on waffle with syrup and butter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"napkin\", \"spoon\", \"butter\"],\n  \"hallucinated_objects\": [\"orange slice\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic language.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Strawberry banana slices sit on waffle with syrup and butter on plate and napkin.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [
+          "butter"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of waffle, the color of the syrup, and the presence of a spoon."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry banana slices sit on waffle with syrup and butter on plate and napkin.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [\"butter\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of waffle, the color of the syrup, and the presence of a spoon.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Golden waffle with banana slices and strawberries sits on a plate with syrup and a spoon, on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "napkin",
+          "butter"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of waffle, the presence of butter, and the color of the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [waffle, banana slices, strawberry, syrup, orange slice, plate, napkin, spoon, butter, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Golden waffle with banana slices and strawberries sits on a plate with syrup and a spoon, on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"napkin\", \"butter\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of waffle, the presence of butter, and the color of the table.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 479448,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000479448.jpg",
+    "final_caption": "Golden waffle with banana slices and strawberries sits on a plate with syrup and a spoon, on a table.",
+    "total_time_sec": 29.88
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"waffle\",\n    \"banana slices\",\n    \"strawberry\",\n    \"syrup\",\n    \"orange slice\",\n    \"plate\",\n    \"napkin\",\n    \"spoon\",\n    \"butter\",\n    \"table\"\n  ]\n}"
+}

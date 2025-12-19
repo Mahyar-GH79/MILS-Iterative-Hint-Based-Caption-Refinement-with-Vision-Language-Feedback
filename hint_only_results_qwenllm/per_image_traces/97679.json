@@ -1,0 +1,226 @@
+{
+  "image_id": 97679,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000097679.jpg",
+  "objects": [
+    "car",
+    "snowboard",
+    "snow",
+    "rocks",
+    "car",
+    "snowboard",
+    "snow",
+    "rocks",
+    "car",
+    "snowboard",
+    "snow",
+    "rocks",
+    "car",
+    "snowboard",
+    "snow",
+    "rocks",
+    "car",
+    "snowboard",
+    "snow",
+    "rocks"
+  ],
+  "template": "We have an image with these objects: ['car', 'snowboard', 'snow', 'rocks', 'car', 'snowboard', 'snow', 'rocks', 'car', 'snowboard', 'snow', 'rocks', 'car', 'snowboard', 'snow', 'rocks', 'car', 'snowboard', 'snow', 'rocks']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cars and snowboards in snowy landscape with rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of cars or the exact number of snowboards.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the types of cars and the exact number of snowboards."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars and snowboards in snowy landscape with rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"hallucinated_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of cars or the exact number of snowboards.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the types of cars and the exact number of snowboards.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Four cars and two snowboards in a snowy landscape with rocks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of cars and snowboards.",
+        "edit_instructions": [
+          "Specify the number of cars and snowboards in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four cars and two snowboards in a snowy landscape with rocks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snow\", \"rocks\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of cars and snowboards.\",\n  \"edit_instructions\": \"Specify the number of cars and snowboards in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Eight cars and six snowboards in a snowy landscape with rocks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The image contains multiple cars, but the caption suggests there are eight cars, which is incorrect.",
+        "edit_instructions": [
+          "Remove the incorrect number of cars and ensure the caption matches the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Eight cars and six snowboards in a snowy landscape with rocks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The image contains multiple cars, but the caption suggests there are eight cars, which is incorrect.\",\n  \"edit_instructions\": \"Remove the incorrect number of cars and ensure the caption matches the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Multiple cars snowboards snow rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains multiple cars, but the caption is not specific about the number of snowboards, snow, or rocks.",
+        "edit_instructions": [
+          "Remove the phrase 'Multiple cars' and add the specific number of snowboards, snow, and rocks present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple cars snowboards snow rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains multiple cars, but the caption is not specific about the number of snowboards, snow, or rocks.\",\n  \"edit_instructions\": \"Remove the phrase 'Multiple cars' and add the specific number of snowboards, snow, and rocks present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Five snowboards much snow many rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of snowboards, snow, and rocks.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact number of snowboards, snow, and rocks."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Five snowboards much snow many rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of snowboards, snow, and rocks.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact number of snowboards, snow, and rocks.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Four cars six snowboards lots of snow rocky terrain",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snow"
+        ],
+        "genericity_hint": "The image contains multiple cars and snowboards, but the caption is too generic.",
+        "edit_instructions": [
+          "Remove the generic 'snow' and 'rocks' and specify the number of snowboards and cars."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four cars six snowboards lots of snow rocky terrain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snow\"],\n  \"genericity_hint\": \"The image contains multiple cars and snowboards, but the caption is too generic.\",\n  \"edit_instructions\": \"Remove the generic 'snow' and 'rocks' and specify the number of snowboards and cars.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Six cars four snowboards rocky slope",
+      "vlm_hint": {
+        "missing_objects": [
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "snowboard"
+        ],
+        "genericity_hint": "The image contains multiple cars and snowboards, but the captions are not specific about the number of each.",
+        "edit_instructions": [
+          "Remove the extra snowboards and ensure the captions accurately reflect the number of cars and snowboards present."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six cars four snowboards rocky slope\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snow\", \"rocks\"],\n  \"hallucinated_objects\": [\"snowboard\"],\n  \"genericity_hint\": \"The image contains multiple cars and snowboards, but the captions are not specific about the number of each.\",\n  \"edit_instructions\": \"Remove the extra snowboards and ensure the captions accurately reflect the number of cars and snowboards present.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two cars two snowboards on rocky slope covered in snow",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact number of snowboards, the presence of snow, and the rocky slope."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cars two snowboards on rocky slope covered in snow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"hallucinated_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact number of snowboards, the presence of snow, and the rocky slope.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Four cars four snowboards in snow on rocky slope",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard"
+        ],
+        "hallucinated_objects": [
+          "snow"
+        ],
+        "genericity_hint": "The image contains multiple cars and snowboards, but the caption is too generic.",
+        "edit_instructions": [
+          "Remove the generic caption and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four cars four snowboards in snow on rocky slope\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\"],\n  \"hallucinated_objects\": [\"snow\"],\n  \"genericity_hint\": \"The image contains multiple cars and snowboards, but the caption is too generic.\",\n  \"edit_instructions\": \"Remove the generic caption and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Multiple cars snowboards snow rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snow",
+          "rocks"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains multiple cars, but the caption is not specific about the number of snowboards, snow, or rocks.",
+        "edit_instructions": [
+          "Remove the phrase 'Multiple cars' and add the specific number of snowboards, snow, and rocks present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks, car, snowboard, snow, rocks]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple cars snowboards snow rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snow\", \"rocks\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains multiple cars, but the caption is not specific about the number of snowboards, snow, or rocks.\",\n  \"edit_instructions\": \"Remove the phrase 'Multiple cars' and add the specific number of snowboards, snow, and rocks present in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 97679,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000097679.jpg",
+    "final_caption": "Multiple cars snowboards snow rocks",
+    "total_time_sec": 30.65
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"car\",\n    \"snowboard\",\n    \"snow\",\n    \"rocks\",\n    \"car\",\n    \"snowboard\",\n    \"snow\",\n    \"rocks\",\n    \"car\",\n    \"snowboard\",\n    \"snow\",\n    \"rocks\",\n    \"car\",\n    \"snowboard\",\n    \"snow\",\n    \"rocks\",\n    \"car\",\n    \"snowboard\",\n    \"snow\",\n    \"rocks\"\n  ]\n}"
+}

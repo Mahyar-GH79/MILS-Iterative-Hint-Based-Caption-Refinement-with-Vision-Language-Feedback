@@ -1,0 +1,316 @@
+{
+  "image_id": 519764,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000519764.jpg",
+  "objects": [
+    "cat",
+    "chair",
+    "desk",
+    "laptop",
+    "speaker",
+    "wall",
+    "cabinet",
+    "drawer",
+    "table",
+    "floor",
+    "light",
+    "window",
+    "chair armrest",
+    "chair backrest",
+    "chair cushion",
+    "chair legs",
+    "chair handle",
+    "chair armrest",
+    "chair backrest",
+    "chair cushion"
+  ],
+  "template": "We have an image with these objects: ['cat', 'chair', 'desk', 'laptop', 'speaker', 'wall', 'cabinet', 'drawer', 'table', 'floor', 'light', 'window', 'chair armrest', 'chair backrest', 'chair cushion', 'chair legs', 'chair handle', 'chair armrest', 'chair backrest', 'chair cushion']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat on chair near desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "wall",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "chair armrest",
+          "chair backrest",
+          "chair cushion",
+          "chair legs",
+          "chair handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair near desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"wall\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\", \"window\"],\n  \"hallucinated_objects\": [\"chair armrest\", \"chair backrest\", \"chair cushion\", \"chair legs\", \"chair handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat on chair near desk with laptop and speaker",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light",
+          "window"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the color of the wall, and the position of the cat."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair near desk with laptop and speaker\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\"],\n  \"hallucinated_objects\": [\"desk\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\", \"window\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the color of the wall, and the position of the cat.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat on chair with armrest near wall and speaker",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk",
+          "laptop",
+          "speaker",
+          "wall",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "chair armrest",
+          "chair backrest",
+          "chair cushion",
+          "chair legs",
+          "chair handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, and window."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair with armrest near wall and speaker\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk\", \"laptop\", \"speaker\", \"wall\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\", \"window\"],\n  \"hallucinated_objects\": [\"chair armrest\", \"chair backrest\", \"chair cushion\", \"chair legs\", \"chair handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, and window.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat on chair near desk with laptop and speaker by wall and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "wall",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the laptop, speaker, wall, and window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair near desk with laptop and speaker by wall and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"wall\", \"window\"],\n  \"hallucinated_objects\": [\"desk\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the laptop, speaker, wall, and window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat on chair by wall with laptop and speaker near window",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the laptop, speaker, and window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair by wall with laptop and speaker near window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"window\"],\n  \"hallucinated_objects\": [\"desk\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the laptop, speaker, and window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat on chair by wall near laptop and speaker by window",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "speaker"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the desk, cabinet, drawer, table, floor, light, and window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair by wall near laptop and speaker by window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\", \"window\"],\n  \"hallucinated_objects\": [\"speaker\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the desk, cabinet, drawer, table, floor, light, and window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat on chair near desk and cabinet by window on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "wall",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light",
+          "window",
+          "chair armrest",
+          "chair backrest",
+          "chair cushion",
+          "chair legs",
+          "chair handle"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair near desk and cabinet by window on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"wall\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\", \"window\", \"chair armrest\", \"chair backrest\", \"chair cushion\", \"chair legs\", \"chair handle\"],\n  \"hallucinated_objects\": [\"desk\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat on chair by speaker and cabinet near window on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "cabinet",
+          "drawer",
+          "table",
+          "floor",
+          "light",
+          "window",
+          "chair armrest",
+          "chair backrest",
+          "chair cushion",
+          "chair legs",
+          "chair handle"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the laptop, speaker, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, and chair handle."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair by speaker and cabinet near window on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"cabinet\", \"drawer\", \"table\", \"floor\", \"light\", \"window\", \"chair armrest\", \"chair backrest\", \"chair cushion\", \"chair legs\", \"chair handle\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the laptop, speaker, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, and chair handle.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat on chair by speaker and cabinet with drawer near window on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "cabinet",
+          "drawer",
+          "window",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "chair armrest",
+          "chair backrest",
+          "chair cushion",
+          "chair legs",
+          "chair handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and relationships."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair by speaker and cabinet with drawer near window on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"cabinet\", \"drawer\", \"window\", \"floor\"],\n  \"hallucinated_objects\": [\"desk\", \"chair armrest\", \"chair backrest\", \"chair cushion\", \"chair legs\", \"chair handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and relationships.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat on chair near speaker and cabinet with open drawer by window on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "laptop",
+          "speaker",
+          "wall",
+          "drawer",
+          "window",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "cabinet",
+          "chair armrest",
+          "chair backrest",
+          "chair cushion",
+          "chair legs",
+          "chair handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the color of the cabinet, and the position of the drawer."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, chair, desk, laptop, speaker, wall, cabinet, drawer, table, floor, light, window, chair armrest, chair backrest, chair cushion, chair legs, chair handle, chair armrest, chair backrest, chair cushion]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on chair near speaker and cabinet with open drawer by window on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"laptop\", \"speaker\", \"wall\", \"drawer\", \"window\", \"floor\"],\n  \"hallucinated_objects\": [\"desk\", \"cabinet\", \"chair armrest\", \"chair backrest\", \"chair cushion\", \"chair legs\", \"chair handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the color of the cabinet, and the position of the drawer.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 519764,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000519764.jpg",
+    "final_caption": "Cat on chair near speaker and cabinet with open drawer by window on floor",
+    "total_time_sec": 38.49
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"chair\",\n    \"desk\",\n    \"laptop\",\n    \"speaker\",\n    \"wall\",\n    \"cabinet\",\n    \"drawer\",\n    \"table\",\n    \"floor\",\n    \"light\",\n    \"window\",\n    \"chair armrest\",\n    \"chair backrest\",\n    \"chair cushion\",\n    \"chair legs\",\n    \"chair handle\",\n    \"chair armrest\",\n    \"chair backrest\",\n    \"chair cushion\"\n  ]\n}"
+}

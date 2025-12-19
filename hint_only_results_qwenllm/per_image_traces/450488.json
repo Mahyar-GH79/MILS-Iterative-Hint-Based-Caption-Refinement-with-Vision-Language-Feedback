@@ -1,0 +1,298 @@
+{
+  "image_id": 450488,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000450488.jpg",
+  "objects": [
+    "bed",
+    "bedspread",
+    "ceiling fan",
+    "dresser",
+    "mirror",
+    "television",
+    "trash can",
+    "bathroom",
+    "door",
+    "handle",
+    "light switch",
+    "wall",
+    "floor",
+    "patterned carpet",
+    "bathroom door",
+    "bathroom mirror",
+    "bathroom sink",
+    "bathroom counter",
+    "bathroom cabinet",
+    "bathroom light"
+  ],
+  "template": "We have an image with these objects: ['bed', 'bedspread', 'ceiling fan', 'dresser', 'mirror', 'television', 'trash can', 'bathroom', 'door', 'handle', 'light switch', 'wall', 'floor', 'patterned carpet', 'bathroom door', 'bathroom mirror', 'bathroom sink', 'bathroom counter', 'bathroom cabinet', 'bathroom light']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bathroom with bed and fan above patterned carpet",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "bathroom",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "bed",
+          "bedspread",
+          "ceiling fan",
+          "dresser",
+          "mirror",
+          "television",
+          "patterned carpet"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects and remove the generic caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bed and fan above patterned carpet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"bathroom\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"bed\", \"bedspread\", \"ceiling fan\", \"dresser\", \"mirror\", \"television\", \"patterned carpet\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects and remove the generic caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bathroom with trash can near door and light switch on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "bed",
+          "dresser",
+          "mirror",
+          "television",
+          "trash can",
+          "bathroom",
+          "door",
+          "handle",
+          "light switch",
+          "wall",
+          "floor",
+          "patterned carpet",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with trash can near door and light switch on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bed\", \"dresser\", \"mirror\", \"television\", \"trash can\", \"bathroom\", \"door\", \"handle\", \"light switch\", \"wall\", \"floor\", \"patterned carpet\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bathroom with bed dresser and mirror near bedspread ceiling fan",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "bathroom"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects within the room."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bed dresser and mirror near bedspread ceiling fan\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"bathroom\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects within the room.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Patterned carpet floor near bed with dresser and mirror ceiling fan bathroom sink counter cabinet light",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "light switch"
+        ],
+        "hallucinated_objects": [
+          "trash can"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the bathroom and its features."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Patterned carpet floor near bed with dresser and mirror ceiling fan bathroom sink counter cabinet light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"light switch\"],\n  \"hallucinated_objects\": [\"trash can\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the bathroom and its features.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Patterned carpet floor near bed with dresser and mirror above bathroom sink and counter in bathroom.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "trash can"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the bathroom sink, counter, cabinet, and light."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Patterned carpet floor near bed with dresser and mirror above bathroom sink and counter in bathroom.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"trash can\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the bathroom sink, counter, cabinet, and light.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Patterned carpet under bed near dresser and mirror above bathroom sink and counter with light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "trash can"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Patterned carpet under bed near dresser and mirror above bathroom sink and counter with light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"trash can\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Patterned carpet under bed near dresser and mirror over bathroom sink and counter with light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "trash can"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Patterned carpet under bed near dresser and mirror over bathroom sink and counter with light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"trash can\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Patterned carpet under bed near dresser and mirror by bathroom sink and counter with light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "wall",
+          "patterned carpet",
+          "bathroom"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the bathroom and its features."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Patterned carpet under bed near dresser and mirror by bathroom sink and counter with light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"light switch\", \"wall\", \"patterned carpet\", \"bathroom\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the bathroom and its features.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bathroom with bed near dresser and mirror by sink and countertop, lit by light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "wall",
+          "patterned carpet",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bed near dresser and mirror by sink and countertop, lit by light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"light switch\", \"wall\", \"patterned carpet\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bathroom with bed near dresser and mirror by sink and countertop, illuminated by light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "wall",
+          "patterned carpet",
+          "bathroom door",
+          "bathroom mirror",
+          "bathroom sink",
+          "bathroom counter",
+          "bathroom cabinet",
+          "bathroom light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location of the objects.",
+        "edit_instructions": [
+          "Specify the location of the objects in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, bedspread, ceiling fan, dresser, mirror, television, trash can, bathroom, door, handle, light switch, wall, floor, patterned carpet, bathroom door, bathroom mirror, bathroom sink, bathroom counter, bathroom cabinet, bathroom light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bed near dresser and mirror by sink and countertop, illuminated by light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"hallucinated_objects\": [\"light switch\", \"wall\", \"patterned carpet\", \"bathroom door\", \"bathroom mirror\", \"bathroom sink\", \"bathroom counter\", \"bathroom cabinet\", \"bathroom light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location of the objects.\",\n  \"edit_instructions\": \"Specify the location of the objects in the caption.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 450488,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000450488.jpg",
+    "final_caption": "Bathroom with bed near dresser and mirror by sink and countertop, illuminated by light.",
+    "total_time_sec": 37.75
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bed\",\n    \"bedspread\",\n    \"ceiling fan\",\n    \"dresser\",\n    \"mirror\",\n    \"television\",\n    \"trash can\",\n    \"bathroom\",\n    \"door\",\n    \"handle\",\n    \"light switch\",\n    \"wall\",\n    \"floor\",\n    \"patterned carpet\",\n    \"bathroom door\",\n    \"bathroom mirror\",\n    \"bathroom sink\",\n    \"bathroom counter\",\n    \"bathroom cabinet\",\n    \"bathroom light\"\n  ]\n}"
+}

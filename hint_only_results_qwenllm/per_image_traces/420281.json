@@ -1,0 +1,223 @@
+{
+  "image_id": 420281,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000420281.jpg",
+  "objects": [
+    "man",
+    "glasses",
+    "earring",
+    "hot dog",
+    "bun",
+    "condiment",
+    "shirt",
+    "jacket",
+    "background",
+    "curtain",
+    "wall",
+    "fingers",
+    "thumb",
+    "nail",
+    "fingernail",
+    "hair",
+    "eyebrow",
+    "eyelash",
+    "cheek",
+    "nose"
+  ],
+  "template": "We have an image with these objects: ['man', 'glasses', 'earring', 'hot dog', 'bun', 'condiment', 'shirt', 'jacket', 'background', 'curtain', 'wall', 'fingers', 'thumb', 'nail', 'fingernail', 'hair', 'eyebrow', 'eyelash', 'cheek', 'nose']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man with glasses eats hot dog holding condiment",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "curtain",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "fingers",
+          "thumb",
+          "nail",
+          "fingernail"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of condiment and the color of the jacket."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with glasses eats hot dog holding condiment\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"curtain\", \"wall\"],\n  \"hallucinated_objects\": [\"fingers\", \"thumb\", \"nail\", \"fingernail\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of condiment and the color of the jacket.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in blue jacket eats a hot dog with ketchup, holding a bun.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "curtain",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the condiment on the hot dog.",
+        "edit_instructions": [
+          "Add a specific detail about the condiment on the hot dog, such as 'ketchup'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in blue jacket eats a hot dog with ketchup, holding a bun.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"background\", \"curtain\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the condiment on the hot dog.\",\n  \"edit_instructions\": \"Add a specific detail about the condiment on the hot dog, such as 'ketchup'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in blue jacket eats a hot dog with ketchup, holding a bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add a specific condiment to the hot dog."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in blue jacket eats a hot dog with ketchup, holding a bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add a specific condiment to the hot dog.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "condiment"
+        ],
+        "hallucinated_objects": [
+          "shirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the condiment to the hot dog and remove the shirt."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, earring, hot dog, bun, condiment, shirt, jacket, background, curtain, wall, fingers, thumb, nail, fingernail, hair, eyebrow, eyelash, cheek, nose]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket eats hot dog with ketchup, holding bun and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"condiment\"],\n  \"hallucinated_objects\": [\"shirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the condiment to the hot dog and remove the shirt.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 420281,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000420281.jpg",
+    "final_caption": "Man in jacket eats hot dog with ketchup, holding bun and glasses.",
+    "total_time_sec": 27.04
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"glasses\",\n    \"earring\",\n    \"hot dog\",\n    \"bun\",\n    \"condiment\",\n    \"shirt\",\n    \"jacket\",\n    \"background\",\n    \"curtain\",\n    \"wall\",\n    \"fingers\",\n    \"thumb\",\n    \"nail\",\n    \"fingernail\",\n    \"hair\",\n    \"eyebrow\",\n    \"eyelash\",\n    \"cheek\",\n    \"nose\"\n  ]\n}"
+}

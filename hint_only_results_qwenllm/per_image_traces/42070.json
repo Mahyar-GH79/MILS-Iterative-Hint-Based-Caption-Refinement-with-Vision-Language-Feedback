@@ -1,0 +1,302 @@
+{
+  "image_id": 42070,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000042070.jpg",
+  "objects": [
+    "bus",
+    "number 51",
+    "CROSSTOWN",
+    "front windshield",
+    "wipers",
+    "license plate",
+    "building",
+    "sidewalk",
+    "street",
+    "street light",
+    "bus number 211",
+    "bus headlights",
+    "bus front bumper",
+    "bus front grill",
+    "bus front mirror",
+    "bus front door",
+    "bus front window",
+    "bus front windshield wipers",
+    "bus front license plate"
+  ],
+  "template": "We have an image with these objects: ['bus', 'number 51', 'CROSSTOWN', 'front windshield', 'wipers', 'license plate', 'building', 'sidewalk', 'street', 'street light', 'bus number 211', 'bus headlights', 'bus front bumper', 'bus front grill', 'bus front mirror', 'bus front door', 'bus front window', 'bus front windshield wipers', 'bus front license plate']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bus 51 and bus 211 on busy street at night",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211",
+          "bus number 51",
+          "bus on busy street",
+          "bus at night"
+        ],
+        "genericity_hint": "The image is not specific about the time of day or the bus's route.",
+        "edit_instructions": [
+          "Remove the bus number and the time of day from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus 51 and bus 211 on busy street at night\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\", \"bus number 51\", \"bus on busy street\", \"bus at night\"],\n  \"genericity_hint\": \"The image is not specific about the time of day or the bus's route.\",\n  \"edit_instructions\": \"Remove the bus number and the time of day from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Crosstown bus with front lights and grill on street near building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus number 51",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus headlights",
+          "bus front lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the bus.",
+        "edit_instructions": [
+          "Provide more specific details about the bus, such as the bus number, front bumper, grill, mirror, door, window, windshield wipers, and license plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crosstown bus with front lights and grill on street near building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus number 51\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus headlights\", \"bus front lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the bus.\",\n  \"edit_instructions\": \"Provide more specific details about the bus, such as the bus number, front bumper, grill, mirror, door, window, windshield wipers, and license plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Crosstown bus number 51 with grill and mirrors on street near building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the bus.",
+        "edit_instructions": [
+          "Provide more specific details about the bus, such as its headlights, bumper, grill, mirror, door, window, windshield wipers, and license plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crosstown bus number 51 with grill and mirrors on street near building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the bus.\",\n  \"edit_instructions\": \"Provide more specific details about the bus, such as its headlights, bumper, grill, mirror, door, window, windshield wipers, and license plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Crosstown bus number 51 with grill, mirrors, and headlights on street near building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus number 211",
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 51",
+          "CROSSTOWN"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the bus number or the destination.",
+        "edit_instructions": [
+          "Specify the bus number and the destination in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crosstown bus number 51 with grill, mirrors, and headlights on street near building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus number 211\", \"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 51\", \"CROSSTOWN\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the bus number or the destination.\",\n  \"edit_instructions\": \"Specify the bus number and the destination in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bus number 51 with grill and headlights on street near building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus number 211",
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 51",
+          "CROSSTOWN",
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the bus number, the destination, or the specific features of the bus.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the bus number, the destination, and the specific features of the bus."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus number 51 with grill and headlights on street near building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus number 211\", \"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 51\", \"CROSSTOWN\", \"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the bus number, the destination, or the specific features of the bus.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the bus number, the destination, and the specific features of the bus.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bus number 51 with grill and mirrors near street light and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211",
+          "bus number 51"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus number 51 with grill and mirrors near street light and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\", \"bus number 51\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bus number 51 with grill and mirrors near street light and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211",
+          "bus number 51"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus number 51 with grill and mirrors near street light and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\", \"bus number 51\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bus number 51 with grill and mirrors near street light and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211",
+          "bus number 51"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus number 51 with grill and mirrors near street light and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\", \"bus number 51\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Number 51 bus with grill and mirrors near street light and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211",
+          "bus number 51"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Number 51 bus with grill and mirrors near street light and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\", \"bus number 51\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Number 51 bus with grill and doors near street light and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus headlights",
+          "bus front bumper",
+          "bus front grill",
+          "bus front mirror",
+          "bus front door",
+          "bus front window",
+          "bus front windshield wipers",
+          "bus front license plate"
+        ],
+        "hallucinated_objects": [
+          "bus number 211",
+          "bus number 51"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, number 51, CROSSTOWN, front windshield, wipers, license plate, building, sidewalk, street, street light, bus number 211, bus headlights, bus front bumper, bus front grill, bus front mirror, bus front door, bus front window, bus front windshield wipers, bus front license plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Number 51 bus with grill and doors near street light and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus headlights\", \"bus front bumper\", \"bus front grill\", \"bus front mirror\", \"bus front door\", \"bus front window\", \"bus front windshield wipers\", \"bus front license plate\"],\n  \"hallucinated_objects\": [\"bus number 211\", \"bus number 51\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 42070,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000042070.jpg",
+    "final_caption": "Number 51 bus with grill and doors near street light and building",
+    "total_time_sec": 44.15
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bus\",\n    \"number 51\",\n    \"CROSSTOWN\",\n    \"front windshield\",\n    \"wipers\",\n    \"license plate\",\n    \"building\",\n    \"sidewalk\",\n    \"street\",\n    \"street light\",\n    \"bus number 211\",\n    \"bus headlights\",\n    \"bus front bumper\",\n    \"bus front grill\",\n    \"bus front mirror\",\n    \"bus front door\",\n    \"bus front window\",\n    \"bus front windshield wipers\",\n    \"bus front license plate\"\n  ]\n}"
+}

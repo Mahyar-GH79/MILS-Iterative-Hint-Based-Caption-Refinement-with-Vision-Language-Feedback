@@ -1,0 +1,266 @@
+{
+  "image_id": 172547,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000172547.jpg",
+  "objects": [
+    "mountains",
+    "trees",
+    "grass",
+    "horses",
+    "pond",
+    "clouds",
+    "sky",
+    "path",
+    "rocks",
+    "pine trees",
+    "hills",
+    "valley",
+    "water",
+    "mountain range",
+    "landscape",
+    "nature",
+    "outdoors",
+    "scenery",
+    "greenery"
+  ],
+  "template": "We have an image with these objects: ['mountains', 'trees', 'grass', 'horses', 'pond', 'clouds', 'sky', 'path', 'rocks', 'pine trees', 'hills', 'valley', 'water', 'mountain range', 'landscape', 'nature', 'outdoors', 'scenery', 'greenery']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Horses by mountains under cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "path",
+          "rocks",
+          "pine trees",
+          "hills",
+          "water",
+          "mountain range",
+          "landscape",
+          "nature",
+          "outdoors",
+          "scenery",
+          "greenery"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "grass",
+          "horses",
+          "clouds",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horses by mountains under cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"path\", \"rocks\", \"pine trees\", \"hills\", \"water\", \"mountain range\", \"landscape\", \"nature\", \"outdoors\", \"scenery\", \"greenery\"],\n  \"hallucinated_objects\": [\"trees\", \"grass\", \"horses\", \"clouds\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Hills and rocks by a pond in mountain scenery",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "horses"
+        ],
+        "hallucinated_objects": [
+          "pond",
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of trees and horses, and remove the mention of a pond and rocks."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hills and rocks by a pond in mountain scenery\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"horses\"],\n  \"hallucinated_objects\": [\"pond\", \"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of trees and horses, and remove the mention of a pond and rocks.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Mountains with pine trees and horses in green valley landscape",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "water",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "path"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the landscape.",
+        "edit_instructions": [
+          "Add specific details about the landscape, such as a pond, water, and rocks."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountains with pine trees and horses in green valley landscape\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"water\", \"rocks\"],\n  \"hallucinated_objects\": [\"path\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the landscape.\",\n  \"edit_instructions\": \"Add specific details about the landscape, such as a pond, water, and rocks.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Mountains with pine trees horses and a pond in lush green valley",
+      "vlm_hint": {
+        "missing_objects": [
+          "path",
+          "rocks",
+          "pine trees",
+          "hills",
+          "water",
+          "mountain range",
+          "landscape",
+          "nature",
+          "outdoors",
+          "scenery",
+          "greenery"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a path, rocks, pine trees, hills, water, mountain range, landscape, nature, outdoors, scenery, and greenery."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountains with pine trees horses and a pond in lush green valley\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"path\", \"rocks\", \"pine trees\", \"hills\", \"water\", \"mountain range\", \"landscape\", \"nature\", \"outdoors\", \"scenery\", \"greenery\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a path, rocks, pine trees, hills, water, mountain range, landscape, nature, outdoors, scenery, and greenery.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Mountain range with pine trees and horses along rocky path in lush green valley",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of a pond and water, and remove the mention of rocks."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountain range with pine trees and horses along rocky path in lush green valley\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"water\"],\n  \"hallucinated_objects\": [\"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of a pond and water, and remove the mention of rocks.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Mountain range with pine trees horses by pond and water in lush green valley",
+      "vlm_hint": {
+        "missing_objects": [
+          "path",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "pond",
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the landscape.",
+        "edit_instructions": [
+          "Provide more specific details about the landscape, such as the presence of a path, rocks, and a pond."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountain range with pine trees horses by pond and water in lush green valley\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"path\", \"rocks\"],\n  \"hallucinated_objects\": [\"pond\", \"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the landscape.\",\n  \"edit_instructions\": \"Provide more specific details about the landscape, such as the presence of a path, rocks, and a pond.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Mountain range with pine trees and horses by rocky path in lush green valley",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of a pond and water, and remove the mention of rocks."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountain range with pine trees and horses by rocky path in lush green valley\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"water\"],\n  \"hallucinated_objects\": [\"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of a pond and water, and remove the mention of rocks.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Mountain range with pine trees and horses by path near pond and water in lush valley",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "pine trees",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "pond",
+          "path",
+          "horses",
+          "water"
+        ],
+        "genericity_hint": "The caption is too specific and lacks detail.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the general elements of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountain range with pine trees and horses by path near pond and water in lush valley\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"pine trees\", \"water\"],\n  \"hallucinated_objects\": [\"pond\", \"path\", \"horses\", \"water\"],\n  \"genericity_hint\": \"The caption is too specific and lacks detail.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the general elements of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Mountains with pine trees and rocks in lush green valley sky\u4e91\u5f69",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "water",
+          "hills",
+          "valley",
+          "landscape",
+          "nature",
+          "outdoors",
+          "scenery",
+          "greenery"
+        ],
+        "hallucinated_objects": [
+          "path",
+          "rocks",
+          "pine trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the pond, water, hills, valley, landscape, nature, outdoors, scenery, and greenery."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mountains with pine trees and rocks in lush green valley sky\u4e91\u5f69\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"water\", \"hills\", \"valley\", \"landscape\", \"nature\", \"outdoors\", \"scenery\", \"greenery\"],\n  \"hallucinated_objects\": [\"path\", \"rocks\", \"pine trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the pond, water, hills, valley, landscape, nature, outdoors, scenery, and greenery.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Hills and valleys in lush green landscape with ponds and water under clear sky clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "path",
+          "rocks",
+          "pine trees"
+        ],
+        "hallucinated_objects": [
+          "pond",
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the landscape.",
+        "edit_instructions": [
+          "Provide more specific details about the landscape, such as the presence of a path, rocks, and pine trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mountains, trees, grass, horses, pond, clouds, sky, path, rocks, pine trees, hills, valley, water, mountain range, landscape, nature, outdoors, scenery, greenery]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hills and valleys in lush green landscape with ponds and water under clear sky clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"path\", \"rocks\", \"pine trees\"],\n  \"hallucinated_objects\": [\"pond\", \"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the landscape.\",\n  \"edit_instructions\": \"Provide more specific details about the landscape, such as the presence of a path, rocks, and pine trees.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 172547,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000172547.jpg",
+    "final_caption": "Hills and valleys in lush green landscape with ponds and water under clear sky clouds",
+    "total_time_sec": 34.6
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"mountains\",\n    \"trees\",\n    \"grass\",\n    \"horses\",\n    \"pond\",\n    \"clouds\",\n    \"sky\",\n    \"path\",\n    \"rocks\",\n    \"pine trees\",\n    \"hills\",\n    \"valley\",\n    \"water\",\n    \"mountain range\",\n    \"landscape\",\n    \"nature\",\n    \"outdoors\",\n    \"scenery\",\n    \"greenery\"\n  ]\n}"
+}

@@ -1,0 +1,241 @@
+{
+  "image_id": 21903,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000021903.jpg",
+  "objects": [
+    "elephant",
+    "man",
+    "fence",
+    "trees",
+    "watch",
+    "belt",
+    "shorts",
+    "watch",
+    "shorts",
+    "watch",
+    "shorts",
+    "watch",
+    "shorts",
+    "watch",
+    "shorts",
+    "watch",
+    "shorts",
+    "watch",
+    "shorts",
+    "watch"
+  ],
+  "template": "We have an image with these objects: ['elephant', 'man', 'fence', 'trees', 'watch', 'belt', 'shorts', 'watch', 'shorts', 'watch', 'shorts', 'watch', 'shorts', 'watch', 'shorts', 'watch', 'shorts', 'watch', 'shorts', 'watch']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Elephant man and watches under trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the belt and watch, and remove the mention of trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant man and watches under trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"watch\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the belt and watch, and remove the mention of trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Elephant man in shorts with many watches and a belt",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "watch",
+          "belt",
+          "shorts",
+          "watch",
+          "shorts",
+          "watch",
+          "shorts",
+          "watch",
+          "shorts",
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of fence, the color of the trees, and the specific items the man is wearing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant man in shorts with many watches and a belt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\"],\n  \"hallucinated_objects\": [\"watch\", \"belt\", \"shorts\", \"watch\", \"shorts\", \"watch\", \"shorts\", \"watch\", \"shorts\", \"watch\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of fence, the color of the trees, and the specific items the man is wearing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Elephant and man by fence among tall trees wearing multiple watches",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man by fence among tall trees wearing multiple watches\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"watch\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Elephant and man by fence wearing many watches and belt",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "watch",
+          "belt"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "watch",
+          "belt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man by fence wearing many watches and belt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"watch\", \"belt\"],\n  \"hallucinated_objects\": [\"trees\", \"watch\", \"belt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Elephant and man by fence with multiple watches",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the belt and trees, and remove the watch as it is not visible in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man by fence with multiple watches\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\"],\n  \"hallucinated_objects\": [\"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the belt and trees, and remove the watch as it is not visible in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Elephant and man by fence with belt and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "belt",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man by fence with belt and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"belt\", \"trees\"],\n  \"hallucinated_objects\": [\"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Elephant and man near trees wearing multiple watches",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man near trees wearing multiple watches\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"watch\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Elephant and man near fence wearing many watches",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the belt and trees, and remove the watch as it is not visible in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man near fence wearing many watches\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\"],\n  \"hallucinated_objects\": [\"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the belt and trees, and remove the watch as it is not visible in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Elephant and man near fence with belt and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "belt",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man near fence with belt and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"belt\", \"trees\"],\n  \"hallucinated_objects\": [\"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Elephant and man watch trees by fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "belt",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, man, fence, trees, watch, belt, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch, shorts, watch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and man watch trees by fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"belt\", \"trees\"],\n  \"hallucinated_objects\": [\"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 21903,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000021903.jpg",
+    "final_caption": "Elephant and man watch trees by fence",
+    "total_time_sec": 28.84
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"elephant\",\n    \"man\",\n    \"fence\",\n    \"trees\",\n    \"watch\",\n    \"belt\",\n    \"shorts\",\n    \"watch\",\n    \"shorts\",\n    \"watch\",\n    \"shorts\",\n    \"watch\",\n    \"shorts\",\n    \"watch\",\n    \"shorts\",\n    \"watch\",\n    \"shorts\",\n    \"watch\",\n    \"shorts\",\n    \"watch\"\n  ]\n}"
+}

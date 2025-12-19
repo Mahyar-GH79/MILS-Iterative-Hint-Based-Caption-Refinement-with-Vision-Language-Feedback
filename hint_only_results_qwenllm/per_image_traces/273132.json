@@ -1,0 +1,258 @@
+{
+  "image_id": 273132,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000273132.jpg",
+  "objects": [
+    "bench",
+    "woman",
+    "hat",
+    "glasses",
+    "jacket",
+    "purse",
+    "building",
+    "fence",
+    "windows",
+    "chair",
+    "backpack",
+    "arm",
+    "leg",
+    "dress",
+    "necklace",
+    "hand",
+    "building",
+    "fence",
+    "windows",
+    "chair"
+  ],
+  "template": "We have an image with these objects: ['bench', 'woman', 'hat', 'glasses', 'jacket', 'purse', 'building', 'fence', 'windows', 'chair', 'backpack', 'arm', 'leg', 'dress', 'necklace', 'hand', 'building', 'fence', 'windows', 'chair']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman in dress and hat sits on bench near building and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the woman's attire and the objects around her.",
+        "edit_instructions": [
+          "Provide more specific details about the woman's attire and the objects around her, and remove the unnecessary mention of a chair."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in dress and hat sits on bench near building and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the woman's attire and the objects around her.\",\n  \"edit_instructions\": \"Provide more specific details about the woman's attire and the objects around her, and remove the unnecessary mention of a chair.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman in dress and necklace wears hat and glasses near building and fence with bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "arm",
+          "leg",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the style of the woman's dress, and the details of the building and fence."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in dress and necklace wears hat and glasses near building and fence with bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"arm\", \"leg\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the style of the woman's dress, and the details of the building and fence.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman in a floral dress and necklace sits on a wooden bench near a tall building and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "glasses",
+          "jacket",
+          "purse",
+          "backpack",
+          "arm",
+          "leg",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the woman's attire and the objects around her.",
+        "edit_instructions": [
+          "Provide more specific details about the woman's attire and the objects around her."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a floral dress and necklace sits on a wooden bench near a tall building and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"glasses\", \"jacket\", \"purse\", \"backpack\", \"arm\", \"leg\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the woman's attire and the objects around her.\",\n  \"edit_instructions\": \"Provide more specific details about the woman's attire and the objects around her.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Woman in a floral dress and necklace wears glasses and a jacket near a tall building and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "backpack",
+          "arm",
+          "leg",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of dress, the presence of a purse or backpack, and the specific details of the building and fence."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a floral dress and necklace wears glasses and a jacket near a tall building and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"backpack\", \"arm\", \"leg\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of dress, the presence of a purse or backpack, and the specific details of the building and fence.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman in a floral dress and necklace sits on a bench near a tall building and fence, carrying a backpack.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "glasses",
+          "jacket",
+          "purse",
+          "backpack",
+          "arm",
+          "leg",
+          "dress",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the woman's appearance and the objects she is interacting with.",
+        "edit_instructions": [
+          "Provide more specific details about the woman's appearance and the objects she is interacting with."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a floral dress and necklace sits on a bench near a tall building and fence, carrying a backpack.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"glasses\", \"jacket\", \"purse\", \"backpack\", \"arm\", \"leg\", \"dress\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the woman's appearance and the objects she is interacting with.\",\n  \"edit_instructions\": \"Provide more specific details about the woman's appearance and the objects she is interacting with.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman in a hat and glasses wears a jacket, clutching a purse, sits on a bench near tall buildings and fences.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the woman's appearance and the setting.",
+        "edit_instructions": [
+          "Provide more specific details about the woman's clothing and the setting, and remove the mention of a chair."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a hat and glasses wears a jacket, clutching a purse, sits on a bench near tall buildings and fences.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the woman's appearance and the setting.\",\n  \"edit_instructions\": \"Provide more specific details about the woman's clothing and the setting, and remove the mention of a chair.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Women in a hat and glasses wearing a jacket and necklace sits on a bench near tall buildings and fences.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "backpack",
+          "arm",
+          "leg",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, the color of the jacket, and the style of the necklace."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Women in a hat and glasses wearing a jacket and necklace sits on a bench near tall buildings and fences.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"backpack\", \"arm\", \"leg\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, the color of the jacket, and the style of the necklace.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Woman in a hat and glasses with a leather purse wears a blue jacket and gold necklace sitting on a bench near tall buildings and fences.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "arm",
+          "leg",
+          "dress",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the woman's attire and accessories.",
+        "edit_instructions": [
+          "Provide more specific details about the woman's attire and accessories, and remove the mention of a chair."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a hat and glasses with a leather purse wears a blue jacket and gold necklace sitting on a bench near tall buildings and fences.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"arm\", \"leg\", \"dress\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the woman's attire and accessories.\",\n  \"edit_instructions\": \"Provide more specific details about the woman's attire and accessories, and remove the mention of a chair.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Woman in a hat and glasses wears a blue jacket with a gold necklace and clutch near tall buildings and fences.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "backpack",
+          "arm",
+          "leg",
+          "necklace",
+          "clutch"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific objects and make the caption more generic."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a hat and glasses wears a blue jacket with a gold necklace and clutch near tall buildings and fences.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"backpack\", \"arm\", \"leg\", \"necklace\", \"clutch\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific objects and make the caption more generic.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Woman in a hat and glasses near tall buildings and fences wearing a jacket and necklace.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "backpack",
+          "arm",
+          "leg",
+          "dress",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, the color of the jacket, and the style of the necklace."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, woman, hat, glasses, jacket, purse, building, fence, windows, chair, backpack, arm, leg, dress, necklace, hand, building, fence, windows, chair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in a hat and glasses near tall buildings and fences wearing a jacket and necklace.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"backpack\", \"arm\", \"leg\", \"dress\", \"necklace\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, the color of the jacket, and the style of the necklace.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 273132,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000273132.jpg",
+    "final_caption": "Woman in a hat and glasses near tall buildings and fences wearing a jacket and necklace.",
+    "total_time_sec": 36.92
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bench\",\n    \"woman\",\n    \"hat\",\n    \"glasses\",\n    \"jacket\",\n    \"purse\",\n    \"building\",\n    \"fence\",\n    \"windows\",\n    \"chair\",\n    \"backpack\",\n    \"arm\",\n    \"leg\",\n    \"dress\",\n    \"necklace\",\n    \"hand\",\n    \"building\",\n    \"fence\",\n    \"windows\",\n    \"chair\"\n  ]\n}"
+}

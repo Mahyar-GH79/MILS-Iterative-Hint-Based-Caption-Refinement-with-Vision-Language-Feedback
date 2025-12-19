@@ -1,0 +1,294 @@
+{
+  "image_id": 323355,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000323355.jpg",
+  "objects": [
+    "pizza",
+    "box",
+    "hat",
+    "shirt",
+    "shorts",
+    "posters",
+    "table",
+    "floor",
+    "wall",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box",
+    "box"
+  ],
+  "template": "We have an image with these objects: ['pizza', 'box', 'hat', 'shirt', 'shorts', 'posters', 'table', 'floor', 'wall', 'box', 'box', 'box', 'box', 'box', 'box', 'box', 'box', 'box', 'box', 'box']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Pizza boxes cover the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "shirt",
+          "shorts",
+          "posters",
+          "table",
+          "floor",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "box"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic 'box' and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza boxes cover the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"shirt\", \"shorts\", \"posters\", \"table\", \"floor\", \"wall\"],\n  \"hallucinated_objects\": [\"box\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic 'box' and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Pizza boxes and shirts cover the table with posters nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "floor",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza boxes and shirts cover the table with posters nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\"],\n  \"hallucinated_objects\": [\"table\", \"floor\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Pizza boxes hats and shirts clutter the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "floor",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "box"
+        ],
+        "genericity_hint": "The image contains a person, a pizza, and some objects on the floor, but the captions are too generic and do not provide enough detail.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the person's clothing, and the objects on the floor."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza boxes hats and shirts clutter the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"floor\", \"wall\"],\n  \"hallucinated_objects\": [\"box\"],\n  \"genericity_hint\": \"The image contains a person, a pizza, and some objects on the floor, but the captions are too generic and do not provide enough detail.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the person's clothing, and the objects on the floor.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Pizza boxes hats and shirts clutter the floor by a table\u5899\u4e0a\u4e5f\u6302\u7740\u6d77\u62a5\u3002",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "floor",
+          "wall",
+          "posters"
+        ],
+        "hallucinated_objects": [
+          "box"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the table, floor, wall, and posters."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza boxes hats and shirts clutter the floor by a table\u5899\u4e0a\u4e5f\u6302\u7740\u6d77\u62a5\u3002\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"floor\", \"wall\", \"posters\"],\n  \"hallucinated_objects\": [\"box\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the table, floor, wall, and posters.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Pizza on table floor by hats shirts walls with posters.",
+      "vlm_hint": {
+        "missing_objects": [
+          "box"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of boxes or the exact location of the pizza.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the number of boxes and the exact location of the pizza."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on table floor by hats shirts walls with posters.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"box\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of boxes or the exact location of the pizza.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the number of boxes and the exact location of the pizza.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Multiple boxes on floor pizza near hats and shirts.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "floor",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "box"
+        ],
+        "genericity_hint": "The image contains multiple boxes, but the captions should focus on the main objects.",
+        "edit_instructions": [
+          "Remove the boxes and focus on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple boxes on floor pizza near hats and shirts.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"floor\", \"wall\"],\n  \"hallucinated_objects\": [\"box\"],\n  \"genericity_hint\": \"The image contains multiple boxes, but the captions should focus on the main objects.\",\n  \"edit_instructions\": \"Remove the boxes and focus on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Pizza on floor near hats and shirts by posters and table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "floor",
+          "wall",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box",
+          "box"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on floor near hats and shirts by posters and table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\"],\n  \"hallucinated_objects\": [\"table\", \"floor\", \"wall\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\", \"box\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Pizzas among boxes near hats and shirts.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "floor",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "floor",
+          "wall"
+        ],
+        "genericity_hint": "The image contains multiple boxes, but the captions do not specify their arrangement or relationship to each other.",
+        "edit_instructions": [
+          "Remove the table, floor, and wall from the captions and ensure that the captions only mention the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizzas among boxes near hats and shirts.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"floor\", \"wall\"],\n  \"hallucinated_objects\": [\"table\", \"floor\", \"wall\"],\n  \"genericity_hint\": \"The image contains multiple boxes, but the captions do not specify their arrangement or relationship to each other.\",\n  \"edit_instructions\": \"Remove the table, floor, and wall from the captions and ensure that the captions only mention the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Pizzas amid many boxes near hats and shirts.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "floor",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "many boxes"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact number of boxes.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the table, floor, and wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizzas amid many boxes near hats and shirts.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"floor\", \"wall\"],\n  \"hallucinated_objects\": [\"many boxes\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact number of boxes.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the table, floor, and wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Pizzas and boxes on a table near floor posters and a hat.",
+      "vlm_hint": {
+        "missing_objects": [
+          "boy"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the person in the image.",
+        "edit_instructions": [
+          "Add the person to the caption and remove the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, box, hat, shirt, shorts, posters, table, floor, wall, box, box, box, box, box, box, box, box, box, box, box]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizzas and boxes on a table near floor posters and a hat.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boy\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the person in the image.\",\n  \"edit_instructions\": \"Add the person to the caption and remove the table.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 323355,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000323355.jpg",
+    "final_caption": "Pizzas and boxes on a table near floor posters and a hat.",
+    "total_time_sec": 34.31
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"pizza\",\n    \"box\",\n    \"hat\",\n    \"shirt\",\n    \"shorts\",\n    \"posters\",\n    \"table\",\n    \"floor\",\n    \"wall\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\",\n    \"box\"\n  ]\n}"
+}

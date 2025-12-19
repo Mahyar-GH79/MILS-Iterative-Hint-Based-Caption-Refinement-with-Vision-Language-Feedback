@@ -1,0 +1,210 @@
+{
+  "image_id": 138115,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000138115.jpg",
+  "objects": [
+    "orange",
+    "man",
+    "jacket",
+    "button",
+    "fingernail"
+  ],
+  "template": "We have an image with these objects: ['orange', 'man', 'jacket', 'button', 'fingernail']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in orange jacket has button near fingernail",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the button and focus on the man and the orange."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in orange jacket has button near fingernail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the button and focus on the man and the orange.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in orange jacket",
+      "vlm_hint": {
+        "missing_objects": [
+          "fingernail",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention the key objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in orange jacket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fingernail\", \"button\"],\n  \"hallucinated_objects\": [\"orange\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention the key objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in jacket with button and fingernail",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "button",
+          "fingernail"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and focus on the main subject."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket with button and fingernail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange\"],\n  \"hallucinated_objects\": [\"button\", \"fingernail\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and focus on the main subject.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in orange jacket",
+      "vlm_hint": {
+        "missing_objects": [
+          "fingernail",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention the key objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in orange jacket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fingernail\", \"button\"],\n  \"hallucinated_objects\": [\"orange\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention the key objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in jacket with button and fingernail",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "button",
+          "fingernail"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and focus on the main subject."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket with button and fingernail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange\"],\n  \"hallucinated_objects\": [\"button\", \"fingernail\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and focus on the main subject.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in orange jacket",
+      "vlm_hint": {
+        "missing_objects": [
+          "fingernail",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention the key objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in orange jacket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fingernail\", \"button\"],\n  \"hallucinated_objects\": [\"orange\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention the key objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in jacket with button and fingernail",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "button",
+          "fingernail"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and focus on the main subject."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket with button and fingernail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange\"],\n  \"hallucinated_objects\": [\"button\", \"fingernail\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and focus on the main subject.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in orange jacket",
+      "vlm_hint": {
+        "missing_objects": [
+          "fingernail",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention the key objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in orange jacket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fingernail\", \"button\"],\n  \"hallucinated_objects\": [\"orange\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention the key objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in jacket with button and fingernail",
+      "vlm_hint": {
+        "missing_objects": [
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "button",
+          "fingernail"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and focus on the main subject."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket with button and fingernail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"orange\"],\n  \"hallucinated_objects\": [\"button\", \"fingernail\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and focus on the main subject.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in orange jacket",
+      "vlm_hint": {
+        "missing_objects": [
+          "fingernail",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention the key objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [orange, man, jacket, button, fingernail]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in orange jacket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fingernail\", \"button\"],\n  \"hallucinated_objects\": [\"orange\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention the key objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 138115,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000138115.jpg",
+    "final_caption": "Man in orange jacket",
+    "total_time_sec": 25.12
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"orange\",\n    \"man\",\n    \"jacket\",\n    \"button\",\n    \"fingernail\"\n  ]\n}"
+}

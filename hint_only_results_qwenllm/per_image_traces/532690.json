@@ -1,0 +1,270 @@
+{
+  "image_id": 532690,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000532690.jpg",
+  "objects": [
+    "woman",
+    "glasses",
+    "black shirt",
+    "blue jeans",
+    "white controller",
+    "couch",
+    "watch",
+    "man",
+    "shirt",
+    "wall",
+    "door",
+    "window",
+    "light switch",
+    "furniture",
+    "people",
+    "room",
+    "interior",
+    "casual",
+    "casual attire"
+  ],
+  "template": "We have an image with these objects: ['woman', 'glasses', 'black shirt', 'blue jeans', 'white controller', 'couch', 'watch', 'man', 'shirt', 'wall', 'door', 'window', 'light switch', 'furniture', 'people', 'room', 'interior', 'casual', 'casual attire']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman and man in casual attire on couch in room",
+      "vlm_hint": {
+        "missing_objects": [
+          "white controller",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "shirt",
+          "wall",
+          "door",
+          "window",
+          "light switch",
+          "furniture",
+          "people",
+          "room",
+          "casual",
+          "casual attire"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman and man in casual attire on couch in room\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white controller\", \"watch\"],\n  \"hallucinated_objects\": [\"man\", \"shirt\", \"wall\", \"door\", \"window\", \"light switch\", \"furniture\", \"people\", \"room\", \"casual\", \"casual attire\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman in black shirt holds white controller on couch in interior",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "casual attire"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "light switch"
+        ],
+        "genericity_hint": "The image is not very specific about the setting or the people's attire.",
+        "edit_instructions": [
+          "Remove the man and casual attire from the caption. Mention the window and light switch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in black shirt holds white controller on couch in interior\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"casual attire\"],\n  \"hallucinated_objects\": [\"window\", \"light switch\"],\n  \"genericity_hint\": \"The image is not very specific about the setting or the people's attire.\",\n  \"edit_instructions\": \"Remove the man and casual attire from the caption. Mention the window and light switch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman in black shirt holds white controller on couch near window and light switch in interior.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "casual attire"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "light switch"
+        ],
+        "genericity_hint": "The image is not very specific about the location or the people's attire.",
+        "edit_instructions": [
+          "Remove the window and light switch, and mention the man and casual attire."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in black shirt holds white controller on couch near window and light switch in interior.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"casual attire\"],\n  \"hallucinated_objects\": [\"window\", \"light switch\"],\n  \"genericity_hint\": \"The image is not very specific about the location or the people's attire.\",\n  \"edit_instructions\": \"Remove the window and light switch, and mention the man and casual attire.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man and woman in casual attire hold white controller on couch in interior.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "window",
+          "door"
+        ],
+        "genericity_hint": "The image is not generic.",
+        "edit_instructions": [
+          "Remove the man and add a light switch, window, and door."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in casual attire hold white controller on couch in interior.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"light switch\", \"window\", \"door\"],\n  \"genericity_hint\": \"The image is not generic.\",\n  \"edit_instructions\": \"Remove the man and add a light switch, window, and door.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman in black shirt and glasses holds white controller on couch near window and door in interior.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "shirt",
+          "window",
+          "door",
+          "light switch",
+          "furniture",
+          "people",
+          "room",
+          "interior"
+        ],
+        "hallucinated_objects": [
+          "casual attire"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the man, shirt, window, door, light switch, furniture, people, room, and interior."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in black shirt and glasses holds white controller on couch near window and door in interior.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"shirt\", \"window\", \"door\", \"light switch\", \"furniture\", \"people\", \"room\", \"interior\"],\n  \"hallucinated_objects\": [\"casual attire\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the man, shirt, window, door, light switch, furniture, people, room, and interior.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman and man in casual attire hold game controllers on couch near window and door in room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the room."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman and man in casual attire hold game controllers on couch near window and door in room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"window\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the room.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Woman in black shirt and man in casual attire hold white controllers on couch near window and door in room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "casual attire",
+          "white controllers",
+          "couch",
+          "window",
+          "door",
+          "light switch",
+          "furniture",
+          "people",
+          "room",
+          "casual"
+        ],
+        "hallucinated_objects": [
+          "woman",
+          "glasses",
+          "black shirt",
+          "blue jeans",
+          "watch"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the woman's glasses, black shirt, and blue jeans, and the man's casual attire, white controllers, couch, window, door, light switch, furniture, people, and room."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in black shirt and man in casual attire hold white controllers on couch near window and door in room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"casual attire\", \"white controllers\", \"couch\", \"window\", \"door\", \"light switch\", \"furniture\", \"people\", \"room\", \"casual\"],\n  \"hallucinated_objects\": [\"woman\", \"glasses\", \"black shirt\", \"blue jeans\", \"watch\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the woman's glasses, black shirt, and blue jeans, and the man's casual attire, white controllers, couch, window, door, light switch, furniture, people, and room.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Woman in glasses and black shirt holds white controller on couch with man in casual attire near window and door in room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "light switch"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "casual attire",
+          "window",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the woman's watch and the light switch on the wall."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in glasses and black shirt holds white controller on couch with man in casual attire near window and door in room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"light switch\"],\n  \"hallucinated_objects\": [\"man\", \"casual attire\", \"window\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the woman's watch and the light switch on the wall.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Woman in glasses and black shirt holds white controller on couch wearing a watch near light switch in room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "shirt",
+          "light switch",
+          "wall",
+          "door",
+          "window",
+          "furniture",
+          "people",
+          "room",
+          "casual",
+          "casual attire"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in glasses and black shirt holds white controller on couch wearing a watch near light switch in room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"shirt\", \"light switch\", \"wall\", \"door\", \"window\", \"furniture\", \"people\", \"room\", \"casual\", \"casual attire\"],\n  \"hallucinated_objects\": [\"couch\", \"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Woman and man in casual attire hold game controllers on furniture near light switch in room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "light switch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the room."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, glasses, black shirt, blue jeans, white controller, couch, watch, man, shirt, wall, door, window, light switch, furniture, people, room, interior, casual, casual attire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman and man in casual attire hold game controllers on furniture near light switch in room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"light switch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the room.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 532690,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000532690.jpg",
+    "final_caption": "Woman and man in casual attire hold game controllers on furniture near light switch in room.",
+    "total_time_sec": 35.28
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"woman\",\n    \"glasses\",\n    \"black shirt\",\n    \"blue jeans\",\n    \"white controller\",\n    \"couch\",\n    \"watch\",\n    \"man\",\n    \"shirt\",\n    \"wall\",\n    \"door\",\n    \"window\",\n    \"light switch\",\n    \"furniture\",\n    \"people\",\n    \"room\",\n    \"interior\",\n    \"casual\",\n    \"casual attire\"\n  ]\n}"
+}

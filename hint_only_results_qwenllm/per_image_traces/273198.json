@@ -1,0 +1,268 @@
+{
+  "image_id": 273198,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000273198.jpg",
+  "objects": [
+    "fire hydrant",
+    "water",
+    "sidewalk",
+    "car",
+    "gloves",
+    "manhole cover",
+    "trash can",
+    "tree",
+    "parking meter",
+    "street",
+    "pavement",
+    "glove",
+    "car",
+    "trash can",
+    "tree",
+    "parking meter",
+    "street",
+    "pavement",
+    "glove"
+  ],
+  "template": "We have an image with these objects: ['fire hydrant', 'water', 'sidewalk', 'car', 'gloves', 'manhole cover', 'trash can', 'tree', 'parking meter', 'street', 'pavement', 'glove', 'car', 'trash can', 'tree', 'parking meter', 'street', 'pavement', 'glove']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sidewalk trees and parking meters near street",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant",
+          "water",
+          "gloves",
+          "manhole cover",
+          "trash can",
+          "car",
+          "pavement"
+        ],
+        "hallucinated_objects": [
+          "sidewalk",
+          "trees",
+          "parking meters"
+        ],
+        "genericity_hint": "The image contains a fire hydrant, water, gloves, manhole cover, trash can, car, and pavement.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects mentioned in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sidewalk trees and parking meters near street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fire hydrant\", \"water\", \"gloves\", \"manhole cover\", \"trash can\", \"car\", \"pavement\"],\n  \"hallucinated_objects\": [\"sidewalk\", \"trees\", \"parking meters\"],\n  \"genericity_hint\": \"The image contains a fire hydrant, water, gloves, manhole cover, trash can, car, and pavement.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects mentioned in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Fire hydrant water gloves pavement manhole cover trash can car",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "trash can",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "water",
+          "glove",
+          "trash can",
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant water gloves pavement manhole cover trash can car\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"trash can\", \"car\"],\n  \"hallucinated_objects\": [\"water\", \"glove\", \"trash can\", \"car\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Manhole cover fire hydrant tree parking meter",
+      "vlm_hint": {
+        "missing_objects": [
+          "water",
+          "sidewalk",
+          "car",
+          "trash can",
+          "glove",
+          "glove"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a fire hydrant, but the caption does not mention the water coming out of it.",
+        "edit_instructions": [
+          "Remove the water and the sidewalk from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Manhole cover fire hydrant tree parking meter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\", \"sidewalk\", \"car\", \"trash can\", \"glove\", \"glove\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a fire hydrant, but the caption does not mention the water coming out of it.\",\n  \"edit_instructions\": \"Remove the water and the sidewalk from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Fire hydrant tree parking meter car glove trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "water",
+          "sidewalk",
+          "pavement"
+        ],
+        "hallucinated_objects": [
+          "glove"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Include specific details about the objects in the image, such as the color and type of the fire hydrant, the color and type of the water, and the type of sidewalk and pavement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant tree parking meter car glove trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\", \"sidewalk\", \"pavement\"],\n  \"hallucinated_objects\": [\"glove\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Include specific details about the objects in the image, such as the color and type of the fire hydrant, the color and type of the water, and the type of sidewalk and pavement.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Red fire hydrant next to green tree on concrete sidewalk and paved street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "water",
+          "gloves",
+          "trash can",
+          "parking meter"
+        ],
+        "hallucinated_objects": [
+          "fire hydrant",
+          "green tree"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the fire hydrant or the tree.",
+        "edit_instructions": [
+          "Add the missing objects and correct the genericity of the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red fire hydrant next to green tree on concrete sidewalk and paved street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\", \"gloves\", \"trash can\", \"parking meter\"],\n  \"hallucinated_objects\": [\"fire hydrant\", \"green tree\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the fire hydrant or the tree.\",\n  \"edit_instructions\": \"Add the missing objects and correct the genericity of the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Red fire hydrant with white gloves beside trash can on sidewalk and street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown water",
+          "manhole cover",
+          "glove"
+        ],
+        "hallucinated_objects": [
+          "red fire hydrant",
+          "white gloves",
+          "trash can",
+          "sidewalk",
+          "street",
+          "pavement"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the fire hydrant or the gloves.",
+        "edit_instructions": [
+          "Specify the color of the fire hydrant and the gloves in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red fire hydrant with white gloves beside trash can on sidewalk and street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown water\", \"manhole cover\", \"glove\"],\n  \"hallucinated_objects\": [\"red fire hydrant\", \"white gloves\", \"trash can\", \"sidewalk\", \"street\", \"pavement\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the fire hydrant or the gloves.\",\n  \"edit_instructions\": \"Specify the color of the fire hydrant and the gloves in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown fire hydrant next to glove and manhole cover on street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "manhole cover"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "trash can",
+          "tree",
+          "parking meter",
+          "street",
+          "pavement"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the fire hydrant.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the color of the fire hydrant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown fire hydrant next to glove and manhole cover on street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"manhole cover\"],\n  \"hallucinated_objects\": [\"car\", \"trash can\", \"tree\", \"parking meter\", \"street\", \"pavement\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the fire hydrant.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the color of the fire hydrant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Brown fire hydrant near glove and manhole cover on sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "manhole cover"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "trash can",
+          "tree",
+          "parking meter",
+          "street",
+          "pavement"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the fire hydrant.",
+        "edit_instructions": [
+          "Specify the color of the fire hydrant and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown fire hydrant near glove and manhole cover on sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"manhole cover\"],\n  \"hallucinated_objects\": [\"car\", \"trash can\", \"tree\", \"parking meter\", \"street\", \"pavement\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the fire hydrant.\",\n  \"edit_instructions\": \"Specify the color of the fire hydrant and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Brown fire hydrant next to glove and manhole cover on sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "manhole cover"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "trash can",
+          "tree",
+          "parking meter",
+          "street",
+          "pavement"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the fire hydrant.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the color of the fire hydrant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown fire hydrant next to glove and manhole cover on sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"manhole cover\"],\n  \"hallucinated_objects\": [\"car\", \"trash can\", \"tree\", \"parking meter\", \"street\", \"pavement\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the fire hydrant.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the color of the fire hydrant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Brown fire hydrant with glove and manhole cover on sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glove",
+          "manhole cover"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "trash can",
+          "tree",
+          "parking meter",
+          "street",
+          "pavement"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the fire hydrant.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the color of the fire hydrant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, water, sidewalk, car, gloves, manhole cover, trash can, tree, parking meter, street, pavement, glove, car, trash can, tree, parking meter, street, pavement, glove]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown fire hydrant with glove and manhole cover on sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glove\", \"manhole cover\"],\n  \"hallucinated_objects\": [\"car\", \"trash can\", \"tree\", \"parking meter\", \"street\", \"pavement\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the fire hydrant.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the color of the fire hydrant.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 273198,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000273198.jpg",
+    "final_caption": "Brown fire hydrant with glove and manhole cover on sidewalk.",
+    "total_time_sec": 34.38
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"fire hydrant\",\n    \"water\",\n    \"sidewalk\",\n    \"car\",\n    \"gloves\",\n    \"manhole cover\",\n    \"trash can\",\n    \"tree\",\n    \"parking meter\",\n    \"street\",\n    \"pavement\",\n    \"glove\",\n    \"car\",\n    \"trash can\",\n    \"tree\",\n    \"parking meter\",\n    \"street\",\n    \"pavement\",\n    \"glove\"\n  ]\n}"
+}

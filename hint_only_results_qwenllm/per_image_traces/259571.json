@@ -1,0 +1,297 @@
+{
+  "image_id": 259571,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000259571.jpg",
+  "objects": [
+    "truck",
+    "bus",
+    "people",
+    "trees",
+    "street",
+    "sidewalk",
+    "pole",
+    "lights",
+    "windows",
+    "doors",
+    "hats",
+    "shirts",
+    "trousers",
+    "shoes",
+    "tires",
+    "lights",
+    "tail lights",
+    "grille",
+    "steering wheel",
+    "dashboard"
+  ],
+  "template": "We have an image with these objects: ['truck', 'bus', 'people', 'trees', 'street', 'sidewalk', 'pole', 'lights', 'windows', 'doors', 'hats', 'shirts', 'trousers', 'shoes', 'tires', 'lights', 'tail lights', 'grille', 'steering wheel', 'dashboard']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Truck and bus on street past trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "doors",
+          "windows",
+          "grille",
+          "dashboard"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "trees",
+          "street",
+          "sidewalk",
+          "pole",
+          "lights",
+          "windows",
+          "doors",
+          "hats",
+          "shirts",
+          "trousers",
+          "shoes",
+          "tires",
+          "tail lights"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects accurately.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck and bus on street past trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"doors\", \"windows\", \"grille\", \"dashboard\"],\n  \"hallucinated_objects\": [\"people\", \"trees\", \"street\", \"sidewalk\", \"pole\", \"lights\", \"windows\", \"doors\", \"hats\", \"shirts\", \"trousers\", \"shoes\", \"tires\", \"tail lights\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects accurately.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Truck and bus on road past trees lights visible",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "windows",
+          "doors"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "sidewalk",
+          "pole",
+          "grille",
+          "dashboard"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the number of windows and doors on the bus and truck, and the presence of lights on the truck."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck and bus on road past trees lights visible\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"windows\", \"doors\"],\n  \"hallucinated_objects\": [\"street\", \"sidewalk\", \"pole\", \"grille\", \"dashboard\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the number of windows and doors on the bus and truck, and the presence of lights on the truck.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Truck and bus with lights, two windows, and doors among trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "windows",
+          "doors"
+        ],
+        "hallucinated_objects": [
+          "pole",
+          "street",
+          "sidewalk",
+          "lights",
+          "grille",
+          "dashboard"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck or bus.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of truck and bus, and their features."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck and bus with lights, two windows, and doors among trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"windows\", \"doors\"],\n  \"hallucinated_objects\": [\"pole\", \"street\", \"sidewalk\", \"lights\", \"grille\", \"dashboard\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck or bus.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of truck and bus, and their features.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Red truck and yellow bus with bright headlights among trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "doors",
+          "windows",
+          "grille",
+          "dashboard"
+        ],
+        "hallucinated_objects": [
+          "bright headlights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the number of doors, windows, and the presence of a grille and dashboard."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red truck and yellow bus with bright headlights among trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"doors\", \"windows\", \"grille\", \"dashboard\"],\n  \"hallucinated_objects\": [\"bright headlights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the number of doors, windows, and the presence of a grille and dashboard.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Red truck and yellow bus with multiple doors, windows, grille, and dashboard among trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "doors",
+          "windows",
+          "grille",
+          "dashboard"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "trees",
+          "street",
+          "sidewalk",
+          "pole",
+          "lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the number of doors, windows, and the presence of a grille and dashboard."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red truck and yellow bus with multiple doors, windows, grille, and dashboard among trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"doors\", \"windows\", \"grille\", \"dashboard\"],\n  \"hallucinated_objects\": [\"people\", \"trees\", \"street\", \"sidewalk\", \"pole\", \"lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the number of doors, windows, and the presence of a grille and dashboard.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Red truck and yellow bus with four doors, numerous windows, grille, and dashboard.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "trees",
+          "street",
+          "sidewalk",
+          "pole",
+          "lights",
+          "windows",
+          "doors",
+          "hats",
+          "shirts",
+          "tires",
+          "tail lights",
+          "grille",
+          "dashboard"
+        ],
+        "hallucinated_objects": [
+          "truck",
+          "bus"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red truck and yellow bus with four doors, numerous windows, grille, and dashboard.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"trees\", \"street\", \"sidewalk\", \"pole\", \"lights\", \"windows\", \"doors\", \"hats\", \"shirts\", \"tires\", \"tail lights\", \"grille\", \"dashboard\"],\n  \"hallucinated_objects\": [\"truck\", \"bus\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People and trees on street near pole with bus and truck.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "windows",
+          "doors",
+          "grille",
+          "dashboard"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "trees",
+          "street",
+          "pole"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People and trees on street near pole with bus and truck.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"windows\", \"doors\", \"grille\", \"dashboard\"],\n  \"hallucinated_objects\": [\"people\", \"trees\", \"street\", \"pole\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bus and truck on street with tail lights and grille.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "doors",
+          "windows",
+          "grille",
+          "dashboard"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "trees",
+          "street",
+          "sidewalk",
+          "pole",
+          "lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and actions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and truck on street with tail lights and grille.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"doors\", \"windows\", \"grille\", \"dashboard\"],\n  \"hallucinated_objects\": [\"people\", \"trees\", \"street\", \"sidewalk\", \"pole\", \"lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and actions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Truck and bus on street with tail lights and grille, windows and doors visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "grille",
+          "windows",
+          "doors"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "grille",
+          "windows",
+          "doors"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck and bus on street with tail lights and grille, windows and doors visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"grille\", \"windows\", \"doors\"],\n  \"hallucinated_objects\": [\"lights\", \"grille\", \"windows\", \"doors\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Truck and bus on street with bright lights and tail lights visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "tail lights"
+        ],
+        "hallucinated_objects": [
+          "dashboard",
+          "steering wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of truck and bus, and the number of people and their clothing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, bus, people, trees, street, sidewalk, pole, lights, windows, doors, hats, shirts, trousers, shoes, tires, lights, tail lights, grille, steering wheel, dashboard]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck and bus on street with bright lights and tail lights visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"tail lights\"],\n  \"hallucinated_objects\": [\"dashboard\", \"steering wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of truck and bus, and the number of people and their clothing.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 259571,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000259571.jpg",
+    "final_caption": "Truck and bus on street with bright lights and tail lights visible.",
+    "total_time_sec": 35.08
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"truck\",\n    \"bus\",\n    \"people\",\n    \"trees\",\n    \"street\",\n    \"sidewalk\",\n    \"pole\",\n    \"lights\",\n    \"windows\",\n    \"doors\",\n    \"hats\",\n    \"shirts\",\n    \"trousers\",\n    \"shoes\",\n    \"tires\",\n    \"lights\",\n    \"tail lights\",\n    \"grille\",\n    \"steering wheel\",\n    \"dashboard\"\n  ]\n}"
+}

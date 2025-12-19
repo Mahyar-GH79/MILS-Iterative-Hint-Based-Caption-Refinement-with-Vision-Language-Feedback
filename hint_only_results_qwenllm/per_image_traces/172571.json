@@ -1,0 +1,299 @@
+{
+  "image_id": 172571,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000172571.jpg",
+  "objects": [
+    "deep dish pizza",
+    "plate",
+    "knife",
+    "glass of water",
+    "wine glass",
+    "table",
+    "person",
+    "purple sweater",
+    "plate of food",
+    "spatula",
+    "slice of pizza",
+    "tablecloth",
+    "table setting",
+    "restaurant",
+    "food",
+    "drinks",
+    "eating",
+    "dinner",
+    "italian food"
+  ],
+  "template": "We have an image with these objects: ['deep dish pizza', 'plate', 'knife', 'glass of water', 'wine glass', 'table', 'person', 'purple sweater', 'plate of food', 'spatula', 'slice of pizza', 'tablecloth', 'table setting', 'restaurant', 'food', 'drinks', 'eating', 'dinner', 'italian food']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Deep dish pizza and glasses on table for dining.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "plate of food",
+          "slice of pizza",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of pizza or the setting.",
+        "edit_instructions": [
+          "Specify the type of pizza and the setting."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and glasses on table for dining.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"plate of food\", \"slice of pizza\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of pizza or the setting.\",\n  \"edit_instructions\": \"Specify the type of pizza and the setting.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Deep dish pizza and wine glass on a set table in a restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "slice of pizza",
+          "plate of food",
+          "food",
+          "drinks",
+          "eating",
+          "dinner",
+          "italian food"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the presence of a knife, tablecloth, and table setting, and the fact that it is in a restaurant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on a set table in a restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"slice of pizza\", \"plate of food\", \"food\", \"drinks\", \"eating\", \"dinner\", \"italian food\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the presence of a knife, tablecloth, and table setting, and the fact that it is in a restaurant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Deep dish pizza and wine glass on a table setting with a tablecloth in a restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "table setting",
+          "restaurant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the presence of a knife and wine glass, and the setting of the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on a table setting with a tablecloth in a restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"table setting\", \"restaurant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the presence of a knife and wine glass, and the setting of the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Deep dish pizza and wine glass on a cloth-covered table with a knife.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "plate",
+          "plate of food",
+          "spatula",
+          "slice of pizza",
+          "food",
+          "drinks",
+          "eating",
+          "dinner",
+          "italian food"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of pizza, the presence of a knife and wine glass, and the setting of the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on a cloth-covered table with a knife.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"plate\", \"plate of food\", \"spatula\", \"slice of pizza\", \"food\", \"drinks\", \"eating\", \"dinner\", \"italian food\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of pizza, the presence of a knife and wine glass, and the setting of the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Deep dish pizza and wine glass on a cloth-covered table with a knife and setting.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "plate",
+          "plate of food",
+          "spatula",
+          "slice of pizza",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the knife, wine glass, tablecloth, table setting, and restaurant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on a cloth-covered table with a knife and setting.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"plate\", \"plate of food\", \"spatula\", \"slice of pizza\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the knife, wine glass, tablecloth, table setting, and restaurant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Deep dish pizza and wine glass on a tablecloth with table setting in a restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "purple sweater",
+          "plate of food",
+          "spatula",
+          "slice of pizza"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the knife, wine glass, tablecloth, table setting, and the restaurant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on a tablecloth with table setting in a restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"person\", \"purple sweater\", \"plate of food\", \"spatula\", \"slice of pizza\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the knife, wine glass, tablecloth, table setting, and the restaurant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Deep dish pizza and wine glass on tablecloth with table setting in a restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "purple sweater",
+          "plate of food",
+          "spatula",
+          "slice of pizza",
+          "table"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on tablecloth with table setting in a restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"person\", \"purple sweater\", \"plate of food\", \"spatula\", \"slice of pizza\", \"table\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Deep dish pizza and wine glass on tablecloth with table setting in restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "plate",
+          "plate of food",
+          "spatula",
+          "slice of pizza",
+          "purple sweater",
+          "food",
+          "drinks",
+          "eating",
+          "dinner",
+          "italian food"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the presence of a tablecloth and table setting, and the type of restaurant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on tablecloth with table setting in restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"plate\", \"plate of food\", \"spatula\", \"slice of pizza\", \"purple sweater\", \"food\", \"drinks\", \"eating\", \"dinner\", \"italian food\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the presence of a tablecloth and table setting, and the type of restaurant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Deep dish pizza and wine glass on checked tablecloth at formal restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "wine glass",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "plate of food",
+          "food",
+          "drinks",
+          "eating",
+          "dinner",
+          "italian food"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not accurately describe the specific objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on checked tablecloth at formal restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"wine glass\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"plate of food\", \"food\", \"drinks\", \"eating\", \"dinner\", \"italian food\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not accurately describe the specific objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Deep dish pizza and wine glass on tablecloth at restaurant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "spatula",
+          "tablecloth",
+          "table setting",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "wine glass",
+          "plate of food",
+          "slice of pizza",
+          "purple sweater"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the presence of a spatula, and the setting of the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [deep dish pizza, plate, knife, glass of water, wine glass, table, person, purple sweater, plate of food, spatula, slice of pizza, tablecloth, table setting, restaurant, food, drinks, eating, dinner, italian food]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Deep dish pizza and wine glass on tablecloth at restaurant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"spatula\", \"tablecloth\", \"table setting\", \"restaurant\"],\n  \"hallucinated_objects\": [\"wine glass\", \"plate of food\", \"slice of pizza\", \"purple sweater\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the presence of a spatula, and the setting of the table.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 172571,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000172571.jpg",
+    "final_caption": "Deep dish pizza and wine glass on tablecloth at restaurant.",
+    "total_time_sec": 39.93
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"deep dish pizza\",\n    \"plate\",\n    \"knife\",\n    \"glass of water\",\n    \"wine glass\",\n    \"table\",\n    \"person\",\n    \"purple sweater\",\n    \"plate of food\",\n    \"spatula\",\n    \"slice of pizza\",\n    \"tablecloth\",\n    \"table setting\",\n    \"restaurant\",\n    \"food\",\n    \"drinks\",\n    \"eating\",\n    \"dinner\",\n    \"italian food\"\n  ]\n}"
+}

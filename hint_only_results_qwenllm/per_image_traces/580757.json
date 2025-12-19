@@ -1,0 +1,196 @@
+{
+  "image_id": 580757,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000580757.jpg",
+  "objects": [
+    "fire hydrant",
+    "chains",
+    "sidewalk",
+    "wall",
+    "manhole cover"
+  ],
+  "template": "We have an image with these objects: ['fire hydrant', 'chains', 'sidewalk', 'wall', 'manhole cover']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Chains next to fire hydrant on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "manhole cover"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific. It should mention the manhole cover.",
+        "edit_instructions": [
+          "Add the manhole cover to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chains next to fire hydrant on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"manhole cover\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific. It should mention the manhole cover.\",\n  \"edit_instructions\": \"Add the manhole cover to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Chains, fire hydrant near manhole cover on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "manhole cover"
+        ],
+        "genericity_hint": "The image is specific to a fire hydrant, chains, sidewalk, and wall, but the manhole cover is not present.",
+        "edit_instructions": [
+          "Remove the manhole cover from the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chains, fire hydrant near manhole cover on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wall\"],\n  \"hallucinated_objects\": [\"manhole cover\"],\n  \"genericity_hint\": \"The image is specific to a fire hydrant, chains, sidewalk, and wall, but the manhole cover is not present.\",\n  \"edit_instructions\": \"Remove the manhole cover from the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Fire hydrant, chains on sidewalk by wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "manhole cover"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and misses the manhole cover.",
+        "edit_instructions": [
+          "Add the manhole cover to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant, chains on sidewalk by wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"manhole cover\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and misses the manhole cover.\",\n  \"edit_instructions\": \"Add the manhole cover to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Fire hydrant chains near sidewalk manhole cover",
+      "vlm_hint": {
+        "missing_objects": [
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "manhole cover"
+        ],
+        "genericity_hint": "The image is specific to a fire hydrant with chains and a sidewalk, but the caption is too generic.",
+        "edit_instructions": [
+          "The caption should be more specific to the objects in the image, such as 'Fire hydrant with chains on a sidewalk near a wall and manhole cover'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant chains near sidewalk manhole cover\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wall\"],\n  \"hallucinated_objects\": [\"manhole cover\"],\n  \"genericity_hint\": \"The image is specific to a fire hydrant with chains and a sidewalk, but the caption is too generic.\",\n  \"edit_instructions\": \"The caption should be more specific to the objects in the image, such as 'Fire hydrant with chains on a sidewalk near a wall and manhole cover'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Fire hydrant with chains on sidewalk near wall and manhole cover",
+      "vlm_hint": {
+        "missing_objects": [
+          "chains"
+        ],
+        "hallucinated_objects": [
+          "manhole cover"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant with chains on sidewalk near wall and manhole cover\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chains\"],\n  \"hallucinated_objects\": [\"manhole cover\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Fire hydrant chained to wall on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "chains",
+          "manhole cover"
+        ],
+        "hallucinated_objects": [
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the chains and the manhole cover."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant chained to wall on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chains\", \"manhole cover\"],\n  \"hallucinated_objects\": [\"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the chains and the manhole cover.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Chains link fire hydrant and manhole cover on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "chains"
+        ],
+        "hallucinated_objects": [
+          "manhole cover"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chains link fire hydrant and manhole cover on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chains\"],\n  \"hallucinated_objects\": [\"manhole cover\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Chains wrap around fire hydrant and sidewalk wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "manhole cover"
+        ],
+        "hallucinated_objects": [
+          "sidewalk wall"
+        ],
+        "genericity_hint": "The image is specific to a fire hydrant and its surroundings, but the caption is too generic.",
+        "edit_instructions": [
+          "The caption should focus on the fire hydrant and its immediate surroundings, not include the manhole cover and should not mention the wall."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chains wrap around fire hydrant and sidewalk wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"manhole cover\"],\n  \"hallucinated_objects\": [\"sidewalk wall\"],\n  \"genericity_hint\": \"The image is specific to a fire hydrant and its surroundings, but the caption is too generic.\",\n  \"edit_instructions\": \"The caption should focus on the fire hydrant and its immediate surroundings, not include the manhole cover and should not mention the wall.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Chains wrapped around fire hydrant on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "manhole cover"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific. It should mention the manhole cover.",
+        "edit_instructions": [
+          "Add the manhole cover to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chains wrapped around fire hydrant on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"manhole cover\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific. It should mention the manhole cover.\",\n  \"edit_instructions\": \"Add the manhole cover to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Chains wrapped around fire hydrant near manhole cover on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "chains"
+        ],
+        "hallucinated_objects": [
+          "manhole cover"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, chains, sidewalk, wall, manhole cover]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chains wrapped around fire hydrant near manhole cover on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chains\"],\n  \"hallucinated_objects\": [\"manhole cover\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 580757,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000580757.jpg",
+    "final_caption": "Chains wrapped around fire hydrant near manhole cover on sidewalk",
+    "total_time_sec": 25.76
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"fire hydrant\",\n    \"chains\",\n    \"sidewalk\",\n    \"wall\",\n    \"manhole cover\"\n  ]\n}"
+}

@@ -1,0 +1,206 @@
+{
+  "image_id": 181859,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000181859.jpg",
+  "objects": [
+    "cat",
+    "sink",
+    "faucet",
+    "soap dispenser",
+    "towel",
+    "mirror",
+    "bathroom countertop"
+  ],
+  "template": "We have an image with these objects: ['cat', 'sink', 'faucet', 'soap dispenser', 'towel', 'mirror', 'bathroom countertop']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat by sink near faucet and soap",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "mirror",
+          "bathroom countertop"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the location of the cat or the objects around it.",
+        "edit_instructions": [
+          "Add more specific details about the location of the cat and the objects around it."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink near faucet and soap\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"mirror\", \"bathroom countertop\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the location of the cat or the objects around it.\",\n  \"edit_instructions\": \"Add more specific details about the location of the cat and the objects around it.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat by sink on countertop near mirror and faucet",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "soap dispenser"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the towel and soap dispenser."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink on countertop near mirror and faucet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"soap dispenser\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the towel and soap dispenser.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat by sink on countertop near mirror and soap dispenser with towel nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom countertop"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of sink, the color of the countertop, and the position of the mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink on countertop near mirror and soap dispenser with towel nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom countertop\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of sink, the color of the countertop, and the position of the mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "White cat near sink with blue faucet on wooden countertop by mirrored cabinet and soap dispenser",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "mirror",
+          "soap dispenser"
+        ],
+        "hallucinated_objects": [
+          "blue faucet",
+          "wooden countertop",
+          "mirrored cabinet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic descriptions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White cat near sink with blue faucet on wooden countertop by mirrored cabinet and soap dispenser\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"mirror\", \"soap dispenser\"],\n  \"hallucinated_objects\": [\"blue faucet\", \"wooden countertop\", \"mirrored cabinet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic descriptions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat near sink with soap dispenser on countertop by mirror and towel",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom countertop"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near sink with soap dispenser on countertop by mirror and towel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom countertop\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat by sink with soap dispenser on countertop near mirror and towel",
+      "vlm_hint": {
+        "missing_objects": [
+          "bathroom countertop"
+        ],
+        "hallucinated_objects": [
+          "mirror",
+          "towel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink with soap dispenser on countertop near mirror and towel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bathroom countertop\"],\n  \"hallucinated_objects\": [\"mirror\", \"towel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat by sink with soap dispenser on bathroom countertop near mirror and towel",
+      "vlm_hint": {
+        "missing_objects": [
+          "faucet"
+        ],
+        "hallucinated_objects": [
+          "towel",
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add the missing object and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink with soap dispenser on bathroom countertop near mirror and towel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"faucet\"],\n  \"hallucinated_objects\": [\"towel\", \"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add the missing object and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat by sink with soap dispenser on bathroom countertop near faucet",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "soap dispenser"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the presence of a towel and a mirror, and remove the mention of the soap dispenser."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink with soap dispenser on bathroom countertop near faucet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"mirror\"],\n  \"hallucinated_objects\": [\"soap dispenser\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the presence of a towel and a mirror, and remove the mention of the soap dispenser.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat by sink near faucet with towel and mirror on countertop",
+      "vlm_hint": {
+        "missing_objects": [
+          "soap dispenser"
+        ],
+        "hallucinated_objects": [
+          "towel",
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink near faucet with towel and mirror on countertop\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soap dispenser\"],\n  \"hallucinated_objects\": [\"towel\", \"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat by sink near faucet with soap dispenser on countertop",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "mirror",
+          "bathroom countertop"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, soap dispenser, towel, mirror, bathroom countertop]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink near faucet with soap dispenser on countertop\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"mirror\", \"bathroom countertop\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 181859,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000181859.jpg",
+    "final_caption": "Cat by sink near faucet with soap dispenser on countertop",
+    "total_time_sec": 27.8
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"sink\",\n    \"faucet\",\n    \"soap dispenser\",\n    \"towel\",\n    \"mirror\",\n    \"bathroom countertop\"\n  ]\n}"
+}

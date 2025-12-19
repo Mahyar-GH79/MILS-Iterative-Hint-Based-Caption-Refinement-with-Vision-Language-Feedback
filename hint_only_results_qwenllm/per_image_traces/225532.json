@@ -1,0 +1,207 @@
+{
+  "image_id": 225532,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000225532.jpg",
+  "objects": [
+    "highway",
+    "street sign",
+    "traffic lights",
+    "street lights",
+    "building",
+    "car",
+    "truck",
+    "street",
+    "bridge",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign",
+    "street sign"
+  ],
+  "template": "We have an image with these objects: ['highway', 'street sign', 'traffic lights', 'street lights', 'building', 'car', 'truck', 'street', 'bridge', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign', 'street sign']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Highway lined with street signs cars truckstraffic lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus",
+          "traffic lights",
+          "street lights"
+        ],
+        "hallucinated_objects": [
+          "street sign"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of street signs.",
+        "edit_instructions": [
+          "Remove the generic street sign and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway lined with street signs cars truckstraffic lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus\", \"traffic lights\", \"street lights\"],\n  \"hallucinated_objects\": [\"street sign\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of street signs.\",\n  \"edit_instructions\": \"Remove the generic street sign and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Highway with street lights traffic lights cars truck buses",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus"
+        ],
+        "hallucinated_objects": [
+          "street lights",
+          "traffic lights"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of vehicles.",
+        "edit_instructions": [
+          "Remove the generic street lights and traffic lights, and add the missing bus."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with street lights traffic lights cars truck buses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus\"],\n  \"hallucinated_objects\": [\"street lights\", \"traffic lights\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vehicles.\",\n  \"edit_instructions\": \"Remove the generic street lights and traffic lights, and add the missing bus.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Highway with street signs cars trucks buses",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of vehicles.",
+        "edit_instructions": [
+          "Specify the type of vehicles in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with street signs cars trucks buses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of vehicles.\",\n  \"edit_instructions\": \"Specify the type of vehicles in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Highway with many street signs cars and trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [
+          "street lights"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of street signs.",
+        "edit_instructions": [
+          "Specify the type of street signs and remove the generic 'street lights'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with many street signs cars and trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [\"street lights\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of street signs.\",\n  \"edit_instructions\": \"Specify the type of street signs and remove the generic 'street lights'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Highway with many crossing street signs and traffic lights cars and trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [
+          "street lights"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of street signs.",
+        "edit_instructions": [
+          "Remove the traffic lights and specify the type of street signs."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with many crossing street signs and traffic lights cars and trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [\"street lights\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of street signs.\",\n  \"edit_instructions\": \"Remove the traffic lights and specify the type of street signs.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Highway with multiple road signs cars and trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of road signs.",
+        "edit_instructions": [
+          "Specify the type of road signs in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with multiple road signs cars and trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of road signs.\",\n  \"edit_instructions\": \"Specify the type of road signs in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Highway with many street signs and traffic lights cars trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of street signs.",
+        "edit_instructions": [
+          "Specify the type of street signs and remove the generic 'traffic lights'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with many street signs and traffic lights cars trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of street signs.\",\n  \"edit_instructions\": \"Specify the type of street signs and remove the generic 'traffic lights'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Highway with many directional street signs and traffic signals cars trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of street signs.",
+        "edit_instructions": [
+          "Specify the type of street signs in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with many directional street signs and traffic signals cars trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of street signs.\",\n  \"edit_instructions\": \"Specify the type of street signs in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Highway with numerous road direction signs and traffic lights cars trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of road signs.",
+        "edit_instructions": [
+          "Specify the type of road signs and remove the generic mention of traffic lights."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with numerous road direction signs and traffic lights cars trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of road signs.\",\n  \"edit_instructions\": \"Specify the type of road signs and remove the generic mention of traffic lights.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Highway with many street signs and traffic lights cars trucks",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic lights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of street signs.",
+        "edit_instructions": [
+          "Specify the type of street signs and remove the generic 'traffic lights'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [highway, street sign, traffic lights, street lights, building, car, truck, street, bridge, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign, street sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Highway with many street signs and traffic lights cars trucks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic lights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of street signs.\",\n  \"edit_instructions\": \"Specify the type of street signs and remove the generic 'traffic lights'.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 225532,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000225532.jpg",
+    "final_caption": "Highway with many street signs and traffic lights cars trucks",
+    "total_time_sec": 25.96
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"highway\",\n    \"street sign\",\n    \"traffic lights\",\n    \"street lights\",\n    \"building\",\n    \"car\",\n    \"truck\",\n    \"street\",\n    \"bridge\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\",\n    \"street sign\"\n  ]\n}"
+}

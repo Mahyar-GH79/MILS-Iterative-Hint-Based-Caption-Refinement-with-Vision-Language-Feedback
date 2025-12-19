@@ -1,0 +1,233 @@
+{
+  "image_id": 99182,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000099182.jpg",
+  "objects": [
+    "man",
+    "bed",
+    "magazine",
+    "pillow",
+    "lamp",
+    "wall",
+    "picture",
+    "window",
+    "bedding",
+    "bedspread",
+    "bedside",
+    "light",
+    "frame",
+    "mattress",
+    "sheet",
+    "blanket",
+    "cushion",
+    "pillowcase",
+    "lampshade",
+    "lampbase"
+  ],
+  "template": "We have an image with these objects: ['man', 'bed', 'magazine', 'pillow', 'lamp', 'wall', 'picture', 'window', 'bedding', 'bedspread', 'bedside', 'light', 'frame', 'mattress', 'sheet', 'blanket', 'cushion', 'pillowcase', 'lampshade', 'lampbase']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man reads magazine by bed with lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "bedspread"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lamp and the type of bedding."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine by bed with lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"bedspread\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lamp and the type of bedding.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man reads magazine on bed under lamp with bedspread",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "bedspread"
+        ],
+        "hallucinated_objects": [
+          "picture",
+          "bedside"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lamp and bedspread, and remove the objects that are not present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed under lamp with bedspread\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"bedspread\"],\n  \"hallucinated_objects\": [\"picture\", \"bedside\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lamp and bedspread, and remove the objects that are not present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man reads magazine on bed illuminated by a bedside lamp with a fluffy bedspread.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "picture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the lampshade and lampbase, and remove the picture."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed illuminated by a bedside lamp with a fluffy bedspread.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"lampbase\"],\n  \"hallucinated_objects\": [\"picture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the lampshade and lampbase, and remove the picture.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man reads magazine on bed lit by lampshade on bedside lamp with fluffy bedspread.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "bedside",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "fluffy bedspread"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lamp and the exact location of the objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed lit by lampshade on bedside lamp with fluffy bedspread.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"bedside\", \"lampbase\"],\n  \"hallucinated_objects\": [\"fluffy bedspread\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lamp and the exact location of the objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man reads magazine on bed illuminated by lampshade on bedside lamp with bedspread.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "bedspread"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the lampshade and lampbase, and remove the mention of the bedspread."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed illuminated by lampshade on bedside lamp with bedspread.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"lampbase\"],\n  \"hallucinated_objects\": [\"bedspread\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the lampshade and lampbase, and remove the mention of the bedspread.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man reads magazine on bed lit by lampshade on bedside lamp with framed picture.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "bedside lamp",
+          "framed picture"
+        ],
+        "hallucinated_objects": [
+          "bedspread",
+          "cushion",
+          "pillowcase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lampshade, the position of the bedside lamp, and the details of the framed picture."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed lit by lampshade on bedside lamp with framed picture.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"bedside lamp\", \"framed picture\"],\n  \"hallucinated_objects\": [\"bedspread\", \"cushion\", \"pillowcase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lampshade, the position of the bedside lamp, and the details of the framed picture.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man reads magazine on bed lit by pleated lampshade on bedside lamp with framed picture.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "bedspread",
+          "bedside"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lampshade and the position of the bedside lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed lit by pleated lampshade on bedside lamp with framed picture.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"lampbase\"],\n  \"hallucinated_objects\": [\"bedspread\", \"bedside\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lampshade and the position of the bedside lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man reads magazine on bed lit by pleated lampshade hanging from bedside lamp with framed picture.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "bedspread",
+          "bedside"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lampshade and the exact location of the bedside lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed lit by pleated lampshade hanging from bedside lamp with framed picture.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"lampbase\"],\n  \"hallucinated_objects\": [\"bedspread\", \"bedside\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lampshade and the exact location of the bedside lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man reads magazine on bed lit by pleated lampshade hanging from wall-mounted lamp with framed picture.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "bedspread",
+          "bedside"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lampshade and the position of the lampbase."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed lit by pleated lampshade hanging from wall-mounted lamp with framed picture.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"lampbase\"],\n  \"hallucinated_objects\": [\"bedspread\", \"bedside\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lampshade and the position of the lampbase.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man reads magazine on bed under pleated lampshade from floor lamp with framed picture on wall.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lampshade",
+          "lampbase"
+        ],
+        "hallucinated_objects": [
+          "bedspread",
+          "bedside"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lampshade and the position of the lampbase."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bed, magazine, pillow, lamp, wall, picture, window, bedding, bedspread, bedside, light, frame, mattress, sheet, blanket, cushion, pillowcase, lampshade, lampbase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads magazine on bed under pleated lampshade from floor lamp with framed picture on wall.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lampshade\", \"lampbase\"],\n  \"hallucinated_objects\": [\"bedspread\", \"bedside\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lampshade and the position of the lampbase.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 99182,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000099182.jpg",
+    "final_caption": "Man reads magazine on bed under pleated lampshade from floor lamp with framed picture on wall.",
+    "total_time_sec": 33.29
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"bed\",\n    \"magazine\",\n    \"pillow\",\n    \"lamp\",\n    \"wall\",\n    \"picture\",\n    \"window\",\n    \"bedding\",\n    \"bedspread\",\n    \"bedside\",\n    \"light\",\n    \"frame\",\n    \"mattress\",\n    \"sheet\",\n    \"blanket\",\n    \"cushion\",\n    \"pillowcase\",\n    \"lampshade\",\n    \"lampbase\"\n  ]\n}"
+}

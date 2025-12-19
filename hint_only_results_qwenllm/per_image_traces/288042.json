@@ -1,0 +1,245 @@
+{
+  "image_id": 288042,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000288042.jpg",
+  "objects": [
+    "bridge",
+    "river",
+    "street",
+    "lamp post",
+    "person",
+    "umbrella",
+    "building",
+    "wall",
+    "rocks",
+    "trees",
+    "grass",
+    "water",
+    "road",
+    "sky",
+    "clouds",
+    "leaves",
+    "house",
+    "street light",
+    "street sign",
+    "street lamp"
+  ],
+  "template": "We have an image with these objects: ['bridge', 'river', 'street', 'lamp post', 'person', 'umbrella', 'building', 'wall', 'rocks', 'trees', 'grass', 'water', 'road', 'sky', 'clouds', 'leaves', 'house', 'street light', 'street sign', 'street lamp']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bridge over river with trees and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "lamp post",
+          "person",
+          "umbrella",
+          "building",
+          "wall",
+          "rocks",
+          "trees",
+          "grass",
+          "water",
+          "road",
+          "sky",
+          "clouds",
+          "leaves",
+          "house",
+          "street light",
+          "street lamp"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a bridge over a river with trees and buildings.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects to the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bridge over river with trees and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"lamp post\", \"person\", \"umbrella\", \"building\", \"wall\", \"rocks\", \"trees\", \"grass\", \"water\", \"road\", \"sky\", \"clouds\", \"leaves\", \"house\", \"street light\", \"street lamp\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a bridge over a river with trees and buildings.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects to the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bridge over river with trees buildings and person holding umbrella",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "street light",
+          "street sign",
+          "street lamp"
+        ],
+        "hallucinated_objects": [
+          "rocks",
+          "grass",
+          "water",
+          "road",
+          "sky",
+          "clouds",
+          "leaves",
+          "house"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bridge, the color of the building, and the type of trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bridge over river with trees buildings and person holding umbrella\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"street light\", \"street sign\", \"street lamp\"],\n  \"hallucinated_objects\": [\"rocks\", \"grass\", \"water\", \"road\", \"sky\", \"clouds\", \"leaves\", \"house\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bridge, the color of the building, and the type of trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Modern bridge over river with tall trees and person holding umbrella near street lamps",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "street lamp",
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "street light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of street lamp and the presence of a street sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with tall trees and person holding umbrella near street lamps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"street lamp\", \"street sign\"],\n  \"hallucinated_objects\": [\"street light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of street lamp and the presence of a street sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Modern bridge over river with street lamps and street sign near person holding umbrella",
+      "vlm_hint": {
+        "missing_objects": [
+          "street lamps",
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of street lamps and the presence of a street sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with street lamps and street sign near person holding umbrella\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street lamps\", \"street sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of street lamps and the presence of a street sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Modern bridge over river with tall street lamps and nearby street sign near person holding umbrella",
+      "vlm_hint": {
+        "missing_objects": [
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "tall street lamps"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with tall street lamps and nearby street sign near person holding umbrella\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street sign\"],\n  \"hallucinated_objects\": [\"tall street lamps\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Modern bridge over river with street sign and person holding umbrella",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "street lamp",
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the street lamp and street sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with street sign and person holding umbrella\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"street lamp\", \"street sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the street lamp and street sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Modern bridge over river with street lamp and person under umbrella near street sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with street lamp and person under umbrella near street sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street sign\"],\n  \"hallucinated_objects\": [\"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Modern bridge over river with person under umbrella near street sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "street sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the street sign from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with person under umbrella near street sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the street sign from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Modern bridge over river with person under umbrella near streetlamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "street lamp",
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bridge, the color of the streetlamp, and the type of umbrella."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with person under umbrella near streetlamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"street lamp\", \"street sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bridge, the color of the streetlamp, and the type of umbrella.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Modern bridge over river with person holding blue umbrella near street lamp and sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bridge, river, street, lamp post, person, umbrella, building, wall, rocks, trees, grass, water, road, sky, clouds, leaves, house, street light, street sign, street lamp]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern bridge over river with person holding blue umbrella near street lamp and sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street sign\"],\n  \"hallucinated_objects\": [\"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 288042,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000288042.jpg",
+    "final_caption": "Modern bridge over river with person holding blue umbrella near street lamp and sign",
+    "total_time_sec": 30.99
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bridge\",\n    \"river\",\n    \"street\",\n    \"lamp post\",\n    \"person\",\n    \"umbrella\",\n    \"building\",\n    \"wall\",\n    \"rocks\",\n    \"trees\",\n    \"grass\",\n    \"water\",\n    \"road\",\n    \"sky\",\n    \"clouds\",\n    \"leaves\",\n    \"house\",\n    \"street light\",\n    \"street sign\",\n    \"street lamp\"\n  ]\n}"
+}

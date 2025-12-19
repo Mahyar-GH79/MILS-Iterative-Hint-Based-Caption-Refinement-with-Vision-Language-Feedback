@@ -1,0 +1,198 @@
+{
+  "image_id": 369751,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000369751.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown concept depicted",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "traffic cone"
+        ],
+        "genericity_hint": "objects",
+        "edit_instructions": [
+          "add parking meters and remove traffic cone"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown concept depicted\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"parking meters\",\n  \"hallucinated_objects\": \"traffic cone\",\n  \"genericity_hint\": \"objects\",\n  \"edit_instructions\": \"add parking meters and remove traffic cone\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Unknown objects next to parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic cone",
+          "car"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too vague and does not specify what the unknown objects are.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the traffic cone and the car."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown objects next to parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic cone\", \"car\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too vague and does not specify what the unknown objects are.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the traffic cone and the car.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Traffic cone and car near parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "stop sign",
+          "yellow sign"
+        ],
+        "hallucinated_objects": [
+          "traffic cone",
+          "car"
+        ],
+        "genericity_hint": "The image contains a stop sign and a yellow sign, but the captions do not mention them.",
+        "edit_instructions": [
+          "Add the stop sign and the yellow sign to the captions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic cone and car near parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"stop sign\", \"yellow sign\"],\n  \"hallucinated_objects\": [\"traffic cone\", \"car\"],\n  \"genericity_hint\": \"The image contains a stop sign and a yellow sign, but the captions do not mention them.\",\n  \"edit_instructions\": \"Add the stop sign and the yellow sign to the captions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Stop sign and yellow sign by parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "Stop sign and yellow sign by parking meters",
+        "edit_instructions": [
+          "Remove the word 'unknown' and add the missing object 'parking meters'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign and yellow sign by parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"parking meters\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"Stop sign and yellow sign by parking meters\",\n  \"edit_instructions\": \"Remove the word 'unknown' and add the missing object 'parking meters'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Stop sign and yellow sign next to parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "Stop sign and yellow sign next to parking meters",
+        "edit_instructions": [
+          "Remove the parking meters from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign and yellow sign next to parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"parking meters\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"Stop sign and yellow sign next to parking meters\",\n  \"edit_instructions\": \"Remove the parking meters from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Stop sign and yellow sign nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "orange cone"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image contains a stop sign and a yellow sign, but the captions do not mention the parking meters or the orange cone.",
+        "edit_instructions": [
+          "Add the parking meters and the orange cone to the captions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign and yellow sign nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"orange cone\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image contains a stop sign and a yellow sign, but the captions do not mention the parking meters or the orange cone.\",\n  \"edit_instructions\": \"Add the parking meters and the orange cone to the captions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Stop sign yellow sign parked cars orange cones nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "parked cars"
+        ],
+        "hallucinated_objects": [
+          "orange cones"
+        ],
+        "genericity_hint": "Stop sign",
+        "edit_instructions": [
+          "Remove parked cars and orange cones. Add a generic object like 'street'"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign yellow sign parked cars orange cones nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"parked cars\",\n  \"hallucinated_objects\": \"orange cones\",\n  \"genericity_hint\": \"Stop sign\",\n  \"edit_instructions\": \"Remove parked cars and orange cones. Add a generic object like 'street'\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Stop sign on street nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic cone",
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign on street nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic cone\", \"parking meters\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Traffic cone and parking meters near stop sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic cone",
+          "parking meters",
+          "stop sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too specific and does not capture the full scene.",
+        "edit_instructions": [
+          "Remove the candidate caption and provide a more general description."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic cone and parking meters near stop sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic cone\", \"parking meters\", \"stop sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too specific and does not capture the full scene.\",\n  \"edit_instructions\": \"Remove the candidate caption and provide a more general description.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Unknown object near road signs and meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "unknown object"
+        ],
+        "genericity_hint": "The image contains parking meters and road signs.",
+        "edit_instructions": [
+          "Remove the unknown object and add parking meters to the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object near road signs and meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"parking meters\",\n  \"hallucinated_objects\": \"unknown object\",\n  \"genericity_hint\": \"The image contains parking meters and road signs.\",\n  \"edit_instructions\": \"Remove the unknown object and add parking meters to the list of objects.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 369751,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000369751.jpg",
+    "final_caption": "Unknown object near road signs and meters",
+    "total_time_sec": 23.41
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n[\"stop sign\", \"parking meters\", \"orange traffic cone\", \"car\", \"yellow sign\", \"green grass\", \"orange leaves\", \"tree\", \"street\"]"
+}

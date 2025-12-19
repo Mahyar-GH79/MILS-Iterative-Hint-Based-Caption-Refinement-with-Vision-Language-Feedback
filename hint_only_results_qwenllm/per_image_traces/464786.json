@@ -1,0 +1,190 @@
+{
+  "image_id": 464786,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000464786.jpg",
+  "objects": [
+    "hot dog",
+    "mustard",
+    "bun",
+    "napkin"
+  ],
+  "template": "We have an image with these objects: ['hot dog', 'mustard', 'bun', 'napkin']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Hot dog with mustard in napkin",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog"
+        ],
+        "hallucinated_objects": [
+          "napkin"
+        ],
+        "genericity_hint": "The image shows a hot dog with mustard, but the caption is too generic.",
+        "edit_instructions": [
+          "The caption should be more specific about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog with mustard in napkin\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\"],\n  \"hallucinated_objects\": [\"napkin\"],\n  \"genericity_hint\": \"The image shows a hot dog with mustard, but the caption is too generic.\",\n  \"edit_instructions\": \"The caption should be more specific about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Hot dog with mustard in bun",
+      "vlm_hint": {
+        "missing_objects": [
+          "hand"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a hot dog with mustard in a bun.",
+        "edit_instructions": [
+          "Remove the hand from the image."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog with mustard in bun\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hand\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a hot dog with mustard in a bun.\",\n  \"edit_instructions\": \"Remove the hand from the image.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Hot dog in bun with mustard and napkin nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog"
+        ],
+        "hallucinated_objects": [
+          "napkin"
+        ],
+        "genericity_hint": "The image shows a hot dog with mustard on it, but the caption is too generic and does not specify the type of hot dog or the presence of a bun.",
+        "edit_instructions": [
+          "The caption should be more specific about the type of hot dog and the presence of a bun. Also, the caption should not mention the napkin as it is not visible in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog in bun with mustard and napkin nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\"],\n  \"hallucinated_objects\": [\"napkin\"],\n  \"genericity_hint\": \"The image shows a hot dog with mustard on it, but the caption is too generic and does not specify the type of hot dog or the presence of a bun.\",\n  \"edit_instructions\": \"The caption should be more specific about the type of hot dog and the presence of a bun. Also, the caption should not mention the napkin as it is not visible in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Grilled hot dog in bun with mustard",
+      "vlm_hint": {
+        "missing_objects": [
+          "hand"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.",
+        "edit_instructions": [
+          "Remove the hand from the image."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hand\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.\",\n  \"edit_instructions\": \"Remove the hand from the image.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Grilled hot dog in bun with mustard and napkin",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog"
+        ],
+        "hallucinated_objects": [
+          "napkin"
+        ],
+        "genericity_hint": "The image shows a hot dog with mustard and a bun, but the caption is too generic and does not specify the presence of a napkin.",
+        "edit_instructions": [
+          "Remove the mention of the napkin and specify that the hot dog is in a bun with mustard."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard and napkin\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\"],\n  \"hallucinated_objects\": [\"napkin\"],\n  \"genericity_hint\": \"The image shows a hot dog with mustard and a bun, but the caption is too generic and does not specify the presence of a napkin.\",\n  \"edit_instructions\": \"Remove the mention of the napkin and specify that the hot dog is in a bun with mustard.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Grilled hot dog in bun with mustard",
+      "vlm_hint": {
+        "missing_objects": [
+          "hand"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.",
+        "edit_instructions": [
+          "Remove the hand from the image."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hand\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.\",\n  \"edit_instructions\": \"Remove the hand from the image.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Grilled hot dog in bun with mustard and napkin",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog"
+        ],
+        "hallucinated_objects": [
+          "napkin"
+        ],
+        "genericity_hint": "The image shows a hot dog with mustard and a bun, but the caption is too generic and does not specify the presence of a napkin.",
+        "edit_instructions": [
+          "Remove the mention of the napkin and specify that the hot dog is in a bun with mustard."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard and napkin\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\"],\n  \"hallucinated_objects\": [\"napkin\"],\n  \"genericity_hint\": \"The image shows a hot dog with mustard and a bun, but the caption is too generic and does not specify the presence of a napkin.\",\n  \"edit_instructions\": \"Remove the mention of the napkin and specify that the hot dog is in a bun with mustard.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Grilled hot dog in bun with mustard",
+      "vlm_hint": {
+        "missing_objects": [
+          "hand"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.",
+        "edit_instructions": [
+          "Remove the hand from the image."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hand\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.\",\n  \"edit_instructions\": \"Remove the hand from the image.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Grilled hot dog in bun with mustard and napkin",
+      "vlm_hint": {
+        "missing_objects": [
+          "hot dog"
+        ],
+        "hallucinated_objects": [
+          "napkin"
+        ],
+        "genericity_hint": "The image shows a hot dog with mustard and a bun, but the caption is too generic and does not specify the presence of a napkin.",
+        "edit_instructions": [
+          "Remove the mention of the napkin and specify that the hot dog is in a bun with mustard."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard and napkin\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hot dog\"],\n  \"hallucinated_objects\": [\"napkin\"],\n  \"genericity_hint\": \"The image shows a hot dog with mustard and a bun, but the caption is too generic and does not specify the presence of a napkin.\",\n  \"edit_instructions\": \"Remove the mention of the napkin and specify that the hot dog is in a bun with mustard.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Grilled hot dog in bun with mustard",
+      "vlm_hint": {
+        "missing_objects": [
+          "hand"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.",
+        "edit_instructions": [
+          "Remove the hand from the image."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, mustard, bun, napkin]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Grilled hot dog in bun with mustard\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hand\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a hot dog with mustard and a bun, but it does not show a hand holding it.\",\n  \"edit_instructions\": \"Remove the hand from the image.\",\n  \"score\": 6\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 464786,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000464786.jpg",
+    "final_caption": "Grilled hot dog in bun with mustard",
+    "total_time_sec": 26.46
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"hot dog\",\n    \"mustard\",\n    \"bun\",\n    \"napkin\"\n  ]\n}"
+}

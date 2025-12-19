@@ -1,0 +1,194 @@
+{
+  "image_id": 45728,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000045728.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown object dominates scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "fork",
+          "plate"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the object.",
+        "edit_instructions": [
+          "Provide a more specific caption that identifies the object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object dominates scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fork\", \"plate\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the object.\",\n  \"edit_instructions\": \"Provide a more specific caption that identifies the object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Unknown object on plateforgettable fork",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "fork"
+        ],
+        "genericity_hint": "unknown object",
+        "edit_instructions": [
+          "remove fork and add plate"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object on plateforgettable fork\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"plate\",\n  \"hallucinated_objects\": \"fork\",\n  \"genericity_hint\": \"unknown object\",\n  \"edit_instructions\": \"remove fork and add plate\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Unknown object on plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "fork",
+          "plate"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the object.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fork and plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object on plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fork\", \"plate\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the object.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fork and plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Fork next to unknown object on plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "unknown object"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the object on the plate.",
+        "edit_instructions": [
+          "Specify the object on the plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fork next to unknown object on plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\"],\n  \"hallucinated_objects\": [\"unknown object\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the object on the plate.\",\n  \"edit_instructions\": \"Specify the object on the plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Fork next to fork on plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate",
+          "unknown"
+        ],
+        "hallucinated_objects": [
+          "fork",
+          "fork"
+        ],
+        "genericity_hint": "The image is very blurry and lacks clear details.",
+        "edit_instructions": [
+          "Remove the fork and focus on the plate and the unknown object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fork next to fork on plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\", \"unknown\"],\n  \"hallucinated_objects\": [\"fork\", \"fork\"],\n  \"genericity_hint\": \"The image is very blurry and lacks clear details.\",\n  \"edit_instructions\": \"Remove the fork and focus on the plate and the unknown object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Plate with unknown object",
+      "vlm_hint": {
+        "missing_objects": [
+          "fork"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the object on the plate.",
+        "edit_instructions": [
+          "Specify the object on the plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate with unknown object\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fork\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the object on the plate.\",\n  \"edit_instructions\": \"Specify the object on the plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Plate with unknown vegetable",
+      "vlm_hint": {
+        "missing_objects": [
+          "noodles"
+        ],
+        "hallucinated_objects": [
+          "unknown vegetable"
+        ],
+        "genericity_hint": "The caption is too generic and does not accurately describe the image.",
+        "edit_instructions": [
+          "Remove the 'unknown vegetable' and add 'noodles' to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate with unknown vegetable\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"noodles\"],\n  \"hallucinated_objects\": [\"unknown vegetable\"],\n  \"genericity_hint\": \"The caption is too generic and does not accurately describe the image.\",\n  \"edit_instructions\": \"Remove the 'unknown vegetable' and add 'noodles' to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Plate with noodles and unknown item",
+      "vlm_hint": {
+        "missing_objects": [
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "unknown item"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of noodles or the unknown item.",
+        "edit_instructions": [
+          "Specify the type of noodles and remove the unknown item."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate with noodles and unknown item\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fork\"],\n  \"hallucinated_objects\": [\"unknown item\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of noodles or the unknown item.\",\n  \"edit_instructions\": \"Specify the type of noodles and remove the unknown item.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Spaghetti with a fork on side",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate",
+          "spaghetti"
+        ],
+        "hallucinated_objects": [
+          "fork"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the fork and add a plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Spaghetti with a fork on side\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\", \"spaghetti\"],\n  \"hallucinated_objects\": [\"fork\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the fork and add a plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Spaghetti on a plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too general and does not specify the type of food.",
+        "edit_instructions": [
+          "Specify the type of food in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Spaghetti on a plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fork\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too general and does not specify the type of food.\",\n  \"edit_instructions\": \"Specify the type of food in the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 45728,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000045728.jpg",
+    "final_caption": "Spaghetti on a plate",
+    "total_time_sec": 21.26
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n[\"noodles\", \"fork\", \"plate\"]"
+}

@@ -1,0 +1,214 @@
+{
+  "image_id": 555705,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000555705.jpg",
+  "objects": [
+    "cat",
+    "cat",
+    "shoes",
+    "leaves",
+    "wall",
+    "plant",
+    "background",
+    "ground",
+    "cat",
+    "cat",
+    "shoes",
+    "leaves",
+    "wall",
+    "plant",
+    "background",
+    "ground",
+    "cat",
+    "cat",
+    "shoes",
+    "leaves"
+  ],
+  "template": "We have an image with these objects: ['cat', 'cat', 'shoes', 'leaves', 'wall', 'plant', 'background', 'ground', 'cat', 'cat', 'shoes', 'leaves', 'wall', 'plant', 'background', 'ground', 'cat', 'cat', 'shoes', 'leaves']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Three cats among leaves on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of cats or the presence of shoes.",
+        "edit_instructions": [
+          "Specify the number of cats and include the shoes in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three cats among leaves on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of cats or the presence of shoes.\",\n  \"edit_instructions\": \"Specify the number of cats and include the shoes in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Five cats among leaves on wall with shoes nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Five cats among leaves on wall with shoes nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Multiple cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple cats, but the caption is too generic and does not specify the number of cats.",
+        "edit_instructions": [
+          "The caption should specify the number of cats in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple cats, but the caption is too generic and does not specify the number of cats.\",\n  \"edit_instructions\": \"The caption should specify the number of cats in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Three cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Two cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Two cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Two cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Two cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Two cats among leaves on wall near shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image contains multiple instances of the same objects.",
+        "edit_instructions": [
+          "Remove the background and add shoes."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves, wall, plant, background, ground, cat, cat, shoes, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two cats among leaves on wall near shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image contains multiple instances of the same objects.\",\n  \"edit_instructions\": \"Remove the background and add shoes.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 555705,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000555705.jpg",
+    "final_caption": "Two cats among leaves on wall near shoes",
+    "total_time_sec": 23.1
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"cat\",\n    \"shoes\",\n    \"leaves\",\n    \"wall\",\n    \"plant\",\n    \"background\",\n    \"ground\",\n    \"cat\",\n    \"cat\",\n    \"shoes\",\n    \"leaves\",\n    \"wall\",\n    \"plant\",\n    \"background\",\n    \"ground\",\n    \"cat\",\n    \"cat\",\n    \"shoes\",\n    \"leaves\",\n    \"wall\"\n  ]\n}"
+}

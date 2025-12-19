@@ -1,0 +1,202 @@
+{
+  "image_id": 227478,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000227478.jpg",
+  "objects": [
+    "bench",
+    "people",
+    "grass",
+    "tree",
+    "sidewalk",
+    "shoe",
+    "purse",
+    "hat",
+    "jacket",
+    "backpack",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe"
+  ],
+  "template": "We have an image with these objects: ['bench', 'people', 'grass', 'tree', 'sidewalk', 'shoe', 'purse', 'hat', 'jacket', 'backpack', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People sit on a bench under a tree in the park.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "hat",
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench under a tree in the park.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"hat\", \"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People in hats and jackets sit on a bench with purses nearby under a tree on a grassy sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "jacket",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "tree",
+          "sidewalk"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of people, their clothing, and the objects they are carrying."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in hats and jackets sit on a bench with purses nearby under a tree on a grassy sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\", \"purse\"],\n  \"hallucinated_objects\": [\"tree\", \"sidewalk\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of people, their clothing, and the objects they are carrying.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Nine people in hats and jackets sit on a bench with several purses nearby on grass.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Nine people in hats and jackets sit on a bench with several purses nearby on grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"backpack\"],\n  \"hallucinated_objects\": [\"sidewalk\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People sit on a bench near shoes under a tree on grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "hat",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "shoes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, hat, and backpack, and clarify the number of shoes."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench near shoes under a tree on grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"hat\", \"backpack\"],\n  \"hallucinated_objects\": [\"shoes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, hat, and backpack, and clarify the number of shoes.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People sit on a bench near a backpack and purse under a tree on grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "backpack",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "tree"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench near a backpack and purse under a tree on grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"backpack\", \"purse\"],\n  \"hallucinated_objects\": [\"tree\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People sit on a bench near shoes and a backpack under a tree on grass.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench near shoes and a backpack under a tree on grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\", \"backpack\"],\n  \"hallucinated_objects\": [\"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\","
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People sit on a bench near shoes and a backpack under a tree on grass.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench near shoes and a backpack under a tree on grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\", \"backpack\"],\n  \"hallucinated_objects\": [\"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\","
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People sit on a bench near shoes and a backpack under a tree in the grass.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench near shoes and a backpack under a tree in the grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\", \"backpack\"],\n  \"hallucinated_objects\": [\"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\","
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People sit on a bench near shoes under a tree in the grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "hat",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "shoes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of purse, hat, and backpack, and clarify the number of shoes."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench near shoes under a tree in the grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"hat\", \"backpack\"],\n  \"hallucinated_objects\": [\"shoes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of purse, hat, and backpack, and clarify the number of shoes.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People sit on a bench under a tree with a backpack and hat near multiple shoes on the grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "backpack"
+        ],
+        "hallucinated_objects": [
+          "multiple shoes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their locations."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bench, people, grass, tree, sidewalk, shoe, purse, hat, jacket, backpack, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit on a bench under a tree with a backpack and hat near multiple shoes on the grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"backpack\"],\n  \"hallucinated_objects\": [\"multiple shoes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their locations.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 227478,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000227478.jpg",
+    "final_caption": "People sit on a bench under a tree with a backpack and hat near multiple shoes on the grass.",
+    "total_time_sec": 49.55
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bench\",\n    \"people\",\n    \"grass\",\n    \"tree\",\n    \"sidewalk\",\n    \"shoe\",\n    \"purse\",\n    \"hat\",\n    \"jacket\",\n    \"backpack\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\"\n  ]\n}"
+}

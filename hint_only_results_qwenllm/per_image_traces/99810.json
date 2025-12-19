@@ -1,0 +1,216 @@
+{
+  "image_id": 99810,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000099810.jpg",
+  "objects": [
+    "plate",
+    "donuts",
+    "chair",
+    "table",
+    "boy",
+    "shirtless",
+    "smiling",
+    "donut",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger",
+    "finger"
+  ],
+  "template": "We have an image with these objects: ['plate', 'donuts', 'chair', 'table', 'boy', 'shirtless', 'smiling', 'donut', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger', 'finger']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Boy smiles holding multiple donuts on a table",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair"
+        ],
+        "hallucinated_objects": [
+          "shirtless"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles holding multiple donuts on a table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\"],\n  \"hallucinated_objects\": [\"shirtless\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boy smiles holding multiple donuts on a table beside a chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donut"
+        ],
+        "hallucinated_objects": [
+          "shirtless"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact number of donuts and the boy's clothing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles holding multiple donuts on a table beside a chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donut\"],\n  \"hallucinated_objects\": [\"shirtless\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact number of donuts and the boy's clothing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boy smiles holding ten donuts on a table near a chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donuts"
+        ],
+        "hallucinated_objects": [
+          "ten donuts"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the number of donuts and make the caption more general."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles holding ten donuts on a table near a chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donuts\"],\n  \"hallucinated_objects\": [\"ten donuts\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the number of donuts and make the caption more general.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Boy smiles holding donuts on a table near a chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donut"
+        ],
+        "hallucinated_objects": [
+          "finger"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donut and removes the unnecessary fingers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles holding donuts on a table near a chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donut\"],\n  \"hallucinated_objects\": [\"finger\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donut and removes the unnecessary fingers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Boy smiles shirtless holding donuts on a table near a chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donut"
+        ],
+        "hallucinated_objects": [
+          "shirtless"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donut and removes the 'shirtless' part."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles shirtless holding donuts on a table near a chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donut\"],\n  \"hallucinated_objects\": [\"shirtless\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donut and removes the 'shirtless' part.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Boy smiles holding donuts on a table near a chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donut"
+        ],
+        "hallucinated_objects": [
+          "finger"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donut and removes the unnecessary fingers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles holding donuts on a table near a chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donut\"],\n  \"hallucinated_objects\": [\"finger\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donut and removes the unnecessary fingers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Boy smiles holding donuts on a table near a chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donut"
+        ],
+        "hallucinated_objects": [
+          "finger"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donut and removes the unnecessary fingers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy smiles holding donuts on a table near a chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donut\"],\n  \"hallucinated_objects\": [\"finger\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donut and removes the unnecessary fingers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Smiling boy holds donuts on table near chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donuts"
+        ],
+        "hallucinated_objects": [
+          "finger"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donuts and avoids unnecessary repetition of the word 'finger'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Smiling boy holds donuts on table near chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donuts\"],\n  \"hallucinated_objects\": [\"finger\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donuts and avoids unnecessary repetition of the word 'finger'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Smiling boy holds donuts on table near chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donuts"
+        ],
+        "hallucinated_objects": [
+          "finger"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donuts and avoids unnecessary repetition of the word 'finger'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Smiling boy holds donuts on table near chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donuts\"],\n  \"hallucinated_objects\": [\"finger\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donuts and avoids unnecessary repetition of the word 'finger'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Smiling boy holds donuts on table near chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "donuts"
+        ],
+        "hallucinated_objects": [
+          "finger"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the donuts and avoids unnecessary repetition of the word 'finger'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, donuts, chair, table, boy, shirtless, smiling, donut, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger, finger]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Smiling boy holds donuts on table near chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"donuts\"],\n  \"hallucinated_objects\": [\"finger\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the donuts and avoids unnecessary repetition of the word 'finger'.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 99810,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000099810.jpg",
+    "final_caption": "Smiling boy holds donuts on table near chair",
+    "total_time_sec": 25.4
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"plate\",\n    \"donuts\",\n    \"chair\",\n    \"table\",\n    \"boy\",\n    \"shirtless\",\n    \"smiling\",\n    \"donut\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\",\n    \"finger\"\n  ]\n}"
+}

@@ -1,0 +1,262 @@
+{
+  "image_id": 399462,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000399462.jpg",
+  "objects": [
+    "kite",
+    "grass",
+    "child",
+    "jeans",
+    "shirt",
+    "shoes",
+    "background",
+    "people",
+    "sky",
+    "outdoors",
+    "daytime",
+    "fun",
+    "play",
+    "leisure",
+    "activity",
+    "recreation",
+    "nature",
+    "park",
+    "field",
+    "grass"
+  ],
+  "template": "We have an image with these objects: ['kite', 'grass', 'child', 'jeans', 'shirt', 'shoes', 'background', 'people', 'sky', 'outdoors', 'daytime', 'fun', 'play', 'leisure', 'activity', 'recreation', 'nature', 'park', 'field', 'grass']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Child flying kite in green field outdoors",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "outdoors",
+          "fun",
+          "play",
+          "leisure",
+          "activity",
+          "recreation",
+          "nature",
+          "park",
+          "field"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the background, people, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flying kite in green field outdoors\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"outdoors\", \"fun\", \"play\", \"leisure\", \"activity\", \"recreation\", \"nature\", \"park\", \"field\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the background, people, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Child flying a kite in green grass under a clear sky with people nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "clear sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the number of people.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and the number of people in the background."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flying a kite in green grass under a clear sky with people nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"clear sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the number of people.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and the number of people in the background.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Child flying a kite in a field of green grass among many people against a bright sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and the number of people."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flying a kite in a field of green grass among many people against a bright sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"sky\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and the number of people.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Child flying a kite in a field of green grass among few others against a bright sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "outdoors",
+          "daytime",
+          "fun",
+          "play",
+          "leisure",
+          "activity",
+          "recreation",
+          "nature",
+          "park",
+          "field"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color and type of kite, the color and type of grass, and the number of people in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flying a kite in a field of green grass among few others against a bright sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"sky\"],\n  \"hallucinated_objects\": [\"people\", \"outdoors\", \"daytime\", \"fun\", \"play\", \"leisure\", \"activity\", \"recreation\", \"nature\", \"park\", \"field\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color and type of kite, the color and type of grass, and the number of people in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Child in jeans flies a colorful kite in a lush green grass field with a few others in the background against a clear blue sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "clear blue sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of kite, the number of people in the background, and the color of the grass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child in jeans flies a colorful kite in a lush green grass field with a few others in the background against a clear blue sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"clear blue sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of kite, the number of people in the background, and the color of the grass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Child in jeans flies a red kite in a lush green grass field with other kids nearby under a bright sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "red kite"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child in jeans flies a red kite in a lush green grass field with other kids nearby under a bright sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"red kite\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Child in jeans flies a kite in lush green grass with people and a bright sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "bright sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the number of people.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and the number of people in the background."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child in jeans flies a kite in lush green grass with people and a bright sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"bright sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the number of people.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and the number of people in the background.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Child in jeans flies a kite in a lush green field with other people and a clear blue sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "clear blue sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the grass, the type of kite, and the number of people in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child in jeans flies a kite in a lush green field with other people and a clear blue sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"clear blue sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the grass, the type of kite, and the number of people in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Child in jeans flies a colorful kite in a vast green grass field with other people and a bright sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "bright sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the kite.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and the kite in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child in jeans flies a colorful kite in a vast green grass field with other people and a bright sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"sky\"],\n  \"hallucinated_objects\": [\"people\", \"bright sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the kite.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and the kite in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Child in jeans flies a colorful kite in a vast green grass field under a clear blue sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "people",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "outdoors",
+          "daytime",
+          "fun",
+          "play",
+          "leisure",
+          "activity",
+          "recreation",
+          "nature",
+          "park",
+          "field",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the child's clothing, the kite's colors, and the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, grass, child, jeans, shirt, shoes, background, people, sky, outdoors, daytime, fun, play, leisure, activity, recreation, nature, park, field, grass]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child in jeans flies a colorful kite in a vast green grass field under a clear blue sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"people\", \"sky\"],\n  \"hallucinated_objects\": [\"outdoors\", \"daytime\", \"fun\", \"play\", \"leisure\", \"activity\", \"recreation\", \"nature\", \"park\", \"field\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the child's clothing, the kite's colors, and the background.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 399462,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000399462.jpg",
+    "final_caption": "Child in jeans flies a colorful kite in a vast green grass field under a clear blue sky.",
+    "total_time_sec": 33.46
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"kite\",\n    \"grass\",\n    \"child\",\n    \"jeans\",\n    \"shirt\",\n    \"shoes\",\n    \"background\",\n    \"people\",\n    \"sky\",\n    \"outdoors\",\n    \"daytime\",\n    \"fun\",\n    \"play\",\n    \"leisure\",\n    \"activity\",\n    \"recreation\",\n    \"nature\",\n    \"park\",\n    \"field\",\n    \"grass\"\n  ]\n}"
+}

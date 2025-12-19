@@ -1,0 +1,213 @@
+{
+  "image_id": 516708,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000516708.jpg",
+  "objects": [
+    "street sign",
+    "traffic light",
+    "building",
+    "sign",
+    "street",
+    "sky",
+    "clouds",
+    "street light",
+    "arches",
+    "storefront",
+    "sign",
+    "building",
+    "sign",
+    "building",
+    "sign",
+    "building",
+    "sign",
+    "building",
+    "sign",
+    "building"
+  ],
+  "template": "We have an image with these objects: ['street sign', 'traffic light', 'building', 'sign', 'street', 'sky', 'clouds', 'street light', 'arches', 'storefront', 'sign', 'building', 'sign', 'building', 'sign', 'building', 'sign', 'building', 'sign', 'building']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Buildings and signs against cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains multiple signs and buildings, but the specific details of the signs and buildings are not provided.",
+        "edit_instructions": [
+          "Remove the traffic light and street from the candidate caption and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Buildings and signs against cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains multiple signs and buildings, but the specific details of the signs and buildings are not provided.\",\n  \"edit_instructions\": \"Remove the traffic light and street from the candidate caption and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Buildings and signs against cloudy sky with street and traffic light",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of buildings or signs.",
+        "edit_instructions": [
+          "Specify the type of buildings and signs in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Buildings and signs against cloudy sky with street and traffic light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of buildings or signs.\",\n  \"edit_instructions\": \"Specify the type of buildings and signs in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Modern buildings and street signs under a cloudy sky with traffic lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "street light"
+        ],
+        "hallucinated_objects": [
+          "sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of traffic light and the specific signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings and street signs under a cloudy sky with traffic lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"street light\"],\n  \"hallucinated_objects\": [\"sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of traffic light and the specific signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Modern buildings and street arches under a cloudy sky with a traffic light and street lamps.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings and street arches under a cloudy sky with a traffic light and street lamps.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"street lamps\"],\n  \"hallucinated_objects\": [\"street\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \"sign\", \""
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Modern buildings and arches against cloudy skies with traffic lights.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "arches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of traffic lights and signs, and the specific type of buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings and arches against cloudy skies with traffic lights.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"sign\"],\n  \"hallucinated_objects\": [\"arches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of traffic lights and signs, and the specific type of buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Modern buildings with multiple street signs and traffic lights under a sky filled with clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of buildings or the number of street signs.",
+        "edit_instructions": [
+          "Provide more specific details about the buildings and the number of street signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings with multiple street signs and traffic lights under a sky filled with clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of buildings or the number of street signs.\",\n  \"edit_instructions\": \"Provide more specific details about the buildings and the number of street signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Modern buildings with numerous street signs and a traffic light against a cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light"
+        ],
+        "hallucinated_objects": [
+          "arches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the traffic light and avoids the arches."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings with numerous street signs and a traffic light against a cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\"],\n  \"hallucinated_objects\": [\"arches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the traffic light and avoids the arches.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Modern buildings and street signs under a sky with clouds and traffic lights.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of traffic light and the specific signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings and street signs under a sky with clouds and traffic lights.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of traffic light and the specific signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Modern buildings and street signs under a sky with clouds and a traffic light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of buildings or the exact number of signs.",
+        "edit_instructions": [
+          "Specify the type of buildings and the exact number of signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings and street signs under a sky with clouds and a traffic light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of buildings or the exact number of signs.\",\n  \"edit_instructions\": \"Specify the type of buildings and the exact number of signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Modern buildings and numerous street signs under a sky with clouds and a traffic light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of traffic light and the specific signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street sign, traffic light, building, sign, street, sky, clouds, street light, arches, storefront, sign, building, sign, building, sign, building, sign, building, sign, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern buildings and numerous street signs under a sky with clouds and a traffic light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"sign\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of traffic light and the specific signs.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 516708,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000516708.jpg",
+    "final_caption": "Modern buildings and numerous street signs under a sky with clouds and a traffic light.",
+    "total_time_sec": 33.76
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"street sign\",\n    \"traffic light\",\n    \"building\",\n    \"sign\",\n    \"street\",\n    \"sky\",\n    \"clouds\",\n    \"street light\",\n    \"arches\",\n    \"storefront\",\n    \"sign\",\n    \"building\",\n    \"sign\",\n    \"building\",\n    \"sign\",\n    \"building\",\n    \"sign\",\n    \"building\",\n    \"sign\",\n    \"building\"\n  ]\n}"
+}

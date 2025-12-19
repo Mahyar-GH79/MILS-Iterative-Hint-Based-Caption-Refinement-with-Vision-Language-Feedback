@@ -1,0 +1,215 @@
+{
+  "image_id": 21503,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000021503.jpg",
+  "objects": [
+    "plate",
+    "butter",
+    "crackers",
+    "keyboard",
+    "mouse",
+    "cable",
+    "desk"
+  ],
+  "template": "We have an image with these objects: ['plate', 'butter', 'crackers', 'keyboard', 'mouse', 'cable', 'desk']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Plate of crackers and butter on desk near keyboard mouse",
+      "vlm_hint": {
+        "missing_objects": [
+          "cable"
+        ],
+        "hallucinated_objects": [
+          "keyboard",
+          "mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk near keyboard mouse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cable\"],\n  \"hallucinated_objects\": [\"keyboard\", \"mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Plate of crackers and butter beside cable on desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard",
+          "mouse"
+        ],
+        "hallucinated_objects": [
+          "cable"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the keyboard and mouse, and remove the cable."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter beside cable on desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\", \"mouse\"],\n  \"hallucinated_objects\": [\"cable\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the keyboard and mouse, and remove the cable.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Plate of crackers and butter on desk with keyboard and mouse",
+      "vlm_hint": {
+        "missing_objects": [
+          "cable"
+        ],
+        "hallucinated_objects": [
+          "keyboard",
+          "mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk with keyboard and mouse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cable\"],\n  \"hallucinated_objects\": [\"keyboard\", \"mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Plate of crackers and butter on desk with cable",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard",
+          "mouse",
+          "cable"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the keyboard, mouse, and cable from the candidate caption. The image is not on a desk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk with cable\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\", \"mouse\", \"cable\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the keyboard, mouse, and cable from the candidate caption. The image is not on a desk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Plate of crackers and butter on the table",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard",
+          "mouse",
+          "cable",
+          "desk"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is not specific enough to determine the exact objects present.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on the table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\", \"mouse\", \"cable\", \"desk\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact objects present.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Plate of crackers and butter on desk with keyboard and mouse nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cable"
+        ],
+        "hallucinated_objects": [
+          "keyboard",
+          "mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk with keyboard and mouse nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cable\"],\n  \"hallucinated_objects\": [\"keyboard\", \"mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Plate of crackers and butter on desk near cable",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard",
+          "mouse"
+        ],
+        "hallucinated_objects": [
+          "cable"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the keyboard and mouse, and remove the cable."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk near cable\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\", \"mouse\"],\n  \"hallucinated_objects\": [\"cable\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the keyboard and mouse, and remove the cable.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Plate of crackers and butter on desk with keyboard and mouse",
+      "vlm_hint": {
+        "missing_objects": [
+          "cable"
+        ],
+        "hallucinated_objects": [
+          "keyboard",
+          "mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk with keyboard and mouse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cable\"],\n  \"hallucinated_objects\": [\"keyboard\", \"mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Plate of crackers and butter on desk with cable",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard",
+          "mouse",
+          "cable"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the keyboard, mouse, and cable from the candidate caption. The image is not on a desk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter on desk with cable\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\", \"mouse\", \"cable\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the keyboard, mouse, and cable from the candidate caption. The image is not on a desk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Plate of crackers and butter",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard",
+          "mouse",
+          "cable",
+          "desk"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is not specific enough to determine the exact objects present.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plate, butter, crackers, keyboard, mouse, cable, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of crackers and butter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\", \"mouse\", \"cable\", \"desk\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact objects present.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 21503,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000021503.jpg",
+    "final_caption": "Plate of crackers and butter",
+    "total_time_sec": 25.19
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"plate\",\n    \"butter\",\n    \"crackers\",\n    \"keyboard\",\n    \"mouse\",\n    \"cable\",\n    \"desk\"\n  ]\n}"
+}

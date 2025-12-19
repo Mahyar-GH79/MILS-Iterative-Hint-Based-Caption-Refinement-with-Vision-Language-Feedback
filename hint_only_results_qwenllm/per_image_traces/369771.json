@@ -1,0 +1,302 @@
+{
+  "image_id": 369771,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000369771.jpg",
+  "objects": [
+    "cheese",
+    "broccoli",
+    "mushrooms",
+    "tomatoes",
+    "cottage cheese",
+    "beans",
+    "rice",
+    "chips",
+    "sauce",
+    "fork",
+    "spoon",
+    "bento box",
+    "table",
+    "arrows",
+    "text",
+    "number",
+    "food",
+    "container",
+    "lunch"
+  ],
+  "template": "We have an image with these objects: ['cheese', 'broccoli', 'mushrooms', 'tomatoes', 'cottage cheese', 'beans', 'rice', 'chips', 'sauce', 'fork', 'spoon', 'bento box', 'table', 'arrows', 'text', 'number', 'food', 'container', 'lunch']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Lunch food in a bento box with cheese tomatoes and rice",
+      "vlm_hint": {
+        "missing_objects": [
+          "mushrooms",
+          "beans",
+          "rice",
+          "chips",
+          "sauce"
+        ],
+        "hallucinated_objects": [
+          "broccoli",
+          "cottage cheese"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact contents of the bento box.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual contents of the bento box."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Lunch food in a bento box with cheese tomatoes and rice\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mushrooms\", \"beans\", \"rice\", \"chips\", \"sauce\"],\n  \"hallucinated_objects\": [\"broccoli\", \"cottage cheese\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact contents of the bento box.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual contents of the bento box.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Lunch in a bento box with cheese tomatoes beans and rice",
+      "vlm_hint": {
+        "missing_objects": [
+          "broccoli",
+          "mushrooms",
+          "cottage cheese",
+          "beans",
+          "rice",
+          "chips",
+          "sauce"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "arrows",
+          "text",
+          "number"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact contents of the bento box.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual contents of the bento box."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Lunch in a bento box with cheese tomatoes beans and rice\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"broccoli\", \"mushrooms\", \"cottage cheese\", \"beans\", \"rice\", \"chips\", \"sauce\"],\n  \"hallucinated_objects\": [\"table\", \"arrows\", \"text\", \"number\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact contents of the bento box.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual contents of the bento box.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bento box with cheese tomatoes mushrooms sauce",
+      "vlm_hint": {
+        "missing_objects": [
+          "rice",
+          "beans",
+          "chips",
+          "sauce",
+          "container",
+          "lunch"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "arrows",
+          "text",
+          "number"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the contents of the bento box.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with cheese tomatoes mushrooms sauce\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rice\", \"beans\", \"chips\", \"sauce\", \"container\", \"lunch\"],\n  \"hallucinated_objects\": [\"table\", \"arrows\", \"text\", \"number\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the contents of the bento box.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bento box with rice cheese tomatoes mushrooms",
+      "vlm_hint": {
+        "missing_objects": [
+          "beans",
+          "cottage cheese",
+          "sauce"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "arrows",
+          "text",
+          "number"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the contents of the bento box.",
+        "edit_instructions": [
+          "Add specific details about the contents of the bento box, such as beans, cottage cheese, and sauce."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with rice cheese tomatoes mushrooms\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"beans\", \"cottage cheese\", \"sauce\"],\n  \"hallucinated_objects\": [\"table\", \"arrows\", \"text\", \"number\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the contents of the bento box.\",\n  \"edit_instructions\": \"Add specific details about the contents of the bento box, such as beans, cottage cheese, and sauce.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bento box with rice beans cottage cheese tomato sauce",
+      "vlm_hint": {
+        "missing_objects": [
+          "broccoli",
+          "mushrooms",
+          "sauce"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "arrows",
+          "text",
+          "number"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the ingredients.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with rice beans cottage cheese tomato sauce\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"broccoli\", \"mushrooms\", \"sauce\"],\n  \"hallucinated_objects\": [\"table\", \"arrows\", \"text\", \"number\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the ingredients.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bento box with rice beans mushrooms tomato cheese sauce",
+      "vlm_hint": {
+        "missing_objects": [
+          "broccoli",
+          "cottage cheese"
+        ],
+        "hallucinated_objects": [
+          "beans",
+          "rice",
+          "chips",
+          "sauce",
+          "fork",
+          "spoon",
+          "bento box",
+          "table",
+          "arrows",
+          "text",
+          "number",
+          "food",
+          "container",
+          "lunch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact contents of the bento box.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with rice beans mushrooms tomato cheese sauce\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"broccoli\", \"cottage cheese\"],\n  \"hallucinated_objects\": [\"beans\", \"rice\", \"chips\", \"sauce\", \"fork\", \"spoon\", \"bento box\", \"table\", \"arrows\", \"text\", \"number\", \"food\", \"container\", \"lunch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact contents of the bento box.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bento box with broccoli cheese mushrooms tomatoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "beans",
+          "rice",
+          "chips",
+          "sauce"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "arrows",
+          "text",
+          "number"
+        ],
+        "genericity_hint": "The caption is too generic and does not include all the visible objects in the image.",
+        "edit_instructions": [
+          "Add beans, rice, chips, and sauce to the caption. Remove table, arrows, text, and number."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with broccoli cheese mushrooms tomatoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"beans\", \"rice\", \"chips\", \"sauce\"],\n  \"hallucinated_objects\": [\"table\", \"arrows\", \"text\", \"number\"],\n  \"genericity_hint\": \"The caption is too generic and does not include all the visible objects in the image.\",\n  \"edit_instructions\": \"Add beans, rice, chips, and sauce to the caption. Remove table, arrows, text, and number.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bento box with rice beans tomatoes mushrooms cheese sauce",
+      "vlm_hint": {
+        "missing_objects": [
+          "broccoli",
+          "cottage cheese"
+        ],
+        "hallucinated_objects": [
+          "beans",
+          "rice",
+          "chips",
+          "sauce",
+          "fork",
+          "spoon",
+          "bento box",
+          "table",
+          "arrows",
+          "text",
+          "number",
+          "food",
+          "container",
+          "lunch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact contents of the bento box.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with rice beans tomatoes mushrooms cheese sauce\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"broccoli\", \"cottage cheese\"],\n  \"hallucinated_objects\": [\"beans\", \"rice\", \"chips\", \"sauce\", \"fork\", \"spoon\", \"bento box\", \"table\", \"arrows\", \"text\", \"number\", \"food\", \"container\", \"lunch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact contents of the bento box.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bento box with broccoli cheese mushrooms tomatoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "beans",
+          "rice",
+          "chips",
+          "sauce"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "arrows",
+          "text",
+          "number"
+        ],
+        "genericity_hint": "The caption is too generic and does not include all the visible objects in the image.",
+        "edit_instructions": [
+          "Add beans, rice, chips, and sauce to the caption. Remove table, arrows, text, and number."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with broccoli cheese mushrooms tomatoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"beans\", \"rice\", \"chips\", \"sauce\"],\n  \"hallucinated_objects\": [\"table\", \"arrows\", \"text\", \"number\"],\n  \"genericity_hint\": \"The caption is too generic and does not include all the visible objects in the image.\",\n  \"edit_instructions\": \"Add beans, rice, chips, and sauce to the caption. Remove table, arrows, text, and number.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bento box with rice beans cheese tomatoes sauce",
+      "vlm_hint": {
+        "missing_objects": [
+          "broccoli",
+          "mushrooms",
+          "cottage cheese"
+        ],
+        "hallucinated_objects": [
+          "beans",
+          "rice",
+          "chips",
+          "sauce",
+          "fork",
+          "spoon",
+          "bento box",
+          "table",
+          "arrows",
+          "text",
+          "number",
+          "food",
+          "container",
+          "lunch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact contents of the bento box.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual contents of the bento box."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cheese, broccoli, mushrooms, tomatoes, cottage cheese, beans, rice, chips, sauce, fork, spoon, bento box, table, arrows, text, number, food, container, lunch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bento box with rice beans cheese tomatoes sauce\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"broccoli\", \"mushrooms\", \"cottage cheese\"],\n  \"hallucinated_objects\": [\"beans\", \"rice\", \"chips\", \"sauce\", \"fork\", \"spoon\", \"bento box\", \"table\", \"arrows\", \"text\", \"number\", \"food\", \"container\", \"lunch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact contents of the bento box.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual contents of the bento box.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 369771,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000369771.jpg",
+    "final_caption": "Bento box with rice beans cheese tomatoes sauce",
+    "total_time_sec": 36.55
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cheese\",\n    \"broccoli\",\n    \"mushrooms\",\n    \"tomatoes\",\n    \"cottage cheese\",\n    \"beans\",\n    \"rice\",\n    \"chips\",\n    \"sauce\",\n    \"fork\",\n    \"spoon\",\n    \"bento box\",\n    \"table\",\n    \"arrows\",\n    \"text\",\n    \"number\",\n    \"food\",\n    \"container\",\n    \"lunch\"\n  ]\n}"
+}

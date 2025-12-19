@@ -1,0 +1,316 @@
+{
+  "image_id": 507223,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000507223.jpg",
+  "objects": [
+    "baseball bat",
+    "helmet",
+    "catcher's mask",
+    "belt",
+    "baseball glove",
+    "striped pants",
+    "red shoes",
+    "black shirt",
+    "gray pants",
+    "red helmet",
+    "blue shirt",
+    "black mask",
+    "black belt",
+    "white pants",
+    "black shirt",
+    "gray pants",
+    "red helmet",
+    "blue shirt",
+    "black mask",
+    "white pants"
+  ],
+  "template": "We have an image with these objects: ['baseball bat', 'helmet', \"catcher's mask\", 'belt', 'baseball glove', 'striped pants', 'red shoes', 'black shirt', 'gray pants', 'red helmet', 'blue shirt', 'black mask', 'black belt', 'white pants', 'black shirt', 'gray pants', 'red helmet', 'blue shirt', 'black mask', 'white pants']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Baseball gear including bats helmets and masks",
+      "vlm_hint": {
+        "missing_objects": [
+          "black mask",
+          "gray pants"
+        ],
+        "hallucinated_objects": [
+          "black shirt",
+          "black belt",
+          "white pants"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball gear including bats helmets and masks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black mask\", \"gray pants\"],\n  \"hallucinated_objects\": [\"black shirt\", \"black belt\", \"white pants\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Baseball bat helmet catcher's mask striped pants gray pants red helmet",
+      "vlm_hint": {
+        "missing_objects": [
+          "black shirt",
+          "black mask",
+          "white pants",
+          "black belt",
+          "red shoes"
+        ],
+        "hallucinated_objects": [
+          "belt",
+          "baseball glove"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and positions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball bat helmet catcher's mask striped pants gray pants red helmet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black shirt\", \"black mask\", \"white pants\", \"black belt\", \"red shoes\"],\n  \"hallucinated_objects\": [\"belt\", \"baseball glove\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and positions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Black shirt red helmet gray pants black mask white pants",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "baseball glove",
+          "striped pants",
+          "red shoes",
+          "black mask"
+        ],
+        "hallucinated_objects": [
+          "black shirt",
+          "gray pants",
+          "red helmet",
+          "blue shirt",
+          "black mask",
+          "white pants"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black shirt red helmet gray pants black mask white pants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"baseball glove\", \"striped pants\", \"red shoes\", \"black mask\"],\n  \"hallucinated_objects\": [\"black shirt\", \"gray pants\", \"red helmet\", \"blue shirt\", \"black mask\", \"white pants\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Baseball bat helmet striped pants red shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "black mask",
+          "belt",
+          "black belt",
+          "gray pants",
+          "black shirt",
+          "red helmet",
+          "blue shirt",
+          "white pants",
+          "black shirt",
+          "gray pants",
+          "red helmet",
+          "blue shirt",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "black mask",
+          "belt",
+          "black belt",
+          "gray pants",
+          "black shirt",
+          "red helmet",
+          "blue shirt",
+          "white pants"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed and specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball bat helmet striped pants red shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black mask\", \"belt\", \"black belt\", \"gray pants\", \"black shirt\", \"red helmet\", \"blue shirt\", \"white pants\", \"black shirt\", \"gray pants\", \"red helmet\", \"blue shirt\", \"white pants\"],\n  \"hallucinated_objects\": [\"black mask\", \"belt\", \"black belt\", \"gray pants\", \"black shirt\", \"red helmet\", \"blue shirt\", \"white pants\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed and specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Baseball bat helmet striped pants red shoes black shirt gray pants black mask",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher's mask",
+          "belt",
+          "black belt",
+          "red helmet",
+          "blue shirt",
+          "black mask",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "black shirt",
+          "gray pants"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the colors and types of clothing and equipment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball bat helmet striped pants red shoes black shirt gray pants black mask\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher's mask\", \"belt\", \"black belt\", \"red helmet\", \"blue shirt\", \"black mask\", \"white pants\"],\n  \"hallucinated_objects\": [\"black shirt\", \"gray pants\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the colors and types of clothing and equipment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Red helmet black belt catcher's mask striped pants",
+      "vlm_hint": {
+        "missing_objects": [
+          "baseball bat",
+          "belt",
+          "black mask",
+          "gray pants",
+          "red shoes",
+          "black shirt",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "black belt",
+          "gray pants",
+          "red shoes",
+          "black shirt",
+          "white pants"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed and specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red helmet black belt catcher's mask striped pants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"baseball bat\", \"belt\", \"black mask\", \"gray pants\", \"red shoes\", \"black shirt\", \"white pants\"],\n  \"hallucinated_objects\": [\"black belt\", \"gray pants\", \"red shoes\", \"black shirt\", \"white pants\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed and specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Red helmet black mask baseball bat striped pants",
+      "vlm_hint": {
+        "missing_objects": [
+          "black shirt",
+          "gray pants",
+          "red shoes",
+          "black belt",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "belt",
+          "baseball glove",
+          "black mask"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and positions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red helmet black mask baseball bat striped pants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black shirt\", \"gray pants\", \"red shoes\", \"black belt\", \"white pants\"],\n  \"hallucinated_objects\": [\"belt\", \"baseball glove\", \"black mask\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and positions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Red helmet black mask striped pants white pants",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "baseball bat",
+          "black shirt",
+          "gray pants",
+          "black mask",
+          "red shoes",
+          "blue shirt",
+          "black belt",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "helmet",
+          "catcher's mask",
+          "belt",
+          "baseball glove",
+          "striped pants",
+          "black shirt",
+          "gray pants",
+          "black mask",
+          "red shoes",
+          "blue shirt",
+          "black belt",
+          "white pants"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red helmet black mask striped pants white pants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"baseball bat\", \"black shirt\", \"gray pants\", \"black mask\", \"red shoes\", \"blue shirt\", \"black belt\", \"white pants\"],\n  \"hallucinated_objects\": [\"helmet\", \"catcher's mask\", \"belt\", \"baseball glove\", \"striped pants\", \"black shirt\", \"gray pants\", \"black mask\", \"red shoes\", \"blue shirt\", \"black belt\", \"white pants\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Red helmet black mask baseball bat",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher's mask",
+          "belt",
+          "black belt",
+          "gray pants",
+          "red shoes",
+          "black shirt",
+          "white pants",
+          "black shirt",
+          "gray pants",
+          "red helmet",
+          "blue shirt",
+          "black mask",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "black mask"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red helmet black mask baseball bat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher's mask\", \"belt\", \"black belt\", \"gray pants\", \"red shoes\", \"black shirt\", \"white pants\", \"black shirt\", \"gray pants\", \"red helmet\", \"blue shirt\", \"black mask\", \"white pants\"],\n  \"hallucinated_objects\": [\"black mask\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Red helmets black masks baseball bat striped pants",
+      "vlm_hint": {
+        "missing_objects": [
+          "black shirt",
+          "gray pants",
+          "red shoes",
+          "black belt",
+          "white pants"
+        ],
+        "hallucinated_objects": [
+          "belt",
+          "black mask",
+          "black shirt",
+          "gray pants",
+          "red shoes",
+          "black belt",
+          "white pants"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the colors of the objects.",
+        "edit_instructions": [
+          "Provide more specific details about the colors of the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, helmet, catcher's mask, belt, baseball glove, striped pants, red shoes, black shirt, gray pants, red helmet, blue shirt, black mask, black belt, white pants, black shirt, gray pants, red helmet, blue shirt, black mask, white pants]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red helmets black masks baseball bat striped pants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black shirt\", \"gray pants\", \"red shoes\", \"black belt\", \"white pants\"],\n  \"hallucinated_objects\": [\"belt\", \"black mask\", \"black shirt\", \"gray pants\", \"red shoes\", \"black belt\", \"white pants\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the colors of the objects.\",\n  \"edit_instructions\": \"Provide more specific details about the colors of the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 507223,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000507223.jpg",
+    "final_caption": "Red helmets black masks baseball bat striped pants",
+    "total_time_sec": 38.49
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"baseball bat\",\n    \"helmet\",\n    \"catcher's mask\",\n    \"belt\",\n    \"baseball glove\",\n    \"striped pants\",\n    \"red shoes\",\n    \"black shirt\",\n    \"gray pants\",\n    \"red helmet\",\n    \"blue shirt\",\n    \"black mask\",\n    \"black belt\",\n    \"white pants\",\n    \"black shirt\",\n    \"gray pants\",\n    \"red helmet\",\n    \"blue shirt\",\n    \"black mask\",\n    \"white pants\"\n  ]\n}"
+}

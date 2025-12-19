@@ -1,0 +1,263 @@
+{
+  "image_id": 579655,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000579655.jpg",
+  "objects": [
+    "woman",
+    "phone",
+    "shelf",
+    "glasses",
+    "bowl",
+    "wall",
+    "chair",
+    "table",
+    "light",
+    "ceiling",
+    "floor",
+    "door",
+    "window",
+    "tablecloth",
+    "chair",
+    "table",
+    "light",
+    "ceiling",
+    "floor",
+    "door"
+  ],
+  "template": "We have an image with these objects: ['woman', 'phone', 'shelf', 'glasses', 'bowl', 'wall', 'chair', 'table', 'light', 'ceiling', 'floor', 'door', 'window', 'tablecloth', 'chair', 'table', 'light', 'ceiling', 'floor', 'door']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman at table with phone near shelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "bowl",
+          "wall",
+          "chair",
+          "table",
+          "light",
+          "ceiling",
+          "floor",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "table",
+          "light",
+          "ceiling",
+          "floor",
+          "door"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify specific objects.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image and add the objects that are visible."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with phone near shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"bowl\", \"wall\", \"chair\", \"table\", \"light\", \"ceiling\", \"floor\", \"door\"],\n  \"hallucinated_objects\": [\"chair\", \"table\", \"light\", \"ceiling\", \"floor\", \"door\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify specific objects.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image and add the objects that are visible.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman by shelf with phone glasses",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table",
+          "light",
+          "ceiling",
+          "floor",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "wall"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify specific objects.",
+        "edit_instructions": [
+          "Remove the bowl and wall, and add a chair, table, light, ceiling, floor, and door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman by shelf with phone glasses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\", \"light\", \"ceiling\", \"floor\", \"door\"],\n  \"hallucinated_objects\": [\"bowl\", \"wall\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify specific objects.\",\n  \"edit_instructions\": \"Remove the bowl and wall, and add a chair, table, light, ceiling, floor, and door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman at table with phone glasses near chair light ceiling floor door",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "light",
+          "ceiling",
+          "floor",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "glasses",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of glasses, the color of the chair, and the location of the door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with phone glasses near chair light ceiling floor door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"light\", \"ceiling\", \"floor\", \"door\"],\n  \"hallucinated_objects\": [\"glasses\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of glasses, the color of the chair, and the location of the door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Woman at table with phone and reading glasses near blue chair under light by ceiling and floor next to door",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "chair",
+          "table",
+          "light",
+          "ceiling",
+          "floor",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "blue chair"
+        ],
+        "genericity_hint": "The image is in black and white, which makes it difficult to identify specific colors.",
+        "edit_instructions": [
+          "Remove the blue chair and add a table, light, ceiling, floor, and door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with phone and reading glasses near blue chair under light by ceiling and floor next to door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"chair\", \"table\", \"light\", \"ceiling\", \"floor\", \"door\"],\n  \"hallucinated_objects\": [\"blue chair\"],\n  \"genericity_hint\": \"The image is in black and white, which makes it difficult to identify specific colors.\",\n  \"edit_instructions\": \"Remove the blue chair and add a table, light, ceiling, floor, and door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman at table with phone and glasses under light by ceiling and floor near door",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "wall",
+          "door"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify specific objects.",
+        "edit_instructions": [
+          "Remove the chair and tablecloth, and add a wall and a door."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with phone and glasses under light by ceiling and floor near door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"wall\", \"door\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify specific objects.\",\n  \"edit_instructions\": \"Remove the chair and tablecloth, and add a wall and a door.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman at table with phone and glasses under light on ceiling and floor by wall and door",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the chair and tablecloth. Add a bowl on the shelf."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with phone and glasses under light on ceiling and floor by wall and door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the chair and tablecloth. Add a bowl on the shelf.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Woman at table with phone and glasses under light on ceiling and floor by wall and door",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the chair and tablecloth. Add a bowl on the shelf."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with phone and glasses under light on ceiling and floor by wall and door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the chair and tablecloth. Add a bowl on the shelf.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Black and white woman at table with phone and glasses under light on ceiling and floor by wall and door",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the chair and tablecloth. Add a bowl to the shelf."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white woman at table with phone and glasses under light on ceiling and floor by wall and door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the chair and tablecloth. Add a bowl to the shelf.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Black and white woman at table with phone and glasses under light on ceiling and floor next to shelf with bowl.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "ceiling",
+          "floor",
+          "door",
+          "window",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, the presence of a chair, and the specific objects on the shelf."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white woman at table with phone and glasses under light on ceiling and floor next to shelf with bowl.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"light\", \"ceiling\", \"floor\", \"door\", \"window\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, the presence of a chair, and the specific objects on the shelf.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Black and white woman at table with phone and glasses under light next to shelf with bowl and chair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table",
+          "light",
+          "ceiling",
+          "floor",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "tablecloth"
+        ],
+        "genericity_hint": "The image is in black and white, but the caption includes color details.",
+        "edit_instructions": [
+          "Remove the color details and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [woman, phone, shelf, glasses, bowl, wall, chair, table, light, ceiling, floor, door, window, tablecloth, chair, table, light, ceiling, floor, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white woman at table with phone and glasses under light next to shelf with bowl and chair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\", \"light\", \"ceiling\", \"floor\", \"door\"],\n  \"hallucinated_objects\": [\"bowl\", \"tablecloth\"],\n  \"genericity_hint\": \"The image is in black and white, but the caption includes color details.\",\n  \"edit_instructions\": \"Remove the color details and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 579655,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000579655.jpg",
+    "final_caption": "Black and white woman at table with phone and glasses under light next to shelf with bowl and chair.",
+    "total_time_sec": 32.93
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"woman\",\n    \"phone\",\n    \"shelf\",\n    \"glasses\",\n    \"bowl\",\n    \"wall\",\n    \"chair\",\n    \"table\",\n    \"light\",\n    \"ceiling\",\n    \"floor\",\n    \"door\",\n    \"window\",\n    \"tablecloth\",\n    \"chair\",\n    \"table\",\n    \"light\",\n    \"ceiling\",\n    \"floor\",\n    \"door\",\n    \"window\"\n  ]\n}"
+}

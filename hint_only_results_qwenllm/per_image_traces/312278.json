@@ -1,0 +1,336 @@
+{
+  "image_id": 312278,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000312278.jpg",
+  "objects": [
+    "suitcase",
+    "luggage",
+    "sticker",
+    "tag",
+    "handle",
+    "rack",
+    "bar",
+    "sky",
+    "blue",
+    "red",
+    "green",
+    "yellow",
+    "white",
+    "black",
+    "brown",
+    "wooden",
+    "plastic",
+    "metal",
+    "travel",
+    "vacation"
+  ],
+  "template": "We have an image with these objects: ['suitcase', 'luggage', 'sticker', 'tag', 'handle', 'rack', 'bar', 'sky', 'blue', 'red', 'green', 'yellow', 'white', 'black', 'brown', 'wooden', 'plastic', 'metal', 'travel', 'vacation']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Traveler's luggage on rack under blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tag",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of luggage or the rack.",
+        "edit_instructions": [
+          "Provide more specific details about the luggage and the rack."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traveler's luggage on rack under blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tag\", \"handle\"],\n  \"hallucinated_objects\": [\"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of luggage or the rack.\",\n  \"edit_instructions\": \"Provide more specific details about the luggage and the rack.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Traveler's suitcase with tag on metal rack under sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tag",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of suitcase or the rack material.",
+        "edit_instructions": [
+          "Specify the type of suitcase and the material of the rack."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traveler's suitcase with tag on metal rack under sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tag\", \"handle\"],\n  \"hallucinated_objects\": [\"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of suitcase or the rack material.\",\n  \"edit_instructions\": \"Specify the type of suitcase and the material of the rack.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Traveler's plastic suitcase with tag on metal rack against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "handle",
+          "rack",
+          "bar",
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal",
+          "travel",
+          "vacation"
+        ],
+        "hallucinated_objects": [
+          "suitcase",
+          "tag"
+        ],
+        "genericity_hint": "The image contains a suitcase, but the caption incorrectly identifies it as a plastic suitcase.",
+        "edit_instructions": [
+          "Remove the incorrect mention of plastic and tag, and add the missing objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traveler's plastic suitcase with tag on metal rack against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"handle\", \"rack\", \"bar\", \"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\", \"travel\", \"vacation\"],\n  \"hallucinated_objects\": [\"suitcase\", \"tag\"],\n  \"genericity_hint\": \"The image contains a suitcase, but the caption incorrectly identifies it as a plastic suitcase.\",\n  \"edit_instructions\": \"Remove the incorrect mention of plastic and tag, and add the missing objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Traveler's suitcase on rack against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tag",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "rack",
+          "bar"
+        ],
+        "genericity_hint": "The image shows a collection of suitcases and luggage, but the caption is too generic and does not specify the exact objects.",
+        "edit_instructions": [
+          "Specify the exact objects in the image, such as 'suitcases' and 'luggage', and include details like 'tag' and 'handle'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traveler's suitcase on rack against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tag\", \"handle\"],\n  \"hallucinated_objects\": [\"rack\", \"bar\"],\n  \"genericity_hint\": \"The image shows a collection of suitcases and luggage, but the caption is too generic and does not specify the exact objects.\",\n  \"edit_instructions\": \"Specify the exact objects in the image, such as 'suitcases' and 'luggage', and include details like 'tag' and 'handle'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Traveler's suitcase and luggage with tag and handle against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tag",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of suitcase or luggage.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of suitcase or luggage and the details of the tag and handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traveler's suitcase and luggage with tag and handle against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tag\", \"handle\"],\n  \"hallucinated_objects\": [\"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of suitcase or luggage.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of suitcase or luggage and the details of the tag and handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Red travel suitcase and luggage with yellow tag and handle against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "handle",
+          "rack",
+          "bar",
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal",
+          "travel",
+          "vacation"
+        ],
+        "hallucinated_objects": [
+          "suitcase",
+          "sticker",
+          "tag"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image and their details."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red travel suitcase and luggage with yellow tag and handle against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"handle\", \"rack\", \"bar\", \"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\", \"travel\", \"vacation\"],\n  \"hallucinated_objects\": [\"suitcase\", \"sticker\", \"tag\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image and their details.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Red travel suitcase and luggage with yellow tag and handle under a blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "yellow tag"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the yellow tag and add a luggage object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red travel suitcase and luggage with yellow tag and handle under a blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"handle\"],\n  \"hallucinated_objects\": [\"yellow tag\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the yellow tag and add a luggage object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Red travel suitcase and luggage with handle under a blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tag",
+          "rack",
+          "bar",
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal",
+          "travel",
+          "vacation"
+        ],
+        "hallucinated_objects": [
+          "suitcase",
+          "luggage",
+          "handle"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red travel suitcase and luggage with handle under a blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tag\", \"rack\", \"bar\", \"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\", \"travel\", \"vacation\"],\n  \"hallucinated_objects\": [\"suitcase\", \"luggage\", \"handle\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Red travel tag on a metal rack under a clear blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "suitcase",
+          "tag",
+          "handle",
+          "rack",
+          "bar",
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal",
+          "travel",
+          "vacation"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains various objects related to travel and luggage, but the candidate caption does not mention all of them.",
+        "edit_instructions": [
+          "Add the missing objects to the candidate caption to make it more specific and accurate."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red travel tag on a metal rack under a clear blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"suitcase\", \"tag\", \"handle\", \"rack\", \"bar\", \"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\", \"travel\", \"vacation\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains various objects related to travel and luggage, but the candidate caption does not mention all of them.\",\n  \"edit_instructions\": \"Add the missing objects to the candidate caption to make it more specific and accurate.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Red travel tag and handle on a metal rack under a clear blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "suitcase",
+          "tag",
+          "handle",
+          "rack",
+          "bar",
+          "sky",
+          "blue",
+          "red",
+          "green",
+          "yellow",
+          "white",
+          "black",
+          "brown",
+          "wooden",
+          "plastic",
+          "metal",
+          "travel",
+          "vacation"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide enough detail about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [suitcase, luggage, sticker, tag, handle, rack, bar, sky, blue, red, green, yellow, white, black, brown, wooden, plastic, metal, travel, vacation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red travel tag and handle on a metal rack under a clear blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"suitcase\", \"tag\", \"handle\", \"rack\", \"bar\", \"sky\", \"blue\", \"red\", \"green\", \"yellow\", \"white\", \"black\", \"brown\", \"wooden\", \"plastic\", \"metal\", \"travel\", \"vacation\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide enough detail about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 312278,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000312278.jpg",
+    "final_caption": "Red travel tag and handle on a metal rack under a clear blue sky",
+    "total_time_sec": 37.96
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"suitcase\",\n    \"luggage\",\n    \"sticker\",\n    \"tag\",\n    \"handle\",\n    \"rack\",\n    \"bar\",\n    \"sky\",\n    \"blue\",\n    \"red\",\n    \"green\",\n    \"yellow\",\n    \"white\",\n    \"black\",\n    \"brown\",\n    \"wooden\",\n    \"plastic\",\n    \"metal\",\n    \"travel\",\n    \"vacation\"\n  ]\n}"
+}

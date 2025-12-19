@@ -1,0 +1,229 @@
+{
+  "image_id": 236412,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000236412.jpg",
+  "objects": [
+    "baked dish",
+    "cheese",
+    "crackers",
+    "spoon",
+    "plate",
+    "tablecloth",
+    "fork",
+    "knife",
+    "table",
+    "food",
+    "bowl",
+    "spoon",
+    "plate",
+    "tablecloth",
+    "fork",
+    "knife",
+    "table",
+    "food",
+    "bowl",
+    "spoon"
+  ],
+  "template": "We have an image with these objects: ['baked dish', 'cheese', 'crackers', 'spoon', 'plate', 'tablecloth', 'fork', 'knife', 'table', 'food', 'bowl', 'spoon', 'plate', 'tablecloth', 'fork', 'knife', 'table', 'food', 'bowl', 'spoon']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Table laden with cheese crackers food bowls and utensils",
+      "vlm_hint": {
+        "missing_objects": [
+          "baked dish",
+          "tablecloth",
+          "fork",
+          "knife",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of food or the presence of utensils.",
+        "edit_instructions": [
+          "Specify the type of food and include the presence of utensils."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table laden with cheese crackers food bowls and utensils\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"baked dish\", \"tablecloth\", \"fork\", \"knife\", \"table\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of food or the presence of utensils.\",\n  \"edit_instructions\": \"Specify the type of food and include the presence of utensils.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Tablecloth-covered table with baked dish and cheese next to utensils and food",
+      "vlm_hint": {
+        "missing_objects": [
+          "crackers",
+          "bowl"
+        ],
+        "hallucinated_objects": [
+          "knife"
+        ],
+        "genericity_hint": "The tablecloth is not necessary to describe the image.",
+        "edit_instructions": [
+          "Remove the tablecloth and add the crackers and bowl."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tablecloth-covered table with baked dish and cheese next to utensils and food\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"crackers\", \"bowl\"],\n  \"hallucinated_objects\": [\"knife\"],\n  \"genericity_hint\": \"The tablecloth is not necessary to describe the image.\",\n  \"edit_instructions\": \"Remove the tablecloth and add the crackers and bowl.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Table with baked dish and cheese beside crackers and food",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The image is a close-up of a baked dish with cheese on top, surrounded by crackers and other food items.",
+        "edit_instructions": [
+          "Remove the knife and fork from the candidate caption. Also, remove the tablecloth from the genericity hint."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with baked dish and cheese beside crackers and food\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The image is a close-up of a baked dish with cheese on top, surrounded by crackers and other food items.\",\n  \"edit_instructions\": \"Remove the knife and fork from the candidate caption. Also, remove the tablecloth from the genericity hint.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Baked dish with cheese next to crackers and food",
+      "vlm_hint": {
+        "missing_objects": [
+          "tablecloth",
+          "fork",
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The image shows a baked dish with cheese on top, but the caption is too generic and does not specify the type of dish or the presence of crackers.",
+        "edit_instructions": [
+          "The caption should be more specific about the type of dish and the presence of crackers."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baked dish with cheese next to crackers and food\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tablecloth\", \"fork\", \"knife\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The image shows a baked dish with cheese on top, but the caption is too generic and does not specify the type of dish or the presence of crackers.\",\n  \"edit_instructions\": \"The caption should be more specific about the type of dish and the presence of crackers.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Baked cheese dish with crackers on a tablecloth beside forks and knives",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "tablecloth",
+          "fork"
+        ],
+        "genericity_hint": "The image shows a baked dish with cheese on top, but the caption is too specific about the objects present.",
+        "edit_instructions": [
+          "Remove the specific objects mentioned in the caption and focus on the main subject of the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baked cheese dish with crackers on a tablecloth beside forks and knives\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"knife\"],\n  \"hallucinated_objects\": [\"tablecloth\", \"fork\"],\n  \"genericity_hint\": \"The image shows a baked dish with cheese on top, but the caption is too specific about the objects present.\",\n  \"edit_instructions\": \"Remove the specific objects mentioned in the caption and focus on the main subject of the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Baked cheese dish with crackers beside knife and fork",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The caption is too specific. The image does not show a knife and the bowl is not necessary.",
+        "edit_instructions": [
+          "Remove the knife and the bowl from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baked cheese dish with crackers beside knife and fork\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The caption is too specific. The image does not show a knife and the bowl is not necessary.\",\n  \"edit_instructions\": \"Remove the knife and the bowl from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Baked cheese dish with crackers on tablecloth",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of baked dish.",
+        "edit_instructions": [
+          "Specify the type of baked dish and remove the bowl."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baked cheese dish with crackers on tablecloth\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of baked dish.\",\n  \"edit_instructions\": \"Specify the type of baked dish and remove the bowl.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cheesy casserole with crackers on tablecloth near forks and knives",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "tablecloth",
+          "fork"
+        ],
+        "genericity_hint": "The image shows a baked dish with cheese on top, but the caption is too specific about the tablecloth, fork, and knife.",
+        "edit_instructions": [
+          "Remove the tablecloth, fork, and knife from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheesy casserole with crackers on tablecloth near forks and knives\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"knife\"],\n  \"hallucinated_objects\": [\"tablecloth\", \"fork\"],\n  \"genericity_hint\": \"The image shows a baked dish with cheese on top, but the caption is too specific about the tablecloth, fork, and knife.\",\n  \"edit_instructions\": \"Remove the tablecloth, fork, and knife from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cheesy casserole and crackers on plate near knife",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The image shows a dish with cheese and crackers, but the caption is too specific.",
+        "edit_instructions": [
+          "Remove the knife and bowl from the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheesy casserole and crackers on plate near knife\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The image shows a dish with cheese and crackers, but the caption is too specific.\",\n  \"edit_instructions\": \"Remove the knife and bowl from the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cheesy casserole and crackers on plate with fork",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The image contains a baked dish with cheese on top, but the caption is too specific.",
+        "edit_instructions": [
+          "Remove the specific objects and make the caption more generic."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baked dish, cheese, crackers, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon, plate, tablecloth, fork, knife, table, food, bowl, spoon]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheesy casserole and crackers on plate with fork\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"knife\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The image contains a baked dish with cheese on top, but the caption is too specific.\",\n  \"edit_instructions\": \"Remove the specific objects and make the caption more generic.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 236412,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000236412.jpg",
+    "final_caption": "Cheesy casserole and crackers on plate with fork",
+    "total_time_sec": 29.61
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"baked dish\",\n    \"cheese\",\n    \"crackers\",\n    \"spoon\",\n    \"plate\",\n    \"tablecloth\",\n    \"fork\",\n    \"knife\",\n    \"table\",\n    \"food\",\n    \"bowl\",\n    \"spoon\",\n    \"plate\",\n    \"tablecloth\",\n    \"fork\",\n    \"knife\",\n    \"table\",\n    \"food\",\n    \"bowl\",\n    \"spoon\"\n  ]\n}"
+}

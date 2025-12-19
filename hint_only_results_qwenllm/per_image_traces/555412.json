@@ -1,0 +1,197 @@
+{
+  "image_id": 555412,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000555412.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown concept shown",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread",
+          "pizza"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown concept shown\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\", \"pizza\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bread and pizza laid out on a counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "salad",
+          "bacon"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the ingredients.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bread and pizza laid out on a counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"salad\", \"bacon\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the ingredients.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bread pizza bacon salad on counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "lettuce",
+          "bacon"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not accurately describe the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bread pizza bacon salad on counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lettuce\", \"bacon\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not accurately describe the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Lettuce bread pizza on counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "bacon"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the ingredients.",
+        "edit_instructions": [
+          "Add the missing object 'bacon' and remove the hallucinated object 'unknown'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Lettuce bread pizza on counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bacon\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the ingredients.\",\n  \"edit_instructions\": \"Add the missing object 'bacon' and remove the hallucinated object 'unknown'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bacon lettuce pizza on counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread or the presence of bacon.",
+        "edit_instructions": [
+          "Specify the type of bread and include the presence of bacon in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bacon lettuce pizza on counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread or the presence of bacon.\",\n  \"edit_instructions\": \"Specify the type of bread and include the presence of bacon in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bacon lettuce pizza with baguette on counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread",
+          "counter"
+        ],
+        "hallucinated_objects": [
+          "baguette"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the baguette and add bread and a counter."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bacon lettuce pizza with baguette on counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\", \"counter\"],\n  \"hallucinated_objects\": [\"baguette\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the baguette and add bread and a counter.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bread and lettuce on a counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "bacon"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread or the type of lettuce.",
+        "edit_instructions": [
+          "Add the missing object 'bacon' and remove the hallucinated object 'unknown'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bread and lettuce on a counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bacon\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread or the type of lettuce.\",\n  \"edit_instructions\": \"Add the missing object 'bacon' and remove the hallucinated object 'unknown'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bacon lettuce on counter with bread",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread"
+        ],
+        "hallucinated_objects": [
+          "counter"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread or the presence of a counter.",
+        "edit_instructions": [
+          "Specify the type of bread and remove the mention of a counter."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bacon lettuce on counter with bread\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\"],\n  \"hallucinated_objects\": [\"counter\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread or the presence of a counter.\",\n  \"edit_instructions\": \"Specify the type of bread and remove the mention of a counter.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bacon lettuce on toaster bread",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread.",
+        "edit_instructions": [
+          "Specify the type of bread, such as 'toaster bread'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bacon lettuce on toaster bread\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread.\",\n  \"edit_instructions\": \"Specify the type of bread, such as 'toaster bread'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Toasted bacon lettuce on toast bread",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread.",
+        "edit_instructions": [
+          "Specify the type of bread, such as 'flatbread' or 'naan'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Toasted bacon lettuce on toast bread\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread.\",\n  \"edit_instructions\": \"Specify the type of bread, such as 'flatbread' or 'naan'.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 555412,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000555412.jpg",
+    "final_caption": "Toasted bacon lettuce on toast bread",
+    "total_time_sec": 24.97
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n[\"pizza\", \"lettuce\", \"bacon\", \"bread\", \"spinach\", \"cheese\", \"green\", \"leaves\", \"food\", \"vegetables\", \"dinner\", \"lunch\", \"meal\", \"baked\", \"breaded\", \"crust\", \"green\", \"lettuce\", \"bacon\", \"spinach\"]"
+}

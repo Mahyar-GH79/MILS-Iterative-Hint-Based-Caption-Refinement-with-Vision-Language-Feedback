@@ -1,0 +1,253 @@
+{
+  "image_id": 80666,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000080666.jpg",
+  "objects": [
+    "cat",
+    "bench",
+    "house",
+    "trees",
+    "grass",
+    "trash can",
+    "roof",
+    "windows",
+    "pathway",
+    "fence",
+    "palm tree",
+    "building",
+    "sky",
+    "leaves",
+    "sidewalk",
+    "street",
+    "street light",
+    "street sign",
+    "street lamp",
+    "street lamp post"
+  ],
+  "template": "We have an image with these objects: ['cat', 'bench', 'house', 'trees', 'grass', 'trash can', 'roof', 'windows', 'pathway', 'fence', 'palm tree', 'building', 'sky', 'leaves', 'sidewalk', 'street', 'street light', 'street sign', 'street lamp', 'street lamp post']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat on bench under trees by house",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "roof",
+          "windows",
+          "pathway",
+          "fence",
+          "palm tree",
+          "building",
+          "sky",
+          "leaves",
+          "sidewalk",
+          "street",
+          "street light",
+          "street lamp",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "house"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench under trees by house\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"roof\", \"windows\", \"pathway\", \"fence\", \"palm tree\", \"building\", \"sky\", \"leaves\", \"sidewalk\", \"street\", \"street light\", \"street lamp\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"trees\", \"house\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat on bench near palm tree by building",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "roof",
+          "windows",
+          "pathway",
+          "street",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "palm tree",
+          "building",
+          "sky",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of a trash can, roof, windows, pathway, street, and street lamp post."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench near palm tree by building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"roof\", \"windows\", \"pathway\", \"street\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"palm tree\", \"building\", \"sky\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of a trash can, roof, windows, pathway, street, and street lamp post.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat on bench near trash can by house with roof and windows on pathway near street lamp post",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "street light",
+          "street sign",
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench near trash can by house with roof and windows on pathway near street lamp post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"street light\", \"street sign\", \"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat on bench under palm tree near trash can by house with roof and windows on pathway near streetlamp post",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "palm tree",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench under palm tree near trash can by house with roof and windows on pathway near streetlamp post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"palm tree\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat on bench amidst trees near trash can by house with roof and windows on pathway near street lamp post",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "street light",
+          "street sign",
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench amidst trees near trash can by house with roof and windows on pathway near street lamp post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"street light\", \"street sign\", \"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat on bench under trees near trash can by house with roof and windows on pathway near streetlamp post",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench under trees near trash can by house with roof and windows on pathway near streetlamp post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat on bench amid trees near trash can by house with roof and windows on pathway near streetlamp post",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench amid trees near trash can by house with roof and windows on pathway near streetlamp post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat on bench among trees near trash can by house with street lamp post on pathway",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench among trees near trash can by house with street lamp post on pathway\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat on bench under trees near trash can by house with street lamp post on pathway",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench under trees near trash can by house with street lamp post on pathway\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"trees\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat on bench by trash can near house with street lamp on pathway",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "street lamp",
+          "street lamp post"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, bench, house, trees, grass, trash can, roof, windows, pathway, fence, palm tree, building, sky, leaves, sidewalk, street, street light, street sign, street lamp, street lamp post]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on bench by trash can near house with street lamp on pathway\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"street lamp\", \"street lamp post\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 80666,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000080666.jpg",
+    "final_caption": "Cat on bench by trash can near house with street lamp on pathway",
+    "total_time_sec": 31.75
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"bench\",\n    \"house\",\n    \"trees\",\n    \"grass\",\n    \"trash can\",\n    \"roof\",\n    \"windows\",\n    \"pathway\",\n    \"fence\",\n    \"palm tree\",\n    \"building\",\n    \"sky\",\n    \"leaves\",\n    \"sidewalk\",\n    \"street\",\n    \"street light\",\n    \"street sign\",\n    \"street lamp\",\n    \"street lamp post\"\n  ]\n}"
+}

@@ -1,0 +1,197 @@
+{
+  "image_id": 361919,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000361919.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown object in focus",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "specific",
+        "edit_instructions": [
+          "add people"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object in focus\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"people\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"specific\",\n  \"edit_instructions\": \"add people\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People focusing on an unknown object",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift",
+          "ski slope"
+        ],
+        "hallucinated_objects": [
+          "unknown object"
+        ],
+        "genericity_hint": "The image is specific to a ski resort with people skiing and snowboarding.",
+        "edit_instructions": [
+          "Remove the unknown object and add details about the ski lift and slope."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People focusing on an unknown object\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski lift\", \"ski slope\"],\n  \"hallucinated_objects\": [\"unknown object\"],\n  \"genericity_hint\": \"The image is specific to a ski resort with people skiing and snowboarding.\",\n  \"edit_instructions\": \"Remove the unknown object and add details about the ski lift and slope.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People gaze at a ski lift rising above a snowy slope.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is of a ski resort with people skiing and snowboarding.",
+        "edit_instructions": [
+          "Add a ski lift to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People gaze at a ski lift rising above a snowy slope.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"ski lift\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"The image is of a ski resort with people skiing and snowboarding.\",\n  \"edit_instructions\": \"Add a ski lift to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People gaze at a ski lift rising above a snowy slope with skiers below.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Specify the objects in the image, such as the ski lift and the snowy slope."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People gaze at a ski lift rising above a snowy slope with skiers below.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"ski lift\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Specify the objects in the image, such as the ski lift and the snowy slope.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Ski lift rises over snowy slope attracting skiers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "skiers",
+        "edit_instructions": [
+          "add ski lift"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski lift rises over snowy slope attracting skiers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"ski lift\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"skiers\",\n  \"edit_instructions\": \"add ski lift\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Ski lift climbs over snow inviting skiers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the object.",
+        "edit_instructions": [
+          "Specify the object in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski lift climbs over snow inviting skiers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski lift\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the object.\",\n  \"edit_instructions\": \"Specify the object in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Ski lift climbs over snow inviting skiers",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is specific to a ski resort with people skiing and snowboarding.",
+        "edit_instructions": [
+          "Add a ski lift to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski lift climbs over snow inviting skiers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"ski lift\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"The image is specific to a ski resort with people skiing and snowboarding.\",\n  \"edit_instructions\": \"Add a ski lift to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Ski lift ascends through snow welcoming skiers and snowboarders.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lift"
+        ],
+        "hallucinated_objects": [
+          "snowboarders"
+        ],
+        "genericity_hint": "The image does not show a ski lift.",
+        "edit_instructions": [
+          "Remove the ski lift and snowboarders from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ski lift ascends through snow welcoming skiers and snowboarders.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"ski lift\",\n  \"hallucinated_objects\": \"snowboarders\",\n  \"genericity_hint\": \"The image does not show a ski lift.\",\n  \"edit_instructions\": \"Remove the ski lift and snowboarders from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Unknown object rises in snowy scene.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "unknown object"
+        ],
+        "genericity_hint": "The image is specific to a snowy scene with people skiing.",
+        "edit_instructions": [
+          "Remove the unknown object and focus on the people skiing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object rises in snowy scene.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"people\",\n  \"hallucinated_objects\": \"unknown object\",\n  \"genericity_hint\": \"The image is specific to a snowy scene with people skiing.\",\n  \"edit_instructions\": \"Remove the unknown object and focus on the people skiing.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People ski in a snowy scene.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski lifts",
+          "ski slopes"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is generic and lacks specific details.",
+        "edit_instructions": [
+          "Add ski lifts and slopes to the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People ski in a snowy scene.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski lifts\", \"ski slopes\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is generic and lacks specific details.\",\n  \"edit_instructions\": \"Add ski lifts and slopes to the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 361919,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000361919.jpg",
+    "final_caption": "People ski in a snowy scene.",
+    "total_time_sec": 23.51
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n[\"ski lift\", \"ski slope\", \"ski resort\", \"ski lodge\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\", \"ski slope\", \"ski lift\"]"
+}

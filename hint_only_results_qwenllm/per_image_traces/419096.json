@@ -1,0 +1,257 @@
+{
+  "image_id": 419096,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000419096.jpg",
+  "objects": [
+    "BNSF train",
+    "tracks",
+    "gravel",
+    "bridge",
+    "streetlights",
+    "trees",
+    "clouds",
+    "sky",
+    "sign",
+    "light pole",
+    "train car",
+    "train car",
+    "train car",
+    "train car",
+    "train car",
+    "train car",
+    "train car",
+    "train car",
+    "train car",
+    "train car"
+  ],
+  "template": "We have an image with these objects: ['BNSF train', 'tracks', 'gravel', 'bridge', 'streetlights', 'trees', 'clouds', 'sky', 'sign', 'light pole', 'train car', 'train car', 'train car', 'train car', 'train car', 'train car', 'train car', 'train car', 'train car', 'train car']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "BNSF train crosses bridge under streetlights against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The image is not specific about the number of train cars.",
+        "edit_instructions": [
+          "Remove the streetlights, sign, and light pole. Add a specific number of train cars."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: BNSF train crosses bridge under streetlights against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The image is not specific about the number of train cars.\",\n  \"edit_instructions\": \"Remove the streetlights, sign, and light pole. Add a specific number of train cars.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "BNSF train with nine cars crosses bridge against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "trees",
+          "sign",
+          "light pole"
+        ],
+        "hallucinated_objects": [
+          "nine cars"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the number of streetlights, trees, and signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: BNSF train with nine cars crosses bridge against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"trees\", \"sign\", \"light pole\"],\n  \"hallucinated_objects\": [\"nine cars\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the number of streetlights, trees, and signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "BNSF train with multiple cars crosses bridge under streetlights amid trees and signs.",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "trees",
+          "signs"
+        ],
+        "hallucinated_objects": [
+          "light pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the number of streetlights, trees, and signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: BNSF train with multiple cars crosses bridge under streetlights amid trees and signs.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"trees\", \"signs\"],\n  \"hallucinated_objects\": [\"light pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the number of streetlights, trees, and signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "BNSF train with ten cars crosses a bridge under two streetlights among tall trees and multiple signs.",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "trees",
+          "signs"
+        ],
+        "hallucinated_objects": [
+          "BNSF train",
+          "tracks",
+          "gravel",
+          "bridge",
+          "train car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: BNSF train with ten cars crosses a bridge under two streetlights among tall trees and multiple signs.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"trees\", \"signs\"],\n  \"hallucinated_objects\": [\"BNSF train\", \"tracks\", \"gravel\", \"bridge\", \"train car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Ten train cars cross under streetlights amid trees near signs.",
+      "vlm_hint": {
+        "missing_objects": [
+          "BNSF train",
+          "tracks",
+          "gravel",
+          "bridge",
+          "streetlights",
+          "trees",
+          "clouds",
+          "sky",
+          "sign",
+          "light pole",
+          "train car"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of train cars or the presence of a BNSF train.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the number of train cars and the presence of a BNSF train."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ten train cars cross under streetlights amid trees near signs.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"BNSF train\", \"tracks\", \"gravel\", \"bridge\", \"streetlights\", \"trees\", \"clouds\", \"sky\", \"sign\", \"light pole\", \"train car\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of train cars or the presence of a BNSF train.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the number of train cars and the presence of a BNSF train.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "A BNSF train with ten cars crosses tracks under streetlights amid trees in the sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "light pole",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "trees",
+          "clouds",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of train cars and the presence of a light pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A BNSF train with ten cars crosses tracks under streetlights amid trees in the sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light pole\", \"sign\"],\n  \"hallucinated_objects\": [\"streetlights\", \"trees\", \"clouds\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of train cars and the presence of a light pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "A BNSF train with nine cars crosses tracks near a sign and light pole.",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "trees",
+          "clouds",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "sign",
+          "light pole"
+        ],
+        "genericity_hint": "The caption is too specific and does not account for the presence of a bridge in the background.",
+        "edit_instructions": [
+          "Remove the sign and light pole, and mention the bridge in the background."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A BNSF train with nine cars crosses tracks near a sign and light pole.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"trees\", \"clouds\", \"sky\"],\n  \"hallucinated_objects\": [\"sign\", \"light pole\"],\n  \"genericity_hint\": \"The caption is too specific and does not account for the presence of a bridge in the background.\",\n  \"edit_instructions\": \"Remove the sign and light pole, and mention the bridge in the background.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "A BNSF train crosses tracks under a bridge with trees and clouds in the sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of train cars and the presence of streetlights and a sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A BNSF train crosses tracks under a bridge with trees and clouds in the sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"hallucinated_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of train cars and the presence of streetlights and a sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "A BNSF train with nine cars crosses tracks over a bridge among trees and clouds in the sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of train cars.",
+        "edit_instructions": [
+          "Remove the phrase 'nine cars' and specify the number of train cars."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A BNSF train with nine cars crosses tracks over a bridge among trees and clouds in the sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"hallucinated_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of train cars.\",\n  \"edit_instructions\": \"Remove the phrase 'nine cars' and specify the number of train cars.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "A BNSF train with ten cars crosses tracks over a bridge among trees and clouds in the sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "hallucinated_objects": [
+          "streetlights",
+          "sign",
+          "light pole"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of train cars.",
+        "edit_instructions": [
+          "Specify the number of train cars and include the streetlights, sign, and light pole."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [BNSF train, tracks, gravel, bridge, streetlights, trees, clouds, sky, sign, light pole, train car, train car, train car, train car, train car, train car, train car, train car, train car, train car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A BNSF train with ten cars crosses tracks over a bridge among trees and clouds in the sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"hallucinated_objects\": [\"streetlights\", \"sign\", \"light pole\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of train cars.\",\n  \"edit_instructions\": \"Specify the number of train cars and include the streetlights, sign, and light pole.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 419096,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000419096.jpg",
+    "final_caption": "A BNSF train with ten cars crosses tracks over a bridge among trees and clouds in the sky.",
+    "total_time_sec": 35.34
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"BNSF train\",\n    \"tracks\",\n    \"gravel\",\n    \"bridge\",\n    \"streetlights\",\n    \"trees\",\n    \"clouds\",\n    \"sky\",\n    \"sign\",\n    \"light pole\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\",\n    \"train car\"\n  ]\n}"
+}

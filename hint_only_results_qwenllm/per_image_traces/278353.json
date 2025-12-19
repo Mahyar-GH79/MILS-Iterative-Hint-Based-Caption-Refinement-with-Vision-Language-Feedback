@@ -1,0 +1,257 @@
+{
+  "image_id": 278353,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000278353.jpg",
+  "objects": [
+    "sheep",
+    "grass",
+    "fence",
+    "tag",
+    "ears",
+    "wool",
+    "legs",
+    "nose",
+    "mouth",
+    "eyes",
+    "feet",
+    "tail",
+    "fur",
+    "hooves",
+    "neck",
+    "body",
+    "head",
+    "sheep tag",
+    "sheep ears",
+    "sheep wool"
+  ],
+  "template": "We have an image with these objects: ['sheep', 'grass', 'fence', 'tag', 'ears', 'wool', 'legs', 'nose', 'mouth', 'eyes', 'feet', 'tail', 'fur', 'hooves', 'neck', 'body', 'head', 'sheep tag', 'sheep ears', 'sheep wool']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sheep grazing behind fenced area tagged",
+      "vlm_hint": {
+        "missing_objects": [
+          "ears",
+          "hooves",
+          "neck",
+          "body",
+          "head"
+        ],
+        "hallucinated_objects": [
+          "fence",
+          "tag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features and the environment.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific features of the sheep and the environment, such as the presence of ears, hooves, neck, body, and head, and the exact nature of the fence and tag."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing behind fenced area tagged\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ears\", \"hooves\", \"neck\", \"body\", \"head\"],\n  \"hallucinated_objects\": [\"fence\", \"tag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features and the environment.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific features of the sheep and the environment, such as the presence of ears, hooves, neck, body, and head, and the exact nature of the fence and tag.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Sheep with ears and wool grazing behind a fenced area tagged on neck.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hooves",
+          "neck",
+          "body",
+          "head"
+        ],
+        "hallucinated_objects": [
+          "fence",
+          "tag",
+          "ears",
+          "wool",
+          "legs",
+          "nose",
+          "mouth",
+          "eyes",
+          "feet",
+          "tail",
+          "fur"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features and the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features and the environment, such as the color of the wool, the type of fence, and the presence of a tag on the sheep's neck."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep with ears and wool grazing behind a fenced area tagged on neck.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hooves\", \"neck\", \"body\", \"head\"],\n  \"hallucinated_objects\": [\"fence\", \"tag\", \"ears\", \"wool\", \"legs\", \"nose\", \"mouth\", \"eyes\", \"feet\", \"tail\", \"fur\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features and the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features and the environment, such as the color of the wool, the type of fence, and the presence of a tag on the sheep's neck.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "White sheep with tags on neck graze behind wooden fences.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hooves",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "graze"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's appearance and behavior.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's appearance and behavior, and include the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with tags on neck graze behind wooden fences.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hooves\", \"tail\"],\n  \"hallucinated_objects\": [\"graze\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's appearance and behavior.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's appearance and behavior, and include the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "White sheep with tags and long wool stand beside wooden fences showing hooves and tails.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hooves",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features and the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features and the environment, and remove the mention of the fence."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with tags and long wool stand beside wooden fences showing hooves and tails.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hooves\", \"tail\"],\n  \"hallucinated_objects\": [\"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features and the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features and the environment, and remove the mention of the fence.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "White sheep with tags and long wool stand by showing hooves and tails.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hooves",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features, such as the color of its wool, the position of its ears, and the presence of a tag on its ear."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with tags and long wool stand by showing hooves and tails.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hooves\", \"tail\"],\n  \"hallucinated_objects\": [\"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features, such as the color of its wool, the position of its ears, and the presence of a tag on its ear.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "White sheep with a tag and long wool stand showing ears and tails.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ears",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "long wool"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features, such as the color of the wool and the presence of tags."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with a tag and long wool stand showing ears and tails.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ears\", \"tail\"],\n  \"hallucinated_objects\": [\"long wool\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features, such as the color of the wool and the presence of tags.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "White sheep with a tag show floppy ears and fluffy tails.",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "hooves",
+          "feet",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "ears",
+          "tail"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features and the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features and the environment, and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with a tag show floppy ears and fluffy tails.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"hooves\", \"feet\", \"tail\"],\n  \"hallucinated_objects\": [\"ears\", \"tail\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features and the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features and the environment, and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "White sheep with a tag stand by a fence, showing floppy ears and fluffy wool.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hooves",
+          "neck",
+          "body",
+          "head"
+        ],
+        "hallucinated_objects": [
+          "ears"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features, such as its hooves, neck, body, and head."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with a tag stand by a fence, showing floppy ears and fluffy wool.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hooves\", \"neck\", \"body\", \"head\"],\n  \"hallucinated_objects\": [\"ears\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features, such as its hooves, neck, body, and head.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "White sheep with a tag stands on a fence showing fluffy wool and long neck.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ears",
+          "hooves",
+          "neck"
+        ],
+        "hallucinated_objects": [
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the sheep's features.",
+        "edit_instructions": [
+          "Provide more specific details about the sheep's features, such as its ears, hooves, and neck."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with a tag stands on a fence showing fluffy wool and long neck.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ears\", \"hooves\", \"neck\"],\n  \"hallucinated_objects\": [\"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the sheep's features.\",\n  \"edit_instructions\": \"Provide more specific details about the sheep's features, such as its ears, hooves, and neck.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "White sheep with tag and ears grazes, fluffy wool and long neck visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "hooves",
+          "tail"
+        ],
+        "hallucinated_objects": [
+          "ears",
+          "nose",
+          "mouth",
+          "feet",
+          "neck",
+          "body",
+          "head",
+          "sheep tag",
+          "sheep wool"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a fence, hooves, tail, and more detailed descriptions of the sheep's features."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, fence, tag, ears, wool, legs, nose, mouth, eyes, feet, tail, fur, hooves, neck, body, head, sheep tag, sheep ears, sheep wool]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White sheep with tag and ears grazes, fluffy wool and long neck visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"hooves\", \"tail\"],\n  \"hallucinated_objects\": [\"ears\", \"nose\", \"mouth\", \"feet\", \"neck\", \"body\", \"head\", \"sheep tag\", \"sheep wool\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a fence, hooves, tail, and more detailed descriptions of the sheep's features.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 278353,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000278353.jpg",
+    "final_caption": "White sheep with tag and ears grazes, fluffy wool and long neck visible.",
+    "total_time_sec": 35.9
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"sheep\",\n    \"grass\",\n    \"fence\",\n    \"tag\",\n    \"ears\",\n    \"wool\",\n    \"legs\",\n    \"nose\",\n    \"mouth\",\n    \"eyes\",\n    \"feet\",\n    \"tail\",\n    \"fur\",\n    \"hooves\",\n    \"neck\",\n    \"body\",\n    \"head\",\n    \"sheep tag\",\n    \"sheep ears\",\n    \"sheep wool\"\n  ]\n}"
+}

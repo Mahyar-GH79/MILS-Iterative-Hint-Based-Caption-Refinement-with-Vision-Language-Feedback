@@ -1,0 +1,294 @@
+{
+  "image_id": 483667,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000483667.jpg",
+  "objects": [
+    "man",
+    "hat",
+    "tie",
+    "shirt",
+    "chair",
+    "floor",
+    "wall",
+    "counter",
+    "bottle",
+    "cup",
+    "door",
+    "curtain",
+    "table",
+    "chair",
+    "floor",
+    "wall",
+    "counter",
+    "bottle",
+    "cup",
+    "door"
+  ],
+  "template": "We have an image with these objects: ['man', 'hat', 'tie', 'shirt', 'chair', 'floor', 'wall', 'counter', 'bottle', 'cup', 'door', 'curtain', 'table', 'chair', 'floor', 'wall', 'counter', 'bottle', 'cup', 'door']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in hat tie sits at table near counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair"
+        ],
+        "hallucinated_objects": [
+          "bottle",
+          "cup",
+          "door",
+          "curtain"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the chair and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat tie sits at table near counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\"],\n  \"hallucinated_objects\": [\"bottle\", \"cup\", \"door\", \"curtain\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the chair and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in hat and tie sits on chair near counter",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "counter",
+          "bottle",
+          "cup",
+          "door",
+          "curtain",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "tie",
+          "shirt",
+          "floor",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the presence of a counter, and the specific items on the counter."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and tie sits on chair near counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"counter\", \"bottle\", \"cup\", \"door\", \"curtain\", \"table\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"tie\", \"shirt\", \"floor\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the presence of a counter, and the specific items on the counter.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man sits on chair by counter with bottles and cups nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door",
+          "curtain"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "tie",
+          "shirt",
+          "floor",
+          "wall",
+          "counter"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on chair by counter with bottles and cups nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"bottle\", \"cup\", \"door\", \"curtain\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"tie\", \"shirt\", \"floor\", \"wall\", \"counter\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Chair by counter near bottles and cups with door and curtain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "hat",
+          "tie",
+          "shirt"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "floor",
+          "wall",
+          "counter",
+          "bottle",
+          "cup",
+          "door",
+          "curtain"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the man, hat, tie, and shirt."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chair by counter near bottles and cups with door and curtain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"hat\", \"tie\", \"shirt\"],\n  \"hallucinated_objects\": [\"chair\", \"floor\", \"wall\", \"counter\", \"bottle\", \"cup\", \"door\", \"curtain\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the man, hat, tie, and shirt.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in hat and tie shirt near counter bottles cups",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the specific bottles and cups, and the type of door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and tie shirt near counter bottles cups\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"hallucinated_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the specific bottles and cups, and the type of door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in hat and tie shirt by counter with bottles and cups near door.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the specific bottles and cups, and the type of door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and tie shirt by counter with bottles and cups near door.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"hallucinated_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the specific bottles and cups, and the type of door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in hat and tie shirt leans on counter by bottles and cups near wooden door.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the number of bottles and cups, and the type of door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and tie shirt leans on counter by bottles and cups near wooden door.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"hallucinated_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the number of bottles and cups, and the type of door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in hat and tie shirt leans on counter near bottles and cups by wooden door.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the number of bottles and cups, and the type of door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and tie shirt leans on counter near bottles and cups by wooden door.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"hallucinated_objects\": [\"chair\", \"bottle\", \"cup\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the number of bottles and cups, and the type of door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in hat and tie stands by counter amidst multiple bottles and cups near wooden door.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table",
+          "bottle",
+          "cup",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "tie",
+          "shirt",
+          "floor",
+          "wall",
+          "counter"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the chair, table, bottles, cups, and door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and tie stands by counter amidst multiple bottles and cups near wooden door.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\", \"bottle\", \"cup\", \"door\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"tie\", \"shirt\", \"floor\", \"wall\", \"counter\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the chair, table, bottles, cups, and door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Chair and table near bottles and cups by wooden door.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "tie",
+          "shirt"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "floor",
+          "wall",
+          "counter",
+          "bottle",
+          "cup",
+          "door",
+          "curtain",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, hat, tie, shirt, chair, floor, wall, counter, bottle, cup, door, curtain, table, chair, floor, wall, counter, bottle, cup, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Chair and table near bottles and cups by wooden door.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"tie\", \"shirt\"],\n  \"hallucinated_objects\": [\"chair\", \"floor\", \"wall\", \"counter\", \"bottle\", \"cup\", \"door\", \"curtain\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 483667,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000483667.jpg",
+    "final_caption": "Chair and table near bottles and cups by wooden door.",
+    "total_time_sec": 36.03
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"hat\",\n    \"tie\",\n    \"shirt\",\n    \"chair\",\n    \"floor\",\n    \"wall\",\n    \"counter\",\n    \"bottle\",\n    \"cup\",\n    \"door\",\n    \"curtain\",\n    \"table\",\n    \"chair\",\n    \"floor\",\n    \"wall\",\n    \"counter\",\n    \"bottle\",\n    \"cup\",\n    \"door\",\n    \"curtain\"\n  ]\n}"
+}

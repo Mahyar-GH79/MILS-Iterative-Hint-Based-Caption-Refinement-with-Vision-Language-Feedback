@@ -1,0 +1,225 @@
+{
+  "image_id": 228144,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000228144.jpg",
+  "objects": [
+    "chair",
+    "mirror",
+    "pillow",
+    "table",
+    "plant",
+    "armchair",
+    "cushion",
+    "floor",
+    "wall",
+    "chair",
+    "mirror",
+    "pillow",
+    "table",
+    "plant",
+    "armchair",
+    "cushion",
+    "floor",
+    "wall",
+    "chair",
+    "mirror"
+  ],
+  "template": "We have an image with these objects: ['chair', 'mirror', 'pillow', 'table', 'plant', 'armchair', 'cushion', 'floor', 'wall', 'chair', 'mirror', 'pillow', 'table', 'plant', 'armchair', 'cushion', 'floor', 'wall', 'chair', 'mirror']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Modern living room with chairs mirrors and plants",
+      "vlm_hint": {
+        "missing_objects": [
+          "cushion",
+          "floor",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "plant",
+          "armchair"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of chairs or the presence of a cushion.",
+        "edit_instructions": [
+          "Specify the type of chairs and include a cushion in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern living room with chairs mirrors and plants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cushion\", \"floor\", \"wall\"],\n  \"hallucinated_objects\": [\"table\", \"plant\", \"armchair\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of chairs or the presence of a cushion.\",\n  \"edit_instructions\": \"Specify the type of chairs and include a cushion in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Modern living room with armchair and cushion near mirror on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific. It should be more general.",
+        "edit_instructions": [
+          "Remove the specific objects and make the caption more general."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern living room with armchair and cushion near mirror on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"plant\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific. It should be more general.\",\n  \"edit_instructions\": \"Remove the specific objects and make the caption more general.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Modern living room with chairs and mirrors on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "cushion"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the table and plant, and change the caption to 'Modern living room with chairs and mirrors on the floor'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern living room with chairs and mirrors on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"plant\"],\n  \"hallucinated_objects\": [\"cushion\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the table and plant, and change the caption to 'Modern living room with chairs and mirrors on the floor'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Black and white modern living room with chairs and mirrors on the floor.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "plant",
+          "cushion"
+        ],
+        "hallucinated_objects": [
+          "floor",
+          "wall"
+        ],
+        "genericity_hint": "The image is in black and white, but the caption suggests a modern living room with specific objects.",
+        "edit_instructions": [
+          "Remove the table, plant, and cushion from the caption. Add the floor and wall to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white modern living room with chairs and mirrors on the floor.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"plant\", \"cushion\"],\n  \"hallucinated_objects\": [\"floor\", \"wall\"],\n  \"genericity_hint\": \"The image is in black and white, but the caption suggests a modern living room with specific objects.\",\n  \"edit_instructions\": \"Remove the table, plant, and cushion from the caption. Add the floor and wall to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Black and white living room with chairs and mirrors on the floor by the wall.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "plant",
+          "cushion"
+        ],
+        "hallucinated_objects": [
+          "floor",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Specify the exact objects in the image, such as 'table', 'plant', and 'cushion'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white living room with chairs and mirrors on the floor by the wall.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"plant\", \"cushion\"],\n  \"hallucinated_objects\": [\"floor\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Specify the exact objects in the image, such as 'table', 'plant', and 'cushion'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Black and white living room with chairs mirrors table plant cushion on floor by wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "cushion",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "plant"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the cushion and table from the list of objects. Add a plant to the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white living room with chairs mirrors table plant cushion on floor by wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cushion\", \"table\"],\n  \"hallucinated_objects\": [\"plant\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the cushion and table from the list of objects. Add a plant to the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Black and white living room chairs mirrors on floor by wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "cushion",
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the missing objects and add the cushion and table."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white living room chairs mirrors on floor by wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cushion\", \"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the missing objects and add the cushion and table.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Black and white armchair and chair with mirrors on table by wall cushion on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "cushion"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the table, plant, and cushion. Ensure the image is in black and white."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white armchair and chair with mirrors on table by wall cushion on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"plant\"],\n  \"hallucinated_objects\": [\"cushion\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the table, plant, and cushion. Ensure the image is in black and white.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Black and white armchair and chair with mirrors by wall on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "cushion"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the table and cushion from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white armchair and chair with mirrors by wall on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"cushion\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the table and cushion from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Black and white armchair and chair with mirrors by wall on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "cushion"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the table and cushion from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror, pillow, table, plant, armchair, cushion, floor, wall, chair, mirror]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white armchair and chair with mirrors by wall on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"cushion\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the table and cushion from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 228144,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000228144.jpg",
+    "final_caption": "Black and white armchair and chair with mirrors by wall on floor",
+    "total_time_sec": 28.23
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"chair\",\n    \"mirror\",\n    \"pillow\",\n    \"table\",\n    \"plant\",\n    \"armchair\",\n    \"cushion\",\n    \"floor\",\n    \"wall\",\n    \"chair\",\n    \"mirror\",\n    \"pillow\",\n    \"table\",\n    \"plant\",\n    \"armchair\",\n    \"cushion\",\n    \"floor\",\n    \"wall\",\n    \"chair\",\n    \"mirror\"\n  ]\n}"
+}

@@ -1,0 +1,281 @@
+{
+  "image_id": 107226,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000107226.jpg",
+  "objects": [
+    "dogs",
+    "bicycles",
+    "people",
+    "umbrellas",
+    "banners",
+    "grass",
+    "harnesses",
+    "tracks",
+    "sled",
+    "chains",
+    "hats",
+    "gloves",
+    "jackets",
+    "trees",
+    "fence",
+    "water",
+    "sky",
+    "clouds",
+    "snow"
+  ],
+  "template": "We have an image with these objects: ['dogs', 'bicycles', 'people', 'umbrellas', 'banners', 'grass', 'harnesses', 'tracks', 'sled', 'chains', 'hats', 'gloves', 'jackets', 'trees', 'fence', 'water', 'sky', 'clouds', 'snow']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Dogs pull sleds through snowy grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycles",
+          "tracks",
+          "harnesses",
+          "chains",
+          "fence",
+          "water",
+          "snow"
+        ],
+        "hallucinated_objects": [
+          "banners",
+          "trees",
+          "sky",
+          "clouds"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of bicycles, tracks, harnesses, chains, a fence, water, and snow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds through snowy grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycles\", \"tracks\", \"harnesses\", \"chains\", \"fence\", \"water\", \"snow\"],\n  \"hallucinated_objects\": [\"banners\", \"trees\", \"sky\", \"clouds\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of bicycles, tracks, harnesses, chains, a fence, water, and snow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Dogs pull sleds on tracks through snowy grass with bicycles nearby and a fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "banners",
+          "tracks",
+          "sled",
+          "chains",
+          "trees",
+          "water",
+          "sky",
+          "clouds",
+          "snow"
+        ],
+        "hallucinated_objects": [
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a sled, tracks, and a fence."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds on tracks through snowy grass with bicycles nearby and a fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"banners\", \"tracks\", \"sled\", \"chains\", \"trees\", \"water\", \"sky\", \"clouds\", \"snow\"],\n  \"hallucinated_objects\": [\"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a sled, tracks, and a fence.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Dogs pull sleds on icy tracks through snowy grass with banners nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycles",
+          "tracks",
+          "sled",
+          "chains",
+          "harnesses"
+        ],
+        "hallucinated_objects": [
+          "icy tracks",
+          "snowy grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic terms and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds on icy tracks through snowy grass with banners nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycles\", \"tracks\", \"sled\", \"chains\", \"harnesses\"],\n  \"hallucinated_objects\": [\"icy tracks\", \"snowy grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic terms and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Dogs pull sleds along tracks with banners and bicycles nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tracks",
+          "banners",
+          "chains",
+          "harnesses"
+        ],
+        "hallucinated_objects": [
+          "sled"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of tracks, banners, and harnesses."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds along tracks with banners and bicycles nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tracks\", \"banners\", \"chains\", \"harnesses\"],\n  \"hallucinated_objects\": [\"sled\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of tracks, banners, and harnesses.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Dogs pull loaded sleds along tracks with banners and harnesses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycles",
+          "tracks",
+          "harnesses",
+          "sled"
+        ],
+        "hallucinated_objects": [
+          "banners",
+          "grass",
+          "chains",
+          "trees",
+          "water",
+          "sky",
+          "clouds",
+          "snow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull loaded sleds along tracks with banners and harnesses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycles\", \"tracks\", \"harnesses\", \"sled\"],\n  \"hallucinated_objects\": [\"banners\", \"grass\", \"chains\", \"trees\", \"water\", \"sky\", \"clouds\", \"snow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Dogs pull sleds on tracks wearing harnesses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycles",
+          "tracks",
+          "harnesses"
+        ],
+        "hallucinated_objects": [
+          "sled"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of bicycles and tracks, and the fact that the dogs are wearing harnesses."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds on tracks wearing harnesses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycles\", \"tracks\", \"harnesses\"],\n  \"hallucinated_objects\": [\"sled\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of bicycles and tracks, and the fact that the dogs are wearing harnesses.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Dogs pull bicycles on snowy tracks wearing bright harnesses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "banners",
+          "tracks",
+          "sled",
+          "chains",
+          "trees",
+          "water",
+          "sky",
+          "clouds",
+          "snow"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "hats",
+          "gloves",
+          "jackets"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a sled, tracks, and snow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull bicycles on snowy tracks wearing bright harnesses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"banners\", \"tracks\", \"sled\", \"chains\", \"trees\", \"water\", \"sky\", \"clouds\", \"snow\"],\n  \"hallucinated_objects\": [\"people\", \"hats\", \"gloves\", \"jackets\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a sled, tracks, and snow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Dogs pull sleds on snowy tracks with banners nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycles",
+          "tracks",
+          "sled",
+          "chains",
+          "harnesses"
+        ],
+        "hallucinated_objects": [
+          "snow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic caption and provide specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds on snowy tracks with banners nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycles\", \"tracks\", \"sled\", \"chains\", \"harnesses\"],\n  \"hallucinated_objects\": [\"snow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic caption and provide specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Dogs pull sleds on grassy tracks with banners and harnesses nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycles",
+          "tracks",
+          "harnesses",
+          "sled"
+        ],
+        "hallucinated_objects": [
+          "banners",
+          "grass",
+          "chains",
+          "trees",
+          "water",
+          "sky",
+          "clouds",
+          "snow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds on grassy tracks with banners and harnesses nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycles\", \"tracks\", \"harnesses\", \"sled\"],\n  \"hallucinated_objects\": [\"banners\", \"grass\", \"chains\", \"trees\", \"water\", \"sky\", \"clouds\", \"snow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Dogs pull sleds on icy tracks with people and bicycles nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "banners",
+          "tracks",
+          "sled",
+          "chains",
+          "harnesses"
+        ],
+        "hallucinated_objects": [
+          "icy tracks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of sled, the presence of harnesses, and the nature of the tracks."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dogs, bicycles, people, umbrellas, banners, grass, harnesses, tracks, sled, chains, hats, gloves, jackets, trees, fence, water, sky, clouds, snow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dogs pull sleds on icy tracks with people and bicycles nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"banners\", \"tracks\", \"sled\", \"chains\", \"harnesses\"],\n  \"hallucinated_objects\": [\"icy tracks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of sled, the presence of harnesses, and the nature of the tracks.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 107226,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000107226.jpg",
+    "final_caption": "Dogs pull sleds on icy tracks with people and bicycles nearby.",
+    "total_time_sec": 36.31
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"dogs\",\n    \"bicycles\",\n    \"people\",\n    \"umbrellas\",\n    \"banners\",\n    \"grass\",\n    \"harnesses\",\n    \"tracks\",\n    \"sled\",\n    \"chains\",\n    \"hats\",\n    \"gloves\",\n    \"jackets\",\n    \"trees\",\n    \"fence\",\n    \"water\",\n    \"sky\",\n    \"clouds\",\n    \"snow\"\n  ]\n}"
+}

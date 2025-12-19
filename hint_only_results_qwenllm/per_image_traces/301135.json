@@ -1,0 +1,227 @@
+{
+  "image_id": 301135,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000301135.jpg",
+  "objects": [
+    "street lamp",
+    "bench",
+    "people",
+    "backpack",
+    "car",
+    "building",
+    "tree",
+    "sidewalk",
+    "street",
+    "storefront",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person"
+  ],
+  "template": "We have an image with these objects: ['street lamp', 'bench', 'people', 'backpack', 'car', 'building', 'tree', 'sidewalk', 'street', 'storefront', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Street filled with people near buildings and lamps",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "sidewalk"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location or context of the scene.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact location and context of the scene."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street filled with people near buildings and lamps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"storefront\"],\n  \"hallucinated_objects\": [\"sidewalk\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location or context of the scene.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact location and context of the scene.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People fill the street near buildings and street lamps with cars and storefronts nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "car",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "sidewalk",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of cars, the storefronts, and the backpacks."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People fill the street near buildings and street lamps with cars and storefronts nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"car\", \"storefront\"],\n  \"hallucinated_objects\": [\"sidewalk\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of cars, the storefronts, and the backpacks.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People in backpacks gather near cars and storefronts under street lamps.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sidewalk",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of cars, the storefronts, and the sidewalk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in backpacks gather near cars and storefronts under street lamps.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sidewalk\", \"storefront\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of cars, the storefronts, and the sidewalk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People gather near cars and storefronts under street lamps on the sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of backpack, the color of the cars, and the type of storefronts."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People gather near cars and storefronts under street lamps on the sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of backpack, the color of the cars, and the type of storefronts.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People with backpacks gather around cars and storefronts under street lamps on the sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "sidewalk"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of cars and storefronts, and the exact location of the street lamp and bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with backpacks gather around cars and storefronts under street lamps on the sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"storefront\"],\n  \"hallucinated_objects\": [\"sidewalk\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of cars and storefronts, and the exact location of the street lamp and bench.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People with backpacks gather near cars and storefronts under a street lamp on the sidewalk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "sidewalk"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the number of cars and storefronts, and the exact location of the sidewalk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with backpacks gather near cars and storefronts under a street lamp on the sidewalk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"storefront\"],\n  \"hallucinated_objects\": [\"sidewalk\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the number of cars and storefronts, and the exact location of the sidewalk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People with backpacks gather around three cars near six storefronts under a street lamp on the street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sidewalk",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the sidewalk, storefronts, and the number of cars."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with backpacks gather around three cars near six storefronts under a street lamp on the street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sidewalk\", \"storefront\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the sidewalk, storefronts, and the number of cars.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People with backpacks gather on the sidewalk near five storefronts under a street lamp on the street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "sidewalk",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the car, sidewalk, and storefronts."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with backpacks gather on the sidewalk near five storefronts under a street lamp on the street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"sidewalk\", \"storefront\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the car, sidewalk, and storefronts.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People with backpacks gather on the sidewalk near several storefronts under a street lamp on the street next to a car.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sidewalk",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of backpacks, the number of storefronts, and the color of the car."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with backpacks gather on the sidewalk near several storefronts under a street lamp on the street next to a car.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sidewalk\", \"storefront\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of backpacks, the number of storefronts, and the color of the car.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People with backpacks gather on the sidewalk near five storefronts under a street lamp on the street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "sidewalk",
+          "storefront"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the car, sidewalk, and storefronts."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [street lamp, bench, people, backpack, car, building, tree, sidewalk, street, storefront, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with backpacks gather on the sidewalk near five storefronts under a street lamp on the street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"sidewalk\", \"storefront\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the car, sidewalk, and storefronts.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 301135,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000301135.jpg",
+    "final_caption": "People with backpacks gather on the sidewalk near five storefronts under a street lamp on the street.",
+    "total_time_sec": 33.25
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"street lamp\",\n    \"bench\",\n    \"people\",\n    \"backpack\",\n    \"car\",\n    \"building\",\n    \"tree\",\n    \"sidewalk\",\n    \"street\",\n    \"storefront\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\"\n  ]\n}"
+}

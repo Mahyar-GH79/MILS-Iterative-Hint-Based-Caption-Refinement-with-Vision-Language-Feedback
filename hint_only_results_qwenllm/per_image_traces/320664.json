@@ -1,0 +1,208 @@
+{
+  "image_id": 320664,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000320664.jpg",
+  "objects": [
+    "hot dog",
+    "macaroni and cheese",
+    "chicken",
+    "spoon",
+    "knife",
+    "fork",
+    "plate",
+    "menu",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['hot dog', 'macaroni and cheese', 'chicken', 'spoon', 'knife', 'fork', 'plate', 'menu', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Plate of food including hot dog and chicken",
+      "vlm_hint": {
+        "missing_objects": [
+          "macaroni and cheese"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of food on the plate.",
+        "edit_instructions": [
+          "Specify the type of food on the plate, such as 'hot dog, macaroni and cheese, and chicken'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of food including hot dog and chicken\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"macaroni and cheese\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of food on the plate.\",\n  \"edit_instructions\": \"Specify the type of food on the plate, such as 'hot dog, macaroni and cheese, and chicken'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Plate with hot dog, macaroni and cheese, and chicken",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "menu"
+        ],
+        "hallucinated_objects": [
+          "knife"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the plate.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate with hot dog, macaroni and cheese, and chicken\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"menu\"],\n  \"hallucinated_objects\": [\"knife\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the plate.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Plate of hot dog, macaroni and cheese, chicken with table and menu",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread"
+        ],
+        "hallucinated_objects": [
+          "knife"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the plate.",
+        "edit_instructions": [
+          "Add the missing object 'bread' and remove the hallucinated object 'knife'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of hot dog, macaroni and cheese, chicken with table and menu\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\"],\n  \"hallucinated_objects\": [\"knife\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the plate.\",\n  \"edit_instructions\": \"Add the missing object 'bread' and remove the hallucinated object 'knife'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Plate of hot dog, macaroni and cheese, chicken, and bread on table with menu",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread"
+        ],
+        "hallucinated_objects": [
+          "knife"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread.",
+        "edit_instructions": [
+          "Remove the bread and add a specific type of bread, such as a hot dog bun or a roll."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of hot dog, macaroni and cheese, chicken, and bread on table with menu\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\"],\n  \"hallucinated_objects\": [\"knife\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread.\",\n  \"edit_instructions\": \"Remove the bread and add a specific type of bread, such as a hot dog bun or a roll.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Plate of hot dog, macaroni and cheese, chicken, and steamed bun on table with menu",
+      "vlm_hint": {
+        "missing_objects": [
+          "steamed bun"
+        ],
+        "hallucinated_objects": [
+          "steamed bun"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bun.",
+        "edit_instructions": [
+          "Remove the word 'steamed' and specify the type of bun."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of hot dog, macaroni and cheese, chicken, and steamed bun on table with menu\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"steamed bun\"],\n  \"hallucinated_objects\": [\"steamed bun\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bun.\",\n  \"edit_instructions\": \"Remove the word 'steamed' and specify the type of bun.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Plate of hot dog, macaroni and cheese, chicken, and bao on table with menu",
+      "vlm_hint": {
+        "missing_objects": [
+          "bacon"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread used for the hot dog.",
+        "edit_instructions": [
+          "Remove the mention of 'bacon' and 'table' and specify the type of bread used for the hot dog."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plate of hot dog, macaroni and cheese, chicken, and bao on table with menu\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bacon\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread used for the hot dog.\",\n  \"edit_instructions\": \"Remove the mention of 'bacon' and 'table' and specify the type of bread used for the hot dog.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Hot dog, macaroni and cheese, chicken on plate with bun served with menu",
+      "vlm_hint": {
+        "missing_objects": [
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the plate.",
+        "edit_instructions": [
+          "Add the bun to the list of objects and remove the table from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog, macaroni and cheese, chicken on plate with bun served with menu\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bun\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the plate.\",\n  \"edit_instructions\": \"Add the bun to the list of objects and remove the table from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Hot dog macaroni and cheese chicken on plate with bun served by menu",
+      "vlm_hint": {
+        "missing_objects": [
+          "bun",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "menu"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the plate.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the bun and the table, and remove the menu."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog macaroni and cheese chicken on plate with bun served by menu\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bun\", \"table\"],\n  \"hallucinated_objects\": [\"menu\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the plate.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the bun and the table, and remove the menu.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Hot dog macaroni and cheese chicken on plate with bun placed on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "bun"
+        ],
+        "hallucinated_objects": [
+          "menu"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the plate.",
+        "edit_instructions": [
+          "Add the bun to the list of objects and remove the menu."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog macaroni and cheese chicken on plate with bun placed on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bun\"],\n  \"hallucinated_objects\": [\"menu\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the plate.\",\n  \"edit_instructions\": \"Add the bun to the list of objects and remove the menu.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Hot dog chicken macaroni and cheese on plate with bun on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "bun",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "menu"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the plate.",
+        "edit_instructions": [
+          "Add specific details about the objects on the plate and remove the menu."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [hot dog, macaroni and cheese, chicken, spoon, knife, fork, plate, menu, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hot dog chicken macaroni and cheese on plate with bun on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bun\", \"table\"],\n  \"hallucinated_objects\": [\"menu\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the plate.\",\n  \"edit_instructions\": \"Add specific details about the objects on the plate and remove the menu.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 320664,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000320664.jpg",
+    "final_caption": "Hot dog chicken macaroni and cheese on plate with bun on table",
+    "total_time_sec": 28.21
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"hot dog\",\n    \"macaroni and cheese\",\n    \"chicken\",\n    \"spoon\",\n    \"knife\",\n    \"fork\",\n    \"plate\",\n    \"menu\",\n    \"table\"\n  ]\n}"
+}

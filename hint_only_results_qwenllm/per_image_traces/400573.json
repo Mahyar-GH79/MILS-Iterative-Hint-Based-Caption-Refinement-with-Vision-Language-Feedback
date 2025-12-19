@@ -1,0 +1,323 @@
+{
+  "image_id": 400573,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000400573.jpg",
+  "objects": [
+    "man",
+    "glasses",
+    "donut",
+    "zipper",
+    "collar",
+    "trees",
+    "sky",
+    "fence",
+    "park",
+    "outdoor",
+    "food",
+    "hand",
+    "fingers",
+    "nail",
+    "skin",
+    "hair",
+    "eyebrow",
+    "eyelashes",
+    "nose",
+    "mouth"
+  ],
+  "template": "We have an image with these objects: ['man', 'glasses', 'donut', 'zipper', 'collar', 'trees', 'sky', 'fence', 'park', 'outdoor', 'food', 'hand', 'fingers', 'nail', 'skin', 'hair', 'eyebrow', 'eyelashes', 'nose', 'mouth']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in glasses enjoys donut in park outdoors",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "sky",
+          "fence",
+          "park",
+          "outdoor"
+        ],
+        "hallucinated_objects": [
+          "food"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoys donut in park outdoors\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"sky\", \"fence\", \"park\", \"outdoor\"],\n  \"hallucinated_objects\": [\"food\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in glasses enjoying donut against park trees and sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "park"
+        ],
+        "hallucinated_objects": [
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the setting.",
+        "edit_instructions": [
+          "Provide more specific details about the setting, such as the presence of a fence and the type of park."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoying donut against park trees and sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"park\"],\n  \"hallucinated_objects\": [\"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the setting.\",\n  \"edit_instructions\": \"Provide more specific details about the setting, such as the presence of a fence and the type of park.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in glasses enjoys donut near park fence and trees under blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "glasses",
+          "donut",
+          "collar",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth",
+          "fingers",
+          "skin"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoys donut near park fence and trees under blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"glasses\", \"donut\", \"collar\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\", \"fingers\", \"skin\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in glasses enjoys donut near fence and trees under blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "glasses",
+          "donut",
+          "collar",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoys donut near fence and trees under blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"glasses\", \"donut\", \"collar\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in glasses enjoys donut near fence and trees under clear blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "glasses",
+          "donut",
+          "collar",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth",
+          "hand",
+          "fingers",
+          "skin"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoys donut near fence and trees under clear blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"glasses\", \"donut\", \"collar\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\", \"hand\", \"fingers\", \"skin\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in glasses enjoys donut near fence and trees under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "glasses",
+          "donut",
+          "collar",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth",
+          "hand",
+          "fingers",
+          "skin"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoys donut near fence and trees under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"glasses\", \"donut\", \"collar\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\", \"hand\", \"fingers\", \"skin\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man enjoys donut near fence and trees under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "donut",
+          "collar",
+          "zipper",
+          "hand",
+          "fingers",
+          "nail",
+          "skin",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man enjoys donut near fence and trees under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"donut\", \"collar\", \"zipper\", \"hand\", \"fingers\", \"nail\", \"skin\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man enjoys donut near fence and trees under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "donut",
+          "collar",
+          "zipper",
+          "hand",
+          "fingers",
+          "nail",
+          "skin",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man enjoys donut near fence and trees under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"donut\", \"collar\", \"zipper\", \"hand\", \"fingers\", \"nail\", \"skin\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in glasses eats donut near fence and trees under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "glasses",
+          "donut",
+          "collar",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth",
+          "hand",
+          "fingers",
+          "skin"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses eats donut near fence and trees under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"glasses\", \"donut\", \"collar\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\", \"hand\", \"fingers\", \"skin\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in glasses enjoys donut near fence and trees under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "glasses",
+          "donut",
+          "collar",
+          "hair",
+          "eyebrow",
+          "eyelashes",
+          "nose",
+          "mouth",
+          "hand",
+          "fingers",
+          "skin"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the fence, trees, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, glasses, donut, zipper, collar, trees, sky, fence, park, outdoor, food, hand, fingers, nail, skin, hair, eyebrow, eyelashes, nose, mouth]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses enjoys donut near fence and trees under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"man\", \"glasses\", \"donut\", \"collar\", \"hair\", \"eyebrow\", \"eyelashes\", \"nose\", \"mouth\", \"hand\", \"fingers\", \"skin\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the fence, trees, and sky.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 400573,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000400573.jpg",
+    "final_caption": "Man in glasses enjoys donut near fence and trees under clear sky",
+    "total_time_sec": 38.83
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"glasses\",\n    \"donut\",\n    \"zipper\",\n    \"collar\",\n    \"trees\",\n    \"sky\",\n    \"fence\",\n    \"park\",\n    \"outdoor\",\n    \"food\",\n    \"hand\",\n    \"fingers\",\n    \"nail\",\n    \"skin\",\n    \"hair\",\n    \"eyebrow\",\n    \"eyelashes\",\n    \"nose\",\n    \"mouth\"\n  ]\n}"
+}

@@ -1,0 +1,298 @@
+{
+  "image_id": 11813,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000011813.jpg",
+  "objects": [
+    "tripod",
+    "laptop",
+    "chair",
+    "vending machine",
+    "refrigerator",
+    "plastic containers",
+    "wall",
+    "sign",
+    "table",
+    "wire",
+    "button",
+    "handle",
+    "button",
+    "button",
+    "button",
+    "button",
+    "button",
+    "button",
+    "button",
+    "button"
+  ],
+  "template": "We have an image with these objects: ['tripod', 'laptop', 'chair', 'vending machine', 'refrigerator', 'plastic containers', 'wall', 'sign', 'table', 'wire', 'button', 'handle', 'button', 'button', 'button', 'button', 'button', 'button', 'button', 'button']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Vending machine laptop and chairs near wall buttons",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic containers",
+          "table",
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vending machine laptop and chairs near wall buttons\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic containers\", \"table\", \"wire\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Vending machine laptop and chair near wall with wires",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic containers",
+          "table",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "wall",
+          "sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vending machine laptop and chair near wall with wires\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic containers\", \"table\", \"button\"],\n  \"hallucinated_objects\": [\"wall\", \"sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Tripod table laptop chair plastic containers wires buttons next to refrigerator",
+      "vlm_hint": {
+        "missing_objects": [
+          "vending machine",
+          "plastic containers",
+          "wall",
+          "sign",
+          "table",
+          "wire",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod table laptop chair plastic containers wires buttons next to refrigerator\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vending machine\", \"plastic containers\", \"wall\", \"sign\", \"table\", \"wire\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Tripod next to laptop fridge vending machine plastic containers wall sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table",
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod next to laptop fridge vending machine plastic containers wall sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\", \"wire\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Tripod and laptop near fridge with plastic containers on a table by a vending machine.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "plastic containers",
+          "wall",
+          "sign",
+          "table",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod and laptop near fridge with plastic containers on a table by a vending machine.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"plastic containers\", \"wall\", \"sign\", \"table\", \"button\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Tripod and laptop by fridge with plastic containers on a table near vending machine and wall.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "plastic containers",
+          "wall",
+          "sign",
+          "table",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod and laptop by fridge with plastic containers on a table near vending machine and wall.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"plastic containers\", \"wall\", \"sign\", \"table\", \"button\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tripod and laptop by refrigerator with plastic containers on a table near vending machine and sign.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "plastic containers",
+          "wall",
+          "sign",
+          "table",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod and laptop by refrigerator with plastic containers on a table near vending machine and sign.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"plastic containers\", \"wall\", \"sign\", \"table\", \"button\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Tripod and laptop on table near fridge with plastic containers, sign on wall.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "plastic containers",
+          "wall",
+          "sign",
+          "table",
+          "wire",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "refrigerator"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod and laptop on table near fridge with plastic containers, sign on wall.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"plastic containers\", \"wall\", \"sign\", \"table\", \"wire\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\"],\n  \"hallucinated_objects\": [\"refrigerator\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tripod and laptop on table near vending machine with plastic containers, sign on wall, buttons everywhere.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "plastic containers",
+          "wall",
+          "sign",
+          "table",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of tripod, the make and model of the laptop, the brand of the vending machine, and the type of plastic containers."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod and laptop on table near vending machine with plastic containers, sign on wall, buttons everywhere.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"plastic containers\", \"wall\", \"sign\", \"table\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\"],\n  \"hallucinated_objects\": [\"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\", \"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of tripod, the make and model of the laptop, the brand of the vending machine, and the type of plastic containers.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tripod holding laptop on table near vending machine with plastic containers, sign on wall, chairs nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "plastic containers",
+          "sign",
+          "wall",
+          "button"
+        ],
+        "hallucinated_objects": [
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of chairs, the type of plastic containers, and the specific details of the sign and wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tripod, laptop, chair, vending machine, refrigerator, plastic containers, wall, sign, table, wire, button, handle, button, button, button, button, button, button, button, button]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tripod holding laptop on table near vending machine with plastic containers, sign on wall, chairs nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"plastic containers\", \"sign\", \"wall\", \"button\"],\n  \"hallucinated_objects\": [\"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of chairs, the type of plastic containers, and the specific details of the sign and wall.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 11813,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000011813.jpg",
+    "final_caption": "Tripod holding laptop on table near vending machine with plastic containers, sign on wall, chairs nearby.",
+    "total_time_sec": 34.67
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"tripod\",\n    \"laptop\",\n    \"chair\",\n    \"vending machine\",\n    \"refrigerator\",\n    \"plastic containers\",\n    \"wall\",\n    \"sign\",\n    \"table\",\n    \"wire\",\n    \"button\",\n    \"handle\",\n    \"button\",\n    \"button\",\n    \"button\",\n    \"button\",\n    \"button\",\n    \"button\",\n    \"button\",\n    \"button\"\n  ]\n}"
+}

@@ -1,0 +1,230 @@
+{
+  "image_id": 174004,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000174004.jpg",
+  "objects": [
+    "truck",
+    "tow truck",
+    "wheels",
+    "grass",
+    "trees",
+    "leaves",
+    "bushes",
+    "weeds",
+    "dirt",
+    "tires",
+    "hitch",
+    "grass",
+    "trees",
+    "leaves",
+    "bushes",
+    "weeds",
+    "dirt",
+    "tires",
+    "hitch"
+  ],
+  "template": "We have an image with these objects: ['truck', 'tow truck', 'wheels', 'grass', 'trees', 'leaves', 'bushes', 'weeds', 'dirt', 'tires', 'hitch', 'grass', 'trees', 'leaves', 'bushes', 'weeds', 'dirt', 'tires', 'hitch']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Tow truck wheels dirt trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "tires"
+        ],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the missing objects and correct the genericity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tow truck wheels dirt trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\", \"hitch\"],\n  \"hallucinated_objects\": [\"tires\"],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the missing objects and correct the genericity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Tow truck with hitch on wheels among dirt and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck",
+          "hitch",
+          "wheels",
+          "grass",
+          "trees",
+          "leaves",
+          "bushes",
+          "weeds",
+          "dirt",
+          "tires",
+          "hitch"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck or the condition of the truck.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of truck and its condition."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tow truck with hitch on wheels among dirt and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\", \"hitch\", \"wheels\", \"grass\", \"trees\", \"leaves\", \"bushes\", \"weeds\", \"dirt\", \"tires\", \"hitch\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck or the condition of the truck.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of truck and its condition.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Heavy tow truck with damaged hitch on dirt amidst trees and leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves",
+          "bushes",
+          "weeds",
+          "dirt",
+          "tires"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck and its condition.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of truck and its condition."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Heavy tow truck with damaged hitch on dirt amidst trees and leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\", \"hitch\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\", \"bushes\", \"weeds\", \"dirt\", \"tires\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck and its condition.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of truck and its condition.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Heavy tow truck with damaged hitch in grassy field",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Heavy tow truck with damaged hitch in grassy field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Large tow truck with damaged hitch in grassy field",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large tow truck with damaged hitch in grassy field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Large tow truck with damaged hitch in field among trees and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large tow truck with damaged hitch in field among trees and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Large tow truck with damaged hitch in field amid trees and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large tow truck with damaged hitch in field amid trees and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Large tow truck with damaged hitch in field among trees and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large tow truck with damaged hitch in field among trees and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Large tow truck with damaged hitch in field amid trees and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large tow truck with damaged hitch in field amid trees and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Large tow truck with damaged hitch in field among trees and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "tow truck"
+        ],
+        "hallucinated_objects": [
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of truck.",
+        "edit_instructions": [
+          "Specify the type of truck in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tow truck, wheels, grass, trees, leaves, bushes, weeds, dirt, tires, hitch, grass, trees, leaves, bushes, weeds, dirt, tires, hitch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large tow truck with damaged hitch in field among trees and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tow truck\"],\n  \"hallucinated_objects\": [\"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of truck.\",\n  \"edit_instructions\": \"Specify the type of truck in the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 174004,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000174004.jpg",
+    "final_caption": "Large tow truck with damaged hitch in field among trees and grass",
+    "total_time_sec": 27.91
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"truck\",\n    \"tow truck\",\n    \"wheels\",\n    \"grass\",\n    \"trees\",\n    \"leaves\",\n    \"bushes\",\n    \"weeds\",\n    \"dirt\",\n    \"tires\",\n    \"hitch\",\n    \"grass\",\n    \"trees\",\n    \"leaves\",\n    \"bushes\",\n    \"weeds\",\n    \"dirt\",\n    \"tires\",\n    \"hitch\"\n  ]\n}"
+}

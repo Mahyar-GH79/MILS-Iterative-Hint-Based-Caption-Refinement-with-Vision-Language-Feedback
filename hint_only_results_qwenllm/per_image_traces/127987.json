@@ -1,0 +1,268 @@
+{
+  "image_id": 127987,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000127987.jpg",
+  "objects": [
+    "baseball figurine",
+    "computer monitor",
+    "tape dispenser",
+    "keyboard",
+    "desk",
+    "computer mouse",
+    "post-it notes",
+    "picture frame",
+    "desk lamp",
+    "wall clock",
+    "wall calendar",
+    "wall outlet",
+    "wall switch",
+    "wall socket",
+    "wall painting",
+    "wall clock",
+    "wall calendar",
+    "wall outlet",
+    "wall switch",
+    "wall socket"
+  ],
+  "template": "We have an image with these objects: ['baseball figurine', 'computer monitor', 'tape dispenser', 'keyboard', 'desk', 'computer mouse', 'post-it notes', 'picture frame', 'desk lamp', 'wall clock', 'wall calendar', 'wall outlet', 'wall switch', 'wall socket', 'wall painting', 'wall clock', 'wall calendar', 'wall outlet', 'wall switch', 'wall socket']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Desk with computer setup and wall calendars",
+      "vlm_hint": {
+        "missing_objects": [
+          "computer mouse",
+          "post-it notes",
+          "picture frame",
+          "desk lamp",
+          "wall clock",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with computer setup and wall calendars\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"computer mouse\", \"post-it notes\", \"picture frame\", \"desk lamp\", \"wall clock\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Desk with computer monitor keyboard and mouse post-it notes picture frame desk lamp wall clock calendar outlets and switch",
+      "vlm_hint": {
+        "missing_objects": [
+          "baseball figurine",
+          "tape dispenser"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with computer monitor keyboard and mouse post-it notes picture frame desk lamp wall clock calendar outlets and switch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"baseball figurine\", \"tape dispenser\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Desk with computer monitor keyboard mouse post-it notes picture frametape dispenser",
+      "vlm_hint": {
+        "missing_objects": [
+          "baseball figurine",
+          "desk lamp",
+          "wall clock",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket",
+          "wall painting"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses many objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with computer monitor keyboard mouse post-it notes picture frametape dispenser\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"baseball figurine\", \"desk lamp\", \"wall clock\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\", \"wall painting\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses many objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Desk with computer monitor keyboard mouse post-it notes picture frame baseball figurine desk lamp wall clock calendar outlets switches sockets",
+      "vlm_hint": {
+        "missing_objects": [
+          "tape dispenser",
+          "wall painting"
+        ],
+        "hallucinated_objects": [
+          "computer mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with computer monitor keyboard mouse post-it notes picture frame baseball figurine desk lamp wall clock calendar outlets switches sockets\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tape dispenser\", \"wall painting\"],\n  \"hallucinated_objects\": [\"computer mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Baseball figurine computer monitor post-it notes picture frame desk lamp wall clock calendar",
+      "vlm_hint": {
+        "missing_objects": [
+          "tape dispenser",
+          "keyboard",
+          "desk",
+          "computer mouse",
+          "post-it notes",
+          "picture frame",
+          "desk lamp",
+          "wall clock",
+          "calendar"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball figurine computer monitor post-it notes picture frame desk lamp wall clock calendar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tape dispenser\", \"keyboard\", \"desk\", \"computer mouse\", \"post-it notes\", \"picture frame\", \"desk lamp\", \"wall clock\", \"calendar\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Baseball figurine on desk with monitor keyboard and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "tape dispenser",
+          "post-it notes",
+          "picture frame",
+          "desk lamp",
+          "wall clock",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket",
+          "wall painting"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball figurine on desk with monitor keyboard and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tape dispenser\", \"post-it notes\", \"picture frame\", \"desk lamp\", \"wall clock\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\", \"wall painting\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Baseball figurine and post-it notes on desk near monitor keyboard lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "tape dispenser",
+          "desk lamp",
+          "picture frame",
+          "wall clock",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket",
+          "wall painting"
+        ],
+        "hallucinated_objects": [
+          "computer mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the missing objects and the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball figurine and post-it notes on desk near monitor keyboard lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tape dispenser\", \"desk lamp\", \"picture frame\", \"wall clock\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\", \"wall painting\"],\n  \"hallucinated_objects\": [\"computer mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the missing objects and the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Baseball figurine post-it notes picture frame near monitor keyboard desk lamp wall clock calendar",
+      "vlm_hint": {
+        "missing_objects": [
+          "tape dispenser",
+          "desk lamp",
+          "wall clock",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket"
+        ],
+        "hallucinated_objects": [
+          "picture frame"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the brand of the tape dispenser, the type of keyboard, and the exact location of the wall clock and calendar."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball figurine post-it notes picture frame near monitor keyboard desk lamp wall clock calendar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tape dispenser\", \"desk lamp\", \"wall clock\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\"],\n  \"hallucinated_objects\": [\"picture frame\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the brand of the tape dispenser, the type of keyboard, and the exact location of the wall clock and calendar.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Baseball figurine keyboard near monitor tape dispenser wall clock calendar",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk lamp",
+          "picture frame",
+          "wall clock",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket",
+          "wall painting"
+        ],
+        "hallucinated_objects": [
+          "computer mouse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and relationships."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball figurine keyboard near monitor tape dispenser wall clock calendar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk lamp\", \"picture frame\", \"wall clock\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\", \"wall painting\"],\n  \"hallucinated_objects\": [\"computer mouse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and relationships.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Baseball figurine and post-it notes near monitor with desk lamp and wall clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tape dispenser",
+          "keyboard",
+          "desk lamp",
+          "wall clock"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "wall calendar",
+          "wall outlet",
+          "wall switch",
+          "wall socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the correct objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball figurine, computer monitor, tape dispenser, keyboard, desk, computer mouse, post-it notes, picture frame, desk lamp, wall clock, wall calendar, wall outlet, wall switch, wall socket, wall painting, wall clock, wall calendar, wall outlet, wall switch, wall socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball figurine and post-it notes near monitor with desk lamp and wall clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tape dispenser\", \"keyboard\", \"desk lamp\", \"wall clock\"],\n  \"hallucinated_objects\": [\"picture frame\", \"wall calendar\", \"wall outlet\", \"wall switch\", \"wall socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the correct objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 127987,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000127987.jpg",
+    "final_caption": "Baseball figurine and post-it notes near monitor with desk lamp and wall clock.",
+    "total_time_sec": 35.5
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"baseball figurine\",\n    \"computer monitor\",\n    \"tape dispenser\",\n    \"keyboard\",\n    \"desk\",\n    \"computer mouse\",\n    \"post-it notes\",\n    \"picture frame\",\n    \"desk lamp\",\n    \"wall clock\",\n    \"wall calendar\",\n    \"wall outlet\",\n    \"wall switch\",\n    \"wall socket\",\n    \"wall painting\",\n    \"wall clock\",\n    \"wall calendar\",\n    \"wall outlet\",\n    \"wall switch\",\n    \"wall socket\"\n  ]\n}"
+}

@@ -1,0 +1,240 @@
+{
+  "image_id": 290248,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000290248.jpg",
+  "objects": [
+    "people",
+    "building",
+    "sign",
+    "street",
+    "car",
+    "umbrella",
+    "luggage",
+    "purse",
+    "hat",
+    "backpack",
+    "shoe",
+    "suitcase",
+    "handbag",
+    "window",
+    "door",
+    "balcony",
+    "tree",
+    "sky",
+    "streetlight"
+  ],
+  "template": "We have an image with these objects: ['people', 'building', 'sign', 'street', 'car', 'umbrella', 'luggage', 'purse', 'hat', 'backpack', 'shoe', 'suitcase', 'handbag', 'window', 'door', 'balcony', 'tree', 'sky', 'streetlight']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People walking near a building under umbrellas in the rain",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "streetlight"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of building, the people's attire, and the weather conditions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walking near a building under umbrellas in the rain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"rain\"],\n  \"hallucinated_objects\": [\"car\", \"streetlight\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of building, the people's attire, and the weather conditions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People in hats and umbrellas stroll near a tall building in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "hat",
+          "luggage",
+          "purse",
+          "backpack",
+          "shoe",
+          "suitcase",
+          "handbag"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption to make it more accurate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in hats and umbrellas stroll near a tall building in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"hat\", \"luggage\", \"purse\", \"backpack\", \"shoe\", \"suitcase\", \"handbag\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption to make it more accurate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People in hats and umbrellas walk by a building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "hat"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of building, the presence of an umbrella, and the weather conditions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in hats and umbrellas walk by a building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"hat\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of building, the presence of an umbrella, and the weather conditions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People with umbrellas walk by a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk by a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People with umbrellas walk by a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk by a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People with umbrellas walk by a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk by a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People with umbrellas walk past a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk past a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People with umbrellas walk past a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk past a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People with umbrellas walk past a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk past a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People with umbrellas walk past a tall building and tree in the rain.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tree",
+          "rain"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The image does not show a streetlight.",
+        "edit_instructions": [
+          "Remove the streetlight and add an umbrella and a tree."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, building, sign, street, car, umbrella, luggage, purse, hat, backpack, shoe, suitcase, handbag, window, door, balcony, tree, sky, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People with umbrellas walk past a tall building and tree in the rain.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tree\", \"rain\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The image does not show a streetlight.\",\n  \"edit_instructions\": \"Remove the streetlight and add an umbrella and a tree.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 290248,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000290248.jpg",
+    "final_caption": "People with umbrellas walk past a tall building and tree in the rain.",
+    "total_time_sec": 29.27
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"people\",\n    \"building\",\n    \"sign\",\n    \"street\",\n    \"car\",\n    \"umbrella\",\n    \"luggage\",\n    \"purse\",\n    \"hat\",\n    \"backpack\",\n    \"shoe\",\n    \"suitcase\",\n    \"handbag\",\n    \"window\",\n    \"door\",\n    \"balcony\",\n    \"tree\",\n    \"sky\",\n    \"streetlight\"\n  ]\n}"
+}

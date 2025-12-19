@@ -1,0 +1,215 @@
+{
+  "image_id": 226111,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000226111.jpg",
+  "objects": [
+    "No Bicycles, Skates or Skateboards sign",
+    "Sidewalk",
+    "Street sign",
+    "Building",
+    "Street light",
+    "Darth Vader sticker",
+    "Arrow pointing to the left",
+    "Concrete post",
+    "Street names",
+    "Sky"
+  ],
+  "template": "We have an image with these objects: ['No Bicycles, Skates or Skateboards sign', 'Sidewalk', 'Street sign', 'Building', 'Street light', 'Darth Vader sticker', 'Arrow pointing to the left', 'Concrete post', 'Street names', 'Sky']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sidewalk street sign building sky guide",
+      "vlm_hint": {
+        "missing_objects": [
+          "Concrete post",
+          "Darth Vader sticker",
+          "Arrow pointing to the left",
+          "Street names"
+        ],
+        "hallucinated_objects": [
+          "Sidewalk",
+          "Street light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the concrete post, Darth Vader sticker, arrow pointing to the left, and street names."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sidewalk street sign building sky guide\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Concrete post\", \"Darth Vader sticker\", \"Arrow pointing to the left\", \"Street names\"],\n  \"hallucinated_objects\": [\"Sidewalk\", \"Street light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the concrete post, Darth Vader sticker, arrow pointing to the left, and street names.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Concrete post with arrow left Darth Vader sticker street names sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "Sidewalk",
+          "Street light"
+        ],
+        "hallucinated_objects": [
+          "Building"
+        ],
+        "genericity_hint": "The image is specific to a street sign with a Darth Vader sticker and an arrow pointing to the left.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and ensure the caption is specific to the street sign and its details."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Concrete post with arrow left Darth Vader sticker street names sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Sidewalk\", \"Street light\"],\n  \"hallucinated_objects\": [\"Building\"],\n  \"genericity_hint\": \"The image is specific to a street sign with a Darth Vader sticker and an arrow pointing to the left.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and ensure the caption is specific to the street sign and its details.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Arrow left Darth Vader sticker street names overhead",
+      "vlm_hint": {
+        "missing_objects": [
+          "Sidewalk",
+          "Street light"
+        ],
+        "hallucinated_objects": [
+          "Concrete post"
+        ],
+        "genericity_hint": "The image contains a sign with street names, but the specific street names are not mentioned in the candidate caption.",
+        "edit_instructions": [
+          "Remove the mention of the street names and the concrete post, and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Arrow left Darth Vader sticker street names overhead\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Sidewalk\", \"Street light\"],\n  \"hallucinated_objects\": [\"Concrete post\"],\n  \"genericity_hint\": \"The image contains a sign with street names, but the specific street names are not mentioned in the candidate caption.\",\n  \"edit_instructions\": \"Remove the mention of the street names and the concrete post, and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Arrow left Darth Vader sticker on sidewalk near street light",
+      "vlm_hint": {
+        "missing_objects": [
+          "Sidewalk",
+          "Street light"
+        ],
+        "hallucinated_objects": [
+          "Concrete post"
+        ],
+        "genericity_hint": "The image contains a sign with street names, but the caption does not mention them.",
+        "edit_instructions": [
+          "Remove the mention of the sidewalk and street light, and add the street names to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Arrow left Darth Vader sticker on sidewalk near street light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Sidewalk\", \"Street light\"],\n  \"hallucinated_objects\": [\"Concrete post\"],\n  \"genericity_hint\": \"The image contains a sign with street names, but the caption does not mention them.\",\n  \"edit_instructions\": \"Remove the mention of the sidewalk and street light, and add the street names to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Arrow left points to street names with a Darth Vader sticker",
+      "vlm_hint": {
+        "missing_objects": [
+          "Sidewalk",
+          "Street light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some key elements of the image.",
+        "edit_instructions": [
+          "Include the sidewalk and street light in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Arrow left points to street names with a Darth Vader sticker\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Sidewalk\", \"Street light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some key elements of the image.\",\n  \"edit_instructions\": \"Include the sidewalk and street light in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Left-pointing arrow shows street names near Darth Vader sticker on sidewalk past street light",
+      "vlm_hint": {
+        "missing_objects": [
+          "Street light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption mentions a street light, but it is not visible in the image.",
+        "edit_instructions": [
+          "Remove the mention of the street light in the candidate caption."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Left-pointing arrow shows street names near Darth Vader sticker on sidewalk past street light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Street light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption mentions a street light, but it is not visible in the image.\",\n  \"edit_instructions\": \"Remove the mention of the street light in the candidate caption.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Left-pointing arrow near Darth Vader sticker by street names on sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "Street light",
+          "Concrete post"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is specific about the objects present in the image, but it misses some of the objects that are actually in the image.",
+        "edit_instructions": [
+          "Add the missing objects to the candidate caption."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Left-pointing arrow near Darth Vader sticker by street names on sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Street light\", \"Concrete post\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is specific about the objects present in the image, but it misses some of the objects that are actually in the image.\",\n  \"edit_instructions\": \"Add the missing objects to the candidate caption.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Left-pointing arrow near Darth Vader sticker and street names on sidewalk with street light and concrete post",
+      "vlm_hint": {
+        "missing_objects": [
+          "Street light",
+          "Concrete post"
+        ],
+        "hallucinated_objects": [
+          "Darth Vader sticker",
+          "Street names"
+        ],
+        "genericity_hint": "The candidate caption is too specific and does not capture the overall context of the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the general context of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Left-pointing arrow near Darth Vader sticker and street names on sidewalk with street light and concrete post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Street light\", \"Concrete post\"],\n  \"hallucinated_objects\": [\"Darth Vader sticker\", \"Street names\"],\n  \"genericity_hint\": \"The candidate caption is too specific and does not capture the overall context of the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the general context of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Left-pointing arrow on sidewalk with street light and concrete post",
+      "vlm_hint": {
+        "missing_objects": [
+          "Sidewalk",
+          "Street light",
+          "Concrete post"
+        ],
+        "hallucinated_objects": [
+          "Building"
+        ],
+        "genericity_hint": "The candidate caption is too specific and misses the main objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Left-pointing arrow on sidewalk with street light and concrete post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Sidewalk\", \"Street light\", \"Concrete post\"],\n  \"hallucinated_objects\": [\"Building\"],\n  \"genericity_hint\": \"The candidate caption is too specific and misses the main objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Left-pointing arrow on sidewalk with street light and concrete post",
+      "vlm_hint": {
+        "missing_objects": [
+          "Sidewalk",
+          "Street light",
+          "Concrete post"
+        ],
+        "hallucinated_objects": [
+          "Building"
+        ],
+        "genericity_hint": "The candidate caption is too specific and misses the main objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [No Bicycles, Skates or Skateboards sign, Sidewalk, Street sign, Building, Street light, Darth Vader sticker, Arrow pointing to the left, Concrete post, Street names, Sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Left-pointing arrow on sidewalk with street light and concrete post\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Sidewalk\", \"Street light\", \"Concrete post\"],\n  \"hallucinated_objects\": [\"Building\"],\n  \"genericity_hint\": \"The candidate caption is too specific and misses the main objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 226111,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000226111.jpg",
+    "final_caption": "Left-pointing arrow on sidewalk with street light and concrete post",
+    "total_time_sec": 29.73
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"No Bicycles, Skates or Skateboards sign\",\n    \"Sidewalk\",\n    \"Street sign\",\n    \"Building\",\n    \"Street light\",\n    \"Darth Vader sticker\",\n    \"Arrow pointing to the left\",\n    \"Concrete post\",\n    \"Street names\",\n    \"Sky\"\n  ]\n}"
+}

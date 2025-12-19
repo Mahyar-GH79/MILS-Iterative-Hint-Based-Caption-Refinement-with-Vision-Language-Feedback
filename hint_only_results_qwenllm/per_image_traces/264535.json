@@ -1,0 +1,257 @@
+{
+  "image_id": 264535,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000264535.jpg",
+  "objects": [
+    "man",
+    "bench",
+    "book",
+    "trees",
+    "leaves",
+    "shadows",
+    "park",
+    "sidewalk",
+    "parking lot",
+    "people",
+    "park bench",
+    "book",
+    "man",
+    "trees",
+    "leaves",
+    "shadows",
+    "park",
+    "sidewalk",
+    "parking lot",
+    "people"
+  ],
+  "template": "We have an image with these objects: ['man', 'bench', 'book', 'trees', 'leaves', 'shadows', 'park', 'sidewalk', 'parking lot', 'people', 'park bench', 'book', 'man', 'trees', 'leaves', 'shadows', 'park', 'sidewalk', 'parking lot', 'people']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Men and trees under park shadows",
+      "vlm_hint": {
+        "missing_objects": [
+          "book",
+          "park bench"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses key objects in the image.",
+        "edit_instructions": [
+          "Add the book and park bench to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Men and trees under park shadows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"book\", \"park bench\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses key objects in the image.\",\n  \"edit_instructions\": \"Add the book and park bench to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man reads book on park bench under tree shadows",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "book",
+          "man",
+          "trees",
+          "leaves",
+          "shadows",
+          "park",
+          "sidewalk",
+          "parking lot",
+          "people"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific and does not require generic terms.",
+        "edit_instructions": [
+          "Remove the generic terms and focus on the specific objects in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on park bench under tree shadows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"book\", \"man\", \"trees\", \"leaves\", \"shadows\", \"park\", \"sidewalk\", \"parking lot\", \"people\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific and does not require generic terms.\",\n  \"edit_instructions\": \"Remove the generic terms and focus on the specific objects in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man reads book on park bench under tree shadows in the park",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "sidewalk",
+          "parking lot",
+          "people"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the presence of a sidewalk, and the number of people in the park."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on park bench under tree shadows in the park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"sidewalk\", \"parking lot\", \"people\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the presence of a sidewalk, and the number of people in the park.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man reads book on wooden park bench under tree shadows by sidewalk in busy park",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "sidewalk",
+          "park",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "book",
+          "trees",
+          "leaves",
+          "shadows"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of bench, the location of the park, and the number of people present."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on wooden park bench under tree shadows by sidewalk in busy park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"sidewalk\", \"park\", \"people\"],\n  \"hallucinated_objects\": [\"book\", \"trees\", \"leaves\", \"shadows\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of bench, the location of the park, and the number of people present.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man sits on wooden park bench reading book under tree shadows near busy sidewalk in city park",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "book",
+          "trees",
+          "leaves",
+          "shadows",
+          "park",
+          "sidewalk",
+          "parking lot",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The image is specific and does not require generic terms.",
+        "edit_instructions": [
+          "Remove the generic terms and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on wooden park bench reading book under tree shadows near busy sidewalk in city park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"book\", \"trees\", \"leaves\", \"shadows\", \"park\", \"sidewalk\", \"parking lot\", \"people\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The image is specific and does not require generic terms.\",\n  \"edit_instructions\": \"Remove the generic terms and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man reads book on park bench under trees and shadows near sidewalk in park",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "sidewalk",
+          "park",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves",
+          "shadows"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the presence of people, and the specific location (park)."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on park bench under trees and shadows near sidewalk in park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"sidewalk\", \"park\", \"people\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\", \"shadows\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the presence of people, and the specific location (park).\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man reads book on wooden park bench near people on sidewalk in park",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "sidewalk",
+          "park",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "park bench",
+          "sidewalk",
+          "park",
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the location of the park, and the number of people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on wooden park bench near people on sidewalk in park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"sidewalk\", \"park\", \"people\"],\n  \"hallucinated_objects\": [\"park bench\", \"sidewalk\", \"park\", \"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the location of the park, and the number of people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man reads book on wooden bench under trees near other people on sidewalk in park.",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "sidewalk",
+          "parking lot",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "book"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the location of the parking lot, and the number of people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on wooden bench under trees near other people on sidewalk in park.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"sidewalk\", \"parking lot\", \"people\"],\n  \"hallucinated_objects\": [\"book\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the location of the parking lot, and the number of people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man reads book on park bench under trees near people on sidewalk by parking lot.",
+      "vlm_hint": {
+        "missing_objects": [
+          "park bench",
+          "sidewalk",
+          "parking lot",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "book"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the location of the parking lot, and the number of people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads book on park bench under trees near people on sidewalk by parking lot.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park bench\", \"sidewalk\", \"parking lot\", \"people\"],\n  \"hallucinated_objects\": [\"book\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the location of the parking lot, and the number of people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man reads on wooden bench under tall trees near others on sidewalk by parking lot.",
+      "vlm_hint": {
+        "missing_objects": [
+          "park",
+          "sidewalk",
+          "parking lot",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "wooden bench"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the presence of a parking lot, and the number of people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, bench, book, trees, leaves, shadows, park, sidewalk, parking lot, people, park bench, book, man, trees, leaves, shadows, park, sidewalk, parking lot, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man reads on wooden bench under tall trees near others on sidewalk by parking lot.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"park\", \"sidewalk\", \"parking lot\", \"people\"],\n  \"hallucinated_objects\": [\"wooden bench\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the presence of a parking lot, and the number of people.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 264535,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000264535.jpg",
+    "final_caption": "Man reads on wooden bench under tall trees near others on sidewalk by parking lot.",
+    "total_time_sec": 35.68
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"bench\",\n    \"book\",\n    \"trees\",\n    \"leaves\",\n    \"shadows\",\n    \"park\",\n    \"sidewalk\",\n    \"parking lot\",\n    \"people\",\n    \"park bench\",\n    \"book\",\n    \"man\",\n    \"trees\",\n    \"leaves\",\n    \"shadows\",\n    \"park\",\n    \"sidewalk\",\n    \"parking lot\",\n    \"people\"\n  ]\n}"
+}

@@ -1,0 +1,257 @@
+{
+  "image_id": 32285,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000032285.jpg",
+  "objects": [
+    "toilet",
+    "towel",
+    "shower curtain",
+    "shower",
+    "towel rack",
+    "closet",
+    "blanket",
+    "plaid blanket",
+    "tile floor",
+    "light switch",
+    "wall",
+    "door",
+    "closet door",
+    "closet shelves",
+    "closet contents",
+    "bathroom"
+  ],
+  "template": "We have an image with these objects: ['toilet', 'towel', 'shower curtain', 'shower', 'towel rack', 'closet', 'blanket', 'plaid blanket', 'tile floor', 'light switch', 'wall', 'door', 'closet door', 'closet shelves', 'closet contents', 'bathroom']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Shower curtain bath towel and tile floor bathroom",
+      "vlm_hint": {
+        "missing_objects": [
+          "toilet",
+          "towel rack",
+          "closet",
+          "closet shelves",
+          "closet contents",
+          "bathroom"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain bath towel and tile floor bathroom\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"toilet\", \"towel rack\", \"closet\", \"closet shelves\", \"closet contents\", \"bathroom\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Shower curtain towel and plaid blanket bathroom",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel rack",
+          "closet door",
+          "closet shelves",
+          "closet contents"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the towel rack, closet door, closet shelves, and closet contents."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain towel and plaid blanket bathroom\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel rack\", \"closet door\", \"closet shelves\", \"closet contents\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the towel rack, closet door, closet shelves, and closet contents.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Shower curtain towel and rack bathroom with closet shelves and contents",
+      "vlm_hint": {
+        "missing_objects": [
+          "shower",
+          "plaid blanket",
+          "tile floor"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "wall",
+          "door",
+          "closet door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of shower, the color of the towel, and the contents of the closet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain towel and rack bathroom with closet shelves and contents\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shower\", \"plaid blanket\", \"tile floor\"],\n  \"hallucinated_objects\": [\"light switch\", \"wall\", \"door\", \"closet door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of shower, the color of the towel, and the contents of the closet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Shower curtain and plaid towel in shower bathroom with tiled floor and closet contents",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel rack",
+          "light switch",
+          "wall",
+          "door",
+          "closet door",
+          "closet shelves",
+          "closet contents"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific objects and make the caption more generic."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain and plaid towel in shower bathroom with tiled floor and closet contents\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel rack\", \"light switch\", \"wall\", \"door\", \"closet door\", \"closet shelves\", \"closet contents\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific objects and make the caption more generic.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Shower curtain and towel in bathroom with closet and tiles",
+      "vlm_hint": {
+        "missing_objects": [
+          "shower",
+          "towel rack",
+          "light switch",
+          "closet contents"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the genericity."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain and towel in bathroom with closet and tiles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shower\", \"towel rack\", \"light switch\", \"closet contents\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the genericity.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Shower curtain towel rack and plaid blanket by tiled shower in bathroom with closet contents",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "shower",
+          "light switch",
+          "wall",
+          "door",
+          "closet door",
+          "closet shelves",
+          "closet contents"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain towel rack and plaid blanket by tiled shower in bathroom with closet contents\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"shower\", \"light switch\", \"wall\", \"door\", \"closet door\", \"closet shelves\", \"closet contents\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Towel shower curtain on towel rack by tiled shower with closet contents and door",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "shower",
+          "towel rack",
+          "closet",
+          "closet contents",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Towel shower curtain on towel rack by tiled shower with closet contents and door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"shower\", \"towel rack\", \"closet\", \"closet contents\", \"door\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Towel on towel rack near shower curtain by tiled shower with closet contents and door",
+      "vlm_hint": {
+        "missing_objects": [
+          "shower",
+          "light switch",
+          "closet contents"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of towel, the color of the shower curtain, and the contents of the closet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Towel on towel rack near shower curtain by tiled shower with closet contents and door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shower\", \"light switch\", \"closet contents\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of towel, the color of the shower curtain, and the contents of the closet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Towel on rack near shower curtain by tiled shower with closet contents and light switch",
+      "vlm_hint": {
+        "missing_objects": [
+          "shower",
+          "light switch"
+        ],
+        "hallucinated_objects": [
+          "plaid blanket"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the shower, light switch, and the correct blanket."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Towel on rack near shower curtain by tiled shower with closet contents and light switch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shower\", \"light switch\"],\n  \"hallucinated_objects\": [\"plaid blanket\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the shower, light switch, and the correct blanket.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Shower curtain near towel on rack by tiled shower with light switch and blanket",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel rack",
+          "shower",
+          "light switch",
+          "blanket",
+          "plaid blanket",
+          "tile floor",
+          "closet",
+          "closet door",
+          "closet shelves",
+          "closet contents",
+          "bathroom"
+        ],
+        "hallucinated_objects": [
+          "toilet"
+        ],
+        "genericity_hint": "The candidate caption is too specific and does not cover all the objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the general objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, towel, shower curtain, shower, towel rack, closet, blanket, plaid blanket, tile floor, light switch, wall, door, closet door, closet shelves, closet contents, bathroom]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shower curtain near towel on rack by tiled shower with light switch and blanket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel rack\", \"shower\", \"light switch\", \"blanket\", \"plaid blanket\", \"tile floor\", \"closet\", \"closet door\", \"closet shelves\", \"closet contents\", \"bathroom\"],\n  \"hallucinated_objects\": [\"toilet\"],\n  \"genericity_hint\": \"The candidate caption is too specific and does not cover all the objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the general objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 32285,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000032285.jpg",
+    "final_caption": "Shower curtain near towel on rack by tiled shower with light switch and blanket",
+    "total_time_sec": 34.55
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"toilet\",\n    \"towel\",\n    \"shower curtain\",\n    \"shower\",\n    \"towel rack\",\n    \"closet\",\n    \"blanket\",\n    \"plaid blanket\",\n    \"tile floor\",\n    \"light switch\",\n    \"wall\",\n    \"door\",\n    \"closet door\",\n    \"closet shelves\",\n    \"closet contents\",\n    \"bathroom\"\n  ]\n}"
+}

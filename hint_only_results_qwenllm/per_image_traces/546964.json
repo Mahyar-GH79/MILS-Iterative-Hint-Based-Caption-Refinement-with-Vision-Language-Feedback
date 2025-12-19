@@ -1,0 +1,231 @@
+{
+  "image_id": 546964,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000546964.jpg",
+  "objects": [
+    "couch",
+    "chair",
+    "table",
+    "candle",
+    "candlestick",
+    "flower arrangement",
+    "rug",
+    "mirror",
+    "cabinet",
+    "lamp",
+    "candle",
+    "candlestick",
+    "cabinet",
+    "candle",
+    "candlestick",
+    "cabinet",
+    "candle",
+    "candlestick",
+    "cabinet",
+    "candle"
+  ],
+  "template": "We have an image with these objects: ['couch', 'chair', 'table', 'candle', 'candlestick', 'flower arrangement', 'rug', 'mirror', 'cabinet', 'lamp', 'candle', 'candlestick', 'cabinet', 'candle', 'candlestick', 'cabinet', 'candle', 'candlestick', 'cabinet', 'candle']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Candles illuminate a room with furniture and flowers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "lamp",
+          "cabinet"
+        ],
+        "hallucinated_objects": [
+          "candle",
+          "candlestick"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and corrects the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles illuminate a room with furniture and flowers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"lamp\", \"cabinet\"],\n  \"hallucinated_objects\": [\"candle\", \"candlestick\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and corrects the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Candles and a lamp light a room with a couch chair table and mirror near a cabinet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flower arrangement",
+          "rug"
+        ],
+        "hallucinated_objects": [
+          "lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the flower arrangement and the rug."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and a lamp light a room with a couch chair table and mirror near a cabinet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flower arrangement\", \"rug\"],\n  \"hallucinated_objects\": [\"lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the flower arrangement and the rug.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Candles and candlesticks light a room with a couch, chair, table, mirror, and flower arrangement on a rug near a cabinet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "cabinet"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, the design of the chairs, and the exact location of the flower arrangement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, table, mirror, and flower arrangement on a rug near a cabinet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"cabinet\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, the design of the chairs, and the exact location of the flower arrangement.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Candles and candlesticks light a room with a couch, armchair, low table, and floral arrangement on a rug near a cabinet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "lamp",
+          "cabinet"
+        ],
+        "hallucinated_objects": [
+          "flower arrangement"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the presence of a mirror, lamp, and cabinet, and remove the mention of the flower arrangement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, armchair, low table, and floral arrangement on a rug near a cabinet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"lamp\", \"cabinet\"],\n  \"hallucinated_objects\": [\"flower arrangement\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the presence of a mirror, lamp, and cabinet, and remove the mention of the flower arrangement.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Candles and candlesticks light a room with a couch, chair, table, and a cabinet near a mirror and lamp.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flower arrangement",
+          "rug"
+        ],
+        "hallucinated_objects": [
+          "cabinet",
+          "lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the flower arrangement and the rug."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, table, and a cabinet near a mirror and lamp.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flower arrangement\", \"rug\"],\n  \"hallucinated_objects\": [\"cabinet\", \"lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the flower arrangement and the rug.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Candles and candlesticks light a room with a couch, chair, table, and rug near a mirror and flower arrangement.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "cabinet"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, table, and rug near a mirror and flower arrangement.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"cabinet\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Candles and candlesticks light a room with a couch, chair, table, rug, cabinet, and mirror.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flower arrangement",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "cabinet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a flower arrangement and a lamp."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, table, rug, cabinet, and mirror.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flower arrangement\", \"lamp\"],\n  \"hallucinated_objects\": [\"cabinet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a flower arrangement and a lamp.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Candles and candlesticks light a room with a couch, chair, table, rug, and mirror near a flower arrangement and lamp.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cabinet",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, table, rug, and mirror near a flower arrangement and lamp.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cabinet\", \"lamp\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Candles and candlesticks light a room with a couch, chair, and table near a rug and flower arrangement by a cabinet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "lamp",
+          "cabinet"
+        ],
+        "hallucinated_objects": [
+          "flower arrangement",
+          "cabinet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, and table near a rug and flower arrangement by a cabinet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"lamp\", \"cabinet\"],\n  \"hallucinated_objects\": [\"flower arrangement\", \"cabinet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Candles and candlesticks light a room with a couch, chair, and table near a rug; a mirror and lamps add shine by cabinets.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flower arrangement",
+          "lamp",
+          "cabinet"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the presence of a flower arrangement, lamp, and cabinet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, chair, table, candle, candlestick, flower arrangement, rug, mirror, cabinet, lamp, candle, candlestick, cabinet, candle, candlestick, cabinet, candle, candlestick, cabinet, candle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles and candlesticks light a room with a couch, chair, and table near a rug; a mirror and lamps add shine by cabinets.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flower arrangement\", \"lamp\", \"cabinet\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the presence of a flower arrangement, lamp, and cabinet.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 546964,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000546964.jpg",
+    "final_caption": "Candles and candlesticks light a room with a couch, chair, and table near a rug; a mirror and lamps add shine by cabinets.",
+    "total_time_sec": 34.47
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"couch\",\n    \"chair\",\n    \"table\",\n    \"candle\",\n    \"candlestick\",\n    \"flower arrangement\",\n    \"rug\",\n    \"mirror\",\n    \"cabinet\",\n    \"lamp\",\n    \"candle\",\n    \"candlestick\",\n    \"cabinet\",\n    \"candle\",\n    \"candlestick\",\n    \"cabinet\",\n    \"candle\",\n    \"candlestick\",\n    \"cabinet\",\n    \"candle\"\n  ]\n}"
+}

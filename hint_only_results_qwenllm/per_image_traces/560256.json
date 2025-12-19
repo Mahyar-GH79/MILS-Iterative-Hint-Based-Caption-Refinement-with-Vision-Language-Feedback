@@ -1,0 +1,258 @@
+{
+  "image_id": 560256,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000560256.jpg",
+  "objects": [
+    "bananas",
+    "apples",
+    "avocados",
+    "pineapples",
+    "cherries",
+    "mangoes",
+    "grapes",
+    "oranges",
+    "plums",
+    "lemons",
+    "strawberries",
+    "watermelons",
+    "pineapple",
+    "bananas",
+    "apples",
+    "avocados",
+    "pineapples",
+    "cherries",
+    "mangoes"
+  ],
+  "template": "We have an image with these objects: ['bananas', 'apples', 'avocados', 'pineapples', 'cherries', 'mangoes', 'grapes', 'oranges', 'plums', 'lemons', 'strawberries', 'watermelons', 'pineapple', 'bananas', 'apples', 'avocados', 'pineapples', 'cherries', 'mangoes']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Fresh fruits including bananas apples and pineapples\u5806\u79ef\u5728\u684c\u4e0a",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "watermelons",
+          "lemons",
+          "grapes",
+          "plums",
+          "strawberries",
+          "watermelons",
+          "lemons",
+          "grapes",
+          "plums"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the types of fruits visible in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fresh fruits including bananas apples and pineapples\u5806\u79ef\u5728\u684c\u4e0a\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"watermelons\", \"lemons\", \"grapes\", \"plums\", \"strawberries\", \"watermelons\", \"lemons\", \"grapes\", \"plums\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the types of fruits visible in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Various fresh fruits like bananas apples and pineapples sit on the table with strawberries watermelons and lemons nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "watermelons",
+          "lemons"
+        ],
+        "hallucinated_objects": [
+          "pineapples"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Remove the generic fruits and add the specific fruits mentioned in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Various fresh fruits like bananas apples and pineapples sit on the table with strawberries watermelons and lemons nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"watermelons\", \"lemons\"],\n  \"hallucinated_objects\": [\"pineapples\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Remove the generic fruits and add the specific fruits mentioned in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bananas apples avocados and strawberries sit on the table with watermelons and lemons nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cherries",
+          "grapes",
+          "plums",
+          "oranges",
+          "strawberries",
+          "watermelons",
+          "lemons"
+        ],
+        "hallucinated_objects": [
+          "pineapples"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Add specific types of fruits to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples avocados and strawberries sit on the table with watermelons and lemons nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cherries\", \"grapes\", \"plums\", \"oranges\", \"strawberries\", \"watermelons\", \"lemons\"],\n  \"hallucinated_objects\": [\"pineapples\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Add specific types of fruits to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bananas, apples, avocados, and strawberries sit on the table with oranges and plums nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pineapples",
+          "cherries",
+          "grapes",
+          "lemons",
+          "watermelons",
+          "strawberries"
+        ],
+        "hallucinated_objects": [
+          "bananas",
+          "apples",
+          "avocados",
+          "mangoes"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Remove the generic fruits and add the specific types mentioned in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, avocados, and strawberries sit on the table with oranges and plums nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pineapples\", \"cherries\", \"grapes\", \"lemons\", \"watermelons\", \"strawberries\"],\n  \"hallucinated_objects\": [\"bananas\", \"apples\", \"avocados\", \"mangoes\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Remove the generic fruits and add the specific types mentioned in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Pineapples cherries grapes and lemons sit on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bananas",
+          "avocados",
+          "plums",
+          "strawberries",
+          "watermelons"
+        ],
+        "hallucinated_objects": [
+          "lemons"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention all the fruits in the image.",
+        "edit_instructions": [
+          "Remove the generic caption and include all the fruits mentioned in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pineapples cherries grapes and lemons sit on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bananas\", \"avocados\", \"plums\", \"strawberries\", \"watermelons\"],\n  \"hallucinated_objects\": [\"lemons\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention all the fruits in the image.\",\n  \"edit_instructions\": \"Remove the generic caption and include all the fruits mentioned in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bananas avocados cherries mangoes pineapples and strawberries sit on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lemons",
+          "grapes",
+          "plums",
+          "watermelons",
+          "strawberries"
+        ],
+        "hallucinated_objects": [
+          "oranges"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify all the fruits present in the image.",
+        "edit_instructions": [
+          "Remove the generic fruits and add the missing fruits to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas avocados cherries mangoes pineapples and strawberries sit on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lemons\", \"grapes\", \"plums\", \"watermelons\", \"strawberries\"],\n  \"hallucinated_objects\": [\"oranges\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify all the fruits present in the image.\",\n  \"edit_instructions\": \"Remove the generic fruits and add the missing fruits to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bananas avocados cherries mangoes lemons grapes and strawberries sit on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pineapples",
+          "plums",
+          "watermelons"
+        ],
+        "hallucinated_objects": [
+          "lemons",
+          "strawberries"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Remove the generic fruits and add the specific types mentioned in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas avocados cherries mangoes lemons grapes and strawberries sit on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pineapples\", \"plums\", \"watermelons\"],\n  \"hallucinated_objects\": [\"lemons\", \"strawberries\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Remove the generic fruits and add the specific types mentioned in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bananas avocados cherries pineapples and plums sit on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "grapes",
+          "lemons",
+          "strawberries",
+          "watermelons"
+        ],
+        "hallucinated_objects": [
+          "oranges"
+        ],
+        "genericity_hint": "The caption is too generic and does not include all the visible fruits.",
+        "edit_instructions": [
+          "Include all the visible fruits in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas avocados cherries pineapples and plums sit on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grapes\", \"lemons\", \"strawberries\", \"watermelons\"],\n  \"hallucinated_objects\": [\"oranges\"],\n  \"genericity_hint\": \"The caption is too generic and does not include all the visible fruits.\",\n  \"edit_instructions\": \"Include all the visible fruits in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bananas apples avocados pineapples cherries mangoes strawberries grapes lemons watermelons sit on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "grapes",
+          "lemons",
+          "watermelons"
+        ],
+        "hallucinated_objects": [
+          "pineapples"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Remove the generic fruits and add the specific types mentioned in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples avocados pineapples cherries mangoes strawberries grapes lemons watermelons sit on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"grapes\", \"lemons\", \"watermelons\"],\n  \"hallucinated_objects\": [\"pineapples\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Remove the generic fruits and add the specific types mentioned in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bananas apples avocados strawberries grapes lemons watermelons sit on the table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pineapples",
+          "cherries",
+          "mangoes",
+          "plums"
+        ],
+        "hallucinated_objects": [
+          "lemons"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact types of fruits present.",
+        "edit_instructions": [
+          "Specify the exact types of fruits present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, avocados, pineapples, cherries, mangoes, grapes, oranges, plums, lemons, strawberries, watermelons, pineapple, bananas, apples, avocados, pineapples, cherries, mangoes]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples avocados strawberries grapes lemons watermelons sit on the table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pineapples\", \"cherries\", \"mangoes\", \"plums\"],\n  \"hallucinated_objects\": [\"lemons\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact types of fruits present.\",\n  \"edit_instructions\": \"Specify the exact types of fruits present in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 560256,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000560256.jpg",
+    "final_caption": "Bananas apples avocados strawberries grapes lemons watermelons sit on the table.",
+    "total_time_sec": 35.29
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bananas\",\n    \"apples\",\n    \"avocados\",\n    \"pineapples\",\n    \"cherries\",\n    \"mangoes\",\n    \"grapes\",\n    \"oranges\",\n    \"plums\",\n    \"lemons\",\n    \"strawberries\",\n    \"watermelons\",\n    \"pineapple\",\n    \"bananas\",\n    \"apples\",\n    \"avocados\",\n    \"pineapples\",\n    \"cherries\",\n    \"mangoes\"\n  ]\n}"
+}

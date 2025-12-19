@@ -1,0 +1,237 @@
+{
+  "image_id": 185890,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000185890.jpg",
+  "objects": [
+    "dress",
+    "dress",
+    "game controller",
+    "game controller",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet",
+    "carpet"
+  ],
+  "template": "We have an image with these objects: ['dress', 'dress', 'game controller', 'game controller', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet', 'carpet']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Carpet covered gaming area",
+      "vlm_hint": {
+        "missing_objects": [
+          "two women",
+          "game",
+          "carpet"
+        ],
+        "hallucinated_objects": [
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet",
+          "carpet"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the context or the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the two women, the game they are playing, and the carpet they are standing on."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carpet covered gaming area\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"two women\", \"game\", \"carpet\"],\n  \"hallucinated_objects\": [\"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\", \"carpet\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the context or the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the two women, the game they are playing, and the carpet they are standing on.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Two women play a game on a carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "two women",
+          "carpeted floor"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide more specific details about the image, such as the number of women, their actions, and the type of carpet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two women play a game on a carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"two women\", \"carpeted floor\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide more specific details about the image, such as the number of women, their actions, and the type of carpet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Six women play games on a thick carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "two women"
+        ],
+        "hallucinated_objects": [
+          "six women"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of women playing the game.",
+        "edit_instructions": [
+          "Remove the word 'six' and specify the number of women playing the game."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six women play games on a thick carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"two women\"],\n  \"hallucinated_objects\": [\"six women\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of women playing the game.\",\n  \"edit_instructions\": \"Remove the word 'six' and specify the number of women playing the game.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Two women play games on a thick carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "two women",
+          "playing games"
+        ],
+        "hallucinated_objects": [
+          "carpet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the women and the activity they are engaged in.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the two women and the activity they are engaged in."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two women play games on a thick carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"two women\", \"playing games\"],\n  \"hallucinated_objects\": [\"carpet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the women and the activity they are engaged in.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the two women and the activity they are engaged in.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Two women play games on a carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "two women",
+          "carpeted floor"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide more specific details about the image, such as the number of women, their actions, and the type of carpet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two women play games on a carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"two women\", \"carpeted floor\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide more specific details about the image, such as the number of women, their actions, and the type of carpet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Six women play games intensely on a thick carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "two women"
+        ],
+        "hallucinated_objects": [
+          "six women"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of women playing.",
+        "edit_instructions": [
+          "Specify the number of women playing in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six women play games intensely on a thick carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"two women\"],\n  \"hallucinated_objects\": [\"six women\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of women playing.\",\n  \"edit_instructions\": \"Specify the number of women playing in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Two women play games intensely on a thick carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "carpet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of carpet and the specific game controllers being used."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two women play games intensely on a thick carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"carpet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of carpet and the specific game controllers being used.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Women play games intensely using controllers on a thick carpeted floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "carpet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the people and the carpet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Women play games intensely using controllers on a thick carpeted floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"carpet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the people and the carpet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Women in dresses play games intensely using controllers on thick carpet",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamps",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Women in dresses play games intensely using controllers on thick carpet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamps\", \"people\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Women in dresses intensely play games on multiple carpets using game controllers",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "carpet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the people and the setting.",
+        "edit_instructions": [
+          "Provide more specific details about the people and the setting in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, dress, game controller, game controller, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet, carpet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Women in dresses intensely play games on multiple carpets using game controllers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"carpet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the people and the setting.\",\n  \"edit_instructions\": \"Provide more specific details about the people and the setting in the caption.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 185890,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000185890.jpg",
+    "final_caption": "Women in dresses intensely play games on multiple carpets using game controllers",
+    "total_time_sec": 31.28
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"dress\",\n    \"dress\",\n    \"game controller\",\n    \"game controller\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\",\n    \"carpet\"\n  ]\n}"
+}

@@ -1,0 +1,256 @@
+{
+  "image_id": 287545,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000287545.jpg",
+  "objects": [
+    "giraffe",
+    "giraffe",
+    "log",
+    "fence",
+    "wall",
+    "window",
+    "ceiling",
+    "floor",
+    "tail",
+    "ears",
+    "neck",
+    "head",
+    "body",
+    "legs",
+    "feet",
+    "wood",
+    "metal",
+    "glass",
+    "light",
+    "shadow"
+  ],
+  "template": "We have an image with these objects: ['giraffe', 'giraffe', 'log', 'fence', 'wall', 'window', 'ceiling', 'floor', 'tail', 'ears', 'neck', 'head', 'body', 'legs', 'feet', 'wood', 'metal', 'glass', 'light', 'shadow']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Two giraffes under a log near a fence shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "ceiling",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "metal",
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the window, ceiling, light, and shadow, and avoids mentioning metal and glass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes under a log near a fence shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"ceiling\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"metal\", \"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the window, ceiling, light, and shadow, and avoids mentioning metal and glass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Two giraffes under a log near a fence with shadows on the ceiling and light through the window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and include the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes under a log near a fence with shadows on the ceiling and light through the window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and include the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Two giraffes by a log near a fence with shadows and light through the window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "ceiling",
+          "floor",
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and include the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a fence with shadows and light through the window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"ceiling\", \"floor\", \"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and include the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Two giraffes by a log near a fence with shadows and light\u900f\u8fc7\u7a97\u6237\u6d12\u5165\u3002",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a fence with shadows and light\u900f\u8fc7\u7a97\u6237\u6d12\u5165\u3002\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Two giraffes by a log near a fence with shadows and light through the window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "ceiling",
+          "floor",
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and include the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a fence with shadows and light through the window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"ceiling\", \"floor\", \"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and include the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Two giraffes by a log near a fence with shadows and light\u900f\u8fc7\u7a97\u6237\u6d12\u8fdb\u6765\u3002",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and include the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a fence with shadows and light\u900f\u8fc7\u7a97\u6237\u6d12\u8fdb\u6765\u3002\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and include the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Two giraffes by a log near a fence with shadows and light through the window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "ceiling",
+          "floor",
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and include the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a fence with shadows and light through the window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"ceiling\", \"floor\", \"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and include the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two giraffes by a log near a fence with light and shadow playing on their bodies.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "ceiling",
+          "floor",
+          "metal",
+          "glass",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "wall",
+          "tail",
+          "ears",
+          "neck",
+          "head",
+          "body",
+          "legs",
+          "feet",
+          "wood"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and interactions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a fence with light and shadow playing on their bodies.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"ceiling\", \"floor\", \"metal\", \"glass\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"wall\", \"tail\", \"ears\", \"neck\", \"head\", \"body\", \"legs\", \"feet\", \"wood\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and interactions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Two giraffes by a log under a glass ceiling with light and shadow.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "glass ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log under a glass ceiling with light and shadow.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"glass ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Two giraffes by a log near a window with light and shadow playing on the floor.",
+      "vlm_hint": {
+        "missing_objects": [
+          "window",
+          "light",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the window, light, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, giraffe, log, fence, wall, window, ceiling, floor, tail, ears, neck, head, body, legs, feet, wood, metal, glass, light, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two giraffes by a log near a window with light and shadow playing on the floor.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"window\", \"light\", \"shadow\"],\n  \"hallucinated_objects\": [\"glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the window, light, and shadow.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 287545,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000287545.jpg",
+    "final_caption": "Two giraffes by a log near a window with light and shadow playing on the floor.",
+    "total_time_sec": 33.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"giraffe\",\n    \"giraffe\",\n    \"log\",\n    \"fence\",\n    \"wall\",\n    \"window\",\n    \"ceiling\",\n    \"floor\",\n    \"tail\",\n    \"ears\",\n    \"neck\",\n    \"head\",\n    \"body\",\n    \"legs\",\n    \"feet\",\n    \"wood\",\n    \"metal\",\n    \"glass\",\n    \"light\",\n    \"shadow\"\n  ]\n}"
+}

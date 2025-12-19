@@ -1,0 +1,245 @@
+{
+  "image_id": 253386,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000253386.jpg",
+  "objects": [
+    "dog",
+    "chain",
+    "collar",
+    "leaves",
+    "ground",
+    "shoe",
+    "leg",
+    "jeans",
+    "foot",
+    "toe",
+    "ankle",
+    "leg",
+    "foot",
+    "toe",
+    "ankle",
+    "leg",
+    "foot",
+    "toe",
+    "ankle",
+    "leg"
+  ],
+  "template": "We have an image with these objects: ['dog', 'chain', 'collar', 'leaves', 'ground', 'shoe', 'leg', 'jeans', 'foot', 'toe', 'ankle', 'leg', 'foot', 'toe', 'ankle', 'leg', 'foot', 'toe', 'ankle', 'leg']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Dog in jeans walking through leaves on ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "chain",
+          "collar"
+        ],
+        "hallucinated_objects": [
+          "shoe",
+          "leg",
+          "foot",
+          "toe",
+          "ankle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's collar and chain.",
+        "edit_instructions": [
+          "Add details about the dog's collar and chain to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog in jeans walking through leaves on ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chain\", \"collar\"],\n  \"hallucinated_objects\": [\"shoe\", \"leg\", \"foot\", \"toe\", \"ankle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's collar and chain.\",\n  \"edit_instructions\": \"Add details about the dog's collar and chain to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Dog in collar and chain walking through leaves on ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoe",
+          "toe",
+          "ankle"
+        ],
+        "hallucinated_objects": [
+          "foot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's collar and chain.",
+        "edit_instructions": [
+          "Provide more specific details about the dog's collar and chain, and include the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog in collar and chain walking through leaves on ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoe\", \"toe\", \"ankle\"],\n  \"hallucinated_objects\": [\"foot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's collar and chain.\",\n  \"edit_instructions\": \"Provide more specific details about the dog's collar and chain, and include the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Dog in decorated collar and chain walks through leaves, shoe visible by toe and ankle",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoe",
+          "toe",
+          "ankle"
+        ],
+        "hallucinated_objects": [
+          "decorated collar"
+        ],
+        "genericity_hint": "The caption is too specific and includes objects that are not visible in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the main subject and its surroundings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog in decorated collar and chain walks through leaves, shoe visible by toe and ankle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoe\", \"toe\", \"ankle\"],\n  \"hallucinated_objects\": [\"decorated collar\"],\n  \"genericity_hint\": \"The caption is too specific and includes objects that are not visible in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the main subject and its surroundings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Dog walks through leaves chain around neck shoe near foot",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoe",
+          "foot",
+          "toe",
+          "ankle"
+        ],
+        "hallucinated_objects": [
+          "collar",
+          "chain"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the shoe, foot, toe, and ankle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog walks through leaves chain around neck shoe near foot\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoe\", \"foot\", \"toe\", \"ankle\"],\n  \"hallucinated_objects\": [\"collar\", \"chain\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the shoe, foot, toe, and ankle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Dog walks through leaves shoe near foot and ankle",
+      "vlm_hint": {
+        "missing_objects": [
+          "chain",
+          "collar"
+        ],
+        "hallucinated_objects": [
+          "shoe",
+          "foot",
+          "toe",
+          "ankle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the chain and collar, and remove the shoe, foot, toe, and ankle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog walks through leaves shoe near foot and ankle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chain\", \"collar\"],\n  \"hallucinated_objects\": [\"shoe\", \"foot\", \"toe\", \"ankle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the chain and collar, and remove the shoe, foot, toe, and ankle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Dog with chain and collar walks through leaves on ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoe",
+          "toe",
+          "ankle"
+        ],
+        "hallucinated_objects": [
+          "foot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's appearance and the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the dog's appearance and the environment, such as the color of the dog's fur, the type of collar, and the specific type of leaves on the ground."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog with chain and collar walks through leaves on ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoe\", \"toe\", \"ankle\"],\n  \"hallucinated_objects\": [\"foot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's appearance and the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the dog's appearance and the environment, such as the color of the dog's fur, the type of collar, and the specific type of leaves on the ground.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown dog with red collar walks through golden leaves on ground wearing shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "chain",
+          "collar"
+        ],
+        "hallucinated_objects": [
+          "shoes",
+          "toe",
+          "ankle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's collar and chain.",
+        "edit_instructions": [
+          "Provide more specific details about the dog's collar and chain, and remove the mention of shoes, toe, and ankle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with red collar walks through golden leaves on ground wearing shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chain\", \"collar\"],\n  \"hallucinated_objects\": [\"shoes\", \"toe\", \"ankle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's collar and chain.\",\n  \"edit_instructions\": \"Provide more specific details about the dog's collar and chain, and remove the mention of shoes, toe, and ankle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Brown dog with red collar and chain walks through golden leaves on ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoe",
+          "toe",
+          "ankle"
+        ],
+        "hallucinated_objects": [
+          "golden leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's collar and chain.",
+        "edit_instructions": [
+          "Provide more specific details about the dog's collar and chain, and remove the generic 'golden leaves' phrase."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with red collar and chain walks through golden leaves on ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoe\", \"toe\", \"ankle\"],\n  \"hallucinated_objects\": [\"golden leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's collar and chain.\",\n  \"edit_instructions\": \"Provide more specific details about the dog's collar and chain, and remove the generic 'golden leaves' phrase.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Brown dog with red collar and chain walks on fallen leaves in ground shoe toe ankle",
+      "vlm_hint": {
+        "missing_objects": [
+          "chain",
+          "collar"
+        ],
+        "hallucinated_objects": [
+          "shoe",
+          "toe",
+          "ankle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the dog's collar and chain.",
+        "edit_instructions": [
+          "Provide specific details about the dog's collar and chain, and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with red collar and chain walks on fallen leaves in ground shoe toe ankle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chain\", \"collar\"],\n  \"hallucinated_objects\": [\"shoe\", \"toe\", \"ankle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the dog's collar and chain.\",\n  \"edit_instructions\": \"Provide specific details about the dog's collar and chain, and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Brown dog with red collar and chain walks through fallen leaves on ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoe",
+          "toe",
+          "ankle"
+        ],
+        "hallucinated_objects": [
+          "red collar"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the red collar and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, chain, collar, leaves, ground, shoe, leg, jeans, foot, toe, ankle, leg, foot, toe, ankle, leg, foot, toe, ankle, leg]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog with red collar and chain walks through fallen leaves on ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoe\", \"toe\", \"ankle\"],\n  \"hallucinated_objects\": [\"red collar\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the red collar and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 253386,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000253386.jpg",
+    "final_caption": "Brown dog with red collar and chain walks through fallen leaves on ground",
+    "total_time_sec": 31.1
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"dog\",\n    \"chain\",\n    \"collar\",\n    \"leaves\",\n    \"ground\",\n    \"shoe\",\n    \"leg\",\n    \"jeans\",\n    \"foot\",\n    \"toe\",\n    \"ankle\",\n    \"leg\",\n    \"foot\",\n    \"toe\",\n    \"ankle\",\n    \"leg\",\n    \"foot\",\n    \"toe\",\n    \"ankle\",\n    \"leg\"\n  ]\n}"
+}

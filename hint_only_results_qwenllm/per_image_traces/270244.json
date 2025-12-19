@@ -1,0 +1,210 @@
+{
+  "image_id": 270244,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000270244.jpg",
+  "objects": [
+    "zebra",
+    "grass",
+    "trees",
+    "mountains",
+    "sky"
+  ],
+  "template": "We have an image with these objects: ['zebra', 'grass', 'trees', 'mountains', 'sky']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Zebras under mountains against sky over grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "mountains",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the environment.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the trees and the environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras under mountains against sky over grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"mountains\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the environment.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the trees and the environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Zebras in grass under trees against sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add more specific details about the environment, such as mountains and a clear sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in grass under trees against sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add more specific details about the environment, such as mountains and a clear sky.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Zebras grazing in grass under trees next to mountains and blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as the presence of mountains and the color of the sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras grazing in grass under trees next to mountains and blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\", \"sky\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as the presence of mountains and the color of the sky.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Zebras grazing in green grass beneath hills against blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "hills"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add more specific details about the environment, such as the presence of mountains and the color of the sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras grazing in green grass beneath hills against blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\", \"sky\"],\n  \"hallucinated_objects\": [\"hills\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add more specific details about the environment, such as the presence of mountains and the color of the sky.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Zebras grazing in green grass under trees toward blue skies behind mountains",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as the presence of mountains and the color of the sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras grazing in green grass under trees toward blue skies behind mountains\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\", \"sky\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as the presence of mountains and the color of the sky.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Zebras grazing in green grass under mountains toward a bright blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "mountains",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment, such as the presence of trees and the color of the sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras grazing in green grass under mountains toward a bright blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"mountains\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment, such as the presence of trees and the color of the sky.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Zebra munching on grass under tall trees toward a clear blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "tall trees",
+          "clear blue sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and the zebra's activity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra munching on grass under tall trees toward a clear blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\"],\n  \"hallucinated_objects\": [\"tall trees\", \"clear blue sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and the zebra's activity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Zebra grazing on grass beneath trees near towering mountains and blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as the presence of mountains and the sky, and remove the mention of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra grazing on grass beneath trees near towering mountains and blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\", \"sky\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as the presence of mountains and the sky, and remove the mention of trees.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Zebram grazes in grassy field under blue sky near mountains",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "mountains",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment, such as the presence of trees and mountains."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebram grazes in grassy field under blue sky near mountains\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"mountains\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment, such as the presence of trees and mountains.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Zebra munches on grass among tall trees by distant hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "mountains",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "tall trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as mountains and sky, and remove the phrase 'tall trees'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, mountains, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra munches on grass among tall trees by distant hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mountains\", \"sky\"],\n  \"hallucinated_objects\": [\"tall trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as mountains and sky, and remove the phrase 'tall trees'.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 270244,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000270244.jpg",
+    "final_caption": "Zebra munches on grass among tall trees by distant hills",
+    "total_time_sec": 26.76
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"zebra\",\n    \"grass\",\n    \"trees\",\n    \"mountains\",\n    \"sky\"\n  ]\n}"
+}

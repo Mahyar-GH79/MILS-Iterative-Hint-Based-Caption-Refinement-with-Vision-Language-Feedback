@@ -1,0 +1,238 @@
+{
+  "image_id": 185250,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000185250.jpg",
+  "objects": [
+    "man",
+    "dog",
+    "frisbee",
+    "tree",
+    "fence",
+    "grass",
+    "leaves",
+    "sky",
+    "ground",
+    "shoes",
+    "shirt",
+    "necklace",
+    "earrings",
+    "jacket",
+    "pants",
+    "tree trunk",
+    "tree branches",
+    "tree leaves",
+    "tree trunk"
+  ],
+  "template": "We have an image with these objects: ['man', 'dog', 'frisbee', 'tree', 'fence', 'grass', 'leaves', 'sky', 'ground', 'shoes', 'shirt', 'necklace', 'earrings', 'jacket', 'pants', 'tree trunk', 'tree branches', 'tree leaves', 'tree trunk']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man playing with dog near frisbee under tree",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man playing with dog near frisbee under tree\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in shirt and jeans plays with dog near frisbee under leafy tree wearing necklace and earrings",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "jacket",
+          "pants",
+          "tree trunk",
+          "tree branches",
+          "tree leaves"
+        ],
+        "hallucinated_objects": [
+          "tree trunk",
+          "tree branches",
+          "tree leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and positions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and jeans plays with dog near frisbee under leafy tree wearing necklace and earrings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"jacket\", \"pants\", \"tree trunk\", \"tree branches\", \"tree leaves\"],\n  \"hallucinated_objects\": [\"tree trunk\", \"tree branches\", \"tree leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and positions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in blue shirt and jeans tosses frisbee near dog under leafy tree wearing necklace and earrings",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "jacket",
+          "pants"
+        ],
+        "hallucinated_objects": [
+          "tree trunk",
+          "tree branches",
+          "tree leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's attire and the dog's appearance.",
+        "edit_instructions": [
+          "Provide more specific details about the man's attire and the dog's appearance."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in blue shirt and jeans tosses frisbee near dog under leafy tree wearing necklace and earrings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"jacket\", \"pants\"],\n  \"hallucinated_objects\": [\"tree trunk\", \"tree branches\", \"tree leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's attire and the dog's appearance.\",\n  \"edit_instructions\": \"Provide more specific details about the man's attire and the dog's appearance.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in blue shirt and jeans tosses frisbee near dog wearing a red collar under leafy tree",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "red collar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's attire and the dog's collar.",
+        "edit_instructions": [
+          "Provide more specific details about the man's attire and the dog's collar."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in blue shirt and jeans tosses frisbee near dog wearing a red collar under leafy tree\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"red collar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's attire and the dog's collar.\",\n  \"edit_instructions\": \"Provide more specific details about the man's attire and the dog's collar.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in blue shirt and jeans tosses frisbee near dog with earrings and necklace under leafy tree",
+      "vlm_hint": {
+        "missing_objects": [
+          "frisbee"
+        ],
+        "hallucinated_objects": [
+          "man in blue shirt and jeans",
+          "tree trunk",
+          "tree branches",
+          "tree leaves",
+          "tree trunk"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the shirt and jeans, and the type of tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in blue shirt and jeans tosses frisbee near dog with earrings and necklace under leafy tree\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"frisbee\"],\n  \"hallucinated_objects\": [\"man in blue shirt and jeans\", \"tree trunk\", \"tree branches\", \"tree leaves\", \"tree trunk\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the shirt and jeans, and the type of tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man tosses frisbee near dog under leafy oak tree",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the frisbee, the type of tree, and the clothing of the man."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man tosses frisbee near dog under leafy oak tree\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the frisbee, the type of tree, and the clothing of the man.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in shirt and jeans tosses red frisbee near dog under large oak tree with leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "red frisbee"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the frisbee, and include the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and jeans tosses red frisbee near dog under large oak tree with leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"red frisbee\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the frisbee, and include the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in shirt and jeans tosses black frisbee near dog on grass by large oak tree with leaves and shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "black frisbee"
+        ],
+        "hallucinated_objects": [
+          "large oak tree"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and jeans tosses black frisbee near dog on grass by large oak tree with leaves and shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black frisbee\"],\n  \"hallucinated_objects\": [\"large oak tree\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in shirt tosses black frisbee to dog near tree with leaves on grassy ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "black frisbee"
+        ],
+        "hallucinated_objects": [
+          "man in shirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt tosses black frisbee to dog near tree with leaves on grassy ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black frisbee\"],\n  \"hallucinated_objects\": [\"man in shirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man throws black frisbee to dog under leafy tree on grassy ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "black frisbee"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the color of the frisbee and the action of the man."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, dog, frisbee, tree, fence, grass, leaves, sky, ground, shoes, shirt, necklace, earrings, jacket, pants, tree trunk, tree branches, tree leaves, tree trunk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man throws black frisbee to dog under leafy tree on grassy ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"black frisbee\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the color of the frisbee and the action of the man.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 185250,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000185250.jpg",
+    "final_caption": "Man throws black frisbee to dog under leafy tree on grassy ground",
+    "total_time_sec": 32.63
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"dog\",\n    \"frisbee\",\n    \"tree\",\n    \"fence\",\n    \"grass\",\n    \"leaves\",\n    \"sky\",\n    \"ground\",\n    \"shoes\",\n    \"shirt\",\n    \"necklace\",\n    \"earrings\",\n    \"jacket\",\n    \"pants\",\n    \"tree trunk\",\n    \"tree branches\",\n    \"tree leaves\",\n    \"tree trunk\"\n  ]\n}"
+}

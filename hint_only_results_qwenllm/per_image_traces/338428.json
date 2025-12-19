@@ -1,0 +1,335 @@
+{
+  "image_id": 338428,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000338428.jpg",
+  "objects": [
+    "green truck",
+    "tailgate",
+    "license plate",
+    "tire",
+    "grass",
+    "tree",
+    "sky",
+    "clouds",
+    "parking lot",
+    "other vehicles",
+    "reflection",
+    "handle",
+    "window",
+    "fender",
+    "mirror",
+    "tail light",
+    "hitch",
+    "tire",
+    "grass",
+    "sky"
+  ],
+  "template": "We have an image with these objects: ['green truck', 'tailgate', 'license plate', 'tire', 'grass', 'tree', 'sky', 'clouds', 'parking lot', 'other vehicles', 'reflection', 'handle', 'window', 'fender', 'mirror', 'tail light', 'hitch', 'tire', 'grass', 'sky']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Green truck in parking lot under sky with clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailgate",
+          "license plate",
+          "tire",
+          "grass",
+          "tree",
+          "sky",
+          "clouds",
+          "parking lot",
+          "other vehicles",
+          "reflection",
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tail light",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "green truck"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck in parking lot under sky with clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailgate\", \"license plate\", \"tire\", \"grass\", \"tree\", \"sky\", \"clouds\", \"parking lot\", \"other vehicles\", \"reflection\", \"handle\", \"window\", \"fender\", \"mirror\", \"tail light\", \"hitch\"],\n  \"hallucinated_objects\": [\"green truck\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Green truck with tailgate in parking lot under sky and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "fender",
+          "mirror",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide more specific details about the truck's features, such as the tail light, fender, mirror, and hitch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tailgate in parking lot under sky and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"fender\", \"mirror\", \"hitch\"],\n  \"hallucinated_objects\": [\"window\", \"handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide more specific details about the truck's features, such as the tail light, fender, mirror, and hitch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Green truck with tailgate and tail light in parking lot under sky and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tailgate",
+          "grass",
+          "sky",
+          "clouds",
+          "parking lot",
+          "other vehicles",
+          "reflection",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "green truck",
+          "tailgate",
+          "license plate",
+          "tire",
+          "tree",
+          "sky",
+          "clouds"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color, type, and location of each object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tailgate and tail light in parking lot under sky and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"handle\", \"window\", \"fender\", \"mirror\", \"tailgate\", \"grass\", \"sky\", \"clouds\", \"parking lot\", \"other vehicles\", \"reflection\", \"hitch\"],\n  \"hallucinated_objects\": [\"green truck\", \"tailgate\", \"license plate\", \"tire\", \"tree\", \"sky\", \"clouds\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color, type, and location of each object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Green truck with tailgate in parking lot under sky and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "fender",
+          "mirror",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide more specific details about the truck's features, such as the tail light, fender, mirror, and hitch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tailgate in parking lot under sky and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"fender\", \"mirror\", \"hitch\"],\n  \"hallucinated_objects\": [\"window\", \"handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide more specific details about the truck's features, such as the tail light, fender, mirror, and hitch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Green truck with tailgate fender mirror and tail light in parking lot under sky clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tail light",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "tailgate"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide more specific details about the truck's features and remove the generic phrase 'in parking lot'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tailgate fender mirror and tail light in parking lot under sky clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"handle\", \"window\", \"fender\", \"mirror\", \"tail light\", \"hitch\"],\n  \"hallucinated_objects\": [\"tailgate\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide more specific details about the truck's features and remove the generic phrase 'in parking lot'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Green truck with fender mirror and tail light under sky clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailgate",
+          "license plate",
+          "tire",
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tail light",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "sky",
+          "clouds",
+          "parking lot",
+          "other vehicles",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific features of the truck, such as the tailgate, license plate, tire, handle, window, fender, mirror, and tail light."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with fender mirror and tail light under sky clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailgate\", \"license plate\", \"tire\", \"handle\", \"window\", \"fender\", \"mirror\", \"tail light\", \"hitch\"],\n  \"hallucinated_objects\": [\"grass\", \"sky\", \"clouds\", \"parking lot\", \"other vehicles\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific features of the truck, such as the tailgate, license plate, tire, handle, window, fender, mirror, and tail light.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Green truck with tailgate license plate and tire under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "fender",
+          "mirror",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide more specific details about the truck's features, such as the tail light, fender, mirror, and hitch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tailgate license plate and tire under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"fender\", \"mirror\", \"hitch\"],\n  \"hallucinated_objects\": [\"window\", \"handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide more specific details about the truck's features, such as the tail light, fender, mirror, and hitch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Green truck with tailgate, tail light, fender, and mirror in clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "handle",
+          "window",
+          "mirror",
+          "tail light",
+          "fender",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "tailgate",
+          "license plate",
+          "grass",
+          "sky",
+          "clouds",
+          "reflection",
+          "other vehicles",
+          "tree",
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific features of the truck, such as the handle, window, mirror, tail light, fender, and hitch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tailgate, tail light, fender, and mirror in clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"handle\", \"window\", \"mirror\", \"tail light\", \"fender\", \"hitch\"],\n  \"hallucinated_objects\": [\"tailgate\", \"license plate\", \"grass\", \"sky\", \"clouds\", \"reflection\", \"other vehicles\", \"tree\", \"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific features of the truck, such as the handle, window, mirror, tail light, fender, and hitch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Green truck with handle, window, mirror, and tail light on the fender in clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailgate",
+          "license plate",
+          "tire",
+          "grass",
+          "tree",
+          "sky",
+          "clouds",
+          "parking lot",
+          "other vehicles",
+          "reflection",
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tail light",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "green truck",
+          "tailgate",
+          "license plate",
+          "tire",
+          "grass",
+          "tree",
+          "sky",
+          "clouds",
+          "parking lot",
+          "other vehicles",
+          "reflection",
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tail light",
+          "hitch"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color, shape, and location of each object."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with handle, window, mirror, and tail light on the fender in clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailgate\", \"license plate\", \"tire\", \"grass\", \"tree\", \"sky\", \"clouds\", \"parking lot\", \"other vehicles\", \"reflection\", \"handle\", \"window\", \"fender\", \"mirror\", \"tail light\", \"hitch\"],\n  \"hallucinated_objects\": [\"green truck\", \"tailgate\", \"license plate\", \"tire\", \"grass\", \"tree\", \"sky\", \"clouds\", \"parking lot\", \"other vehicles\", \"reflection\", \"handle\", \"window\", \"fender\", \"mirror\", \"tail light\", \"hitch\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color, shape, and location of each object.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Green truck with tire and tail light on fender in clear sky next to trees and parked cars",
+      "vlm_hint": {
+        "missing_objects": [
+          "tailgate",
+          "license plate",
+          "handle",
+          "window",
+          "fender",
+          "mirror",
+          "tail light",
+          "hitch"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "sky",
+          "clouds",
+          "parking lot",
+          "other vehicles",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck and its surroundings.",
+        "edit_instructions": [
+          "Provide more specific details about the truck and its surroundings, including the tailgate, license plate, handle, window, fender, mirror, tail light, and hitch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [green truck, tailgate, license plate, tire, grass, tree, sky, clouds, parking lot, other vehicles, reflection, handle, window, fender, mirror, tail light, hitch, tire, grass, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green truck with tire and tail light on fender in clear sky next to trees and parked cars\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tailgate\", \"license plate\", \"handle\", \"window\", \"fender\", \"mirror\", \"tail light\", \"hitch\"],\n  \"hallucinated_objects\": [\"grass\", \"sky\", \"clouds\", \"parking lot\", \"other vehicles\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck and its surroundings.\",\n  \"edit_instructions\": \"Provide more specific details about the truck and its surroundings, including the tailgate, license plate, handle, window, fender, mirror, tail light, and hitch.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 338428,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000338428.jpg",
+    "final_caption": "Green truck with tire and tail light on fender in clear sky next to trees and parked cars",
+    "total_time_sec": 42.32
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"green truck\",\n    \"tailgate\",\n    \"license plate\",\n    \"tire\",\n    \"grass\",\n    \"tree\",\n    \"sky\",\n    \"clouds\",\n    \"parking lot\",\n    \"other vehicles\",\n    \"reflection\",\n    \"handle\",\n    \"window\",\n    \"fender\",\n    \"mirror\",\n    \"tail light\",\n    \"hitch\",\n    \"tire\",\n    \"grass\",\n    \"sky\"\n  ]\n}"
+}

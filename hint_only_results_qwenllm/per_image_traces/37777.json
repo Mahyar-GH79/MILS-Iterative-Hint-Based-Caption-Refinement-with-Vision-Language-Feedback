@@ -1,0 +1,290 @@
+{
+  "image_id": 37777,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000037777.jpg",
+  "objects": [
+    "kitchen",
+    "cabinets",
+    "stove",
+    "fridge",
+    "table",
+    "fruit",
+    "banana",
+    "orange",
+    "light",
+    "door",
+    "window",
+    "sink",
+    "oven",
+    "microwave",
+    "pot",
+    "pan",
+    "cutlery",
+    "spoon",
+    "knife",
+    "plate"
+  ],
+  "template": "We have an image with these objects: ['kitchen', 'cabinets', 'stove', 'fridge', 'table', 'fruit', 'banana', 'orange', 'light', 'door', 'window', 'sink', 'oven', 'microwave', 'pot', 'pan', 'cutlery', 'spoon', 'knife', 'plate']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Kitchen with cabinets stove and fruits",
+      "vlm_hint": {
+        "missing_objects": [
+          "fridge",
+          "table",
+          "sink",
+          "oven",
+          "microwave",
+          "pot",
+          "pan",
+          "cutlery",
+          "spoon",
+          "knife",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "fruit",
+          "banana",
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the kitchen elements.",
+        "edit_instructions": [
+          "Add specific details about the kitchen elements and remove the generic fruit and utensils."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove and fruits\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fridge\", \"table\", \"sink\", \"oven\", \"microwave\", \"pot\", \"pan\", \"cutlery\", \"spoon\", \"knife\", \"plate\"],\n  \"hallucinated_objects\": [\"fruit\", \"banana\", \"orange\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the kitchen elements.\",\n  \"edit_instructions\": \"Add specific details about the kitchen elements and remove the generic fruit and utensils.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Kitchen with cabinets stove fridge and table",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "oven",
+          "microwave",
+          "pot",
+          "pan",
+          "cutlery",
+          "spoon",
+          "knife",
+          "plate"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses several key objects in the kitchen.",
+        "edit_instructions": [
+          "Add the missing objects to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge and table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"oven\", \"microwave\", \"pot\", \"pan\", \"cutlery\", \"spoon\", \"knife\", \"plate\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses several key objects in the kitchen.\",\n  \"edit_instructions\": \"Add the missing objects to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Kitchen with cabinets stove fridge table sink oven microwave pots and pans cutlery",
+      "vlm_hint": {
+        "missing_objects": [
+          "fruit",
+          "banana",
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "oven",
+          "microwave",
+          "pots",
+          "pans",
+          "cutlery",
+          "knife",
+          "plate"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the kitchen.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the exact objects in the kitchen."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table sink oven microwave pots and pans cutlery\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fruit\", \"banana\", \"orange\"],\n  \"hallucinated_objects\": [\"sink\", \"oven\", \"microwave\", \"pots\", \"pans\", \"cutlery\", \"knife\", \"plate\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the kitchen.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the exact objects in the kitchen.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Kitchen with cabinets stove fridge table fruit banana orange",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "oven",
+          "microwave",
+          "pot",
+          "pan",
+          "cutlery",
+          "spoon",
+          "knife",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "door",
+          "window"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the kitchen.",
+        "edit_instructions": [
+          "Add specific details about the kitchen, such as the presence of a sink, oven, microwave, and other kitchen items."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table fruit banana orange\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"oven\", \"microwave\", \"pot\", \"pan\", \"cutlery\", \"spoon\", \"knife\", \"plate\"],\n  \"hallucinated_objects\": [\"light\", \"door\", \"window\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the kitchen.\",\n  \"edit_instructions\": \"Add specific details about the kitchen, such as the presence of a sink, oven, microwave, and other kitchen items.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Kitchen with cabinets stove fridge table sink oven microwave fruit bananas oranges cutlery",
+      "vlm_hint": {
+        "missing_objects": [
+          "pot",
+          "pan",
+          "knife",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "sink"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the specific objects and add missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table sink oven microwave fruit bananas oranges cutlery\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pot\", \"pan\", \"knife\", \"plate\"],\n  \"hallucinated_objects\": [\"sink\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the specific objects and add missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Kitchen with cabinets stove fridge table oven microwave pot pan knife plate fruit",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "cutlery",
+          "oven",
+          "pot",
+          "pan",
+          "knife",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "fruit",
+          "banana",
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the kitchen.",
+        "edit_instructions": [
+          "Add specific details about the objects in the kitchen, such as the presence of a sink, cutlery, oven, pot, pan, knife, and plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table oven microwave pot pan knife plate fruit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"cutlery\", \"oven\", \"pot\", \"pan\", \"knife\", \"plate\"],\n  \"hallucinated_objects\": [\"fruit\", \"banana\", \"orange\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the kitchen.\",\n  \"edit_instructions\": \"Add specific details about the objects in the kitchen, such as the presence of a sink, cutlery, oven, pot, pan, knife, and plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Kitchen with cabinets stove fridge table sink cutlery oven pot pan knife plate",
+      "vlm_hint": {
+        "missing_objects": [
+          "fruit",
+          "banana",
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "sink"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table sink cutlery oven pot pan knife plate\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fruit\", \"banana\", \"orange\"],\n  \"hallucinated_objects\": [\"light\", \"sink\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Kitchenscene with cabinets stove fridge table bananas oranges pots knives plates",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "oven",
+          "microwave",
+          "pot",
+          "pan",
+          "cutlery",
+          "spoon",
+          "knife",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "door",
+          "window"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the kitchen.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the kitchen, such as the presence of a sink, oven, microwave, and specific types of cutlery and plates."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchenscene with cabinets stove fridge table bananas oranges pots knives plates\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"oven\", \"microwave\", \"pot\", \"pan\", \"cutlery\", \"spoon\", \"knife\", \"plate\"],\n  \"hallucinated_objects\": [\"light\", \"door\", \"window\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the kitchen.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the kitchen, such as the presence of a sink, oven, microwave, and specific types of cutlery and plates.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Kitchen with cabinets stove fridge table pots pans cutlery plates",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "oven",
+          "microwave",
+          "pot",
+          "pan",
+          "cutlery",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "fruit",
+          "banana",
+          "orange"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the kitchen.",
+        "edit_instructions": [
+          "Add specific details about the kitchen, such as the presence of a sink, oven, microwave, and specific kitchen utensils."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table pots pans cutlery plates\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"oven\", \"microwave\", \"pot\", \"pan\", \"cutlery\", \"plate\"],\n  \"hallucinated_objects\": [\"fruit\", \"banana\", \"orange\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the kitchen.\",\n  \"edit_instructions\": \"Add specific details about the kitchen, such as the presence of a sink, oven, microwave, and specific kitchen utensils.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Kitchen with cabinets stove fridge table oven microwave pots pans cutlery plates",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "window",
+          "fruit",
+          "banana",
+          "orange"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kitchen, cabinets, stove, fridge, table, fruit, banana, orange, light, door, window, sink, oven, microwave, pot, pan, cutlery, spoon, knife, plate]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kitchen with cabinets stove fridge table oven microwave pots pans cutlery plates\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"window\", \"fruit\", \"banana\", \"orange\"],\n  \"hallucinated_objects\": [\"light\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 37777,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000037777.jpg",
+    "final_caption": "Kitchen with cabinets stove fridge table oven microwave pots pans cutlery plates",
+    "total_time_sec": 33.01
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"kitchen\",\n    \"cabinets\",\n    \"stove\",\n    \"fridge\",\n    \"table\",\n    \"fruit\",\n    \"banana\",\n    \"orange\",\n    \"light\",\n    \"door\",\n    \"window\",\n    \"sink\",\n    \"oven\",\n    \"microwave\",\n    \"pot\",\n    \"pan\",\n    \"cutlery\",\n    \"spoon\",\n    \"knife\",\n    \"plate\"\n  ]\n}"
+}

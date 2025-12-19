@@ -1,0 +1,365 @@
+{
+  "image_id": 210032,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000210032.jpg",
+  "objects": [
+    "sandwich",
+    "plate",
+    "ketchup",
+    "knife",
+    "fork",
+    "table",
+    "bird",
+    "water",
+    "bench",
+    "woman",
+    "building",
+    "ocean",
+    "boat",
+    "sky",
+    "clouds",
+    "trees",
+    "grass",
+    "leaves",
+    "boat",
+    "water"
+  ],
+  "template": "We have an image with these objects: ['sandwich', 'plate', 'ketchup', 'knife', 'fork', 'table', 'bird', 'water', 'bench', 'woman', 'building', 'ocean', 'boat', 'sky', 'clouds', 'trees', 'grass', 'leaves', 'boat', 'water']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman enjoys sandwich at beach under blue sky by ocean",
+      "vlm_hint": {
+        "missing_objects": [
+          "ketchup",
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "boat",
+          "water",
+          "ocean",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the ketchup, knife, and fork on the plate, and remove the objects that are not present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman enjoys sandwich at beach under blue sky by ocean\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ketchup\", \"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"boat\", \"water\", \"ocean\", \"trees\", \"grass\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the ketchup, knife, and fork on the plate, and remove the objects that are not present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman eats sandwich with ketchup using knife and fork on beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "woman",
+          "sandwich",
+          "ketchup",
+          "table",
+          "ocean",
+          "boat",
+          "water",
+          "building",
+          "grass",
+          "leaves",
+          "trees",
+          "boat",
+          "water"
+        ],
+        "genericity_hint": "The image is generic and does not provide specific details about the objects.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the missing objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman eats sandwich with ketchup using knife and fork on beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"woman\", \"sandwich\", \"ketchup\", \"table\", \"ocean\", \"boat\", \"water\", \"building\", \"grass\", \"leaves\", \"trees\", \"boat\", \"water\"],\n  \"genericity_hint\": \"The image is generic and does not provide specific details about the objects.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the missing objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bird sits on bench near sky and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "ketchup",
+          "knife",
+          "fork",
+          "table",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "sky",
+          "clouds",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "sandwich",
+          "plate",
+          "bird"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird sits on bench near sky and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ketchup\", \"knife\", \"fork\", \"table\", \"woman\", \"building\", \"ocean\", \"boat\", \"sky\", \"clouds\", \"trees\", \"grass\", \"leaves\"],\n  \"hallucinated_objects\": [\"sandwich\", \"plate\", \"bird\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Woman at table with ketchup, knife, and fork near ocean and boats.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sandwich",
+          "ketchup",
+          "knife",
+          "fork",
+          "table",
+          "bird",
+          "water",
+          "bench",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "sky",
+          "clouds",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "sandwich",
+          "ketchup",
+          "knife",
+          "fork",
+          "table",
+          "bird",
+          "water",
+          "bench",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "sky",
+          "clouds",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "genericity_hint": "The image is generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with ketchup, knife, and fork near ocean and boats.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sandwich\", \"ketchup\", \"knife\", \"fork\", \"table\", \"bird\", \"water\", \"bench\", \"woman\", \"building\", \"ocean\", \"boat\", \"sky\", \"clouds\", \"trees\", \"grass\", \"leaves\"],\n  \"hallucinated_objects\": [\"sandwich\", \"ketchup\", \"knife\", \"fork\", \"table\", \"bird\", \"water\", \"bench\", \"woman\", \"building\", \"ocean\", \"boat\", \"sky\", \"clouds\", \"trees\", \"grass\", \"leaves\"],\n  \"genericity_hint\": \"The image is generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman at table with ketchup and knife near ocean and boats.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sandwich",
+          "ketchup",
+          "knife",
+          "fork",
+          "table",
+          "bird",
+          "water",
+          "bench",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "sky",
+          "clouds",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "sandwich",
+          "ketchup",
+          "knife",
+          "fork",
+          "table",
+          "bird",
+          "water",
+          "bench",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "sky",
+          "clouds",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "genericity_hint": "The image is generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details to the image, such as a sandwich, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, and leaves."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with ketchup and knife near ocean and boats.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sandwich\", \"ketchup\", \"knife\", \"fork\", \"table\", \"bird\", \"water\", \"bench\", \"woman\", \"building\", \"ocean\", \"boat\", \"sky\", \"clouds\", \"trees\", \"grass\", \"leaves\"],\n  \"hallucinated_objects\": [\"sandwich\", \"ketchup\", \"knife\", \"fork\", \"table\", \"bird\", \"water\", \"bench\", \"woman\", \"building\", \"ocean\", \"boat\", \"sky\", \"clouds\", \"trees\", \"grass\", \"leaves\"],\n  \"genericity_hint\": \"The image is generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details to the image, such as a sandwich, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, and leaves.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman at table with ketchup and knife near ocean and boats leaves trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "sandwich",
+          "ketchup",
+          "knife",
+          "fork",
+          "table",
+          "bird",
+          "water",
+          "bench",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "sky",
+          "clouds",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "boat",
+          "water"
+        ],
+        "genericity_hint": "The image is very generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details to the image, such as a sandwich, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, and leaves."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with ketchup and knife near ocean and boats leaves trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sandwich\", \"ketchup\", \"knife\", \"fork\", \"table\", \"bird\", \"water\", \"bench\", \"woman\", \"building\", \"ocean\", \"boat\", \"sky\", \"clouds\", \"trees\", \"grass\", \"leaves\"],\n  \"hallucinated_objects\": [\"boat\", \"water\"],\n  \"genericity_hint\": \"The image is very generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details to the image, such as a sandwich, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, and leaves.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Woman at table with ketchup and knife next to sandwich and ocean views",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "boat",
+          "water",
+          "ocean",
+          "trees",
+          "grass",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of sandwich, the presence of a bench, and the specific location of the woman."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with ketchup and knife next to sandwich and ocean views\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"boat\", \"water\", \"ocean\", \"trees\", \"grass\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of sandwich, the presence of a bench, and the specific location of the woman.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Woman at table with knife and fork next to a sandwich and plate near the bench.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ketchup",
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "woman",
+          "bench",
+          "ocean",
+          "boat",
+          "water",
+          "trees",
+          "grass",
+          "leaves",
+          "boat",
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the plate.",
+        "edit_instructions": [
+          "Specify the objects on the plate and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with knife and fork next to a sandwich and plate near the bench.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ketchup\", \"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"woman\", \"bench\", \"ocean\", \"boat\", \"water\", \"trees\", \"grass\", \"leaves\", \"boat\", \"water\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the plate.\",\n  \"edit_instructions\": \"Specify the objects on the plate and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Ketchup sandwich on plate knife fork",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "boat",
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and does not mention the bird or the water.",
+        "edit_instructions": [
+          "Add the bird and water to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ketchup sandwich on plate knife fork\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\", \"water\"],\n  \"hallucinated_objects\": [\"boat\", \"water\"],\n  \"genericity_hint\": \"The caption is too generic and does not mention the bird or the water.\",\n  \"edit_instructions\": \"Add the bird and water to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bird flies over sandwich on plate by water",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork",
+          "woman",
+          "building",
+          "ocean",
+          "boat",
+          "water",
+          "boat",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "sandwich",
+          "plate",
+          "ketchup",
+          "table",
+          "bird",
+          "bench",
+          "grass",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the knife, fork, woman, building, ocean, boat, water, bench, grass, and leaves."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sandwich, plate, ketchup, knife, fork, table, bird, water, bench, woman, building, ocean, boat, sky, clouds, trees, grass, leaves, boat, water]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird flies over sandwich on plate by water\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\", \"woman\", \"building\", \"ocean\", \"boat\", \"water\", \"boat\", \"water\"],\n  \"hallucinated_objects\": [\"sandwich\", \"plate\", \"ketchup\", \"table\", \"bird\", \"bench\", \"grass\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the knife, fork, woman, building, ocean, boat, water, bench, grass, and leaves.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 210032,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000210032.jpg",
+    "final_caption": "Bird flies over sandwich on plate by water",
+    "total_time_sec": 41.89
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"sandwich\",\n    \"plate\",\n    \"ketchup\",\n    \"knife\",\n    \"fork\",\n    \"table\",\n    \"bird\",\n    \"water\",\n    \"bench\",\n    \"woman\",\n    \"building\",\n    \"ocean\",\n    \"boat\",\n    \"sky\",\n    \"clouds\",\n    \"trees\",\n    \"grass\",\n    \"leaves\",\n    \"boat\",\n    \"water\"\n  ]\n}"
+}

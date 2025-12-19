@@ -1,0 +1,229 @@
+{
+  "image_id": 507235,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000507235.jpg",
+  "objects": [
+    "bowl",
+    "cucumber",
+    "carrot",
+    "lettuce",
+    "spring roll",
+    "peanut",
+    "bean sprout",
+    "soup",
+    "plate",
+    "table",
+    "bowl",
+    "lettuce",
+    "carrot",
+    "spring roll",
+    "peanut",
+    "bean sprout",
+    "soup",
+    "plate",
+    "table",
+    "bowl"
+  ],
+  "template": "We have an image with these objects: ['bowl', 'cucumber', 'carrot', 'lettuce', 'spring roll', 'peanut', 'bean sprout', 'soup', 'plate', 'table', 'bowl', 'lettuce', 'carrot', 'spring roll', 'peanut', 'bean sprout', 'soup', 'plate', 'table', 'bowl']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Table laden with bowls of soup and spring rolls",
+      "vlm_hint": {
+        "missing_objects": [
+          "lettuce",
+          "carrot",
+          "bean sprout"
+        ],
+        "hallucinated_objects": [
+          "soup"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the types of bowls or the contents of the bowls.",
+        "edit_instructions": [
+          "Specify the types of bowls and the contents of the bowls in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table laden with bowls of soup and spring rolls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lettuce\", \"carrot\", \"bean sprout\"],\n  \"hallucinated_objects\": [\"soup\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of bowls or the contents of the bowls.\",\n  \"edit_instructions\": \"Specify the types of bowls and the contents of the bowls in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Table with bowls of lettuce and carrot alongside spring rolls and peanuts.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soup"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the food items.",
+        "edit_instructions": [
+          "Add specific details about the food items and remove the table."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with bowls of lettuce and carrot alongside spring rolls and peanuts.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soup\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the food items.\",\n  \"edit_instructions\": \"Add specific details about the food items and remove the table.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bowl of lettuce and carrot next to spring rolls and peanuts with soup.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "soup"
+        ],
+        "hallucinated_objects": [
+          "bowl"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the table, soup, and the specific types of vegetables and spring rolls."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bowl of lettuce and carrot next to spring rolls and peanuts with soup.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"soup\"],\n  \"hallucinated_objects\": [\"bowl\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the table, soup, and the specific types of vegetables and spring rolls.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Table with lettuce carrot spring rolls peanuts and soup",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "plate"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of bowl or plate.",
+        "edit_instructions": [
+          "Specify the type of bowl and plate in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with lettuce carrot spring rolls peanuts and soup\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"plate\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bowl or plate.\",\n  \"edit_instructions\": \"Specify the type of bowl and plate in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Table with lettuce, carrots, spring rolls, peanuts, and soup in a bowl and on a plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "bowl",
+          "lettuce",
+          "carrot",
+          "spring roll",
+          "peanut",
+          "bean sprout",
+          "soup",
+          "plate",
+          "table",
+          "bowl",
+          "lettuce",
+          "carrot",
+          "spring roll",
+          "peanut",
+          "bean sprout",
+          "soup",
+          "plate",
+          "table",
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of vegetables, the type of spring rolls, and the type of soup."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with lettuce, carrots, spring rolls, peanuts, and soup in a bowl and on a plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"bowl\", \"lettuce\", \"carrot\", \"spring roll\", \"peanut\", \"bean sprout\", \"soup\", \"plate\", \"table\", \"bowl\", \"lettuce\", \"carrot\", \"spring roll\", \"peanut\", \"bean sprout\", \"soup\", \"plate\", \"table\", \"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of vegetables, the type of spring rolls, and the type of soup.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and clear soup in bowls and on a plate.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [
+          "soup"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and clear soup in bowls and on a plate.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [\"soup\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Table with crisp lettuce, orange carrots, fried spring rolls, and peanuts in bowls.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soup"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of table.",
+        "edit_instructions": [
+          "Specify the type of table, such as a dining table or a restaurant table."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with crisp lettuce, orange carrots, fried spring rolls, and peanuts in bowls.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soup\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of table.\",\n  \"edit_instructions\": \"Specify the type of table, such as a dining table or a restaurant table.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Dining table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dining table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.",
+      "vlm_hint": {
+        "missing_objects": [
+          "table"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, cucumber, carrot, lettuce, spring roll, peanut, bean sprout, soup, plate, table, bowl, lettuce, carrot, spring roll, peanut, bean sprout, soup, plate, table, bowl]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of lettuce, carrots, and spring rolls.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 507235,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000507235.jpg",
+    "final_caption": "Table with crisp lettuce, orange carrots, fried spring rolls, peanuts, and soup in bowls.",
+    "total_time_sec": 32.87
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bowl\",\n    \"cucumber\",\n    \"carrot\",\n    \"lettuce\",\n    \"spring roll\",\n    \"peanut\",\n    \"bean sprout\",\n    \"soup\",\n    \"plate\",\n    \"table\",\n    \"bowl\",\n    \"lettuce\",\n    \"carrot\",\n    \"spring roll\",\n    \"peanut\",\n    \"bean sprout\",\n    \"soup\",\n    \"plate\",\n    \"table\",\n    \"bowl\"\n  ]\n}"
+}

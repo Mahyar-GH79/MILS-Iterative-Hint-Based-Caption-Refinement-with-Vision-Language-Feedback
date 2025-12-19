@@ -1,0 +1,234 @@
+{
+  "image_id": 411665,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000411665.jpg",
+  "objects": [
+    "cat",
+    "mirror",
+    "reflection",
+    "paw",
+    "fur",
+    "whiskers",
+    "background",
+    "wall",
+    "furniture",
+    "reflection of cat",
+    "reflection of paw",
+    "reflection of whiskers",
+    "reflection of fur",
+    "reflection of background",
+    "reflection of wall",
+    "reflection of furniture",
+    "reflection of cat's reflection",
+    "reflection of cat's reflection's paw",
+    "reflection of cat's reflection's whiskers",
+    "reflection of cat's reflection's fur"
+  ],
+  "template": "We have an image with these objects: ['cat', 'mirror', 'reflection', 'paw', 'fur', 'whiskers', 'background', 'wall', 'furniture', 'reflection of cat', 'reflection of paw', 'reflection of whiskers', 'reflection of fur', 'reflection of background', 'reflection of wall', 'reflection of furniture', \"reflection of cat's reflection\", \"reflection of cat's reflection's paw\", \"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"]. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat and its reflections in mirror\u5bb6\u5177\u80cc\u666f\u524d\u6bdb\u53d1\u6e05\u6670\u53ef\u89c1",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's wall",
+          "reflection of cat's reflection's furniture"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not account for the reflection of the cat's reflection.",
+        "edit_instructions": [
+          "Remove the specific details about the reflection of the cat's reflection and focus on the main objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its reflections in mirror\u5bb6\u5177\u80cc\u666f\u524d\u6bdb\u53d1\u6e05\u6670\u53ef\u89c1\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's wall\", \"reflection of cat's reflection's furniture\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not account for the reflection of the cat's reflection.\",\n  \"edit_instructions\": \"Remove the specific details about the reflection of the cat's reflection and focus on the main objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat and reflections in mirror with fur and whiskers",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's wall",
+          "reflection of cat's reflection's furniture"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the reflection of the cat's reflection.",
+        "edit_instructions": [
+          "Add the missing objects and correct the genericity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and reflections in mirror with fur and whiskers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's wall\", \"reflection of cat's reflection's furniture\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the reflection of the cat's reflection.\",\n  \"edit_instructions\": \"Add the missing objects and correct the genericity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat and its reflection in mirror with fur and whiskers on wall and furniture reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's paw",
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of wall",
+          "reflection of furniture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the reflection of the cat's paw, whiskers, and fur."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its reflection in mirror with fur and whiskers on wall and furniture reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's paw\", \"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of wall\", \"reflection of furniture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the reflection of the cat's paw, whiskers, and fur.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat and its reflection in mirror with fur and whiskers seen on background reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's paw",
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of cat's reflection's wall",
+          "reflection of cat's reflection's furniture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the reflection of the cat's paw, whiskers, and fur."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its reflection in mirror with fur and whiskers seen on background reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's paw\", \"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of cat's reflection's wall\", \"reflection of cat's reflection's furniture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the reflection of the cat's paw, whiskers, and fur.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat and its reflection in mirror with fur and whiskers seen in background reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's paw",
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of cat's reflection's wall",
+          "reflection of cat's reflection's furniture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the reflection of the cat's reflection's paw, whiskers, and fur."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its reflection in mirror with fur and whiskers seen in background reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's paw\", \"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of cat's reflection's wall\", \"reflection of cat's reflection's furniture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the reflection of the cat's reflection's paw, whiskers, and fur.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat and its reflection in mirror with whiskers fur and paws in detailed reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "background",
+          "wall",
+          "furniture"
+        ],
+        "hallucinated_objects": [
+          "reflection of cat's reflection's paw",
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the background, wall, and furniture, and remove the reflections of the cat's reflection."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its reflection in mirror with whiskers fur and paws in detailed reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\", \"wall\", \"furniture\"],\n  \"hallucinated_objects\": [\"reflection of cat's reflection's paw\", \"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the background, wall, and furniture, and remove the reflections of the cat's reflection.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat and its whiskers fur reflected in mirror behind furniture and on the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of cat's reflection's paw"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the reflection of the cat's whiskers and fur."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its whiskers fur reflected in mirror behind furniture and on the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of cat's reflection's paw\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the reflection of the cat's whiskers and fur.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat and whiskers, fur reflected in mirror behind furniture",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of cat's reflection's wall",
+          "reflection of cat's reflection's furniture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their reflections."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and whiskers, fur reflected in mirror behind furniture\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of cat's reflection's wall\", \"reflection of cat's reflection's furniture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their reflections.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat and whiskers with fur reflected in mirror behind furniture",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of wall",
+          "reflection of furniture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their reflections."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and whiskers with fur reflected in mirror behind furniture\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of wall\", \"reflection of furniture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their reflections.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat and its whiskers with fur reflected in mirror behind furniture",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection of cat's reflection's whiskers",
+          "reflection of cat's reflection's fur"
+        ],
+        "hallucinated_objects": [
+          "reflection of wall",
+          "reflection of furniture"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the reflection of the cat's whiskers and fur."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, mirror, reflection, paw, fur, whiskers, background, wall, furniture, reflection of cat, reflection of paw, reflection of whiskers, reflection of fur, reflection of background, reflection of wall, reflection of furniture, reflection of cat's reflection, reflection of cat's reflection's paw, reflection of cat's reflection's whiskers, reflection of cat's reflection's fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat and its whiskers with fur reflected in mirror behind furniture\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection of cat's reflection's whiskers\", \"reflection of cat's reflection's fur\"],\n  \"hallucinated_objects\": [\"reflection of wall\", \"reflection of furniture\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the reflection of the cat's whiskers and fur.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 411665,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000411665.jpg",
+    "final_caption": "Cat and its whiskers with fur reflected in mirror behind furniture",
+    "total_time_sec": 37.37
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"mirror\",\n    \"reflection\",\n    \"paw\",\n    \"fur\",\n    \"whiskers\",\n    \"background\",\n    \"wall\",\n    \"furniture\",\n    \"reflection of cat\",\n    \"reflection of paw\",\n    \"reflection of whiskers\",\n    \"reflection of fur\",\n    \"reflection of background\",\n    \"reflection of wall\",\n    \"reflection of furniture\",\n    \"reflection of cat's reflection\",\n    \"reflection of cat's reflection's paw\",\n    \"reflection of cat's reflection's whiskers\",\n    \"reflection of cat's reflection's fur\"\n  ]\n}"
+}

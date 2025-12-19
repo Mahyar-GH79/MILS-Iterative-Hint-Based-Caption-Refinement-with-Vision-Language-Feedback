@@ -1,0 +1,228 @@
+{
+  "image_id": 23034,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000023034.jpg",
+  "objects": [
+    "horse",
+    "man",
+    "trees",
+    "rocks",
+    "path",
+    "backpack",
+    "sunglasses",
+    "bandana",
+    "trees",
+    "rocks",
+    "path",
+    "backpack",
+    "sunglasses",
+    "bandana",
+    "trees",
+    "rocks",
+    "path",
+    "backpack",
+    "sunglasses",
+    "bandana"
+  ],
+  "template": "We have an image with these objects: ['horse', 'man', 'trees', 'rocks', 'path', 'backpack', 'sunglasses', 'bandana', 'trees', 'rocks', 'path', 'backpack', 'sunglasses', 'bandana', 'trees', 'rocks', 'path', 'backpack', 'sunglasses', 'bandana']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man and horse on path through trees near rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "sunglasses",
+          "bandana"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the sunglasses and bandana."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and horse on path through trees near rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sunglasses\", \"bandana\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the sunglasses and bandana.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in bandana and sunglasses rides horse on path through trees near rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses an important object.",
+        "edit_instructions": [
+          "Add the missing object to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in bandana and sunglasses rides horse on path through trees near rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses an important object.\",\n  \"edit_instructions\": \"Add the missing object to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in bandana and sunglasses rides horse on path through trees near rocks with backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "trees",
+          "rocks",
+          "path",
+          "backpack",
+          "sunglasses",
+          "bandana"
+        ],
+        "hallucinated_objects": [
+          "horse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in bandana and sunglasses rides horse on path through trees near rocks with backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"trees\", \"rocks\", \"path\", \"backpack\", \"sunglasses\", \"bandana\"],\n  \"hallucinated_objects\": [\"horse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in bandana and sunglasses walks path through trees near rocks with backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the man and focus on the horse and the path through the trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in bandana and sunglasses walks path through trees near rocks with backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the man and focus on the horse and the path through the trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Horse walks path through trees near rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "sunglasses",
+          "bandana"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "rocks",
+          "path",
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the people and their actions.",
+        "edit_instructions": [
+          "Include the man, sunglasses, and bandana in the caption. Specify the actions of the people and the details of the path, rocks, and trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horse walks path through trees near rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"sunglasses\", \"bandana\"],\n  \"hallucinated_objects\": [\"trees\", \"rocks\", \"path\", \"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the people and their actions.\",\n  \"edit_instructions\": \"Include the man, sunglasses, and bandana in the caption. Specify the actions of the people and the details of the path, rocks, and trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in sunglasses and bandana walks horse along rocky path through trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses an important object.",
+        "edit_instructions": [
+          "Add the missing object to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses and bandana walks horse along rocky path through trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses an important object.\",\n  \"edit_instructions\": \"Add the missing object to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in sunglasses and bandana walks horse along rocky path through trees with backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "trees",
+          "rocks",
+          "path",
+          "backpack",
+          "sunglasses",
+          "bandana"
+        ],
+        "hallucinated_objects": [
+          "horse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses and bandana walks horse along rocky path through trees with backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"trees\", \"rocks\", \"path\", \"backpack\", \"sunglasses\", \"bandana\"],\n  \"hallucinated_objects\": [\"horse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in sunglasses bandana walks past rocks trees along backpack path",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [
+          "man"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the main subject of the image.",
+        "edit_instructions": [
+          "Remove the man and focus on the horse and the path."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses bandana walks past rocks trees along backpack path\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [\"man\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the main subject of the image.\",\n  \"edit_instructions\": \"Remove the man and focus on the horse and the path.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Horse walks along path past rocks trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "sunglasses",
+          "bandana"
+        ],
+        "hallucinated_objects": [
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the people and their actions.",
+        "edit_instructions": [
+          "Include the man, sunglasses, and bandana in the caption. Specify that the man is riding the horse."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horse walks along path past rocks trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"sunglasses\", \"bandana\"],\n  \"hallucinated_objects\": [\"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the people and their actions.\",\n  \"edit_instructions\": \"Include the man, sunglasses, and bandana in the caption. Specify that the man is riding the horse.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man rides horse past rocks and trees wearing sunglasses and bandana",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses an important object.",
+        "edit_instructions": [
+          "Add the missing object to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, man, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana, trees, rocks, path, backpack, sunglasses, bandana]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man rides horse past rocks and trees wearing sunglasses and bandana\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses an important object.\",\n  \"edit_instructions\": \"Add the missing object to the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 23034,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000023034.jpg",
+    "final_caption": "Man rides horse past rocks and trees wearing sunglasses and bandana",
+    "total_time_sec": 28.83
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"horse\",\n    \"man\",\n    \"trees\",\n    \"rocks\",\n    \"path\",\n    \"backpack\",\n    \"sunglasses\",\n    \"bandana\",\n    \"trees\",\n    \"rocks\",\n    \"path\",\n    \"backpack\",\n    \"sunglasses\",\n    \"bandana\",\n    \"trees\",\n    \"rocks\",\n    \"path\",\n    \"backpack\",\n    \"sunglasses\",\n    \"bandana\"\n  ]\n}"
+}

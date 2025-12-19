@@ -1,0 +1,256 @@
+{
+  "image_id": 345027,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000345027.jpg",
+  "objects": [
+    "beach",
+    "motorcycle",
+    "bench",
+    "truck",
+    "lifeguard station",
+    "boats",
+    "ocean",
+    "people",
+    "kites",
+    "sails",
+    "water",
+    "sand",
+    "path",
+    "sky",
+    "clouds",
+    "trees",
+    "boats",
+    "ocean",
+    "water",
+    "sand"
+  ],
+  "template": "We have an image with these objects: ['beach', 'motorcycle', 'bench', 'truck', 'lifeguard station', 'boats', 'ocean', 'people', 'kites', 'sails', 'water', 'sand', 'path', 'sky', 'clouds', 'trees', 'boats', 'ocean', 'water', 'sand']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Beach scene with motorcycles kites and ocean waves",
+      "vlm_hint": {
+        "missing_objects": [
+          "bench",
+          "path",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "boats",
+          "ocean",
+          "water",
+          "sand"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bench, the path, and the trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach scene with motorcycles kites and ocean waves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bench\", \"path\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"ocean\", \"water\", \"sand\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bench, the path, and the trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Beach with motorcycle, wooden bench, path, and tall trees by the ocean",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle",
+          "bench",
+          "path",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "wooden bench",
+          "path",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach with motorcycle, wooden bench, path, and tall trees by the ocean\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"bench\", \"path\", \"trees\"],\n  \"hallucinated_objects\": [\"wooden bench\", \"path\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Beach with motorcycle and boats near ocean and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "bench",
+          "lifeguard station",
+          "people",
+          "kites",
+          "sails"
+        ],
+        "hallucinated_objects": [
+          "path",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of boats, the type of bench, and the presence of people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach with motorcycle and boats near ocean and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bench\", \"lifeguard station\", \"people\", \"kites\", \"sails\"],\n  \"hallucinated_objects\": [\"path\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of boats, the type of bench, and the presence of people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Beach with two motorcycles and four boats near the ocean and clouds, people flying kites",
+      "vlm_hint": {
+        "missing_objects": [
+          "bench",
+          "path",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "boats",
+          "people",
+          "kites",
+          "sails"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of motorcycles, boats, and people, and include the presence of a bench and a path."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach with two motorcycles and four boats near the ocean and clouds, people flying kites\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bench\", \"path\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"people\", \"kites\", \"sails\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of motorcycles, boats, and people, and include the presence of a bench and a path.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Beach with two motorcycles and a bench near the ocean and clouds, paths and trees visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "boats",
+          "sails",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "paths"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of boats, the presence of sails, and the color of the water."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach with two motorcycles and a bench near the ocean and clouds, paths and trees visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"boats\", \"sails\", \"water\"],\n  \"hallucinated_objects\": [\"paths\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of boats, the presence of sails, and the color of the water.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Beach with red motorcycles and a wooden bench near ocean and clouds, sailboats and blue water visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle",
+          "bench",
+          "ocean",
+          "water",
+          "sand",
+          "path",
+          "sky",
+          "clouds",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "boats",
+          "sailboats",
+          "blue water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color and type of motorcycle, the material of the bench, and the color of the water."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Beach with red motorcycles and a wooden bench near ocean and clouds, sailboats and blue water visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"bench\", \"ocean\", \"water\", \"sand\", \"path\", \"sky\", \"clouds\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"sailboats\", \"blue water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color and type of motorcycle, the material of the bench, and the color of the water.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Red motorcycle and wooden bench by ocean under cloudy sky with water and sand.",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle",
+          "bench",
+          "ocean",
+          "sand",
+          "path",
+          "sky",
+          "clouds",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "boats",
+          "water",
+          "people",
+          "kites",
+          "sails"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of motorcycle, the color of the bench, and the presence of boats and people in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red motorcycle and wooden bench by ocean under cloudy sky with water and sand.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"bench\", \"ocean\", \"sand\", \"path\", \"sky\", \"clouds\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"water\", \"people\", \"kites\", \"sails\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of motorcycle, the color of the bench, and the presence of boats and people in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Red motorcycle next to wooden bench on beach under cloudy sky with ocean and sand.",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle",
+          "bench",
+          "ocean",
+          "sand",
+          "path",
+          "sky",
+          "clouds",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "boats",
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the motorcycle, the type of bench, and the presence of the ocean and sand."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red motorcycle next to wooden bench on beach under cloudy sky with ocean and sand.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"bench\", \"ocean\", \"sand\", \"path\", \"sky\", \"clouds\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the motorcycle, the type of bench, and the presence of the ocean and sand.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Red motorcycle next to wooden bench on sandy beach under cloudy sky with ocean views.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red motorcycle next to wooden bench on sandy beach under cloudy sky with ocean views.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"bench\", \"ocean\", \"water\", \"sand\", \"path\", \"sky\", \"clouds\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\","
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Red motorcycle and wooden bench on sandy beach under cloudy sky with ocean views.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [beach, motorcycle, bench, truck, lifeguard station, boats, ocean, people, kites, sails, water, sand, path, sky, clouds, trees, boats, ocean, water, sand]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red motorcycle and wooden bench on sandy beach under cloudy sky with ocean views.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"bench\", \"ocean\", \"water\", \"sand\", \"path\", \"sky\", \"clouds\", \"trees\"],\n  \"hallucinated_objects\": [\"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\", \"boats\","
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 345027,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000345027.jpg",
+    "final_caption": "Red motorcycle and wooden bench on sandy beach under cloudy sky with ocean views.",
+    "total_time_sec": 45.2
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"beach\",\n    \"motorcycle\",\n    \"bench\",\n    \"truck\",\n    \"lifeguard station\",\n    \"boats\",\n    \"ocean\",\n    \"people\",\n    \"kites\",\n    \"sails\",\n    \"water\",\n    \"sand\",\n    \"path\",\n    \"sky\",\n    \"clouds\",\n    \"trees\",\n    \"boats\",\n    \"ocean\",\n    \"water\",\n    \"sand\"\n  ]\n}"
+}

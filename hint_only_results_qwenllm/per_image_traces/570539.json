@@ -1,0 +1,318 @@
+{
+  "image_id": 570539,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000570539.jpg",
+  "objects": [
+    "Planet 51",
+    "Man",
+    "Hat",
+    "Window",
+    "Bus",
+    "Sign",
+    "People",
+    "Seat",
+    "Purse",
+    "Toy",
+    "Building",
+    "Street",
+    "City",
+    "Streetlight",
+    "Traffic light",
+    "Bus stop",
+    "Bus route",
+    "Bus number",
+    "Bus route number",
+    "Bus route sign"
+  ],
+  "template": "We have an image with these objects: ['Planet 51', 'Man', 'Hat', 'Window', 'Bus', 'Sign', 'People', 'Seat', 'Purse', 'Toy', 'Building', 'Street', 'City', 'Streetlight', 'Traffic light', 'Bus stop', 'Bus route', 'Bus number', 'Bus route number', 'Bus route sign']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in hat near bus stop on city street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "People",
+          "Seat",
+          "Purse",
+          "Toy",
+          "Building",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus number",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "Sign"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Provide more specific objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat near bus stop on city street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"People\", \"Seat\", \"Purse\", \"Toy\", \"Building\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus number\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"Sign\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Provide more specific objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in hat waits at bus stop on city street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Seat",
+          "Purse",
+          "Toy",
+          "Building",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus route number",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "Planet 51"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the generic caption and add specific objects."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits at bus stop on city street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Seat\", \"Purse\", \"Toy\", \"Building\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus route number\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"Planet 51\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the generic caption and add specific objects.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in hat waits at bus stop with purse and toy on city street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Seat",
+          "Purse",
+          "Toy"
+        ],
+        "hallucinated_objects": [
+          "Building",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus route number",
+          "Bus route sign"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits at bus stop with purse and toy on city street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Seat\", \"Purse\", \"Toy\"],\n  \"hallucinated_objects\": [\"Building\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus route number\", \"Bus route sign\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in hat waits for bus with purse and toy on city street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Seat",
+          "Purse",
+          "Toy"
+        ],
+        "hallucinated_objects": [
+          "Building",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus route number",
+          "Bus route sign"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits for bus with purse and toy on city street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Seat\", \"Purse\", \"Toy\"],\n  \"hallucinated_objects\": [\"Building\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus route number\", \"Bus route sign\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in hat waits for bus with purse and toy on busy street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "People",
+          "Seat",
+          "Purse",
+          "Toy"
+        ],
+        "hallucinated_objects": [
+          "Building",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus route number",
+          "Bus route sign"
+        ],
+        "genericity_hint": "The image is specific to a bus and its surroundings.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits for bus with purse and toy on busy street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"People\", \"Seat\", \"Purse\", \"Toy\"],\n  \"hallucinated_objects\": [\"Building\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus route number\", \"Bus route sign\"],\n  \"genericity_hint\": \"The image is specific to a bus and its surroundings.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in hat waits for bus with people and children on busy street",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Seat",
+          "Purse",
+          "Toy",
+          "Building",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus route number",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "People",
+          "Children"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits for bus with people and children on busy street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Seat\", \"Purse\", \"Toy\", \"Building\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus route number\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"People\", \"Children\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in hat waits for bus near streetlight with seat and purse",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus number",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "Toy",
+          "Building"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image and add the objects that are visible in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits for bus near streetlight with seat and purse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus number\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"Toy\", \"Building\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image and add the objects that are visible in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in hat waits for bus near streetlight with seat and purse in city",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus number",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "Toy",
+          "Building"
+        ],
+        "genericity_hint": "The image does not show a bus, street, city, streetlight, traffic light, bus stop, bus route, bus number, or bus route sign.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the objects that are present in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits for bus near streetlight with seat and purse in city\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus number\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"Toy\", \"Building\"],\n  \"genericity_hint\": \"The image does not show a bus, street, city, streetlight, traffic light, bus stop, bus route, bus number, or bus route sign.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the objects that are present in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in hat waits near streetlight with seat and purse on planet.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "People",
+          "Street",
+          "City",
+          "Streetlight",
+          "Traffic light",
+          "Bus stop",
+          "Bus route",
+          "Bus number",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "Toy",
+          "Building"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits near streetlight with seat and purse on planet.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"People\", \"Street\", \"City\", \"Streetlight\", \"Traffic light\", \"Bus stop\", \"Bus route\", \"Bus number\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"Toy\", \"Building\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in hat waits near streetlight with seat and people on bus stop.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Bus",
+          "Bus stop",
+          "Bus route sign"
+        ],
+        "hallucinated_objects": [
+          "Streetlight",
+          "Traffic light",
+          "Bus route",
+          "Bus route number",
+          "Bus route sign"
+        ],
+        "genericity_hint": "The image does not show a bus, bus stop, or bus route sign.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Planet 51, Man, Hat, Window, Bus, Sign, People, Seat, Purse, Toy, Building, Street, City, Streetlight, Traffic light, Bus stop, Bus route, Bus number, Bus route number, Bus route sign]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat waits near streetlight with seat and people on bus stop.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Bus\", \"Bus stop\", \"Bus route sign\"],\n  \"hallucinated_objects\": [\"Streetlight\", \"Traffic light\", \"Bus route\", \"Bus route number\", \"Bus route sign\"],\n  \"genericity_hint\": \"The image does not show a bus, bus stop, or bus route sign.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 570539,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000570539.jpg",
+    "final_caption": "Man in hat waits near streetlight with seat and people on bus stop.",
+    "total_time_sec": 36.45
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"Planet 51\",\n    \"Man\",\n    \"Hat\",\n    \"Window\",\n    \"Bus\",\n    \"Sign\",\n    \"People\",\n    \"Seat\",\n    \"Purse\",\n    \"Toy\",\n    \"Building\",\n    \"Street\",\n    \"City\",\n    \"Streetlight\",\n    \"Traffic light\",\n    \"Bus stop\",\n    \"Bus route\",\n    \"Bus number\",\n    \"Bus route number\",\n    \"Bus route sign\"\n  ]\n}"
+}

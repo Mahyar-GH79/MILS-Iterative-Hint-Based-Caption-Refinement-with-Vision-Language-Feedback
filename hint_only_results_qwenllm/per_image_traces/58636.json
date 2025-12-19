@@ -1,0 +1,204 @@
+{
+  "image_id": 58636,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000058636.jpg",
+  "objects": [
+    "parking sign",
+    "street sign",
+    "telephone pole",
+    "wire",
+    "sky"
+  ],
+  "template": "We have an image with these objects: ['parking sign', 'street sign', 'telephone pole', 'wire', 'sky']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Street signs and poles under a blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "telephone pole",
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street signs and poles under a blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"telephone pole\", \"wire\"],\n  \"hallucinated_objects\": [\"sky\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Parking sign next to telephone pole and wire against blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "street sign",
+          "telephone pole",
+          "wire",
+          "sky"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the street sign, telephone pole, wire, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parking sign next to telephone pole and wire against blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street sign\", \"telephone pole\", \"wire\", \"sky\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the street sign, telephone pole, wire, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Street sign and parking sign beside telephone pole with wire and blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "street name"
+        ],
+        "hallucinated_objects": [
+          "wire"
+        ],
+        "genericity_hint": "street sign",
+        "edit_instructions": [
+          "remove wire and add street name"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street sign and parking sign beside telephone pole with wire and blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"street name\",\n  \"hallucinated_objects\": \"wire\",\n  \"genericity_hint\": \"street sign\",\n  \"edit_instructions\": \"remove wire and add street name\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Street sign parking sign by telephone pole under blue sky with street name",
+      "vlm_hint": {
+        "missing_objects": [
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "telephone pole"
+        ],
+        "genericity_hint": "street sign",
+        "edit_instructions": [
+          "remove wire and telephone pole, keep street sign"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street sign parking sign by telephone pole under blue sky with street name\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"wire\",\n  \"hallucinated_objects\": \"telephone pole\",\n  \"genericity_hint\": \"street sign\",\n  \"edit_instructions\": \"remove wire and telephone pole, keep street sign\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Street sign next to parking sign in blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "telephone pole",
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street sign next to parking sign in blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"telephone pole\", \"wire\"],\n  \"hallucinated_objects\": [\"sky\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Parking sign beside street sign under telephone pole with wire",
+      "vlm_hint": {
+        "missing_objects": [
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "wire"
+        ],
+        "genericity_hint": "The image contains a parking sign, a street sign, and a telephone pole, but the wire is not present.",
+        "edit_instructions": [
+          "Remove the wire from the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parking sign beside street sign under telephone pole with wire\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"street sign\",\n  \"hallucinated_objects\": \"wire\",\n  \"genericity_hint\": \"The image contains a parking sign, a street sign, and a telephone pole, but the wire is not present.\",\n  \"edit_instructions\": \"Remove the wire from the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Parking sign near street sign by telephone pole in sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "telephone pole"
+        ],
+        "genericity_hint": "sky",
+        "edit_instructions": [
+          "Remove the wire and telephone pole. The sky is generic."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parking sign near street sign by telephone pole in sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"wire\",\n  \"hallucinated_objects\": \"telephone pole\",\n  \"genericity_hint\": \"sky\",\n  \"edit_instructions\": \"Remove the wire and telephone pole. The sky is generic.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Parking sign next to street sign in sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "telephone pole"
+        ],
+        "hallucinated_objects": [
+          "wire"
+        ],
+        "genericity_hint": "The image is specific to the objects mentioned in the object list.",
+        "edit_instructions": [
+          "Remove the wire and add the telephone pole to the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parking sign next to street sign in sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"telephone pole\",\n  \"hallucinated_objects\": \"wire\",\n  \"genericity_hint\": \"The image is specific to the objects mentioned in the object list.\",\n  \"edit_instructions\": \"Remove the wire and add the telephone pole to the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Parking sign and street sign by a telephone pole in the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "wire"
+        ],
+        "hallucinated_objects": [
+          "telephone pole"
+        ],
+        "genericity_hint": "sky",
+        "edit_instructions": [
+          "Remove the wire and the telephone pole. The sky is generic."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parking sign and street sign by a telephone pole in the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"wire\",\n  \"hallucinated_objects\": \"telephone pole\",\n  \"genericity_hint\": \"sky\",\n  \"edit_instructions\": \"Remove the wire and the telephone pole. The sky is generic.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Parking and street signs against the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "telephone pole"
+        ],
+        "hallucinated_objects": [
+          "wire"
+        ],
+        "genericity_hint": "street sign",
+        "edit_instructions": [
+          "remove wire and add telephone pole"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking sign, street sign, telephone pole, wire, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parking and street signs against the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"telephone pole\",\n  \"hallucinated_objects\": \"wire\",\n  \"genericity_hint\": \"street sign\",\n  \"edit_instructions\": \"remove wire and add telephone pole\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 58636,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000058636.jpg",
+    "final_caption": "Parking and street signs against the sky",
+    "total_time_sec": 23.73
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"parking sign\",\n    \"street sign\",\n    \"telephone pole\",\n    \"wire\",\n    \"sky\"\n  ]\n}"
+}

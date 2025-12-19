@@ -1,0 +1,238 @@
+{
+  "image_id": 125211,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000125211.jpg",
+  "objects": [
+    "zebra",
+    "field",
+    "trees",
+    "houses",
+    "fence",
+    "sky",
+    "clouds",
+    "ground",
+    "branches",
+    "leaves",
+    "hills",
+    "buildings",
+    "fence posts",
+    "sky",
+    "clouds",
+    "ground",
+    "branches",
+    "leaves",
+    "hills",
+    "buildings"
+  ],
+  "template": "We have an image with these objects: ['zebra', 'field', 'trees', 'houses', 'fence', 'sky', 'clouds', 'ground', 'branches', 'leaves', 'hills', 'buildings', 'fence posts', 'sky', 'clouds', 'ground', 'branches', 'leaves', 'hills', 'buildings']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Zebras on a field under skies with clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "fence",
+          "hills",
+          "buildings"
+        ],
+        "hallucinated_objects": [
+          "ground",
+          "branches",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add more specific details about the environment, such as trees, a fence, and hills."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras on a field under skies with clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"fence\", \"hills\", \"buildings\"],\n  \"hallucinated_objects\": [\"ground\", \"branches\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add more specific details about the environment, such as trees, a fence, and hills.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Zebras in a field by trees near hills with fences and clouds in the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills",
+          "fences",
+          "fence posts"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "houses"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of trees, houses, fences, and fence posts."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees near hills with fences and clouds in the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\", \"fences\", \"fence posts\"],\n  \"hallucinated_objects\": [\"trees\", \"houses\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of trees, houses, fences, and fence posts.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Zebras in a field by fence posts near hills with clouds in the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills",
+          "buildings"
+        ],
+        "hallucinated_objects": [
+          "fence posts"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as trees, hills, and buildings, and remove the mention of fence posts."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by fence posts near hills with clouds in the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\", \"buildings\"],\n  \"hallucinated_objects\": [\"fence posts\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as trees, hills, and buildings, and remove the mention of fence posts.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Zebras in a field by trees near hills with buildings and clouds in the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "fence posts"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "buildings"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a fence and fence posts, and the exact location of the hills and buildings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees near hills with buildings and clouds in the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"fence posts\"],\n  \"hallucinated_objects\": [\"hills\", \"buildings\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a fence and fence posts, and the exact location of the hills and buildings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Zebras in a field by trees with fence and fence posts in front of the sky and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills",
+          "buildings"
+        ],
+        "hallucinated_objects": [
+          "fence",
+          "fence posts"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment, such as the presence of hills and buildings, and remove the mention of a fence and fence posts."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees with fence and fence posts in front of the sky and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\", \"buildings\"],\n  \"hallucinated_objects\": [\"fence\", \"fence posts\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment, such as the presence of hills and buildings, and remove the mention of a fence and fence posts.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Zebras in a field by trees with hills and buildings behind cloudy skies.",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "fence posts"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "buildings"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a fence and fence posts, and the exact location of the hills and buildings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees with hills and buildings behind cloudy skies.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"fence posts\"],\n  \"hallucinated_objects\": [\"hills\", \"buildings\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a fence and fence posts, and the exact location of the hills and buildings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Zebras in a field by trees with a fence and posts behind cloudy skies.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills",
+          "buildings"
+        ],
+        "hallucinated_objects": [
+          "fence",
+          "posts"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Provide more specific details about the environment, such as the presence of hills and buildings, and remove the mention of a fence and posts."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees with a fence and posts behind cloudy skies.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\", \"buildings\"],\n  \"hallucinated_objects\": [\"fence\", \"posts\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Provide more specific details about the environment, such as the presence of hills and buildings, and remove the mention of a fence and posts.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Zebras in a field by trees hills and buildings under cloudy skies",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "fence posts"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "buildings"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a fence and fence posts, and the absence of hills and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees hills and buildings under cloudy skies\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"fence posts\"],\n  \"hallucinated_objects\": [\"hills\", \"buildings\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a fence and fence posts, and the absence of hills and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Zebras in a field by trees and fence with fence posts under cloudy skies",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills",
+          "buildings"
+        ],
+        "hallucinated_objects": [
+          "fence posts"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as hills and buildings, and remove the fence posts as they are not visible in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees and fence with fence posts under cloudy skies\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\", \"buildings\"],\n  \"hallucinated_objects\": [\"fence posts\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as hills and buildings, and remove the fence posts as they are not visible in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Zebras in a field by trees and fence under cloudy skies near hills and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence posts"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "buildings"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of fence posts, and include more specific details about the environment, such as the type of trees and the color of the sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, field, trees, houses, fence, sky, clouds, ground, branches, leaves, hills, buildings, fence posts, sky, clouds, ground, branches, leaves, hills, buildings]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras in a field by trees and fence under cloudy skies near hills and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence posts\"],\n  \"hallucinated_objects\": [\"hills\", \"buildings\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of fence posts, and include more specific details about the environment, such as the type of trees and the color of the sky.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 125211,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000125211.jpg",
+    "final_caption": "Zebras in a field by trees and fence under cloudy skies near hills and buildings",
+    "total_time_sec": 34.52
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"zebra\",\n    \"field\",\n    \"trees\",\n    \"houses\",\n    \"fence\",\n    \"sky\",\n    \"clouds\",\n    \"ground\",\n    \"branches\",\n    \"leaves\",\n    \"hills\",\n    \"buildings\",\n    \"fence posts\",\n    \"sky\",\n    \"clouds\",\n    \"ground\",\n    \"branches\",\n    \"leaves\",\n    \"hills\",\n    \"buildings\"\n  ]\n}"
+}

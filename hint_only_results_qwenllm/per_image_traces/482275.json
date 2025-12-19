@@ -1,0 +1,323 @@
+{
+  "image_id": 482275,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000482275.jpg",
+  "objects": [
+    "man",
+    "woman",
+    "cake",
+    "cupcakes",
+    "flowers",
+    "jewelry",
+    "suit",
+    "dress",
+    "tie",
+    "table",
+    "chair",
+    "tree",
+    "sky",
+    "grass",
+    "vase",
+    "bottle",
+    "ring",
+    "necklace",
+    "earring",
+    "suit"
+  ],
+  "template": "We have an image with these objects: ['man', 'woman', 'cake', 'cupcakes', 'flowers', 'jewelry', 'suit', 'dress', 'tie', 'table', 'chair', 'tree', 'sky', 'grass', 'vase', 'bottle', 'ring', 'necklace', 'earring', 'suit']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man woman enjoy birthday with cake flowers cupcakes",
+      "vlm_hint": {
+        "missing_objects": [
+          "suit",
+          "dress",
+          "tie",
+          "table",
+          "chair",
+          "tree",
+          "sky",
+          "grass",
+          "vase",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "hallucinated_objects": [
+          "flowers",
+          "cupcakes"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the context of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the context of the image, such as 'Wedding couple cutting cake with flowers and cupcakes'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man woman enjoy birthday with cake flowers cupcakes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suit\", \"dress\", \"tie\", \"table\", \"chair\", \"tree\", \"sky\", \"grass\", \"vase\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"hallucinated_objects\": [\"flowers\", \"cupcakes\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the context of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the context of the image, such as 'Wedding couple cutting cake with flowers and cupcakes'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Wedding couple enjoy cake with flowers and balloons.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flowers",
+          "balloons"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the flowers and balloons."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding couple enjoy cake with flowers and balloons.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flowers\", \"balloons\"],\n  \"hallucinated_objects\": [\"table\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the flowers and balloons.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Wedding couple savor cake with floral decorations and balloons.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flowers",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "hallucinated_objects": [
+          "balloons"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of flowers, the presence of a ring, and the type of jewelry."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding couple savor cake with floral decorations and balloons.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flowers\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"hallucinated_objects\": [\"balloons\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of flowers, the presence of a ring, and the type of jewelry.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Wedding couple savor cake with floral decorations and ring.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding couple savor cake with floral decorations and ring.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"ring\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and woman enjoy cake at table with vase and ring.",
+      "vlm_hint": {
+        "missing_objects": [
+          "suit",
+          "dress",
+          "tie",
+          "table",
+          "chair",
+          "tree",
+          "sky",
+          "grass",
+          "vase",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman enjoy cake at table with vase and ring.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suit\", \"dress\", \"tie\", \"table\", \"chair\", \"tree\", \"sky\", \"grass\", \"vase\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in suit and woman in dress enjoy cake at table with vase and ring under a tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "chair",
+          "vase",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of flowers, the color of the vase, and the type of ring."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit and woman in dress enjoy cake at table with vase and ring under a tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"chair\", \"vase\", \"ring\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of flowers, the color of the vase, and the type of ring.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in suit shares cake with woman in dress at table under tree near vase and ring.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flowers",
+          "jewelry",
+          "suit",
+          "tie",
+          "table",
+          "chair",
+          "tree",
+          "sky",
+          "grass",
+          "vase",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "hallucinated_objects": [
+          "flowers",
+          "jewelry",
+          "suit",
+          "tie",
+          "table",
+          "chair",
+          "tree",
+          "sky",
+          "grass",
+          "vase",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of flowers, the style of the jewelry, and the details of the suit and dress."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit shares cake with woman in dress at table under tree near vase and ring.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flowers\", \"jewelry\", \"suit\", \"tie\", \"table\", \"chair\", \"tree\", \"sky\", \"grass\", \"vase\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"hallucinated_objects\": [\"flowers\", \"jewelry\", \"suit\", \"tie\", \"table\", \"chair\", \"tree\", \"sky\", \"grass\", \"vase\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of flowers, the style of the jewelry, and the details of the suit and dress.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in suit shares cake with woman in dress under tree near vase and ring.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "chair",
+          "table",
+          "vase",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of flowers, the color of the vase, and the type of cake."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit shares cake with woman in dress under tree near vase and ring.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"chair\", \"table\", \"vase\", \"ring\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of flowers, the color of the vase, and the type of cake.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in suit shares chocolate cake with woman in dress under tree near blue vase and silver ring on table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flowers",
+          "jewelry",
+          "suit",
+          "tie",
+          "table",
+          "chair",
+          "tree",
+          "sky",
+          "grass",
+          "vase",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "hallucinated_objects": [
+          "flowers",
+          "jewelry",
+          "suit",
+          "tie",
+          "table",
+          "chair",
+          "tree",
+          "sky",
+          "grass",
+          "vase",
+          "bottle",
+          "ring",
+          "necklace",
+          "earring"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of flowers, the style of the jewelry, and the color of the vase."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit shares chocolate cake with woman in dress under tree near blue vase and silver ring on table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flowers\", \"jewelry\", \"suit\", \"tie\", \"table\", \"chair\", \"tree\", \"sky\", \"grass\", \"vase\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"hallucinated_objects\": [\"flowers\", \"jewelry\", \"suit\", \"tie\", \"table\", \"chair\", \"tree\", \"sky\", \"grass\", \"vase\", \"bottle\", \"ring\", \"necklace\", \"earring\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of flowers, the style of the jewelry, and the color of the vase.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in suit shares chocolate cake with woman in dress under tree near blue vase and silver ring.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "chair",
+          "table",
+          "suit",
+          "tie",
+          "necklace",
+          "earring",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "flowers",
+          "vase",
+          "bottle",
+          "chair",
+          "table",
+          "suit",
+          "tie",
+          "necklace",
+          "earring",
+          "ring"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of flowers, the color of the vase, and the specific type of suit and dress."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, cake, cupcakes, flowers, jewelry, suit, dress, tie, table, chair, tree, sky, grass, vase, bottle, ring, necklace, earring, suit]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit shares chocolate cake with woman in dress under tree near blue vase and silver ring.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"chair\", \"table\", \"suit\", \"tie\", \"necklace\", \"earring\", \"ring\"],\n  \"hallucinated_objects\": [\"flowers\", \"vase\", \"bottle\", \"chair\", \"table\", \"suit\", \"tie\", \"necklace\", \"earring\", \"ring\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of flowers, the color of the vase, and the specific type of suit and dress.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 482275,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000482275.jpg",
+    "final_caption": "Man in suit shares chocolate cake with woman in dress under tree near blue vase and silver ring.",
+    "total_time_sec": 40.34
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"woman\",\n    \"cake\",\n    \"cupcakes\",\n    \"flowers\",\n    \"jewelry\",\n    \"suit\",\n    \"dress\",\n    \"tie\",\n    \"table\",\n    \"chair\",\n    \"tree\",\n    \"sky\",\n    \"grass\",\n    \"vase\",\n    \"bottle\",\n    \"ring\",\n    \"necklace\",\n    \"earring\",\n    \"suit\"\n  ]\n}"
+}

@@ -1,0 +1,200 @@
+{
+  "image_id": 322844,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000322844.jpg",
+  "objects": [
+    "teddy bear",
+    "stuffed fish",
+    "bench",
+    "grass",
+    "wooden frame"
+  ],
+  "template": "We have an image with these objects: ['teddy bear', 'stuffed fish', 'bench', 'grass', 'wooden frame']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Stuffed animals on a bench under a wooden frame",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "wooden frame"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed animals on a bench under a wooden frame\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"wooden frame\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Teddy bear and stuffed fish on grass by wooden frame",
+      "vlm_hint": {
+        "missing_objects": [
+          "butterfly"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The image is not specific enough.",
+        "edit_instructions": [
+          "Remove the grass and add a butterfly."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on grass by wooden frame\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"butterfly\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The image is not specific enough.\",\n  \"edit_instructions\": \"Remove the grass and add a butterfly.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Teddy bear and stuffed fish near wooden frame with butterfly",
+      "vlm_hint": {
+        "missing_objects": [
+          "butterfly"
+        ],
+        "hallucinated_objects": [
+          "wooden frame"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the butterfly and the wooden frame."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish near wooden frame with butterfly\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"butterfly\"],\n  \"hallucinated_objects\": [\"wooden frame\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the butterfly and the wooden frame.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Teddy bear and stuffed fish under grass by wooden frame with butterfly",
+      "vlm_hint": {
+        "missing_objects": [
+          "butterfly"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish under grass by wooden frame with butterfly\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"butterfly\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Teddy bear and stuffed fish on bench near wooden frame",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass"
+        ],
+        "hallucinated_objects": [
+          "wooden frame"
+        ],
+        "genericity_hint": "The image is specific to the objects present.",
+        "edit_instructions": [
+          "Remove the wooden frame and grass from the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on bench near wooden frame\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\"],\n  \"hallucinated_objects\": [\"wooden frame\"],\n  \"genericity_hint\": \"The image is specific to the objects present.\",\n  \"edit_instructions\": \"Remove the wooden frame and grass from the caption.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Teddy bear and stuffed fish on bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "wooden frame"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The image is specific to the objects present.",
+        "edit_instructions": [
+          "Remove the wooden frame and grass from the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wooden frame\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The image is specific to the objects present.\",\n  \"edit_instructions\": \"Remove the wooden frame and grass from the caption.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Teddy bear and stuffed fish on bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "wooden frame"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The image is specific to the objects present.",
+        "edit_instructions": [
+          "Remove the wooden frame and grass from the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wooden frame\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The image is specific to the objects present.\",\n  \"edit_instructions\": \"Remove the wooden frame and grass from the caption.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Teddy bear and stuffed fish on bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "wooden frame"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The image is specific to the objects present.",
+        "edit_instructions": [
+          "Remove the wooden frame and grass from the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wooden frame\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The image is specific to the objects present.\",\n  \"edit_instructions\": \"Remove the wooden frame and grass from the caption.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Teddy bear and stuffed fish on bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "wooden frame"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The image is specific to the objects present.",
+        "edit_instructions": [
+          "Remove the wooden frame and grass from the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wooden frame\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The image is specific to the objects present.\",\n  \"edit_instructions\": \"Remove the wooden frame and grass from the caption.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Teddy bear and stuffed fish on bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "wooden frame"
+        ],
+        "hallucinated_objects": [
+          "grass"
+        ],
+        "genericity_hint": "The image is specific to the objects present.",
+        "edit_instructions": [
+          "Remove the wooden frame and grass from the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teddy bear, stuffed fish, bench, grass, wooden frame]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teddy bear and stuffed fish on bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wooden frame\"],\n  \"hallucinated_objects\": [\"grass\"],\n  \"genericity_hint\": \"The image is specific to the objects present.\",\n  \"edit_instructions\": \"Remove the wooden frame and grass from the caption.\",\n  \"score\": 5\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 322844,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000322844.jpg",
+    "final_caption": "Teddy bear and stuffed fish on bench",
+    "total_time_sec": 22.88
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"teddy bear\",\n    \"stuffed fish\",\n    \"bench\",\n    \"grass\",\n    \"wooden frame\"\n  ]\n}"
+}

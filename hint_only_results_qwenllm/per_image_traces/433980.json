@@ -1,0 +1,215 @@
+{
+  "image_id": 433980,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000433980.jpg",
+  "objects": [
+    "person",
+    "phone",
+    "shirt",
+    "hair",
+    "necklace",
+    "earrings",
+    "background",
+    "lighting"
+  ],
+  "template": "We have an image with these objects: ['person', 'phone', 'shirt', 'hair', 'necklace', 'earrings', 'background', 'lighting']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Person with jewelry holds phone against shirt under lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The image is very grainy and has a green tint.",
+        "edit_instructions": [
+          "Remove the background and add a necklace and earrings to the person."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person with jewelry holds phone against shirt under lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The image is very grainy and has a green tint.\",\n  \"edit_instructions\": \"Remove the background and add a necklace and earrings to the person.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Person with necklace and earrings holds phone against shirt under green-tinted lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is green-tinted.",
+        "edit_instructions": [
+          "Remove the necklace and earrings. Remove the background. The lighting is green-tinted."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person with necklace and earrings holds phone against shirt under green-tinted lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is green-tinted.\",\n  \"edit_instructions\": \"Remove the necklace and earrings. Remove the background. The lighting is green-tinted.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Person holds phone against shirt under green lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is green.",
+        "edit_instructions": [
+          "Remove the background and add a necklace and earrings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt under green lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is green.\",\n  \"edit_instructions\": \"Remove the background and add a necklace and earrings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Person holds phone against shirt with green lighting necklace earrings",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is not consistent with the caption.",
+        "edit_instructions": [
+          "Remove the necklace and earrings, and adjust the lighting."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt with green lighting necklace earrings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is not consistent with the caption.\",\n  \"edit_instructions\": \"Remove the necklace and earrings, and adjust the lighting.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Person holds phone against shirt under green lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is green.",
+        "edit_instructions": [
+          "Remove the background and add a necklace and earrings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt under green lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is green.\",\n  \"edit_instructions\": \"Remove the background and add a necklace and earrings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person holds phone against shirt with necklace and earrings under green lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is green.",
+        "edit_instructions": [
+          "Remove the necklace and earrings. Remove the background."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt with necklace and earrings under green lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is green.\",\n  \"edit_instructions\": \"Remove the necklace and earrings. Remove the background.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person holds phone against shirt under green lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is green.",
+        "edit_instructions": [
+          "Remove the background and add a necklace and earrings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt under green lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is green.\",\n  \"edit_instructions\": \"Remove the background and add a necklace and earrings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person holds phone against shirt with green lighting necklace and earrings shine",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is not consistent with the caption.",
+        "edit_instructions": [
+          "Remove the necklace and earrings, and adjust the lighting."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt with green lighting necklace and earrings shine\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is not consistent with the caption.\",\n  \"edit_instructions\": \"Remove the necklace and earrings, and adjust the lighting.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person holds phone against shirt under green lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The lighting is green.",
+        "edit_instructions": [
+          "Remove the background and add a necklace and earrings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person holds phone against shirt under green lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The lighting is green.\",\n  \"edit_instructions\": \"Remove the background and add a necklace and earrings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person wears necklace and earrings holding phone against shirt under green lighting",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "lighting"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, phone, shirt, hair, necklace, earrings, background, lighting]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person wears necklace and earrings holding phone against shirt under green lighting\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"earrings\"],\n  \"hallucinated_objects\": [\"background\", \"lighting\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 433980,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000433980.jpg",
+    "final_caption": "Person wears necklace and earrings holding phone against shirt under green lighting",
+    "total_time_sec": 23.13
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"person\",\n    \"phone\",\n    \"shirt\",\n    \"hair\",\n    \"necklace\",\n    \"earrings\",\n    \"background\",\n    \"lighting\"\n  ]\n}"
+}

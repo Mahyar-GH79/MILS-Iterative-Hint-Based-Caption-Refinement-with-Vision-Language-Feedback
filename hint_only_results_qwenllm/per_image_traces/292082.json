@@ -1,0 +1,259 @@
+{
+  "image_id": 292082,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000292082.jpg",
+  "objects": [
+    "man",
+    "girl",
+    "chair",
+    "curtain",
+    "tie",
+    "dress",
+    "socks",
+    "radio",
+    "table",
+    "pillow",
+    "couch",
+    "bookshelf",
+    "book",
+    "tablecloth",
+    "wall",
+    "window",
+    "lamp",
+    "lampshade",
+    "cabinet",
+    "drawer"
+  ],
+  "template": "We have an image with these objects: ['man', 'girl', 'chair', 'curtain', 'tie', 'dress', 'socks', 'radio', 'table', 'pillow', 'couch', 'bookshelf', 'book', 'tablecloth', 'wall', 'window', 'lamp', 'lampshade', 'cabinet', 'drawer']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man and girl near couch with books and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "radio",
+          "tablecloth",
+          "pillow",
+          "lamp",
+          "lampshade",
+          "cabinet",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "bookshelf",
+          "book"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the radio, tablecloth, pillow, lamp, and lampshade."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl near couch with books and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"radio\", \"tablecloth\", \"pillow\", \"lamp\", \"lampshade\", \"cabinet\", \"drawer\"],\n  \"hallucinated_objects\": [\"bookshelf\", \"book\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the radio, tablecloth, pillow, lamp, and lampshade.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man and girl on couch near table with radio and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow",
+          "bookshelf",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "lamp",
+          "lampshade"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the pillow, bookshelf, drawer, lamp, and lampshade. The image is black and white."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with radio and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\", \"bookshelf\", \"drawer\"],\n  \"hallucinated_objects\": [\"lamp\", \"lampshade\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the pillow, bookshelf, drawer, lamp, and lampshade. The image is black and white.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man and girl on couch near table with radio",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow",
+          "bookshelf",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "lamp",
+          "lampshade",
+          "cabinet"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the pillow, bookshelf, and drawer. Add a lamp and lampshade. Change the color to color."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with radio\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\", \"bookshelf\", \"drawer\"],\n  \"hallucinated_objects\": [\"lamp\", \"lampshade\", \"cabinet\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the pillow, bookshelf, and drawer. Add a lamp and lampshade. Change the color to color.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man and girl on couch near table with radio and lamp lampshade",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow",
+          "bookshelf",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the pillow, bookshelf, and drawer. Add a bookshelf and drawer."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with radio and lamp lampshade\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\", \"bookshelf\", \"drawer\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the pillow, bookshelf, and drawer. Add a bookshelf and drawer.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and girl on couch near table with radio and lamp lampshade bookshelf drawer",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow",
+          "bookshelf",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "lamp",
+          "lampshade"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the lamp and lampshade. Add a pillow, bookshelf, and drawer."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with radio and lamp lampshade bookshelf drawer\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\", \"bookshelf\", \"drawer\"],\n  \"hallucinated_objects\": [\"lamp\", \"lampshade\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the lamp and lampshade. Add a pillow, bookshelf, and drawer.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and girl on couch near table with radio pillow bookshelf drawer",
+      "vlm_hint": {
+        "missing_objects": [
+          "radio",
+          "pillow",
+          "bookshelf",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the radio, pillow, bookshelf, and drawer. Add a table."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with radio pillow bookshelf drawer\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"radio\", \"pillow\", \"bookshelf\", \"drawer\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the radio, pillow, bookshelf, and drawer. Add a table.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man and girl on couch near table with curtain lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "radio",
+          "pillow",
+          "tablecloth",
+          "lampshade",
+          "drawer",
+          "bookshelf",
+          "book",
+          "cabinet"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "wall",
+          "window"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the radio, pillow, tablecloth, lampshade, drawer, bookshelf, book, and cabinet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with curtain lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"radio\", \"pillow\", \"tablecloth\", \"lampshade\", \"drawer\", \"bookshelf\", \"book\", \"cabinet\"],\n  \"hallucinated_objects\": [\"chair\", \"wall\", \"window\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the radio, pillow, tablecloth, lampshade, drawer, bookshelf, book, and cabinet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man and girl on couch near table with radio and pillow, tablecloth draped over lampshade, drawer and bookshelf nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "pillow",
+          "tablecloth",
+          "lampshade",
+          "drawer",
+          "bookshelf"
+        ],
+        "hallucinated_objects": [
+          "radio",
+          "table"
+        ],
+        "genericity_hint": "The image does not show a couch, tablecloth, lampshade, drawer, or bookshelf.",
+        "edit_instructions": [
+          "Remove the radio, table, and add a chair, pillow, tablecloth, lampshade, drawer, and bookshelf."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on couch near table with radio and pillow, tablecloth draped over lampshade, drawer and bookshelf nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"pillow\", \"tablecloth\", \"lampshade\", \"drawer\", \"bookshelf\"],\n  \"hallucinated_objects\": [\"radio\", \"table\"],\n  \"genericity_hint\": \"The image does not show a couch, tablecloth, lampshade, drawer, or bookshelf.\",\n  \"edit_instructions\": \"Remove the radio, table, and add a chair, pillow, tablecloth, lampshade, drawer, and bookshelf.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and girl on chair near lamp with pillow, tablecloth draped over lampshade, drawer and bookshelf nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "radio",
+          "pillow",
+          "drawer",
+          "bookshelf"
+        ],
+        "hallucinated_objects": [
+          "lampshade"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the radio, pillow, drawer, and bookshelf. Remove the lampshade. The image is black and white."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on chair near lamp with pillow, tablecloth draped over lampshade, drawer and bookshelf nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"radio\", \"pillow\", \"drawer\", \"bookshelf\"],\n  \"hallucinated_objects\": [\"lampshade\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the radio, pillow, drawer, and bookshelf. Remove the lampshade. The image is black and white.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man and girl on chair near tablecloth-covered lamp, curtain and bookshelf nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "radio",
+          "pillow",
+          "couch",
+          "drawer"
+        ],
+        "hallucinated_objects": [
+          "tablecloth-covered lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the radio, pillow, couch, and drawer."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, girl, chair, curtain, tie, dress, socks, radio, table, pillow, couch, bookshelf, book, tablecloth, wall, window, lamp, lampshade, cabinet, drawer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on chair near tablecloth-covered lamp, curtain and bookshelf nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"radio\", \"pillow\", \"couch\", \"drawer\"],\n  \"hallucinated_objects\": [\"tablecloth-covered lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the radio, pillow, couch, and drawer.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 292082,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000292082.jpg",
+    "final_caption": "Man and girl on chair near tablecloth-covered lamp, curtain and bookshelf nearby.",
+    "total_time_sec": 33.75
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"girl\",\n    \"chair\",\n    \"curtain\",\n    \"tie\",\n    \"dress\",\n    \"socks\",\n    \"radio\",\n    \"table\",\n    \"pillow\",\n    \"couch\",\n    \"bookshelf\",\n    \"book\",\n    \"tablecloth\",\n    \"wall\",\n    \"window\",\n    \"lamp\",\n    \"lampshade\",\n    \"cabinet\",\n    \"drawer\"\n  ]\n}"
+}

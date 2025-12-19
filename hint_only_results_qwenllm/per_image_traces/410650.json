@@ -1,0 +1,298 @@
+{
+  "image_id": 410650,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000410650.jpg",
+  "objects": [
+    "tennis court",
+    "tennis player",
+    "tennis racket",
+    "tennis ball",
+    "audience",
+    "seating",
+    "advertisements",
+    "sunglasses",
+    "tennis shoes",
+    "tennis dress",
+    "tennis net",
+    "tennis ball in motion",
+    "tennis ball on court",
+    "tennis ball in hand",
+    "tennis ball in air",
+    "tennis ball on racket",
+    "tennis ball on ground",
+    "tennis ball on net",
+    "tennis ball on court"
+  ],
+  "template": "We have an image with these objects: ['tennis court', 'tennis player', 'tennis racket', 'tennis ball', 'audience', 'seating', 'advertisements', 'sunglasses', 'tennis shoes', 'tennis dress', 'tennis net', 'tennis ball in motion', 'tennis ball on court', 'tennis ball in hand', 'tennis ball in air', 'tennis ball on racket', 'tennis ball on ground', 'tennis ball on net', 'tennis ball on court']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Tennis player serves ball over net in match.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "audience",
+          "tennis ball in motion",
+          "tennis ball on court",
+          "tennis ball in hand",
+          "tennis ball in air",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis court",
+          "tennis player",
+          "tennis racket",
+          "audience",
+          "seating",
+          "advertisements",
+          "sunglasses",
+          "tennis shoes",
+          "tennis dress"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the action or the player's position.",
+        "edit_instructions": [
+          "Specify the action and the player's position, and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player serves ball over net in match.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"audience\", \"tennis ball in motion\", \"tennis ball on court\", \"tennis ball in hand\", \"tennis ball in air\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis court\", \"tennis player\", \"tennis racket\", \"audience\", \"seating\", \"advertisements\", \"sunglasses\", \"tennis shoes\", \"tennis dress\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the action or the player's position.\",\n  \"edit_instructions\": \"Specify the action and the player's position, and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Player strikes ball sending it over net to audience.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "audience",
+          "tennis ball in motion",
+          "tennis ball on court",
+          "tennis ball in hand",
+          "tennis ball in air",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis court",
+          "tennis player",
+          "tennis racket",
+          "tennis ball",
+          "audience",
+          "seating",
+          "advertisements",
+          "sunglasses",
+          "tennis shoes",
+          "tennis dress"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the action or the objects involved.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis ball in motion, the tennis net, and the audience."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Player strikes ball sending it over net to audience.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"audience\", \"tennis ball in motion\", \"tennis ball on court\", \"tennis ball in hand\", \"tennis ball in air\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis court\", \"tennis player\", \"tennis racket\", \"tennis ball\", \"audience\", \"seating\", \"advertisements\", \"sunglasses\", \"tennis shoes\", \"tennis dress\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the action or the objects involved.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis ball in motion, the tennis net, and the audience.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Tennis ball flies over net to audience.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "audience",
+          "seating",
+          "advertisements",
+          "sunglasses",
+          "tennis shoes",
+          "tennis dress",
+          "tennis ball in hand",
+          "tennis ball in air",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball flies over net to audience.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"audience\", \"seating\", \"advertisements\", \"sunglasses\", \"tennis shoes\", \"tennis dress\", \"tennis ball in hand\", \"tennis ball in air\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Tennis ball in motion flies over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion flies over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Tennis ball in motion flies over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion flies over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Tennis ball in motion flies over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion flies over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tennis ball in motion flies over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion flies over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Tennis ball in motion flies over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion flies over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tennis net, the tennis ball in motion, and the tennis ball on the court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tennis ball in motion soars over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a caption that includes specific details about the objects in the image, such as the tennis net, the tennis ball in motion, and the tennis ball on the court."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion soars over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in motion\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a caption that includes specific details about the objects in the image, such as the tennis net, the tennis ball in motion, and the tennis ball on the court.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tennis ball in motion arcs over net bouncing on court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis net",
+          "tennis ball in hand",
+          "tennis ball on racket",
+          "tennis ball on ground",
+          "tennis ball on net",
+          "tennis ball on court"
+        ],
+        "hallucinated_objects": [
+          "tennis ball in motion",
+          "tennis ball on court"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis court, tennis player, tennis racket, tennis ball, audience, seating, advertisements, sunglasses, tennis shoes, tennis dress, tennis net, tennis ball in motion, tennis ball on court, tennis ball in hand, tennis ball in air, tennis ball on racket, tennis ball on ground, tennis ball on net, tennis ball on court]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis ball in motion arcs over net bouncing on court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis net\", \"tennis ball in hand\", \"tennis ball on racket\", \"tennis ball on ground\", \"tennis ball on net\", \"tennis ball on court\"],\n  \"hallucinated_objects\": [\"tennis ball in motion\", \"tennis ball on court\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 410650,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000410650.jpg",
+    "final_caption": "Tennis ball in motion arcs over net bouncing on court.",
+    "total_time_sec": 46.04
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"tennis court\",\n    \"tennis player\",\n    \"tennis racket\",\n    \"tennis ball\",\n    \"audience\",\n    \"seating\",\n    \"advertisements\",\n    \"sunglasses\",\n    \"tennis shoes\",\n    \"tennis dress\",\n    \"tennis net\",\n    \"tennis ball in motion\",\n    \"tennis ball on court\",\n    \"tennis ball in hand\",\n    \"tennis ball in air\",\n    \"tennis ball on racket\",\n    \"tennis ball on ground\",\n    \"tennis ball on net\",\n    \"tennis ball on court\"\n  ]\n}"
+}

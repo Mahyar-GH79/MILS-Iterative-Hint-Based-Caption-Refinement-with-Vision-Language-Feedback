@@ -1,0 +1,247 @@
+{
+  "image_id": 190923,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000190923.jpg",
+  "objects": [
+    "trash can",
+    "street sign",
+    "traffic light",
+    "sidewalk",
+    "tree",
+    "building",
+    "street",
+    "person",
+    "backpack",
+    "flag",
+    "sign",
+    "pole",
+    "street light",
+    "building",
+    "person",
+    "tree",
+    "trash can",
+    "street sign",
+    "traffic light"
+  ],
+  "template": "We have an image with these objects: ['trash can', 'street sign', 'traffic light', 'sidewalk', 'tree', 'building', 'street', 'person', 'backpack', 'flag', 'sign', 'pole', 'street light', 'building', 'person', 'tree', 'trash can', 'street sign', 'traffic light']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "City street with traffic and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can"
+        ],
+        "hallucinated_objects": [
+          "street light"
+        ],
+        "genericity_hint": "The image is not very specific about the type of street or the presence of traffic.",
+        "edit_instructions": [
+          "Remove the traffic light and add a street light. Specify the type of street and the presence of traffic."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: City street with traffic and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\"],\n  \"hallucinated_objects\": [\"street light\"],\n  \"genericity_hint\": \"The image is not very specific about the type of street or the presence of traffic.\",\n  \"edit_instructions\": \"Remove the traffic light and add a street light. Specify the type of street and the presence of traffic.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "City street with traffic trash cans and trees",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: City street with traffic trash cans and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"street light\", \"flag\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light\", \"trash can\", \"traffic light\", \"street light"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "City street with traffic light trees and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can"
+        ],
+        "hallucinated_objects": [
+          "street light"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the traffic light, trash can, and street light."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: City street with traffic light trees and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\"],\n  \"hallucinated_objects\": [\"street light\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the traffic light, trash can, and street light.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Traffic light trash can and street pole on city street",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street pole"
+        ],
+        "hallucinated_objects": [
+          "street light"
+        ],
+        "genericity_hint": "The image contains a traffic light, trash can, and street pole, but the candidate caption is missing these objects.",
+        "edit_instructions": [
+          "Add the missing objects to the candidate caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light trash can and street pole on city street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street pole\"],\n  \"hallucinated_objects\": [\"street light\"],\n  \"genericity_hint\": \"The image contains a traffic light, trash can, and street pole, but the candidate caption is missing these objects.\",\n  \"edit_instructions\": \"Add the missing objects to the candidate caption.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Traffic light trash can and street pole on city street with trees and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street sign",
+          "pole",
+          "street light",
+          "building",
+          "tree",
+          "trash can",
+          "street sign",
+          "traffic light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the traffic light, trash can, street sign, pole, street light, building, tree, and any other objects present in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light trash can and street pole on city street with trees and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street sign\", \"pole\", \"street light\", \"building\", \"tree\", \"trash can\", \"street sign\", \"traffic light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the traffic light, trash can, street sign, pole, street light, building, tree, and any other objects present in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Traffic light trash can street sign and pole by buildings and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street sign",
+          "pole",
+          "buildings",
+          "trees"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as their exact locations and relationships to each other."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light trash can street sign and pole by buildings and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street sign\", \"pole\", \"buildings\", \"trees\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as their exact locations and relationships to each other.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Traffic light near trash can by street sign and pole beside buildings and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street sign",
+          "pole",
+          "buildings",
+          "trees"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color, size, and location of the objects."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light near trash can by street sign and pole beside buildings and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street sign\", \"pole\", \"buildings\", \"trees\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color, size, and location of the objects.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Traffic light near trash can by street sign under tall trees beside buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street sign",
+          "tall trees",
+          "buildings"
+        ],
+        "hallucinated_objects": [
+          "traffic light",
+          "trash can",
+          "street sign",
+          "tall trees",
+          "buildings"
+        ],
+        "genericity_hint": "The objects in the image are not specific enough.",
+        "edit_instructions": [
+          "Provide specific objects in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light near trash can by street sign under tall trees beside buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street sign\", \"tall trees\", \"buildings\"],\n  \"hallucinated_objects\": [\"traffic light\", \"trash can\", \"street sign\", \"tall trees\", \"buildings\"],\n  \"genericity_hint\": \"The objects in the image are not specific enough.\",\n  \"edit_instructions\": \"Provide specific objects in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Traffic light next to trash can by street sign near buildings and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street sign",
+          "building",
+          "tree",
+          "street",
+          "person",
+          "backpack",
+          "flag",
+          "sign",
+          "pole",
+          "street light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide enough detail about the specific objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific and detailed caption that includes the traffic light, trash can, street sign, building, tree, street, person, backpack, flag, sign, pole, and street light."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light next to trash can by street sign near buildings and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street sign\", \"building\", \"tree\", \"street\", \"person\", \"backpack\", \"flag\", \"sign\", \"pole\", \"street light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide enough detail about the specific objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific and detailed caption that includes the traffic light, trash can, street sign, building, tree, street, person, backpack, flag, sign, pole, and street light.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Traffic light near trash can by street sign with buildings and trees on busy street. Person with backpack walks by. Flag waves nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "trash can",
+          "street sign"
+        ],
+        "hallucinated_objects": [
+          "traffic light",
+          "trash can",
+          "street sign"
+        ],
+        "genericity_hint": "The image contains a traffic light, trash can, and street sign.",
+        "edit_instructions": [
+          "Remove the traffic light, trash can, and street sign from the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [trash can, street sign, traffic light, sidewalk, tree, building, street, person, backpack, flag, sign, pole, street light, building, person, tree, trash can, street sign, traffic light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic light near trash can by street sign with buildings and trees on busy street. Person with backpack walks by. Flag waves nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"trash can\", \"street sign\"],\n  \"hallucinated_objects\": [\"traffic light\", \"trash can\", \"street sign\"],\n  \"genericity_hint\": \"The image contains a traffic light, trash can, and street sign.\",\n  \"edit_instructions\": \"Remove the traffic light, trash can, and street sign from the image.\",\n  \"score\": 0\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 190923,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000190923.jpg",
+    "final_caption": "Traffic light near trash can by street sign with buildings and trees on busy street. Person with backpack walks by. Flag waves nearby.",
+    "total_time_sec": 37.62
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n\"objects\": [\n\"trash can\",\n\"street sign\",\n\"traffic light\",\n\"sidewalk\",\n\"tree\",\n\"building\",\n\"street\",\n\"person\",\n\"backpack\",\n\"flag\",\n\"sign\",\n\"pole\",\n\"street light\",\n\"building\",\n\"person\",\n\"tree\",\n\"trash can\",\n\"street sign\",\n\"traffic light\"\n]\n}"
+}

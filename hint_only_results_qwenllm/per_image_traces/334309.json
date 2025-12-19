@@ -1,0 +1,283 @@
+{
+  "image_id": 334309,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000334309.jpg",
+  "objects": [
+    "man",
+    "sunglasses",
+    "phone",
+    "sandwich",
+    "watch",
+    "ring",
+    "plant",
+    "building",
+    "street",
+    "car",
+    "tree",
+    "sky",
+    "streetlight",
+    "chair",
+    "table",
+    "street",
+    "building",
+    "car",
+    "tree",
+    "sky"
+  ],
+  "template": "We have an image with these objects: ['man', 'sunglasses', 'phone', 'sandwich', 'watch', 'ring', 'plant', 'building', 'street', 'car', 'tree', 'sky', 'streetlight', 'chair', 'table', 'street', 'building', 'car', 'tree', 'sky']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in sunglasses street near buildings cars trees sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "sandwich",
+          "watch",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the man holding a sandwich, wearing a watch and ring, and the presence of a streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses street near buildings cars trees sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sandwich\", \"watch\", \"ring\"],\n  \"hallucinated_objects\": [\"chair\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the man holding a sandwich, wearing a watch and ring, and the presence of a streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in sunglasses holds sandwich watches ring near streetlight buildings cars trees sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair and table, and the specific details of the streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses holds sandwich watches ring near streetlight buildings cars trees sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair and table, and the specific details of the streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in sunglasses eats a sandwich near street buildings cars and a tree by a wooden chair and glass table under the sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "sunglasses",
+          "phone",
+          "sandwich",
+          "watch",
+          "ring",
+          "plant",
+          "building",
+          "street",
+          "car",
+          "tree",
+          "sky",
+          "streetlight",
+          "chair",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man",
+          "man"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of sunglasses, the brand of the phone, the type of sandwich, and the specific building and car."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats a sandwich near street buildings cars and a tree by a wooden chair and glass table under the sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sunglasses\", \"phone\", \"sandwich\", \"watch\", \"ring\", \"plant\", \"building\", \"street\", \"car\", \"tree\", \"sky\", \"streetlight\", \"chair\", \"table\"],\n  \"hallucinated_objects\": [\"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\", \"man\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of sunglasses, the brand of the phone, the type of sandwich, and the specific building and car.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in sunglasses checks his phone while eating a sandwich near tall buildings and cars by a tree and streetlight under a clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "streetlight",
+          "tree",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair and table, and the specific features of the building and car."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses checks his phone while eating a sandwich near tall buildings and cars by a tree and streetlight under a clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\"],\n  \"hallucinated_objects\": [\"streetlight\", \"tree\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair and table, and the specific features of the building and car.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in sunglasses eats a sandwich at a wooden chair near a tall building and car on the street under clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair and the presence of a streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats a sandwich at a wooden chair near a tall building and car on the street under clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair and the presence of a streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in sunglasses eats a sandwich at a wooden chair with a car and tall building on the street under clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "tree",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "wooden chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the color of the car, and the type of building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats a sandwich at a wooden chair with a car and tall building on the street under clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"tree\", \"sky\"],\n  \"hallucinated_objects\": [\"wooden chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the color of the car, and the type of building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in sunglasses eats a sandwich near a car and tall building on the street under clear sky with trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "tree",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of car, building, and tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats a sandwich near a car and tall building on the street under clear sky with trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"tree\", \"sky\"],\n  \"hallucinated_objects\": [\"chair\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of car, building, and tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in sunglasses eats a sandwich near a sleek car and tall building on the street under clear sky with leafy trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sunglasses",
+          "sandwich",
+          "watch",
+          "ring",
+          "plant",
+          "building",
+          "street",
+          "car",
+          "tree",
+          "sky",
+          "streetlight",
+          "chair",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's sunglasses, the sandwich he is eating, the watch on his wrist, and the leafy plants in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats a sandwich near a sleek car and tall building on the street under clear sky with leafy trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sunglasses\", \"sandwich\", \"watch\", \"ring\", \"plant\", \"building\", \"street\", \"car\", \"tree\", \"sky\", \"streetlight\", \"chair\", \"table\"],\n  \"hallucinated_objects\": [\"man\", \"phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's sunglasses, the sandwich he is eating, the watch on his wrist, and the leafy plants in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in sunglasses eats sandwich near car and building on street under clear sky with trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "streetlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair and table, and the presence of a streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats sandwich near car and building on street under clear sky with trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\"],\n  \"hallucinated_objects\": [\"streetlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair and table, and the presence of a streetlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in sunglasses eats sandwich at wooden table near car and building on street under clear sky with trees and streetlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "tree",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "sunglasses",
+          "phone",
+          "sandwich",
+          "watch",
+          "ring",
+          "plant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of car, building, tree, and streetlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, sunglasses, phone, sandwich, watch, ring, plant, building, street, car, tree, sky, streetlight, chair, table, street, building, car, tree, sky]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in sunglasses eats sandwich at wooden table near car and building on street under clear sky with trees and streetlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"tree\", \"streetlight\"],\n  \"hallucinated_objects\": [\"man\", \"sunglasses\", \"phone\", \"sandwich\", \"watch\", \"ring\", \"plant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of car, building, tree, and streetlight.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 334309,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000334309.jpg",
+    "final_caption": "Man in sunglasses eats sandwich at wooden table near car and building on street under clear sky with trees and streetlight.",
+    "total_time_sec": 38.99
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"sunglasses\",\n    \"phone\",\n    \"sandwich\",\n    \"watch\",\n    \"ring\",\n    \"plant\",\n    \"building\",\n    \"street\",\n    \"car\",\n    \"tree\",\n    \"sky\",\n    \"streetlight\",\n    \"chair\",\n    \"table\",\n    \"street\",\n    \"building\",\n    \"car\",\n    \"tree\",\n    \"sky\"\n  ]\n}"
+}

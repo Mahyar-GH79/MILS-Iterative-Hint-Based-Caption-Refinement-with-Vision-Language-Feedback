@@ -1,0 +1,267 @@
+{
+  "image_id": 183716,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000183716.jpg",
+  "objects": [
+    "two girls",
+    "blue cardigans",
+    "gray skirts",
+    "striped ties",
+    "white buttons",
+    "black belt",
+    "gray hair",
+    "brown hair",
+    "bricks",
+    "chair",
+    "white hair tie",
+    "gray hair tie",
+    "gray hair",
+    "brown hair",
+    "gray hair",
+    "brown hair",
+    "gray hair",
+    "brown hair",
+    "gray hair",
+    "brown hair"
+  ],
+  "template": "We have an image with these objects: ['two girls', 'blue cardigans', 'gray skirts', 'striped ties', 'white buttons', 'black belt', 'gray hair', 'brown hair', 'bricks', 'chair', 'white hair tie', 'gray hair tie', 'gray hair', 'brown hair', 'gray hair', 'brown hair', 'gray hair', 'brown hair', 'gray hair', 'brown hair']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Two girls in blue cardigans stand near bricks",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray skirts",
+          "striped ties",
+          "white buttons",
+          "black belt",
+          "gray hair",
+          "brown hair",
+          "gray hair",
+          "brown hair",
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "gray hair tie",
+          "white hair tie"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the details of the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans stand near bricks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray skirts\", \"striped ties\", \"white buttons\", \"black belt\", \"gray hair\", \"brown hair\", \"gray hair\", \"brown hair\", \"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"chair\", \"gray hair tie\", \"white hair tie\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the details of the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Two girls in blue cardigans wear gray skirts and striped ties",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white buttons",
+          "black belt",
+          "gray hair tie",
+          "gray hair tie"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the hair or the type of clothing.",
+        "edit_instructions": [
+          "Specify the color of the hair and the type of clothing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans wear gray skirts and striped ties\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white buttons\", \"black belt\", \"gray hair tie\", \"gray hair tie\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the hair or the type of clothing.\",\n  \"edit_instructions\": \"Specify the color of the hair and the type of clothing.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Two girls in blue cardigans and gray skirts have gray and brown hair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white buttons",
+          "black belt",
+          "gray hair tie",
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white hair tie",
+          "gray hair tie"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the clothing and accessories.",
+        "edit_instructions": [
+          "Provide more specific details about the clothing and accessories, and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts have gray and brown hair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white buttons\", \"black belt\", \"gray hair tie\", \"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white hair tie\", \"gray hair tie\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the clothing and accessories.\",\n  \"edit_instructions\": \"Provide more specific details about the clothing and accessories, and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Two girls in blue cardigans and gray skirts wear gray and brown hair ties.",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray skirt",
+          "striped ties",
+          "white buttons",
+          "black belt",
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "gray hair tie",
+          "gray hair",
+          "brown hair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the clothing and accessories.",
+        "edit_instructions": [
+          "Provide more specific details about the clothing and accessories, and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts wear gray and brown hair ties.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray skirt\", \"striped ties\", \"white buttons\", \"black belt\", \"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"gray hair tie\", \"gray hair\", \"brown hair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the clothing and accessories.\",\n  \"edit_instructions\": \"Provide more specific details about the clothing and accessories, and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Two girls in blue cardigans and gray skirts pair striped ties with white buttons and black belts.",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white buttons",
+          "black belts"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Provide more specific details about the clothing and accessories."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts pair striped ties with white buttons and black belts.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white buttons\", \"black belts\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Provide more specific details about the clothing and accessories.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Two girls in blue cardigans and gray skirts wear striped ties and gray and brown hair ties.",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white buttons",
+          "black belt",
+          "gray hair tie",
+          "gray hair tie"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the hair.",
+        "edit_instructions": [
+          "Specify the color of the hair in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts wear striped ties and gray and brown hair ties.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white buttons\", \"black belt\", \"gray hair tie\", \"gray hair tie\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the hair.\",\n  \"edit_instructions\": \"Specify the color of the hair in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Two girls in blue cardigans and gray skirts wear striped ties and gray and brown hair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white buttons",
+          "black belt",
+          "gray hair tie",
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white hair tie",
+          "gray hair tie",
+          "gray hair",
+          "brown hair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the ties, the type of skirt, and the color of the hair."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts wear striped ties and gray and brown hair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white buttons\", \"black belt\", \"gray hair tie\", \"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white hair tie\", \"gray hair tie\", \"gray hair\", \"brown hair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the ties, the type of skirt, and the color of the hair.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two girls in blue cardigans and gray skirts wear white buttons and black belts with striped ties and gray and brown hair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white buttons",
+          "black belts"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Remove the generic details and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts wear white buttons and black belts with striped ties and gray and brown hair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white buttons\", \"black belts\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Remove the generic details and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Two girls in blue cardigans and gray skirts wear striped ties and gray, brown hair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "white buttons",
+          "black belt",
+          "gray hair tie",
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white hair tie",
+          "gray hair tie",
+          "gray hair",
+          "brown hair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the ties, the type of skirt, and the color of the hair."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts wear striped ties and gray, brown hair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white buttons\", \"black belt\", \"gray hair tie\", \"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white hair tie\", \"gray hair tie\", \"gray hair\", \"brown hair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the ties, the type of skirt, and the color of the hair.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Two girls in blue cardigans and gray skirts wear white buttons and black belts with striped ties, gray and brown hair.",
+      "vlm_hint": {
+        "missing_objects": [
+          "gray hair",
+          "brown hair"
+        ],
+        "hallucinated_objects": [
+          "white buttons",
+          "black belts"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the hair or the type of clothing.",
+        "edit_instructions": [
+          "Specify the color of the hair and the type of clothing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [two girls, blue cardigans, gray skirts, striped ties, white buttons, black belt, gray hair, brown hair, bricks, chair, white hair tie, gray hair tie, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair, gray hair, brown hair]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two girls in blue cardigans and gray skirts wear white buttons and black belts with striped ties, gray and brown hair.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"gray hair\", \"brown hair\"],\n  \"hallucinated_objects\": [\"white buttons\", \"black belts\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the hair or the type of clothing.\",\n  \"edit_instructions\": \"Specify the color of the hair and the type of clothing.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 183716,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000183716.jpg",
+    "final_caption": "Two girls in blue cardigans and gray skirts wear white buttons and black belts with striped ties, gray and brown hair.",
+    "total_time_sec": 35.37
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"two girls\",\n    \"blue cardigans\",\n    \"gray skirts\",\n    \"striped ties\",\n    \"white buttons\",\n    \"black belt\",\n    \"gray hair\",\n    \"brown hair\",\n    \"bricks\",\n    \"chair\",\n    \"white hair tie\",\n    \"gray hair tie\",\n    \"gray hair\",\n    \"brown hair\",\n    \"gray hair\",\n    \"brown hair\",\n    \"gray hair\",\n    \"brown hair\",\n    \"gray hair\",\n    \"brown hair\"\n  ]\n}"
+}

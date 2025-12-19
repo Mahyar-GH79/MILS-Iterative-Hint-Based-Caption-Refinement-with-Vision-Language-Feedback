@@ -1,0 +1,296 @@
+{
+  "image_id": 125936,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000125936.jpg",
+  "objects": [
+    "bananas",
+    "apples",
+    "bread",
+    "people",
+    "shelves",
+    "fruits",
+    "apron",
+    "hat",
+    "counter",
+    "refrigerator",
+    "sign",
+    "lights",
+    "jacket",
+    "potatoes",
+    "plaid shirt",
+    "tank top",
+    "oven",
+    "oven mitt",
+    "oven"
+  ],
+  "template": "We have an image with these objects: ['bananas', 'apples', 'bread', 'people', 'shelves', 'fruits', 'apron', 'hat', 'counter', 'refrigerator', 'sign', 'lights', 'jacket', 'potatoes', 'plaid shirt', 'tank top', 'oven', 'oven mitt', 'oven']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People among fruits and bread on shelves",
+      "vlm_hint": {
+        "missing_objects": [
+          "potatoes",
+          "oven",
+          "oven mitt",
+          "sign",
+          "lights",
+          "tank top",
+          "plaid shirt",
+          "hat",
+          "apron",
+          "refrigerator",
+          "oven",
+          "oven mitt",
+          "sign",
+          "lights",
+          "tank top",
+          "plaid shirt",
+          "hat",
+          "apron",
+          "refrigerator"
+        ],
+        "hallucinated_objects": [
+          "potatoes",
+          "oven",
+          "oven mitt",
+          "sign",
+          "lights",
+          "tank top",
+          "plaid shirt",
+          "hat",
+          "apron",
+          "refrigerator",
+          "oven",
+          "oven mitt",
+          "sign",
+          "lights",
+          "tank top",
+          "plaid shirt",
+          "hat",
+          "apron",
+          "refrigerator"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People among fruits and bread on shelves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"refrigerator\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"refrigerator\"],\n  \"hallucinated_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"refrigerator\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"refrigerator\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People among bananas, apples, and bread on shelves",
+      "vlm_hint": {
+        "missing_objects": [
+          "potatoes",
+          "oven",
+          "oven mitt",
+          "sign",
+          "lights",
+          "tank top",
+          "plaid shirt",
+          "hat",
+          "apron",
+          "refrigerator",
+          "oven"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "shelves",
+          "fruits",
+          "bananas",
+          "apples",
+          "bread"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People among bananas, apples, and bread on shelves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"refrigerator\", \"oven\"],\n  \"hallucinated_objects\": [\"people\", \"shelves\", \"fruits\", \"bananas\", \"apples\", \"bread\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Potatoes beside bananas and apples near oven and sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "potatoes",
+          "oven",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "plaid shirt",
+          "tank top",
+          "oven mitt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Potatoes beside bananas and apples near oven and sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"sign\"],\n  \"hallucinated_objects\": [\"plaid shirt\", \"tank top\", \"oven mitt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bananas, apples, potatoes near oven and sign on shelves",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread",
+          "people",
+          "shelves",
+          "fruits",
+          "apron",
+          "hat",
+          "counter",
+          "refrigerator",
+          "sign",
+          "lights",
+          "plaid shirt",
+          "tank top",
+          "oven",
+          "oven mitt"
+        ],
+        "hallucinated_objects": [
+          "potatoes",
+          "oven"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas, apples, potatoes near oven and sign on shelves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\", \"people\", \"shelves\", \"fruits\", \"apron\", \"hat\", \"counter\", \"refrigerator\", \"sign\", \"lights\", \"plaid shirt\", \"tank top\", \"oven\", \"oven mitt\"],\n  \"hallucinated_objects\": [\"potatoes\", \"oven\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Fruits bananas apples near shelves with people and sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread",
+          "apron",
+          "hat",
+          "counter",
+          "refrigerator",
+          "sign",
+          "lights",
+          "oven",
+          "oven mitt"
+        ],
+        "hallucinated_objects": [
+          "plaid shirt",
+          "tank top"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fruits bananas apples near shelves with people and sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\", \"apron\", \"hat\", \"counter\", \"refrigerator\", \"sign\", \"lights\", \"oven\", \"oven mitt\"],\n  \"hallucinated_objects\": [\"plaid shirt\", \"tank top\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bananas apples on shelves near counter with people and sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "bread",
+          "apron",
+          "hat",
+          "counter",
+          "refrigerator",
+          "sign",
+          "lights",
+          "oven",
+          "oven mitt"
+        ],
+        "hallucinated_objects": [
+          "plaid shirt",
+          "tank top"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples on shelves near counter with people and sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bread\", \"apron\", \"hat\", \"counter\", \"refrigerator\", \"sign\", \"lights\", \"oven\", \"oven mitt\"],\n  \"hallucinated_objects\": [\"plaid shirt\", \"tank top\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bananas apples on shelves near counter with bread refrigerator and sign",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas apples on shelves near counter with bread refrigerator and sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \""
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bananas and apples on shelves near the counter with bread.",
+      "vlm_hint": {
+        "missing_objects": [
+          "potatoes",
+          "oven",
+          "oven mitt",
+          "sign",
+          "lights",
+          "tank top",
+          "plaid shirt",
+          "hat",
+          "apron",
+          "refrigerator",
+          "oven"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "shelves",
+          "fruits"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the exact types of fruits and people's clothing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas and apples on shelves near the counter with bread.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"refrigerator\", \"oven\"],\n  \"hallucinated_objects\": [\"people\", \"shelves\", \"fruits\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the exact types of fruits and people's clothing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bananas and apples sit on the counter near bread and a potato.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bananas and apples sit on the counter near bread and a potato.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \""
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Fruits and bread sit on the counter near a potato.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bananas, apples, bread, people, shelves, fruits, apron, hat, counter, refrigerator, sign, lights, jacket, potatoes, plaid shirt, tank top, oven, oven mitt, oven]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fruits and bread sit on the counter near a potato.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potatoes\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \"tank top\", \"plaid shirt\", \"hat\", \"apron\", \"oven\", \"oven mitt\", \"sign\", \"lights\", \""
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 125936,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000125936.jpg",
+    "final_caption": "Fruits and bread sit on the counter near a potato.",
+    "total_time_sec": 50.65
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bananas\",\n    \"apples\",\n    \"bread\",\n    \"people\",\n    \"shelves\",\n    \"fruits\",\n    \"apron\",\n    \"hat\",\n    \"counter\",\n    \"refrigerator\",\n    \"sign\",\n    \"lights\",\n    \"jacket\",\n    \"potatoes\",\n    \"plaid shirt\",\n    \"tank top\",\n    \"oven\",\n    \"oven mitt\",\n    \"oven\"\n  ]\n}"
+}

@@ -1,0 +1,220 @@
+{
+  "image_id": 123131,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000123131.jpg",
+  "objects": [
+    "truck",
+    "tire",
+    "mirror",
+    "grille",
+    "wheel",
+    "light",
+    "tail light",
+    "axle",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire",
+    "tire"
+  ],
+  "template": "We have an image with these objects: ['truck', 'tire', 'mirror', 'grille', 'wheel', 'light', 'tail light', 'axle', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire', 'tire']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Truck with multiple tires illuminated by lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "axle"
+        ],
+        "hallucinated_objects": [
+          "multiple tires"
+        ],
+        "genericity_hint": "The caption is too specific and does not account for all the objects in the image.",
+        "edit_instructions": [
+          "Remove the phrase 'multiple tires' and add 'axle'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with multiple tires illuminated by lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"axle\"],\n  \"hallucinated_objects\": [\"multiple tires\"],\n  \"genericity_hint\": \"The caption is too specific and does not account for all the objects in the image.\",\n  \"edit_instructions\": \"Remove the phrase 'multiple tires' and add 'axle'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Truck with tires illuminated by lights and tail light",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light"
+        ],
+        "hallucinated_objects": [
+          "lights"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the mention of lights and tail light."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with tires illuminated by lights and tail light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\"],\n  \"hallucinated_objects\": [\"lights\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the mention of lights and tail light.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Truck with multiple tires and grille",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "axle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with multiple tires and grille\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"axle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Truck with multiple tires grille and tail light",
+      "vlm_hint": {
+        "missing_objects": [
+          "axle",
+          "mirror",
+          "light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with multiple tires grille and tail light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"axle\", \"mirror\", \"light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Truck with tires grille mirror light",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "axle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add 'tail light' and 'axle' to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with tires grille mirror light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"axle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add 'tail light' and 'axle' to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Truck with tires grille tail light axle",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "light",
+          "tail light",
+          "axle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with tires grille tail light axle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"light\", \"tail light\", \"axle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Truck with multiple tires grille lights tail lights axles mirror",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "axle",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "tire"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the truck's features.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific features of the truck, such as the number of tail lights, axles, and mirrors."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with multiple tires grille lights tail lights axles mirror\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"axle\", \"mirror\"],\n  \"hallucinated_objects\": [\"tire\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the truck's features.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific features of the truck, such as the number of tail lights, axles, and mirrors.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Truck with nine tires two tail lights four axles one mirror",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "axle"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the mirror and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with nine tires two tail lights four axles one mirror\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"axle\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the mirror and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Truck with nine tires two tail lights multiple axles",
+      "vlm_hint": {
+        "missing_objects": [
+          "tail light",
+          "axle"
+        ],
+        "hallucinated_objects": [
+          "nine tires"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the number of tires and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with nine tires two tail lights multiple axles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tail light\", \"axle\"],\n  \"hallucinated_objects\": [\"nine tires\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the number of tires and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Truck with tires tail lights and axles",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "grille",
+          "light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, tire, mirror, grille, wheel, light, tail light, axle, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire, tire]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Truck with tires tail lights and axles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"grille\", \"light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 123131,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000123131.jpg",
+    "final_caption": "Truck with tires tail lights and axles",
+    "total_time_sec": 26.11
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"truck\",\n    \"tire\",\n    \"mirror\",\n    \"grille\",\n    \"wheel\",\n    \"light\",\n    \"tail light\",\n    \"axle\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\",\n    \"tire\"\n  ]\n}"
+}

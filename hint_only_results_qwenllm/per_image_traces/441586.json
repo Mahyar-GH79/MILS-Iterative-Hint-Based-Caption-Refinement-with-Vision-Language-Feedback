@@ -1,0 +1,427 @@
+{
+  "image_id": 441586,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000441586.jpg",
+  "objects": [
+    "bicycle",
+    "tricycle",
+    "hat",
+    "shorts",
+    "t-shirt",
+    "stop sign",
+    "tire",
+    "wheel",
+    "sunglasses",
+    "backpack",
+    "motorcycle",
+    "car",
+    "building",
+    "kite",
+    "sand",
+    "sky",
+    "people",
+    "road",
+    "barrel",
+    "bench"
+  ],
+  "template": "We have an image with these objects: ['bicycle', 'tricycle', 'hat', 'shorts', 't-shirt', 'stop sign', 'tire', 'wheel', 'sunglasses', 'backpack', 'motorcycle', 'car', 'building', 'kite', 'sand', 'sky', 'people', 'road', 'barrel', 'bench']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People play with kites by the road near buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycle",
+          "tricycle",
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People play with kites by the road near buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycle\", \"tricycle\", \"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Kite flies as bicycle and tricycle ride by stopped cars near buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle",
+          "tricycle"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of bicycle, the color of the tricycle, and the location of the buildings."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kite flies as bicycle and tricycle ride by stopped cars near buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\", \"tricycle\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of bicycle, the color of the tricycle, and the location of the buildings.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Kite flies over sand as a motorcycle and car pause near a building, people on a bench nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tricycle",
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kite flies over sand as a motorcycle and car pause near a building, people on a bench nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tricycle\", \"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Kite flies over sand as motorcycle and car pause by stop sign.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tricycle",
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, and bench."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kite flies over sand as motorcycle and car pause by stop sign.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tricycle\", \"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, and bench.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Kite soars above sand as tricycle and motorcycle pause at stop sign.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "bicycle",
+          "tricycle",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "bicycle",
+          "tricycle",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of bicycle, the color of the tricycle, and the type of building."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Kite soars above sand as tricycle and motorcycle pause at stop sign.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"bicycle\", \"tricycle\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"bicycle\", \"tricycle\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of bicycle, the color of the tricycle, and the type of building.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Tricycle and motorcycle pause at stop sign while kite flies high over sandy road.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tricycle",
+          "motorcycle",
+          "stop sign",
+          "kite",
+          "sandy road"
+        ],
+        "hallucinated_objects": [
+          "bicycle",
+          "hat",
+          "shorts",
+          "t-shirt",
+          "wheel",
+          "sand",
+          "people",
+          "building",
+          "barrel",
+          "bench"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tricycle, motorcycle, stop sign, kite, and sandy road."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tricycle and motorcycle pause at stop sign while kite flies high over sandy road.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tricycle\", \"motorcycle\", \"stop sign\", \"kite\", \"sandy road\"],\n  \"hallucinated_objects\": [\"bicycle\", \"hat\", \"shorts\", \"t-shirt\", \"wheel\", \"sand\", \"people\", \"building\", \"barrel\", \"bench\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tricycle, motorcycle, stop sign, kite, and sandy road.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tricycle and motorcycle at stop sign as kite flies overhead on sandy road.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "bicycle",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle",
+          "tricycle",
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of bicycle, the color of the hat, and the location of the stop sign."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tricycle and motorcycle at stop sign as kite flies overhead on sandy road.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"bicycle\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\", \"tricycle\", \"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of bicycle, the color of the hat, and the location of the stop sign.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Motorcycle and car at stop sign as kite flies over sandy road.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tricycle",
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle"
+        ],
+        "genericity_hint": "The image contains a variety of objects, including bicycles, tricycles, hats, shorts, t-shirts, stop signs, tires, wheels, sunglasses, backpacks, motorcycles, cars, buildings, kites, sand, sky, people, roads, barrels, and benches.",
+        "edit_instructions": [
+          "Remove the bicycle from the list of objects and add a tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, and bench."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle and car at stop sign as kite flies over sandy road.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tricycle\", \"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\"],\n  \"genericity_hint\": \"The image contains a variety of objects, including bicycles, tricycles, hats, shorts, t-shirts, stop signs, tires, wheels, sunglasses, backpacks, motorcycles, cars, buildings, kites, sand, sky, people, roads, barrels, and benches.\",\n  \"edit_instructions\": \"Remove the bicycle from the list of objects and add a tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, and bench.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tricycle and motorcycle near stop sign as kite flies over sandy road.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "shorts",
+          "t-shirt",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle",
+          "motorcycle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors, types, and positions."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tricycle and motorcycle near stop sign as kite flies over sandy road.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"shorts\", \"t-shirt\", \"stop sign\", \"tire\", \"wheel\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\", \"motorcycle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors, types, and positions.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Red tricycle and white stop sign by sandy road with flying kite.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bicycle",
+          "hat",
+          "t-shirt",
+          "shorts",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "hallucinated_objects": [
+          "bicycle",
+          "hat",
+          "t-shirt",
+          "shorts",
+          "stop sign",
+          "tire",
+          "wheel",
+          "sunglasses",
+          "backpack",
+          "motorcycle",
+          "car",
+          "building",
+          "kite",
+          "sand",
+          "sky",
+          "people",
+          "road",
+          "barrel",
+          "bench"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, tricycle, hat, shorts, t-shirt, stop sign, tire, wheel, sunglasses, backpack, motorcycle, car, building, kite, sand, sky, people, road, barrel, bench]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red tricycle and white stop sign by sandy road with flying kite.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bicycle\", \"hat\", \"t-shirt\", \"shorts\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"hallucinated_objects\": [\"bicycle\", \"hat\", \"t-shirt\", \"shorts\", \"stop sign\", \"tire\", \"wheel\", \"sunglasses\", \"backpack\", \"motorcycle\", \"car\", \"building\", \"kite\", \"sand\", \"sky\", \"people\", \"road\", \"barrel\", \"bench\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 441586,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000441586.jpg",
+    "final_caption": "Red tricycle and white stop sign by sandy road with flying kite.",
+    "total_time_sec": 52.82
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bicycle\",\n    \"tricycle\",\n    \"hat\",\n    \"shorts\",\n    \"t-shirt\",\n    \"stop sign\",\n    \"tire\",\n    \"wheel\",\n    \"sunglasses\",\n    \"backpack\",\n    \"motorcycle\",\n    \"car\",\n    \"building\",\n    \"kite\",\n    \"sand\",\n    \"sky\",\n    \"people\",\n    \"road\",\n    \"barrel\",\n    \"bench\"\n  ]\n}"
+}

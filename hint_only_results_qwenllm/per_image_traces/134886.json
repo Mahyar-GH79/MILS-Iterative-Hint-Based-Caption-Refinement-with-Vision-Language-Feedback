@@ -1,0 +1,310 @@
+{
+  "image_id": 134886,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000134886.jpg",
+  "objects": [
+    "airplane",
+    "field",
+    "car",
+    "people",
+    "clouds",
+    "sky",
+    "fence",
+    "tail",
+    "wings",
+    "engines",
+    "landing gear",
+    "grass",
+    "path",
+    "trees",
+    "hills",
+    "road",
+    "skyline",
+    "horizon",
+    "sunlight",
+    "shadow"
+  ],
+  "template": "We have an image with these objects: ['airplane', 'field', 'car', 'people', 'clouds', 'sky', 'fence', 'tail', 'wings', 'engines', 'landing gear', 'grass', 'path', 'trees', 'hills', 'road', 'skyline', 'horizon', 'sunlight', 'shadow']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Airplane on field with clouds sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "trees",
+          "hills",
+          "road",
+          "skyline",
+          "horizon",
+          "sunlight",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "path",
+          "fence",
+          "tail",
+          "wings",
+          "engines",
+          "landing gear",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as people, trees, hills, road, skyline, horizon, sunlight, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane on field with clouds sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"trees\", \"hills\", \"road\", \"skyline\", \"horizon\", \"sunlight\", \"shadow\"],\n  \"hallucinated_objects\": [\"car\", \"path\", \"fence\", \"tail\", \"wings\", \"engines\", \"landing gear\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as people, trees, hills, road, skyline, horizon, sunlight, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Airplane on field with people trees hills road sunlight shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "fence",
+          "trees",
+          "hills",
+          "road",
+          "sunlight",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the car, fence, trees, hills, road, sunlight, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane on field with people trees hills road sunlight shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"fence\", \"trees\", \"hills\", \"road\", \"sunlight\", \"shadow\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the car, fence, trees, hills, road, sunlight, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Airplane on field near car fence with trees hills road sunlight shadow",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "trees",
+          "hills",
+          "road",
+          "sunlight",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the people, trees, hills, road, sunlight, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane on field near car fence with trees hills road sunlight shadow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"trees\", \"hills\", \"road\", \"sunlight\", \"shadow\"],\n  \"hallucinated_objects\": [\"car\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the people, trees, hills, road, sunlight, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Airplane lands in field with people trees hills sunlight casting shadows on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills",
+          "road",
+          "skyline",
+          "horizon",
+          "sunlight",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "path",
+          "fence",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees, hills, a road, and a skyline."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane lands in field with people trees hills sunlight casting shadows on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\", \"road\", \"skyline\", \"horizon\", \"sunlight\", \"shadow\"],\n  \"hallucinated_objects\": [\"people\", \"path\", \"fence\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees, hills, a road, and a skyline.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Airplane touches down in field amid trees hills sunlight casting shadows on distant skyline",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "trees",
+          "hills",
+          "sunlight",
+          "shadow",
+          "distant",
+          "skyline"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "path",
+          "road",
+          "fence",
+          "grass",
+          "engine",
+          "landing gear",
+          "wings",
+          "tail",
+          "sky",
+          "clouds"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the number of people, the type of trees, the color of the hills, and the direction of the sunlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane touches down in field amid trees hills sunlight casting shadows on distant skyline\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"trees\", \"hills\", \"sunlight\", \"shadow\", \"distant\", \"skyline\"],\n  \"hallucinated_objects\": [\"car\", \"path\", \"road\", \"fence\", \"grass\", \"engine\", \"landing gear\", \"wings\", \"tail\", \"sky\", \"clouds\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the number of people, the type of trees, the color of the hills, and the direction of the sunlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People walk near airplane touching down in field under sunlight casting shadows on distant hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "airplane"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "car",
+          "fence",
+          "trees",
+          "road",
+          "skyline",
+          "horizon",
+          "sunlight",
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the airplane and the field, and remove the unnecessary objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walk near airplane touching down in field under sunlight casting shadows on distant hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"airplane\"],\n  \"hallucinated_objects\": [\"people\", \"car\", \"fence\", \"trees\", \"road\", \"skyline\", \"horizon\", \"sunlight\", \"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the airplane and the field, and remove the unnecessary objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Airplane touches down on field under clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "trees",
+          "hills",
+          "road",
+          "skyline",
+          "horizon",
+          "sunlight",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "path",
+          "fence",
+          "tail",
+          "wings",
+          "engines",
+          "landing gear",
+          "grass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the people, trees, hills, road, skyline, horizon, sunlight, and shadow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane touches down on field under clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"trees\", \"hills\", \"road\", \"skyline\", \"horizon\", \"sunlight\", \"shadow\"],\n  \"hallucinated_objects\": [\"car\", \"path\", \"fence\", \"tail\", \"wings\", \"engines\", \"landing gear\", \"grass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the people, trees, hills, road, skyline, horizon, sunlight, and shadow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Airplane lands in field amid clouds with people, trees, hills, and sunlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills",
+          "sunlight"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "path",
+          "road",
+          "skyline",
+          "horizon"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane lands in field amid clouds with people, trees, hills, and sunlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\", \"sunlight\"],\n  \"hallucinated_objects\": [\"people\", \"path\", \"road\", \"skyline\", \"horizon\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Airplane touches down in field under clouds with trees and hills.",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "trees",
+          "hills"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "path",
+          "road",
+          "skyline",
+          "horizon",
+          "sunlight",
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of people, trees, and hills."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane touches down in field under clouds with trees and hills.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"trees\", \"hills\"],\n  \"hallucinated_objects\": [\"car\", \"path\", \"road\", \"skyline\", \"horizon\", \"sunlight\", \"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of people, trees, and hills.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Airplane lands in field with people and tall trees near hills.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills",
+          "road",
+          "skyline",
+          "horizon",
+          "sunlight",
+          "shadow"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "tall trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the airplane's landing.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as trees, hills, road, skyline, and horizon. Also, specify the airplane's landing details, such as the presence of a road and the horizon."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, field, car, people, clouds, sky, fence, tail, wings, engines, landing gear, grass, path, trees, hills, road, skyline, horizon, sunlight, shadow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane lands in field with people and tall trees near hills.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\", \"road\", \"skyline\", \"horizon\", \"sunlight\", \"shadow\"],\n  \"hallucinated_objects\": [\"people\", \"tall trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the airplane's landing.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as trees, hills, road, skyline, and horizon. Also, specify the airplane's landing details, such as the presence of a road and the horizon.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 134886,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000134886.jpg",
+    "final_caption": "Airplane lands in field with people and tall trees near hills.",
+    "total_time_sec": 39.57
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"airplane\",\n    \"field\",\n    \"car\",\n    \"people\",\n    \"clouds\",\n    \"sky\",\n    \"fence\",\n    \"tail\",\n    \"wings\",\n    \"engines\",\n    \"landing gear\",\n    \"grass\",\n    \"path\",\n    \"trees\",\n    \"hills\",\n    \"road\",\n    \"skyline\",\n    \"horizon\",\n    \"sunlight\",\n    \"shadow\"\n  ]\n}"
+}

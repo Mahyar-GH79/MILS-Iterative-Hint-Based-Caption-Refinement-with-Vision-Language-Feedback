@@ -1,0 +1,348 @@
+{
+  "image_id": 99039,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000099039.jpg",
+  "objects": [
+    "pizza",
+    "wine glass",
+    "knife",
+    "napkin",
+    "bowl",
+    "spoon",
+    "table",
+    "window",
+    "building",
+    "tree",
+    "curtain",
+    "street light",
+    "street",
+    "street sign",
+    "street lamp",
+    "street light pole",
+    "street light post",
+    "street light fixture",
+    "street light base",
+    "street light column"
+  ],
+  "template": "We have an image with these objects: ['pizza', 'wine glass', 'knife', 'napkin', 'bowl', 'spoon', 'table', 'window', 'building', 'tree', 'curtain', 'street light', 'street', 'street sign', 'street lamp', 'street light pole', 'street light post', 'street light fixture', 'street light base', 'street light column']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Pizza and wine glass on table near street lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "napkin",
+          "bowl",
+          "spoon",
+          "table",
+          "window",
+          "building",
+          "tree",
+          "curtain",
+          "street light",
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza and wine glass on table near street lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"napkin\", \"bowl\", \"spoon\", \"table\", \"window\", \"building\", \"tree\", \"curtain\", \"street light\", \"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Pizza wine glass knife napkin on table near street lights building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "spoon",
+          "street light",
+          "street light pole",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of pizza, the color of the wine glass, and the presence of a bowl and spoon."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza wine glass knife napkin on table near street lights building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"spoon\", \"street light\", \"street light pole\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of pizza, the color of the wine glass, and the presence of a bowl and spoon.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cheese pizza beside red wine glass knife napkin near street light pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "spoon",
+          "table",
+          "window",
+          "building",
+          "street",
+          "street light",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "knife",
+          "napkin"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza beside red wine glass knife napkin near street light pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"spoon\", \"table\", \"window\", \"building\", \"street\", \"street light\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"knife\", \"napkin\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cheese pizza and wine glass on table near street lights and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "napkin",
+          "bowl",
+          "spoon",
+          "table",
+          "window",
+          "building",
+          "street light",
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza and wine glass on table near street lights and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"napkin\", \"bowl\", \"spoon\", \"table\", \"window\", \"building\", \"street light\", \"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cheese pizza wine glass knife napkin on table near building street lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "spoon",
+          "street light",
+          "street light pole",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of pizza, the presence of a spoon, and the exact location of the street light."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza wine glass knife napkin on table near building street lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"spoon\", \"street light\", \"street light pole\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of pizza, the presence of a spoon, and the exact location of the street light.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cheese pizza with crust slices next to wine glass knife napkin on table under street light fixture",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl",
+          "spoon",
+          "street light",
+          "street light pole",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "knife",
+          "napkin"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the knife and napkin, and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza with crust slices next to wine glass knife napkin on table under street light fixture\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\", \"spoon\", \"street light\", \"street light pole\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"knife\", \"napkin\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the knife and napkin, and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cheese pizza with crust slices next to wine glass, spoon, bowl, and street light pole on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "napkin",
+          "bowl",
+          "spoon",
+          "street light pole",
+          "street light",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "street sign",
+          "street lamp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, including the knife, napkin, bowl, spoon, street light pole, street light, street light post, street light fixture, street light base, and street light column."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza with crust slices next to wine glass, spoon, bowl, and street light pole on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"napkin\", \"bowl\", \"spoon\", \"street light pole\", \"street light\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\", \"street sign\", \"street lamp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, including the knife, napkin, bowl, spoon, street light pole, street light, street light post, street light fixture, street light base, and street light column.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cheese pizza with crust slices beside wine glass, knife, napkin, bowl, and spoon on table near street light pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "street light pole",
+          "street light",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the street light pole, street light, and street light post."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza with crust slices beside wine glass, knife, napkin, bowl, and spoon on table near street light pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street light pole\", \"street light\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the street light pole, street light, and street light post.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cheese pizza and utensils on table near street light pole and fixture",
+      "vlm_hint": {
+        "missing_objects": [
+          "wine glass",
+          "bowl",
+          "spoon",
+          "table",
+          "window",
+          "building",
+          "tree",
+          "curtain",
+          "street light",
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "knife",
+          "napkin"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add more generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cheese pizza and utensils on table near street light pole and fixture\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wine glass\", \"bowl\", \"spoon\", \"table\", \"window\", \"building\", \"tree\", \"curtain\", \"street light\", \"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"knife\", \"napkin\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add more generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Pizza and glasses on table near street lamps",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "napkin",
+          "bowl",
+          "spoon",
+          "table",
+          "window",
+          "building",
+          "street light",
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "street sign",
+          "street lamp",
+          "street light pole",
+          "street light post",
+          "street light fixture",
+          "street light base",
+          "street light column"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, wine glass, knife, napkin, bowl, spoon, table, window, building, tree, curtain, street light, street, street sign, street lamp, street light pole, street light post, street light fixture, street light base, street light column]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza and glasses on table near street lamps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"napkin\", \"bowl\", \"spoon\", \"table\", \"window\", \"building\", \"street light\", \"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"hallucinated_objects\": [\"street\", \"street sign\", \"street lamp\", \"street light pole\", \"street light post\", \"street light fixture\", \"street light base\", \"street light column\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 99039,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000099039.jpg",
+    "final_caption": "Pizza and glasses on table near street lamps",
+    "total_time_sec": 45.02
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"pizza\",\n    \"wine glass\",\n    \"knife\",\n    \"napkin\",\n    \"bowl\",\n    \"spoon\",\n    \"table\",\n    \"window\",\n    \"building\",\n    \"tree\",\n    \"curtain\",\n    \"street light\",\n    \"street\",\n    \"street sign\",\n    \"street lamp\",\n    \"street light pole\",\n    \"street light post\",\n    \"street light fixture\",\n    \"street light base\",\n    \"street light column\"\n  ]\n}"
+}

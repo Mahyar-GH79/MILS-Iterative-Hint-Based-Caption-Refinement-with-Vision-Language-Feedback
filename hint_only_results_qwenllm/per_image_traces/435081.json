@@ -1,0 +1,352 @@
+{
+  "image_id": 435081,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000435081.jpg",
+  "objects": [
+    "miniature sandwiches",
+    "miniature cakes",
+    "miniature fruits",
+    "miniature vegetables",
+    "miniature desserts",
+    "miniature drinks",
+    "miniature bread",
+    "miniature meat",
+    "miniature utensils",
+    "miniature tableware",
+    "miniature decorations",
+    "miniature furniture",
+    "miniature books",
+    "miniature dolls",
+    "miniature animals",
+    "miniature plants",
+    "miniature buildings",
+    "miniature vehicles",
+    "miniature people"
+  ],
+  "template": "We have an image with these objects: ['miniature sandwiches', 'miniature cakes', 'miniature fruits', 'miniature vegetables', 'miniature desserts', 'miniature drinks', 'miniature bread', 'miniature meat', 'miniature utensils', 'miniature tableware', 'miniature decorations', 'miniature furniture', 'miniature books', 'miniature dolls', 'miniature animals', 'miniature plants', 'miniature buildings', 'miniature vehicles', 'miniature people']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Miniature foods and decorations fill a tiny table",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature sandwiches",
+          "miniature cakes",
+          "miniature fruits",
+          "miniature vegetables",
+          "miniature desserts",
+          "miniature drinks",
+          "miniature bread"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the types of objects present in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the types of objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature foods and decorations fill a tiny table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature sandwiches\", \"miniature cakes\", \"miniature fruits\", \"miniature vegetables\", \"miniature desserts\", \"miniature drinks\", \"miniature bread\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of objects present in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the types of objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Miniature meat and decorations adorn a tiny table with utensils.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations"
+        ],
+        "hallucinated_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations"
+        ],
+        "genericity_hint": "The image contains a variety of miniature objects, but the candidate caption is too specific.",
+        "edit_instructions": [
+          "Remove the specific objects mentioned in the candidate caption and focus on the overall theme of the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature meat and decorations adorn a tiny table with utensils.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\"],\n  \"hallucinated_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\"],\n  \"genericity_hint\": \"The image contains a variety of miniature objects, but the candidate caption is too specific.\",\n  \"edit_instructions\": \"Remove the specific objects mentioned in the candidate caption and focus on the overall theme of the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Miniature cakes and fruits decorate a tiny table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature sandwiches",
+          "miniature fruits",
+          "miniature vegetables",
+          "miniature desserts",
+          "miniature drinks",
+          "miniature bread"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add more generic ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature cakes and fruits decorate a tiny table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature sandwiches\", \"miniature fruits\", \"miniature vegetables\", \"miniature desserts\", \"miniature drinks\", \"miniature bread\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add more generic ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Miniature cakes and meat adorn a decorated table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature vegetables",
+          "miniature fruits",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature meat"
+        ],
+        "genericity_hint": "The caption is too general and does not specify the types of objects present in the image.",
+        "edit_instructions": [
+          "Specify the types of objects present in the image, such as 'miniature cakes, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature cakes and meat adorn a decorated table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature vegetables\", \"miniature fruits\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature meat\"],\n  \"genericity_hint\": \"The caption is too general and does not specify the types of objects present in the image.\",\n  \"edit_instructions\": \"Specify the types of objects present in the image, such as 'miniature cakes, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Miniature cakes and fruits decorate a table with utensils and furniture.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture"
+        ],
+        "hallucinated_objects": [
+          "miniature vegetables"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the types of miniature items present.",
+        "edit_instructions": [
+          "Specify the types of miniature items present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature cakes and fruits decorate a table with utensils and furniture.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\"],\n  \"hallucinated_objects\": [\"miniature vegetables\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of miniature items present.\",\n  \"edit_instructions\": \"Specify the types of miniature items present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Miniature cakes and fruits adorn a table with utensils and decorations.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature vegetables"
+        ],
+        "genericity_hint": "The image contains a variety of miniature food items, but the candidate caption is too specific and misses many objects.",
+        "edit_instructions": [
+          "Remove the candidate caption and add more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature cakes and fruits adorn a table with utensils and decorations.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature vegetables\"],\n  \"genericity_hint\": \"The image contains a variety of miniature food items, but the candidate caption is too specific and misses many objects.\",\n  \"edit_instructions\": \"Remove the candidate caption and add more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Miniature cakes and sandwiches decorate a table with utensils and ornaments.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature vegetables",
+          "miniature fruits",
+          "miniature drinks",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature sandwiches",
+          "miniature cakes"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the types of objects present in the image.",
+        "edit_instructions": [
+          "Specify the types of objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature cakes and sandwiches decorate a table with utensils and ornaments.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature vegetables\", \"miniature fruits\", \"miniature drinks\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature sandwiches\", \"miniature cakes\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of objects present in the image.\",\n  \"edit_instructions\": \"Specify the types of objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Miniature fruits and vegetables adorn a table with utensils and decorations.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature bread",
+          "miniature desserts",
+          "miniature drinks",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature sandwiches",
+          "miniature cakes",
+          "miniature fruits",
+          "miniature vegetables"
+        ],
+        "genericity_hint": "The image contains a variety of miniature objects, but the candidate caption is too specific.",
+        "edit_instructions": [
+          "Remove the specific objects mentioned in the candidate caption and focus on the overall theme of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature fruits and vegetables adorn a table with utensils and decorations.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature bread\", \"miniature desserts\", \"miniature drinks\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature sandwiches\", \"miniature cakes\", \"miniature fruits\", \"miniature vegetables\"],\n  \"genericity_hint\": \"The image contains a variety of miniature objects, but the candidate caption is too specific.\",\n  \"edit_instructions\": \"Remove the specific objects mentioned in the candidate caption and focus on the overall theme of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Miniature foods and decorations grace a miniature table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature sandwiches",
+          "miniature cakes",
+          "miniature fruits",
+          "miniature vegetables",
+          "miniature desserts",
+          "miniature drinks",
+          "miniature bread"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the types of objects present.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the types of objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature foods and decorations grace a miniature table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature sandwiches\", \"miniature cakes\", \"miniature fruits\", \"miniature vegetables\", \"miniature desserts\", \"miniature drinks\", \"miniature bread\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of objects present.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the types of objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Miniature meats and desserts decorate a tabletop with toys.",
+      "vlm_hint": {
+        "missing_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "hallucinated_objects": [
+          "miniature meat",
+          "miniature utensils",
+          "miniature tableware",
+          "miniature decorations",
+          "miniature furniture",
+          "miniature books",
+          "miniature dolls",
+          "miniature animals",
+          "miniature plants",
+          "miniature buildings",
+          "miniature vehicles",
+          "miniature people"
+        ],
+        "genericity_hint": "The image contains a variety of miniature objects, but the candidate caption is too specific.",
+        "edit_instructions": [
+          "Remove the candidate caption and add a more general description."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [miniature sandwiches, miniature cakes, miniature fruits, miniature vegetables, miniature desserts, miniature drinks, miniature bread, miniature meat, miniature utensils, miniature tableware, miniature decorations, miniature furniture, miniature books, miniature dolls, miniature animals, miniature plants, miniature buildings, miniature vehicles, miniature people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Miniature meats and desserts decorate a tabletop with toys.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"hallucinated_objects\": [\"miniature meat\", \"miniature utensils\", \"miniature tableware\", \"miniature decorations\", \"miniature furniture\", \"miniature books\", \"miniature dolls\", \"miniature animals\", \"miniature plants\", \"miniature buildings\", \"miniature vehicles\", \"miniature people\"],\n  \"genericity_hint\": \"The image contains a variety of miniature objects, but the candidate caption is too specific.\",\n  \"edit_instructions\": \"Remove the candidate caption and add a more general description.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 435081,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000435081.jpg",
+    "final_caption": "Miniature meats and desserts decorate a tabletop with toys.",
+    "total_time_sec": 48.62
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"miniature sandwiches\",\n    \"miniature cakes\",\n    \"miniature fruits\",\n    \"miniature vegetables\",\n    \"miniature desserts\",\n    \"miniature drinks\",\n    \"miniature bread\",\n    \"miniature meat\",\n    \"miniature utensils\",\n    \"miniature tableware\",\n    \"miniature decorations\",\n    \"miniature furniture\",\n    \"miniature books\",\n    \"miniature dolls\",\n    \"miniature animals\",\n    \"miniature plants\",\n    \"miniature buildings\",\n    \"miniature vehicles\",\n    \"miniature people\"\n  ]\n}"
+}

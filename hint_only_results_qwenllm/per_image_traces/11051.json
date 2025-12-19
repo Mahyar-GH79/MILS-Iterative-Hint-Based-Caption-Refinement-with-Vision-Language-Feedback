@@ -1,0 +1,271 @@
+{
+  "image_id": 11051,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000011051.jpg",
+  "objects": [
+    "man",
+    "woman",
+    "suit",
+    "tie",
+    "flower",
+    "earring",
+    "necklace",
+    "dress",
+    "belt",
+    "bracelet",
+    "ear",
+    "hair",
+    "neck",
+    "shoulder",
+    "arm",
+    "hand",
+    "finger",
+    "smile",
+    "background",
+    "wall"
+  ],
+  "template": "We have an image with these objects: ['man', 'woman', 'suit', 'tie', 'flower', 'earring', 'necklace', 'dress', 'belt', 'bracelet', 'ear', 'hair', 'neck', 'shoulder', 'arm', 'hand', 'finger', 'smile', 'background', 'wall']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man woman smile in elegant dress suit",
+      "vlm_hint": {
+        "missing_objects": [
+          "flower",
+          "earring",
+          "necklace",
+          "belt",
+          "bracelet",
+          "ear",
+          "hair",
+          "neck",
+          "shoulder",
+          "arm",
+          "hand",
+          "finger"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man woman smile in elegant dress suit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flower\", \"earring\", \"necklace\", \"belt\", \"bracelet\", \"ear\", \"hair\", \"neck\", \"shoulder\", \"arm\", \"hand\", \"finger\"],\n  \"hallucinated_objects\": [\"background\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man and woman smile in elegant dress and suit with flower and necklace.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bracelet",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "belt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of dress and suit, and include the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman smile in elegant dress and suit with flower and necklace.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bracelet\", \"earrings\"],\n  \"hallucinated_objects\": [\"belt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of dress and suit, and include the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man and woman smile in elegant dress and suit with flower bracelet and earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bracelet",
+          "earrings"
+        ],
+        "hallucinated_objects": [
+          "flower"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of dress and suit, and the specific accessories being worn."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman smile in elegant dress and suit with flower bracelet and earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bracelet\", \"earrings\"],\n  \"hallucinated_objects\": [\"flower\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of dress and suit, and the specific accessories being worn.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man and woman in tailored suit and dress with bracelet and earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "earrings",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "flower",
+          "bracelet",
+          "earrings",
+          "necklace"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the details of the clothing and accessories.",
+        "edit_instructions": [
+          "Provide more specific details about the clothing and accessories."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in tailored suit and dress with bracelet and earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"earrings\", \"necklace\"],\n  \"hallucinated_objects\": [\"flower\", \"bracelet\", \"earrings\", \"necklace\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the details of the clothing and accessories.\",\n  \"edit_instructions\": \"Provide more specific details about the clothing and accessories.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and woman in tailored suits and dress with necklace and earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "earrings",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the attire and accessories.",
+        "edit_instructions": [
+          "Provide more specific details about the attire and accessories, and remove the generic background and wall."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in tailored suits and dress with necklace and earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"earrings\", \"necklace\"],\n  \"hallucinated_objects\": [\"background\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the attire and accessories.\",\n  \"edit_instructions\": \"Provide more specific details about the attire and accessories, and remove the generic background and wall.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and woman in tailored suits and dress with necklace and matching earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "earrings",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "belt",
+          "earrings",
+          "necklace"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in tailored suits and dress with necklace and matching earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"earrings\", \"necklace\"],\n  \"hallucinated_objects\": [\"belt\", \"earrings\", \"necklace\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man and woman in suits and dress with flower and earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bracelet",
+          "ear",
+          "hair",
+          "neck",
+          "shoulder",
+          "arm",
+          "hand",
+          "finger",
+          "smile",
+          "background",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "belt"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in suits and dress with flower and earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bracelet\", \"ear\", \"hair\", \"neck\", \"shoulder\", \"arm\", \"hand\", \"finger\", \"smile\", \"background\", \"wall\"],\n  \"hallucinated_objects\": [\"belt\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man and woman in suits and dresses with flowers, earrings, and smiles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "earrings",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of dress, the color of the suit, and the type of flower."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in suits and dresses with flowers, earrings, and smiles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"earrings\", \"necklace\"],\n  \"hallucinated_objects\": [\"background\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of dress, the color of the suit, and the type of flower.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and woman in navy suits with red ties, floral dresses, and sparkly earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tie",
+          "earrings",
+          "necklace",
+          "belt",
+          "ear",
+          "hair",
+          "neck",
+          "shoulder",
+          "arm",
+          "hand",
+          "finger"
+        ],
+        "hallucinated_objects": [
+          "red ties",
+          "floral dresses",
+          "sparkly earrings"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not match the specific details in the image.",
+        "edit_instructions": [
+          "Remove the generic details and focus on the specific objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in navy suits with red ties, floral dresses, and sparkly earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tie\", \"earrings\", \"necklace\", \"belt\", \"ear\", \"hair\", \"neck\", \"shoulder\", \"arm\", \"hand\", \"finger\"],\n  \"hallucinated_objects\": [\"red ties\", \"floral dresses\", \"sparkly earrings\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not match the specific details in the image.\",\n  \"edit_instructions\": \"Remove the generic details and focus on the specific objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man and woman in suits with ties, earrings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flower",
+          "belt",
+          "earring",
+          "necklace"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the flower, belt, and earrings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, suit, tie, flower, earring, necklace, dress, belt, bracelet, ear, hair, neck, shoulder, arm, hand, finger, smile, background, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman in suits with ties, earrings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flower\", \"belt\", \"earring\", \"necklace\"],\n  \"hallucinated_objects\": [\"background\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the flower, belt, and earrings.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 11051,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000011051.jpg",
+    "final_caption": "Man and woman in suits with ties, earrings.",
+    "total_time_sec": 34.45
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"woman\",\n    \"suit\",\n    \"tie\",\n    \"flower\",\n    \"earring\",\n    \"necklace\",\n    \"dress\",\n    \"belt\",\n    \"bracelet\",\n    \"ear\",\n    \"hair\",\n    \"neck\",\n    \"shoulder\",\n    \"arm\",\n    \"hand\",\n    \"finger\",\n    \"smile\",\n    \"background\",\n    \"wall\"\n  ]\n}"
+}

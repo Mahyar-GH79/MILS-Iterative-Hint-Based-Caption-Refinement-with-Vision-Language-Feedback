@@ -1,0 +1,279 @@
+{
+  "image_id": 121506,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000121506.jpg",
+  "objects": [
+    "umbrella",
+    "table",
+    "bench",
+    "picnic table",
+    "grill",
+    "fence",
+    "tree",
+    "car",
+    "trash can",
+    "garden",
+    "rain",
+    "raindrops",
+    "rainy",
+    "outdoor",
+    "backyard",
+    "weather",
+    "season",
+    "summer",
+    "autumn",
+    "winter"
+  ],
+  "template": "We have an image with these objects: ['umbrella', 'table', 'bench', 'picnic table', 'grill', 'fence', 'tree', 'car', 'trash can', 'garden', 'rain', 'raindrops', 'rainy', 'outdoor', 'backyard', 'weather', 'season', 'summer', 'autumn', 'winter']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Rainy backyard with umbrella and grill",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garden",
+          "raindrops"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "season"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of a trash can, garden, and raindrops. Also, specify the season as summer or autumn."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with umbrella and grill\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garden\", \"raindrops\"],\n  \"hallucinated_objects\": [\"car\", \"season\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of a trash can, garden, and raindrops. Also, specify the season as summer or autumn.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Rainy backyard with umbrella garden trash can raindrops grill",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "trash can"
+        ],
+        "hallucinated_objects": [
+          "garden"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic terms and add specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with umbrella garden trash can raindrops grill\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"trash can\"],\n  \"hallucinated_objects\": [\"garden\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic terms and add specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Rainy backyard with umbrella near grill and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "trash can"
+        ],
+        "hallucinated_objects": [
+          "garden",
+          "raindrops",
+          "rainy",
+          "rain"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of grill, the color of the umbrella, and the presence of a car in the background."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with umbrella near grill and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"trash can\"],\n  \"hallucinated_objects\": [\"garden\", \"raindrops\", \"rainy\", \"rain\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of grill, the color of the umbrella, and the presence of a car in the background.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Red umbrella near outdoor grill and trash can in backyard",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "table",
+          "bench",
+          "picnic table",
+          "grill",
+          "fence",
+          "tree",
+          "car",
+          "trash can",
+          "garden",
+          "rain",
+          "raindrops",
+          "rainy",
+          "outdoor",
+          "backyard",
+          "weather",
+          "season",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the general setting."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red umbrella near outdoor grill and trash can in backyard\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"table\", \"bench\", \"picnic table\", \"grill\", \"fence\", \"tree\", \"car\", \"trash can\", \"garden\", \"rain\", \"raindrops\", \"rainy\", \"outdoor\", \"backyard\", \"weather\", \"season\", \"summer\", \"autumn\", \"winter\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the general setting.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Rainy backyard with grill and tree",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garden",
+          "raindrops"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "season"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the presence of a trash can, garden, and raindrops."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with grill and tree\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garden\", \"raindrops\"],\n  \"hallucinated_objects\": [\"car\", \"season\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the presence of a trash can, garden, and raindrops.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Rainy backyard with grill tree and raindrops near trash can and garden",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "table",
+          "bench",
+          "picnic table",
+          "grill",
+          "fence",
+          "tree",
+          "car",
+          "trash can",
+          "garden",
+          "rain",
+          "raindrops",
+          "rainy",
+          "outdoor",
+          "backyard",
+          "weather",
+          "season",
+          "summer",
+          "autumn",
+          "winter"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with grill tree and raindrops near trash can and garden\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"table\", \"bench\", \"picnic table\", \"grill\", \"fence\", \"tree\", \"car\", \"trash can\", \"garden\", \"rain\", \"raindrops\", \"rainy\", \"outdoor\", \"backyard\", \"weather\", \"season\", \"summer\", \"autumn\", \"winter\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Rainy backyard with grill and tree near bench and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garden",
+          "raindrops"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of grill, the color of the umbrella, and the presence of raindrops."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with grill and tree near bench and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garden\", \"raindrops\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of grill, the color of the umbrella, and the presence of raindrops.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Rainy backyard with umbrella near picnic table and grill, raindrops on tree and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garden",
+          "raindrops",
+          "tree",
+          "fence"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "umbrella",
+          "picnic table",
+          "grill"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of umbrella, the color of the table, and the presence of raindrops on the tree and fence."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with umbrella near picnic table and grill, raindrops on tree and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garden\", \"raindrops\", \"tree\", \"fence\"],\n  \"hallucinated_objects\": [\"car\", \"umbrella\", \"picnic table\", \"grill\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of umbrella, the color of the table, and the presence of raindrops on the tree and fence.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Rainy backyard with red umbrella near wooden table and grill, raindrops on tall tree and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garden",
+          "raindrops",
+          "rainy"
+        ],
+        "hallucinated_objects": [
+          "red umbrella"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the umbrella, the type of table, and the presence of raindrops."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy backyard with red umbrella near wooden table and grill, raindrops on tall tree and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garden\", \"raindrops\", \"rainy\"],\n  \"hallucinated_objects\": [\"red umbrella\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the umbrella, the type of table, and the presence of raindrops.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Rainy garden with black umbrella near wooden picnic table and grill, raindrops on tree and fence.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "garden",
+          "raindrops",
+          "tree",
+          "fence"
+        ],
+        "hallucinated_objects": [
+          "black umbrella",
+          "wooden picnic table",
+          "grill"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of umbrella, the type of table and grill, and the specific details of the garden and fence."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [umbrella, table, bench, picnic table, grill, fence, tree, car, trash can, garden, rain, raindrops, rainy, outdoor, backyard, weather, season, summer, autumn, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rainy garden with black umbrella near wooden picnic table and grill, raindrops on tree and fence.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"garden\", \"raindrops\", \"tree\", \"fence\"],\n  \"hallucinated_objects\": [\"black umbrella\", \"wooden picnic table\", \"grill\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of umbrella, the type of table and grill, and the specific details of the garden and fence.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 121506,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000121506.jpg",
+    "final_caption": "Rainy garden with black umbrella near wooden picnic table and grill, raindrops on tree and fence.",
+    "total_time_sec": 38.17
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"umbrella\",\n    \"table\",\n    \"bench\",\n    \"picnic table\",\n    \"grill\",\n    \"fence\",\n    \"tree\",\n    \"car\",\n    \"trash can\",\n    \"garden\",\n    \"rain\",\n    \"raindrops\",\n    \"rainy\",\n    \"outdoor\",\n    \"backyard\",\n    \"weather\",\n    \"season\",\n    \"summer\",\n    \"autumn\",\n    \"winter\",\n    \"spring\"\n  ]\n}"
+}

@@ -1,0 +1,190 @@
+{
+  "image_id": 448810,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000448810.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown object dominates scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "Street signs"
+        ],
+        "hallucinated_objects": [
+          "Unknown object"
+        ],
+        "genericity_hint": "The image contains street signs.",
+        "edit_instructions": [
+          "Remove the unknown object and focus on the street signs."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object dominates scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"Street signs\",\n  \"hallucinated_objects\": \"Unknown object\",\n  \"genericity_hint\": \"The image contains street signs.\",\n  \"edit_instructions\": \"Remove the unknown object and focus on the street signs.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Street signs dominate the scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is about street signs.",
+        "edit_instructions": [
+          "Remove the unknown object and add people."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street signs dominate the scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is about street signs.\",\n  \"edit_instructions\": \"Remove the unknown object and add people.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People walk under street signs",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "street signs"
+        ],
+        "genericity_hint": "The image contains street signs, but the candidate caption incorrectly states that people are walking under the signs.",
+        "edit_instructions": [
+          "Remove the mention of people and the street signs from the candidate caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walk under street signs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"people\",\n  \"hallucinated_objects\": \"street signs\",\n  \"genericity_hint\": \"The image contains street signs, but the candidate caption incorrectly states that people are walking under the signs.\",\n  \"edit_instructions\": \"Remove the mention of people and the street signs from the candidate caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Unknown objects near street signs",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "unknown objects"
+        ],
+        "genericity_hint": "The image contains street signs with directions and symbols, but the candidate caption is too vague.",
+        "edit_instructions": [
+          "Specify the objects near the street signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown objects near street signs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"unknown objects\"],\n  \"genericity_hint\": \"The image contains street signs with directions and symbols, but the candidate caption is too vague.\",\n  \"edit_instructions\": \"Specify the objects near the street signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People and street signs near each other",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains street signs with directions and symbols, but it is unclear what the signs are for without more context.",
+        "edit_instructions": [
+          "Remove the mention of people in the caption and provide more context about the street signs."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People and street signs near each other\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains street signs with directions and symbols, but it is unclear what the signs are for without more context.\",\n  \"edit_instructions\": \"Remove the mention of people in the caption and provide more context about the street signs.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Street signs with directions and symbols along the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "Street signs with directions and symbols along the road",
+        "edit_instructions": [
+          "Remove the word 'unknown' and add 'people' to the list of missing objects."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street signs with directions and symbols along the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"Street signs with directions and symbols along the road\",\n  \"edit_instructions\": \"Remove the word 'unknown' and add 'people' to the list of missing objects.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People and street signs with directions along the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "street signs"
+        ],
+        "genericity_hint": "The image contains a person.",
+        "edit_instructions": [
+          "Remove the street signs and add a person."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People and street signs with directions along the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"street signs\"],\n  \"genericity_hint\": \"The image contains a person.\",\n  \"edit_instructions\": \"Remove the street signs and add a person.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person walking along road",
+      "vlm_hint": {
+        "missing_objects": [
+          "person"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image does not contain a person.",
+        "edit_instructions": [
+          "Remove the mention of a person in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person walking along road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"person\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image does not contain a person.\",\n  \"edit_instructions\": \"Remove the mention of a person in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Road stretches into distance",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "cars"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a location in Reykjavik, Iceland, and shows street signs with directions to various landmarks.",
+        "edit_instructions": [
+          "Remove the caption and add more specific details about the location and the street signs."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Road stretches into distance\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"cars\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a location in Reykjavik, Iceland, and shows street signs with directions to various landmarks.\",\n  \"edit_instructions\": \"Remove the caption and add more specific details about the location and the street signs.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Reykjavik streets signs point to landmarks as road extends",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "Reykjavik",
+        "edit_instructions": [
+          "remove people"
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Reykjavik streets signs point to landmarks as road extends\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"people\",\n  \"hallucinated_objects\": \"unknown\",\n  \"genericity_hint\": \"Reykjavik\",\n  \"edit_instructions\": \"remove people\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 448810,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000448810.jpg",
+    "final_caption": "Reykjavik streets signs point to landmarks as road extends",
+    "total_time_sec": 20.99
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n[\"sign\", \"building\", \"windows\", \"lobster\", \"people\", \"street\"]"
+}

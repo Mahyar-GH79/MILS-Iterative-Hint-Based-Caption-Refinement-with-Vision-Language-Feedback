@@ -1,0 +1,245 @@
+{
+  "image_id": 581615,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000581615.jpg",
+  "objects": [
+    "urinal",
+    "tile wall",
+    "QR code sign",
+    "light fixture",
+    "urinal partition",
+    "urinal flush button",
+    "urinal bowl",
+    "urinal drain",
+    "tile floor",
+    "tile grout",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner",
+    "tile corner"
+  ],
+  "template": "We have an image with these objects: ['urinal', 'tile wall', 'QR code sign', 'light fixture', 'urinal partition', 'urinal flush button', 'urinal bowl', 'urinal drain', 'tile floor', 'tile grout', 'tile corner', 'tile corner', 'tile corner', 'tile corner', 'tile corner', 'tile corner', 'tile corner', 'tile corner', 'tile corner', 'tile corner']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Modern restroom with tiled walls and urinals",
+      "vlm_hint": {
+        "missing_objects": [
+          "urinal partition",
+          "urinal flush button",
+          "urinal bowl",
+          "urinal drain"
+        ],
+        "hallucinated_objects": [
+          "tile floor",
+          "tile grout",
+          "tile corner"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tiled walls and urinals\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"urinal partition\", \"urinal flush button\", \"urinal bowl\", \"urinal drain\"],\n  \"hallucinated_objects\": [\"tile floor\", \"tile grout\", \"tile corner\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Modern restroom with tiled walls urinals partitions flush buttons bowls drains",
+      "vlm_hint": {
+        "missing_objects": [
+          "light fixture",
+          "tile floor",
+          "tile grout"
+        ],
+        "hallucinated_objects": [
+          "tile corner"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tiled walls urinals partitions flush buttons bowls drains\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light fixture\", \"tile floor\", \"tile grout\"],\n  \"hallucinated_objects\": [\"tile corner\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Modern restroom with tile walls urinals partition flush button bowl drain light fixture tile floor grout",
+      "vlm_hint": {
+        "missing_objects": [
+          "QR code sign"
+        ],
+        "hallucinated_objects": [
+          "light fixture",
+          "tile floor",
+          "tile grout"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing QR code sign."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls urinals partition flush button bowl drain light fixture tile floor grout\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"QR code sign\"],\n  \"hallucinated_objects\": [\"light fixture\", \"tile floor\", \"tile grout\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing QR code sign.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Modern restroom with tile walls urinals QR code sign partition",
+      "vlm_hint": {
+        "missing_objects": [
+          "light fixture",
+          "urinal drain",
+          "tile floor",
+          "tile grout"
+        ],
+        "hallucinated_objects": [
+          "tile corner"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls urinals QR code sign partition\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light fixture\", \"urinal drain\", \"tile floor\", \"tile grout\"],\n  \"hallucinated_objects\": [\"tile corner\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Modern restroom with tile walls urinals QR code sign light fixture and drain",
+      "vlm_hint": {
+        "missing_objects": [
+          "urinal partition",
+          "urinal flush button",
+          "tile floor",
+          "tile grout"
+        ],
+        "hallucinated_objects": [
+          "light fixture",
+          "drain"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the urinal partition, urinal flush button, tile floor, and tile grout."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls urinals QR code sign light fixture and drain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"urinal partition\", \"urinal flush button\", \"tile floor\", \"tile grout\"],\n  \"hallucinated_objects\": [\"light fixture\", \"drain\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the urinal partition, urinal flush button, tile floor, and tile grout.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Modern restroom with tile walls urinals partition flush button tile floor grout",
+      "vlm_hint": {
+        "missing_objects": [
+          "QR code sign",
+          "light fixture",
+          "urinal partition",
+          "urinal flush button",
+          "urinal bowl",
+          "urinal drain",
+          "tile floor",
+          "tile grout"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls urinals partition flush button tile floor grout\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"QR code sign\", \"light fixture\", \"urinal partition\", \"urinal flush button\", \"urinal bowl\", \"urinal drain\", \"tile floor\", \"tile grout\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Modern restroom with tile walls urinals partition flush button and QR code sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "light fixture",
+          "tile floor",
+          "tile grout"
+        ],
+        "hallucinated_objects": [
+          "tile corner"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls urinals partition flush button and QR code sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light fixture\", \"tile floor\", \"tile grout\"],\n  \"hallucinated_objects\": [\"tile corner\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Modern restroom with tile walls, urinals, partition, flush button, and QR code sign near light fixture and tile floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "urinal partition",
+          "urinal flush button",
+          "urinal bowl",
+          "urinal drain"
+        ],
+        "hallucinated_objects": [
+          "light fixture",
+          "tile floor"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls, urinals, partition, flush button, and QR code sign near light fixture and tile floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"urinal partition\", \"urinal flush button\", \"urinal bowl\", \"urinal drain\"],\n  \"hallucinated_objects\": [\"light fixture\", \"tile floor\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Modern restroom with tile walls and urinals including partitions and flush buttons",
+      "vlm_hint": {
+        "missing_objects": [
+          "light fixture",
+          "tile floor",
+          "tile grout"
+        ],
+        "hallucinated_objects": [
+          "tile corner"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls and urinals including partitions and flush buttons\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light fixture\", \"tile floor\", \"tile grout\"],\n  \"hallucinated_objects\": [\"tile corner\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Modern restroom with tile walls urinals partitions flush buttons light fixture tile floor tile grout",
+      "vlm_hint": {
+        "missing_objects": [
+          "QR code sign"
+        ],
+        "hallucinated_objects": [
+          "light fixture"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Remove the light fixture and add the QR code sign to the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [urinal, tile wall, QR code sign, light fixture, urinal partition, urinal flush button, urinal bowl, urinal drain, tile floor, tile grout, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner, tile corner]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern restroom with tile walls urinals partitions flush buttons light fixture tile floor tile grout\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"QR code sign\"],\n  \"hallucinated_objects\": [\"light fixture\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Remove the light fixture and add the QR code sign to the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 581615,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000581615.jpg",
+    "final_caption": "Modern restroom with tile walls urinals partitions flush buttons light fixture tile floor tile grout",
+    "total_time_sec": 33.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"urinal\",\n    \"tile wall\",\n    \"QR code sign\",\n    \"light fixture\",\n    \"urinal partition\",\n    \"urinal flush button\",\n    \"urinal bowl\",\n    \"urinal drain\",\n    \"tile floor\",\n    \"tile grout\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\",\n    \"tile corner\"\n  ]\n}"
+}

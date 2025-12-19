@@ -1,0 +1,223 @@
+{
+  "image_id": 572517,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000572517.jpg",
+  "objects": [
+    "polar bear",
+    "bird",
+    "water",
+    "rocks",
+    "grass",
+    "trees",
+    "pond",
+    "boulders",
+    "zoo",
+    "animal",
+    "nature",
+    "wildlife",
+    "environment",
+    "zoo exhibit",
+    "animal enclosure",
+    "polar bear enclosure",
+    "bird flying",
+    "bird in flight",
+    "bird wings",
+    "bird beak"
+  ],
+  "template": "We have an image with these objects: ['polar bear', 'bird', 'water', 'rocks', 'grass', 'trees', 'pond', 'boulders', 'zoo', 'animal', 'nature', 'wildlife', 'environment', 'zoo exhibit', 'animal enclosure', 'polar bear enclosure', 'bird flying', 'bird in flight', 'bird wings', 'bird beak']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Polar bear and bird in nature exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "grass",
+          "pond"
+        ],
+        "hallucinated_objects": [
+          "boulders"
+        ],
+        "genericity_hint": "The image is not specific enough to determine if it is a zoo exhibit or a natural environment.",
+        "edit_instructions": [
+          "Remove the missing objects and add the correct objects. Ensure the image is not a zoo exhibit."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in nature exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"grass\", \"pond\"],\n  \"hallucinated_objects\": [\"boulders\"],\n  \"genericity_hint\": \"The image is not specific enough to determine if it is a zoo exhibit or a natural environment.\",\n  \"edit_instructions\": \"Remove the missing objects and add the correct objects. Ensure the image is not a zoo exhibit.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Polar bear and bird by pond in nature",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "grass",
+          "boulders"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image does not show a zoo exhibit or animal enclosure.",
+        "edit_instructions": [
+          "Remove the pond and add trees and boulders."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird by pond in nature\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"grass\", \"boulders\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image does not show a zoo exhibit or animal enclosure.\",\n  \"edit_instructions\": \"Remove the pond and add trees and boulders.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Polar bear and bird among trees near rocky terrain",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "boulders"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The image is specific to a zoo exhibit, not a general environment.",
+        "edit_instructions": [
+          "Remove the trees and add a pond and boulders."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird among trees near rocky terrain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"boulders\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The image is specific to a zoo exhibit, not a general environment.\",\n  \"edit_instructions\": \"Remove the trees and add a pond and boulders.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Polar bear and bird near pond by boulders in zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "grass"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image is specific to a zoo exhibit, but the caption is too generic.",
+        "edit_instructions": [
+          "Add more specific details about the environment and the animals."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird near pond by boulders in zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"grass\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image is specific to a zoo exhibit, but the caption is too generic.\",\n  \"edit_instructions\": \"Add more specific details about the environment and the animals.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Polar bear and bird in flight near grassy rocks at zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "pond"
+        ],
+        "hallucinated_objects": [
+          "boulders"
+        ],
+        "genericity_hint": "The image is specific to a zoo exhibit, but the caption is too generic.",
+        "edit_instructions": [
+          "Add 'trees' and 'pond' to the caption. Remove 'boulders'."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in flight near grassy rocks at zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"pond\"],\n  \"hallucinated_objects\": [\"boulders\"],\n  \"genericity_hint\": \"The image is specific to a zoo exhibit, but the caption is too generic.\",\n  \"edit_instructions\": \"Add 'trees' and 'pond' to the caption. Remove 'boulders'.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Polar bear and bird in flight by trees near pond at zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image does not show a pond.",
+        "edit_instructions": [
+          "Remove the pond from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in flight by trees near pond at zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image does not show a pond.\",\n  \"edit_instructions\": \"Remove the pond from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Polar bear and bird in flight near trees in zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image does not show a pond.",
+        "edit_instructions": [
+          "Remove the pond from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in flight near trees in zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image does not show a pond.\",\n  \"edit_instructions\": \"Remove the pond from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Polar bear and bird in flight near trees in zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image does not show a pond.",
+        "edit_instructions": [
+          "Remove the pond from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in flight near trees in zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image does not show a pond.\",\n  \"edit_instructions\": \"Remove the pond from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Polar bear and bird in flight near trees in zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image does not show a pond.",
+        "edit_instructions": [
+          "Remove the pond from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in flight near trees in zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image does not show a pond.\",\n  \"edit_instructions\": \"Remove the pond from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Polar bear and bird in flight near trees in zoo exhibit",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "pond"
+        ],
+        "genericity_hint": "The image does not show a pond.",
+        "edit_instructions": [
+          "Remove the pond from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [polar bear, bird, water, rocks, grass, trees, pond, boulders, zoo, animal, nature, wildlife, environment, zoo exhibit, animal enclosure, polar bear enclosure, bird flying, bird in flight, bird wings, bird beak]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Polar bear and bird in flight near trees in zoo exhibit\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\"],\n  \"hallucinated_objects\": [\"pond\"],\n  \"genericity_hint\": \"The image does not show a pond.\",\n  \"edit_instructions\": \"Remove the pond from the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 572517,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000572517.jpg",
+    "final_caption": "Polar bear and bird in flight near trees in zoo exhibit",
+    "total_time_sec": 25.81
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"polar bear\",\n    \"bird\",\n    \"water\",\n    \"rocks\",\n    \"grass\",\n    \"trees\",\n    \"pond\",\n    \"boulders\",\n    \"zoo\",\n    \"animal\",\n    \"nature\",\n    \"wildlife\",\n    \"environment\",\n    \"zoo exhibit\",\n    \"animal enclosure\",\n    \"polar bear enclosure\",\n    \"bird flying\",\n    \"bird in flight\",\n    \"bird wings\",\n    \"bird beak\"\n  ]\n}"
+}

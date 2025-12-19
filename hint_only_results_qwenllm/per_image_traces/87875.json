@@ -1,0 +1,263 @@
+{
+  "image_id": 87875,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000087875.jpg",
+  "objects": [
+    "fire hydrant",
+    "bush",
+    "grass",
+    "fence",
+    "trees",
+    "chain",
+    "pole",
+    "flowers",
+    "sky",
+    "leaves",
+    "ground",
+    "metal",
+    "wood",
+    "green",
+    "blue",
+    "white",
+    "gray",
+    "black",
+    "red",
+    "yellow"
+  ],
+  "template": "We have an image with these objects: ['fire hydrant', 'bush', 'grass', 'fence', 'trees', 'chain', 'pole', 'flowers', 'sky', 'leaves', 'ground', 'metal', 'wood', 'green', 'blue', 'white', 'gray', 'black', 'red', 'yellow']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Red fire hydrant stands among green trees and blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "blue",
+          "gray",
+          "white",
+          "black",
+          "red",
+          "yellow"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "sky"
+        ],
+        "genericity_hint": "The fire hydrant is not specified by color.",
+        "edit_instructions": [
+          "Specify the color of the fire hydrant and remove the trees and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red fire hydrant stands among green trees and blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blue\", \"gray\", \"white\", \"black\", \"red\", \"yellow\"],\n  \"hallucinated_objects\": [\"trees\", \"sky\"],\n  \"genericity_hint\": \"The fire hydrant is not specified by color.\",\n  \"edit_instructions\": \"Specify the color of the fire hydrant and remove the trees and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Red fire hydrant next to bushes and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "blue fire hydrant"
+        ],
+        "hallucinated_objects": [
+          "red fire hydrant"
+        ],
+        "genericity_hint": "The fire hydrant is not blue.",
+        "edit_instructions": [
+          "Change the color of the fire hydrant to blue."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red fire hydrant next to bushes and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blue fire hydrant\"],\n  \"hallucinated_objects\": [\"red fire hydrant\"],\n  \"genericity_hint\": \"The fire hydrant is not blue.\",\n  \"edit_instructions\": \"Change the color of the fire hydrant to blue.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Blue fire hydrant next to bushes and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "metal",
+          "wood",
+          "gray",
+          "black",
+          "red",
+          "yellow"
+        ],
+        "hallucinated_objects": [
+          "flowers",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and material of the fire hydrant, the type of bush, and the presence of a pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Blue fire hydrant next to bushes and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"metal\", \"wood\", \"gray\", \"black\", \"red\", \"yellow\"],\n  \"hallucinated_objects\": [\"flowers\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and material of the fire hydrant, the type of bush, and the presence of a pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Red fire hydrant with black trim near gray pole and green bush",
+      "vlm_hint": {
+        "missing_objects": [
+          "fire hydrant",
+          "bush",
+          "grass",
+          "fence",
+          "trees",
+          "chain",
+          "pole",
+          "flowers",
+          "sky",
+          "leaves",
+          "ground",
+          "metal",
+          "wood",
+          "green",
+          "blue",
+          "white",
+          "gray",
+          "black",
+          "red",
+          "yellow"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the color and material details and focus on the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red fire hydrant with black trim near gray pole and green bush\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fire hydrant\", \"bush\", \"grass\", \"fence\", \"trees\", \"chain\", \"pole\", \"flowers\", \"sky\", \"leaves\", \"ground\", \"metal\", \"wood\", \"green\", \"blue\", \"white\", \"gray\", \"black\", \"red\", \"yellow\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the color and material details and focus on the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Fire hydrant near bush and fence",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal",
+          "wood",
+          "gray",
+          "black",
+          "red",
+          "yellow"
+        ],
+        "hallucinated_objects": [
+          "flowers",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their materials and colors."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Fire hydrant near bush and fence\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal\", \"wood\", \"gray\", \"black\", \"red\", \"yellow\"],\n  \"hallucinated_objects\": [\"flowers\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their materials and colors.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Red fire hydrant by gray bush and fence with metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "blue"
+        ],
+        "hallucinated_objects": [
+          "red"
+        ],
+        "genericity_hint": "The fire hydrant is not blue.",
+        "edit_instructions": [
+          "Remove the red color from the fire hydrant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Red fire hydrant by gray bush and fence with metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blue\"],\n  \"hallucinated_objects\": [\"red\"],\n  \"genericity_hint\": \"The fire hydrant is not blue.\",\n  \"edit_instructions\": \"Remove the red color from the fire hydrant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Gray fire hydrant by blue bush and fence with metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "red",
+          "yellow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the fire hydrant, the type of bush, and the material of the fence and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray fire hydrant by blue bush and fence with metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal\", \"pole\"],\n  \"hallucinated_objects\": [\"red\", \"yellow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the fire hydrant, the type of bush, and the material of the fence and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Gray fire hydrant next to green bush and wooden fence with metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal",
+          "wood",
+          "gray"
+        ],
+        "hallucinated_objects": [
+          "red",
+          "yellow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and materials."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray fire hydrant next to green bush and wooden fence with metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal\", \"wood\", \"gray\"],\n  \"hallucinated_objects\": [\"red\", \"yellow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and materials.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Gray fire hydrant beside green bush and wooden fence with metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal",
+          "wood",
+          "gray"
+        ],
+        "hallucinated_objects": [
+          "red",
+          "yellow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and materials."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray fire hydrant beside green bush and wooden fence with metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal\", \"wood\", \"gray\"],\n  \"hallucinated_objects\": [\"red\", \"yellow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and materials.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Gray fire hydrant next to green bush and wooden fence with metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal",
+          "wood",
+          "gray"
+        ],
+        "hallucinated_objects": [
+          "red",
+          "yellow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and materials."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [fire hydrant, bush, grass, fence, trees, chain, pole, flowers, sky, leaves, ground, metal, wood, green, blue, white, gray, black, red, yellow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray fire hydrant next to green bush and wooden fence with metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal\", \"wood\", \"gray\"],\n  \"hallucinated_objects\": [\"red\", \"yellow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and materials.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 87875,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000087875.jpg",
+    "final_caption": "Gray fire hydrant next to green bush and wooden fence with metal pole",
+    "total_time_sec": 31.58
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"fire hydrant\",\n    \"bush\",\n    \"grass\",\n    \"fence\",\n    \"trees\",\n    \"chain\",\n    \"pole\",\n    \"flowers\",\n    \"sky\",\n    \"leaves\",\n    \"ground\",\n    \"metal\",\n    \"wood\",\n    \"green\",\n    \"blue\",\n    \"white\",\n    \"gray\",\n    \"black\",\n    \"red\",\n    \"yellow\"\n  ]\n}"
+}

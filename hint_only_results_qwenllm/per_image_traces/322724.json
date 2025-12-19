@@ -1,0 +1,256 @@
+{
+  "image_id": 322724,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000322724.jpg",
+  "objects": [
+    "ski poles",
+    "ski boots",
+    "skis",
+    "helmet",
+    "goggles",
+    "snow",
+    "trees",
+    "mountains",
+    "clouds",
+    "sky",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person"
+  ],
+  "template": "We have an image with these objects: ['ski poles', 'ski boots', 'skis', 'helmet', 'goggles', 'snow', 'trees', 'mountains', 'clouds', 'sky', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Snowy slopes with people skiing amidst mountains and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "ski poles",
+          "ski boots",
+          "skis",
+          "helmet",
+          "goggles",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "snow",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Snowy slopes with people skiing amidst mountains and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"ski poles\", \"ski boots\", \"skis\", \"helmet\", \"goggles\", \"trees\", \"mountains\", \"clouds\", \"sky\"],\n  \"hallucinated_objects\": [\"snow\", \"trees\", \"mountains\", \"clouds\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People in ski boots and poles on skis among mountains and clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "goggles",
+          "trees",
+          "snow"
+        ],
+        "hallucinated_objects": [
+          "person"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of goggles, the presence of trees, and the color of the snow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in ski boots and poles on skis among mountains and clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"goggles\", \"trees\", \"snow\"],\n  \"hallucinated_objects\": [\"person\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of goggles, the presence of trees, and the color of the snow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People in ski boots and poles on skis among snowy trees and cloudy mountains wearing goggles",
+      "vlm_hint": {
+        "missing_objects": [
+          "snowboard",
+          "snowboarder"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of winter sports equipment.",
+        "edit_instructions": [
+          "Specify the type of winter sports equipment in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in ski boots and poles on skis among snowy trees and cloudy mountains wearing goggles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snowboard\", \"snowboarder\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of winter sports equipment.\",\n  \"edit_instructions\": \"Specify the type of winter sports equipment in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People in ski boots and poles on skis among snow and trees with cloudy mountains in the background wearing goggles",
+      "vlm_hint": {
+        "missing_objects": [
+          "goggles"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the goggles and the type of skis."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in ski boots and poles on skis among snow and trees with cloudy mountains in the background wearing goggles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"goggles\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the goggles and the type of skis.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People in colorful ski boots and poles stand on wide skis among snow and trees with snowy mountains in the distance, all under a sky filled with clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "goggles"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of goggles and the number of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in colorful ski boots and poles stand on wide skis among snow and trees with snowy mountains in the distance, all under a sky filled with clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"goggles\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of goggles and the number of trees.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Ten people wear goggles and hold ski poles on wide skis amid snow and three snowy mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "snow",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "person"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the number of people, their actions, and the surrounding environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ten people wear goggles and hold ski poles on wide skis amid snow and three snowy mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snow\", \"trees\", \"mountains\", \"clouds\", \"sky\"],\n  \"hallucinated_objects\": [\"person\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the number of people, their actions, and the surrounding environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Nine people ski among snow-covered trees and mountains under a cloud-streaked sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski poles",
+          "snow",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "nine people"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of people.",
+        "edit_instructions": [
+          "Specify the number of people and include the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Nine people ski among snow-covered trees and mountains under a cloud-streaked sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski poles\", \"snow\", \"trees\", \"mountains\", \"clouds\", \"sky\"],\n  \"hallucinated_objects\": [\"nine people\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of people.\",\n  \"edit_instructions\": \"Specify the number of people and include the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Seven people ski through snow among trees and mountains under a cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski poles",
+          "snow",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "person"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of people or the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the number of people and the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Seven people ski through snow among trees and mountains under a cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski poles\", \"snow\", \"trees\", \"mountains\", \"clouds\", \"sky\"],\n  \"hallucinated_objects\": [\"person\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of people or the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the number of people and the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Nine people ski down snow-covered slopes among trees and mountains under a cloudy sky using ski poles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "goggles",
+          "snow",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "nine people"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of people.",
+        "edit_instructions": [
+          "Remove the number of people and specify the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Nine people ski down snow-covered slopes among trees and mountains under a cloudy sky using ski poles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"goggles\", \"snow\", \"trees\", \"mountains\", \"clouds\", \"sky\"],\n  \"hallucinated_objects\": [\"nine people\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of people.\",\n  \"edit_instructions\": \"Remove the number of people and specify the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People ski down snowy slopes among trees and mountains under a cloudy sky with goggles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ski poles",
+          "snow",
+          "trees",
+          "mountains",
+          "clouds",
+          "sky",
+          "person"
+        ],
+        "hallucinated_objects": [
+          "ski boots",
+          "skis",
+          "helmet",
+          "goggles"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of ski equipment and the exact location of the person."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ski poles, ski boots, skis, helmet, goggles, snow, trees, mountains, clouds, sky, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People ski down snowy slopes among trees and mountains under a cloudy sky with goggles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ski poles\", \"snow\", \"trees\", \"mountains\", \"clouds\", \"sky\", \"person\"],\n  \"hallucinated_objects\": [\"ski boots\", \"skis\", \"helmet\", \"goggles\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of ski equipment and the exact location of the person.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 322724,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000322724.jpg",
+    "final_caption": "People ski down snowy slopes among trees and mountains under a cloudy sky with goggles.",
+    "total_time_sec": 34.19
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"ski poles\",\n    \"ski boots\",\n    \"skis\",\n    \"helmet\",\n    \"goggles\",\n    \"snow\",\n    \"trees\",\n    \"mountains\",\n    \"clouds\",\n    \"sky\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\"\n  ]\n}"
+}

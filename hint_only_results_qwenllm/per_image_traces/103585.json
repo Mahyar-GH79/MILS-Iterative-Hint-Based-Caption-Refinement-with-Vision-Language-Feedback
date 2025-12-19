@@ -1,0 +1,257 @@
+{
+  "image_id": 103585,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000103585.jpg",
+  "objects": [
+    "sink",
+    "vase",
+    "mirror",
+    "cabinet",
+    "toilet",
+    "towel",
+    "light",
+    "door",
+    "wall",
+    "floor",
+    "bathroom",
+    "sink",
+    "vase",
+    "mirror",
+    "cabinet",
+    "toilet",
+    "towel",
+    "light",
+    "door",
+    "wall"
+  ],
+  "template": "We have an image with these objects: ['sink', 'vase', 'mirror', 'cabinet', 'toilet', 'towel', 'light', 'door', 'wall', 'floor', 'bathroom', 'sink', 'vase', 'mirror', 'cabinet', 'toilet', 'towel', 'light', 'door', 'wall']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bathroom with sink mirror and cabinet",
+      "vlm_hint": {
+        "missing_objects": [
+          "light",
+          "door",
+          "wall",
+          "floor"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of objects present in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the light, door, wall, and floor."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with sink mirror and cabinet\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light\", \"door\", \"wall\", \"floor\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of objects present in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the light, door, wall, and floor.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bathroom with sink mirror cabinet light door wall floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "towel",
+          "light",
+          "door",
+          "wall",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "mirror",
+          "cabinet",
+          "toilet"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with sink mirror cabinet light door wall floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"towel\", \"light\", \"door\", \"wall\", \"floor\"],\n  \"hallucinated_objects\": [\"sink\", \"mirror\", \"cabinet\", \"toilet\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bathroom with vase towel light door wall floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "mirror",
+          "cabinet",
+          "toilet",
+          "light",
+          "door",
+          "wall",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "bathroom"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with vase towel light door wall floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"mirror\", \"cabinet\", \"toilet\", \"light\", \"door\", \"wall\", \"floor\"],\n  \"hallucinated_objects\": [\"bathroom\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Sink vase mirror cabinet toilet towel light door wall",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sink vase mirror cabinet toilet towel light door wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flowers\", \"soap\", \"hand dryer\", \"shampoo\", \"toothbrush\", \"toothpaste\", \"soap dish\", \"tissue\", \"soap dispenser\", \"hand towel\", \"hand soap\", \"toilet paper\", \"toilet brush\", \"toilet paper holder\", \"toilet paper roll\", \"toilet paper dispenser\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper holder\", \"toilet paper"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Sink mirror cabinet toilet near light door",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "towel",
+          "light",
+          "door",
+          "wall",
+          "floor",
+          "bathroom"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed and specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sink mirror cabinet toilet near light door\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"towel\", \"light\", \"door\", \"wall\", \"floor\", \"bathroom\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed and specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bathroom with sink mirror cabinet toilet near towel light door on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "light",
+          "door",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "cabinet",
+          "toilet",
+          "towel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color and type of the vase, the type of light, and the location of the door and wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with sink mirror cabinet toilet near towel light door on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"light\", \"door\", \"wall\"],\n  \"hallucinated_objects\": [\"sink\", \"cabinet\", \"toilet\", \"towel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color and type of the vase, the type of light, and the location of the door and wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Vase on sink near mirror over toilet by door on bathroom wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "light",
+          "floor",
+          "bathroom"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses important elements of the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vase on sink near mirror over toilet by door on bathroom wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light\", \"floor\", \"bathroom\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses important elements of the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Mirror over sink with vase light and floor in bathroom",
+      "vlm_hint": {
+        "missing_objects": [
+          "towel",
+          "light",
+          "door",
+          "wall",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "vase",
+          "mirror",
+          "cabinet",
+          "toilet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mirror over sink with vase light and floor in bathroom\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"towel\", \"light\", \"door\", \"wall\", \"floor\"],\n  \"hallucinated_objects\": [\"sink\", \"vase\", \"mirror\", \"cabinet\", \"toilet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Towel light and door on bathroom wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "cabinet",
+          "toilet",
+          "floor",
+          "bathroom"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Towel light and door on bathroom wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"cabinet\", \"toilet\", \"floor\", \"bathroom\"],\n  \"hallucinated_objects\": [\"light\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Sink cabinet toilet and floor in bathroom with mirror",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "light",
+          "door",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "cabinet",
+          "toilet",
+          "floor",
+          "bathroom",
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, vase, mirror, cabinet, toilet, towel, light, door, wall, floor, bathroom, sink, vase, mirror, cabinet, toilet, towel, light, door, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sink cabinet toilet and floor in bathroom with mirror\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"light\", \"door\", \"wall\"],\n  \"hallucinated_objects\": [\"sink\", \"cabinet\", \"toilet\", \"floor\", \"bathroom\", \"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 103585,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000103585.jpg",
+    "final_caption": "Sink cabinet toilet and floor in bathroom with mirror",
+    "total_time_sec": 36.4
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"sink\",\n    \"vase\",\n    \"mirror\",\n    \"cabinet\",\n    \"toilet\",\n    \"towel\",\n    \"light\",\n    \"door\",\n    \"wall\",\n    \"floor\",\n    \"bathroom\",\n    \"sink\",\n    \"vase\",\n    \"mirror\",\n    \"cabinet\",\n    \"toilet\",\n    \"towel\",\n    \"light\",\n    \"door\",\n    \"wall\"\n  ]\n}"
+}

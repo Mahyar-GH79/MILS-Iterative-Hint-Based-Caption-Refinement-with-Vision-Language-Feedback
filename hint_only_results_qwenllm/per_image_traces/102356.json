@@ -1,0 +1,240 @@
+{
+  "image_id": 102356,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000102356.jpg",
+  "objects": [
+    "motorcycle",
+    "sidecar",
+    "woman",
+    "mountains",
+    "desert",
+    "road",
+    "sun",
+    "sky",
+    "hills",
+    "trees",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves",
+    "leaves"
+  ],
+  "template": "We have an image with these objects: ['motorcycle', 'sidecar', 'woman', 'mountains', 'desert', 'road', 'sun', 'sky', 'hills', 'trees', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves', 'leaves']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman on motorcycle amidst desert mountains at sunset",
+      "vlm_hint": {
+        "missing_objects": [
+          "sun",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the sun and sky, and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman on motorcycle amidst desert mountains at sunset\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sun\", \"sky\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the sun and sky, and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman on motorcycle with sidecar amidst desert mountains at sunset under a bright sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "sun",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the motorcycle and sidecar, and the specific features of the desert landscape."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman on motorcycle with sidecar amidst desert mountains at sunset under a bright sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\"],\n  \"hallucinated_objects\": [\"sun\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the motorcycle and sidecar, and the specific features of the desert landscape.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman on red motorcycle with sidecar among desert mountains at sunset under vast sky filled with leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "motorcycle",
+          "sidecar",
+          "desert",
+          "mountains",
+          "sunset",
+          "sky",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "red"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic words and focus on the specific objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman on red motorcycle with sidecar among desert mountains at sunset under vast sky filled with leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"motorcycle\", \"sidecar\", \"desert\", \"mountains\", \"sunset\", \"sky\", \"leaves\"],\n  \"hallucinated_objects\": [\"red\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic words and focus on the specific objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Woman in sidecar on motorcycle among desert mountains at sunset under sky with leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "sun",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the sun and sky, and add specific details about the leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in sidecar on motorcycle among desert mountains at sunset under sky with leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\"],\n  \"hallucinated_objects\": [\"sun\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the sun and sky, and add specific details about the leaves.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman in sidecar on motorcycle amid desert mountains under leafy hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "sun",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details to the caption, such as the sun and sky, and remove the leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in sidecar on motorcycle amid desert mountains under leafy hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sun\", \"sky\"],\n  \"hallucinated_objects\": [\"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details to the caption, such as the sun and sky, and remove the leaves.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman in sidecar on motorcycle amidst desert mountains under sunny sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "sun",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the motorcycle and sidecar, and the specific features of the desert landscape."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in sidecar on motorcycle amidst desert mountains under sunny sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\"],\n  \"hallucinated_objects\": [\"sun\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the motorcycle and sidecar, and the specific features of the desert landscape.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Woman in green sidecar on red motorcycle among desert hills and swaying leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "motorcycle",
+          "sidecar"
+        ],
+        "hallucinated_objects": [
+          "red motorcycle",
+          "swaying leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color of the motorcycle and sidecar, and the type of desert landscape."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in green sidecar on red motorcycle among desert hills and swaying leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"motorcycle\", \"sidecar\"],\n  \"hallucinated_objects\": [\"red motorcycle\", \"swaying leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color of the motorcycle and sidecar, and the type of desert landscape.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Woman in sidecar on brown motorcycle amidst desert mountains and golden leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "green motorcycle",
+          "green sidecar"
+        ],
+        "hallucinated_objects": [
+          "brown motorcycle",
+          "brown sidecar"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the motorcycle and sidecar.",
+        "edit_instructions": [
+          "Specify the color of the motorcycle and sidecar in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in sidecar on brown motorcycle amidst desert mountains and golden leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"green motorcycle\", \"green sidecar\"],\n  \"hallucinated_objects\": [\"brown motorcycle\", \"brown sidecar\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the motorcycle and sidecar.\",\n  \"edit_instructions\": \"Specify the color of the motorcycle and sidecar in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Woman in green sidecar on green motorcycle amid desert mountains and golden leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "sun",
+          "sky",
+          "hills",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the sun, sky, hills, and trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in green sidecar on green motorcycle amid desert mountains and golden leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sun\", \"sky\", \"hills\", \"trees\"],\n  \"hallucinated_objects\": [\"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the sun, sky, hills, and trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Woman on motorcycle with sidecar among desert mountains, sun, and sky near hills and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "sun",
+          "sky",
+          "hills",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, sidecar, woman, mountains, desert, road, sun, sky, hills, trees, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman on motorcycle with sidecar among desert mountains, sun, and sky near hills and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sun\", \"sky\", \"hills\", \"trees\"],\n  \"hallucinated_objects\": [\"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 102356,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000102356.jpg",
+    "final_caption": "Woman on motorcycle with sidecar among desert mountains, sun, and sky near hills and trees",
+    "total_time_sec": 31.97
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"motorcycle\",\n    \"sidecar\",\n    \"woman\",\n    \"mountains\",\n    \"desert\",\n    \"road\",\n    \"sun\",\n    \"sky\",\n    \"hills\",\n    \"trees\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\",\n    \"leaves\"\n  ]\n}"
+}

@@ -1,0 +1,299 @@
+{
+  "image_id": 154425,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000154425.jpg",
+  "objects": [
+    "boy",
+    "kite",
+    "brick wall",
+    "grass",
+    "sidewalk",
+    "hat",
+    "shorts",
+    "shirt",
+    "feet",
+    "kite string",
+    "kite tail",
+    "building",
+    "sky",
+    "ground",
+    "air",
+    "wind",
+    "sunlight",
+    "shadow",
+    "reflection"
+  ],
+  "template": "We have an image with these objects: ['boy', 'kite', 'brick wall', 'grass', 'sidewalk', 'hat', 'shorts', 'shirt', 'feet', 'kite string', 'kite tail', 'building', 'sky', 'ground', 'air', 'wind', 'sunlight', 'shadow', 'reflection']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Boy flying kite against blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "blue sky",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the kite and the presence of a brick wall in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flying kite against blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"blue sky\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the kite and the presence of a brick wall in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boy flying colorful kite with tail near brick wall under sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite string",
+          "kite tail",
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the kite, the type of building, and the presence of shadows or reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flying colorful kite with tail near brick wall under sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite string\", \"kite tail\", \"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"hallucinated_objects\": [\"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the kite, the type of building, and the presence of shadows or reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boy flies a bright red kite with a long tail near a brick wall under sunny skies",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite string",
+          "kite tail",
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "red kite"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific details and focus on the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flies a bright red kite with a long tail near a brick wall under sunny skies\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite string\", \"kite tail\", \"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"hallucinated_objects\": [\"red kite\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific details and focus on the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Boy flies a kite near a brick wall in bright sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite string",
+          "kite tail",
+          "feet",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the kite, the type of shorts, and the exact location of the boy's feet."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flies a kite near a brick wall in bright sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite string\", \"kite tail\", \"feet\", \"reflection\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the kite, the type of shorts, and the exact location of the boy's feet.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Boy in shorts and hat holds kite string near brick wall in bright sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "feet",
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the boy's feet, the kite string, and the kite tail."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in shorts and hat holds kite string near brick wall in bright sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"feet\", \"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the boy's feet, the kite string, and the kite tail.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Boy in shorts and hat holds kite string and tail near brick wall in bright sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "feet",
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the building in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in shorts and hat holds kite string and tail near brick wall in bright sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"feet\", \"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the building in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Boy in shorts and hat runs with kite string and tail near brick wall under bright sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "feet",
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the brick wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in shorts and hat runs with kite string and tail near brick wall under bright sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"feet\", \"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the brick wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Boy in shorts and hat runs with kite string and tail near brick wall in sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "feet",
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the brick wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in shorts and hat runs with kite string and tail near brick wall in sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"feet\", \"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the brick wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Boy in shorts and hat runs holding kite string and tail near brick wall in sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "feet",
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the building in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in shorts and hat runs holding kite string and tail near brick wall in sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"feet\", \"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the building in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Boy in shorts and hat runs holding kite string and tail near brick wall in sunlight",
+      "vlm_hint": {
+        "missing_objects": [
+          "feet",
+          "kite string",
+          "kite tail"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "sky",
+          "ground",
+          "air",
+          "wind",
+          "sunlight",
+          "shadow",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the building in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boy, kite, brick wall, grass, sidewalk, hat, shorts, shirt, feet, kite string, kite tail, building, sky, ground, air, wind, sunlight, shadow, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in shorts and hat runs holding kite string and tail near brick wall in sunlight\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"feet\", \"kite string\", \"kite tail\"],\n  \"hallucinated_objects\": [\"building\", \"sky\", \"ground\", \"air\", \"wind\", \"sunlight\", \"shadow\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the boy's feet, the kite string and tail, and the building in the background.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 154425,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000154425.jpg",
+    "final_caption": "Boy in shorts and hat runs holding kite string and tail near brick wall in sunlight",
+    "total_time_sec": 39.5
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"boy\",\n    \"kite\",\n    \"brick wall\",\n    \"grass\",\n    \"sidewalk\",\n    \"hat\",\n    \"shorts\",\n    \"shirt\",\n    \"feet\",\n    \"kite string\",\n    \"kite tail\",\n    \"building\",\n    \"sky\",\n    \"ground\",\n    \"air\",\n    \"wind\",\n    \"sunlight\",\n    \"shadow\",\n    \"reflection\"\n  ]\n}"
+}

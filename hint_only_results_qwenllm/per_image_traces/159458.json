@@ -1,0 +1,291 @@
+{
+  "image_id": 159458,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000159458.jpg",
+  "objects": [
+    "bed",
+    "pillow",
+    "dog",
+    "table",
+    "chair",
+    "floor",
+    "wall",
+    "ceiling fan",
+    "door",
+    "light switch",
+    "wooden floor",
+    "bed frame",
+    "bedding",
+    "bedside table",
+    "bedside lamp",
+    "bedside drawer",
+    "bedside cabinet",
+    "bedside mirror",
+    "bedside clock",
+    "bedside phone"
+  ],
+  "template": "We have an image with these objects: ['bed', 'pillow', 'dog', 'table', 'chair', 'floor', 'wall', 'ceiling fan', 'door', 'light switch', 'wooden floor', 'bed frame', 'bedding', 'bedside table', 'bedside lamp', 'bedside drawer', 'bedside cabinet', 'bedside mirror', 'bedside clock', 'bedside phone']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Dog rests on bed near bedside lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside lamp"
+        ],
+        "hallucinated_objects": [
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add a bedside lamp to the caption and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog rests on bed near bedside lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside lamp\"],\n  \"hallucinated_objects\": [\"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add a bedside lamp to the caption and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Dog on bed near bedside lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside lamp"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific. The bedside lamp is not visible in the image.",
+        "edit_instructions": [
+          "Remove the mention of the bedside lamp."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed near bedside lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside lamp\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific. The bedside lamp is not visible in the image.\",\n  \"edit_instructions\": \"Remove the mention of the bedside lamp.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Dog on bed near ceiling fan",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "chair",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "hallucinated_objects": [
+          "ceiling fan"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, chair, and other furniture."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed near ceiling fan\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"chair\", \"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"hallucinated_objects\": [\"ceiling fan\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, chair, and other furniture.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Dog on bed by wooden bedside cabinet and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside cabinet",
+          "bedside lamp"
+        ],
+        "hallucinated_objects": [
+          "wooden floor",
+          "bed frame",
+          "bedding",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bedside cabinet and lamp, and the material of the floor and bed frame."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed by wooden bedside cabinet and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside cabinet\", \"bedside lamp\"],\n  \"hallucinated_objects\": [\"wooden floor\", \"bed frame\", \"bedding\", \"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bedside cabinet and lamp, and the material of the floor and bed frame.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Dog on bed by wooden bedside table and lamp with ceiling fan above",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside table",
+          "bedside lamp",
+          "ceiling fan"
+        ],
+        "hallucinated_objects": [
+          "wooden floor",
+          "bed frame",
+          "bedding",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bedside table, lamp, and ceiling fan."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed by wooden bedside table and lamp with ceiling fan above\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside table\", \"bedside lamp\", \"ceiling fan\"],\n  \"hallucinated_objects\": [\"wooden floor\", \"bed frame\", \"bedding\", \"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bedside table, lamp, and ceiling fan.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Dog on bed by nightstand with lamp under ceiling fan above",
+      "vlm_hint": {
+        "missing_objects": [
+          "table",
+          "chair",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "hallucinated_objects": [
+          "nightstand",
+          "lamp",
+          "ceiling fan"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a table, chair, and specific bedside items."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed by nightstand with lamp under ceiling fan above\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"table\", \"chair\", \"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"hallucinated_objects\": [\"nightstand\", \"lamp\", \"ceiling fan\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a table, chair, and specific bedside items.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Dog on bed near bedside table with drawer and mirror nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside table",
+          "drawer",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "bedside lamp",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the bedside table, drawer, and mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed near bedside table with drawer and mirror nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside table\", \"drawer\", \"mirror\"],\n  \"hallucinated_objects\": [\"bedside lamp\", \"bedside drawer\", \"bedside cabinet\", \"bedside clock\", \"bedside phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the bedside table, drawer, and mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Dog on bed by bedside table with drawer and mirror nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside table",
+          "drawer",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the bedside table and the type of mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed by bedside table with drawer and mirror nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside table\", \"drawer\", \"mirror\"],\n  \"hallucinated_objects\": [\"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the bedside table and the type of mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Dog on bed by bedside table near mirror and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside table",
+          "bedside lamp",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "chair",
+          "floor",
+          "wall",
+          "ceiling fan",
+          "door",
+          "light switch",
+          "wooden floor",
+          "bed frame",
+          "bedding"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed by bedside table near mirror and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside table\", \"bedside lamp\", \"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"hallucinated_objects\": [\"table\", \"chair\", \"floor\", \"wall\", \"ceiling fan\", \"door\", \"light switch\", \"wooden floor\", \"bed frame\", \"bedding\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Dog on bed by bedside table with mirror and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "bedside table",
+          "bedside lamp",
+          "bedside drawer",
+          "bedside cabinet",
+          "bedside mirror",
+          "bedside clock",
+          "bedside phone"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "chair",
+          "floor",
+          "wall",
+          "ceiling fan",
+          "door",
+          "light switch",
+          "wooden floor",
+          "bed frame",
+          "bedding"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the bedside table, lamp, drawer, cabinet, mirror, clock, and phone."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, dog, table, chair, floor, wall, ceiling fan, door, light switch, wooden floor, bed frame, bedding, bedside table, bedside lamp, bedside drawer, bedside cabinet, bedside mirror, bedside clock, bedside phone]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog on bed by bedside table with mirror and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bedside table\", \"bedside lamp\", \"bedside drawer\", \"bedside cabinet\", \"bedside mirror\", \"bedside clock\", \"bedside phone\"],\n  \"hallucinated_objects\": [\"table\", \"chair\", \"floor\", \"wall\", \"ceiling fan\", \"door\", \"light switch\", \"wooden floor\", \"bed frame\", \"bedding\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the bedside table, lamp, drawer, cabinet, mirror, clock, and phone.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 159458,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000159458.jpg",
+    "final_caption": "Dog on bed by bedside table with mirror and lamp",
+    "total_time_sec": 38.59
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bed\",\n    \"pillow\",\n    \"dog\",\n    \"table\",\n    \"chair\",\n    \"floor\",\n    \"wall\",\n    \"ceiling fan\",\n    \"door\",\n    \"light switch\",\n    \"wooden floor\",\n    \"bed frame\",\n    \"bedding\",\n    \"bedside table\",\n    \"bedside lamp\",\n    \"bedside drawer\",\n    \"bedside cabinet\",\n    \"bedside mirror\",\n    \"bedside clock\",\n    \"bedside phone\"\n  ]\n}"
+}

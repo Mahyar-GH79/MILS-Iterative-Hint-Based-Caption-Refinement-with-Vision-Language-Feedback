@@ -1,0 +1,245 @@
+{
+  "image_id": 403565,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000403565.jpg",
+  "objects": [
+    "bicycle",
+    "person",
+    "helmet",
+    "camera",
+    "trees",
+    "grass",
+    "sky",
+    "shoes",
+    "shorts",
+    "watch",
+    "earphones",
+    "handlebars",
+    "tire",
+    "chain",
+    "pedals",
+    "seat",
+    "leaves",
+    "branches",
+    "leaves",
+    "branches"
+  ],
+  "template": "We have an image with these objects: ['bicycle', 'person', 'helmet', 'camera', 'trees', 'grass', 'sky', 'shoes', 'shorts', 'watch', 'earphones', 'handlebars', 'tire', 'chain', 'pedals', 'seat', 'leaves', 'branches', 'leaves', 'branches']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Person on bicycle in nature with helmet and camera",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "earphones",
+          "handlebars",
+          "tire",
+          "chain",
+          "pedals",
+          "seat"
+        ],
+        "hallucinated_objects": [
+          "leaves",
+          "branches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of bicycle, the person's attire, and the camera model."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person on bicycle in nature with helmet and camera\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"earphones\", \"handlebars\", \"tire\", \"chain\", \"pedals\", \"seat\"],\n  \"hallucinated_objects\": [\"leaves\", \"branches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of bicycle, the person's attire, and the camera model.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Person in shorts and shoes rides a bicycle with a helmet, camera, and watch in nature",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "helmet",
+          "earphones"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and shoes rides a bicycle with a helmet, camera, and watch in nature\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\", \"watch\"],\n  \"hallucinated_objects\": [\"helmet\", \"earphones\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Person in shorts and shoes rides a bicycle through nature with camera and watch",
+      "vlm_hint": {
+        "missing_objects": [
+          "helmet",
+          "earphones",
+          "handlebars",
+          "tire",
+          "chain",
+          "pedals",
+          "seat"
+        ],
+        "hallucinated_objects": [
+          "camera",
+          "watch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bicycle, the person's attire, and the specific features of the bicycle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and shoes rides a bicycle through nature with camera and watch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"helmet\", \"earphones\", \"handlebars\", \"tire\", \"chain\", \"pedals\", \"seat\"],\n  \"hallucinated_objects\": [\"camera\", \"watch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bicycle, the person's attire, and the specific features of the bicycle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Person in shorts and helmet rides bicycle with earphones through nature grass trees overhead",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add a specific object that is present in the image but missing from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet rides bicycle with earphones through nature grass trees overhead\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add a specific object that is present in the image but missing from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Person in shorts and helmet rides bicycle through nature with camera",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "earphones",
+          "handlebars",
+          "tire",
+          "chain",
+          "pedals",
+          "seat"
+        ],
+        "hallucinated_objects": [
+          "camera"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bicycle, the person's attire, and the surrounding environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet rides bicycle through nature with camera\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"earphones\", \"handlebars\", \"tire\", \"chain\", \"pedals\", \"seat\"],\n  \"hallucinated_objects\": [\"camera\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bicycle, the person's attire, and the surrounding environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person in shorts and helmet pedaling bicycle with earphones on grassy trail",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "leaves",
+          "branches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the camera to the caption and remove the grass, leaves, and branches."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet pedaling bicycle with earphones on grassy trail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\"],\n  \"hallucinated_objects\": [\"grass\", \"leaves\", \"branches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the camera to the caption and remove the grass, leaves, and branches.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person in shorts and helmet cycling with earphones and camera along trail",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "chain",
+          "pedals",
+          "seat"
+        ],
+        "hallucinated_objects": [
+          "tire"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bicycle, the person's clothing, and the surrounding environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet cycling with earphones and camera along trail\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"chain\", \"pedals\", \"seat\"],\n  \"hallucinated_objects\": [\"tire\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bicycle, the person's clothing, and the surrounding environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person in shorts and helmet pedals a bicycle with camera and watch amidst trees and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "camera"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet pedals a bicycle with camera and watch amidst trees and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\"],\n  \"hallucinated_objects\": [\"camera\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person in shorts and helmet rides a bicycle through trees and grass with earphones on",
+      "vlm_hint": {
+        "missing_objects": [
+          "camera"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add a specific object to the caption, such as 'a camera' or 'a helmet'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet rides a bicycle through trees and grass with earphones on\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"camera\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add a specific object to the caption, such as 'a camera' or 'a helmet'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person in shorts and helmet rides a bicycle through trees and grass with camera on",
+      "vlm_hint": {
+        "missing_objects": [
+          "watch",
+          "earphones",
+          "handlebars",
+          "tire",
+          "chain",
+          "pedals",
+          "seat"
+        ],
+        "hallucinated_objects": [
+          "camera"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bicycle, the person's attire, and the surrounding environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bicycle, person, helmet, camera, trees, grass, sky, shoes, shorts, watch, earphones, handlebars, tire, chain, pedals, seat, leaves, branches, leaves, branches]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts and helmet rides a bicycle through trees and grass with camera on\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watch\", \"earphones\", \"handlebars\", \"tire\", \"chain\", \"pedals\", \"seat\"],\n  \"hallucinated_objects\": [\"camera\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bicycle, the person's attire, and the surrounding environment.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 403565,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000403565.jpg",
+    "final_caption": "Person in shorts and helmet rides a bicycle through trees and grass with camera on",
+    "total_time_sec": 32.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bicycle\",\n    \"person\",\n    \"helmet\",\n    \"camera\",\n    \"trees\",\n    \"grass\",\n    \"sky\",\n    \"shoes\",\n    \"shorts\",\n    \"watch\",\n    \"earphones\",\n    \"handlebars\",\n    \"tire\",\n    \"chain\",\n    \"pedals\",\n    \"seat\",\n    \"leaves\",\n    \"branches\",\n    \"leaves\",\n    \"branches\"\n  ]\n}"
+}

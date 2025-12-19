@@ -1,0 +1,247 @@
+{
+  "image_id": 460160,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000460160.jpg",
+  "objects": [
+    "swan",
+    "rope",
+    "pole",
+    "water",
+    "grass",
+    "sand",
+    "rocks",
+    "ocean",
+    "horizon",
+    "sky",
+    "beach",
+    "nature",
+    "outdoors",
+    "wildlife",
+    "beauty",
+    "tranquility",
+    "peace",
+    "solitude",
+    "reflection",
+    "calm"
+  ],
+  "template": "We have an image with these objects: ['swan', 'rope', 'pole', 'water', 'grass', 'sand', 'rocks', 'ocean', 'horizon', 'sky', 'beach', 'nature', 'outdoors', 'wildlife', 'beauty', 'tranquility', 'peace', 'solitude', 'reflection', 'calm']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Swan reflects in calm water at tranquil beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "rope",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "rocks",
+          "ocean",
+          "horizon",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the rope and pole, and removes the unnecessary objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water at tranquil beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rope\", \"pole\"],\n  \"hallucinated_objects\": [\"rocks\", \"ocean\", \"horizon\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the rope and pole, and removes the unnecessary objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Swan reflects in calm water by rope and pole on beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "ocean"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of rocks, horizon, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water by rope and pole on beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"hallucinated_objects\": [\"ocean\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of rocks, horizon, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Swan reflects in calm water by rope and pole among rocks at beach under clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "rope",
+          "pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water by rope and pole among rocks at beach under clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"hallucinated_objects\": [\"rope\", \"pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Swan reflects in calm water among rocks at beach under clear horizon and sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rope",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "rocks",
+          "ocean",
+          "horizon",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the rope and pole, and the exact location of the rocks, ocean, horizon, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water among rocks at beach under clear horizon and sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rope\", \"pole\"],\n  \"hallucinated_objects\": [\"rocks\", \"ocean\", \"horizon\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the rope and pole, and the exact location of the rocks, ocean, horizon, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Swan reflects in calm water near rope and pole on sandy beach under clear sky and horizon.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "rope",
+          "pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water near rope and pole on sandy beach under clear sky and horizon.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"hallucinated_objects\": [\"rope\", \"pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Swan reflects in calm water by rocks under clear sky and horizon.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rope",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the rope and pole, and describe the objects in the image more accurately."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water by rocks under clear sky and horizon.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rope\", \"pole\"],\n  \"hallucinated_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the rope and pole, and describe the objects in the image more accurately.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Swan reflects in calm water beside pole and rope under clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "rope",
+          "pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the rocks, horizon, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water beside pole and rope under clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"hallucinated_objects\": [\"rope\", \"pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the rocks, horizon, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Swan reflects in calm water among rocks under clear sky at horizon.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rope",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "rocks",
+          "ocean",
+          "horizon",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the rope and pole, and describes the exact location of the swan, water, and horizon."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water among rocks under clear sky at horizon.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rope\", \"pole\"],\n  \"hallucinated_objects\": [\"rocks\", \"ocean\", \"horizon\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the rope and pole, and describes the exact location of the swan, water, and horizon.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Swan reflects in calm water next to rope and pole at sandy beach horizon.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "ocean"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the rocks, horizon, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water next to rope and pole at sandy beach horizon.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"hallucinated_objects\": [\"ocean\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the rocks, horizon, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Swan reflects in calm water beside rope and pole by rocky beach under vast sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rocks",
+          "horizon",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "rope",
+          "pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [swan, rope, pole, water, grass, sand, rocks, ocean, horizon, sky, beach, nature, outdoors, wildlife, beauty, tranquility, peace, solitude, reflection, calm]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Swan reflects in calm water beside rope and pole by rocky beach under vast sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rocks\", \"horizon\", \"sky\"],\n  \"hallucinated_objects\": [\"rope\", \"pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 460160,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000460160.jpg",
+    "final_caption": "Swan reflects in calm water beside rope and pole by rocky beach under vast sky.",
+    "total_time_sec": 33.01
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"swan\",\n    \"rope\",\n    \"pole\",\n    \"water\",\n    \"grass\",\n    \"sand\",\n    \"rocks\",\n    \"ocean\",\n    \"horizon\",\n    \"sky\",\n    \"beach\",\n    \"nature\",\n    \"outdoors\",\n    \"wildlife\",\n    \"beauty\",\n    \"tranquility\",\n    \"peace\",\n    \"solitude\",\n    \"reflection\",\n    \"calm\"\n  ]\n}"
+}

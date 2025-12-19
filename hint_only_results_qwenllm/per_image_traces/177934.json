@@ -1,0 +1,243 @@
+{
+  "image_id": 177934,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000177934.jpg",
+  "objects": [
+    "motorcycle",
+    "water tank",
+    "trash can",
+    "flag",
+    "bucket",
+    "hose",
+    "car",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person",
+    "person"
+  ],
+  "template": "We have an image with these objects: ['motorcycle', 'water tank', 'trash can', 'flag', 'bucket', 'hose', 'car', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person', 'person']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Crowd near motorcycle and water tank",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "flag",
+          "bucket",
+          "hose"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crowd near motorcycle and water tank\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"flag\", \"bucket\", \"hose\"],\n  \"hallucinated_objects\": [\"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\", \"car\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Crowd around motorcycle near water tank flag and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "hose",
+          "car"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a motorcycle, a water tank, a trash can, a flag, and a bucket, but the caption is missing some objects.",
+        "edit_instructions": [
+          "Add the missing objects: hose and car."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crowd around motorcycle near water tank flag and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hose\", \"car\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a motorcycle, a water tank, a trash can, a flag, and a bucket, but the caption is missing some objects.\",\n  \"edit_instructions\": \"Add the missing objects: hose and car.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Crowd around motorcycle near water tank hose and flag",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hose",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The image contains a motorcycle, a water tank, a trash can, a flag, a bucket, a hose, and people.",
+        "edit_instructions": [
+          "Remove the car from the list of objects and add a trash can, a hose, and a flag to the list of objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crowd around motorcycle near water tank hose and flag\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hose\", \"flag\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The image contains a motorcycle, a water tank, a trash can, a flag, a bucket, a hose, and people.\",\n  \"edit_instructions\": \"Remove the car from the list of objects and add a trash can, a hose, and a flag to the list of objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People gather near motorcycle water tank hose and flag next to trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "water tank",
+          "trash can",
+          "flag",
+          "hose",
+          "motorcycle"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a motorcycle, water tank, trash can, flag, hose, and people.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People gather near motorcycle water tank hose and flag next to trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water tank\", \"trash can\", \"flag\", \"hose\", \"motorcycle\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a motorcycle, water tank, trash can, flag, hose, and people.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People around motorcycle with hose, flag near water tank and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hose"
+        ],
+        "hallucinated_objects": [
+          "flag"
+        ],
+        "genericity_hint": "The image contains a motorcycle, a water tank, a trash can, a flag, a bucket, a car, and people.",
+        "edit_instructions": [
+          "Remove the flag and add a hose to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People around motorcycle with hose, flag near water tank and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hose\"],\n  \"hallucinated_objects\": [\"flag\"],\n  \"genericity_hint\": \"The image contains a motorcycle, a water tank, a trash can, a flag, a bucket, a car, and people.\",\n  \"edit_instructions\": \"Remove the flag and add a hose to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People around motorcycle with hose near water tank and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "hose"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the flag and the hose."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People around motorcycle with hose near water tank and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"hose\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the flag and the hose.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People surround a motorcycle with a hose next to a water tank and flag.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hose"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the trash can, hose, and flag."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People surround a motorcycle with a hose next to a water tank and flag.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hose\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the trash can, hose, and flag.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People surround a motorcycle with a hose next to a water tank and flag near a trash can.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The image contains a motorcycle, a water tank, a trash can, a flag, a hose, and people.",
+        "edit_instructions": [
+          "Remove the car from the list of objects and add the trash can and flag to the list of objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People surround a motorcycle with a hose next to a water tank and flag near a trash can.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"flag\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The image contains a motorcycle, a water tank, a trash can, a flag, a hose, and people.\",\n  \"edit_instructions\": \"Remove the car from the list of objects and add the trash can and flag to the list of objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People surround a motorcycle with a hose next to a water tank and flag near a trash can.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The image contains a motorcycle, a water tank, a trash can, a flag, a hose, and people.",
+        "edit_instructions": [
+          "Remove the car from the list of objects and add the trash can and flag to the list of objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People surround a motorcycle with a hose next to a water tank and flag near a trash can.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"flag\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The image contains a motorcycle, a water tank, a trash can, a flag, a hose, and people.\",\n  \"edit_instructions\": \"Remove the car from the list of objects and add the trash can and flag to the list of objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People surround a motorcycle with a hose next to a water tank and flag near a trash can.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The image contains a motorcycle, a water tank, a trash can, a flag, a hose, and people.",
+        "edit_instructions": [
+          "Remove the car from the list of objects and add the trash can and flag to the list of objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [motorcycle, water tank, trash can, flag, bucket, hose, car, person, person, person, person, person, person, person, person, person, person, person, person, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People surround a motorcycle with a hose next to a water tank and flag near a trash can.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"flag\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The image contains a motorcycle, a water tank, a trash can, a flag, a hose, and people.\",\n  \"edit_instructions\": \"Remove the car from the list of objects and add the trash can and flag to the list of objects.\",\n  \"score\": 0\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 177934,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000177934.jpg",
+    "final_caption": "People surround a motorcycle with a hose next to a water tank and flag near a trash can.",
+    "total_time_sec": 33.12
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"motorcycle\",\n    \"water tank\",\n    \"trash can\",\n    \"flag\",\n    \"bucket\",\n    \"hose\",\n    \"car\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\",\n    \"person\"\n  ]\n}"
+}

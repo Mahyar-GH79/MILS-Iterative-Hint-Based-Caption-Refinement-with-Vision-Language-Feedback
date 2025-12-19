@@ -1,0 +1,216 @@
+{
+  "image_id": 176606,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000176606.jpg",
+  "objects": [
+    "sheep",
+    "grass",
+    "wooden fence",
+    "window",
+    "car",
+    "reflection",
+    "leaves",
+    "bush",
+    "sky",
+    "building",
+    "door",
+    "reflection",
+    "reflection",
+    "reflection",
+    "reflection",
+    "reflection",
+    "reflection",
+    "reflection",
+    "reflection",
+    "reflection"
+  ],
+  "template": "We have an image with these objects: ['sheep', 'grass', 'wooden fence', 'window', 'car', 'reflection', 'leaves', 'bush', 'sky', 'building', 'door', 'reflection', 'reflection', 'reflection', 'reflection', 'reflection', 'reflection', 'reflection', 'reflection', 'reflection']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sheep grazing near wooden fence with reflections in water",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "water"
+        ],
+        "genericity_hint": "The caption mentions 'water' which is not present in the image.",
+        "edit_instructions": [
+          "Remove the mention of water and the car from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing near wooden fence with reflections in water\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [\"water\"],\n  \"genericity_hint\": \"The caption mentions 'water' which is not present in the image.\",\n  \"edit_instructions\": \"Remove the mention of water and the car from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Sheep grazing near wooden fence with reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of reflection.",
+        "edit_instructions": [
+          "Remove the word 'reflection' from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing near wooden fence with reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of reflection.\",\n  \"edit_instructions\": \"Remove the word 'reflection' from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Sheep grazing near wooden fence with car and sky reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and the reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing near wooden fence with car and sky reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and the reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Sheep grazing near wooden fence with car and multiple reflections in the grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing near wooden fence with car and multiple reflections in the grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Sheep grazing near wooden fence with car and reflections in grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing near wooden fence with car and reflections in grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Sheep grazing by wooden fence with car and multiple reflections in grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing by wooden fence with car and multiple reflections in grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Sheep grazing by wooden fence with car and reflections in grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing by wooden fence with car and reflections in grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Sheep grazing by wooden fence with car and multiple reflections in grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing by wooden fence with car and multiple reflections in grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Sheep grazing near wooden fence with car and reflections in grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing near wooden fence with car and reflections in grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Sheep grazing by wooden fence with car and multiple reflections in grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and reflections."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, grass, wooden fence, window, car, reflection, leaves, bush, sky, building, door, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection, reflection]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep grazing by wooden fence with car and multiple reflections in grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"reflection\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and reflections.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 176606,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000176606.jpg",
+    "final_caption": "Sheep grazing by wooden fence with car and multiple reflections in grass",
+    "total_time_sec": 25.69
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"sheep\",\n    \"grass\",\n    \"wooden fence\",\n    \"window\",\n    \"car\",\n    \"reflection\",\n    \"leaves\",\n    \"bush\",\n    \"sky\",\n    \"building\",\n    \"door\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\",\n    \"reflection\"\n  ]\n}"
+}

@@ -1,0 +1,263 @@
+{
+  "image_id": 63602,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000063602.jpg",
+  "objects": [
+    "laptop",
+    "printer",
+    "desk",
+    "phone",
+    "water bottle",
+    "papers",
+    "books",
+    "cable",
+    "mouse pad",
+    "pen",
+    "document",
+    "stapler",
+    "desk lamp",
+    "chair",
+    "desk organizer",
+    "desk fan",
+    "desk clock",
+    "desk calendar",
+    "desk organizer"
+  ],
+  "template": "We have an image with these objects: ['laptop', 'printer', 'desk', 'phone', 'water bottle', 'papers', 'books', 'cable', 'mouse pad', 'pen', 'document', 'stapler', 'desk lamp', 'chair', 'desk organizer', 'desk fan', 'desk clock', 'desk calendar', 'desk organizer']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Desk with laptop papers and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "printer",
+          "phone",
+          "water bottle",
+          "cable",
+          "mouse pad",
+          "desk lamp",
+          "desk fan",
+          "desk clock",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "desk organizer"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects on the desk.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects on the desk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with laptop papers and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"printer\", \"phone\", \"water bottle\", \"cable\", \"mouse pad\", \"desk lamp\", \"desk fan\", \"desk clock\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"chair\", \"desk organizer\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects on the desk.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects on the desk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Desk with laptop papers printer phone water bottle cable mouse pad lamp fan clock calendar",
+      "vlm_hint": {
+        "missing_objects": [
+          "pen",
+          "stapler",
+          "desk lamp",
+          "desk fan",
+          "desk clock",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk lamp, and the presence of a calendar."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with laptop papers printer phone water bottle cable mouse pad lamp fan clock calendar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pen\", \"stapler\", \"desk lamp\", \"desk fan\", \"desk clock\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk lamp, and the presence of a calendar.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Desktop with laptop, printer, papers, and blue desk lamp beside calendar",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse pad",
+          "cable",
+          "desk lamp",
+          "desk fan",
+          "desk clock",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the desk, including the mouse pad, cable, desk lamp, desk fan, desk clock, and desk calendar."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desktop with laptop, printer, papers, and blue desk lamp beside calendar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse pad\", \"cable\", \"desk lamp\", \"desk fan\", \"desk clock\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the desk, including the mouse pad, cable, desk lamp, desk fan, desk clock, and desk calendar.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Desktop with laptop, printer, papers, cable, and blue desk lamp near desk fan, clock, and calendar",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse pad",
+          "stapler",
+          "desk lamp",
+          "desk fan",
+          "clock",
+          "calendar"
+        ],
+        "hallucinated_objects": [
+          "desk",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects on the desk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desktop with laptop, printer, papers, cable, and blue desk lamp near desk fan, clock, and calendar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse pad\", \"stapler\", \"desk lamp\", \"desk fan\", \"clock\", \"calendar\"],\n  \"hallucinated_objects\": [\"desk\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects on the desk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Laptop, printer, papers, cable, mouse pad, stapler, desk lamp, desk fan, clock, calendar on tidy desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "water bottle",
+          "pen"
+        ],
+        "hallucinated_objects": [
+          "desk lamp",
+          "desk fan",
+          "clock",
+          "calendar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects on the desk."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Laptop, printer, papers, cable, mouse pad, stapler, desk lamp, desk fan, clock, calendar on tidy desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"water bottle\", \"pen\"],\n  \"hallucinated_objects\": [\"desk lamp\", \"desk fan\", \"clock\", \"calendar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects on the desk.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Laptop, printer, papers, cable, mouse pad, pen, water bottle, stapler on organized desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk lamp",
+          "desk fan",
+          "desk clock",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the desk, such as the type of printer, the color of the mouse pad, and the brand of the laptop."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Laptop, printer, papers, cable, mouse pad, pen, water bottle, stapler on organized desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk lamp\", \"desk fan\", \"desk clock\", \"desk calendar\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the desk, such as the type of printer, the color of the mouse pad, and the brand of the laptop.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Black laptop with wired mouse on organized desk next to white printer and water bottle",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk lamp",
+          "desk fan",
+          "desk clock",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "desk organizer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk, and the presence of a desk lamp or fan."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black laptop with wired mouse on organized desk next to white printer and water bottle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk lamp\", \"desk fan\", \"desk clock\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"desk organizer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk, and the presence of a desk lamp or fan.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Black laptop and mouse on a neat desk near a white printer, water bottle, and desk lamp.",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk lamp",
+          "desk fan",
+          "desk clock",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "desk organizer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk lamp, and the presence of a desk calendar."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black laptop and mouse on a neat desk near a white printer, water bottle, and desk lamp.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk lamp\", \"desk fan\", \"desk clock\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"desk organizer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk lamp, and the presence of a desk calendar.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Black laptop and mouse on a tidy desk beside a white printer, blue desk lamp, and desk calendar.",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "water bottle",
+          "cable",
+          "mouse pad",
+          "desk lamp",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "desk fan",
+          "desk clock",
+          "desk organizer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes all the objects on the desk and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black laptop and mouse on a tidy desk beside a white printer, blue desk lamp, and desk calendar.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"water bottle\", \"cable\", \"mouse pad\", \"desk lamp\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"chair\", \"desk fan\", \"desk clock\", \"desk organizer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes all the objects on the desk and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Black laptop and mouse next to a water bottle, papers, and a white printer on a tidy desk with a blue lamp and desk calendar.",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse pad",
+          "desk lamp",
+          "desk calendar"
+        ],
+        "hallucinated_objects": [
+          "desk fan",
+          "desk clock"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the desk.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk lamp, and the presence of a desk calendar."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, printer, desk, phone, water bottle, papers, books, cable, mouse pad, pen, document, stapler, desk lamp, chair, desk organizer, desk fan, desk clock, desk calendar, desk organizer]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black laptop and mouse next to a water bottle, papers, and a white printer on a tidy desk with a blue lamp and desk calendar.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse pad\", \"desk lamp\", \"desk calendar\"],\n  \"hallucinated_objects\": [\"desk fan\", \"desk clock\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the desk.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the desk, such as the type of printer, the color of the desk lamp, and the presence of a desk calendar.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 63602,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000063602.jpg",
+    "final_caption": "Black laptop and mouse next to a water bottle, papers, and a white printer on a tidy desk with a blue lamp and desk calendar.",
+    "total_time_sec": 37.06
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"laptop\",\n    \"printer\",\n    \"desk\",\n    \"phone\",\n    \"water bottle\",\n    \"papers\",\n    \"books\",\n    \"cable\",\n    \"mouse pad\",\n    \"pen\",\n    \"document\",\n    \"stapler\",\n    \"desk lamp\",\n    \"chair\",\n    \"desk organizer\",\n    \"desk fan\",\n    \"desk clock\",\n    \"desk calendar\",\n    \"desk organizer\"\n  ]\n}"
+}

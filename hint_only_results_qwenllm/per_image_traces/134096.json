@@ -1,0 +1,241 @@
+{
+  "image_id": 134096,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000134096.jpg",
+  "objects": [
+    "cat",
+    "sink",
+    "faucet",
+    "tile",
+    "shelf",
+    "bottle",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap",
+    "bottle cap"
+  ],
+  "template": "We have an image with these objects: ['cat', 'sink', 'faucet', 'tile', 'shelf', 'bottle', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap', 'bottle cap']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat near sink with many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "shelf"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the shelf."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near sink with many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\"],\n  \"hallucinated_objects\": [\"shelf\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the shelf.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat near sink with many bottle caps and a bottle",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "shelf"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the bottle and removes the shelf."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near sink with many bottle caps and a bottle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\"],\n  \"hallucinated_objects\": [\"shelf\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the bottle and removes the shelf.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat near sink with bottle and countless bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "tile",
+          "shelf",
+          "bottle",
+          "faucet"
+        ],
+        "hallucinated_objects": [
+          "tile",
+          "shelf",
+          "bottle",
+          "faucet"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near sink with bottle and countless bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tile\", \"shelf\", \"bottle\", \"faucet\"],\n  \"hallucinated_objects\": [\"tile\", \"shelf\", \"bottle\", \"faucet\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat by sink with bottle and many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "tile",
+          "shelf",
+          "bottle",
+          "bottle cap"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "faucet"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink with bottle and many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tile\", \"shelf\", \"bottle\", \"bottle cap\"],\n  \"hallucinated_objects\": [\"sink\", \"faucet\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat on tile near shelf with bottle and bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet"
+        ],
+        "hallucinated_objects": [
+          "shelf",
+          "bottle",
+          "bottle cap"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on tile near shelf with bottle and bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\"],\n  \"hallucinated_objects\": [\"shelf\", \"bottle\", \"bottle cap\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat by sink near faucet with many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "shelf",
+          "tile",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "faucet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink near faucet with many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shelf\", \"tile\", \"bottle\"],\n  \"hallucinated_objects\": [\"sink\", \"faucet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat on shelf by tiles with many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet"
+        ],
+        "hallucinated_objects": [
+          "shelf",
+          "bottle",
+          "bottle cap"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the shelf, bottle, and bottle caps from the caption. Also, include the sink and faucet in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on shelf by tiles with many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\"],\n  \"hallucinated_objects\": [\"shelf\", \"bottle\", \"bottle cap\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the shelf, bottle, and bottle caps from the caption. Also, include the sink and faucet in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat by sink near faucet with many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "shelf",
+          "tile",
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "faucet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by sink near faucet with many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shelf\", \"tile\", \"bottle\"],\n  \"hallucinated_objects\": [\"sink\", \"faucet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat on tile by shelf with many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "faucet"
+        ],
+        "hallucinated_objects": [
+          "shelf",
+          "bottle",
+          "bottle cap"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the shelf and bottle captions and add the sink and faucet captions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on tile by shelf with many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"faucet\"],\n  \"hallucinated_objects\": [\"shelf\", \"bottle\", \"bottle cap\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the shelf and bottle captions and add the sink and faucet captions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat on tile near sink with running faucet and many bottle caps",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle"
+        ],
+        "hallucinated_objects": [
+          "shelf"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, sink, faucet, tile, shelf, bottle, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap, bottle cap]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on tile near sink with running faucet and many bottle caps\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\"],\n  \"hallucinated_objects\": [\"shelf\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 134096,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000134096.jpg",
+    "final_caption": "Cat on tile near sink with running faucet and many bottle caps",
+    "total_time_sec": 29.78
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"sink\",\n    \"faucet\",\n    \"tile\",\n    \"shelf\",\n    \"bottle\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\",\n    \"bottle cap\"\n  ]\n}"
+}

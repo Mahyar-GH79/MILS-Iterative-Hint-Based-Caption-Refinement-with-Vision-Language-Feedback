@@ -1,0 +1,251 @@
+{
+  "image_id": 239347,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000239347.jpg",
+  "objects": [
+    "bed",
+    "pillow",
+    "picture frame",
+    "wedding dress",
+    "tuxedo",
+    "necklace",
+    "bracelet",
+    "ring",
+    "bedspread",
+    "mirror",
+    "table",
+    "plant",
+    "picture",
+    "picture",
+    "picture",
+    "picture",
+    "picture",
+    "picture",
+    "picture",
+    "picture"
+  ],
+  "template": "We have an image with these objects: ['bed', 'pillow', 'picture frame', 'wedding dress', 'tuxedo', 'necklace', 'bracelet', 'ring', 'bedspread', 'mirror', 'table', 'plant', 'picture', 'picture', 'picture', 'picture', 'picture', 'picture', 'picture', 'picture']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Wedding dress tuxedo stand before pictures",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress tuxedo stand before pictures\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"table\", \"plant\"],\n  \"hallucinated_objects\": [\"picture frame\", \"necklace\", \"bracelet\", \"ring\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Wedding dress and tuxedo on table with pictures and plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bed",
+          "pillow",
+          "picture frame",
+          "wedding dress",
+          "tuxedo",
+          "necklace",
+          "bracelet",
+          "ring",
+          "bedspread",
+          "mirror",
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress and tuxedo on table with pictures and plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bed\", \"pillow\", \"picture frame\", \"wedding dress\", \"tuxedo\", \"necklace\", \"bracelet\", \"ring\", \"bedspread\", \"mirror\", \"table\", \"plant\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Wedding dress tuxedo table pictures bedspread",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "picture"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mirror, table, and plant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress tuxedo table pictures bedspread\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"table\", \"plant\"],\n  \"hallucinated_objects\": [\"picture\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mirror, table, and plant.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Wedding dress tuxedo on bed with mirror table plant",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "mirror",
+          "table",
+          "plant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of dress and tuxedo, and include the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress tuxedo on bed with mirror table plant\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"bracelet\", \"ring\"],\n  \"hallucinated_objects\": [\"mirror\", \"table\", \"plant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of dress and tuxedo, and include the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Wedding dress tuxedo bed spread pictures necklace bracelet ring",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "picture frame"
+        ],
+        "genericity_hint": "The image is a photograph of a couple on a bed, not a real bed.",
+        "edit_instructions": [
+          "Remove the mirror, table, and plant. Add a picture frame around the photograph."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress tuxedo bed spread pictures necklace bracelet ring\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"table\", \"plant\"],\n  \"hallucinated_objects\": [\"picture frame\"],\n  \"genericity_hint\": \"The image is a photograph of a couple on a bed, not a real bed.\",\n  \"edit_instructions\": \"Remove the mirror, table, and plant. Add a picture frame around the photograph.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Photograph of couple in wedding dress tuxedo with bedspread and pictures",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "table",
+          "plant"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Photograph of couple in wedding dress tuxedo with bedspread and pictures\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"table\", \"plant\"],\n  \"hallucinated_objects\": [\"picture frame\", \"necklace\", \"bracelet\", \"ring\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Wedding dress and tuxedo on bed with bedspread and pictures on table near plant",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress and tuxedo on bed with bedspread and pictures on table near plant\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"bracelet\", \"ring\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Wedding dress and tuxedo on bed with bedspread, pictures, and jewelry on table near plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress and tuxedo on bed with bedspread, pictures, and jewelry on table near plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"bracelet\", \"ring\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Wedding dress and tuxedo on bed with bedspread, pictures, and jewelry on table near plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress and tuxedo on bed with bedspread, pictures, and jewelry on table near plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"necklace\", \"bracelet\", \"ring\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Wedding dress and tuxedo on bed with bedspread, pictures, necklace, bracelet, and ring on table near plant.",
+      "vlm_hint": {
+        "missing_objects": [
+          "picture frame",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "plant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a picture frame and a mirror, and avoid mentioning objects that are not present in the image, such as a table and a plant."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bed, pillow, picture frame, wedding dress, tuxedo, necklace, bracelet, ring, bedspread, mirror, table, plant, picture, picture, picture, picture, picture, picture, picture, picture]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wedding dress and tuxedo on bed with bedspread, pictures, necklace, bracelet, and ring on table near plant.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"picture frame\", \"mirror\"],\n  \"hallucinated_objects\": [\"table\", \"plant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a picture frame and a mirror, and avoid mentioning objects that are not present in the image, such as a table and a plant.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 239347,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000239347.jpg",
+    "final_caption": "Wedding dress and tuxedo on bed with bedspread, pictures, necklace, bracelet, and ring on table near plant.",
+    "total_time_sec": 32.27
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bed\",\n    \"pillow\",\n    \"picture frame\",\n    \"wedding dress\",\n    \"tuxedo\",\n    \"necklace\",\n    \"bracelet\",\n    \"ring\",\n    \"bedspread\",\n    \"mirror\",\n    \"table\",\n    \"plant\",\n    \"picture\",\n    \"picture\",\n    \"picture\",\n    \"picture\",\n    \"picture\",\n    \"picture\",\n    \"picture\",\n    \"picture\"\n  ]\n}"
+}

@@ -1,0 +1,371 @@
+{
+  "image_id": 196759,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000196759.jpg",
+  "objects": [
+    "Lay's van",
+    "Frito Lay van",
+    "Parking lot",
+    "Streetlights",
+    "Trees",
+    "Sky",
+    "Clouds",
+    "Car",
+    "Tail light",
+    "Door handle",
+    "Mirror",
+    "Tire",
+    "Rearview mirror",
+    "Roof",
+    "Window",
+    "Handle",
+    "Door",
+    "Light",
+    "Street"
+  ],
+  "template": "We have an image with these objects: [\"Lay's van\", 'Frito Lay van', 'Parking lot', 'Streetlights', 'Trees', 'Sky', 'Clouds', 'Car', 'Tail light', 'Door handle', 'Mirror', 'Tire', 'Rearview mirror', 'Roof', 'Window', 'Handle', 'Door', 'Light', 'Street']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Frito Lay van parked in parking lot at night",
+      "vlm_hint": {
+        "missing_objects": [
+          "Lay's van",
+          "Frito Lay van",
+          "Parking lot",
+          "Streetlights",
+          "Trees",
+          "Sky",
+          "Clouds",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Tire",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Night"
+        ],
+        "genericity_hint": "The image is not taken at night.",
+        "edit_instructions": [
+          "Remove the 'Night' from the caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van parked in parking lot at night\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Lay's van\", \"Frito Lay van\", \"Parking lot\", \"Streetlights\", \"Trees\", \"Sky\", \"Clouds\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Tire\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Night\"],\n  \"genericity_hint\": \"The image is not taken at night.\",\n  \"edit_instructions\": \"Remove the 'Night' from the caption.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Frito Lay van in parking lot with trees and sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Tail light",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Car",
+          "Mirror",
+          "Tire",
+          "Rearview mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the van and its surroundings.",
+        "edit_instructions": [
+          "Provide more specific details about the van and its surroundings, including the presence of a tail light, rearview mirror, roof, window, handle, door, light, and street."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with trees and sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Tail light\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Car\", \"Mirror\", \"Tire\", \"Rearview mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the van and its surroundings.\",\n  \"edit_instructions\": \"Provide more specific details about the van and its surroundings, including the presence of a tail light, rearview mirror, roof, window, handle, door, light, and street.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Frito Lay van in parking lot with tail light and roof under cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Streetlights",
+          "Trees",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Streetlights",
+          "Trees",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of streetlights, trees, cars, and other objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with tail light and roof under cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Streetlights\", \"Trees\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Streetlights\", \"Trees\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of streetlights, trees, cars, and other objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Frito Lay van in parking lot with cloudy sky and tail light.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Streetlights",
+          "Trees",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Streetlights",
+          "Trees",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of streetlights, trees, cars, and other objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with cloudy sky and tail light.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Streetlights\", \"Trees\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Streetlights\", \"Trees\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of streetlights, trees, cars, and other objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Frito Lay van in parking lot with two cars nearby and cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Streetlights",
+          "Trees",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Streetlights",
+          "Trees",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of cars, the type of streetlights, and the specific features of the van."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with two cars nearby and cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Streetlights\", \"Trees\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Streetlights\", \"Trees\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of cars, the type of streetlights, and the specific features of the van.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Frito Lay van in parking lot with car and streetlights under cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Lay's van",
+          "Frito Lay van",
+          "Parking lot",
+          "Streetlights",
+          "Trees",
+          "Sky",
+          "Clouds",
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Tire",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the make and model of the van, the number of cars and streetlights, and the color of the sky."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with car and streetlights under cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Lay's van\", \"Frito Lay van\", \"Parking lot\", \"Streetlights\", \"Trees\", \"Sky\", \"Clouds\", \"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Tire\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the make and model of the van, the number of cars and streetlights, and the color of the sky.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Frito Lay van in parking lot with multiple cars and streetlights under a blue sky with clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Tail light",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Car",
+          "Streetlights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of cars, streetlights, and other objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with multiple cars and streetlights under a blue sky with clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Tail light\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Car\", \"Streetlights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of cars, streetlights, and other objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Frito Lay van in parking lot with cars and streetlights under a blue sky with clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "Tail light",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Door",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Car",
+          "Streetlights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the van and its surroundings.",
+        "edit_instructions": [
+          "Provide more specific details about the van and its surroundings, including the van's features and the parking lot's details."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot with cars and streetlights under a blue sky with clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Tail light\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Door\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Car\", \"Streetlights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the van and its surroundings.\",\n  \"edit_instructions\": \"Provide more specific details about the van and its surroundings, including the van's features and the parking lot's details.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Frito Lay van parked in lot with trees, cloudy sky, tail light visible",
+      "vlm_hint": {
+        "missing_objects": [
+          "Streetlights",
+          "Rearview mirror",
+          "Roof",
+          "Window",
+          "Handle",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Car",
+          "Tail light",
+          "Door handle",
+          "Mirror",
+          "Tire",
+          "Rearview mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of streetlights, the type of trees, and the color of the sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van parked in lot with trees, cloudy sky, tail light visible\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Streetlights\", \"Rearview mirror\", \"Roof\", \"Window\", \"Handle\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Car\", \"Tail light\", \"Door handle\", \"Mirror\", \"Tire\", \"Rearview mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of streetlights, the type of trees, and the color of the sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Frito Lay van in parking lot under cloudy sky by streetlit trees and windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "Tail light",
+          "Rearview mirror",
+          "Roof",
+          "Light",
+          "Street"
+        ],
+        "hallucinated_objects": [
+          "Car",
+          "Door handle",
+          "Mirror",
+          "Tire",
+          "Rearview mirror",
+          "Door",
+          "Window",
+          "Handle",
+          "Light",
+          "Street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of streetlights, trees, and windows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Lay's van, Frito Lay van, Parking lot, Streetlights, Trees, Sky, Clouds, Car, Tail light, Door handle, Mirror, Tire, Rearview mirror, Roof, Window, Handle, Door, Light, Street]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Frito Lay van in parking lot under cloudy sky by streetlit trees and windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Tail light\", \"Rearview mirror\", \"Roof\", \"Light\", \"Street\"],\n  \"hallucinated_objects\": [\"Car\", \"Door handle\", \"Mirror\", \"Tire\", \"Rearview mirror\", \"Door\", \"Window\", \"Handle\", \"Light\", \"Street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of streetlights, trees, and windows.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 196759,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000196759.jpg",
+    "final_caption": "Frito Lay van in parking lot under cloudy sky by streetlit trees and windows",
+    "total_time_sec": 46.96
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"Lay's van\",\n    \"Frito Lay van\",\n    \"Parking lot\",\n    \"Streetlights\",\n    \"Trees\",\n    \"Sky\",\n    \"Clouds\",\n    \"Car\",\n    \"Tail light\",\n    \"Door handle\",\n    \"Mirror\",\n    \"Tire\",\n    \"Rearview mirror\",\n    \"Roof\",\n    \"Window\",\n    \"Handle\",\n    \"Door\",\n    \"Light\",\n    \"Street\"\n  ]\n}"
+}

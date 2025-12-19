@@ -1,0 +1,256 @@
+{
+  "image_id": 140640,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000140640.jpg",
+  "objects": [
+    "red hat",
+    "woman",
+    "brown hat",
+    "woman",
+    "woman",
+    "cake",
+    "knife",
+    "candle",
+    "plant",
+    "wall",
+    "fire extinguisher",
+    "necklace",
+    "glasses",
+    "scarf",
+    "table",
+    "cupcake",
+    "hat",
+    "woman",
+    "woman",
+    "woman"
+  ],
+  "template": "We have an image with these objects: ['red hat', 'woman', 'brown hat', 'woman', 'woman', 'cake', 'knife', 'candle', 'plant', 'wall', 'fire extinguisher', 'necklace', 'glasses', 'scarf', 'table', 'cupcake', 'hat', 'woman', 'woman', 'woman']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Three women celebrate with cakes and hats in a room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle",
+          "plant",
+          "wall",
+          "fire extinguisher",
+          "necklace",
+          "glasses",
+          "scarf",
+          "table",
+          "cupcake",
+          "hat"
+        ],
+        "hallucinated_objects": [
+          "red hat",
+          "brown hat"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women celebrate with cakes and hats in a room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\", \"plant\", \"wall\", \"fire extinguisher\", \"necklace\", \"glasses\", \"scarf\", \"table\", \"cupcake\", \"hat\"],\n  \"hallucinated_objects\": [\"red hat\", \"brown hat\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Three women with hats gather around a cake on a table in a room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle",
+          "plant",
+          "wall",
+          "fire extinguisher",
+          "necklace",
+          "glasses",
+          "scarf",
+          "table",
+          "cupcake"
+        ],
+        "hallucinated_objects": [
+          "red hat",
+          "brown hat"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the color and type of hats, the type of cake, and the location of the objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women with hats gather around a cake on a table in a room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\", \"plant\", \"wall\", \"fire extinguisher\", \"necklace\", \"glasses\", \"scarf\", \"table\", \"cupcake\"],\n  \"hallucinated_objects\": [\"red hat\", \"brown hat\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the color and type of hats, the type of cake, and the location of the objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Three women in hats gather around a decorated cake and plants on a table in a room.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle"
+        ],
+        "hallucinated_objects": [
+          "plant",
+          "wall",
+          "fire extinguisher",
+          "necklace",
+          "glasses",
+          "scarf",
+          "table",
+          "cupcake"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in hats gather around a decorated cake and plants on a table in a room.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\"],\n  \"hallucinated_objects\": [\"plant\", \"wall\", \"fire extinguisher\", \"necklace\", \"glasses\", \"scarf\", \"table\", \"cupcake\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Three women in red and brown hats gather around a cake with a knife and candles on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle"
+        ],
+        "hallucinated_objects": [
+          "woman"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in red and brown hats gather around a cake with a knife and candles on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\"],\n  \"hallucinated_objects\": [\"woman\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Three women in red and brown hats gather around a cake decorated with a knife and candles on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candles",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "red hat",
+          "brown hat"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in red and brown hats gather around a cake decorated with a knife and candles on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candles\", \"table\"],\n  \"hallucinated_objects\": [\"red hat\", \"brown hat\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Three women wear hats gather around a cake with a knife and candles on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candles",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "woman"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the knife, candles, and table, and clarify the number of women."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women wear hats gather around a cake with a knife and candles on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candles\", \"table\"],\n  \"hallucinated_objects\": [\"woman\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the knife, candles, and table, and clarify the number of women.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Three women in hats gather around a cake with candles and a knife on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the knife and candle, and describes the table and its contents."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in hats gather around a cake with candles and a knife on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the knife and candle, and describes the table and its contents.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Three women in hats gather 'round a cake with candles and a knife, necklaces glinting.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle"
+        ],
+        "hallucinated_objects": [
+          "necklace"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the knife and candle, and remove the unnecessary mention of the necklace."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in hats gather 'round a cake with candles and a knife, necklaces glinting.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\"],\n  \"hallucinated_objects\": [\"necklace\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the knife and candle, and remove the unnecessary mention of the necklace.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Three women in red and brown hats gather 'round a cake with candles and a knife.",
+      "vlm_hint": {
+        "missing_objects": [
+          "scarf",
+          "necklace",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "cupcake"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and remove the generic phrase 'gather 'round'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in red and brown hats gather 'round a cake with candles and a knife.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"scarf\", \"necklace\", \"glasses\"],\n  \"hallucinated_objects\": [\"cupcake\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and remove the generic phrase 'gather 'round'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Three women in red and brown hats stand by a cake with lit candles and a knife, one wearing a scarf and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "candle"
+        ],
+        "hallucinated_objects": [
+          "woman"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [red hat, woman, brown hat, woman, woman, cake, knife, candle, plant, wall, fire extinguisher, necklace, glasses, scarf, table, cupcake, hat, woman, woman, woman]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Three women in red and brown hats stand by a cake with lit candles and a knife, one wearing a scarf and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"candle\"],\n  \"hallucinated_objects\": [\"woman\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 140640,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000140640.jpg",
+    "final_caption": "Three women in red and brown hats stand by a cake with lit candles and a knife, one wearing a scarf and glasses.",
+    "total_time_sec": 33.99
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"red hat\",\n    \"woman\",\n    \"brown hat\",\n    \"woman\",\n    \"woman\",\n    \"cake\",\n    \"knife\",\n    \"candle\",\n    \"plant\",\n    \"wall\",\n    \"fire extinguisher\",\n    \"necklace\",\n    \"glasses\",\n    \"scarf\",\n    \"table\",\n    \"cupcake\",\n    \"hat\",\n    \"woman\",\n    \"woman\",\n    \"woman\"\n  ]\n}"
+}

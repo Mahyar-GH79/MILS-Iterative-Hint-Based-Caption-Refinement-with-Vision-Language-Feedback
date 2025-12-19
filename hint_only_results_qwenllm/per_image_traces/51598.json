@@ -1,0 +1,210 @@
+{
+  "image_id": 51598,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000051598.jpg",
+  "objects": [
+    "sink",
+    "mirror",
+    "shelf",
+    "bottle",
+    "plastic bag",
+    "door",
+    "handle",
+    "light switch",
+    "wall",
+    "ceiling",
+    "pipe",
+    "water faucet",
+    "sticker",
+    "wall outlet",
+    "wall",
+    "wall",
+    "wall",
+    "wall",
+    "wall",
+    "wall"
+  ],
+  "template": "We have an image with these objects: ['sink', 'mirror', 'shelf', 'bottle', 'plastic bag', 'door', 'handle', 'light switch', 'wall', 'ceiling', 'pipe', 'water faucet', 'sticker', 'wall outlet', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bottle on sink near wall outlets and mirror",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic bag",
+          "handle",
+          "water faucet"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "sticker",
+          "wall outlet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle on sink near wall outlets and mirror\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic bag\", \"handle\", \"water faucet\"],\n  \"hallucinated_objects\": [\"light switch\", \"sticker\", \"wall outlet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bottle and plastic bag on sink near mirror and handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "light switch",
+          "water faucet",
+          "plastic bag",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "mirror",
+          "shelf",
+          "bottle",
+          "plastic bag",
+          "door",
+          "handle",
+          "light switch",
+          "wall",
+          "ceiling",
+          "pipe",
+          "water faucet",
+          "sticker",
+          "wall outlet",
+          "wall",
+          "wall",
+          "wall",
+          "wall",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide enough detail about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle and plastic bag on sink near mirror and handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light switch\", \"water faucet\", \"plastic bag\", \"handle\"],\n  \"hallucinated_objects\": [\"sink\", \"mirror\", \"shelf\", \"bottle\", \"plastic bag\", \"door\", \"handle\", \"light switch\", \"wall\", \"ceiling\", \"pipe\", \"water faucet\", \"sticker\", \"wall outlet\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide enough detail about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Plastic bag and handle next to water faucet and light switch on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "plastic bag"
+        ],
+        "hallucinated_objects": [
+          "water faucet",
+          "light switch",
+          "handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the bottle and plastic bag, and remove the mention of the water faucet, light switch, and handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plastic bag and handle next to water faucet and light switch on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"plastic bag\"],\n  \"hallucinated_objects\": [\"water faucet\", \"light switch\", \"handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the bottle and plastic bag, and remove the mention of the water faucet, light switch, and handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Plastic bag and bottle near sink on wall",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plastic bag and bottle near sink on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light switch\", \"sticker\", \"wall outlet\", \"water faucet\", \"plastic bag\", \"bottle\", \"sink\", \"mirror\", \"shelf\", \"handle\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\","
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bottle and plastic bag near sink on wall",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle and plastic bag near sink on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light switch\", \"sticker\", \"wall outlet\", \"water faucet\", \"plastic bag\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \""
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bottle and plastic bag near sink on wall",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle and plastic bag near sink on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light switch\", \"sticker\", \"wall outlet\", \"water faucet\", \"plastic bag\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \""
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bottle and plastic bag by sink on wall",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle and plastic bag by sink on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light switch\", \"sticker\", \"wall outlet\", \"water faucet\", \"plastic bag\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \""
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bottle and plastic bag by sink on wall above counter",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle and plastic bag by sink on wall above counter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"light switch\", \"sticker\", \"wall outlet\", \"water faucet\", \"plastic bag\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \""
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bottle and plastic bag by sink on wall shelf above countertop",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "plastic bag",
+          "sink",
+          "wall shelf",
+          "countertop"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific objects and focus on the general scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bottle and plastic bag by sink on wall shelf above countertop\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"plastic bag\", \"sink\", \"wall shelf\", \"countertop\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific objects and focus on the general scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Mirror and shelf above sink with bottles",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sink, mirror, shelf, bottle, plastic bag, door, handle, light switch, wall, ceiling, pipe, water faucet, sticker, wall outlet, wall, wall, wall, wall, wall, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mirror and shelf above sink with bottles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic bag\", \"handle\", \"light switch\", \"wall outlet\", \"water faucet\", \"sticker\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \"wall\", \""
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 51598,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000051598.jpg",
+    "final_caption": "Mirror and shelf above sink with bottles",
+    "total_time_sec": 58.97
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"sink\",\n    \"mirror\",\n    \"shelf\",\n    \"bottle\",\n    \"plastic bag\",\n    \"door\",\n    \"handle\",\n    \"light switch\",\n    \"wall\",\n    \"ceiling\",\n    \"pipe\",\n    \"water faucet\",\n    \"sticker\",\n    \"wall outlet\",\n    \"wall\",\n    \"wall\",\n    \"wall\",\n    \"wall\",\n    \"wall\",\n    \"wall\"\n  ]\n}"
+}

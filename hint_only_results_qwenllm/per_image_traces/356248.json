@@ -1,0 +1,243 @@
+{
+  "image_id": 356248,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000356248.jpg",
+  "objects": [
+    "table",
+    "chair",
+    "bottle",
+    "cup",
+    "mug",
+    "newspaper",
+    "flower arrangement",
+    "lamp",
+    "fan",
+    "woman",
+    "man",
+    "child",
+    "tablecloth",
+    "table",
+    "chair",
+    "table",
+    "chair",
+    "table",
+    "chair",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['table', 'chair', 'bottle', 'cup', 'mug', 'newspaper', 'flower arrangement', 'lamp', 'fan', 'woman', 'man', 'child', 'tablecloth', 'table', 'chair', 'table', 'chair', 'table', 'chair', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Woman man child around table with chairs and flowers",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "cup",
+          "mug",
+          "newspaper",
+          "lamp",
+          "fan",
+          "woman",
+          "man",
+          "child"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman man child around table with chairs and flowers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"cup\", \"mug\", \"newspaper\", \"lamp\", \"fan\", \"woman\", \"man\", \"child\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Woman man child around table with chairs bottles and flowers",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "cup",
+          "mug",
+          "newspaper",
+          "lamp",
+          "fan",
+          "woman",
+          "man",
+          "child",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of table, chairs, and flowers."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman man child around table with chairs bottles and flowers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"cup\", \"mug\", \"newspaper\", \"lamp\", \"fan\", \"woman\", \"man\", \"child\", \"tablecloth\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of table, chairs, and flowers.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman man child at a wooden table with chairs, bottles, mugs, and a flower arrangement.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lamp",
+          "fan",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "newspaper"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of table, chairs, or objects.",
+        "edit_instructions": [
+          "Specify the type of table, chairs, and objects in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman man child at a wooden table with chairs, bottles, mugs, and a flower arrangement.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lamp\", \"fan\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"newspaper\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of table, chairs, or objects.\",\n  \"edit_instructions\": \"Specify the type of table, chairs, and objects in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Wooden table chairs woman man child bottles mugs flower arrangement lamp fan tablecloth",
+      "vlm_hint": {
+        "missing_objects": [
+          "bottle",
+          "cup",
+          "mug",
+          "newspaper",
+          "flower arrangement",
+          "lamp",
+          "fan",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "woman",
+          "man",
+          "child"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table chairs woman man child bottles mugs flower arrangement lamp fan tablecloth\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bottle\", \"cup\", \"mug\", \"newspaper\", \"flower arrangement\", \"lamp\", \"fan\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"woman\", \"man\", \"child\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Wooden table with chairs, bottle, cup, mug, flower arrangement, lamp, fan, tablecloth.",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "man",
+          "child"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of objects or their arrangement.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the number of each object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table with chairs, bottle, cup, mug, flower arrangement, lamp, fan, tablecloth.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"man\", \"child\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of objects or their arrangement.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the number of each object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Wooden table with four chairs, bottle, cup, mug, flower arrangement, lamp, fan. Woman man child present.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "child"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of chairs or the presence of a man and child.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table with four chairs, bottle, cup, mug, flower arrangement, lamp, fan. Woman man child present.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"child\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of chairs or the presence of a man and child.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Wooden table with six chairs, bottle, cup, mug, flower arrangement, lamp, fan, man, child present.",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "newspaper"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of chairs.",
+        "edit_instructions": [
+          "Remove the generic 'tablecloth' and specify the number of chairs."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table with six chairs, bottle, cup, mug, flower arrangement, lamp, fan, man, child present.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"newspaper\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of chairs.\",\n  \"edit_instructions\": \"Remove the generic 'tablecloth' and specify the number of chairs.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Wooden table with eight chairs, bottle, cup, mug, flower arrangement, lamp, fan, woman, child present.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of chairs.",
+        "edit_instructions": [
+          "Remove the tablecloth and specify the number of chairs."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table with eight chairs, bottle, cup, mug, flower arrangement, lamp, fan, woman, child present.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of chairs.\",\n  \"edit_instructions\": \"Remove the tablecloth and specify the number of chairs.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Wooden table with six chairs, bottle, cup, mug, flower arrangement, lamp, fan, man and woman present.",
+      "vlm_hint": {
+        "missing_objects": [
+          "newspaper",
+          "child"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of chairs or the presence of a child.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table with six chairs, bottle, cup, mug, flower arrangement, lamp, fan, man and woman present.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"newspaper\", \"child\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of chairs or the presence of a child.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Wooden table with eight chairs, bottle, cup, mug, flower arrangement, lamp, fan, man, woman, and child present.",
+      "vlm_hint": {
+        "missing_objects": [
+          "newspaper"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of chairs.",
+        "edit_instructions": [
+          "Remove the generic number of chairs and specify the exact number of chairs present."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [table, chair, bottle, cup, mug, newspaper, flower arrangement, lamp, fan, woman, man, child, tablecloth, table, chair, table, chair, table, chair, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wooden table with eight chairs, bottle, cup, mug, flower arrangement, lamp, fan, man, woman, and child present.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"newspaper\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of chairs.\",\n  \"edit_instructions\": \"Remove the generic number of chairs and specify the exact number of chairs present.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 356248,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000356248.jpg",
+    "final_caption": "Wooden table with eight chairs, bottle, cup, mug, flower arrangement, lamp, fan, man, woman, and child present.",
+    "total_time_sec": 32.72
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"table\",\n    \"chair\",\n    \"bottle\",\n    \"cup\",\n    \"mug\",\n    \"newspaper\",\n    \"flower arrangement\",\n    \"lamp\",\n    \"fan\",\n    \"woman\",\n    \"man\",\n    \"child\",\n    \"tablecloth\",\n    \"table\",\n    \"chair\",\n    \"table\",\n    \"chair\",\n    \"table\",\n    \"chair\",\n    \"table\"\n  ]\n}"
+}

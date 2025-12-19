@@ -1,0 +1,275 @@
+{
+  "image_id": 314034,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000314034.jpg",
+  "objects": [
+    "cows",
+    "geese",
+    "water",
+    "grass",
+    "trees",
+    "fence",
+    "bushes",
+    "leaves",
+    "sky",
+    "sunlight",
+    "reflection",
+    "pond",
+    "hills",
+    "rocks",
+    "branches",
+    "leaves",
+    "trees",
+    "grass",
+    "water",
+    "geese"
+  ],
+  "template": "We have an image with these objects: ['cows', 'geese', 'water', 'grass', 'trees', 'fence', 'bushes', 'leaves', 'sky', 'sunlight', 'reflection', 'pond', 'hills', 'rocks', 'branches', 'leaves', 'trees', 'grass', 'water', 'geese']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cows geese water ponds trees hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "fence",
+          "bushes",
+          "leaves",
+          "sky",
+          "sunlight",
+          "reflection",
+          "pond",
+          "hills",
+          "rocks",
+          "branches"
+        ],
+        "hallucinated_objects": [
+          "leaves",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, and branches."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows geese water ponds trees hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"fence\", \"bushes\", \"leaves\", \"sky\", \"sunlight\", \"reflection\", \"pond\", \"hills\", \"rocks\", \"branches\"],\n  \"hallucinated_objects\": [\"leaves\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, and branches.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cows geese by reflecting pond under sky sunlight by hills rocks fence bushes",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "leaves",
+          "branches"
+        ],
+        "hallucinated_objects": [
+          "pond",
+          "hills",
+          "rocks",
+          "fence",
+          "bushes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows geese by reflecting pond under sky sunlight by hills rocks fence bushes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"leaves\", \"branches\"],\n  \"hallucinated_objects\": [\"pond\", \"hills\", \"rocks\", \"fence\", \"bushes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cows and geese by grassy water under sky and sunlight with trees and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "reflection",
+          "hills",
+          "rocks",
+          "branches"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a pond, reflection, hills, rocks, and branches."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows and geese by grassy water under sky and sunlight with trees and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"reflection\", \"hills\", \"rocks\", \"branches\"],\n  \"hallucinated_objects\": [\"trees\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a pond, reflection, hills, rocks, and branches.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cows and geese by reflective pond among grass and trees under sunny sky by hills and rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills",
+          "rocks",
+          "branches",
+          "leaves",
+          "trees",
+          "grass",
+          "water",
+          "geese"
+        ],
+        "hallucinated_objects": [
+          "pond",
+          "sunlight",
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the presence of hills, rocks, branches, leaves, trees, grass, water, geese, and the pond."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows and geese by reflective pond among grass and trees under sunny sky by hills and rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\", \"rocks\", \"branches\", \"leaves\", \"trees\", \"grass\", \"water\", \"geese\"],\n  \"hallucinated_objects\": [\"pond\", \"sunlight\", \"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the presence of hills, rocks, branches, leaves, trees, grass, water, geese, and the pond.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cows and geese among grass and trees near hills and rocks under clear sky with leaves and branches.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a pond and its reflection, and the absence of hills and rocks."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows and geese among grass and trees near hills and rocks under clear sky with leaves and branches.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"reflection\"],\n  \"hallucinated_objects\": [\"hills\", \"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a pond and its reflection, and the absence of hills and rocks.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cows and geese by a pond with grass and trees under sunny sky showing reflection.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "rocks",
+          "branches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a pond and its reflection, and the specific types of trees and grass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows and geese by a pond with grass and trees under sunny sky showing reflection.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"reflection\"],\n  \"hallucinated_objects\": [\"hills\", \"rocks\", \"branches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a pond and its reflection, and the specific types of trees and grass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cows and geese by a pond with clear grassy reflection under sunny sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "reflection",
+          "grass",
+          "trees",
+          "leaves",
+          "sky",
+          "sunlight"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "rocks",
+          "branches"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the pond, reflection, grass, trees, leaves, and sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows and geese by a pond with clear grassy reflection under sunny sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"reflection\", \"grass\", \"trees\", \"leaves\", \"sky\", \"sunlight\"],\n  \"hallucinated_objects\": [\"hills\", \"rocks\", \"branches\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the pond, reflection, grass, trees, leaves, and sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cows and geese by a pond with grassy reflection under sunny sky and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "grass",
+          "reflection",
+          "trees",
+          "sunny sky"
+        ],
+        "hallucinated_objects": [
+          "geese",
+          "water",
+          "cows"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the pond, grass, reflection, trees, and sunny sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows and geese by a pond with grassy reflection under sunny sky and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"grass\", \"reflection\", \"trees\", \"sunny sky\"],\n  \"hallucinated_objects\": [\"geese\", \"water\", \"cows\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the pond, grass, reflection, trees, and sunny sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Pond with grassy reflection under sunny sky near trees and cows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "grass",
+          "reflection",
+          "trees",
+          "cows"
+        ],
+        "hallucinated_objects": [
+          "water",
+          "geese"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the pond, grass, reflection, trees, and cows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pond with grassy reflection under sunny sky near trees and cows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"grass\", \"reflection\", \"trees\", \"cows\"],\n  \"hallucinated_objects\": [\"water\", \"geese\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the pond, grass, reflection, trees, and cows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Pond with grassy reflection under sunny sky near trees and cows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pond",
+          "grass",
+          "reflection",
+          "trees",
+          "cows"
+        ],
+        "hallucinated_objects": [
+          "water",
+          "geese"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the pond, grass, reflection, trees, and cows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cows, geese, water, grass, trees, fence, bushes, leaves, sky, sunlight, reflection, pond, hills, rocks, branches, leaves, trees, grass, water, geese]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pond with grassy reflection under sunny sky near trees and cows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pond\", \"grass\", \"reflection\", \"trees\", \"cows\"],\n  \"hallucinated_objects\": [\"water\", \"geese\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the pond, grass, reflection, trees, and cows.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 314034,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000314034.jpg",
+    "final_caption": "Pond with grassy reflection under sunny sky near trees and cows.",
+    "total_time_sec": 37.45
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cows\",\n    \"geese\",\n    \"water\",\n    \"grass\",\n    \"trees\",\n    \"fence\",\n    \"bushes\",\n    \"leaves\",\n    \"sky\",\n    \"sunlight\",\n    \"reflection\",\n    \"pond\",\n    \"hills\",\n    \"rocks\",\n    \"branches\",\n    \"leaves\",\n    \"trees\",\n    \"grass\",\n    \"water\",\n    \"geese\"\n  ]\n}"
+}

@@ -1,0 +1,323 @@
+{
+  "image_id": 410880,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000410880.jpg",
+  "objects": [
+    "stuffed bear",
+    "saddle",
+    "door",
+    "balloons",
+    "bench",
+    "car",
+    "mirror",
+    "table",
+    "floor",
+    "window",
+    "door handle",
+    "doormat",
+    "ceiling",
+    "chair",
+    "tablecloth",
+    "table lamp",
+    "table leg",
+    "table top",
+    "table base",
+    "table surface"
+  ],
+  "template": "We have an image with these objects: ['stuffed bear', 'saddle', 'door', 'balloons', 'bench', 'car', 'mirror', 'table', 'floor', 'window', 'door handle', 'doormat', 'ceiling', 'chair', 'tablecloth', 'table lamp', 'table leg', 'table top', 'table base', 'table surface']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Stuffed bear balloons sit on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "mirror",
+          "table",
+          "floor",
+          "window",
+          "door handle",
+          "doormat",
+          "ceiling",
+          "chair",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear balloons sit on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"hallucinated_objects\": [\"car\", \"mirror\", \"table\", \"floor\", \"window\", \"door handle\", \"doormat\", \"ceiling\", \"chair\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Stuffed bear balloons perch on a table with a tablecloth",
+      "vlm_hint": {
+        "missing_objects": [
+          "balloons",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "table"
+        ],
+        "genericity_hint": "The image contains a stuffed bear, a saddle, a door, and a doormat.",
+        "edit_instructions": [
+          "Remove the balloons and tablecloth from the image. The image should only contain a stuffed bear, a saddle, a door, and a doormat."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear balloons perch on a table with a tablecloth\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"balloons\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"table\"],\n  \"genericity_hint\": \"The image contains a stuffed bear, a saddle, a door, and a doormat.\",\n  \"edit_instructions\": \"Remove the balloons and tablecloth from the image. The image should only contain a stuffed bear, a saddle, a door, and a doormat.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Stuffed bear saddle by door doormat",
+      "vlm_hint": {
+        "missing_objects": [
+          "balloons",
+          "bench",
+          "car",
+          "mirror",
+          "table",
+          "floor",
+          "window",
+          "door handle",
+          "doormat",
+          "ceiling",
+          "chair",
+          "tablecloth",
+          "table lamp",
+          "table leg",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "stuffed bear",
+          "saddle",
+          "door"
+        ],
+        "genericity_hint": "The image contains a stuffed bear, a saddle, and a door, but the captions are missing or incorrect.",
+        "edit_instructions": [
+          "Remove the captions and add the missing objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear saddle by door doormat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"balloons\", \"bench\", \"car\", \"mirror\", \"table\", \"floor\", \"window\", \"door handle\", \"doormat\", \"ceiling\", \"chair\", \"tablecloth\", \"table lamp\", \"table leg\", \"table surface\"],\n  \"hallucinated_objects\": [\"stuffed bear\", \"saddle\", \"door\"],\n  \"genericity_hint\": \"The image contains a stuffed bear, a saddle, and a door, but the captions are missing or incorrect.\",\n  \"edit_instructions\": \"Remove the captions and add the missing objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Balloons car mirror by window bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "stuffed bear",
+          "saddle",
+          "door",
+          "floor",
+          "table",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The image contains a large stuffed bear, a saddle, a door, balloons, a car, a mirror, a bench, a floor, a table, a tablecloth, a table lamp, a table base, and a table surface.",
+        "edit_instructions": [
+          "Remove the chair and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Balloons car mirror by window bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"stuffed bear\", \"saddle\", \"door\", \"floor\", \"table\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The image contains a large stuffed bear, a saddle, a door, balloons, a car, a mirror, a bench, a floor, a table, a tablecloth, a table lamp, a table base, and a table surface.\",\n  \"edit_instructions\": \"Remove the chair and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Large stuffed bear saddle by door balloons car mirror bench floor table tablecloth table lamp base surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "tablecloth",
+          "table lamp",
+          "base",
+          "surface"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "mirror",
+          "bench",
+          "floor",
+          "table",
+          "tablecloth",
+          "table lamp",
+          "base",
+          "surface"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of table, the color of the balloons, and the position of the door handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large stuffed bear saddle by door balloons car mirror bench floor table tablecloth table lamp base surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tablecloth\", \"table lamp\", \"base\", \"surface\"],\n  \"hallucinated_objects\": [\"car\", \"mirror\", \"bench\", \"floor\", \"table\", \"tablecloth\", \"table lamp\", \"base\", \"surface\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of table, the color of the balloons, and the position of the door handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Stuffed bear by door with colorful balloons and table with tablecloth and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "balloons",
+          "table",
+          "tablecloth",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "chair"
+        ],
+        "genericity_hint": "The image contains a stuffed bear, a door, and a doormat, but the candidate caption includes additional objects that are not present in the image.",
+        "edit_instructions": [
+          "Remove the balloons, table, tablecloth, and lamp from the candidate caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear by door with colorful balloons and table with tablecloth and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"balloons\", \"table\", \"tablecloth\", \"lamp\"],\n  \"hallucinated_objects\": [\"chair\"],\n  \"genericity_hint\": \"The image contains a stuffed bear, a door, and a doormat, but the candidate caption includes additional objects that are not present in the image.\",\n  \"edit_instructions\": \"Remove the balloons, table, tablecloth, and lamp from the candidate caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Stuffed bear by door with doormat",
+      "vlm_hint": {
+        "missing_objects": [
+          "balloons",
+          "bench",
+          "car",
+          "mirror",
+          "table",
+          "floor",
+          "window",
+          "door handle",
+          "doormat",
+          "ceiling",
+          "chair",
+          "tablecloth",
+          "table lamp",
+          "table leg",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "saddle"
+        ],
+        "genericity_hint": "The caption is too generic and misses many objects in the image.",
+        "edit_instructions": [
+          "Add more specific objects and details to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear by door with doormat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"balloons\", \"bench\", \"car\", \"mirror\", \"table\", \"floor\", \"window\", \"door handle\", \"doormat\", \"ceiling\", \"chair\", \"tablecloth\", \"table lamp\", \"table leg\", \"table surface\"],\n  \"hallucinated_objects\": [\"saddle\"],\n  \"genericity_hint\": \"The caption is too generic and misses many objects in the image.\",\n  \"edit_instructions\": \"Add more specific objects and details to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Stuffed bear and balloons by door with doormat",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "table",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "mirror",
+          "table",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the exact objects.",
+        "edit_instructions": [
+          "Remove the objects that are not visible in the image and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear and balloons by door with doormat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"table\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"hallucinated_objects\": [\"car\", \"mirror\", \"table\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the exact objects.\",\n  \"edit_instructions\": \"Remove the objects that are not visible in the image and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Stuffed bear and balloons on table by door with doormat",
+      "vlm_hint": {
+        "missing_objects": [
+          "chair",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "mirror",
+          "table",
+          "floor",
+          "window",
+          "door handle",
+          "doormat",
+          "ceiling",
+          "chair",
+          "tablecloth",
+          "table lamp",
+          "table base",
+          "table surface"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of chair, the color of the tablecloth, and the shape of the table lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear and balloons on table by door with doormat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chair\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"hallucinated_objects\": [\"car\", \"mirror\", \"table\", \"floor\", \"window\", \"door handle\", \"doormat\", \"ceiling\", \"chair\", \"tablecloth\", \"table lamp\", \"table base\", \"table surface\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of chair, the color of the tablecloth, and the shape of the table lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Stuffed bear and balloons on white table near wooden chair with blue tablecloth and glass table lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "balloons",
+          "bench",
+          "car",
+          "door",
+          "floor",
+          "mirror",
+          "table",
+          "tablecloth",
+          "table lamp",
+          "table leg",
+          "table surface"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "ceiling"
+        ],
+        "genericity_hint": "The image contains a stuffed bear, a saddle, a door, balloons, a bench, a car, a mirror, a table, a tablecloth, a table lamp, a table leg, and a table surface.",
+        "edit_instructions": [
+          "Remove the missing objects and hallucinated objects from the candidate caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stuffed bear, saddle, door, balloons, bench, car, mirror, table, floor, window, door handle, doormat, ceiling, chair, tablecloth, table lamp, table leg, table top, table base, table surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stuffed bear and balloons on white table near wooden chair with blue tablecloth and glass table lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"balloons\", \"bench\", \"car\", \"door\", \"floor\", \"mirror\", \"table\", \"tablecloth\", \"table lamp\", \"table leg\", \"table surface\"],\n  \"hallucinated_objects\": [\"chair\", \"ceiling\"],\n  \"genericity_hint\": \"The image contains a stuffed bear, a saddle, a door, balloons, a bench, a car, a mirror, a table, a tablecloth, a table lamp, a table leg, and a table surface.\",\n  \"edit_instructions\": \"Remove the missing objects and hallucinated objects from the candidate caption.\",\n  \"score\": 0\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 410880,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000410880.jpg",
+    "final_caption": "Stuffed bear and balloons on white table near wooden chair with blue tablecloth and glass table lamp",
+    "total_time_sec": 40.16
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"stuffed bear\",\n    \"saddle\",\n    \"door\",\n    \"balloons\",\n    \"bench\",\n    \"car\",\n    \"mirror\",\n    \"table\",\n    \"floor\",\n    \"window\",\n    \"door handle\",\n    \"doormat\",\n    \"ceiling\",\n    \"chair\",\n    \"tablecloth\",\n    \"table lamp\",\n    \"table leg\",\n    \"table top\",\n    \"table base\",\n    \"table surface\"\n  ]\n}"
+}

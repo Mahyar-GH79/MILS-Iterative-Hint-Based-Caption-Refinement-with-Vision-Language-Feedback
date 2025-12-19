@@ -1,0 +1,200 @@
+{
+  "image_id": 561366,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000561366.jpg",
+  "objects": [
+    "calculator",
+    "cell phone",
+    "keyboard",
+    "paper",
+    "desk"
+  ],
+  "template": "We have an image with these objects: ['calculator', 'cell phone', 'keyboard', 'paper', 'desk']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Desk with calculator phone and papers",
+      "vlm_hint": {
+        "missing_objects": [
+          "keyboard"
+        ],
+        "hallucinated_objects": [
+          "paper"
+        ],
+        "genericity_hint": "The image is not very specific about the objects present.",
+        "edit_instructions": [
+          "Remove the keyboard and paper from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with calculator phone and papers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"keyboard\"],\n  \"hallucinated_objects\": [\"paper\"],\n  \"genericity_hint\": \"The image is not very specific about the objects present.\",\n  \"edit_instructions\": \"Remove the keyboard and paper from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Desk with calculator and phone",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper",
+          "keyboard"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the objects on the desk.",
+        "edit_instructions": [
+          "Specify the objects on the desk by including the missing objects and removing the generic term 'desk'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk with calculator and phone\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\", \"keyboard\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the objects on the desk.\",\n  \"edit_instructions\": \"Specify the objects on the desk by including the missing objects and removing the generic term 'desk'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Calculator, phone, paper, keyboard on the desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "cell phone"
+        ],
+        "hallucinated_objects": [
+          "paper"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects.",
+        "edit_instructions": [
+          "Remove the paper and specify the objects as calculator, cell phone, and keyboard."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator, phone, paper, keyboard on the desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cell phone\"],\n  \"hallucinated_objects\": [\"paper\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects.\",\n  \"edit_instructions\": \"Remove the paper and specify the objects as calculator, cell phone, and keyboard.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Calculator, cell phone, keyboard on the desk",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, and a keyboard, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator, cell phone, keyboard on the desk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, and a keyboard, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Calculator cell phone keyboard on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator cell phone keyboard on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Calculator cell phone keyboard on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator cell phone keyboard on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Calculator cell phone keyboard on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator cell phone keyboard on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Calculator cell phone keyboard on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator cell phone keyboard on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Calculator cell phone keyboard on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator cell phone keyboard on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Calculator cell phone keyboard on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "paper"
+        ],
+        "hallucinated_objects": [
+          "desk"
+        ],
+        "genericity_hint": "The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.",
+        "edit_instructions": [
+          "Remove the paper and desk from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [calculator, cell phone, keyboard, paper, desk]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Calculator cell phone keyboard on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"paper\"],\n  \"hallucinated_objects\": [\"desk\"],\n  \"genericity_hint\": \"The image contains a calculator, a cell phone, a keyboard, and a piece of paper, but the caption is missing the paper and the desk.\",\n  \"edit_instructions\": \"Remove the paper and desk from the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 561366,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000561366.jpg",
+    "final_caption": "Calculator cell phone keyboard on table",
+    "total_time_sec": 25.2
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"calculator\",\n    \"cell phone\",\n    \"keyboard\",\n    \"paper\",\n    \"desk\"\n  ]\n}"
+}

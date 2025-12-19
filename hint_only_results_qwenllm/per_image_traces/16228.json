@@ -1,0 +1,227 @@
+{
+  "image_id": 16228,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000016228.jpg",
+  "objects": [
+    "horse",
+    "trolley",
+    "bench",
+    "umbrella",
+    "people",
+    "trees",
+    "sky",
+    "road",
+    "sign",
+    "building",
+    "park",
+    "grass",
+    "flowers",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people"
+  ],
+  "template": "We have an image with these objects: ['horse', 'trolley', 'bench', 'umbrella', 'people', 'trees', 'sky', 'road', 'sign', 'building', 'park', 'grass', 'flowers', 'people', 'people', 'people', 'people', 'people', 'people', 'people']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People enjoy sunny day at park under trees and umbrella near trolley",
+      "vlm_hint": {
+        "missing_objects": [
+          "building",
+          "flowers"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of building, the specific type of flowers, and the exact location of the umbrella."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People enjoy sunny day at park under trees and umbrella near trolley\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"building\", \"flowers\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of building, the specific type of flowers, and the exact location of the umbrella.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People under umbrella near trolley by park's flowers and building",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People under umbrella near trolley by park's flowers and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bench\", \"umbrella\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\", \"people\","
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People under umbrella near trolley by trees and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bench",
+          "flowers"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the bench and flowers, and remove the mention of the building."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People under umbrella near trolley by trees and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bench\", \"flowers\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the bench and flowers, and remove the mention of the building.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People under umbrella on bench among trees and flowers by the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trolley",
+          "sign",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "umbrella",
+          "people"
+        ],
+        "genericity_hint": "The image is specific to Disneyland.",
+        "edit_instructions": [
+          "Remove the umbrella and people, and add a trolley and sign."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People under umbrella on bench among trees and flowers by the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trolley\", \"sign\", \"building\"],\n  \"hallucinated_objects\": [\"umbrella\", \"people\"],\n  \"genericity_hint\": \"The image is specific to Disneyland.\",\n  \"edit_instructions\": \"Remove the umbrella and people, and add a trolley and sign.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People on bench by road near trolley and sign at park",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "flowers"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The image is specific to Disneyland.",
+        "edit_instructions": [
+          "Remove the umbrella and flowers, and add a building."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People on bench by road near trolley and sign at park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"flowers\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The image is specific to Disneyland.\",\n  \"edit_instructions\": \"Remove the umbrella and flowers, and add a building.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People by road near trolley and sign at Disneyland park",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "flowers",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The image is specific to Disneyland park.",
+        "edit_instructions": [
+          "Remove the umbrella, flowers, and trees. Keep the building."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People by road near trolley and sign at Disneyland park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"flowers\", \"trees\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The image is specific to Disneyland park.\",\n  \"edit_instructions\": \"Remove the umbrella, flowers, and trees. Keep the building.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People by road near trolley and sign in Disneyland park",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "flowers",
+          "trees"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The image is specific to Disneyland park.",
+        "edit_instructions": [
+          "Remove the umbrella, flowers, and trees. Keep the building."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People by road near trolley and sign in Disneyland park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"flowers\", \"trees\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The image is specific to Disneyland park.\",\n  \"edit_instructions\": \"Remove the umbrella, flowers, and trees. Keep the building.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People by road near trolley and sign in Disneyland park with trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "flowers"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The image is specific to Disneyland park.",
+        "edit_instructions": [
+          "Remove the umbrella and flowers, and keep the building."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People by road near trolley and sign in Disneyland park with trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"flowers\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The image is specific to Disneyland park.\",\n  \"edit_instructions\": \"Remove the umbrella and flowers, and keep the building.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People by road near trolley and sign in Disneyland park with trees buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "flowers"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of an umbrella and flowers, and remove the mention of a building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People by road near trolley and sign in Disneyland park with trees buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"flowers\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of an umbrella and flowers, and remove the mention of a building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People under umbrella among flowers by road near trolley and sign in park",
+      "vlm_hint": {
+        "missing_objects": [
+          "bench",
+          "trees",
+          "sky",
+          "road",
+          "sign",
+          "building",
+          "grass",
+          "flowers"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The image is specific to Disneyland, but the caption is generic.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific objects related to Disneyland."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, trolley, bench, umbrella, people, trees, sky, road, sign, building, park, grass, flowers, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People under umbrella among flowers by road near trolley and sign in park\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bench\", \"trees\", \"sky\", \"road\", \"sign\", \"building\", \"grass\", \"flowers\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The image is specific to Disneyland, but the caption is generic.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific objects related to Disneyland.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 16228,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000016228.jpg",
+    "final_caption": "People under umbrella among flowers by road near trolley and sign in park",
+    "total_time_sec": 33.02
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"horse\",\n    \"trolley\",\n    \"bench\",\n    \"umbrella\",\n    \"people\",\n    \"trees\",\n    \"sky\",\n    \"road\",\n    \"sign\",\n    \"building\",\n    \"park\",\n    \"grass\",\n    \"flowers\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\"\n  ]\n}"
+}

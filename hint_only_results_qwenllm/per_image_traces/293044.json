@@ -1,0 +1,211 @@
+{
+  "image_id": 293044,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000293044.jpg",
+  "objects": [
+    "carrots",
+    "bread",
+    "raisins",
+    "nuts",
+    "cheese",
+    "muffin",
+    "plastic container",
+    "plastic fork",
+    "plastic lid"
+  ],
+  "template": "We have an image with these objects: ['carrots', 'bread', 'raisins', 'nuts', 'cheese', 'muffin', 'plastic container', 'plastic fork', 'plastic lid']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Carrots cheese and nuts in a container",
+      "vlm_hint": {
+        "missing_objects": [
+          "raisins",
+          "muffin"
+        ],
+        "hallucinated_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Include the missing objects and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots cheese and nuts in a container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"raisins\", \"muffin\"],\n  \"hallucinated_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Include the missing objects and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Carrots, cheese, raisins, and nuts in a muffin container",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "hallucinated_objects": [
+          "plastic container"
+        ],
+        "genericity_hint": "The image shows a variety of food items, but the caption is too specific.",
+        "edit_instructions": [
+          "Remove the plastic container and add the plastic fork and plastic lid."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots, cheese, raisins, and nuts in a muffin container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"hallucinated_objects\": [\"plastic container\"],\n  \"genericity_hint\": \"The image shows a variety of food items, but the caption is too specific.\",\n  \"edit_instructions\": \"Remove the plastic container and add the plastic fork and plastic lid.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Carrots, cheese, raisins, nuts, plastic fork, and lid in a plastic container",
+      "vlm_hint": {
+        "missing_objects": [
+          "muffin"
+        ],
+        "hallucinated_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread.",
+        "edit_instructions": [
+          "Remove the plastic fork and lid, and specify the type of bread."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots, cheese, raisins, nuts, plastic fork, and lid in a plastic container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"muffin\"],\n  \"hallucinated_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread.\",\n  \"edit_instructions\": \"Remove the plastic fork and lid, and specify the type of bread.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Carrots, cheese, raisins, nuts, bread, and muffin in a plastic container",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread or muffin.",
+        "edit_instructions": [
+          "Specify the type of bread and muffin in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots, cheese, raisins, nuts, bread, and muffin in a plastic container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread or muffin.\",\n  \"edit_instructions\": \"Specify the type of bread and muffin in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Carrots, cheese, raisins, nuts, whole wheat bread, blueberry muffin in a plastic container with fork and lid",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "hallucinated_objects": [
+          "blueberry muffin"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread.",
+        "edit_instructions": [
+          "Remove the blueberry muffin and specify the type of bread."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots, cheese, raisins, nuts, whole wheat bread, blueberry muffin in a plastic container with fork and lid\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"hallucinated_objects\": [\"blueberry muffin\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread.\",\n  \"edit_instructions\": \"Remove the blueberry muffin and specify the type of bread.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Carrots, cheese, raisins, nuts on whole wheat bread in a plastic container with fork and lid",
+      "vlm_hint": {
+        "missing_objects": [
+          "muffin"
+        ],
+        "hallucinated_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Remove the fork and lid, and specify the muffin."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots, cheese, raisins, nuts on whole wheat bread in a plastic container with fork and lid\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"muffin\"],\n  \"hallucinated_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Remove the fork and lid, and specify the muffin.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Carrots cheese raisins nuts on whole wheat bread with muffin in a plastic container",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the plastic fork and plastic lid from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots cheese raisins nuts on whole wheat bread with muffin in a plastic container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the plastic fork and plastic lid from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Carrots cheese raisins nuts on bread with muffin",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic container",
+          "plastic fork",
+          "plastic lid"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots cheese raisins nuts on bread with muffin\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic container\", \"plastic fork\", \"plastic lid\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Carrots cheese raisins nuts in a plastic container with a fork lid",
+      "vlm_hint": {
+        "missing_objects": [
+          "muffin"
+        ],
+        "hallucinated_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of bread or the exact number of carrots.",
+        "edit_instructions": [
+          "Remove the fork and lid, and specify the type of bread and the exact number of carrots."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots cheese raisins nuts in a plastic container with a fork lid\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"muffin\"],\n  \"hallucinated_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of bread or the exact number of carrots.\",\n  \"edit_instructions\": \"Remove the fork and lid, and specify the type of bread and the exact number of carrots.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Carrots raisins nuts cheese on a muffin in a plastic container",
+      "vlm_hint": {
+        "missing_objects": [
+          "plastic fork",
+          "plastic lid"
+        ],
+        "hallucinated_objects": [
+          "cheese"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [carrots, bread, raisins, nuts, cheese, muffin, plastic container, plastic fork, plastic lid]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carrots raisins nuts cheese on a muffin in a plastic container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plastic fork\", \"plastic lid\"],\n  \"hallucinated_objects\": [\"cheese\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 293044,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000293044.jpg",
+    "final_caption": "Carrots raisins nuts cheese on a muffin in a plastic container",
+    "total_time_sec": 26.83
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"carrots\",\n    \"bread\",\n    \"raisins\",\n    \"nuts\",\n    \"cheese\",\n    \"muffin\",\n    \"plastic container\",\n    \"plastic fork\",\n    \"plastic lid\"\n  ]\n}"
+}

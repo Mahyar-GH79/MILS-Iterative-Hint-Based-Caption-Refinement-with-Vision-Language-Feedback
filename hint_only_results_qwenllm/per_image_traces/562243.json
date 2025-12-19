@@ -1,0 +1,202 @@
+{
+  "image_id": 562243,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000562243.jpg",
+  "objects": [
+    "man",
+    "shirt",
+    "tie",
+    "glasses",
+    "collar",
+    "background"
+  ],
+  "template": "We have an image with these objects: ['man', 'shirt', 'tie', 'glasses', 'collar', 'background']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in shirt with tie glasses",
+      "vlm_hint": {
+        "missing_objects": [
+          "head"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The caption is too generic and misses important details.",
+        "edit_instructions": [
+          "Add more details to the caption, such as the color of the shirt and tie, and include the head."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt with tie glasses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"head\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The caption is too generic and misses important details.\",\n  \"edit_instructions\": \"Add more details to the caption, such as the color of the shirt and tie, and include the head.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in blue shirt with red tie and glasses",
+      "vlm_hint": {
+        "missing_objects": [
+          "purple shirt"
+        ],
+        "hallucinated_objects": [
+          "blue shirt"
+        ],
+        "genericity_hint": "The shirt color is not specified.",
+        "edit_instructions": [
+          "Remove the blue shirt and specify the correct shirt color."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in blue shirt with red tie and glasses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purple shirt\"],\n  \"hallucinated_objects\": [\"blue shirt\"],\n  \"genericity_hint\": \"The shirt color is not specified.\",\n  \"edit_instructions\": \"Remove the blue shirt and specify the correct shirt color.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in purple shirt with red tie and glasses",
+      "vlm_hint": {
+        "missing_objects": [
+          "background"
+        ],
+        "hallucinated_objects": [
+          "red tie"
+        ],
+        "genericity_hint": "The tie is not purple.",
+        "edit_instructions": [
+          "Remove the red tie and add a purple tie."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in purple shirt with red tie and glasses\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\"],\n  \"hallucinated_objects\": [\"red tie\"],\n  \"genericity_hint\": \"The tie is not purple.\",\n  \"edit_instructions\": \"Remove the red tie and add a purple tie.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in purple shirt with tie and glasses in contrasting background",
+      "vlm_hint": {
+        "missing_objects": [
+          "head"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's appearance.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man's head and a more detailed description of the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in purple shirt with tie and glasses in contrasting background\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"head\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's appearance.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man's head and a more detailed description of the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man with purple shirt, tie, and glasses against a vibrant background",
+      "vlm_hint": {
+        "missing_objects": [
+          "background"
+        ],
+        "hallucinated_objects": [
+          "vibrant"
+        ],
+        "genericity_hint": "The background is not specified.",
+        "edit_instructions": [
+          "Remove the word 'vibrant' and specify the background color."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with purple shirt, tie, and glasses against a vibrant background\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\"],\n  \"hallucinated_objects\": [\"vibrant\"],\n  \"genericity_hint\": \"The background is not specified.\",\n  \"edit_instructions\": \"Remove the word 'vibrant' and specify the background color.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in purple shirt with tie and glasses against a blue background",
+      "vlm_hint": {
+        "missing_objects": [
+          "head"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's appearance.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes the man's facial features and hairstyle."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in purple shirt with tie and glasses against a blue background\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"head\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's appearance.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes the man's facial features and hairstyle.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in purple shirt tie and glasses has neatly combed hair",
+      "vlm_hint": {
+        "missing_objects": [
+          "background"
+        ],
+        "hallucinated_objects": [
+          "collar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's appearance.",
+        "edit_instructions": [
+          "Provide more specific details about the man's appearance, such as the color and style of his hair, and the details of his clothing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in purple shirt tie and glasses has neatly combed hair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\"],\n  \"hallucinated_objects\": [\"collar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's appearance.\",\n  \"edit_instructions\": \"Provide more specific details about the man's appearance, such as the color and style of his hair, and the details of his clothing.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in vibrant purple shirt with glasses stands against a modern backdrop",
+      "vlm_hint": {
+        "missing_objects": [
+          "head"
+        ],
+        "hallucinated_objects": [
+          "modern backdrop"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's appearance.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes details about the man's appearance and the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in vibrant purple shirt with glasses stands against a modern backdrop\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"head\"],\n  \"hallucinated_objects\": [\"modern backdrop\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's appearance.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes details about the man's appearance and the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in vibrant purple shirt with tie and glasses stands against a colored background",
+      "vlm_hint": {
+        "missing_objects": [
+          "head"
+        ],
+        "hallucinated_objects": [
+          "background"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's appearance.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific details about the man's appearance, such as his hairstyle, facial features, and any accessories he is wearing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in vibrant purple shirt with tie and glasses stands against a colored background\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"head\"],\n  \"hallucinated_objects\": [\"background\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's appearance.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific details about the man's appearance, such as his hairstyle, facial features, and any accessories he is wearing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man with slicked-back hair in vibrant purple shirt glasses and neatly done tie",
+      "vlm_hint": {
+        "missing_objects": [
+          "background"
+        ],
+        "hallucinated_objects": [
+          "sleeked-back hair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the man's appearance.",
+        "edit_instructions": [
+          "Provide more specific details about the man's appearance, such as the color and style of his hair, and the details of his clothing."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, shirt, tie, glasses, collar, background]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with slicked-back hair in vibrant purple shirt glasses and neatly done tie\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"background\"],\n  \"hallucinated_objects\": [\"sleeked-back hair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the man's appearance.\",\n  \"edit_instructions\": \"Provide more specific details about the man's appearance, such as the color and style of his hair, and the details of his clothing.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 562243,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000562243.jpg",
+    "final_caption": "Man with slicked-back hair in vibrant purple shirt glasses and neatly done tie",
+    "total_time_sec": 26.58
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"shirt\",\n    \"tie\",\n    \"glasses\",\n    \"collar\",\n    \"background\"\n  ]\n}"
+}

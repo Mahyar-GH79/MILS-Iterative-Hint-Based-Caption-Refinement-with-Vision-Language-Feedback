@@ -1,0 +1,251 @@
+{
+  "image_id": 141671,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000141671.jpg",
+  "objects": [
+    "horses",
+    "motorcycles",
+    "people",
+    "sign",
+    "houses",
+    "street",
+    "flag",
+    "pole",
+    "field",
+    "saddle",
+    "helmet",
+    "jacket",
+    "hat",
+    "shoe",
+    "pole",
+    "flag",
+    "pole",
+    "flag",
+    "pole",
+    "flag"
+  ],
+  "template": "We have an image with these objects: ['horses', 'motorcycles', 'people', 'sign', 'houses', 'street', 'flag', 'pole', 'field', 'saddle', 'helmet', 'jacket', 'hat', 'shoe', 'pole', 'flag', 'pole', 'flag', 'pole', 'flag']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Horses motorcycles people flags on street",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "helmet",
+          "jacket",
+          "hat",
+          "shoe"
+        ],
+        "hallucinated_objects": [
+          "houses",
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the presence of saddles, helmets, jackets, hats, and shoes."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horses motorcycles people flags on street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"helmet\", \"jacket\", \"hat\", \"shoe\"],\n  \"hallucinated_objects\": [\"houses\", \"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the presence of saddles, helmets, jackets, hats, and shoes.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Horses with saddles people in helmets jackets hats shoes on flags pole field",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "pole",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "jacket",
+          "hat",
+          "shoe"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of horses, the number of people, and the specific details of the flag and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horses with saddles people in helmets jackets hats shoes on flags pole field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"pole\", \"flag\"],\n  \"hallucinated_objects\": [\"jacket\", \"hat\", \"shoe\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of horses, the number of people, and the specific details of the flag and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Horses with saddles people in helmets on flags by poles in a field",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "pole",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "horses"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of horses, the number of people, and the specific details of the flag and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horses with saddles people in helmets on flags by poles in a field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"pole\", \"flag\"],\n  \"hallucinated_objects\": [\"people\", \"horses\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of horses, the number of people, and the specific details of the flag and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Brown horses with saddles people in helmets stand near flags by poles in a field",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycles",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "saddle",
+          "jacket",
+          "hat",
+          "shoe"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of horses, the number of people, and the specific objects they are wearing or interacting with."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown horses with saddles people in helmets stand near flags by poles in a field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycles\", \"people\"],\n  \"hallucinated_objects\": [\"saddle\", \"jacket\", \"hat\", \"shoe\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of horses, the number of people, and the specific objects they are wearing or interacting with.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Brown horses with people on motorcycles stand near flags by poles in a field wearing helmets",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "jacket",
+          "hat",
+          "shoe"
+        ],
+        "hallucinated_objects": [
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of horses, the number of people on motorcycles, and the specific details of the flags and poles."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown horses with people on motorcycles stand near flags by poles in a field wearing helmets\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"jacket\", \"hat\", \"shoe\"],\n  \"hallucinated_objects\": [\"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of horses, the number of people on motorcycles, and the specific details of the flags and poles.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Brown horses with saddles stand near flags and poles in a field as riders wear helmets and jackets.",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycles",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "saddle",
+          "hat",
+          "shoe"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of horses, the number of riders, and the specific objects they are wearing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown horses with saddles stand near flags and poles in a field as riders wear helmets and jackets.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycles\", \"people\"],\n  \"hallucinated_objects\": [\"saddle\", \"hat\", \"shoe\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of horses, the number of riders, and the specific objects they are wearing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown horses with riders in helmets and jackets stand near flags and poles on a field with motorcycles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "shoe",
+          "hat",
+          "jacket",
+          "pole",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "house"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and actions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown horses with riders in helmets and jackets stand near flags and poles on a field with motorcycles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"shoe\", \"hat\", \"jacket\", \"pole\", \"flag\"],\n  \"hallucinated_objects\": [\"street\", \"house\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and actions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People on horses with helmets and jackets stand near flags and poles in a field with motorcycles.",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "shoe"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of saddles and shoes on the horses, and the specific location of the flag and pole."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People on horses with helmets and jackets stand near flags and poles in a field with motorcycles.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"shoe\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of saddles and shoes on the horses, and the specific location of the flag and pole.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People on horses with saddles and helmets stand near flags and poles in a field with motorcycles and jackets.",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "helmet",
+          "jacket",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of saddles, helmets, jackets, and poles."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People on horses with saddles and helmets stand near flags and poles in a field with motorcycles and jackets.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"helmet\", \"jacket\", \"pole\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of saddles, helmets, jackets, and poles.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People on horses with saddles and helmets stand near flags and poles in a field with motorcycles and jackets.",
+      "vlm_hint": {
+        "missing_objects": [
+          "saddle",
+          "helmet",
+          "jacket",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of saddles, helmets, jackets, and poles."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horses, motorcycles, people, sign, houses, street, flag, pole, field, saddle, helmet, jacket, hat, shoe, pole, flag, pole, flag, pole, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People on horses with saddles and helmets stand near flags and poles in a field with motorcycles and jackets.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"saddle\", \"helmet\", \"jacket\", \"pole\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of saddles, helmets, jackets, and poles.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 141671,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000141671.jpg",
+    "final_caption": "People on horses with saddles and helmets stand near flags and poles in a field with motorcycles and jackets.",
+    "total_time_sec": 35.3
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"horses\",\n    \"motorcycles\",\n    \"people\",\n    \"sign\",\n    \"houses\",\n    \"street\",\n    \"flag\",\n    \"pole\",\n    \"field\",\n    \"saddle\",\n    \"helmet\",\n    \"jacket\",\n    \"hat\",\n    \"shoe\",\n    \"pole\",\n    \"flag\",\n    \"pole\",\n    \"flag\",\n    \"pole\",\n    \"flag\"\n  ]\n}"
+}

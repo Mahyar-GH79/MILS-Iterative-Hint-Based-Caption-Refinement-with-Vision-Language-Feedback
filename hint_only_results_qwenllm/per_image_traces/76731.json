@@ -1,0 +1,188 @@
+{
+  "image_id": 76731,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000076731.jpg",
+  "objects": [
+    "laptop",
+    "pen",
+    "Echos",
+    "Olivetti",
+    "wooden surface"
+  ],
+  "template": "We have an image with these objects: ['laptop', 'pen', 'Echos', 'Olivetti', 'wooden surface']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Echos Olivetti on wooden surface near laptop pen",
+      "vlm_hint": {
+        "missing_objects": [
+          "wire"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not mention the wire.",
+        "edit_instructions": [
+          "Remove the mention of the wire and make the caption more general."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Echos Olivetti on wooden surface near laptop pen\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wire\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not mention the wire.\",\n  \"edit_instructions\": \"Remove the mention of the wire and make the caption more general.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Echos and Olivetti on wooden surface beside laptop and pen",
+      "vlm_hint": {
+        "missing_objects": [
+          "cable"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Add a cable to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Echos and Olivetti on wooden surface beside laptop and pen\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cable\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Add a cable to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Echos Olivetti laptop pen cable on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "cable"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not mention the cable.",
+        "edit_instructions": [
+          "Remove the cable from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Echos Olivetti laptop pen cable on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cable\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not mention the cable.\",\n  \"edit_instructions\": \"Remove the cable from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Echos and Olivetti laptop pen on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "pen"
+        ],
+        "hallucinated_objects": [
+          "Echos"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the brand of the laptop.",
+        "edit_instructions": [
+          "Remove the brand names and focus on the objects present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Echos and Olivetti laptop pen on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pen\"],\n  \"hallucinated_objects\": [\"Echos\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the brand of the laptop.\",\n  \"edit_instructions\": \"Remove the brand names and focus on the objects present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Laptop pen on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "Echos",
+          "Olivetti"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses key objects.",
+        "edit_instructions": [
+          "Include the brand names 'Echos' and 'Olivetti' in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Laptop pen on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Echos\", \"Olivetti\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses key objects.\",\n  \"edit_instructions\": \"Include the brand names 'Echos' and 'Olivetti' in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Echos laptop Olivetti pen on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "power cord"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the power cord and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Echos laptop Olivetti pen on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"power cord\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the power cord and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Echos laptop pen on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "Echos",
+          "Olivetti"
+        ],
+        "hallucinated_objects": [
+          "laptop",
+          "pen"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the brand or model of the laptop.",
+        "edit_instructions": [
+          "Add the brand and model of the laptop to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Echos laptop pen on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Echos\", \"Olivetti\"],\n  \"hallucinated_objects\": [\"laptop\", \"pen\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the brand or model of the laptop.\",\n  \"edit_instructions\": \"Add the brand and model of the laptop to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Olivetti Echos on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "pen"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Remove the generic caption and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Olivetti Echos on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pen\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Remove the generic caption and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Olivetti Echos laptop on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "pen"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific.",
+        "edit_instructions": [
+          "Remove the pen from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Olivetti Echos laptop on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pen\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific.\",\n  \"edit_instructions\": \"Remove the pen from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Olivetti Echos laptop on wooden surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "pen"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific.",
+        "edit_instructions": [
+          "Remove the pen from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, pen, Echos, Olivetti, wooden surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Olivetti Echos laptop on wooden surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pen\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific.\",\n  \"edit_instructions\": \"Remove the pen from the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 76731,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000076731.jpg",
+    "final_caption": "Olivetti Echos laptop on wooden surface",
+    "total_time_sec": 22.02
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"laptop\",\n    \"pen\",\n    \"Echos\",\n    \"Olivetti\",\n    \"wooden surface\"\n  ]\n}"
+}

@@ -1,0 +1,262 @@
+{
+  "image_id": 367680,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000367680.jpg",
+  "objects": [
+    "bus",
+    "car",
+    "cart",
+    "van",
+    "building",
+    "tree",
+    "street",
+    "person",
+    "sign",
+    "parking lot",
+    "road",
+    "grass",
+    "sky",
+    "clouds",
+    "street light",
+    "parking lot",
+    "building",
+    "tree",
+    "street",
+    "person"
+  ],
+  "template": "We have an image with these objects: ['bus', 'car', 'cart', 'van', 'building', 'tree', 'street', 'person', 'sign', 'parking lot', 'road', 'grass', 'sky', 'clouds', 'street light', 'parking lot', 'building', 'tree', 'street', 'person']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Traffic and buildings under a cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart",
+          "van",
+          "building",
+          "tree",
+          "street",
+          "person",
+          "sign",
+          "parking lot",
+          "road",
+          "grass",
+          "sky",
+          "clouds",
+          "street light"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "car"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the types of vehicles or the location.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the types of vehicles and the location."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Traffic and buildings under a cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\", \"van\", \"building\", \"tree\", \"street\", \"person\", \"sign\", \"parking lot\", \"road\", \"grass\", \"sky\", \"clouds\", \"street light\"],\n  \"hallucinated_objects\": [\"bus\", \"car\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the types of vehicles or the location.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the types of vehicles and the location.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Van and cart on street near buildings and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus",
+          "car",
+          "street",
+          "person"
+        ],
+        "hallucinated_objects": [
+          "van",
+          "cart",
+          "building",
+          "tree",
+          "street",
+          "person"
+        ],
+        "genericity_hint": "The image contains a bus, a car, a cart, a van, buildings, trees, a street, people, a sign, a parking lot, a road, grass, the sky, clouds, and a street light.",
+        "edit_instructions": [
+          "Remove the van and cart from the list of objects. Add a bus, a car, a street, and people to the list of objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Van and cart on street near buildings and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus\", \"car\", \"street\", \"person\"],\n  \"hallucinated_objects\": [\"van\", \"cart\", \"building\", \"tree\", \"street\", \"person\"],\n  \"genericity_hint\": \"The image contains a bus, a car, a cart, a van, buildings, trees, a street, people, a sign, a parking lot, a road, grass, the sky, clouds, and a street light.\",\n  \"edit_instructions\": \"Remove the van and cart from the list of objects. Add a bus, a car, a street, and people to the list of objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bus and car on street with people",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart",
+          "van",
+          "building",
+          "tree",
+          "street",
+          "person",
+          "sign",
+          "parking lot",
+          "road",
+          "grass",
+          "sky",
+          "clouds",
+          "street light"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "car"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and car on street with people\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\", \"van\", \"building\", \"tree\", \"street\", \"person\", \"sign\", \"parking lot\", \"road\", \"grass\", \"sky\", \"clouds\", \"street light\"],\n  \"hallucinated_objects\": [\"bus\", \"car\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Van cart street people building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bus",
+          "car",
+          "tree",
+          "street",
+          "person",
+          "sign",
+          "parking lot",
+          "road",
+          "grass",
+          "sky",
+          "clouds",
+          "street light"
+        ],
+        "hallucinated_objects": [
+          "van",
+          "cart"
+        ],
+        "genericity_hint": "The image contains a variety of objects, including vehicles, people, and buildings, but the candidate caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the types of vehicles, the number of people, and the types of buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Van cart street people building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bus\", \"car\", \"tree\", \"street\", \"person\", \"sign\", \"parking lot\", \"road\", \"grass\", \"sky\", \"clouds\", \"street light\"],\n  \"hallucinated_objects\": [\"van\", \"cart\"],\n  \"genericity_hint\": \"The image contains a variety of objects, including vehicles, people, and buildings, but the candidate caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the types of vehicles, the number of people, and the types of buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cars bus people buildings tree sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart",
+          "street light",
+          "parking lot"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a variety of objects, including vehicles, people, and buildings, but the caption is missing some key elements.",
+        "edit_instructions": [
+          "Add the missing objects: cart, street light, and parking lot. Ensure the caption includes all the key elements present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars bus people buildings tree sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\", \"street light\", \"parking lot\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a variety of objects, including vehicles, people, and buildings, but the caption is missing some key elements.\",\n  \"edit_instructions\": \"Add the missing objects: cart, street light, and parking lot. Ensure the caption includes all the key elements present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cars, buses, people, buildings, trees, street lights, parking lots, sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart",
+          "street light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a variety of objects, including vehicles, people, and buildings, but some specific objects are missing.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects to the list."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars, buses, people, buildings, trees, street lights, parking lots, sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\", \"street light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a variety of objects, including vehicles, people, and buildings, but some specific objects are missing.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects to the list.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cars buses people buildings trees street lights parking lots sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart",
+          "street light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a variety of objects, but some are missing or not clearly visible.",
+        "edit_instructions": [
+          "Remove the missing objects and clarify the visible objects."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars buses people buildings trees street lights parking lots sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\", \"street light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a variety of objects, but some are missing or not clearly visible.\",\n  \"edit_instructions\": \"Remove the missing objects and clarify the visible objects.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cars, buses, people, buildings, trees, street lights, parking lots, sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart",
+          "street light"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a variety of objects, including vehicles, people, and buildings, but some specific objects are missing.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects to the list."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars, buses, people, buildings, trees, street lights, parking lots, sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\", \"street light\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a variety of objects, including vehicles, people, and buildings, but some specific objects are missing.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects to the list.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cars buses people buildings trees street lights parking lots",
+      "vlm_hint": {
+        "missing_objects": [
+          "cart"
+        ],
+        "hallucinated_objects": [
+          "street light"
+        ],
+        "genericity_hint": "The image contains a variety of objects, but the caption is too generic and misses some key elements.",
+        "edit_instructions": [
+          "Add 'cart' to the list of objects and remove 'street light'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars buses people buildings trees street lights parking lots\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cart\"],\n  \"hallucinated_objects\": [\"street light\"],\n  \"genericity_hint\": \"The image contains a variety of objects, but the caption is too generic and misses some key elements.\",\n  \"edit_instructions\": \"Add 'cart' to the list of objects and remove 'street light'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cars buses cart people buildings trees parking lots",
+      "vlm_hint": {
+        "missing_objects": [
+          "street light",
+          "parking lot",
+          "road",
+          "grass",
+          "sky",
+          "clouds"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is not very specific about the location or time of day.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects to make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, car, cart, van, building, tree, street, person, sign, parking lot, road, grass, sky, clouds, street light, parking lot, building, tree, street, person]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars buses cart people buildings trees parking lots\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street light\", \"parking lot\", \"road\", \"grass\", \"sky\", \"clouds\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is not very specific about the location or time of day.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects to make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 367680,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000367680.jpg",
+    "final_caption": "Cars buses cart people buildings trees parking lots",
+    "total_time_sec": 33.01
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bus\",\n    \"car\",\n    \"cart\",\n    \"van\",\n    \"building\",\n    \"tree\",\n    \"street\",\n    \"person\",\n    \"sign\",\n    \"parking lot\",\n    \"road\",\n    \"grass\",\n    \"sky\",\n    \"clouds\",\n    \"street light\",\n    \"parking lot\",\n    \"building\",\n    \"tree\",\n    \"street\",\n    \"person\"\n  ]\n}"
+}

@@ -1,0 +1,210 @@
+{
+  "image_id": 412894,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000412894.jpg",
+  "objects": [
+    "underground subway sign",
+    "traffic light",
+    "people walking",
+    "building",
+    "flag",
+    "street",
+    "sign",
+    "people",
+    "building",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people",
+    "people"
+  ],
+  "template": "We have an image with these objects: ['underground subway sign', 'traffic light', 'people walking', 'building', 'flag', 'street', 'sign', 'people', 'building', 'people', 'people', 'people', 'people', 'people', 'people', 'people', 'people', 'people', 'people', 'people']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Subway entrance traffic jam street crowded",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "underground subway sign"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "flag"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or time of day.",
+        "edit_instructions": [
+          "Remove the traffic light and underground subway sign, and add a flag."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Subway entrance traffic jam street crowded\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"underground subway sign\"],\n  \"hallucinated_objects\": [\"street\", \"flag\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or time of day.\",\n  \"edit_instructions\": \"Remove the traffic light and underground subway sign, and add a flag.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Crowded people near building on busy street",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light",
+          "underground subway sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Specify the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Crowded people near building on busy street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\", \"underground subway sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Specify the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People walking near underground subway sign and traffic light on busy street",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a location with a subway sign and traffic light.",
+        "edit_instructions": [
+          "Remove the flag and street from the list of objects."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walking near underground subway sign and traffic light on busy street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a location with a subway sign and traffic light.\",\n  \"edit_instructions\": \"Remove the flag and street from the list of objects.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People walking near underground subway sign and traffic light",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains multiple people, but the caption does not specify their actions or the exact number.",
+        "edit_instructions": [
+          "Remove the flag and street from the list of objects and adjust the caption to reflect the number of people and their actions."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walking near underground subway sign and traffic light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains multiple people, but the caption does not specify their actions or the exact number.\",\n  \"edit_instructions\": \"Remove the flag and street from the list of objects and adjust the caption to reflect the number of people and their actions.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Multiple people walk near subway sign and traffic light",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains multiple people, but the caption does not specify their actions or the exact number.",
+        "edit_instructions": [
+          "Remove the flag and street from the object list and adjust the caption to reflect the number of people and their actions."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple people walk near subway sign and traffic light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains multiple people, but the caption does not specify their actions or the exact number.\",\n  \"edit_instructions\": \"Remove the flag and street from the object list and adjust the caption to reflect the number of people and their actions.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Many people walk near subway sign and traffic light on busy street",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a location with a subway sign and traffic light.",
+        "edit_instructions": [
+          "Remove the flag and street from the list of objects."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Many people walk near subway sign and traffic light on busy street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a location with a subway sign and traffic light.\",\n  \"edit_instructions\": \"Remove the flag and street from the list of objects.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Many people walk near subway sign and traffic light",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the flag on the building and the street where the people are walking."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Many people walk near subway sign and traffic light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the flag on the building and the street where the people are walking.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People walk under underground subway sign on street by flag-waving building",
+      "vlm_hint": {
+        "missing_objects": [
+          "traffic light"
+        ],
+        "hallucinated_objects": [
+          "flag-waving building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add a traffic light and remove the flag-waving building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walk under underground subway sign on street by flag-waving building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"traffic light\"],\n  \"hallucinated_objects\": [\"flag-waving building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add a traffic light and remove the flag-waving building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People walk near underground subway sign at street with traffic light and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a location with a particular sign and traffic light.",
+        "edit_instructions": [
+          "Remove the flag and street from the image."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walk near underground subway sign at street with traffic light and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a location with a particular sign and traffic light.\",\n  \"edit_instructions\": \"Remove the flag and street from the image.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People walk near underground subway sign and traffic light by building",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "street"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains multiple people, but the caption does not specify their actions or the exact number.",
+        "edit_instructions": [
+          "Remove the flag and street from the candidate caption."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [underground subway sign, traffic light, people walking, building, flag, street, sign, people, building, people, people, people, people, people, people, people, people, people, people, people]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People walk near underground subway sign and traffic light by building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"street\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains multiple people, but the caption does not specify their actions or the exact number.\",\n  \"edit_instructions\": \"Remove the flag and street from the candidate caption.\",\n  \"score\": 6\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 412894,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000412894.jpg",
+    "final_caption": "People walk near underground subway sign and traffic light by building",
+    "total_time_sec": 27.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"underground subway sign\",\n    \"traffic light\",\n    \"people walking\",\n    \"building\",\n    \"flag\",\n    \"street\",\n    \"sign\",\n    \"people\",\n    \"building\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\",\n    \"people\"\n  ]\n}"
+}

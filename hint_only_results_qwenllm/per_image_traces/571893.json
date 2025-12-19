@@ -1,0 +1,254 @@
+{
+  "image_id": 571893,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000571893.jpg",
+  "objects": [
+    "teapot",
+    "books",
+    "chandelier",
+    "flowers",
+    "mirror",
+    "candles",
+    "shelf",
+    "clock",
+    "vase",
+    "table",
+    "wall",
+    "ceiling",
+    "light",
+    "bookshelf",
+    "bookcase",
+    "bookends",
+    "book",
+    "book",
+    "book",
+    "book"
+  ],
+  "template": "We have an image with these objects: ['teapot', 'books', 'chandelier', 'flowers', 'mirror', 'candles', 'shelf', 'clock', 'vase', 'table', 'wall', 'ceiling', 'light', 'bookshelf', 'bookcase', 'bookends', 'book', 'book', 'book', 'book']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Books and teapot under chandelier",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase",
+          "table",
+          "wall",
+          "ceiling",
+          "light",
+          "bookshelf",
+          "bookcase",
+          "bookends"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add more generic ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Books and teapot under chandelier\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\", \"table\", \"wall\", \"ceiling\", \"light\", \"bookshelf\", \"bookcase\", \"bookends\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add more generic ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Books teapot candles on shelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase",
+          "table",
+          "wall",
+          "ceiling",
+          "light",
+          "bookshelf",
+          "bookcase",
+          "bookends"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Books teapot candles on shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\", \"table\", \"wall\", \"ceiling\", \"light\", \"bookshelf\", \"bookcase\", \"bookends\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Teapot books candles on shelf with clock vase",
+      "vlm_hint": {
+        "missing_objects": [
+          "mirror",
+          "table",
+          "wall",
+          "ceiling",
+          "light",
+          "bookshelf",
+          "bookcase",
+          "bookends"
+        ],
+        "hallucinated_objects": [
+          "clock",
+          "vase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mirror, table, wall, ceiling, light, bookshelf, bookcase, and bookends."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teapot books candles on shelf with clock vase\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mirror\", \"table\", \"wall\", \"ceiling\", \"light\", \"bookshelf\", \"bookcase\", \"bookends\"],\n  \"hallucinated_objects\": [\"clock\", \"vase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mirror, table, wall, ceiling, light, bookshelf, bookcase, and bookends.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Teapot books and flowers on table near mirror ceiling light bookshelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase",
+          "bookends"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of teapot, the color of the flowers, and the exact location of the clock and bookends."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Teapot books and flowers on table near mirror ceiling light bookshelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\", \"bookends\"],\n  \"hallucinated_objects\": [\"light\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of teapot, the color of the flowers, and the exact location of the clock and bookends.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bronze teapot, red flowers, clock, and bookends on shelf near mirror and chandelier.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "bookends"
+        ],
+        "hallucinated_objects": [
+          "vase"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bronze teapot, red flowers, clock, and bookends on shelf near mirror and chandelier.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"bookends\"],\n  \"hallucinated_objects\": [\"vase\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bronze teapot and red flowers on shelf near mirror and clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "bookends"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bronze teapot and red flowers on shelf near mirror and clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\"],\n  \"hallucinated_objects\": [\"light\", \"bookends\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bronze teapot and red flowers on shelf by mirror and clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "bookends"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bronze teapot and red flowers on shelf by mirror and clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\"],\n  \"hallucinated_objects\": [\"light\", \"bookends\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bronze teapot and red flowers on shelf near mirror and clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "bookends"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bronze teapot and red flowers on shelf near mirror and clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\"],\n  \"hallucinated_objects\": [\"light\", \"bookends\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bronze teapot and red flowers on shelf by mirror and clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "bookends"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bronze teapot and red flowers on shelf by mirror and clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\"],\n  \"hallucinated_objects\": [\"light\", \"bookends\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bronze teapot and red flowers on shelf near mirror and clock.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock",
+          "vase"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "bookends"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [teapot, books, chandelier, flowers, mirror, candles, shelf, clock, vase, table, wall, ceiling, light, bookshelf, bookcase, bookends, book, book, book, book]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bronze teapot and red flowers on shelf near mirror and clock.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\", \"vase\"],\n  \"hallucinated_objects\": [\"light\", \"bookends\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 571893,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000571893.jpg",
+    "final_caption": "Bronze teapot and red flowers on shelf near mirror and clock.",
+    "total_time_sec": 30.09
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"teapot\",\n    \"books\",\n    \"chandelier\",\n    \"flowers\",\n    \"mirror\",\n    \"candles\",\n    \"shelf\",\n    \"clock\",\n    \"vase\",\n    \"table\",\n    \"wall\",\n    \"ceiling\",\n    \"light\",\n    \"bookshelf\",\n    \"bookcase\",\n    \"bookends\",\n    \"book\",\n    \"book\",\n    \"book\",\n    \"book\"\n  ]\n}"
+}

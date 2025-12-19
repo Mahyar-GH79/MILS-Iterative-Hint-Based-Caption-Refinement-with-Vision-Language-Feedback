@@ -1,0 +1,271 @@
+{
+  "image_id": 187243,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000187243.jpg",
+  "objects": [
+    "toilet",
+    "trash can",
+    "sink",
+    "cabinet",
+    "toilet paper",
+    "towel",
+    "bottle",
+    "hairbrush",
+    "mirror",
+    "floor",
+    "shirt",
+    "jeans",
+    "belly button",
+    "tile",
+    "door",
+    "wall",
+    "light switch",
+    "door handle",
+    "floor mat"
+  ],
+  "template": "We have an image with these objects: ['toilet', 'trash can', 'sink', 'cabinet', 'toilet paper', 'towel', 'bottle', 'hairbrush', 'mirror', 'floor', 'shirt', 'jeans', 'belly button', 'tile', 'door', 'wall', 'light switch', 'door handle', 'floor mat']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bathroom with sink toilet and towel",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hairbrush",
+          "mirror",
+          "floor mat"
+        ],
+        "hallucinated_objects": [
+          "bottle",
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption and remove the generic ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with sink toilet and towel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hairbrush\", \"mirror\", \"floor mat\"],\n  \"hallucinated_objects\": [\"bottle\", \"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption and remove the generic ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bathroom with sink toilet towel and mirror",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hairbrush",
+          "mirror",
+          "floor mat"
+        ],
+        "hallucinated_objects": [
+          "bottle",
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption and remove generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with sink toilet towel and mirror\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hairbrush\", \"mirror\", \"floor mat\"],\n  \"hallucinated_objects\": [\"bottle\", \"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption and remove generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bathroom with sink toilet towel mirror and floor mat",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hairbrush",
+          "bottle",
+          "light switch",
+          "door handle"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "mirror",
+          "floor mat"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with sink toilet towel mirror and floor mat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hairbrush\", \"bottle\", \"light switch\", \"door handle\"],\n  \"hallucinated_objects\": [\"sink\", \"mirror\", \"floor mat\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bathroom with toilet trash can towel hairbrush",
+      "vlm_hint": {
+        "missing_objects": [
+          "sink",
+          "mirror",
+          "bottle",
+          "hairbrush",
+          "towel",
+          "floor mat"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and misses many objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with toilet trash can towel hairbrush\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sink\", \"mirror\", \"bottle\", \"hairbrush\", \"towel\", \"floor mat\"],\n  \"hallucinated_objects\": [\"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and misses many objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bathroom with toilet trash can sink mirror towel hairbrush floor mat",
+      "vlm_hint": {
+        "missing_objects": [
+          "person"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the person's position or the exact location of the objects.",
+        "edit_instructions": [
+          "Add the person's position and specify the exact location of the objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with toilet trash can sink mirror towel hairbrush floor mat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"person\"],\n  \"hallucinated_objects\": [\"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the person's position or the exact location of the objects.\",\n  \"edit_instructions\": \"Add the person's position and specify the exact location of the objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person stands near toilet with trash can and sink, towel on mirror floor mat nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "person",
+          "trash can",
+          "sink",
+          "towel",
+          "mirror",
+          "floor mat"
+        ],
+        "hallucinated_objects": [
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the person's position or the objects' exact locations.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the person's position and the exact locations of the objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person stands near toilet with trash can and sink, towel on mirror floor mat nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"person\", \"trash can\", \"sink\", \"towel\", \"mirror\", \"floor mat\"],\n  \"hallucinated_objects\": [\"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the person's position or the objects' exact locations.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the person's position and the exact locations of the objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person stands by toilet near trash can and sink with towel hanging from mirror and floor mat below.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairbrush",
+          "bottle",
+          "mirror",
+          "light switch",
+          "door handle"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "towel",
+          "floor mat"
+        ],
+        "genericity_hint": "The person is not standing by the toilet.",
+        "edit_instructions": [
+          "Remove the sink, towel, and floor mat. Add a hairbrush and bottle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person stands by toilet near trash can and sink with towel hanging from mirror and floor mat below.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairbrush\", \"bottle\", \"mirror\", \"light switch\", \"door handle\"],\n  \"hallucinated_objects\": [\"sink\", \"towel\", \"floor mat\"],\n  \"genericity_hint\": \"The person is not standing by the toilet.\",\n  \"edit_instructions\": \"Remove the sink, towel, and floor mat. Add a hairbrush and bottle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person by toilet near trash can with hairbrush and bottle by mirror.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairbrush",
+          "bottle",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "cabinet",
+          "toilet paper",
+          "towel",
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the hairbrush and bottle by the mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by toilet near trash can with hairbrush and bottle by mirror.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairbrush\", \"bottle\", \"mirror\"],\n  \"hallucinated_objects\": [\"sink\", \"cabinet\", \"toilet paper\", \"towel\", \"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the hairbrush and bottle by the mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person by toilet near trash can with hairbrush and bottle by mirror.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairbrush",
+          "bottle",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "cabinet",
+          "toilet paper",
+          "towel",
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the hairbrush and bottle by the mirror."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by toilet near trash can with hairbrush and bottle by mirror.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairbrush\", \"bottle\", \"mirror\"],\n  \"hallucinated_objects\": [\"sink\", \"cabinet\", \"toilet paper\", \"towel\", \"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the hairbrush and bottle by the mirror.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person by toilet near trash can with hairbrush and bottle beside mirror.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairbrush",
+          "bottle",
+          "mirror"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "cabinet",
+          "toilet paper",
+          "towel",
+          "light switch",
+          "door handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the hairbrush and bottle, and remove the objects that are not present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, trash can, sink, cabinet, toilet paper, towel, bottle, hairbrush, mirror, floor, shirt, jeans, belly button, tile, door, wall, light switch, door handle, floor mat]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by toilet near trash can with hairbrush and bottle beside mirror.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairbrush\", \"bottle\", \"mirror\"],\n  \"hallucinated_objects\": [\"sink\", \"cabinet\", \"toilet paper\", \"towel\", \"light switch\", \"door handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the hairbrush and bottle, and remove the objects that are not present in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 187243,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000187243.jpg",
+    "final_caption": "Person by toilet near trash can with hairbrush and bottle beside mirror.",
+    "total_time_sec": 34.13
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"toilet\",\n    \"trash can\",\n    \"sink\",\n    \"cabinet\",\n    \"toilet paper\",\n    \"towel\",\n    \"bottle\",\n    \"hairbrush\",\n    \"mirror\",\n    \"floor\",\n    \"shirt\",\n    \"jeans\",\n    \"belly button\",\n    \"tile\",\n    \"door\",\n    \"wall\",\n    \"light switch\",\n    \"door handle\",\n    \"floor mat\"\n  ]\n}"
+}

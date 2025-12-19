@@ -1,0 +1,313 @@
+{
+  "image_id": 558854,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000558854.jpg",
+  "objects": [
+    "bowl",
+    "spoon",
+    "chili",
+    "plate",
+    "sandwich",
+    "fries",
+    "cup",
+    "straw",
+    "table",
+    "hamburger",
+    "chips",
+    "napkin",
+    "background",
+    "person",
+    "shirt",
+    "chair",
+    "food",
+    "drink",
+    "restaurant"
+  ],
+  "template": "We have an image with these objects: ['bowl', 'spoon', 'chili', 'plate', 'sandwich', 'fries', 'cup', 'straw', 'table', 'hamburger', 'chips', 'napkin', 'background', 'person', 'shirt', 'chair', 'food', 'drink', 'restaurant']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Restaurant scene with person eating food and drinks",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin",
+          "background",
+          "person",
+          "shirt",
+          "chair",
+          "food",
+          "drink",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "spoon",
+          "chili",
+          "plate",
+          "sandwich",
+          "fries",
+          "cup",
+          "straw",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of food or the setting.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of food and the setting."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Restaurant scene with person eating food and drinks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\", \"background\", \"person\", \"shirt\", \"chair\", \"food\", \"drink\", \"restaurant\"],\n  \"hallucinated_objects\": [\"bowl\", \"spoon\", \"chili\", \"plate\", \"sandwich\", \"fries\", \"cup\", \"straw\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of food or the setting.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of food and the setting.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Person in restaurant enjoying burger and fries with napkin on chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin",
+          "background",
+          "person",
+          "shirt",
+          "chair",
+          "food",
+          "drink",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "spoon",
+          "chili",
+          "plate",
+          "sandwich",
+          "fries",
+          "cup",
+          "straw",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in restaurant enjoying burger and fries with napkin on chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\", \"background\", \"person\", \"shirt\", \"chair\", \"food\", \"drink\", \"restaurant\"],\n  \"hallucinated_objects\": [\"bowl\", \"spoon\", \"chili\", \"plate\", \"sandwich\", \"fries\", \"cup\", \"straw\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Person in restaurant eating hamburger and chips with napkin on chair",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin",
+          "chair"
+        ],
+        "hallucinated_objects": [
+          "straw"
+        ],
+        "genericity_hint": "The image shows a meal at a restaurant, but the caption is too specific.",
+        "edit_instructions": [
+          "Remove the specific objects and make the caption more generic."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in restaurant eating hamburger and chips with napkin on chair\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\", \"chair\"],\n  \"hallucinated_objects\": [\"straw\"],\n  \"genericity_hint\": \"The image shows a meal at a restaurant, but the caption is too specific.\",\n  \"edit_instructions\": \"Remove the specific objects and make the caption more generic.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Person in restaurant eating food and drink",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin",
+          "background",
+          "person",
+          "shirt",
+          "chair",
+          "food",
+          "drink",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "spoon",
+          "chili",
+          "plate",
+          "sandwich",
+          "fries",
+          "cup",
+          "straw",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of food or drink.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the type of food and drink."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in restaurant eating food and drink\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\", \"background\", \"person\", \"shirt\", \"chair\", \"food\", \"drink\", \"restaurant\"],\n  \"hallucinated_objects\": [\"bowl\", \"spoon\", \"chili\", \"plate\", \"sandwich\", \"fries\", \"cup\", \"straw\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of food or drink.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the type of food and drink.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Person in restaurant munching on fries and burger with a soda",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin",
+          "background",
+          "person",
+          "shirt",
+          "chair",
+          "food",
+          "drink",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "spoon",
+          "chili",
+          "plate",
+          "sandwich",
+          "fries",
+          "cup",
+          "straw",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in restaurant munching on fries and burger with a soda\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\", \"background\", \"person\", \"shirt\", \"chair\", \"food\", \"drink\", \"restaurant\"],\n  \"hallucinated_objects\": [\"bowl\", \"spoon\", \"chili\", \"plate\", \"sandwich\", \"fries\", \"cup\", \"straw\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person at restaurant eating chips and burger with soda",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "person",
+          "shirt",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of food or the setting.",
+        "edit_instructions": [
+          "Specify the type of food and the setting."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person at restaurant eating chips and burger with soda\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\"],\n  \"hallucinated_objects\": [\"background\", \"person\", \"shirt\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of food or the setting.\",\n  \"edit_instructions\": \"Specify the type of food and the setting.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person at restaurant eating fries and hamburger with soda, using napkin.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "person",
+          "shirt",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person at restaurant eating fries and hamburger with soda, using napkin.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\"],\n  \"hallucinated_objects\": [\"background\", \"person\", \"shirt\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person at restaurant eating fries and chili with hamburger, using spoon and napkin.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "person",
+          "shirt",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of food and the setting."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person at restaurant eating fries and chili with hamburger, using spoon and napkin.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\"],\n  \"hallucinated_objects\": [\"background\", \"person\", \"shirt\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of food and the setting.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person at restaurant eating fries and chili with a hamburger, using a spoon and napkin.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "person",
+          "shirt",
+          "chair"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of food and the setting."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person at restaurant eating fries and chili with a hamburger, using a spoon and napkin.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\"],\n  \"hallucinated_objects\": [\"background\", \"person\", \"shirt\", \"chair\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of food and the setting.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person at restaurant eating fries and chili with a spoon, napkin nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "chips",
+          "napkin",
+          "background",
+          "person",
+          "shirt",
+          "chair",
+          "food",
+          "drink",
+          "restaurant"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "spoon",
+          "chili",
+          "plate",
+          "sandwich",
+          "fries",
+          "cup",
+          "straw",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bowl, spoon, chili, plate, sandwich, fries, cup, straw, table, hamburger, chips, napkin, background, person, shirt, chair, food, drink, restaurant]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person at restaurant eating fries and chili with a spoon, napkin nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"chips\", \"napkin\", \"background\", \"person\", \"shirt\", \"chair\", \"food\", \"drink\", \"restaurant\"],\n  \"hallucinated_objects\": [\"bowl\", \"spoon\", \"chili\", \"plate\", \"sandwich\", \"fries\", \"cup\", \"straw\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 558854,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000558854.jpg",
+    "final_caption": "Person at restaurant eating fries and chili with a spoon, napkin nearby.",
+    "total_time_sec": 35.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bowl\",\n    \"spoon\",\n    \"chili\",\n    \"plate\",\n    \"sandwich\",\n    \"fries\",\n    \"cup\",\n    \"straw\",\n    \"table\",\n    \"hamburger\",\n    \"chips\",\n    \"napkin\",\n    \"background\",\n    \"person\",\n    \"shirt\",\n    \"chair\",\n    \"food\",\n    \"drink\",\n    \"restaurant\"\n  ]\n}"
+}

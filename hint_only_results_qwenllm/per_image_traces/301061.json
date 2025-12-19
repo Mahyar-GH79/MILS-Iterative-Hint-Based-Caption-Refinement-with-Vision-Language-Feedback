@@ -1,0 +1,299 @@
+{
+  "image_id": 301061,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000301061.jpg",
+  "objects": [
+    "elephant",
+    "truck",
+    "hay",
+    "person",
+    "tattoo",
+    "shorts",
+    "door",
+    "rope",
+    "wheel",
+    "metal",
+    "wood",
+    "floor",
+    "wall",
+    "sky",
+    "light",
+    "shadow",
+    "grass",
+    "tree",
+    "sky",
+    "cloud"
+  ],
+  "template": "We have an image with these objects: ['elephant', 'truck', 'hay', 'person', 'tattoo', 'shorts', 'door', 'rope', 'wheel', 'metal', 'wood', 'floor', 'wall', 'sky', 'light', 'shadow', 'grass', 'tree', 'sky', 'cloud']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Elephant and truck under a blue sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "hay",
+          "person",
+          "tattoo",
+          "shorts",
+          "door",
+          "wheel",
+          "metal",
+          "wood",
+          "floor",
+          "wall",
+          "sky",
+          "light",
+          "shadow",
+          "grass",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "blue sky"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide enough detail about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and truck under a blue sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hay\", \"person\", \"tattoo\", \"shorts\", \"door\", \"wheel\", \"metal\", \"wood\", \"floor\", \"wall\", \"sky\", \"light\", \"shadow\", \"grass\", \"tree\"],\n  \"hallucinated_objects\": [\"blue sky\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide enough detail about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Elephant and truck near hay with person and tattoo on shorts",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal",
+          "wood",
+          "floor",
+          "wall",
+          "sky",
+          "light",
+          "shadow",
+          "grass",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "cloud"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of metal, wood, floor, wall, sky, light, shadow, grass, and tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and truck near hay with person and tattoo on shorts\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal\", \"wood\", \"floor\", \"wall\", \"sky\", \"light\", \"shadow\", \"grass\", \"tree\"],\n  \"hallucinated_objects\": [\"sky\", \"cloud\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of metal, wood, floor, wall, sky, light, shadow, grass, and tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Elephant and truck by hay under metal roof with person in shorts",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal roof",
+          "hay",
+          "person",
+          "shorts"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "cloud"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of truck, the color of the metal roof, and the type of hay."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and truck by hay under metal roof with person in shorts\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal roof\", \"hay\", \"person\", \"shorts\"],\n  \"hallucinated_objects\": [\"sky\", \"cloud\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of truck, the color of the metal roof, and the type of hay.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Elephant and truck loaded with hay under metal roof with person in shorts",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal roof",
+          "hay",
+          "person",
+          "shorts"
+        ],
+        "hallucinated_objects": [
+          "wood",
+          "floor",
+          "wall",
+          "sky",
+          "light",
+          "shadow",
+          "grass",
+          "tree",
+          "sky",
+          "cloud"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of roof, the type of hay, and the clothing of the person."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and truck loaded with hay under metal roof with person in shorts\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal roof\", \"hay\", \"person\", \"shorts\"],\n  \"hallucinated_objects\": [\"wood\", \"floor\", \"wall\", \"sky\", \"light\", \"shadow\", \"grass\", \"tree\", \"sky\", \"cloud\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of roof, the type of hay, and the clothing of the person.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Elephant and truck loaded with hay under metal roof while person in shorts stands nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal roof"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "cloud"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the type of roof and the presence of clouds in the sky."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and truck loaded with hay under metal roof while person in shorts stands nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal roof\"],\n  \"hallucinated_objects\": [\"sky\", \"cloud\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the type of roof and the presence of clouds in the sky.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Elephant and truck loaded with hay under metal roof near person in shorts",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal roof",
+          "hay",
+          "person",
+          "shorts"
+        ],
+        "hallucinated_objects": [
+          "sky",
+          "cloud"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of truck, the color of the metal roof, and the type of hay."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephant and truck loaded with hay under metal roof near person in shorts\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal roof\", \"hay\", \"person\", \"shorts\"],\n  \"hallucinated_objects\": [\"sky\", \"cloud\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of truck, the color of the metal roof, and the type of hay.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Large elephant and truck filled with bales of hay under metal roof near person in shorts",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal roof"
+        ],
+        "hallucinated_objects": [
+          "bales of hay"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of roof and the exact nature of the hay."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large elephant and truck filled with bales of hay under metal roof near person in shorts\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal roof\"],\n  \"hallucinated_objects\": [\"bales of hay\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of roof and the exact nature of the hay.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Large elephant and truck filled with hay under metal roof near person in shorts",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal roof",
+          "grass",
+          "tree",
+          "sky",
+          "cloud"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "shorts",
+          "wheel",
+          "floor",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of roof, the presence of grass and trees, and the sky and clouds."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large elephant and truck filled with hay under metal roof near person in shorts\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal roof\", \"grass\", \"tree\", \"sky\", \"cloud\"],\n  \"hallucinated_objects\": [\"person\", \"shorts\", \"wheel\", \"floor\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of roof, the presence of grass and trees, and the sky and clouds.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Large elephant and truck filled with hay under metal roof against grassy backdrop with clouds in sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "person",
+          "tattoo",
+          "shorts",
+          "door",
+          "wheel",
+          "metal",
+          "wood",
+          "floor",
+          "wall",
+          "sky",
+          "light",
+          "shadow",
+          "grass",
+          "tree"
+        ],
+        "hallucinated_objects": [
+          "roof",
+          "metal",
+          "grass",
+          "clouds"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of truck, the color of the metal, and the type of hay."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large elephant and truck filled with hay under metal roof against grassy backdrop with clouds in sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"person\", \"tattoo\", \"shorts\", \"door\", \"wheel\", \"metal\", \"wood\", \"floor\", \"wall\", \"sky\", \"light\", \"shadow\", \"grass\", \"tree\"],\n  \"hallucinated_objects\": [\"roof\", \"metal\", \"grass\", \"clouds\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of truck, the color of the metal, and the type of hay.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tattooed person in shorts drives old truck loaded with hay through wooden door against sunset sky with trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rope",
+          "wheel",
+          "metal",
+          "wood",
+          "floor",
+          "wall",
+          "sky",
+          "cloud"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "tattoo",
+          "shorts",
+          "door",
+          "hay",
+          "old truck",
+          "wooden door",
+          "sunset sky",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, truck, hay, person, tattoo, shorts, door, rope, wheel, metal, wood, floor, wall, sky, light, shadow, grass, tree, sky, cloud]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tattooed person in shorts drives old truck loaded with hay through wooden door against sunset sky with trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rope\", \"wheel\", \"metal\", \"wood\", \"floor\", \"wall\", \"sky\", \"cloud\"],\n  \"hallucinated_objects\": [\"person\", \"tattoo\", \"shorts\", \"door\", \"hay\", \"old truck\", \"wooden door\", \"sunset sky\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 301061,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000301061.jpg",
+    "final_caption": "Tattooed person in shorts drives old truck loaded with hay through wooden door against sunset sky with trees.",
+    "total_time_sec": 38.54
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"elephant\",\n    \"truck\",\n    \"hay\",\n    \"person\",\n    \"tattoo\",\n    \"shorts\",\n    \"door\",\n    \"rope\",\n    \"wheel\",\n    \"metal\",\n    \"wood\",\n    \"floor\",\n    \"wall\",\n    \"sky\",\n    \"light\",\n    \"shadow\",\n    \"grass\",\n    \"tree\",\n    \"sky\",\n    \"cloud\"\n  ]\n}"
+}

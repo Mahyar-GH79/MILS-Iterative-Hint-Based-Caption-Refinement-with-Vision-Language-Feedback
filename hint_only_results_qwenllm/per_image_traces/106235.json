@@ -1,0 +1,272 @@
+{
+  "image_id": 106235,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000106235.jpg",
+  "objects": [
+    "couch",
+    "coffee table",
+    "lamp",
+    "potted plant",
+    "remote control",
+    "pillow",
+    "rug",
+    "candle",
+    "phone",
+    "armchair",
+    "floor lamp",
+    "cushion",
+    "book",
+    "candle holder",
+    "candle",
+    "couch",
+    "couch",
+    "couch",
+    "couch"
+  ],
+  "template": "We have an image with these objects: ['couch', 'coffee table', 'lamp', 'potted plant', 'remote control', 'pillow', 'rug', 'candle', 'phone', 'armchair', 'floor lamp', 'cushion', 'book', 'candle holder', 'candle', 'couch', 'couch', 'couch', 'couch']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Couches rugs lamps fill living room",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "pillow",
+          "cushion",
+          "book",
+          "candle holder"
+        ],
+        "hallucinated_objects": [
+          "phone"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches or the presence of a rug.",
+        "edit_instructions": [
+          "Specify the number of couches and the presence of a rug."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couches rugs lamps fill living room\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"pillow\", \"cushion\", \"book\", \"candle holder\"],\n  \"hallucinated_objects\": [\"phone\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches or the presence of a rug.\",\n  \"edit_instructions\": \"Specify the number of couches and the presence of a rug.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Four couches a rug and lamps in living room",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "pillow",
+          "cushion",
+          "book",
+          "candle holder"
+        ],
+        "hallucinated_objects": [
+          "remote control",
+          "pillow",
+          "cushion",
+          "book",
+          "candle holder"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches or the presence of a rug and lamps.",
+        "edit_instructions": [
+          "Specify the number of couches, the presence of a rug and lamps, and include the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four couches a rug and lamps in living room\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"pillow\", \"cushion\", \"book\", \"candle holder\"],\n  \"hallucinated_objects\": [\"remote control\", \"pillow\", \"cushion\", \"book\", \"candle holder\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches or the presence of a rug and lamps.\",\n  \"edit_instructions\": \"Specify the number of couches, the presence of a rug and lamps, and include the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Five couches a large rug and lamps with books and candle holders in living room",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "phone",
+          "cushion",
+          "pillow",
+          "book",
+          "candle holder"
+        ],
+        "hallucinated_objects": [
+          "lamp",
+          "couch",
+          "couch",
+          "couch",
+          "couch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of couches or the presence of books and candle holders.",
+        "edit_instructions": [
+          "Remove the generic 'couch' and add the missing objects: remote control, phone, cushion, pillow, book, candle holder."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Five couches a large rug and lamps with books and candle holders in living room\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"phone\", \"cushion\", \"pillow\", \"book\", \"candle holder\"],\n  \"hallucinated_objects\": [\"lamp\", \"couch\", \"couch\", \"couch\", \"couch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of couches or the presence of books and candle holders.\",\n  \"edit_instructions\": \"Remove the generic 'couch' and add the missing objects: remote control, phone, cushion, pillow, book, candle holder.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Large rug armchair lamp books candle holders phone remote cushion pillow",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "candle holder",
+          "book",
+          "phone",
+          "cushion",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "couch",
+          "couch",
+          "couch"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the exact objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large rug armchair lamp books candle holders phone remote cushion pillow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"candle holder\", \"book\", \"phone\", \"cushion\", \"pillow\"],\n  \"hallucinated_objects\": [\"couch\", \"couch\", \"couch\", \"couch\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the exact objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Large rug with armchair lamp books candleholder remote cushion pillow",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "candle holder",
+          "candle",
+          "book",
+          "phone"
+        ],
+        "hallucinated_objects": [
+          "lamp",
+          "cushion",
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of lamp, the number of candles, and the presence of a remote control."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large rug with armchair lamp books candleholder remote cushion pillow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"candle holder\", \"candle\", \"book\", \"phone\"],\n  \"hallucinated_objects\": [\"lamp\", \"cushion\", \"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of lamp, the number of candles, and the presence of a remote control.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Large rug with armchair and floor lamp books candleholder remote control candles",
+      "vlm_hint": {
+        "missing_objects": [
+          "potted plant",
+          "remote control",
+          "candle",
+          "candle holder"
+        ],
+        "hallucinated_objects": [
+          "book"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the types of potted plants, the number of candles, and the exact location of the remote control and candle holder."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large rug with armchair and floor lamp books candleholder remote control candles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"potted plant\", \"remote control\", \"candle\", \"candle holder\"],\n  \"hallucinated_objects\": [\"book\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the types of potted plants, the number of candles, and the exact location of the remote control and candle holder.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Green potted plant near armchair with two candles floor lamp and rug",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "pillow",
+          "cushion",
+          "book",
+          "candle holder"
+        ],
+        "hallucinated_objects": [
+          "phone"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of candles, the type of rug, and the presence of a remote control."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green potted plant near armchair with two candles floor lamp and rug\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"pillow\", \"cushion\", \"book\", \"candle holder\"],\n  \"hallucinated_objects\": [\"phone\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of candles, the type of rug, and the presence of a remote control.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Green potted plant by armchair with three candles and floor lamp on beige rug near remote control and pillow",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "pillow",
+          "candle holder",
+          "candle",
+          "couch",
+          "couch",
+          "couch",
+          "couch"
+        ],
+        "hallucinated_objects": [
+          "potted plant",
+          "floor lamp",
+          "beige rug"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their exact locations and types."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Green potted plant by armchair with three candles and floor lamp on beige rug near remote control and pillow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"pillow\", \"candle holder\", \"candle\", \"couch\", \"couch\", \"couch\", \"couch\"],\n  \"hallucinated_objects\": [\"potted plant\", \"floor lamp\", \"beige rug\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their exact locations and types.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Couches surround armchair with candles and pillow on floor near remote.",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "candle holder",
+          "pillow",
+          "candle"
+        ],
+        "hallucinated_objects": [
+          "book",
+          "cushion"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couches surround armchair with candles and pillow on floor near remote.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"candle holder\", \"pillow\", \"candle\"],\n  \"hallucinated_objects\": [\"book\", \"cushion\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Couches surround armchair with candles and candle holder near rug and pillow.",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote control",
+          "book",
+          "phone"
+        ],
+        "hallucinated_objects": [
+          "cushion"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of remote controls, books, and phones, and clarify the presence of a cushion."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [couch, coffee table, lamp, potted plant, remote control, pillow, rug, candle, phone, armchair, floor lamp, cushion, book, candle holder, candle, couch, couch, couch, couch]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couches surround armchair with candles and candle holder near rug and pillow.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote control\", \"book\", \"phone\"],\n  \"hallucinated_objects\": [\"cushion\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of remote controls, books, and phones, and clarify the presence of a cushion.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 106235,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000106235.jpg",
+    "final_caption": "Couches surround armchair with candles and candle holder near rug and pillow.",
+    "total_time_sec": 37.23
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"couch\",\n    \"coffee table\",\n    \"lamp\",\n    \"potted plant\",\n    \"remote control\",\n    \"pillow\",\n    \"rug\",\n    \"candle\",\n    \"phone\",\n    \"armchair\",\n    \"floor lamp\",\n    \"cushion\",\n    \"book\",\n    \"candle holder\",\n    \"candle\",\n    \"couch\",\n    \"couch\",\n    \"couch\",\n    \"couch\"\n  ]\n}"
+}

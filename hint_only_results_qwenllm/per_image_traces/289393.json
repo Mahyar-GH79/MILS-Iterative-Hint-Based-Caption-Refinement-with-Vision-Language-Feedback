@@ -1,0 +1,218 @@
+{
+  "image_id": 289393,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000289393.jpg",
+  "objects": [
+    "giraffe",
+    "cow",
+    "deer",
+    "bird",
+    "frame",
+    "wheel",
+    "wooden box",
+    "plant",
+    "wall",
+    "floor"
+  ],
+  "template": "We have an image with these objects: ['giraffe', 'cow', 'deer', 'bird', 'frame', 'wheel', 'wooden box', 'plant', 'wall', 'floor']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Giraffe cow and bird in frame",
+      "vlm_hint": {
+        "missing_objects": [
+          "deer",
+          "wheel",
+          "wooden box",
+          "plant",
+          "wall",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "bird"
+        ],
+        "genericity_hint": "The caption is too specific and misses important objects in the image.",
+        "edit_instructions": [
+          "Remove the bird and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow and bird in frame\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"deer\", \"wheel\", \"wooden box\", \"plant\", \"wall\", \"floor\"],\n  \"hallucinated_objects\": [\"bird\"],\n  \"genericity_hint\": \"The caption is too specific and misses important objects in the image.\",\n  \"edit_instructions\": \"Remove the bird and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Giraffe cow deer in frame with wooden box plant on floor by wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [
+          "wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the bird and add a specific detail about the wooden box, such as its color or material."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame with wooden box plant on floor by wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [\"wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the bird and add a specific detail about the wooden box, such as its color or material.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Giraffe cow deer in frame with brown wooden box on floor by wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "plant",
+          "wheel",
+          "wooden box"
+        ],
+        "hallucinated_objects": [
+          "bird"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame with brown wooden box on floor by wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plant\", \"wheel\", \"wooden box\"],\n  \"hallucinated_objects\": [\"bird\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Giraffe cow deer in frame with wooden box and plant on floor near wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [
+          "wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object and remove the wheel."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame with wooden box and plant on floor near wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [\"wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object and remove the wheel.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Giraffe cow deer in frame with wooden box and bird near wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "plant",
+          "wheel",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "bird"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame with wooden box and bird near wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plant\", \"wheel\", \"floor\"],\n  \"hallucinated_objects\": [\"bird\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Giraffe cow deer in frame with wooden box and plant on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [
+          "wheel",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object and remove the generic ones."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame with wooden box and plant on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [\"wheel\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object and remove the generic ones.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Giraffe cow deer in frame with wooden box and bird on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "plant",
+          "wall",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image and avoids generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame with wooden box and bird on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plant\", \"wall\", \"floor\"],\n  \"hallucinated_objects\": [\"wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image and avoids generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Giraffe cow deer in frame by plant on wooden box and floor against wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [
+          "wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object and remove the wheel."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame by plant on wooden box and floor against wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [\"wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object and remove the wheel.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Giraffe cow deer in frame by plant on wooden box against wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [
+          "wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object and remove the wheel."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe cow deer in frame by plant on wooden box against wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [\"wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object and remove the wheel.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Giraffe, cow, bird in frame by plant on wooden box against wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "deer"
+        ],
+        "hallucinated_objects": [
+          "wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing object to make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, cow, deer, bird, frame, wheel, wooden box, plant, wall, floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe, cow, bird in frame by plant on wooden box against wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"deer\"],\n  \"hallucinated_objects\": [\"wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing object to make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 289393,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000289393.jpg",
+    "final_caption": "Giraffe, cow, bird in frame by plant on wooden box against wall",
+    "total_time_sec": 26.78
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"giraffe\",\n    \"cow\",\n    \"deer\",\n    \"bird\",\n    \"frame\",\n    \"wheel\",\n    \"wooden box\",\n    \"plant\",\n    \"wall\",\n    \"floor\"\n  ]\n}"
+}

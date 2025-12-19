@@ -1,0 +1,291 @@
+{
+  "image_id": 130586,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000130586.jpg",
+  "objects": [
+    "kite",
+    "boy",
+    "grass",
+    "building",
+    "trees",
+    "sky",
+    "window",
+    "pole",
+    "bush",
+    "shirt",
+    "pocket",
+    "button",
+    "ear",
+    "tongue",
+    "hand",
+    "fingers",
+    "kite string",
+    "kite tail",
+    "kite handle"
+  ],
+  "template": "We have an image with these objects: ['kite', 'boy', 'grass', 'building', 'trees', 'sky', 'window', 'pole', 'bush', 'shirt', 'pocket', 'button', 'ear', 'tongue', 'hand', 'fingers', 'kite string', 'kite tail', 'kite handle']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Boy flies kite against sky near building trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the kite string, tail, and handle to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flies kite against sky near building trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the kite string, tail, and handle to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boy flies kite with string and tail near sky and building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bush",
+          "window",
+          "button",
+          "ear",
+          "tongue",
+          "hand",
+          "fingers",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "pole",
+          "bush",
+          "window",
+          "button",
+          "ear",
+          "tongue",
+          "hand",
+          "fingers",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flies kite with string and tail near sky and building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bush\", \"window\", \"button\", \"ear\", \"tongue\", \"hand\", \"fingers\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"pole\", \"bush\", \"window\", \"button\", \"ear\", \"tongue\", \"hand\", \"fingers\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boy flies a kite on grass near trees and a building holding the string and tail.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bush",
+          "window",
+          "button",
+          "ear",
+          "fingers",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the kite string, tail, and handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flies a kite on grass near trees and a building holding the string and tail.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bush\", \"window\", \"button\", \"ear\", \"fingers\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the kite string, tail, and handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Boy flies a kite on grass near trees and a building holding the string and tail with fingers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bush",
+          "window",
+          "button",
+          "ear",
+          "tongue",
+          "fingers",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "pole",
+          "bush",
+          "window",
+          "button",
+          "ear",
+          "tongue",
+          "fingers",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and shape of the kite, the type of building, and the position of the boy's hand."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy flies a kite on grass near trees and a building holding the string and tail with fingers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bush\", \"window\", \"button\", \"ear\", \"tongue\", \"fingers\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"pole\", \"bush\", \"window\", \"button\", \"ear\", \"tongue\", \"fingers\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and shape of the kite, the type of building, and the position of the boy's hand.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Boy in a blue shirt flies a triangular kite on grass near trees and a red building, holding the string and tail with his hands.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bush",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and shape of the kite, the type of building, and the position of the boy's hands."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in a blue shirt flies a triangular kite on grass near trees and a red building, holding the string and tail with his hands.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bush\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"window\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and shape of the kite, the type of building, and the position of the boy's hands.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Boy in a blue shirt holds kite string and tail with hands near tall trees and red building, flying a triangular kite in green grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bush",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "tall trees",
+          "red building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and shape of the kite, the type of building, and the presence of a pole and bush."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in a blue shirt holds kite string and tail with hands near tall trees and red building, flying a triangular kite in green grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bush\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"tall trees\", \"red building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and shape of the kite, the type of building, and the presence of a pole and bush.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Boy in blue shirt grips kite string and tail near pole and bush, flying a colorful diamond kite in grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the pole and bush, and include the window and sky in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy in blue shirt grips kite string and tail near pole and bush, flying a colorful diamond kite in grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bush\"],\n  \"hallucinated_objects\": [\"window\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the pole and bush, and include the window and sky in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Boy grips kite string and tail near tall pole and bushes in grass, flying a colorful diamond kite against blue sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bushes",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "tongue",
+          "hand",
+          "fingers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the kite string, tail, handle, and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy grips kite string and tail near tall pole and bushes in grass, flying a colorful diamond kite against blue sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bushes\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"tongue\", \"hand\", \"fingers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the kite string, tail, handle, and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Boy holds kite string and tail near pole and bushes in grass, flying a colorful diamond kite against blue sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bushes",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the kite string and tail, and the presence of a pole and bushes."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy holds kite string and tail near pole and bushes in grass, flying a colorful diamond kite against blue sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bushes\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"window\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the kite string and tail, and the presence of a pole and bushes.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Boy holds kite string and tail near pole and bushes in grass, flying a colorful diamond kite against clear blue sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "pole",
+          "bushes",
+          "kite string",
+          "kite tail",
+          "kite handle"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a pole and bushes, and the specific parts of the kite (string, tail, handle)."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [kite, boy, grass, building, trees, sky, window, pole, bush, shirt, pocket, button, ear, tongue, hand, fingers, kite string, kite tail, kite handle]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boy holds kite string and tail near pole and bushes in grass, flying a colorful diamond kite against clear blue sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pole\", \"bushes\", \"kite string\", \"kite tail\", \"kite handle\"],\n  \"hallucinated_objects\": [\"window\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a pole and bushes, and the specific parts of the kite (string, tail, handle).\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 130586,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000130586.jpg",
+    "final_caption": "Boy holds kite string and tail near pole and bushes in grass, flying a colorful diamond kite against clear blue sky.",
+    "total_time_sec": 41.35
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"kite\",\n    \"boy\",\n    \"grass\",\n    \"building\",\n    \"trees\",\n    \"sky\",\n    \"window\",\n    \"pole\",\n    \"bush\",\n    \"shirt\",\n    \"pocket\",\n    \"button\",\n    \"ear\",\n    \"tongue\",\n    \"hand\",\n    \"fingers\",\n    \"kite string\",\n    \"kite tail\",\n    \"kite handle\"\n  ]\n}"
+}

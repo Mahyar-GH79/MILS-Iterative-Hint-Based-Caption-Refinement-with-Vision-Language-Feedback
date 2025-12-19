@@ -1,0 +1,242 @@
+{
+  "image_id": 219283,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000219283.jpg",
+  "objects": [
+    "bear",
+    "box",
+    "banana",
+    "container",
+    "cardboard",
+    "hole",
+    "text",
+    "image",
+    "logo",
+    "background",
+    "floor",
+    "light",
+    "shadow",
+    "wall",
+    "object",
+    "material",
+    "shape",
+    "color",
+    "pattern",
+    "design"
+  ],
+  "template": "We have an image with these objects: ['bear', 'box', 'banana', 'container', 'cardboard', 'hole', 'text', 'image', 'logo', 'background', 'floor', 'light', 'shadow', 'wall', 'object', 'material', 'shape', 'color', 'pattern', 'design']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bear standing near box with banana on floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container"
+        ],
+        "hallucinated_objects": [
+          "bear"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the bear and add a container."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear standing near box with banana on floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\"],\n  \"hallucinated_objects\": [\"bear\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the bear and add a container.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Container with banana on black and white floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "bear",
+          "cardboard",
+          "hole",
+          "text",
+          "logo",
+          "background",
+          "floor",
+          "light",
+          "shadow",
+          "wall",
+          "object",
+          "material",
+          "shape",
+          "color",
+          "pattern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "container",
+          "banana"
+        ],
+        "genericity_hint": "The image is in black and white, but the caption suggests it is in color.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the objects that are present in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Container with banana on black and white floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bear\", \"cardboard\", \"hole\", \"text\", \"logo\", \"background\", \"floor\", \"light\", \"shadow\", \"wall\", \"object\", \"material\", \"shape\", \"color\", \"pattern\", \"design\"],\n  \"hallucinated_objects\": [\"container\", \"banana\"],\n  \"genericity_hint\": \"The image is in black and white, but the caption suggests it is in color.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the objects that are present in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bear in a hole on black and white floor shadow visible",
+      "vlm_hint": {
+        "missing_objects": [
+          "container",
+          "text",
+          "logo",
+          "background",
+          "wall",
+          "floor",
+          "light",
+          "shadow",
+          "shape",
+          "color",
+          "pattern",
+          "design"
+        ],
+        "hallucinated_objects": [
+          "hole"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to distinguish certain objects.",
+        "edit_instructions": [
+          "Remove the hole and add the missing objects from the provided list."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a hole on black and white floor shadow visible\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\", \"text\", \"logo\", \"background\", \"wall\", \"floor\", \"light\", \"shadow\", \"shape\", \"color\", \"pattern\", \"design\"],\n  \"hallucinated_objects\": [\"hole\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to distinguish certain objects.\",\n  \"edit_instructions\": \"Remove the hole and add the missing objects from the provided list.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bear in a container on a black and white floor with text and logo design",
+      "vlm_hint": {
+        "missing_objects": [
+          "container"
+        ],
+        "hallucinated_objects": [
+          "text",
+          "logo"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the text and logo, and add a container."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a container on a black and white floor with text and logo design\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\"],\n  \"hallucinated_objects\": [\"text\", \"logo\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the text and logo, and add a container.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bear in a container on black and white floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container",
+          "floor"
+        ],
+        "hallucinated_objects": [
+          "black and white floor"
+        ],
+        "genericity_hint": "The image is in black and white, but the caption should not mention this.",
+        "edit_instructions": [
+          "Remove the mention of the black and white floor and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a container on black and white floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\", \"floor\"],\n  \"hallucinated_objects\": [\"black and white floor\"],\n  \"genericity_hint\": \"The image is in black and white, but the caption should not mention this.\",\n  \"edit_instructions\": \"Remove the mention of the black and white floor and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bear in a container on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container",
+          "bear"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify objects.",
+        "edit_instructions": [
+          "Add a container and a bear to the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a container on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\", \"bear\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify objects.\",\n  \"edit_instructions\": \"Add a container and a bear to the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bear in a black and white container on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container"
+        ],
+        "hallucinated_objects": [
+          "black and white"
+        ],
+        "genericity_hint": "The image is in black and white, but the caption should not mention this.",
+        "edit_instructions": [
+          "Remove the mention of the container and the black and white color from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a black and white container on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\"],\n  \"hallucinated_objects\": [\"black and white\"],\n  \"genericity_hint\": \"The image is in black and white, but the caption should not mention this.\",\n  \"edit_instructions\": \"Remove the mention of the container and the black and white color from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bear in a container on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container",
+          "bear"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify objects.",
+        "edit_instructions": [
+          "Add a container and a bear to the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a container on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\", \"bear\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify objects.\",\n  \"edit_instructions\": \"Add a container and a bear to the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bear in a black and white container on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container"
+        ],
+        "hallucinated_objects": [
+          "black and white"
+        ],
+        "genericity_hint": "The image is in black and white, but the caption should not mention this.",
+        "edit_instructions": [
+          "Remove the mention of the container and the black and white color from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a black and white container on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\"],\n  \"hallucinated_objects\": [\"black and white\"],\n  \"genericity_hint\": \"The image is in black and white, but the caption should not mention this.\",\n  \"edit_instructions\": \"Remove the mention of the container and the black and white color from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bear in a container on the floor",
+      "vlm_hint": {
+        "missing_objects": [
+          "container",
+          "bear"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify objects.",
+        "edit_instructions": [
+          "Add a container and a bear to the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bear, box, banana, container, cardboard, hole, text, image, logo, background, floor, light, shadow, wall, object, material, shape, color, pattern, design]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bear in a container on the floor\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"container\", \"bear\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify objects.\",\n  \"edit_instructions\": \"Add a container and a bear to the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 219283,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000219283.jpg",
+    "final_caption": "Bear in a container on the floor",
+    "total_time_sec": 27.78
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bear\",\n    \"box\",\n    \"banana\",\n    \"container\",\n    \"cardboard\",\n    \"hole\",\n    \"text\",\n    \"image\",\n    \"logo\",\n    \"background\",\n    \"floor\",\n    \"light\",\n    \"shadow\",\n    \"wall\",\n    \"object\",\n    \"material\",\n    \"shape\",\n    \"color\",\n    \"pattern\",\n    \"design\"\n  ]\n}"
+}

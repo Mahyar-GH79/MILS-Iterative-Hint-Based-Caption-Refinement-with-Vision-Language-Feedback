@@ -1,0 +1,255 @@
+{
+  "image_id": 153568,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000153568.jpg",
+  "objects": [
+    "stop sign",
+    "handwritten note",
+    "brick wall",
+    "metal pole",
+    "gravel ground",
+    "white arrow",
+    "white text",
+    "red background",
+    "black text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text",
+    "white text"
+  ],
+  "template": "We have an image with these objects: ['stop sign', 'handwritten note', 'brick wall', 'metal pole', 'gravel ground', 'white arrow', 'white text', 'red background', 'black text', 'white text', 'white text', 'white text', 'white text', 'white text', 'white text', 'white text', 'white text', 'white text', 'white text', 'white text']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Stop sign with white arrows and red background",
+      "vlm_hint": {
+        "missing_objects": [
+          "handwritten note",
+          "metal pole",
+          "gravel ground"
+        ],
+        "hallucinated_objects": [
+          "white arrow"
+        ],
+        "genericity_hint": "The candidate caption is too specific and does not account for the handwritten note and the metal pole.",
+        "edit_instructions": [
+          "Remove the white arrows and mention the handwritten note and the metal pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with white arrows and red background\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"handwritten note\", \"metal pole\", \"gravel ground\"],\n  \"hallucinated_objects\": [\"white arrow\"],\n  \"genericity_hint\": \"The candidate caption is too specific and does not account for the handwritten note and the metal pole.\",\n  \"edit_instructions\": \"Remove the white arrows and mention the handwritten note and the metal pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Stop sign with handwritten note and metal pole on gravel",
+      "vlm_hint": {
+        "missing_objects": [
+          "brick wall",
+          "metal pole",
+          "gravel ground"
+        ],
+        "hallucinated_objects": [
+          "white arrow"
+        ],
+        "genericity_hint": "The image contains a stop sign with a handwritten note, but the caption is too generic and does not specify the location or context of the sign.",
+        "edit_instructions": [
+          "Provide more specific details about the location and context of the stop sign in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note and metal pole on gravel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brick wall\", \"metal pole\", \"gravel ground\"],\n  \"hallucinated_objects\": [\"white arrow\"],\n  \"genericity_hint\": \"The image contains a stop sign with a handwritten note, but the caption is too generic and does not specify the location or context of the sign.\",\n  \"edit_instructions\": \"Provide more specific details about the location and context of the stop sign in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Stop sign with handwritten note on brick wall near metal pole and gravel ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "white arrow",
+          "red background"
+        ],
+        "hallucinated_objects": [
+          "white arrow",
+          "red background"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or context of the stop sign.",
+        "edit_instructions": [
+          "Remove the white arrow and red background from the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall near metal pole and gravel ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white arrow\", \"red background\"],\n  \"hallucinated_objects\": [\"white arrow\", \"red background\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or context of the stop sign.\",\n  \"edit_instructions\": \"Remove the white arrow and red background from the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Stop sign with handwritten note on brick wall by metal pole and gravel ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "white arrow",
+          "red background"
+        ],
+        "hallucinated_objects": [
+          "white arrow",
+          "red background"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or context of the stop sign.",
+        "edit_instructions": [
+          "Remove the white arrow and red background from the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall by metal pole and gravel ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white arrow\", \"red background\"],\n  \"hallucinated_objects\": [\"white arrow\", \"red background\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or context of the stop sign.\",\n  \"edit_instructions\": \"Remove the white arrow and red background from the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Stop sign with handwritten note on brick wall by metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "white arrow",
+          "gravel ground",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text",
+          "white text"
+        ],
+        "hallucinated_objects": [
+          "red background",
+          "black text"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Provide a more detailed and specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall by metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white arrow\", \"gravel ground\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\", \"white text\"],\n  \"hallucinated_objects\": [\"red background\", \"black text\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Provide a more detailed and specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Stop sign with white arrow and handwritten note on brick wall by metal pole",
+      "vlm_hint": {
+        "missing_objects": [
+          "white arrow"
+        ],
+        "hallucinated_objects": [
+          "metal pole"
+        ],
+        "genericity_hint": "The candidate caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the white arrow and the metal pole from the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with white arrow and handwritten note on brick wall by metal pole\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"white arrow\"],\n  \"hallucinated_objects\": [\"metal pole\"],\n  \"genericity_hint\": \"The candidate caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the white arrow and the metal pole from the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Stop sign with handwritten note on brick wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal pole",
+          "gravel ground",
+          "white arrow"
+        ],
+        "hallucinated_objects": [
+          "red background",
+          "black text"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or context of the stop sign.",
+        "edit_instructions": [
+          "Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal pole\", \"gravel ground\", \"white arrow\"],\n  \"hallucinated_objects\": [\"red background\", \"black text\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or context of the stop sign.\",\n  \"edit_instructions\": \"Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Stop sign with handwritten note on brick wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal pole",
+          "gravel ground",
+          "white arrow"
+        ],
+        "hallucinated_objects": [
+          "red background",
+          "black text"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or context of the stop sign.",
+        "edit_instructions": [
+          "Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal pole\", \"gravel ground\", \"white arrow\"],\n  \"hallucinated_objects\": [\"red background\", \"black text\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or context of the stop sign.\",\n  \"edit_instructions\": \"Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Stop sign with handwritten note on brick wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal pole",
+          "gravel ground",
+          "white arrow"
+        ],
+        "hallucinated_objects": [
+          "red background",
+          "black text"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or context of the stop sign.",
+        "edit_instructions": [
+          "Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal pole\", \"gravel ground\", \"white arrow\"],\n  \"hallucinated_objects\": [\"red background\", \"black text\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or context of the stop sign.\",\n  \"edit_instructions\": \"Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Stop sign with handwritten note on brick wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "metal pole",
+          "gravel ground",
+          "white arrow"
+        ],
+        "hallucinated_objects": [
+          "red background",
+          "black text"
+        ],
+        "genericity_hint": "The image is not specific enough to determine the exact location or context of the stop sign.",
+        "edit_instructions": [
+          "Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [stop sign, handwritten note, brick wall, metal pole, gravel ground, white arrow, white text, red background, black text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text, white text]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Stop sign with handwritten note on brick wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"metal pole\", \"gravel ground\", \"white arrow\"],\n  \"hallucinated_objects\": [\"red background\", \"black text\"],\n  \"genericity_hint\": \"The image is not specific enough to determine the exact location or context of the stop sign.\",\n  \"edit_instructions\": \"Remove the metal pole, gravel ground, and white arrow from the list of objects. Remove the red background and black text from the list of objects.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 153568,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000153568.jpg",
+    "final_caption": "Stop sign with handwritten note on brick wall",
+    "total_time_sec": 33.73
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"stop sign\",\n    \"handwritten note\",\n    \"brick wall\",\n    \"metal pole\",\n    \"gravel ground\",\n    \"white arrow\",\n    \"white text\",\n    \"red background\",\n    \"black text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\",\n    \"white text\"\n  ]\n}"
+}

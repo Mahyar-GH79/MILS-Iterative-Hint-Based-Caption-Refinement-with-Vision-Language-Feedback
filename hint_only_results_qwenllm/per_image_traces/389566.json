@@ -1,0 +1,256 @@
+{
+  "image_id": 389566,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000389566.jpg",
+  "objects": [
+    "sheep",
+    "car",
+    "road",
+    "mountains",
+    "trees",
+    "sign",
+    "steering wheel",
+    "windshield",
+    "hills",
+    "grass",
+    "sky",
+    "clouds",
+    "fence",
+    "hedge",
+    "bushes",
+    "vegetation",
+    "vegetation",
+    "vegetation",
+    "vegetation"
+  ],
+  "template": "We have an image with these objects: ['sheep', 'car', 'road', 'mountains', 'trees', 'sign', 'steering wheel', 'windshield', 'hills', 'grass', 'sky', 'clouds', 'fence', 'hedge', 'bushes', 'vegetation', 'vegetation', 'vegetation', 'vegetation']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sheep on road near mountains amid vegetation",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "steering wheel",
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "hills",
+          "grass",
+          "sky",
+          "clouds",
+          "fence",
+          "hedge",
+          "bushes",
+          "vegetation"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car, steering wheel, and windshield, and remove the generic vegetation and sky references."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep on road near mountains amid vegetation\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"steering wheel\", \"windshield\"],\n  \"hallucinated_objects\": [\"hills\", \"grass\", \"sky\", \"clouds\", \"fence\", \"hedge\", \"bushes\", \"vegetation\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car, steering wheel, and windshield, and remove the generic vegetation and sky references.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Sheep by road near mountains with car and steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills",
+          "vegetation"
+        ],
+        "hallucinated_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the presence of trees, hills, and vegetation."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep by road near mountains with car and steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\", \"vegetation\"],\n  \"hallucinated_objects\": [\"steering wheel\", \"windshield\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the presence of trees, hills, and vegetation.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Sheep on road near mountains with trees and hills surrounded by vegetation.",
+      "vlm_hint": {
+        "missing_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "hedge",
+          "bushes",
+          "vegetation"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the steering wheel and windshield."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep on road near mountains with trees and hills surrounded by vegetation.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"steering wheel\", \"windshield\"],\n  \"hallucinated_objects\": [\"hedge\", \"bushes\", \"vegetation\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the steering wheel and windshield.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Car on road near mountains with sheep and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "hedge",
+          "bushes",
+          "vegetation"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the steering wheel and windshield."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car on road near mountains with sheep and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"steering wheel\", \"windshield\"],\n  \"hallucinated_objects\": [\"hedge\", \"bushes\", \"vegetation\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the steering wheel and windshield.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Car on road near mountains with sheep and trees showing steering wheel and windshield.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills",
+          "grass",
+          "sky",
+          "clouds",
+          "fence",
+          "hedge",
+          "bushes",
+          "vegetation"
+        ],
+        "hallucinated_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the hills, grass, sky, clouds, fence, hedge, bushes, and vegetation."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car on road near mountains with sheep and trees showing steering wheel and windshield.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\", \"grass\", \"sky\", \"clouds\", \"fence\", \"hedge\", \"bushes\", \"vegetation\"],\n  \"hallucinated_objects\": [\"steering wheel\", \"windshield\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the hills, grass, sky, clouds, fence, hedge, bushes, and vegetation.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Car on hillside road among mountains with sheep and trees under cloudy sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "hedge",
+          "bushes",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the steering wheel and windshield."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car on hillside road among mountains with sheep and trees under cloudy sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"steering wheel\", \"windshield\"],\n  \"hallucinated_objects\": [\"hedge\", \"bushes\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the steering wheel and windshield.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Car on hillside road among mountains with sheep and trees under cloudy sky near windshield and steering wheel.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hedge",
+          "bushes",
+          "vegetation"
+        ],
+        "hallucinated_objects": [
+          "sign",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of vegetation and the presence of a sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car on hillside road among mountains with sheep and trees under cloudy sky near windshield and steering wheel.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hedge\", \"bushes\", \"vegetation\"],\n  \"hallucinated_objects\": [\"sign\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of vegetation and the presence of a sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Car on hillside road among mountains with sheep and dense vegetation under cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "hedge",
+          "bushes",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the steering wheel and windshield."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car on hillside road among mountains with sheep and dense vegetation under cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"steering wheel\", \"windshield\"],\n  \"hallucinated_objects\": [\"hedge\", \"bushes\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the steering wheel and windshield.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Car on hillside road with sheep among mountains under cloudy sky near windshield and steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "hedge",
+          "bushes",
+          "vegetation"
+        ],
+        "hallucinated_objects": [
+          "sign",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of vegetation and the presence of a sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car on hillside road with sheep among mountains under cloudy sky near windshield and steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hedge\", \"bushes\", \"vegetation\"],\n  \"hallucinated_objects\": [\"sign\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of vegetation and the presence of a sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Sheep and vegetation by car on hillside road under cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "steering wheel",
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "hedge",
+          "bushes",
+          "fence"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the steering wheel and windshield."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [sheep, car, road, mountains, trees, sign, steering wheel, windshield, hills, grass, sky, clouds, fence, hedge, bushes, vegetation, vegetation, vegetation, vegetation]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sheep and vegetation by car on hillside road under cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"steering wheel\", \"windshield\"],\n  \"hallucinated_objects\": [\"hedge\", \"bushes\", \"fence\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the steering wheel and windshield.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 389566,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000389566.jpg",
+    "final_caption": "Sheep and vegetation by car on hillside road under cloudy sky",
+    "total_time_sec": 34.69
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"sheep\",\n    \"car\",\n    \"road\",\n    \"mountains\",\n    \"trees\",\n    \"sign\",\n    \"steering wheel\",\n    \"windshield\",\n    \"hills\",\n    \"grass\",\n    \"sky\",\n    \"clouds\",\n    \"fence\",\n    \"hedge\",\n    \"bushes\",\n    \"vegetation\",\n    \"vegetation\",\n    \"vegetation\",\n    \"vegetation\"\n  ]\n}"
+}

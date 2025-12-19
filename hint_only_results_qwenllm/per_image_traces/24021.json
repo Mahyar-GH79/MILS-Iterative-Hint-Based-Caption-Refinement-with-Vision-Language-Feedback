@@ -1,0 +1,226 @@
+{
+  "image_id": 24021,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000024021.jpg",
+  "objects": [
+    "boys",
+    "school",
+    "building",
+    "windows",
+    "ties",
+    "suits",
+    "ties",
+    "suits",
+    "ties",
+    "suits",
+    "ties",
+    "suits",
+    "ties",
+    "suits",
+    "ties",
+    "suits",
+    "ties",
+    "suits",
+    "ties",
+    "suits"
+  ],
+  "template": "We have an image with these objects: ['boys', 'school', 'building', 'windows', 'ties', 'suits', 'ties', 'suits', 'ties', 'suits', 'ties', 'suits', 'ties', 'suits', 'ties', 'suits', 'ties', 'suits', 'ties', 'suits']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Boys in suits and ties outside a school building",
+      "vlm_hint": {
+        "missing_objects": [
+          "windows",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "suits",
+          "ties"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the context of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the location and the context of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys in suits and ties outside a school building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windows\", \"building\"],\n  \"hallucinated_objects\": [\"suits\", \"ties\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the context of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the location and the context of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boys in suits and ties outside the school building",
+      "vlm_hint": {
+        "missing_objects": [
+          "windows",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "suits",
+          "ties"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the time of the photo.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys in suits and ties outside the school building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windows\", \"building\"],\n  \"hallucinated_objects\": [\"suits\", \"ties\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the time of the photo.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boys in suits and ties outside the school building with windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of boys or the exact location of the building.",
+        "edit_instructions": [
+          "Specify the number of boys and the exact location of the building."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys in suits and ties outside the school building with windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windows\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of boys or the exact location of the building.\",\n  \"edit_instructions\": \"Specify the number of boys and the exact location of the building.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Eight boys in suits and ties stand near the school's windows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "boys",
+          "school",
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "suits",
+          "ties"
+        ],
+        "genericity_hint": "The caption is too specific and misses the main subject of the image.",
+        "edit_instructions": [
+          "Remove the specific details and focus on the main subject of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Eight boys in suits and ties stand near the school's windows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boys\", \"school\", \"windows\"],\n  \"hallucinated_objects\": [\"suits\", \"ties\"],\n  \"genericity_hint\": \"The caption is too specific and misses the main subject of the image.\",\n  \"edit_instructions\": \"Remove the specific details and focus on the main subject of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Boys near school windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "building",
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "suits",
+          "ties"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the full context of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the building and windows, and avoids mentioning suits and ties."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys near school windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"building\", \"windows\"],\n  \"hallucinated_objects\": [\"suits\", \"ties\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the full context of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the building and windows, and avoids mentioning suits and ties.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Boys near school building windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "Goodmayes Boys' School"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the location or the context of the image.",
+        "edit_instructions": [
+          "Add the name of the school and the date to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys near school building windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Goodmayes Boys' School\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the location or the context of the image.\",\n  \"edit_instructions\": \"Add the name of the school and the date to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Goodmayes Boys' School boys near building windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the building and add windows."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Goodmayes Boys' School boys near building windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windows\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the building and add windows.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Goodmayes Boys' School boys by windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "building",
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "suits",
+          "ties"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the context of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the location and the context of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Goodmayes Boys' School boys by windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"building\", \"windows\"],\n  \"hallucinated_objects\": [\"suits\", \"ties\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the context of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the location and the context of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Boys at Goodmayes Boys' School by the building's windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The caption is too specific and misses some key elements.",
+        "edit_instructions": [
+          "Remove the building and add the windows."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys at Goodmayes Boys' School by the building's windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windows\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The caption is too specific and misses some key elements.\",\n  \"edit_instructions\": \"Remove the building and add the windows.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Boys in ties gather by windows",
+      "vlm_hint": {
+        "missing_objects": [
+          "building",
+          "windows"
+        ],
+        "hallucinated_objects": [
+          "suits"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the full context of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the building and windows in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boys, school, building, windows, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits, ties, suits]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boys in ties gather by windows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"building\", \"windows\"],\n  \"hallucinated_objects\": [\"suits\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the full context of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the building and windows in the background.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 24021,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000024021.jpg",
+    "final_caption": "Boys in ties gather by windows",
+    "total_time_sec": 26.96
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"boys\",\n    \"school\",\n    \"building\",\n    \"windows\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\",\n    \"ties\",\n    \"suits\"\n  ]\n}"
+}

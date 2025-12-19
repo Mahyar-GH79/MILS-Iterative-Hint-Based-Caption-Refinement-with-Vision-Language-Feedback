@@ -1,0 +1,257 @@
+{
+  "image_id": 342971,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000342971.jpg",
+  "objects": [
+    "man",
+    "green frisbee",
+    "sunglasses",
+    "green sweatshirt",
+    "blue jeans",
+    "belt",
+    "trees",
+    "sky",
+    "winter",
+    "outdoors",
+    "cold",
+    "activity",
+    "frisbee",
+    "man",
+    "green",
+    "sunglasses",
+    "green",
+    "blue",
+    "winter"
+  ],
+  "template": "We have an image with these objects: ['man', 'green frisbee', 'sunglasses', 'green sweatshirt', 'blue jeans', 'belt', 'trees', 'sky', 'winter', 'outdoors', 'cold', 'activity', 'frisbee', 'man', 'green', 'sunglasses', 'green', 'blue', 'winter']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in green plays frisbee under trees in winter sun",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "winter sun"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the belt and the type of trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green plays frisbee under trees in winter sun\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"winter sun\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the belt and the type of trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in green sweatshirt and sunglasses tosses a green frisbee near trees against a clear sky in winter",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees",
+          "sky",
+          "winter"
+        ],
+        "hallucinated_objects": [
+          "blue jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt and sunglasses tosses a green frisbee near trees against a clear sky in winter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\", \"sky\", \"winter\"],\n  \"hallucinated_objects\": [\"blue jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in green sweatshirt and sunglasses tosses a green frisbee near trees under a clear winter sky wearing a belt.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "sky",
+          "winter",
+          "outdoors",
+          "cold",
+          "activity",
+          "frisbee"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "green sweatshirt",
+          "sunglasses",
+          "blue jeans",
+          "belt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their relationships.",
+        "edit_instructions": [
+          "Provide specific details about the objects and their relationships in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt and sunglasses tosses a green frisbee near trees under a clear winter sky wearing a belt.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"sky\", \"winter\", \"outdoors\", \"cold\", \"activity\", \"frisbee\"],\n  \"hallucinated_objects\": [\"man\", \"green sweatshirt\", \"sunglasses\", \"blue jeans\", \"belt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their relationships.\",\n  \"edit_instructions\": \"Provide specific details about the objects and their relationships in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man tosses a green frisbee near trees in a cold winter outdoors under a clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sunglasses",
+          "belt",
+          "trees",
+          "sky",
+          "winter",
+          "outdoors",
+          "cold"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "green frisbee"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their relationships.",
+        "edit_instructions": [
+          "Provide specific details about the objects and their relationships in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man tosses a green frisbee near trees in a cold winter outdoors under a clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sunglasses\", \"belt\", \"trees\", \"sky\", \"winter\", \"outdoors\", \"cold\"],\n  \"hallucinated_objects\": [\"man\", \"green frisbee\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their relationships.\",\n  \"edit_instructions\": \"Provide specific details about the objects and their relationships in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in green sweatshirt tosses a frisbee near trees in cold winter outdoors.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "blue jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the belt and the type of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt tosses a frisbee near trees in cold winter outdoors.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"blue jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the belt and the type of trees.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in green sweatshirt with green frisbee tosses toward tall trees under a clear blue sky in cold winter outdoors, wearing sunglasses, tied with a belt.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "sky",
+          "winter",
+          "outdoors",
+          "cold"
+        ],
+        "hallucinated_objects": [
+          "tall trees",
+          "clear blue sky",
+          "activity"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt with green frisbee tosses toward tall trees under a clear blue sky in cold winter outdoors, wearing sunglasses, tied with a belt.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"sky\", \"winter\", \"outdoors\", \"cold\"],\n  \"hallucinated_objects\": [\"tall trees\", \"clear blue sky\", \"activity\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in green sweatshirt throws green frisbee amidst trees under a winter sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "blue jeans"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "winter",
+          "outdoors",
+          "cold"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt throws green frisbee amidst trees under a winter sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"blue jeans\"],\n  \"hallucinated_objects\": [\"trees\", \"winter\", \"outdoors\", \"cold\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in green sweatshirt and blue jeans throws a green frisbee toward trees in a winter scene.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "activity",
+          "frisbee"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt and blue jeans throws a green frisbee toward trees in a winter scene.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"activity\", \"frisbee\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in green sweatshirt and blue jeans throws a green frisbee toward trees under a clear blue sky in winter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees",
+          "sky",
+          "winter"
+        ],
+        "hallucinated_objects": [
+          "blue jeans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt and blue jeans throws a green frisbee toward trees under a clear blue sky in winter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\", \"sky\", \"winter\"],\n  \"hallucinated_objects\": [\"blue jeans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in green sweatshirt and sunglasses tosses a green frisbee toward trees against a wintry sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "belt",
+          "trees",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "winter"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the belt and the type of trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, green frisbee, sunglasses, green sweatshirt, blue jeans, belt, trees, sky, winter, outdoors, cold, activity, frisbee, man, green, sunglasses, green, blue, winter]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in green sweatshirt and sunglasses tosses a green frisbee toward trees against a wintry sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"belt\", \"trees\", \"sky\"],\n  \"hallucinated_objects\": [\"winter\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the belt and the type of trees.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 342971,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000342971.jpg",
+    "final_caption": "Man in green sweatshirt and sunglasses tosses a green frisbee toward trees against a wintry sky.",
+    "total_time_sec": 33.48
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"green frisbee\",\n    \"sunglasses\",\n    \"green sweatshirt\",\n    \"blue jeans\",\n    \"belt\",\n    \"trees\",\n    \"sky\",\n    \"winter\",\n    \"outdoors\",\n    \"cold\",\n    \"activity\",\n    \"frisbee\",\n    \"man\",\n    \"green\",\n    \"sunglasses\",\n    \"green\",\n    \"blue\",\n    \"winter\"\n  ]\n}"
+}

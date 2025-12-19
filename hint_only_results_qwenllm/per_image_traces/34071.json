@@ -1,0 +1,287 @@
+{
+  "image_id": 34071,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000034071.jpg",
+  "objects": [
+    "parking meters",
+    "sunset",
+    "cityscape",
+    "lights",
+    "buildings",
+    "sky",
+    "horizon",
+    "sun",
+    "reflection",
+    "bokeh",
+    "outdoor",
+    "urban",
+    "evening",
+    "street",
+    "parking",
+    "parking area",
+    "parking lot",
+    "parking space",
+    "parking spot",
+    "parking area"
+  ],
+  "template": "We have an image with these objects: ['parking meters', 'sunset', 'cityscape', 'lights', 'buildings', 'sky', 'horizon', 'sun', 'reflection', 'bokeh', 'outdoor', 'urban', 'evening', 'street', 'parking', 'parking area', 'parking lot', 'parking space', 'parking spot', 'parking area']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cityscape at sunset with lights and parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection",
+          "bokeh"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "parking area"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the reflection of the sunset in the parking meters and the bokeh effect created by the lights."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cityscape at sunset with lights and parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection\", \"bokeh\"],\n  \"hallucinated_objects\": [\"street\", \"parking area\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the reflection of the sunset in the parking meters and the bokeh effect created by the lights.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cityscape at sunset with lights reflecting in parking meters bokeh effect prominent",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "sunset",
+          "cityscape",
+          "lights",
+          "buildings",
+          "sky",
+          "horizon",
+          "sun",
+          "reflection",
+          "bokeh",
+          "outdoor",
+          "urban",
+          "evening",
+          "street",
+          "parking",
+          "parking area",
+          "parking lot",
+          "parking space",
+          "parking spot",
+          "parking area"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is very specific and does not contain any of the objects listed in the provided object list.",
+        "edit_instructions": [
+          "Remove all objects from the provided object list."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cityscape at sunset with lights reflecting in parking meters bokeh effect prominent\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"sunset\", \"cityscape\", \"lights\", \"buildings\", \"sky\", \"horizon\", \"sun\", \"reflection\", \"bokeh\", \"outdoor\", \"urban\", \"evening\", \"street\", \"parking\", \"parking area\", \"parking lot\", \"parking space\", \"parking spot\", \"parking area\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is very specific and does not contain any of the objects listed in the provided object list.\",\n  \"edit_instructions\": \"Remove all objects from the provided object list.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Evening cityscape with sunset lights and bokeh reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "cityscape",
+          "lights",
+          "buildings",
+          "sky",
+          "horizon",
+          "sun",
+          "reflection",
+          "bokeh",
+          "outdoor",
+          "urban",
+          "street",
+          "parking",
+          "parking area",
+          "parking lot",
+          "parking space",
+          "parking spot"
+        ],
+        "genericity_hint": "The image is more specific than the caption suggests.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the parking meters and the sunset."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Evening cityscape with sunset lights and bokeh reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\"],\n  \"hallucinated_objects\": [\"cityscape\", \"lights\", \"buildings\", \"sky\", \"horizon\", \"sun\", \"reflection\", \"bokeh\", \"outdoor\", \"urban\", \"street\", \"parking\", \"parking area\", \"parking lot\", \"parking space\", \"parking spot\"],\n  \"genericity_hint\": \"The image is more specific than the caption suggests.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the parking meters and the sunset.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Evening parking meters with sunset reflection",
+      "vlm_hint": {
+        "missing_objects": [
+          "cityscape",
+          "lights",
+          "buildings",
+          "sky",
+          "horizon",
+          "sun",
+          "reflection",
+          "bokeh",
+          "outdoor",
+          "urban",
+          "street",
+          "parking",
+          "parking area",
+          "parking lot",
+          "parking space",
+          "parking spot"
+        ],
+        "hallucinated_objects": [
+          "parking meters",
+          "sunset"
+        ],
+        "genericity_hint": "The caption is too specific and misses many key elements of the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add more general ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Evening parking meters with sunset reflection\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cityscape\", \"lights\", \"buildings\", \"sky\", \"horizon\", \"sun\", \"reflection\", \"bokeh\", \"outdoor\", \"urban\", \"street\", \"parking\", \"parking area\", \"parking lot\", \"parking space\", \"parking spot\"],\n  \"hallucinated_objects\": [\"parking meters\", \"sunset\"],\n  \"genericity_hint\": \"The caption is too specific and misses many key elements of the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add more general ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Evening cityscape with bright lights and skyline reflections",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "bright lights",
+          "skyline reflections"
+        ],
+        "genericity_hint": "The image is more specific than the caption suggests.",
+        "edit_instructions": [
+          "Remove the bright lights and skyline reflections and focus on the parking meters and the sunset."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Evening cityscape with bright lights and skyline reflections\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\"],\n  \"hallucinated_objects\": [\"bright lights\", \"skyline reflections\"],\n  \"genericity_hint\": \"The image is more specific than the caption suggests.\",\n  \"edit_instructions\": \"Remove the bright lights and skyline reflections and focus on the parking meters and the sunset.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Sunset over cityscape with parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "parking area"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of lights and a reflection, and mention the street, parking area, and parking meters."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunset over cityscape with parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"reflection\"],\n  \"hallucinated_objects\": [\"street\", \"parking area\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of lights and a reflection, and mention the street, parking area, and parking meters.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Sunset over cityscape lights reflect in parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "cityscape lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the parking meters and the sunset."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunset over cityscape lights reflect in parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\"],\n  \"hallucinated_objects\": [\"cityscape lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the parking meters and the sunset.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Sunset reflections in parking meters urban street",
+      "vlm_hint": {
+        "missing_objects": [
+          "cityscape",
+          "lights",
+          "buildings",
+          "sky",
+          "horizon",
+          "sun",
+          "reflection",
+          "bokeh",
+          "outdoor",
+          "urban",
+          "street",
+          "parking",
+          "parking area",
+          "parking lot",
+          "parking space",
+          "parking spot",
+          "parking area"
+        ],
+        "hallucinated_objects": [
+          "parking meters"
+        ],
+        "genericity_hint": "The image is more about the sunset and the urban environment than the parking meters.",
+        "edit_instructions": [
+          "Remove the parking meters and focus on the sunset and urban environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunset reflections in parking meters urban street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cityscape\", \"lights\", \"buildings\", \"sky\", \"horizon\", \"sun\", \"reflection\", \"bokeh\", \"outdoor\", \"urban\", \"street\", \"parking\", \"parking area\", \"parking lot\", \"parking space\", \"parking spot\", \"parking area\"],\n  \"hallucinated_objects\": [\"parking meters\"],\n  \"genericity_hint\": \"The image is more about the sunset and the urban environment than the parking meters.\",\n  \"edit_instructions\": \"Remove the parking meters and focus on the sunset and urban environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Sunset reflection over cityscape and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the reflection and specify the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunset reflection over cityscape and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the reflection and specify the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Sunset over cityscape with buildings and parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "lights",
+          "reflection"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "parking area"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of lights and a reflection, and mention the street, parking area, and parking meters."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meters, sunset, cityscape, lights, buildings, sky, horizon, sun, reflection, bokeh, outdoor, urban, evening, street, parking, parking area, parking lot, parking space, parking spot, parking area]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunset over cityscape with buildings and parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lights\", \"reflection\"],\n  \"hallucinated_objects\": [\"street\", \"parking area\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of lights and a reflection, and mention the street, parking area, and parking meters.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 34071,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000034071.jpg",
+    "final_caption": "Sunset over cityscape with buildings and parking meters",
+    "total_time_sec": 35.38
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"parking meters\",\n    \"sunset\",\n    \"cityscape\",\n    \"lights\",\n    \"buildings\",\n    \"sky\",\n    \"horizon\",\n    \"sun\",\n    \"reflection\",\n    \"bokeh\",\n    \"outdoor\",\n    \"urban\",\n    \"evening\",\n    \"street\",\n    \"parking\",\n    \"parking area\",\n    \"parking lot\",\n    \"parking space\",\n    \"parking spot\",\n    \"parking area\"\n  ]\n}"
+}

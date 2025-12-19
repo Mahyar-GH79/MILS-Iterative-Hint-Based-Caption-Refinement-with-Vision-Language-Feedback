@@ -1,0 +1,201 @@
+{
+  "image_id": 223747,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000223747.jpg",
+  "objects": [
+    "cat",
+    "man",
+    "pillow",
+    "curtain",
+    "wall"
+  ],
+  "template": "We have an image with these objects: ['cat', 'man', 'pillow', 'curtain', 'wall']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man sits beside cat on pillow by wall near curtain",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The image is not specific about the man's position or the pillow's location.",
+        "edit_instructions": [
+          "Remove the man and the pillow from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits beside cat on pillow by wall near curtain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The image is not specific about the man's position or the pillow's location.\",\n  \"edit_instructions\": \"Remove the man and the pillow from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat rests on wall near curtain",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Specify the objects in the image and remove the wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat rests on wall near curtain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"pillow\"],\n  \"hallucinated_objects\": [\"wall\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Specify the objects in the image and remove the wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man sits with cat on pillow near curtain",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The image is not specific about the man's position or the pillow's location.",
+        "edit_instructions": [
+          "Remove the man and the pillow from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits with cat on pillow near curtain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The image is not specific about the man's position or the pillow's location.\",\n  \"edit_instructions\": \"Remove the man and the pillow from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat rests near curtain on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man and the pillow."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat rests near curtain on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"pillow\"],\n  \"hallucinated_objects\": [\"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man and the pillow.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and cat rest on a pillow near curtains",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "curtains"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and cat rest on a pillow near curtains\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [\"curtains\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and cat relax on a pillow by a curtain against the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "curtain"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and cat relax on a pillow by a curtain against the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [\"curtain\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man and cat rest on a pillow beside the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "curtain"
+        ],
+        "hallucinated_objects": [
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and cat rest on a pillow beside the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"curtain\"],\n  \"hallucinated_objects\": [\"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man and cat lounge near curtains and wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a pillow to the scene."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and cat lounge near curtains and wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a pillow to the scene.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and cat nap on pillow by curtains and wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "curtains"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and cat nap on pillow by curtains and wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [\"curtains\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man and cat nap on pillow by wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "curtain"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add a pillow and remove the curtain."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, man, pillow, curtain, wall]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and cat nap on pillow by wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"pillow\"],\n  \"hallucinated_objects\": [\"curtain\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add a pillow and remove the curtain.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 223747,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000223747.jpg",
+    "final_caption": "Man and cat nap on pillow by wall",
+    "total_time_sec": 21.95
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"man\",\n    \"pillow\",\n    \"curtain\",\n    \"wall\"\n  ]\n}"
+}

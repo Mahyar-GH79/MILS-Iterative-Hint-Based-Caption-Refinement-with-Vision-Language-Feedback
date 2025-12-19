@@ -1,0 +1,199 @@
+{
+  "image_id": 530099,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000530099.jpg",
+  "objects": [
+    "cat",
+    "car",
+    "windshield",
+    "antenna",
+    "night"
+  ],
+  "template": "We have an image with these objects: ['cat', 'car', 'windshield', 'antenna', 'night']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat near car under night lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "windshield",
+          "antenna"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the car's windshield and the antenna."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near car under night lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windshield\", \"antenna\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the car's windshield and the antenna.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat by car with antenna under night lights near windshield",
+      "vlm_hint": {
+        "missing_objects": [
+          "windshield",
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "night lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car, windshield, and antenna, and remove the mention of night lights."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by car with antenna under night lights near windshield\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windshield\", \"antenna\"],\n  \"hallucinated_objects\": [\"night lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car, windshield, and antenna, and remove the mention of night lights.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat by car with antenna near windshield",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the car.",
+        "edit_instructions": [
+          "Remove the car from the caption and specify the antenna."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by car with antenna near windshield\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the car.\",\n  \"edit_instructions\": \"Remove the car from the caption and specify the antenna.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat near windshield with antenna in night",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add the antenna to the caption and remove the car."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near windshield with antenna in night\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add the antenna to the caption and remove the car.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat by windshield in night with antenna",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add more specific details to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by windshield in night with antenna\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add more specific details to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat by windshield in night near antenna",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the car and the antenna."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by windshield in night near antenna\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the car and the antenna.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat by windshield at night under antenna",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Add more specific details to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by windshield at night under antenna\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Add more specific details to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat near windshield at night beneath antenna",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [
+          "windshield"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the generic one."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat near windshield at night beneath antenna\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [\"windshield\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the generic one.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat by car at night under antenna",
+      "vlm_hint": {
+        "missing_objects": [
+          "windshield"
+        ],
+        "hallucinated_objects": [
+          "antenna"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add the missing object and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by car at night under antenna\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"windshield\"],\n  \"hallucinated_objects\": [\"antenna\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add the missing object and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat by car under windshield at night",
+      "vlm_hint": {
+        "missing_objects": [
+          "antenna"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Add the antenna to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, car, windshield, antenna, night]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat by car under windshield at night\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"antenna\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Add the antenna to the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 530099,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000530099.jpg",
+    "final_caption": "Cat by car under windshield at night",
+    "total_time_sec": 22.12
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"car\",\n    \"windshield\",\n    \"antenna\",\n    \"night\"\n  ]\n}"
+}

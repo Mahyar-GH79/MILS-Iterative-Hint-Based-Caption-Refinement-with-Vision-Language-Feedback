@@ -1,0 +1,347 @@
+{
+  "image_id": 130599,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000130599.jpg",
+  "objects": [
+    "giraffe",
+    "man",
+    "hat",
+    "glasses",
+    "shirt",
+    "watch",
+    "trees",
+    "fence",
+    "hill",
+    "sky",
+    "grass",
+    "sand",
+    "palm trees",
+    "giraffe statue",
+    "giraffe head",
+    "giraffe neck",
+    "giraffe body",
+    "giraffe legs",
+    "giraffe feet"
+  ],
+  "template": "We have an image with these objects: ['giraffe', 'man', 'hat', 'glasses', 'shirt', 'watch', 'trees', 'fence', 'hill', 'sky', 'grass', 'sand', 'palm trees', 'giraffe statue', 'giraffe head', 'giraffe neck', 'giraffe body', 'giraffe legs', 'giraffe feet']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Giraffes among trees and fences in sandy landscape",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "hat",
+          "glasses",
+          "shirt",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sky",
+          "grass",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "giraffe"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the candidate caption and add specific objects to the list."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffes among trees and fences in sandy landscape\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"hat\", \"glasses\", \"shirt\", \"watch\", \"trees\", \"fence\", \"hill\", \"sky\", \"grass\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"giraffe\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the candidate caption and add specific objects to the list.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in hat and glasses near giraffe statues on sandy hill with trees and fences",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sky",
+          "grass",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "shirt"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and glasses near giraffe statues on sandy hill with trees and fences\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\", \"trees\", \"fence\", \"hill\", \"sky\", \"grass\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"shirt\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Giraffe statue near man with glasses and watch on sandy hill with trees and fences",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "genericity_hint": "The image contains a giraffe, but the caption incorrectly describes it as a statue.",
+        "edit_instructions": [
+          "Remove the mention of the giraffe being a statue and correct the objects to match the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe statue near man with glasses and watch on sandy hill with trees and fences\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\"],\n  \"hallucinated_objects\": [\"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"genericity_hint\": \"The image contains a giraffe, but the caption incorrectly describes it as a statue.\",\n  \"edit_instructions\": \"Remove the mention of the giraffe being a statue and correct the objects to match the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in glasses and watch stands near giraffe on sandy hill with trees and fences.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch"
+        ],
+        "hallucinated_objects": [
+          "giraffe"
+        ],
+        "genericity_hint": "The image contains a man, a giraffe, trees, fences, and a sandy hill.",
+        "edit_instructions": [
+          "Remove the glasses and watch from the man's description. The giraffe is a statue, not a living animal."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in glasses and watch stands near giraffe on sandy hill with trees and fences.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\"],\n  \"hallucinated_objects\": [\"giraffe\"],\n  \"genericity_hint\": \"The image contains a man, a giraffe, trees, fences, and a sandy hill.\",\n  \"edit_instructions\": \"Remove the glasses and watch from the man's description. The giraffe is a statue, not a living animal.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man stands near giraffe statue among trees and fences on sandy hill.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sky",
+          "grass",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "shirt"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man stands near giraffe statue among trees and fences on sandy hill.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\", \"trees\", \"fence\", \"hill\", \"sky\", \"grass\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"shirt\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Giraffe statue and giraffe head among trees and fences on sandy hill.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "hat",
+          "glasses",
+          "shirt",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sky",
+          "grass",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, and giraffe feet."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe statue and giraffe head among trees and fences on sandy hill.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"hat\", \"glasses\", \"shirt\", \"watch\", \"trees\", \"fence\", \"hill\", \"sky\", \"grass\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, and giraffe feet.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in hat and glasses stands near giraffe statue and head among palm trees and fences on sandy hill.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "shirt"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat and glasses stands near giraffe statue and head among palm trees and fences on sandy hill.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\", \"trees\", \"fence\", \"hill\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"shirt\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man with glasses watches giraffe statue among palm trees and fences on sandy hill.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "shirt"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the objects that are present in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with glasses watches giraffe statue among palm trees and fences on sandy hill.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\", \"trees\", \"fence\", \"hill\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"shirt\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the objects that are present in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man watches giraffe statue among palm trees and fences on sandy hill.",
+      "vlm_hint": {
+        "missing_objects": [
+          "glasses",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sky",
+          "grass",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "hat",
+          "shirt"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the objects that are present in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man watches giraffe statue among palm trees and fences on sandy hill.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glasses\", \"watch\", \"trees\", \"fence\", \"hill\", \"sky\", \"grass\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"man\", \"hat\", \"shirt\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the objects that are present in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Giraffe statue among palm trees and fencing on sandy hill.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "hat",
+          "glasses",
+          "shirt",
+          "watch",
+          "trees",
+          "fence",
+          "hill",
+          "sky",
+          "grass",
+          "sand",
+          "palm trees",
+          "giraffe statue",
+          "giraffe head",
+          "giraffe neck",
+          "giraffe body",
+          "giraffe legs",
+          "giraffe feet"
+        ],
+        "hallucinated_objects": [
+          "giraffe"
+        ],
+        "genericity_hint": "The image contains a giraffe, but the caption is too generic and does not specify the type of giraffe.",
+        "edit_instructions": [
+          "The caption should be more specific about the type of giraffe and include the other objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [giraffe, man, hat, glasses, shirt, watch, trees, fence, hill, sky, grass, sand, palm trees, giraffe statue, giraffe head, giraffe neck, giraffe body, giraffe legs, giraffe feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Giraffe statue among palm trees and fencing on sandy hill.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"hat\", \"glasses\", \"shirt\", \"watch\", \"trees\", \"fence\", \"hill\", \"sky\", \"grass\", \"sand\", \"palm trees\", \"giraffe statue\", \"giraffe head\", \"giraffe neck\", \"giraffe body\", \"giraffe legs\", \"giraffe feet\"],\n  \"hallucinated_objects\": [\"giraffe\"],\n  \"genericity_hint\": \"The image contains a giraffe, but the caption is too generic and does not specify the type of giraffe.\",\n  \"edit_instructions\": \"The caption should be more specific about the type of giraffe and include the other objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 130599,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000130599.jpg",
+    "final_caption": "Giraffe statue among palm trees and fencing on sandy hill.",
+    "total_time_sec": 45.38
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"giraffe\",\n    \"man\",\n    \"hat\",\n    \"glasses\",\n    \"shirt\",\n    \"watch\",\n    \"trees\",\n    \"fence\",\n    \"hill\",\n    \"sky\",\n    \"grass\",\n    \"sand\",\n    \"palm trees\",\n    \"giraffe statue\",\n    \"giraffe head\",\n    \"giraffe neck\",\n    \"giraffe body\",\n    \"giraffe legs\",\n    \"giraffe feet\"\n  ]\n}"
+}

@@ -1,0 +1,326 @@
+{
+  "image_id": 342006,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000342006.jpg",
+  "objects": [
+    "Big Ben",
+    "clock tower",
+    "Parliament building",
+    "River Thames",
+    "Boats",
+    "Bridge",
+    "Trees",
+    "Sky",
+    "Flag",
+    "Clock",
+    "Light poles",
+    "Buildings",
+    "Water",
+    "Cityscape",
+    "Architecture",
+    "Sunlight",
+    "Reflection",
+    "City",
+    "Urban"
+  ],
+  "template": "We have an image with these objects: ['Big Ben', 'clock tower', 'Parliament building', 'River Thames', 'Boats', 'Bridge', 'Trees', 'Sky', 'Flag', 'Clock', 'Light poles', 'Buildings', 'Water', 'Cityscape', 'Architecture', 'Sunlight', 'Reflection', 'City', 'Urban']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Big Ben and Parliament building stand tall by River Thames at sunset.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Flag",
+          "Clock",
+          "Light poles",
+          "Buildings",
+          "Water",
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City",
+          "Urban"
+        ],
+        "hallucinated_objects": [
+          "Big Ben",
+          "clock tower",
+          "Parliament building"
+        ],
+        "genericity_hint": "The image is specific to the location of Big Ben and the Parliament building in London, but the caption is too generic and does not mention the specific objects in the image.",
+        "edit_instructions": [
+          "The caption should be more specific to the objects in the image, such as mentioning the specific buildings and the river."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben and Parliament building stand tall by River Thames at sunset.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Flag\", \"Clock\", \"Light poles\", \"Buildings\", \"Water\", \"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\", \"Urban\"],\n  \"hallucinated_objects\": [\"Big Ben\", \"clock tower\", \"Parliament building\"],\n  \"genericity_hint\": \"The image is specific to the location of Big Ben and the Parliament building in London, but the caption is too generic and does not mention the specific objects in the image.\",\n  \"edit_instructions\": \"The caption should be more specific to the objects in the image, such as mentioning the specific buildings and the river.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Parliament building and Bridge reflected in River Thames under sunlight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Boats",
+          "Flag",
+          "Light poles"
+        ],
+        "hallucinated_objects": [
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of boats, the presence of a flag, and the specific type of bridge."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parliament building and Bridge reflected in River Thames under sunlight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Boats\", \"Flag\", \"Light poles\"],\n  \"hallucinated_objects\": [\"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of boats, the presence of a flag, and the specific type of bridge.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Parliament building and bridge with boats and flag under sunlight reflecting in the Thames.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Clock",
+          "Reflection"
+        ],
+        "hallucinated_objects": [
+          "Flag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the clock and the reflection in the Thames."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Parliament building and bridge with boats and flag under sunlight reflecting in the Thames.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Clock\", \"Reflection\"],\n  \"hallucinated_objects\": [\"Flag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the clock and the reflection in the Thames.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Big Ben's clock tower and Parliament building with boats and sunlight reflecting on the Thames.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Flag",
+          "Light poles"
+        ],
+        "hallucinated_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Clock",
+          "Reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details and remove generic terms."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building with boats and sunlight reflecting on the Thames.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Flag\", \"Light poles\"],\n  \"hallucinated_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Clock\", \"Reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details and remove generic terms.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Big Ben's clock tower and Parliament building stand against a skyline lit by sunlight. Flag waves nearby. Light poles line the streets.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Flag",
+          "Light poles",
+          "Buildings",
+          "Water",
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City",
+          "Urban"
+        ],
+        "hallucinated_objects": [
+          "Clock"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the number of boats, the type of bridge, the color of the flag, and the presence of light poles."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building stand against a skyline lit by sunlight. Flag waves nearby. Light poles line the streets.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Flag\", \"Light poles\", \"Buildings\", \"Water\", \"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\", \"Urban\"],\n  \"hallucinated_objects\": [\"Clock\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the number of boats, the type of bridge, the color of the flag, and the presence of light poles.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Big Ben's clock tower and Parliament building overlook the River Thames with boats and a bridge, reflecting in the water under a clear sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Flag",
+          "Light poles"
+        ],
+        "hallucinated_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Clock",
+          "Reflection",
+          "City",
+          "Urban"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the flag, the number of light poles, and the type of boats and bridge."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building overlook the River Thames with boats and a bridge, reflecting in the water under a clear sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Flag\", \"Light poles\"],\n  \"hallucinated_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Clock\", \"Reflection\", \"City\", \"Urban\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the flag, the number of light poles, and the type of boats and bridge.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Big Ben's clock tower and Parliament building stand tall over the River Thames with light poles and a flag nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Flag",
+          "Clock",
+          "Light poles",
+          "Buildings",
+          "Water",
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City"
+        ],
+        "hallucinated_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Flag",
+          "Clock",
+          "Light poles",
+          "Buildings",
+          "Water",
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific and detailed caption that includes the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building stand tall over the River Thames with light poles and a flag nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Flag\", \"Clock\", \"Light poles\", \"Buildings\", \"Water\", \"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\"],\n  \"hallucinated_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Flag\", \"Clock\", \"Light poles\", \"Buildings\", \"Water\", \"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific and detailed caption that includes the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Big Ben's clock tower and Parliament building loom over the River Thames with light poles and flags nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Flag",
+          "Clock",
+          "Light poles",
+          "Buildings",
+          "Water",
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City"
+        ],
+        "hallucinated_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Flag",
+          "Clock",
+          "Light poles",
+          "Buildings",
+          "Water",
+          "Cityscape",
+          "Architecture",
+          "Sunlight",
+          "Reflection",
+          "City"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the number of boats, the type of bridge, the color of the trees, the position of the flag, the type of clock, the number of light poles, the type of buildings, the color of the water, the type of cityscape, the type of architecture, the position of the sunlight, the type of reflection, and the type of city."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building loom over the River Thames with light poles and flags nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Flag\", \"Clock\", \"Light poles\", \"Buildings\", \"Water\", \"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\"],\n  \"hallucinated_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Flag\", \"Clock\", \"Light poles\", \"Buildings\", \"Water\", \"Cityscape\", \"Architecture\", \"Sunlight\", \"Reflection\", \"City\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the number of boats, the type of bridge, the color of the trees, the position of the flag, the type of clock, the number of light poles, the type of buildings, the color of the water, the type of cityscape, the type of architecture, the position of the sunlight, the type of reflection, and the type of city.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Big Ben's clock tower and Parliament building stand against a sky filled with sunlight reflecting off the River Thames and nearby boats.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Flag",
+          "Light poles"
+        ],
+        "hallucinated_objects": [
+          "Boats",
+          "Bridge",
+          "Trees",
+          "Sky",
+          "Clock",
+          "Reflection",
+          "City",
+          "Urban"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the flag on the tower, the light poles along the river, and the specific buildings and boats."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building stand against a sky filled with sunlight reflecting off the River Thames and nearby boats.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Flag\", \"Light poles\"],\n  \"hallucinated_objects\": [\"Boats\", \"Bridge\", \"Trees\", \"Sky\", \"Clock\", \"Reflection\", \"City\", \"Urban\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the flag on the tower, the light poles along the river, and the specific buildings and boats.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Big Ben's clock tower and Parliament building with flag stand tall as sunlight reflects on water and boats, light poles along the River Thames.",
+      "vlm_hint": {
+        "missing_objects": [
+          "Flag"
+        ],
+        "hallucinated_objects": [
+          "Boats",
+          "Light poles"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Big Ben, clock tower, Parliament building, River Thames, Boats, Bridge, Trees, Sky, Flag, Clock, Light poles, Buildings, Water, Cityscape, Architecture, Sunlight, Reflection, City, Urban]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Big Ben's clock tower and Parliament building with flag stand tall as sunlight reflects on water and boats, light poles along the River Thames.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"Flag\"],\n  \"hallucinated_objects\": [\"Boats\", \"Light poles\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 342006,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000342006.jpg",
+    "final_caption": "Big Ben's clock tower and Parliament building with flag stand tall as sunlight reflects on water and boats, light poles along the River Thames.",
+    "total_time_sec": 43.8
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"Big Ben\",\n    \"clock tower\",\n    \"Parliament building\",\n    \"River Thames\",\n    \"Boats\",\n    \"Bridge\",\n    \"Trees\",\n    \"Sky\",\n    \"Flag\",\n    \"Clock\",\n    \"Light poles\",\n    \"Buildings\",\n    \"Water\",\n    \"Cityscape\",\n    \"Architecture\",\n    \"Sunlight\",\n    \"Reflection\",\n    \"City\",\n    \"Urban\"\n  ]\n}"
+}

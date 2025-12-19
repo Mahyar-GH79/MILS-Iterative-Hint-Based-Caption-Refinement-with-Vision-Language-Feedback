@@ -1,0 +1,200 @@
+{
+  "image_id": 61171,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000061171.jpg",
+  "objects": [
+    "horse",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow",
+    "cow"
+  ],
+  "template": "We have an image with these objects: ['horse', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow', 'cow']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cows grazing field near horse",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of cows or the presence of a horse.",
+        "edit_instructions": [
+          "Add the missing object 'horse' and specify the number of cows in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows grazing field near horse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of cows or the presence of a horse.\",\n  \"edit_instructions\": \"Add the missing object 'horse' and specify the number of cows in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Twenty cows grazing near a horse",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [
+          "cow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of cows.",
+        "edit_instructions": [
+          "Remove the horse and specify the number of cows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Twenty cows grazing near a horse\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [\"cow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of cows.\",\n  \"edit_instructions\": \"Remove the horse and specify the number of cows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Seventeen cows grazing",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not account for the horse in the image.",
+        "edit_instructions": [
+          "Remove the number of cows and add the horse to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Seventeen cows grazing\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"horse\",\n  \"hallucinated_objects\": \"\",\n  \"genericity_hint\": \"The caption is too specific and does not account for the horse in the image.\",\n  \"edit_instructions\": \"Remove the number of cows and add the horse to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Horse and cows grazing",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Specify the type of animal."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Horse and cows grazing\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Specify the type of animal.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cows grazing in a field",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the type of animals in the image.",
+        "edit_instructions": [
+          "Specify the type of animals in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cows grazing in a field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the type of animals in the image.\",\n  \"edit_instructions\": \"Specify the type of animals in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Many cows with a horse nearby graze in a field",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of cows or the presence of a horse.",
+        "edit_instructions": [
+          "Remove the generic caption and specify the number of cows and the presence of a horse."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Many cows with a horse nearby graze in a field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of cows or the presence of a horse.\",\n  \"edit_instructions\": \"Remove the generic caption and specify the number of cows and the presence of a horse.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "A horse and 20 cows graze in a field",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Remove the horse from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A horse and 20 cows graze in a field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Remove the horse from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Twenty cows graze in a field",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of animals.",
+        "edit_instructions": [
+          "Remove the number and specify the types of animals present."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Twenty cows graze in a field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of animals.\",\n  \"edit_instructions\": \"Remove the number and specify the types of animals present.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "A field filled with cows and a lone horse grazing nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of cows or the presence of a horse.",
+        "edit_instructions": [
+          "Specify the number of cows and include the presence of a horse in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A field filled with cows and a lone horse grazing nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of cows or the presence of a horse.\",\n  \"edit_instructions\": \"Specify the number of cows and include the presence of a horse in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "A field crowded with over two dozen cows and a solitary horse grazing nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "horse"
+        ],
+        "hallucinated_objects": [
+          "cow"
+        ],
+        "genericity_hint": "The caption is too generic and does not accurately describe the image.",
+        "edit_instructions": [
+          "Remove the horse and the generic 'cow' from the caption and provide a more specific description."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [horse, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow, cow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A field crowded with over two dozen cows and a solitary horse grazing nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"horse\"],\n  \"hallucinated_objects\": [\"cow\"],\n  \"genericity_hint\": \"The caption is too generic and does not accurately describe the image.\",\n  \"edit_instructions\": \"Remove the horse and the generic 'cow' from the caption and provide a more specific description.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 61171,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000061171.jpg",
+    "final_caption": "A field crowded with over two dozen cows and a solitary horse grazing nearby.",
+    "total_time_sec": 24.82
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"horse\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\",\n    \"cow\"\n  ]\n}"
+}

@@ -1,0 +1,349 @@
+{
+  "image_id": 167486,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000167486.jpg",
+  "objects": [
+    "blender",
+    "bicycle",
+    "man",
+    "stage",
+    "microphone",
+    "speaker",
+    "woman",
+    "dress",
+    "drum",
+    "guitar",
+    "hat",
+    "light",
+    "table",
+    "shirt",
+    "shoes",
+    "t-shirt",
+    "towel",
+    "umbrella",
+    "wall",
+    "window"
+  ],
+  "template": "We have an image with these objects: ['blender', 'bicycle', 'man', 'stage', 'microphone', 'speaker', 'woman', 'dress', 'drum', 'guitar', 'hat', 'light', 'table', 'shirt', 'shoes', 't-shirt', 'towel', 'umbrella', 'wall', 'window']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man woman on stage with microphone and guitar",
+      "vlm_hint": {
+        "missing_objects": [
+          "blender",
+          "bicycle",
+          "hat",
+          "light",
+          "table",
+          "towel",
+          "umbrella",
+          "wall",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "microphone",
+          "guitar"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the blender, bicycle, hat, light, table, towel, umbrella, wall, and window."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man woman on stage with microphone and guitar\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blender\", \"bicycle\", \"hat\", \"light\", \"table\", \"towel\", \"umbrella\", \"wall\", \"window\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"microphone\", \"guitar\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the blender, bicycle, hat, light, table, towel, umbrella, wall, and window.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Blender bicycle hat light table towel umbrella near wall stage",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "woman",
+          "drum",
+          "guitar",
+          "hat",
+          "light",
+          "table",
+          "towel",
+          "umbrella",
+          "wall",
+          "stage"
+        ],
+        "hallucinated_objects": [
+          "blender",
+          "bicycle"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide enough detail about the objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the objects in the image and avoids generic terms."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Blender bicycle hat light table towel umbrella near wall stage\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"woman\", \"drum\", \"guitar\", \"hat\", \"light\", \"table\", \"towel\", \"umbrella\", \"wall\", \"stage\"],\n  \"hallucinated_objects\": [\"blender\", \"bicycle\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide enough detail about the objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the objects in the image and avoids generic terms.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman in dress with man, drum and guitar on stage lights and tables.",
+      "vlm_hint": {
+        "missing_objects": [
+          "blender",
+          "bicycle",
+          "man",
+          "hat",
+          "light",
+          "table",
+          "shirt",
+          "towel",
+          "umbrella",
+          "wall",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "microphone",
+          "speaker",
+          "drum",
+          "guitar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the blender, bicycle, man, hat, light, table, shirt, towel, umbrella, wall, and window."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in dress with man, drum and guitar on stage lights and tables.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blender\", \"bicycle\", \"man\", \"hat\", \"light\", \"table\", \"shirt\", \"towel\", \"umbrella\", \"wall\", \"window\"],\n  \"hallucinated_objects\": [\"microphone\", \"speaker\", \"drum\", \"guitar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the blender, bicycle, man, hat, light, table, shirt, towel, umbrella, wall, and window.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in hat with woman in dress, blender and bicycle on table near wall and umbrella.",
+      "vlm_hint": {
+        "missing_objects": [
+          "microphone",
+          "drum",
+          "guitar",
+          "light",
+          "table",
+          "umbrella"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "blender",
+          "bicycle",
+          "hat",
+          "dress"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide specific details about the objects and their arrangement in the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in hat with woman in dress, blender and bicycle on table near wall and umbrella.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"microphone\", \"drum\", \"guitar\", \"light\", \"table\", \"umbrella\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"blender\", \"bicycle\", \"hat\", \"dress\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide specific details about the objects and their arrangement in the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Woman in dress and man in shirt stand near stage with microphone and drum, lights overhead.",
+      "vlm_hint": {
+        "missing_objects": [
+          "blender",
+          "bicycle",
+          "hat",
+          "light",
+          "table",
+          "umbrella",
+          "wall",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "dress",
+          "drum",
+          "guitar",
+          "microphone",
+          "speaker",
+          "shirt",
+          "towel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, towel, umbrella, wall, and window."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman in dress and man in shirt stand near stage with microphone and drum, lights overhead.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blender\", \"bicycle\", \"hat\", \"light\", \"table\", \"umbrella\", \"wall\", \"window\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"dress\", \"drum\", \"guitar\", \"microphone\", \"speaker\", \"shirt\", \"towel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, towel, umbrella, wall, and window.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and woman by stage with bicycle, blender, lights, and umbrellas.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "light",
+          "wall",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "bicycle",
+          "blender",
+          "stage",
+          "microphone",
+          "speaker",
+          "dress",
+          "drum",
+          "guitar",
+          "hat",
+          "table",
+          "shirt",
+          "shoes",
+          "towel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman by stage with bicycle, blender, lights, and umbrellas.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"light\", \"wall\", \"window\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"bicycle\", \"blender\", \"stage\", \"microphone\", \"speaker\", \"dress\", \"drum\", \"guitar\", \"hat\", \"table\", \"shirt\", \"shoes\", \"towel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Wall window with man woman near stage lights towel",
+      "vlm_hint": {
+        "missing_objects": [
+          "blender",
+          "bicycle",
+          "microphone",
+          "speaker",
+          "drum",
+          "guitar",
+          "hat",
+          "light",
+          "table",
+          "shirt",
+          "shoes",
+          "towel",
+          "umbrella"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "stage",
+          "lights"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the blender, bicycle, and other objects visible in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Wall window with man woman near stage lights towel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blender\", \"bicycle\", \"microphone\", \"speaker\", \"drum\", \"guitar\", \"hat\", \"light\", \"table\", \"shirt\", \"shoes\", \"towel\", \"umbrella\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"stage\", \"lights\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the blender, bicycle, and other objects visible in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Blender bicycle drum guitar near window wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "stage",
+          "microphone",
+          "speaker",
+          "woman",
+          "dress",
+          "hat",
+          "light",
+          "table",
+          "shirt",
+          "shoes",
+          "towel",
+          "umbrella"
+        ],
+        "hallucinated_objects": [
+          "blender",
+          "bicycle",
+          "drum",
+          "guitar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man, stage, microphone, speaker, woman, dress, hat, light, table, shirt, shoes, towel, and umbrella."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Blender bicycle drum guitar near window wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"stage\", \"microphone\", \"speaker\", \"woman\", \"dress\", \"hat\", \"light\", \"table\", \"shirt\", \"shoes\", \"towel\", \"umbrella\"],\n  \"hallucinated_objects\": [\"blender\", \"bicycle\", \"drum\", \"guitar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man, stage, microphone, speaker, woman, dress, hat, light, table, shirt, shoes, towel, and umbrella.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man woman on stage with microphone speaker and lights",
+      "vlm_hint": {
+        "missing_objects": [
+          "blender",
+          "bicycle",
+          "hat",
+          "towel",
+          "umbrella"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "microphone",
+          "speaker",
+          "drum",
+          "guitar",
+          "light",
+          "table",
+          "shirt",
+          "shoes",
+          "t-shirt"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide specific objects in the image and remove generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man woman on stage with microphone speaker and lights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blender\", \"bicycle\", \"hat\", \"towel\", \"umbrella\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"microphone\", \"speaker\", \"drum\", \"guitar\", \"light\", \"table\", \"shirt\", \"shoes\", \"t-shirt\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide specific objects in the image and remove generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Blender bicycle hat towel umbrella on stage",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "woman",
+          "drum",
+          "guitar",
+          "light",
+          "table",
+          "shirt",
+          "shoes",
+          "t-shirt",
+          "umbrella",
+          "wall",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "microphone",
+          "speaker"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [blender, bicycle, man, stage, microphone, speaker, woman, dress, drum, guitar, hat, light, table, shirt, shoes, t-shirt, towel, umbrella, wall, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Blender bicycle hat towel umbrella on stage\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"woman\", \"drum\", \"guitar\", \"light\", \"table\", \"shirt\", \"shoes\", \"t-shirt\", \"umbrella\", \"wall\", \"window\"],\n  \"hallucinated_objects\": [\"microphone\", \"speaker\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 167486,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000167486.jpg",
+    "final_caption": "Blender bicycle hat towel umbrella on stage",
+    "total_time_sec": 41.99
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"blender\",\n    \"bicycle\",\n    \"man\",\n    \"stage\",\n    \"microphone\",\n    \"speaker\",\n    \"woman\",\n    \"dress\",\n    \"drum\",\n    \"guitar\",\n    \"hat\",\n    \"light\",\n    \"table\",\n    \"shirt\",\n    \"shoes\",\n    \"t-shirt\",\n    \"towel\",\n    \"umbrella\",\n    \"wall\",\n    \"window\"\n  ]\n}"
+}

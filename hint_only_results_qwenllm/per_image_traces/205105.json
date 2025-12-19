@@ -1,0 +1,211 @@
+{
+  "image_id": 205105,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000205105.jpg",
+  "objects": [
+    "tennis racket",
+    "tennis ball",
+    "tennis court",
+    "tennis player",
+    "tennis ball machine",
+    "tennis ball container",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball",
+    "tennis ball"
+  ],
+  "template": "We have an image with these objects: ['tennis racket', 'tennis ball', 'tennis court', 'tennis player', 'tennis ball machine', 'tennis ball container', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball', 'tennis ball']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Tennis player uses racket near court with many balls",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball machine",
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of balls or the presence of a machine.",
+        "edit_instructions": [
+          "Specify the number of balls and include the presence of a machine."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player uses racket near court with many balls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball machine\", \"tennis ball container\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of balls or the presence of a machine.\",\n  \"edit_instructions\": \"Specify the number of balls and include the presence of a machine.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Tennis player uses racket near court with machine and 19 balls",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [
+          "tennis ball machine"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the tennis ball machine and add a tennis ball container."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player uses racket near court with machine and 19 balls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball container\"],\n  \"hallucinated_objects\": [\"tennis ball machine\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the tennis ball machine and add a tennis ball container.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Tennis player uses racket on court with 19 balls and container",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball machine"
+        ],
+        "hallucinated_objects": [
+          "tennis ball container"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of balls or the presence of a machine.",
+        "edit_instructions": [
+          "Remove the tennis ball container and mention the tennis ball machine."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player uses racket on court with 19 balls and container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball machine\"],\n  \"hallucinated_objects\": [\"tennis ball container\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of balls or the presence of a machine.\",\n  \"edit_instructions\": \"Remove the tennis ball container and mention the tennis ball machine.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Tennis player uses racket on court with 19 balls and machine",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [
+          "tennis ball machine"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of balls.",
+        "edit_instructions": [
+          "Remove the tennis ball machine and specify the number of balls."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player uses racket on court with 19 balls and machine\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball container\"],\n  \"hallucinated_objects\": [\"tennis ball machine\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of balls.\",\n  \"edit_instructions\": \"Remove the tennis ball machine and specify the number of balls.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Tennis player hits balls on court with racket and 19 balls",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball machine",
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of balls or the presence of a machine and container.",
+        "edit_instructions": [
+          "Specify the number of balls and include the tennis ball machine and container in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits balls on court with racket and 19 balls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball machine\", \"tennis ball container\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of balls or the presence of a machine and container.\",\n  \"edit_instructions\": \"Specify the number of balls and include the tennis ball machine and container in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Tennis player hits balls on court with racket and 19 balls from machine and container",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [
+          "tennis ball machine"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the tennis ball machine and add the tennis ball container to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits balls on court with racket and 19 balls from machine and container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball container\"],\n  \"hallucinated_objects\": [\"tennis ball machine\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the tennis ball machine and add the tennis ball container to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tennis player hits balls on court with racket and 19 balls from container",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball machine"
+        ],
+        "hallucinated_objects": [
+          "tennis ball container"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the tennis ball container and mention the tennis ball machine."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits balls on court with racket and 19 balls from container\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball machine\"],\n  \"hallucinated_objects\": [\"tennis ball container\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the tennis ball container and mention the tennis ball machine.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Tennis player hits balls on court with racket and machine amid scattered balls",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball container",
+          "tennis ball machine"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of tennis balls or the presence of a container and machine.",
+        "edit_instructions": [
+          "Specify the number of tennis balls and include the presence of a container and machine in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits balls on court with racket and machine amid scattered balls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball container\", \"tennis ball machine\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of tennis balls or the presence of a container and machine.\",\n  \"edit_instructions\": \"Specify the number of tennis balls and include the presence of a container and machine in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tennis player hits numerous balls on court with machine and container nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball machine",
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of balls or the presence of a machine and container.",
+        "edit_instructions": [
+          "Specify the number of balls and include the machine and container in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits numerous balls on court with machine and container nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball machine\", \"tennis ball container\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of balls or the presence of a machine and container.\",\n  \"edit_instructions\": \"Specify the number of balls and include the machine and container in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tennis player hits dozens of balls on court with machine and container nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball machine",
+          "tennis ball container"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of balls or the presence of a machine and container.",
+        "edit_instructions": [
+          "Specify the number of balls and include the machine and container in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis ball, tennis court, tennis player, tennis ball machine, tennis ball container, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits dozens of balls on court with machine and container nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball machine\", \"tennis ball container\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of balls or the presence of a machine and container.\",\n  \"edit_instructions\": \"Specify the number of balls and include the machine and container in the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 205105,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000205105.jpg",
+    "final_caption": "Tennis player hits dozens of balls on court with machine and container nearby",
+    "total_time_sec": 31.17
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"tennis racket\",\n    \"tennis ball\",\n    \"tennis court\",\n    \"tennis player\",\n    \"tennis ball machine\",\n    \"tennis ball container\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\",\n    \"tennis ball\"\n  ]\n}"
+}

@@ -1,0 +1,315 @@
+{
+  "image_id": 162092,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000162092.jpg",
+  "objects": [
+    "cake",
+    "candles",
+    "people",
+    "table",
+    "chairs",
+    "lights",
+    "window",
+    "phone",
+    "food",
+    "bowl",
+    "strawberries",
+    "plate",
+    "wine glass",
+    "shirt",
+    "jacket",
+    "necklace",
+    "bracelet",
+    "ring",
+    "flag"
+  ],
+  "template": "We have an image with these objects: ['cake', 'candles', 'people', 'table', 'chairs', 'lights', 'window', 'phone', 'food', 'bowl', 'strawberries', 'plate', 'wine glass', 'shirt', 'jacket', 'necklace', 'bracelet', 'ring', 'flag']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Candles lights cake table guests",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "wine glass",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "window",
+          "phone",
+          "food",
+          "bowl",
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of cake, the presence of strawberries, and the type of lights."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles lights cake table guests\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"wine glass\", \"flag\"],\n  \"hallucinated_objects\": [\"lights\", \"window\", \"phone\", \"food\", \"bowl\", \"necklace\", \"bracelet\", \"ring\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of cake, the presence of strawberries, and the type of lights.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Strawberry cake candles guests sit table wine glass flag",
+      "vlm_hint": {
+        "missing_objects": [
+          "wine glass",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "table",
+          "chairs"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry cake candles guests sit table wine glass flag\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wine glass\", \"flag\"],\n  \"hallucinated_objects\": [\"lights\", \"table\", \"chairs\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Strawberry cake candles people enjoy wine glass flag",
+      "vlm_hint": {
+        "missing_objects": [
+          "wine glass",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "wine glass"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry cake candles people enjoy wine glass flag\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wine glass\", \"flag\"],\n  \"hallucinated_objects\": [\"people\", \"wine glass\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Strawberry cake candles light window flag",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "wine glass",
+          "bowl",
+          "plate",
+          "food"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "window",
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry cake candles light window flag\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"wine glass\", \"bowl\", \"plate\", \"food\"],\n  \"hallucinated_objects\": [\"lights\", \"window\", \"flag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Strawberry cake candles people food plate wine glass",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "lights",
+          "window",
+          "table",
+          "chairs",
+          "bowl",
+          "wine glass",
+          "shirt",
+          "jacket",
+          "necklace",
+          "bracelet",
+          "ring",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "food",
+          "plate",
+          "wine glass"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry cake candles people food plate wine glass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"lights\", \"window\", \"table\", \"chairs\", \"bowl\", \"wine glass\", \"shirt\", \"jacket\", \"necklace\", \"bracelet\", \"ring\", \"flag\"],\n  \"hallucinated_objects\": [\"people\", \"food\", \"plate\", \"wine glass\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Strawberry cake candles people sit by lit window",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "bowl",
+          "wine glass",
+          "necklace",
+          "bracelet",
+          "ring"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "table",
+          "chairs",
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of cake, the presence of a phone, and the specific items on the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry cake candles people sit by lit window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"bowl\", \"wine glass\", \"necklace\", \"bracelet\", \"ring\"],\n  \"hallucinated_objects\": [\"lights\", \"table\", \"chairs\", \"flag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of cake, the presence of a phone, and the specific items on the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Strawberry cake candles people chat by lit window phone bowl nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "wine glass",
+          "bowl",
+          "lights",
+          "window",
+          "phone",
+          "cake",
+          "candles",
+          "people",
+          "chairs",
+          "lights",
+          "window",
+          "phone",
+          "cake",
+          "candles",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "window",
+          "phone",
+          "cake",
+          "candles",
+          "people"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberry cake candles people chat by lit window phone bowl nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"wine glass\", \"bowl\", \"lights\", \"window\", \"phone\", \"cake\", \"candles\", \"people\", \"chairs\", \"lights\", \"window\", \"phone\", \"cake\", \"candles\", \"people\"],\n  \"hallucinated_objects\": [\"lights\", \"window\", \"phone\", \"cake\", \"candles\", \"people\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Strawberries cake candles people chat bowl wine glass near",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "wine glass"
+        ],
+        "hallucinated_objects": [
+          "bowl",
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the strawberries and wine glass, and remove the bowl and flag."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberries cake candles people chat bowl wine glass near\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"wine glass\"],\n  \"hallucinated_objects\": [\"bowl\", \"flag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the strawberries and wine glass, and remove the bowl and flag.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Strawberries cake candles people chat wine glass near table",
+      "vlm_hint": {
+        "missing_objects": [
+          "wine glass",
+          "table",
+          "chairs",
+          "lights",
+          "window",
+          "phone",
+          "food",
+          "bowl",
+          "strawberries",
+          "plate",
+          "cake",
+          "candles",
+          "people",
+          "chat",
+          "wine glass",
+          "near",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "window",
+          "phone",
+          "food",
+          "bowl",
+          "strawberries",
+          "plate",
+          "cake",
+          "candles",
+          "people",
+          "chat",
+          "wine glass",
+          "near",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Strawberries cake candles people chat wine glass near table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wine glass\", \"table\", \"chairs\", \"lights\", \"window\", \"phone\", \"food\", \"bowl\", \"strawberries\", \"plate\", \"cake\", \"candles\", \"people\", \"chat\", \"wine glass\", \"near\", \"table\"],\n  \"hallucinated_objects\": [\"lights\", \"window\", \"phone\", \"food\", \"bowl\", \"strawberries\", \"plate\", \"cake\", \"candles\", \"people\", \"chat\", \"wine glass\", \"near\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Candles cake people chat wine glass on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "strawberries",
+          "plate",
+          "wine glass"
+        ],
+        "hallucinated_objects": [
+          "lights",
+          "window",
+          "phone",
+          "bowl",
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the type of cake, the presence of strawberries, and the type of glassware."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cake, candles, people, table, chairs, lights, window, phone, food, bowl, strawberries, plate, wine glass, shirt, jacket, necklace, bracelet, ring, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Candles cake people chat wine glass on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"strawberries\", \"plate\", \"wine glass\"],\n  \"hallucinated_objects\": [\"lights\", \"window\", \"phone\", \"bowl\", \"flag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the type of cake, the presence of strawberries, and the type of glassware.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 162092,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000162092.jpg",
+    "final_caption": "Candles cake people chat wine glass on table",
+    "total_time_sec": 37.63
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cake\",\n    \"candles\",\n    \"people\",\n    \"table\",\n    \"chairs\",\n    \"lights\",\n    \"window\",\n    \"phone\",\n    \"food\",\n    \"bowl\",\n    \"strawberries\",\n    \"plate\",\n    \"wine glass\",\n    \"shirt\",\n    \"jacket\",\n    \"necklace\",\n    \"bracelet\",\n    \"ring\",\n    \"flag\"\n  ]\n}"
+}

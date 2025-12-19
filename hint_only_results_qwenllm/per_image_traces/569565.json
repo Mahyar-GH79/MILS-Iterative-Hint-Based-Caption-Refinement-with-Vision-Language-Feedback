@@ -1,0 +1,211 @@
+{
+  "image_id": 569565,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000569565.jpg",
+  "objects": [
+    "truck",
+    "cones",
+    "trees",
+    "building",
+    "road",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck",
+    "truck"
+  ],
+  "template": "We have an image with these objects: ['truck', 'cones', 'trees', 'building', 'road', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck', 'truck']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Many trucks block the road near trees and cones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of trucks.",
+        "edit_instructions": [
+          "Specify the number of trucks in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Many trucks block the road near trees and cones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of trucks.\",\n  \"edit_instructions\": \"Specify the number of trucks in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Twenty trucks block the road near trees and cones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones"
+        ],
+        "hallucinated_objects": [
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of trucks.",
+        "edit_instructions": [
+          "Remove the number of trucks and specify the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Twenty trucks block the road near trees and cones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\"],\n  \"hallucinated_objects\": [\"trees\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of trucks.\",\n  \"edit_instructions\": \"Remove the number of trucks and specify the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Trucks block the road with cones nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "building"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of trucks or the presence of cones.",
+        "edit_instructions": [
+          "Specify the number of trucks and include the presence of cones."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trucks block the road with cones nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"building\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of trucks or the presence of cones.\",\n  \"edit_instructions\": \"Specify the number of trucks and include the presence of cones.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Twenty trucks block the road with cones nearby and trees and a building in sight.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of trucks.",
+        "edit_instructions": [
+          "Remove the number of trucks and specify that there are cones."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Twenty trucks block the road with cones nearby and trees and a building in sight.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of trucks.\",\n  \"edit_instructions\": \"Remove the number of trucks and specify that there are cones.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Trucks block the road with cones and trees nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones",
+          "trees",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Trucks block the road with cones and trees nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\", \"trees\", \"building\"],\n  \"hallucinated_objects\": [\"road\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Multiple trucks block the road with cones and trees nearby and a building in the distance.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple trucks block the road with cones and trees nearby and a building in the distance.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Multiple trucks block the road with cones and tall trees nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones",
+          "trees",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple trucks block the road with cones and tall trees nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\", \"trees\", \"building\"],\n  \"hallucinated_objects\": [\"road\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Multiple trucks congestion the road with cones and tall trees nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple trucks congestion the road with cones and tall trees nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Multiple trucks block the road with cones and tall trees nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones",
+          "trees",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple trucks block the road with cones and tall trees nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\", \"trees\", \"building\"],\n  \"hallucinated_objects\": [\"road\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Multiple trucks jam the road surrounded by cones and tall trees near a building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cones"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [truck, cones, trees, building, road, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck, truck]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Multiple trucks jam the road surrounded by cones and tall trees near a building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cones\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 569565,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000569565.jpg",
+    "final_caption": "Multiple trucks jam the road surrounded by cones and tall trees near a building.",
+    "total_time_sec": 25.47
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"truck\",\n    \"cones\",\n    \"trees\",\n    \"building\",\n    \"road\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\",\n    \"truck\"\n  ]\n}"
+}

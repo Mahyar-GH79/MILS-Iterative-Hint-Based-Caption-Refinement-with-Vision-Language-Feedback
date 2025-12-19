@@ -1,0 +1,259 @@
+{
+  "image_id": 5060,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000005060.jpg",
+  "objects": [
+    "mirror",
+    "man",
+    "phone",
+    "wall",
+    "floor",
+    "dresser",
+    "picture frame",
+    "rug",
+    "door",
+    "light switch",
+    "socket",
+    "chair",
+    "lamp",
+    "window",
+    "vent",
+    "socket",
+    "socket",
+    "socket",
+    "socket",
+    "socket"
+  ],
+  "template": "We have an image with these objects: ['mirror', 'man', 'phone', 'wall', 'floor', 'dresser', 'picture frame', 'rug', 'door', 'light switch', 'socket', 'chair', 'lamp', 'window', 'vent', 'socket', 'socket', 'socket', 'socket', 'socket']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man by mirror with phone near dresser and chairs",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chairs"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "lamp",
+          "vent",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the dresser and chairs, and the type of objects in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror with phone near dresser and chairs\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chairs\"],\n  \"hallucinated_objects\": [\"picture frame\", \"lamp\", \"vent\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the dresser and chairs, and the type of objects in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man by mirror holds phone near dresser and chairs against the wall.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chairs",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "rug",
+          "door",
+          "light switch",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the dresser, chairs, lamp, vent, and picture frame."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chairs against the wall.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chairs\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"rug\", \"door\", \"light switch\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the dresser, chairs, lamp, vent, and picture frame.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man by mirror holds phone near dresser and chairs with lamp and vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "rug"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chairs with lamp and vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"rug\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man by mirror holds phone near dresser and chair by lamp and vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "rug"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair by lamp and vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"rug\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair under lamp by vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair under lamp by vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair under lamp by vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair under lamp by vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair under lamp by vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+      "vlm_hint": {
+        "missing_objects": [
+          "dresser",
+          "chair",
+          "lamp",
+          "vent"
+        ],
+        "hallucinated_objects": [
+          "picture frame",
+          "socket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [mirror, man, phone, wall, floor, dresser, picture frame, rug, door, light switch, socket, chair, lamp, window, vent, socket, socket, socket, socket, socket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man by mirror holds phone near dresser and chair under lamp by vent.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dresser\", \"chair\", \"lamp\", \"vent\"],\n  \"hallucinated_objects\": [\"picture frame\", \"socket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the dresser, chair, lamp, and vent.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 5060,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000005060.jpg",
+    "final_caption": "Man by mirror holds phone near dresser and chair under lamp by vent.",
+    "total_time_sec": 33.94
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"mirror\",\n    \"man\",\n    \"phone\",\n    \"wall\",\n    \"floor\",\n    \"dresser\",\n    \"picture frame\",\n    \"rug\",\n    \"door\",\n    \"light switch\",\n    \"socket\",\n    \"chair\",\n    \"lamp\",\n    \"window\",\n    \"vent\",\n    \"socket\",\n    \"socket\",\n    \"socket\",\n    \"socket\",\n    \"socket\"\n  ]\n}"
+}

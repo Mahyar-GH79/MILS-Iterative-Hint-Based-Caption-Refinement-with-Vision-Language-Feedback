@@ -1,0 +1,253 @@
+{
+  "image_id": 329542,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000329542.jpg",
+  "objects": [
+    "cupcakes",
+    "frosting",
+    "flour",
+    "knife",
+    "camera",
+    "hand",
+    "pink flower",
+    "white cream",
+    "black surface",
+    "red flower",
+    "baking tray",
+    "baking powder",
+    "baking sheet",
+    "baking pan",
+    "baking rack",
+    "baking cup",
+    "baking dish",
+    "baking pan",
+    "baking rack"
+  ],
+  "template": "We have an image with these objects: ['cupcakes', 'frosting', 'flour', 'knife', 'camera', 'hand', 'pink flower', 'white cream', 'black surface', 'red flower', 'baking tray', 'baking powder', 'baking sheet', 'baking pan', 'baking rack', 'baking cup', 'baking dish', 'baking pan', 'baking rack']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cupcakes with frosting on pink and red flowers",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder",
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "hallucinated_objects": [
+          "black surface",
+          "red flower"
+        ],
+        "genericity_hint": "The caption is too specific and does not account for all the objects in the image.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cupcakes with frosting on pink and red flowers\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\", \"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"hallucinated_objects\": [\"black surface\", \"red flower\"],\n  \"genericity_hint\": \"The caption is too specific and does not account for all the objects in the image.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cupcakes with frosting on pink flower and baking rack",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder",
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "hallucinated_objects": [
+          "black surface",
+          "red flower"
+        ],
+        "genericity_hint": "The caption is too specific and misses important objects.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cupcakes with frosting on pink flower and baking rack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\", \"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"hallucinated_objects\": [\"black surface\", \"red flower\"],\n  \"genericity_hint\": \"The caption is too specific and misses important objects.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cupcakes with frosting on pink flower and baking rack near knife and baking powder",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking rack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cupcakes with frosting on pink flower and baking rack near knife and baking powder\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking rack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cupcakes with pink flower and baking powder next to a chef's knife on a black surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the presence of baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cupcakes with pink flower and baking powder next to a chef's knife on a black surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the presence of baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Pink flower and cupcakes with white cream beside a chef's knife and baking powder on black surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink flower and cupcakes with white cream beside a chef's knife and baking powder on black surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Pink flower and frosted cupcakes next to a chef's knife and baking powder on black surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink flower and frosted cupcakes next to a chef's knife and baking powder on black surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Pink flower and frosted cupcakes beside a kitchen knife and baking powder on black surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink flower and frosted cupcakes beside a kitchen knife and baking powder on black surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Pink flower and frosted cupcakes next to a kitchen knife and baking powder on black surface",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "red flower"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink flower and frosted cupcakes next to a kitchen knife and baking powder on black surface\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"red flower\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Pink flower and frosted cupcakes beside a stainless steel knife and baking powder on a black countertop.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink flower and frosted cupcakes beside a stainless steel knife and baking powder on a black countertop.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Pink flower and frosted cupcakes beside a stainless steel knife and baking powder on a black countertop.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "baking powder"
+        ],
+        "hallucinated_objects": [
+          "baking sheet",
+          "baking rack",
+          "baking cup",
+          "baking dish"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cupcakes, frosting, flour, knife, camera, hand, pink flower, white cream, black surface, red flower, baking tray, baking powder, baking sheet, baking pan, baking rack, baking cup, baking dish, baking pan, baking rack]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink flower and frosted cupcakes beside a stainless steel knife and baking powder on a black countertop.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"baking powder\"],\n  \"hallucinated_objects\": [\"baking sheet\", \"baking rack\", \"baking cup\", \"baking dish\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of knife and the exact location of the baking powder.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 329542,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000329542.jpg",
+    "final_caption": "Pink flower and frosted cupcakes beside a stainless steel knife and baking powder on a black countertop.",
+    "total_time_sec": 36.61
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cupcakes\",\n    \"frosting\",\n    \"flour\",\n    \"knife\",\n    \"camera\",\n    \"hand\",\n    \"pink flower\",\n    \"white cream\",\n    \"black surface\",\n    \"red flower\",\n    \"baking tray\",\n    \"baking powder\",\n    \"baking sheet\",\n    \"baking pan\",\n    \"baking rack\",\n    \"baking cup\",\n    \"baking dish\",\n    \"baking pan\",\n    \"baking rack\"\n  ]\n}"
+}

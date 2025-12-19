@@ -1,0 +1,240 @@
+{
+  "image_id": 113403,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000113403.jpg",
+  "objects": [
+    "white teddy bear",
+    "brown teddy bear",
+    "brown teddy bear",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow",
+    "pillow"
+  ],
+  "template": "We have an image with these objects: ['white teddy bear', 'brown teddy bear', 'brown teddy bear', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow', 'pillow']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "White and brown teddy bears among many pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "pillow"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of pillows.",
+        "edit_instructions": [
+          "Specify the number of pillows and the color of the teddy bears."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: White and brown teddy bears among many pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"pillow\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of pillows.\",\n  \"edit_instructions\": \"Specify the number of pillows and the color of the teddy bears.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Two white and five brown teddy bears with sixteen pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [
+          "white teddy bear",
+          "white teddy bear"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the redundant teddy bears and the extra pillows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two white and five brown teddy bears with sixteen pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [\"white teddy bear\", \"white teddy bear\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the redundant teddy bears and the extra pillows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Five brown teddy bears with many pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of teddy bears or pillows.",
+        "edit_instructions": [
+          "Specify the number of teddy bears and pillows in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Five brown teddy bears with many pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of teddy bears or pillows.\",\n  \"edit_instructions\": \"Specify the number of teddy bears and pillows in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Two white and three brown teddy bears with seventeen pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "pillow"
+        ],
+        "hallucinated_objects": [
+          "white teddy bear"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the white teddy bear and add a pillow."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two white and three brown teddy bears with seventeen pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"pillow\"],\n  \"hallucinated_objects\": [\"white teddy bear\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the white teddy bear and add a pillow.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Seven brown teddy bears seventeen pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the extra teddy bears and pillows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Seven brown teddy bears seventeen pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the extra teddy bears and pillows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Two white teddy bears many pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [
+          "white teddy bear"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the teddy bears.",
+        "edit_instructions": [
+          "Remove the mention of the white teddy bear and specify the color of the brown teddy bear."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two white teddy bears many pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\"],\n  \"hallucinated_objects\": [\"white teddy bear\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the teddy bears.\",\n  \"edit_instructions\": \"Remove the mention of the white teddy bear and specify the color of the brown teddy bear.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Two brown teddy bears many pillows",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of teddy bears or pillows.",
+        "edit_instructions": [
+          "Specify the number of teddy bears and pillows in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two brown teddy bears many pillows\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of teddy bears or pillows.\",\n  \"edit_instructions\": \"Specify the number of teddy bears and pillows in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Two white and two brown teddy bears among nineteen pillows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow",
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of teddy bears or pillows.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the correct number of teddy bears and pillows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two white and two brown teddy bears among nineteen pillows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [\"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\", \"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of teddy bears or pillows.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the correct number of teddy bears and pillows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Two white and two brown teddy bears with sixteen pillows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [
+          "white teddy bear",
+          "white teddy bear"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of teddy bears or pillows.",
+        "edit_instructions": [
+          "Remove the redundant teddy bears and specify the number of pillows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Two white and two brown teddy bears with sixteen pillows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [\"white teddy bear\", \"white teddy bear\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of teddy bears or pillows.\",\n  \"edit_instructions\": \"Remove the redundant teddy bears and specify the number of pillows.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Six brown teddy bears and twenty-one pillows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "hallucinated_objects": [
+          "white teddy bear",
+          "brown teddy bear",
+          "brown teddy bear"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of teddy bears and pillows.",
+        "edit_instructions": [
+          "Remove the redundant teddy bears and specify the correct number of pillows."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [white teddy bear, brown teddy bear, brown teddy bear, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow, pillow]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Six brown teddy bears and twenty-one pillows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"brown teddy bear\", \"brown teddy bear\"],\n  \"hallucinated_objects\": [\"white teddy bear\", \"brown teddy bear\", \"brown teddy bear\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of teddy bears and pillows.\",\n  \"edit_instructions\": \"Remove the redundant teddy bears and specify the correct number of pillows.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 113403,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000113403.jpg",
+    "final_caption": "Six brown teddy bears and twenty-one pillows.",
+    "total_time_sec": 31.51
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"white teddy bear\",\n    \"brown teddy bear\",\n    \"brown teddy bear\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\",\n    \"pillow\"\n  ]\n}"
+}

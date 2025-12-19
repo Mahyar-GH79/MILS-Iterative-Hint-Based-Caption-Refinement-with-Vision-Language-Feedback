@@ -1,0 +1,222 @@
+{
+  "image_id": 475779,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000475779.jpg",
+  "objects": [
+    "elephant",
+    "tree",
+    "grass",
+    "leaves",
+    "tusk",
+    "ear",
+    "trunk",
+    "bush",
+    "branch",
+    "green",
+    "brown",
+    "gray",
+    "white",
+    "natural",
+    "wildlife",
+    "african",
+    "elephant",
+    "tree",
+    "grass",
+    "leaves"
+  ],
+  "template": "We have an image with these objects: ['elephant', 'tree', 'grass', 'leaves', 'tusk', 'ear', 'trunk', 'bush', 'branch', 'green', 'brown', 'gray', 'white', 'natural', 'wildlife', 'african', 'elephant', 'tree', 'grass', 'leaves']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "African wildlife elephants under a tree in green grasslands.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add more specific details about the environment, such as the presence of bushes and branches."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: African wildlife elephants under a tree in green grasslands.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add more specific details about the environment, such as the presence of bushes and branches.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Elephants under a tree among green grass and bushes.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tusk",
+          "ear",
+          "trunk"
+        ],
+        "hallucinated_objects": [
+          "bush",
+          "branch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the tusk, ear, and trunk of the elephant, and the specific type of tree and grass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Elephants under a tree among green grass and bushes.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tusk\", \"ear\", \"trunk\"],\n  \"hallucinated_objects\": [\"bush\", \"branch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the tusk, ear, and trunk of the elephant, and the specific type of tree and grass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Gray elephant under a tree with trunk and ears among green grass and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tusk"
+        ],
+        "hallucinated_objects": [
+          "bush",
+          "branch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the elephant's features.",
+        "edit_instructions": [
+          "Add more specific details about the elephant's features, such as the tusk, and remove the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray elephant under a tree with trunk and ears among green grass and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tusk\"],\n  \"hallucinated_objects\": [\"bush\", \"branch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the elephant's features.\",\n  \"edit_instructions\": \"Add more specific details about the elephant's features, such as the tusk, and remove the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Gray elephant with tusk and ear under a tree among green grass and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is specific about the objects present in the image.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray elephant with tusk and ear under a tree among green grass and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is specific about the objects present in the image.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Gray elephant with tusk and ear under a tree among green grass, leaves, bush, and branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "white"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bush and branch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray elephant with tusk and ear under a tree among green grass, leaves, bush, and branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [\"white\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bush and branch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Gray elephant with tusks and ears under a tree among green grass and leaves, beside a brown bush and gray branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bush and branch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray elephant with tusks and ears under a tree among green grass and leaves, beside a brown bush and gray branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bush and branch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Gray African elephant with tusks and ears under a tree among green grass and leaves, beside a brown bush and gray branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "white"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bush and branch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray African elephant with tusks and ears under a tree among green grass and leaves, beside a brown bush and gray branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [\"white\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bush and branch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "white"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bush and branch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [\"white\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bush and branch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "white"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bush and branch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [\"white\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bush and branch.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bush",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "white"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the bush and branch."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [elephant, tree, grass, leaves, tusk, ear, trunk, bush, branch, green, brown, gray, white, natural, wildlife, african, elephant, tree, grass, leaves]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bush\", \"branch\"],\n  \"hallucinated_objects\": [\"white\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the bush and branch.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 475779,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000475779.jpg",
+    "final_caption": "Gray African elephant with tusks and large ears under a tree among green grass and leaves, beside a brown bush and gray branch.",
+    "total_time_sec": 32.21
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"elephant\",\n    \"tree\",\n    \"grass\",\n    \"leaves\",\n    \"tusk\",\n    \"ear\",\n    \"trunk\",\n    \"bush\",\n    \"branch\",\n    \"green\",\n    \"brown\",\n    \"gray\",\n    \"white\",\n    \"natural\",\n    \"wildlife\",\n    \"african\",\n    \"elephant\",\n    \"tree\",\n    \"grass\",\n    \"leaves\"\n  ]\n}"
+}

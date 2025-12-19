@@ -1,0 +1,425 @@
+{
+  "image_id": 3934,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000003934.jpg",
+  "objects": [
+    "dress",
+    "skirt",
+    "shirt",
+    "sneakers",
+    "couch",
+    "pillow",
+    "table",
+    "carpet",
+    "remote",
+    "hat",
+    "glass",
+    "staircase",
+    "chair",
+    "bookshelf",
+    "window",
+    "floor",
+    "toilet",
+    "lamp",
+    "wall",
+    "ceiling"
+  ],
+  "template": "We have an image with these objects: ['dress', 'skirt', 'shirt', 'sneakers', 'couch', 'pillow', 'table', 'carpet', 'remote', 'hat', 'glass', 'staircase', 'chair', 'bookshelf', 'window', 'floor', 'toilet', 'lamp', 'wall', 'ceiling']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Dress shirt and skirt on couch near lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "shirt",
+          "couch",
+          "lamp"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "carpet",
+          "remote",
+          "hat",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "glass",
+          "wall",
+          "ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dress shirt and skirt on couch near lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"shirt\", \"couch\", \"lamp\"],\n  \"hallucinated_objects\": [\"table\", \"carpet\", \"remote\", \"hat\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"glass\", \"wall\", \"ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Dress shirt skirt on couch by lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "remote",
+          "glass",
+          "hat",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "skirt",
+          "couch",
+          "pillow",
+          "table",
+          "carpet",
+          "floor",
+          "sneakers"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dress shirt skirt on couch by lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"remote\", \"glass\", \"hat\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"skirt\", \"couch\", \"pillow\", \"table\", \"carpet\", \"floor\", \"sneakers\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Hat remote bookshelf window by lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "skirt",
+          "shirt",
+          "couch",
+          "pillow",
+          "table",
+          "carpet",
+          "remote",
+          "hat",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "hat",
+          "remote",
+          "bookshelf",
+          "window",
+          "by lamp"
+        ],
+        "genericity_hint": "The image is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hat remote bookshelf window by lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"skirt\", \"shirt\", \"couch\", \"pillow\", \"table\", \"carpet\", \"remote\", \"hat\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"hat\", \"remote\", \"bookshelf\", \"window\", \"by lamp\"],\n  \"genericity_hint\": \"The image is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Dress skirt shirt sneakers on couch under lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "glass",
+          "remote",
+          "hat",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "sneakers",
+          "couch",
+          "under"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as their exact location and appearance."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dress skirt shirt sneakers on couch under lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glass\", \"remote\", \"hat\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"sneakers\", \"couch\", \"under\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as their exact location and appearance.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Hat glass remote on table near sofa",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "skirt",
+          "shirt",
+          "sneakers",
+          "couch",
+          "pillow",
+          "table",
+          "carpet",
+          "remote",
+          "hat",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hat glass remote on table near sofa\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"skirt\", \"shirt\", \"sneakers\", \"couch\", \"pillow\", \"table\", \"carpet\", \"remote\", \"hat\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Dress skirt shirt sneakers on couch near pillow",
+      "vlm_hint": {
+        "missing_objects": [
+          "glass",
+          "remote",
+          "hat",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "sneakers",
+          "couch",
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their locations and relationships to each other."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dress skirt shirt sneakers on couch near pillow\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glass\", \"remote\", \"hat\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"sneakers\", \"couch\", \"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their locations and relationships to each other.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Hat glass remote on table near window",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "shirt",
+          "couch",
+          "pillow",
+          "table",
+          "carpet",
+          "remote",
+          "hat",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "couch",
+          "pillow",
+          "table",
+          "carpet",
+          "remote",
+          "hat",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hat glass remote on table near window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"shirt\", \"couch\", \"pillow\", \"table\", \"carpet\", \"remote\", \"hat\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"couch\", \"pillow\", \"table\", \"carpet\", \"remote\", \"hat\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Sneakers on couch near lamp and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "shirt",
+          "glass",
+          "remote",
+          "hat",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "glass",
+          "remote",
+          "hat",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sneakers on couch near lamp and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"shirt\", \"glass\", \"remote\", \"hat\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"glass\", \"remote\", \"hat\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Sneakers and skirt on couch by lamp and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "shirt",
+          "table",
+          "carpet",
+          "remote",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sneakers and skirt on couch by lamp and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"shirt\", \"table\", \"carpet\", \"remote\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"staircase\", \"chair\", \"bookshelf\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Skirt and sneakers on couch near carpet and lamp",
+      "vlm_hint": {
+        "missing_objects": [
+          "dress",
+          "shirt",
+          "table",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "hallucinated_objects": [
+          "dress",
+          "shirt",
+          "table",
+          "glass",
+          "staircase",
+          "chair",
+          "bookshelf",
+          "window",
+          "floor",
+          "toilet",
+          "lamp",
+          "wall",
+          "ceiling"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dress, skirt, shirt, sneakers, couch, pillow, table, carpet, remote, hat, glass, staircase, chair, bookshelf, window, floor, toilet, lamp, wall, ceiling]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skirt and sneakers on couch near carpet and lamp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dress\", \"shirt\", \"table\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"hallucinated_objects\": [\"dress\", \"shirt\", \"table\", \"glass\", \"staircase\", \"chair\", \"bookshelf\", \"window\", \"floor\", \"toilet\", \"lamp\", \"wall\", \"ceiling\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 3934,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000003934.jpg",
+    "final_caption": "Skirt and sneakers on couch near carpet and lamp",
+    "total_time_sec": 44.54
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"dress\",\n    \"skirt\",\n    \"shirt\",\n    \"sneakers\",\n    \"couch\",\n    \"pillow\",\n    \"table\",\n    \"carpet\",\n    \"remote\",\n    \"hat\",\n    \"glass\",\n    \"staircase\",\n    \"chair\",\n    \"bookshelf\",\n    \"window\",\n    \"floor\",\n    \"toilet\",\n    \"lamp\",\n    \"wall\",\n    \"ceiling\"\n  ]\n}"
+}

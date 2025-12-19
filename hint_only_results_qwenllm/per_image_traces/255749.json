@@ -1,0 +1,225 @@
+{
+  "image_id": 255749,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000255749.jpg",
+  "objects": [
+    "bus",
+    "lights",
+    "people",
+    "trees",
+    "snow",
+    "street",
+    "night",
+    "road",
+    "sign",
+    "window",
+    "headlights",
+    "passenger",
+    "driver",
+    "darkness",
+    "streetlights",
+    "winter",
+    "bus stop",
+    "street",
+    "snowy"
+  ],
+  "template": "We have an image with these objects: ['bus', 'lights', 'people', 'trees', 'snow', 'street', 'night', 'road', 'sign', 'window', 'headlights', 'passenger', 'driver', 'darkness', 'streetlights', 'winter', 'bus stop', 'street', 'snowy']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Night bus through snowy streets illuminated by headlights and streetlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "streetlights"
+        ],
+        "hallucinated_objects": [
+          "snow"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to identify specific objects.",
+        "edit_instructions": [
+          "Add people and streetlights to the image. Remove the snow."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus through snowy streets illuminated by headlights and streetlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"streetlights\"],\n  \"hallucinated_objects\": [\"snow\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to identify specific objects.\",\n  \"edit_instructions\": \"Add people and streetlights to the image. Remove the snow.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Night bus travels down street lit by headlights and streetlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "snow",
+          "streetlights"
+        ],
+        "hallucinated_objects": [
+          "passenger",
+          "driver"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to distinguish certain objects.",
+        "edit_instructions": [
+          "Remove the people, snow, and streetlights from the list. Also, remove the passenger and driver from the list."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down street lit by headlights and streetlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"snow\", \"streetlights\"],\n  \"hallucinated_objects\": [\"passenger\", \"driver\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to distinguish certain objects.\",\n  \"edit_instructions\": \"Remove the people, snow, and streetlights from the list. Also, remove the passenger and driver from the list.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Night bus travels down street lit by headlights and darkness",
+      "vlm_hint": {
+        "missing_objects": [
+          "people",
+          "snow",
+          "streetlights"
+        ],
+        "hallucinated_objects": [
+          "passenger",
+          "driver"
+        ],
+        "genericity_hint": "The image is in black and white, which can make it harder to distinguish certain objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects. Also, consider the lighting conditions and the time of day."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down street lit by headlights and darkness\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\", \"snow\", \"streetlights\"],\n  \"hallucinated_objects\": [\"passenger\", \"driver\"],\n  \"genericity_hint\": \"The image is in black and white, which can make it harder to distinguish certain objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects. Also, consider the lighting conditions and the time of day.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Night bus travels down snow-covered street lit by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "headlights"
+        ],
+        "hallucinated_objects": [
+          "snowy"
+        ],
+        "genericity_hint": "The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity hint."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down snow-covered street lit by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"headlights\"],\n  \"hallucinated_objects\": [\"snowy\"],\n  \"genericity_hint\": \"The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity hint.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Night bus travels down snow-covered street lit by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "headlights"
+        ],
+        "hallucinated_objects": [
+          "snowy"
+        ],
+        "genericity_hint": "The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity hint."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down snow-covered street lit by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"headlights\"],\n  \"hallucinated_objects\": [\"snowy\"],\n  \"genericity_hint\": \"The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity hint.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Night bus travels down snow-covered street illuminated by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "headlights"
+        ],
+        "hallucinated_objects": [
+          "snowy"
+        ],
+        "genericity_hint": "The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.",
+        "edit_instructions": [
+          "Add streetlights and headlights to the image. Remove the word 'snowy' from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down snow-covered street illuminated by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"headlights\"],\n  \"hallucinated_objects\": [\"snowy\"],\n  \"genericity_hint\": \"The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.\",\n  \"edit_instructions\": \"Add streetlights and headlights to the image. Remove the word 'snowy' from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Night bus travels down street lit by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "snow",
+          "streetlights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white, which may affect the perception of colors.",
+        "edit_instructions": [
+          "Add snow and streetlights to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down street lit by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snow\", \"streetlights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white, which may affect the perception of colors.\",\n  \"edit_instructions\": \"Add snow and streetlights to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Night bus travels down snowy street illuminated by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "headlights"
+        ],
+        "hallucinated_objects": [
+          "snowy street"
+        ],
+        "genericity_hint": "The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity hint."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down snowy street illuminated by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"headlights\"],\n  \"hallucinated_objects\": [\"snowy street\"],\n  \"genericity_hint\": \"The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity hint.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Night bus travels down street lit by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "snow",
+          "streetlights"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white, which may affect the perception of colors.",
+        "edit_instructions": [
+          "Add snow and streetlights to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down street lit by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"snow\", \"streetlights\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white, which may affect the perception of colors.\",\n  \"edit_instructions\": \"Add snow and streetlights to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Night bus travels down snowy street illuminated by streetlights and headlights",
+      "vlm_hint": {
+        "missing_objects": [
+          "streetlights",
+          "headlights"
+        ],
+        "hallucinated_objects": [
+          "snowy street"
+        ],
+        "genericity_hint": "The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity hint."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, lights, people, trees, snow, street, night, road, sign, window, headlights, passenger, driver, darkness, streetlights, winter, bus stop, street, snowy]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Night bus travels down snowy street illuminated by streetlights and headlights\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"streetlights\", \"headlights\"],\n  \"hallucinated_objects\": [\"snowy street\"],\n  \"genericity_hint\": \"The image is in black and white, which makes it difficult to determine the color of the streetlights and headlights.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity hint.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 255749,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000255749.jpg",
+    "final_caption": "Night bus travels down snowy street illuminated by streetlights and headlights",
+    "total_time_sec": 29.34
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bus\",\n    \"lights\",\n    \"people\",\n    \"trees\",\n    \"snow\",\n    \"street\",\n    \"night\",\n    \"road\",\n    \"sign\",\n    \"window\",\n    \"headlights\",\n    \"passenger\",\n    \"driver\",\n    \"darkness\",\n    \"streetlights\",\n    \"winter\",\n    \"bus stop\",\n    \"street\",\n    \"snowy\"\n  ]\n}"
+}

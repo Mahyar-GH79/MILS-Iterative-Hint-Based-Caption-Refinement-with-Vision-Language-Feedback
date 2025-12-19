@@ -1,0 +1,248 @@
+{
+  "image_id": 101068,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000101068.jpg",
+  "objects": [
+    "baseball bat",
+    "baseball",
+    "grass",
+    "dirt",
+    "hat",
+    "shirt",
+    "pinstripe pants",
+    "water splash",
+    "baseball field",
+    "sunlight"
+  ],
+  "template": "We have an image with these objects: ['baseball bat', 'baseball', 'grass', 'dirt', 'hat', 'shirt', 'pinstripe pants', 'water splash', 'baseball field', 'sunlight']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Sunlight highlights baseball players on a field with splash",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "pinstripe pants"
+        ],
+        "hallucinated_objects": [
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the hat and pinstripe pants, and remove the mention of sunlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunlight highlights baseball players on a field with splash\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"pinstripe pants\"],\n  \"hallucinated_objects\": [\"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the hat and pinstripe pants, and remove the mention of sunlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Baseball player in hat and pinstripe pants swings at ball on field",
+      "vlm_hint": {
+        "missing_objects": [
+          "water splash",
+          "sunlight"
+        ],
+        "hallucinated_objects": [
+          "baseball bat",
+          "baseball"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the water splash and sunlight."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball player in hat and pinstripe pants swings at ball on field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water splash\", \"sunlight\"],\n  \"hallucinated_objects\": [\"baseball bat\", \"baseball\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the water splash and sunlight.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Sunlight glints off water splash as player in hat runs with pinstripe pants",
+      "vlm_hint": {
+        "missing_objects": [
+          "baseball bat",
+          "baseball",
+          "grass",
+          "dirt",
+          "hat",
+          "shirt",
+          "pinstripe pants",
+          "water splash",
+          "baseball field",
+          "sunlight"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunlight glints off water splash as player in hat runs with pinstripe pants\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"baseball bat\", \"baseball\", \"grass\", \"dirt\", \"hat\", \"shirt\", \"pinstripe pants\", \"water splash\", \"baseball field\", \"sunlight\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Sunlight highlights baseball as player in hat runs with pinstripe pants on grass field",
+      "vlm_hint": {
+        "missing_objects": [
+          "water splash",
+          "bat",
+          "grass",
+          "dirt",
+          "hat",
+          "shirt",
+          "pinstripe pants",
+          "baseball field",
+          "sunlight"
+        ],
+        "hallucinated_objects": [
+          "baseball bat",
+          "baseball",
+          "grass",
+          "dirt",
+          "hat",
+          "shirt",
+          "pinstripe pants",
+          "water splash",
+          "baseball field",
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a specific caption that includes all the objects in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunlight highlights baseball as player in hat runs with pinstripe pants on grass field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water splash\", \"bat\", \"grass\", \"dirt\", \"hat\", \"shirt\", \"pinstripe pants\", \"baseball field\", \"sunlight\"],\n  \"hallucinated_objects\": [\"baseball bat\", \"baseball\", \"grass\", \"dirt\", \"hat\", \"shirt\", \"pinstripe pants\", \"water splash\", \"baseball field\", \"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a specific caption that includes all the objects in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Sunlight highlights player in hat and pinstripe pants running with baseball and bat on grass field",
+      "vlm_hint": {
+        "missing_objects": [
+          "water splash"
+        ],
+        "hallucinated_objects": [
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic terms and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunlight highlights player in hat and pinstripe pants running with baseball and bat on grass field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water splash\"],\n  \"hallucinated_objects\": [\"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic terms and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Player in hat running with baseball and bat on grass field with water splash",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "water splash"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "dirt",
+          "shirt",
+          "pinstripe pants",
+          "baseball field",
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Player in hat running with baseball and bat on grass field with water splash\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"water splash\"],\n  \"hallucinated_objects\": [\"grass\", \"dirt\", \"shirt\", \"pinstripe pants\", \"baseball field\", \"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Player runs with baseball and bat in grassy field water splash nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "pinstripe pants"
+        ],
+        "hallucinated_objects": [
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the hat and pinstripe pants, and remove the generic term 'sunlight'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Player runs with baseball and bat in grassy field water splash nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"pinstripe pants\"],\n  \"hallucinated_objects\": [\"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the hat and pinstripe pants, and remove the generic term 'sunlight'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Player in hat runs with baseball and bat on grassy field splash nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "water splash",
+          "baseball bat",
+          "baseball",
+          "grass",
+          "dirt",
+          "hat",
+          "shirt",
+          "pinstripe pants",
+          "baseball field",
+          "sunlight"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the water splash, baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, baseball field, and sunlight."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Player in hat runs with baseball and bat on grassy field splash nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water splash\", \"baseball bat\", \"baseball\", \"grass\", \"dirt\", \"hat\", \"shirt\", \"pinstripe pants\", \"baseball field\", \"sunlight\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the water splash, baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, baseball field, and sunlight.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Sunlight shines on player in hat and shirt running with baseball bat and ball on grassy field, splash nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "water splash"
+        ],
+        "hallucinated_objects": [
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic terms and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Sunlight shines on player in hat and shirt running with baseball bat and ball on grassy field, splash nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water splash\"],\n  \"hallucinated_objects\": [\"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic terms and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Player in hat runs with baseball bat and ball on grass field, splash nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "pinstripe pants"
+        ],
+        "hallucinated_objects": [
+          "sunlight"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the hat and pinstripe pants, and remove the generic term 'sunlight'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball, grass, dirt, hat, shirt, pinstripe pants, water splash, baseball field, sunlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Player in hat runs with baseball bat and ball on grass field, splash nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"pinstripe pants\"],\n  \"hallucinated_objects\": [\"sunlight\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the hat and pinstripe pants, and remove the generic term 'sunlight'.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 101068,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000101068.jpg",
+    "final_caption": "Player in hat runs with baseball bat and ball on grass field, splash nearby.",
+    "total_time_sec": 34.12
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"baseball bat\",\n    \"baseball\",\n    \"grass\",\n    \"dirt\",\n    \"hat\",\n    \"shirt\",\n    \"pinstripe pants\",\n    \"water splash\",\n    \"baseball field\",\n    \"sunlight\"\n  ]\n}"
+}

@@ -1,0 +1,315 @@
+{
+  "image_id": 26465,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000026465.jpg",
+  "objects": [
+    "laptop",
+    "keyboard",
+    "mouse",
+    "phone",
+    "flashlight",
+    "table",
+    "chair",
+    "person",
+    "shirt",
+    "pant",
+    "belt",
+    "wall",
+    "light",
+    "screen",
+    "button",
+    "handle",
+    "device",
+    "electronics",
+    "office",
+    "workspace"
+  ],
+  "template": "We have an image with these objects: ['laptop', 'keyboard', 'mouse', 'phone', 'flashlight', 'table', 'chair', 'person', 'shirt', 'pant', 'belt', 'wall', 'light', 'screen', 'button', 'handle', 'device', 'electronics', 'office', 'workspace']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Person at workspace with laptop and phone",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "table",
+          "chair",
+          "person",
+          "shirt",
+          "pant",
+          "belt",
+          "wall",
+          "light",
+          "screen",
+          "button",
+          "handle",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "hallucinated_objects": [
+          "mouse",
+          "table",
+          "chair",
+          "person",
+          "shirt",
+          "pant",
+          "belt",
+          "wall",
+          "light",
+          "screen",
+          "button",
+          "handle",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "genericity_hint": "The image is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person at workspace with laptop and phone\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"table\", \"chair\", \"person\", \"shirt\", \"pant\", \"belt\", \"wall\", \"light\", \"screen\", \"button\", \"handle\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"hallucinated_objects\": [\"mouse\", \"table\", \"chair\", \"person\", \"shirt\", \"pant\", \"belt\", \"wall\", \"light\", \"screen\", \"button\", \"handle\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"genericity_hint\": \"The image is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Person using laptop and phone at workspace",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "belt",
+          "wall",
+          "light",
+          "button",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "shirt",
+          "pant",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "genericity_hint": "The image is generic and does not provide specific details about the objects.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person using laptop and phone at workspace\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"belt\", \"wall\", \"light\", \"button\", \"handle\"],\n  \"hallucinated_objects\": [\"person\", \"shirt\", \"pant\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"genericity_hint\": \"The image is generic and does not provide specific details about the objects.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Person using laptop and phone with mouse on table near wall light",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "light",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "shirt",
+          "pant",
+          "belt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mouse, light, and wall."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person using laptop and phone with mouse on table near wall light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"light\", \"wall\"],\n  \"hallucinated_objects\": [\"person\", \"shirt\", \"pant\", \"belt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mouse, light, and wall.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Person using laptop and phone with mouse near wall light on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "light",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "person",
+          "shirt",
+          "pant",
+          "belt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mouse, light, and wall, and removes the person, shirt, pant, and belt."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person using laptop and phone with mouse near wall light on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"light\", \"wall\"],\n  \"hallucinated_objects\": [\"person\", \"shirt\", \"pant\", \"belt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mouse, light, and wall, and removes the person, shirt, pant, and belt.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Mouse and phone next to laptop on table near wall light",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "light",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "chair",
+          "belt",
+          "person",
+          "shirt",
+          "pant"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, including the mouse and the light."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mouse and phone next to laptop on table near wall light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"light\", \"wall\"],\n  \"hallucinated_objects\": [\"chair\", \"belt\", \"person\", \"shirt\", \"pant\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, including the mouse and the light.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Mouse and phone beside laptop on table near wall light",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "light",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "chair",
+          "person",
+          "shirt",
+          "pant",
+          "belt",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mouse and light, and removes the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mouse and phone beside laptop on table near wall light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"light\", \"wall\"],\n  \"hallucinated_objects\": [\"table\", \"chair\", \"person\", \"shirt\", \"pant\", \"belt\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mouse and light, and removes the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Mouse and phone next to laptop under wall light",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "light",
+          "wall"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "chair",
+          "person",
+          "shirt",
+          "pant",
+          "belt",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the table.",
+        "edit_instructions": [
+          "Specify the objects on the table and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mouse and phone next to laptop under wall light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"light\", \"wall\"],\n  \"hallucinated_objects\": [\"table\", \"chair\", \"person\", \"shirt\", \"pant\", \"belt\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the table.\",\n  \"edit_instructions\": \"Specify the objects on the table and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Mouse phone next to laptop under light",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "light",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "table",
+          "chair",
+          "person",
+          "shirt",
+          "pant",
+          "belt",
+          "wall",
+          "button"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mouse, light, and handle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mouse phone next to laptop under light\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"light\", \"handle\"],\n  \"hallucinated_objects\": [\"table\", \"chair\", \"person\", \"shirt\", \"pant\", \"belt\", \"wall\", \"button\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mouse, light, and handle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Mouse phone next to laptop under light with handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the mouse and handle, and remove the generic terms."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mouse phone next to laptop under light with handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"handle\"],\n  \"hallucinated_objects\": [\"light\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the mouse and handle, and remove the generic terms.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Mouse and phone next to laptop on handle",
+      "vlm_hint": {
+        "missing_objects": [
+          "mouse",
+          "handle"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "button",
+          "device",
+          "electronics",
+          "office",
+          "workspace"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the table.",
+        "edit_instructions": [
+          "Specify the objects on the table, such as 'laptop, keyboard, phone, flashlight, and table'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [laptop, keyboard, mouse, phone, flashlight, table, chair, person, shirt, pant, belt, wall, light, screen, button, handle, device, electronics, office, workspace]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Mouse and phone next to laptop on handle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"mouse\", \"handle\"],\n  \"hallucinated_objects\": [\"light\", \"button\", \"device\", \"electronics\", \"office\", \"workspace\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the table.\",\n  \"edit_instructions\": \"Specify the objects on the table, such as 'laptop, keyboard, phone, flashlight, and table'.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 26465,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000026465.jpg",
+    "final_caption": "Mouse and phone next to laptop on handle",
+    "total_time_sec": 34.1
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"laptop\",\n    \"keyboard\",\n    \"mouse\",\n    \"phone\",\n    \"flashlight\",\n    \"table\",\n    \"chair\",\n    \"person\",\n    \"shirt\",\n    \"pant\",\n    \"belt\",\n    \"wall\",\n    \"light\",\n    \"screen\",\n    \"button\",\n    \"handle\",\n    \"device\",\n    \"electronics\",\n    \"office\",\n    \"workspace\"\n  ]\n}"
+}

@@ -1,0 +1,193 @@
+{
+  "image_id": 434230,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000434230.jpg",
+  "objects": [
+    "plates",
+    "vases",
+    "jars",
+    "bowls",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases",
+    "vases"
+  ],
+  "template": "We have an image with these objects: ['plates', 'vases', 'jars', 'bowls', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases', 'vases']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Vases dominate the plate displayshelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "plates"
+        ],
+        "hallucinated_objects": [
+          "vases"
+        ],
+        "genericity_hint": "The caption is too specific and misses the main subject of the image.",
+        "edit_instructions": [
+          "Remove the mention of vases and focus on the plates."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases dominate the plate displayshelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plates\"],\n  \"hallucinated_objects\": [\"vases\"],\n  \"genericity_hint\": \"The caption is too specific and misses the main subject of the image.\",\n  \"edit_instructions\": \"Remove the mention of vases and focus on the plates.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Plates fill the display shelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "vases"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the word 'plates' and add 'vases' to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plates fill the display shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vases\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the word 'plates' and add 'vases' to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Vases fill the display shelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "plates",
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the word 'vases' and add 'plates' and 'bowl'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases fill the display shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plates\", \"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the word 'vases' and add 'plates' and 'bowl'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Plates and vases fill the shelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the types of objects present.",
+        "edit_instructions": [
+          "Specify the types of objects present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plates and vases fill the shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the types of objects present.\",\n  \"edit_instructions\": \"Specify the types of objects present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Vases and bowls fill the shelf",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases and bowls fill the shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plates\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Vases line the shelf densely",
+      "vlm_hint": {
+        "missing_objects": [
+          "plates",
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the word 'vases' and add 'plates' and 'bowl'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases line the shelf densely\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plates\", \"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the word 'vases' and add 'plates' and 'bowl'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Plates and vases line the shelf densely",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the types of objects.",
+        "edit_instructions": [
+          "Specify the types of objects in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Plates and vases line the shelf densely\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of objects.\",\n  \"edit_instructions\": \"Specify the types of objects in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Vases and bowls densely line the shelf.",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases and bowls densely line the shelf.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plates\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases\", \"vases"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Vases fill the shelf densely.",
+      "vlm_hint": {
+        "missing_objects": [
+          "plates",
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of objects.",
+        "edit_instructions": [
+          "Specify the type of objects in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases fill the shelf densely.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plates\", \"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of objects.\",\n  \"edit_instructions\": \"Specify the type of objects in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Vases and plates fill the shelf densely.",
+      "vlm_hint": {
+        "missing_objects": [
+          "bowl"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the types of objects.",
+        "edit_instructions": [
+          "Specify the types of objects in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [plates, vases, jars, bowls, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases, vases]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Vases and plates fill the shelf densely.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bowl\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the types of objects.\",\n  \"edit_instructions\": \"Specify the types of objects in the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 434230,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000434230.jpg",
+    "final_caption": "Vases and plates fill the shelf densely.",
+    "total_time_sec": 33.74
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"plates\",\n    \"vases\",\n    \"jars\",\n    \"bowls\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\",\n    \"vases\"\n  ]\n}"
+}

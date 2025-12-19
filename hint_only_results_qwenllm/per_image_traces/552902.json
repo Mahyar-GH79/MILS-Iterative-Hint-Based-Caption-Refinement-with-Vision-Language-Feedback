@@ -1,0 +1,221 @@
+{
+  "image_id": 552902,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000552902.jpg",
+  "objects": [
+    "zebra",
+    "grass",
+    "trees",
+    "branch",
+    "leaves",
+    "ground",
+    "shadow",
+    "stripe",
+    "tail",
+    "ear",
+    "mouth",
+    "nose",
+    "hind leg",
+    "front leg",
+    "stripe",
+    "stripe",
+    "stripe",
+    "stripe",
+    "stripe"
+  ],
+  "template": "We have an image with these objects: ['zebra', 'grass', 'trees', 'branch', 'leaves', 'ground', 'shadow', 'stripe', 'tail', 'ear', 'mouth', 'nose', 'hind leg', 'front leg', 'stripe', 'stripe', 'stripe', 'stripe', 'stripe']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Zebra in grass under trees with striped coat",
+      "vlm_hint": {
+        "missing_objects": [
+          "shadow",
+          "stripe"
+        ],
+        "hallucinated_objects": [
+          "branch",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the zebra's appearance and the environment.",
+        "edit_instructions": [
+          "Add more specific details about the zebra's coat and the environment, such as the presence of a shadow and more specific details about the trees and grass."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra in grass under trees with striped coat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shadow\", \"stripe\"],\n  \"hallucinated_objects\": [\"branch\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the zebra's appearance and the environment.\",\n  \"edit_instructions\": \"Add more specific details about the zebra's coat and the environment, such as the presence of a shadow and more specific details about the trees and grass.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Shadowed zebra in striped coat eats grass under tall trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the branch and leaves from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shadowed zebra in striped coat eats grass under tall trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the branch and leaves from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Shadowed zebra eats grass under tall trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a branch and leaves, and remove the word 'shadow'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Shadowed zebra eats grass under tall trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [\"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a branch and leaves, and remove the word 'shadow'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Zebra eats grass by tall trees with branch and leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the branch and leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra eats grass by tall trees with branch and leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [\"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the branch and leaves.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Zebra grazes grass under trees with branch and leaves",
+      "vlm_hint": {
+        "missing_objects": [
+          "shadow",
+          "stripe"
+        ],
+        "hallucinated_objects": [
+          "branch",
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the zebra's appearance and the environment.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific details about the zebra's stripes, the presence of a shadow, and the environment."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra grazes grass under trees with branch and leaves\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shadow\", \"stripe\"],\n  \"hallucinated_objects\": [\"branch\", \"leaves\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the zebra's appearance and the environment.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific details about the zebra's stripes, the presence of a shadow, and the environment.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Zebra with stripes grazes grass under trees its shadow on the ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is specific about the zebra's stripes and the grass it's grazing on, but it doesn't mention the branch or leaves.",
+        "edit_instructions": [
+          "Remove the mention of the branch and leaves from the caption."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra with stripes grazes grass under trees its shadow on the ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is specific about the zebra's stripes and the grass it's grazing on, but it doesn't mention the branch or leaves.\",\n  \"edit_instructions\": \"Remove the mention of the branch and leaves from the caption.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Zebra with stripes grazes grass its shadow on the ground",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is specific about the zebra's stripes and grazing behavior, but it misses some details like the branch and leaves.",
+        "edit_instructions": [
+          "Add the branch and leaves to the caption to make it more specific."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra with stripes grazes grass its shadow on the ground\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is specific about the zebra's stripes and grazing behavior, but it misses some details like the branch and leaves.\",\n  \"edit_instructions\": \"Add the branch and leaves to the caption to make it more specific.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Zebra with stripes grazes grass beneath a branch and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the branch and leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra with stripes grazes grass beneath a branch and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [\"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the branch and leaves.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Zebra with stripes eats grass under a branch and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the branch and leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra with stripes eats grass under a branch and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [\"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the branch and leaves.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Zebra with stripes eats grass beneath a branch and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "shadow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the branch and leaves."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [zebra, grass, trees, branch, leaves, ground, shadow, stripe, tail, ear, mouth, nose, hind leg, front leg, stripe, stripe, stripe, stripe, stripe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebra with stripes eats grass beneath a branch and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\"],\n  \"hallucinated_objects\": [\"shadow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the branch and leaves.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 552902,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000552902.jpg",
+    "final_caption": "Zebra with stripes eats grass beneath a branch and leaves.",
+    "total_time_sec": 29.48
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"zebra\",\n    \"grass\",\n    \"trees\",\n    \"branch\",\n    \"leaves\",\n    \"ground\",\n    \"shadow\",\n    \"stripe\",\n    \"tail\",\n    \"ear\",\n    \"mouth\",\n    \"nose\",\n    \"hind leg\",\n    \"front leg\",\n    \"stripe\",\n    \"stripe\",\n    \"stripe\",\n    \"stripe\",\n    \"stripe\"\n  ]\n}"
+}

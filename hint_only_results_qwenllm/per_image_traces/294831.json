@@ -1,0 +1,251 @@
+{
+  "image_id": 294831,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000294831.jpg",
+  "objects": [
+    "pizza",
+    "plate",
+    "hand",
+    "laptop",
+    "couch",
+    "cat",
+    "table",
+    "bottle",
+    "cabinet",
+    "chair",
+    "floor",
+    "napkin",
+    "mouse",
+    "monitor",
+    "mousepad",
+    "cable",
+    "cabinet",
+    "couch",
+    "cat",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['pizza', 'plate', 'hand', 'laptop', 'couch', 'cat', 'table', 'bottle', 'cabinet', 'chair', 'floor', 'napkin', 'mouse', 'monitor', 'mousepad', 'cable', 'cabinet', 'couch', 'cat', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Pizza on plate near laptop and cat on couch",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "couch",
+          "laptop"
+        ],
+        "hallucinated_objects": [
+          "mouse",
+          "mousepad",
+          "cable"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on plate near laptop and cat on couch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"couch\", \"laptop\"],\n  \"hallucinated_objects\": [\"mouse\", \"mousepad\", \"cable\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Pizza on plate near laptop with cat on couch",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "couch",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "mouse",
+          "mousepad",
+          "cabinet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat on the couch and the table in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pizza on plate near laptop with cat on couch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"couch\", \"table\"],\n  \"hallucinated_objects\": [\"mouse\", \"mousepad\", \"cabinet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat on the couch and the table in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat on couch pizza on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "pizza",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "mouse",
+          "cabinet",
+          "chair",
+          "floor",
+          "napkin",
+          "mousepad",
+          "cable"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, pizza, and table."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch pizza on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"pizza\", \"table\"],\n  \"hallucinated_objects\": [\"couch\", \"mouse\", \"cabinet\", \"chair\", \"floor\", \"napkin\", \"mousepad\", \"cable\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, pizza, and table.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cat on table pizza nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "mouse",
+          "cabinet",
+          "couch",
+          "floor",
+          "napkin",
+          "mousepad",
+          "cable"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide enough detail about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, table, and other objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on table pizza nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"table\"],\n  \"hallucinated_objects\": [\"mouse\", \"cabinet\", \"couch\", \"floor\", \"napkin\", \"mousepad\", \"cable\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide enough detail about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, table, and other objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Cat on table with pizza and laptop nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat"
+        ],
+        "hallucinated_objects": [
+          "mouse",
+          "cable"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on table with pizza and laptop nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\"],\n  \"hallucinated_objects\": [\"mouse\", \"cable\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Cat on couch with pizza and laptop nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "laptop"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, laptop, and couch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch with pizza and laptop nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"laptop\"],\n  \"hallucinated_objects\": [\"couch\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, laptop, and couch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Cat on couch with pizza and laptop nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "laptop"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, laptop, and couch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch with pizza and laptop nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"laptop\"],\n  \"hallucinated_objects\": [\"couch\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, laptop, and couch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Cat on couch with pizza and laptop nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "laptop"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, laptop, and couch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch with pizza and laptop nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"laptop\"],\n  \"hallucinated_objects\": [\"couch\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, laptop, and couch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Cat on couch with pizza and laptop nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "laptop"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, laptop, and couch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch with pizza and laptop nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"laptop\"],\n  \"hallucinated_objects\": [\"couch\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, laptop, and couch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Cat on couch with pizza and laptop nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat",
+          "laptop"
+        ],
+        "hallucinated_objects": [
+          "couch",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the cat, laptop, and couch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [pizza, plate, hand, laptop, couch, cat, table, bottle, cabinet, chair, floor, napkin, mouse, monitor, mousepad, cable, cabinet, couch, cat, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch with pizza and laptop nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat\", \"laptop\"],\n  \"hallucinated_objects\": [\"couch\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the cat, laptop, and couch.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 294831,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000294831.jpg",
+    "final_caption": "Cat on couch with pizza and laptop nearby",
+    "total_time_sec": 29.12
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"pizza\",\n    \"plate\",\n    \"hand\",\n    \"laptop\",\n    \"couch\",\n    \"cat\",\n    \"table\",\n    \"bottle\",\n    \"cabinet\",\n    \"chair\",\n    \"floor\",\n    \"napkin\",\n    \"mouse\",\n    \"monitor\",\n    \"mousepad\",\n    \"cable\",\n    \"cabinet\",\n    \"couch\",\n    \"cat\",\n    \"table\"\n  ]\n}"
+}

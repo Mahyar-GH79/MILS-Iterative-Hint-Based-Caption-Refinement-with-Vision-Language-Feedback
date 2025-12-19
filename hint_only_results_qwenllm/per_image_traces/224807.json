@@ -1,0 +1,240 @@
+{
+  "image_id": 224807,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000224807.jpg",
+  "objects": [
+    "people",
+    "table",
+    "plates",
+    "cups",
+    "sauce",
+    "chopsticks",
+    "soda cans",
+    "tablecloth",
+    "backpack",
+    "hat",
+    "shirt",
+    "jacket",
+    "glasses",
+    "hairpin",
+    "purse",
+    "backpack",
+    "jacket",
+    "hat",
+    "shirt",
+    "jacket"
+  ],
+  "template": "We have an image with these objects: ['people', 'table', 'plates', 'cups', 'sauce', 'chopsticks', 'soda cans', 'tablecloth', 'backpack', 'hat', 'shirt', 'jacket', 'glasses', 'hairpin', 'purse', 'backpack', 'jacket', 'hat', 'shirt', 'jacket']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People around table with food and drinks",
+      "vlm_hint": {
+        "missing_objects": [
+          "soda cans",
+          "tablecloth",
+          "hat",
+          "shirt",
+          "jacket",
+          "glasses",
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of tablecloth, hat, shirt, jacket, glasses, hairpin, or purse.",
+        "edit_instructions": [
+          "Add specific details to the caption to make it more accurate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People around table with food and drinks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soda cans\", \"tablecloth\", \"hat\", \"shirt\", \"jacket\", \"glasses\", \"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of tablecloth, hat, shirt, jacket, glasses, hairpin, or purse.\",\n  \"edit_instructions\": \"Add specific details to the caption to make it more accurate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People at a clothed table with plates cups and soda cans",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Add more specific details to the caption, such as the type of tablecloth, the presence of hairpins, and the type of backpack."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a clothed table with plates cups and soda cans\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Add more specific details to the caption, such as the type of tablecloth, the presence of hairpins, and the type of backpack.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People at a tablecloth-covered table with plates, cups, and soda cans, one wearing a hat and jacket.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "hat",
+          "jacket"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of cups and plates, and include the hairpin and purse."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with plates, cups, and soda cans, one wearing a hat and jacket.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"hat\", \"jacket\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of cups and plates, and include the hairpin and purse.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People at a tablecloth-covered table with ceramic plates, glass cups, and soda cans, one with a hairpin and purse.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "glasses",
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "soda cans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of plates, cups, and soda cans."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with ceramic plates, glass cups, and soda cans, one with a hairpin and purse.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"glasses\", \"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"soda cans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of plates, cups, and soda cans.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People at a tablecloth-covered table with ceramic plates, clear glass cups, and soda bottles, one wearing a hat and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "soda cans",
+          "hat",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "soda bottles"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of cups and bottles, and include the hat and glasses."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with ceramic plates, clear glass cups, and soda bottles, one wearing a hat and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"soda cans\", \"hat\", \"glasses\"],\n  \"hallucinated_objects\": [\"soda bottles\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of cups and bottles, and include the hat and glasses.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People at a tablecloth-covered table with ceramic plates, clear glass cups, and soda cans, one wearing a hat and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "hat"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of plates, cups, and soda cans."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with ceramic plates, clear glass cups, and soda cans, one wearing a hat and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"hat\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of plates, cups, and soda cans.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People at a tablecloth-covered table with ceramic plates, clear glass cups, and soda cans, one with a hairpin and purse.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "glasses",
+          "shirt",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of plates, cups, and soda cans."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with ceramic plates, clear glass cups, and soda cans, one with a hairpin and purse.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"glasses\", \"shirt\", \"jacket\"],\n  \"hallucinated_objects\": [\"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of plates, cups, and soda cans.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People at a tablecloth-covered table with ceramic plates, stemless wine glasses, and soda cans, one wearing a hat and glasses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "hat"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of plates, glasses, and cans."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with ceramic plates, stemless wine glasses, and soda cans, one wearing a hat and glasses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"hat\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of plates, glasses, and cans.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People at a tablecloth-covered table with blue plates, clear cups, and soda cans, one with a hairpin and jacket.",
+      "vlm_hint": {
+        "missing_objects": [
+          "sauce",
+          "chopsticks"
+        ],
+        "hallucinated_objects": [
+          "hat",
+          "purse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of sauce and the presence of chopsticks."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with blue plates, clear cups, and soda cans, one with a hairpin and jacket.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"sauce\", \"chopsticks\"],\n  \"hallucinated_objects\": [\"hat\", \"purse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of sauce and the presence of chopsticks.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People at a tablecloth-covered table with blue plates, clear cups, sauce, and soda cans, using chopsticks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "hairpin",
+          "purse"
+        ],
+        "hallucinated_objects": [
+          "soda cans"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects on the table.",
+        "edit_instructions": [
+          "Provide more specific details about the objects on the table, such as the type of cups and plates, and remove the mention of soda cans."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, table, plates, cups, sauce, chopsticks, soda cans, tablecloth, backpack, hat, shirt, jacket, glasses, hairpin, purse, backpack, jacket, hat, shirt, jacket]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People at a tablecloth-covered table with blue plates, clear cups, sauce, and soda cans, using chopsticks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"hairpin\", \"purse\"],\n  \"hallucinated_objects\": [\"soda cans\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects on the table.\",\n  \"edit_instructions\": \"Provide more specific details about the objects on the table, such as the type of cups and plates, and remove the mention of soda cans.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 224807,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000224807.jpg",
+    "final_caption": "People at a tablecloth-covered table with blue plates, clear cups, sauce, and soda cans, using chopsticks.",
+    "total_time_sec": 35.83
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"people\",\n    \"table\",\n    \"plates\",\n    \"cups\",\n    \"sauce\",\n    \"chopsticks\",\n    \"soda cans\",\n    \"tablecloth\",\n    \"backpack\",\n    \"hat\",\n    \"shirt\",\n    \"jacket\",\n    \"glasses\",\n    \"hairpin\",\n    \"purse\",\n    \"backpack\",\n    \"jacket\",\n    \"hat\",\n    \"shirt\",\n    \"jacket\"\n  ]\n}"
+}

@@ -1,0 +1,207 @@
+{
+  "image_id": 352684,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000352684.jpg",
+  "objects": [
+    "man",
+    "tie",
+    "shirt",
+    "pants",
+    "people",
+    "wall",
+    "ceiling",
+    "floor",
+    "suit",
+    "dress",
+    "scarf",
+    "hat",
+    "shoes",
+    "suitcase",
+    "suitcase",
+    "suitcase",
+    "suitcase",
+    "suitcase",
+    "suitcase",
+    "suitcase"
+  ],
+  "template": "We have an image with these objects: ['man', 'tie', 'shirt', 'pants', 'people', 'wall', 'ceiling', 'floor', 'suit', 'dress', 'scarf', 'hat', 'shoes', 'suitcase', 'suitcase', 'suitcase', 'suitcase', 'suitcase', 'suitcase', 'suitcase']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in suit among many suitcases near walls",
+      "vlm_hint": {
+        "missing_objects": [
+          "suitcase"
+        ],
+        "hallucinated_objects": [
+          "suit"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of suitcases.",
+        "edit_instructions": [
+          "Specify the number of suitcases in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit among many suitcases near walls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\"],\n  \"hallucinated_objects\": [\"suit\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of suitcases.\",\n  \"edit_instructions\": \"Specify the number of suitcases in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in shirt and tie surrounded by six suitcases near walls",
+      "vlm_hint": {
+        "missing_objects": [
+          "suitcase"
+        ],
+        "hallucinated_objects": [
+          "suit"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of suitcases.",
+        "edit_instructions": [
+          "Specify the number of suitcases in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and tie surrounded by six suitcases near walls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\"],\n  \"hallucinated_objects\": [\"suit\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of suitcases.\",\n  \"edit_instructions\": \"Specify the number of suitcases in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in shirt and tie with six suitcases near walls",
+      "vlm_hint": {
+        "missing_objects": [
+          "suitcase",
+          "suitcase",
+          "suitcase",
+          "suitcase",
+          "suitcase",
+          "suitcase"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the mention of suitcases."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and tie with six suitcases near walls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the mention of suitcases.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in shirt and tie near walls",
+      "vlm_hint": {
+        "missing_objects": [
+          "suit",
+          "dress",
+          "scarf",
+          "hat",
+          "shoes",
+          "suitcase"
+        ],
+        "hallucinated_objects": [
+          "suit",
+          "dress",
+          "scarf",
+          "hat",
+          "shoes",
+          "suitcase"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of clothing or the context of the scene.",
+        "edit_instructions": [
+          "Provide more specific details about the clothing and the context of the scene."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in shirt and tie near walls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suit\", \"dress\", \"scarf\", \"hat\", \"shoes\", \"suitcase\"],\n  \"hallucinated_objects\": [\"suit\", \"dress\", \"scarf\", \"hat\", \"shoes\", \"suitcase\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of clothing or the context of the scene.\",\n  \"edit_instructions\": \"Provide more specific details about the clothing and the context of the scene.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in checked shirt and tie among many suitcases",
+      "vlm_hint": {
+        "missing_objects": [
+          "suitcase"
+        ],
+        "hallucinated_objects": [
+          "hat"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the suitcase and add a hat."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in checked shirt and tie among many suitcases\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\"],\n  \"hallucinated_objects\": [\"hat\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the suitcase and add a hat.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in suit with tie among many suitcases ceilings and walls visible",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit with tie among many suitcases ceilings and walls visible\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suit"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in suit with tie amidst numerous suitcases and walls",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit with tie amidst numerous suitcases and walls\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suit"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in suit with tie among many suitcases and wall",
+      "vlm_hint": {
+        "missing_objects": [],
+        "hallucinated_objects": [],
+        "genericity_hint": "",
+        "edit_instructions": [],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit with tie among many suitcases and wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suitcase\", \"suit"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in suit with tie and suitcases by the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "suitcases"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the mention of suitcases and add a missing object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit with tie and suitcases by the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcases\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the mention of suitcases and add a missing object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in suit with tie and people by the wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "suitcase"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the number of people or the exact location.",
+        "edit_instructions": [
+          "Add more details to the caption, such as the number of people and their attire."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, tie, shirt, pants, people, wall, ceiling, floor, suit, dress, scarf, hat, shoes, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase, suitcase]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in suit with tie and people by the wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"suitcase\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of people or the exact location.\",\n  \"edit_instructions\": \"Add more details to the caption, such as the number of people and their attire.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 352684,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000352684.jpg",
+    "final_caption": "Man in suit with tie and people by the wall",
+    "total_time_sec": 41.63
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"tie\",\n    \"shirt\",\n    \"pants\",\n    \"people\",\n    \"wall\",\n    \"ceiling\",\n    \"floor\",\n    \"suit\",\n    \"dress\",\n    \"scarf\",\n    \"hat\",\n    \"shoes\",\n    \"suitcase\",\n    \"suitcase\",\n    \"suitcase\",\n    \"suitcase\",\n    \"suitcase\",\n    \"suitcase\",\n    \"suitcase\"\n  ]\n}"
+}

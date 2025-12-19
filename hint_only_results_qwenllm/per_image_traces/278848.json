@@ -1,0 +1,257 @@
+{
+  "image_id": 278848,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000278848.jpg",
+  "objects": [
+    "bus",
+    "umbrella",
+    "sign",
+    "people",
+    "street",
+    "building",
+    "trash can",
+    "car",
+    "tree",
+    "flag",
+    "phone",
+    "hat",
+    "jacket",
+    "umbrella",
+    "umbrella",
+    "umbrella",
+    "umbrella",
+    "umbrella",
+    "umbrella",
+    "umbrella"
+  ],
+  "template": "We have an image with these objects: ['bus', 'umbrella', 'sign', 'people', 'street', 'building', 'trash can', 'car', 'tree', 'flag', 'phone', 'hat', 'jacket', 'umbrella', 'umbrella', 'umbrella', 'umbrella', 'umbrella', 'umbrella', 'umbrella']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Umbrellas line the busy street near buildings and buses.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "car",
+          "tree",
+          "flag",
+          "phone",
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "bus",
+          "sign",
+          "people",
+          "street",
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of bus, the specific buildings, and the actions of the people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Umbrellas line the busy street near buildings and buses.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"car\", \"tree\", \"flag\", \"phone\", \"hat\", \"jacket\"],\n  \"hallucinated_objects\": [\"bus\", \"sign\", \"people\", \"street\", \"building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of bus, the specific buildings, and the actions of the people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Umbrellas dot the street near cars and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "tree"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of trash can, the color of the jacket, and the type of trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Umbrellas dot the street near cars and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"hat\", \"jacket\"],\n  \"hallucinated_objects\": [\"car\", \"tree\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of trash can, the color of the jacket, and the type of trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Umbrellas and people near a trash can on the street.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "tree",
+          "flag",
+          "phone",
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Umbrellas and people near a trash can on the street.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"tree\", \"flag\", \"phone\", \"hat\", \"jacket\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Black and white image of people and umbrellas near a trash can and car on the street with a tree and flag in the background.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "car",
+          "tree",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "umbrellas"
+        ],
+        "genericity_hint": "The image is black and white, but the caption does not mention the color.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and mention the color of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of people and umbrellas near a trash can and car on the street with a tree and flag in the background.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"car\", \"tree\", \"flag\"],\n  \"hallucinated_objects\": [\"people\", \"umbrellas\"],\n  \"genericity_hint\": \"The image is black and white, but the caption does not mention the color.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and mention the color of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Black and white image of a bus near a trash can and car on the street with a tree and flag in the background.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "tree",
+          "flag"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the car, tree, and flag. Add a hat and a jacket."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of a bus near a trash can and car on the street with a tree and flag in the background.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\"],\n  \"hallucinated_objects\": [\"car\", \"tree\", \"flag\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the car, tree, and flag. Add a hat and a jacket.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Black and white image of a bus near a trash can with people and buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "tree",
+          "flag",
+          "phone",
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of a bus near a trash can with people and buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"tree\", \"flag\", \"phone\", \"hat\", \"jacket\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Black and white image of a bus near a trash can with people cars trees and flags.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "tree",
+          "flag"
+        ],
+        "genericity_hint": "The image is black and white.",
+        "edit_instructions": [
+          "Remove the car, tree, and flag. Add a hat and a jacket."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of a bus near a trash can with people cars trees and flags.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\"],\n  \"hallucinated_objects\": [\"car\", \"tree\", \"flag\"],\n  \"genericity_hint\": \"The image is black and white.\",\n  \"edit_instructions\": \"Remove the car, tree, and flag. Add a hat and a jacket.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Black and white image of a bus near a trash can with people and umbrellas.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "tree",
+          "flag",
+          "phone",
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the missing objects and add the hallucinated objects."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of a bus near a trash can with people and umbrellas.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"tree\", \"flag\", \"phone\", \"hat\", \"jacket\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the missing objects and add the hallucinated objects.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Black and white image of a bus near trees and flags with people and numerous umbrellas.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "car",
+          "phone",
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "tree",
+          "flag"
+        ],
+        "genericity_hint": "The image is black and white, but the caption mentions colors.",
+        "edit_instructions": [
+          "Remove the mention of colors and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of a bus near trees and flags with people and numerous umbrellas.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"car\", \"phone\", \"hat\", \"jacket\"],\n  \"hallucinated_objects\": [\"tree\", \"flag\"],\n  \"genericity_hint\": \"The image is black and white, but the caption mentions colors.\",\n  \"edit_instructions\": \"Remove the mention of colors and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Black and white image of a bus near a trash can and cars with people and numerous umbrellas.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "jacket"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "tree",
+          "flag",
+          "phone"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the hallucinated objects and add the missing objects."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, umbrella, sign, people, street, building, trash can, car, tree, flag, phone, hat, jacket, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella, umbrella]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Black and white image of a bus near a trash can and cars with people and numerous umbrellas.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"jacket\"],\n  \"hallucinated_objects\": [\"car\", \"tree\", \"flag\", \"phone\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the hallucinated objects and add the missing objects.\",\n  \"score\": 5\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 278848,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000278848.jpg",
+    "final_caption": "Black and white image of a bus near a trash can and cars with people and numerous umbrellas.",
+    "total_time_sec": 31.93
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bus\",\n    \"umbrella\",\n    \"sign\",\n    \"people\",\n    \"street\",\n    \"building\",\n    \"trash can\",\n    \"car\",\n    \"tree\",\n    \"flag\",\n    \"phone\",\n    \"hat\",\n    \"jacket\",\n    \"umbrella\",\n    \"umbrella\",\n    \"umbrella\",\n    \"umbrella\",\n    \"umbrella\",\n    \"umbrella\",\n    \"umbrella\"\n  ]\n}"
+}

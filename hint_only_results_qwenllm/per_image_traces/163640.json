@@ -1,0 +1,326 @@
+{
+  "image_id": 163640,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000163640.jpg",
+  "objects": [
+    "man",
+    "jacket",
+    "hat",
+    "donut",
+    "sink",
+    "towel",
+    "counter",
+    "tile",
+    "wall",
+    "mirror",
+    "table",
+    "plate",
+    "food",
+    "bowl",
+    "shirt",
+    "jeans",
+    "backpack",
+    "hat",
+    "donut",
+    "sink"
+  ],
+  "template": "We have an image with these objects: ['man', 'jacket', 'hat', 'donut', 'sink', 'towel', 'counter', 'tile', 'wall', 'mirror', 'table', 'plate', 'food', 'bowl', 'shirt', 'jeans', 'backpack', 'hat', 'donut', 'sink']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in jeans shirt by sink with donut and hat",
+      "vlm_hint": {
+        "missing_objects": [
+          "backpack",
+          "towel",
+          "table",
+          "plate"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the backpack, towel, table, and plate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jeans shirt by sink with donut and hat\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"backpack\", \"towel\", \"table\", \"plate\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the backpack, towel, table, and plate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in jeans and shirt by sink with donut, hat, towel, table, and backpack",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "jacket",
+          "mirror",
+          "counter",
+          "tile",
+          "wall",
+          "food",
+          "bowl",
+          "hat",
+          "donut",
+          "sink",
+          "towel",
+          "table",
+          "plate",
+          "shirt",
+          "jeans",
+          "backpack"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jeans and shirt by sink with donut, hat, towel, table, and backpack\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"jacket\", \"mirror\", \"counter\", \"tile\", \"wall\", \"food\", \"bowl\", \"hat\", \"donut\", \"sink\", \"towel\", \"table\", \"plate\", \"shirt\", \"jeans\", \"backpack\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man in jeans and shirt stands by sink with towel, hat, and donut on tiled counter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "jacket",
+          "mirror",
+          "table",
+          "food",
+          "bowl"
+        ],
+        "hallucinated_objects": [
+          "sink",
+          "towel",
+          "hat",
+          "donut"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the man's clothing and the food on the counter."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jeans and shirt stands by sink with towel, hat, and donut on tiled counter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"jacket\", \"mirror\", \"table\", \"food\", \"bowl\"],\n  \"hallucinated_objects\": [\"sink\", \"towel\", \"hat\", \"donut\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the man's clothing and the food on the counter.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in jeans and shirt stands by mirror with jacket, food, and bowl on tiled counter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "sink",
+          "table",
+          "food",
+          "bowl"
+        ],
+        "hallucinated_objects": [
+          "towel",
+          "counter",
+          "mirror",
+          "wall"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the hat, sink, table, food, and bowl."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jeans and shirt stands by mirror with jacket, food, and bowl on tiled counter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"sink\", \"table\", \"food\", \"bowl\"],\n  \"hallucinated_objects\": [\"towel\", \"counter\", \"mirror\", \"wall\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the hat, sink, table, food, and bowl.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man in jeans and shirt stands by sink with hat, table laden with food and bowl.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "jacket",
+          "hat",
+          "donut",
+          "sink",
+          "towel",
+          "counter",
+          "tile",
+          "wall",
+          "mirror",
+          "table",
+          "plate",
+          "food",
+          "bowl",
+          "shirt",
+          "jeans",
+          "backpack",
+          "hat",
+          "donut",
+          "sink"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, his jacket, the hat, the donut, the sink, the towel, the counter, the tile, the wall, the mirror, the table, the plate, the food, the bowl, the shirt, the jeans, the backpack, and the hat again."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jeans and shirt stands by sink with hat, table laden with food and bowl.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"jacket\", \"hat\", \"donut\", \"sink\", \"towel\", \"counter\", \"tile\", \"wall\", \"mirror\", \"table\", \"plate\", \"food\", \"bowl\", \"shirt\", \"jeans\", \"backpack\", \"hat\", \"donut\", \"sink\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, his jacket, the hat, the donut, the sink, the towel, the counter, the tile, the wall, the mirror, the table, the plate, the food, the bowl, the shirt, the jeans, the backpack, and the hat again.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in jacket and jeans stands by sink with hat, donut on table near towel and tiled counter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "donut",
+          "sink",
+          "towel",
+          "counter",
+          "tile",
+          "wall",
+          "mirror",
+          "table",
+          "plate",
+          "food",
+          "bowl",
+          "shirt",
+          "jeans",
+          "backpack",
+          "hat",
+          "donut",
+          "sink"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's jacket, jeans, and the tiled counter."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket and jeans stands by sink with hat, donut on table near towel and tiled counter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"donut\", \"sink\", \"towel\", \"counter\", \"tile\", \"wall\", \"mirror\", \"table\", \"plate\", \"food\", \"bowl\", \"shirt\", \"jeans\", \"backpack\", \"hat\", \"donut\", \"sink\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's jacket, jeans, and the tiled counter.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man in jacket and jeans stands by sink with hat, donut on table near towel and tiled counter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "donut",
+          "sink",
+          "towel",
+          "counter",
+          "tile",
+          "wall",
+          "mirror",
+          "table",
+          "plate",
+          "food",
+          "bowl",
+          "shirt",
+          "jeans",
+          "backpack",
+          "hat",
+          "donut",
+          "sink"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's jacket, jeans, and the tiled counter."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket and jeans stands by sink with hat, donut on table near towel and tiled counter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"donut\", \"sink\", \"towel\", \"counter\", \"tile\", \"wall\", \"mirror\", \"table\", \"plate\", \"food\", \"bowl\", \"shirt\", \"jeans\", \"backpack\", \"hat\", \"donut\", \"sink\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's jacket, jeans, and the tiled counter.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in jacket and jeans stands by sink with hat, donut on table near towel and tiled counter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "donut",
+          "sink",
+          "towel",
+          "counter",
+          "tile",
+          "wall",
+          "mirror",
+          "table",
+          "plate",
+          "food",
+          "bowl",
+          "shirt",
+          "jeans",
+          "backpack",
+          "hat",
+          "donut",
+          "sink"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the man's jacket, jeans, and the tiled counter."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket and jeans stands by sink with hat, donut on table near towel and tiled counter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"donut\", \"sink\", \"towel\", \"counter\", \"tile\", \"wall\", \"mirror\", \"table\", \"plate\", \"food\", \"bowl\", \"shirt\", \"jeans\", \"backpack\", \"hat\", \"donut\", \"sink\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the man's jacket, jeans, and the tiled counter.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man in jacket and jeans stands by sink with hat, donut on table near tiled counter.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "donut",
+          "sink",
+          "table",
+          "food",
+          "bowl"
+        ],
+        "hallucinated_objects": [
+          "towel",
+          "counter",
+          "wall",
+          "mirror",
+          "plate",
+          "shirt",
+          "backpack"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, jacket, jeans, tiled counter, and sink."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket and jeans stands by sink with hat, donut on table near tiled counter.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"donut\", \"sink\", \"table\", \"food\", \"bowl\"],\n  \"hallucinated_objects\": [\"towel\", \"counter\", \"wall\", \"mirror\", \"plate\", \"shirt\", \"backpack\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, jacket, jeans, tiled counter, and sink.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in jacket and jeans stands near sink by tiled counter with donut on table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hat",
+          "towel",
+          "sink",
+          "table",
+          "food",
+          "bowl"
+        ],
+        "hallucinated_objects": [
+          "mirror"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of food on the table and the exact location of the sink."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, jacket, hat, donut, sink, towel, counter, tile, wall, mirror, table, plate, food, bowl, shirt, jeans, backpack, hat, donut, sink]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket and jeans stands near sink by tiled counter with donut on table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hat\", \"towel\", \"sink\", \"table\", \"food\", \"bowl\"],\n  \"hallucinated_objects\": [\"mirror\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of food on the table and the exact location of the sink.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 163640,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000163640.jpg",
+    "final_caption": "Man in jacket and jeans stands near sink by tiled counter with donut on table.",
+    "total_time_sec": 42.35
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"jacket\",\n    \"hat\",\n    \"donut\",\n    \"sink\",\n    \"towel\",\n    \"counter\",\n    \"tile\",\n    \"wall\",\n    \"mirror\",\n    \"table\",\n    \"plate\",\n    \"food\",\n    \"bowl\",\n    \"shirt\",\n    \"jeans\",\n    \"backpack\",\n    \"hat\",\n    \"donut\",\n    \"sink\"\n  ]\n}"
+}

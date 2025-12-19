@@ -1,0 +1,201 @@
+{
+  "image_id": 366611,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000366611.jpg",
+  "objects": [
+    "dog",
+    "soccer ball",
+    "grass",
+    "dirt",
+    "leash"
+  ],
+  "template": "We have an image with these objects: ['dog', 'soccer ball', 'grass', 'dirt', 'leash']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Dog plays with soccer ball on grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic.",
+        "edit_instructions": [
+          "Remove the 'dirt' and 'leash' objects and make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog plays with soccer ball on grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic.\",\n  \"edit_instructions\": \"Remove the 'dirt' and 'leash' objects and make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Dog plays soccer ball on green grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the grass or the presence of a leash.",
+        "edit_instructions": [
+          "Specify the color of the grass and include the leash in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog plays soccer ball on green grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the grass or the presence of a leash.\",\n  \"edit_instructions\": \"Specify the color of the grass and include the leash in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Brown-leashed dog plays with soccer ball on green grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown-leashed dog plays with soccer ball on green grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Brown dog plays with soccer ball on green grass holding leash",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the mention of the leash and add more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog plays with soccer ball on green grass holding leash\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the mention of the leash and add more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Brown dog chases soccer ball across lush green grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the color of the dog or the ball.",
+        "edit_instructions": [
+          "Add more specific details to the caption, such as the color of the dog and the ball."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog chases soccer ball across lush green grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the color of the dog or the ball.\",\n  \"edit_instructions\": \"Add more specific details to the caption, such as the color of the dog and the ball.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Brown dog on leash chases white soccer ball across grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the mention of the leash and add a more specific description of the ground, such as 'gravel path' or 'dirt path'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog on leash chases white soccer ball across grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the mention of the leash and add a more specific description of the ground, such as 'gravel path' or 'dirt path'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown dog chases white soccer ball across gravel path and grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "gravel path"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the mention of the gravel path and include the leash in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog chases white soccer ball across gravel path and grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"gravel path\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the mention of the gravel path and include the leash in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Brown dog pulls on leash as it chases soccer ball across grass and dirt",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the mention of the leash and provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog pulls on leash as it chases soccer ball across grass and dirt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the mention of the leash and provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Brown dog chases soccer ball across patchy grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the leash on the dog and the type of grass."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog chases soccer ball across patchy grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the leash on the dog and the type of grass.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Brown dog on leash chases soccer ball across uneven grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "leash"
+        ],
+        "hallucinated_objects": [
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the mention of the leash and add more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [dog, soccer ball, grass, dirt, leash]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown dog on leash chases soccer ball across uneven grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leash\"],\n  \"hallucinated_objects\": [\"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the mention of the leash and add more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 366611,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000366611.jpg",
+    "final_caption": "Brown dog on leash chases soccer ball across uneven grass",
+    "total_time_sec": 26.75
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"dog\",\n    \"soccer ball\",\n    \"grass\",\n    \"dirt\",\n    \"leash\"\n  ]\n}"
+}

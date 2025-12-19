@@ -1,0 +1,235 @@
+{
+  "image_id": 537153,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000537153.jpg",
+  "objects": [
+    "ocean",
+    "bench",
+    "grass",
+    "clouds",
+    "water",
+    "island",
+    "sky",
+    "rocks",
+    "horizon",
+    "waves",
+    "trees",
+    "mountains",
+    "seascape",
+    "landscape",
+    "nature",
+    "oceanfront",
+    "coastline",
+    "scenery",
+    "outdoors",
+    "seascape"
+  ],
+  "template": "We have an image with these objects: ['ocean', 'bench', 'grass', 'clouds', 'water', 'island', 'sky', 'rocks', 'horizon', 'waves', 'trees', 'mountains', 'seascape', 'landscape', 'nature', 'oceanfront', 'coastline', 'scenery', 'outdoors', 'seascape']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Oceanviews with islands and rocky shores under a cloudy sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "islands",
+          "rocks"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees and mountains, and the absence of islands and rocks."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Oceanviews with islands and rocky shores under a cloudy sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"mountains\"],\n  \"hallucinated_objects\": [\"islands\", \"rocks\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees and mountains, and the absence of islands and rocks.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Waves crash against benches on grassy coast under cloudy sky with mountains",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "island",
+          "horizon",
+          "oceanfront",
+          "coastline"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees, rocks, and a specific type of bench."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash against benches on grassy coast under cloudy sky with mountains\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"rocks\"],\n  \"hallucinated_objects\": [\"island\", \"horizon\", \"oceanfront\", \"coastline\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees, rocks, and a specific type of bench.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Waves crash against wooden benches under cloudy sky with trees and rocky shore",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "rocks"
+        ],
+        "hallucinated_objects": [
+          "wooden benches"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the mention of wooden benches and add trees and rocks."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash against wooden benches under cloudy sky with trees and rocky shore\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"rocks\"],\n  \"hallucinated_objects\": [\"wooden benches\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the mention of wooden benches and add trees and rocks.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Waves crash against rocks under cloudy sky with trees and islands visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "islands"
+        ],
+        "hallucinated_objects": [
+          "oceanfront",
+          "coastline"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of trees and islands, and remove generic terms like 'oceanfront' and 'coastline'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash against rocks under cloudy sky with trees and islands visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"islands\"],\n  \"hallucinated_objects\": [\"oceanfront\", \"coastline\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of trees and islands, and remove generic terms like 'oceanfront' and 'coastline'.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Waves crash against rocks under cloudy sky trees and islands visible",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "islands"
+        ],
+        "hallucinated_objects": [
+          "oceanfront",
+          "coastline"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees and islands, and clarify the location as an oceanfront or coastline."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash against rocks under cloudy sky trees and islands visible\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"islands\"],\n  \"hallucinated_objects\": [\"oceanfront\", \"coastline\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees and islands, and clarify the location as an oceanfront or coastline.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Waves crash against rocky shore under cloudy sky with trees and islands visible.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "islands"
+        ],
+        "hallucinated_objects": [
+          "oceanfront",
+          "coastline"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees and islands, and clarify the location as an oceanfront or coastline."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash against rocky shore under cloudy sky with trees and islands visible.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"islands\"],\n  \"hallucinated_objects\": [\"oceanfront\", \"coastline\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees and islands, and clarify the location as an oceanfront or coastline.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Waves crash against rocky shore under cloudy sky with trees and islands nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "islands"
+        ],
+        "hallucinated_objects": [
+          "oceanfront",
+          "coastline"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as trees and islands, and remove generic terms like 'oceanfront' and 'coastline'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash against rocky shore under cloudy sky with trees and islands nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"islands\"],\n  \"hallucinated_objects\": [\"oceanfront\", \"coastline\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as trees and islands, and remove generic terms like 'oceanfront' and 'coastline'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Waves crash on rocky shore under cloudy sky with tall trees and distant islands.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "distant islands"
+        ],
+        "hallucinated_objects": [
+          "tall trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash on rocky shore under cloudy sky with tall trees and distant islands.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"distant islands\"],\n  \"hallucinated_objects\": [\"tall trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Waves crash on rocky shore under cloudy sky with distant islands.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "islands"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the landscape.",
+        "edit_instructions": [
+          "Add more specific details about the landscape, such as trees and mountains, and remove the mention of islands."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash on rocky shore under cloudy sky with distant islands.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"mountains\"],\n  \"hallucinated_objects\": [\"islands\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the landscape.\",\n  \"edit_instructions\": \"Add more specific details about the landscape, such as trees and mountains, and remove the mention of islands.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Waves crash on rocky shore under cloudy sky with trees and mountains.",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "mountains"
+        ],
+        "hallucinated_objects": [
+          "oceanfront",
+          "coastline"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of trees and mountains."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [ocean, bench, grass, clouds, water, island, sky, rocks, horizon, waves, trees, mountains, seascape, landscape, nature, oceanfront, coastline, scenery, outdoors, seascape]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Waves crash on rocky shore under cloudy sky with trees and mountains.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"mountains\"],\n  \"hallucinated_objects\": [\"oceanfront\", \"coastline\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of trees and mountains.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 537153,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000537153.jpg",
+    "final_caption": "Waves crash on rocky shore under cloudy sky with trees and mountains.",
+    "total_time_sec": 33.05
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"ocean\",\n    \"bench\",\n    \"grass\",\n    \"clouds\",\n    \"water\",\n    \"island\",\n    \"sky\",\n    \"rocks\",\n    \"horizon\",\n    \"waves\",\n    \"trees\",\n    \"mountains\",\n    \"seascape\",\n    \"landscape\",\n    \"nature\",\n    \"oceanfront\",\n    \"coastline\",\n    \"scenery\",\n    \"outdoors\",\n    \"seascape\"\n  ]\n}"
+}

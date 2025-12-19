@@ -1,0 +1,261 @@
+{
+  "image_id": 203488,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000203488.jpg",
+  "objects": [
+    "parking meter",
+    "bench",
+    "tree",
+    "sign",
+    "storefront",
+    "car",
+    "street",
+    "building",
+    "window",
+    "door",
+    "parking meter",
+    "bench",
+    "tree",
+    "sign",
+    "storefront",
+    "car",
+    "street",
+    "building",
+    "window",
+    "door"
+  ],
+  "template": "We have an image with these objects: ['parking meter', 'bench', 'tree', 'sign', 'storefront', 'car', 'street', 'building', 'window', 'door', 'parking meter', 'bench', 'tree', 'sign', 'storefront', 'car', 'street', 'building', 'window', 'door']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "City street with cars buildings and trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a street scene with a parking meter, bench, tree, and sign.",
+        "edit_instructions": [
+          "Remove the missing objects and ensure the caption is specific to the image content."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: City street with cars buildings and trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a street scene with a parking meter, bench, tree, and sign.\",\n  \"edit_instructions\": \"Remove the missing objects and ensure the caption is specific to the image content.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "City street with cars, buildings, windows, and doors near a parking meter and tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a city street with cars, buildings, windows, and doors near a parking meter and tree.",
+        "edit_instructions": [
+          "Remove the missing objects and keep the hallucinated objects."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: City street with cars, buildings, windows, and doors near a parking meter and tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a city street with cars, buildings, windows, and doors near a parking meter and tree.\",\n  \"edit_instructions\": \"Remove the missing objects and keep the hallucinated objects.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "City street cars near parking meter and tree with buildings and windows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of car, the exact location of the building and window, and the specific type of tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: City street cars near parking meter and tree with buildings and windows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of car, the exact location of the building and window, and the specific type of tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Modern cars near a parking meter and tall tree on busy city street with building and large window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "modern cars"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of car, the location of the building, and the specific details of the window and door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Modern cars near a parking meter and tall tree on busy city street with building and large window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [\"modern cars\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of car, the location of the building, and the specific details of the window and door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Small cars next to a parking meter under a tall tree on busy street with large windows in nearby building.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "small cars"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact location of the car, the type of building, and the presence of windows and doors."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Small cars next to a parking meter under a tall tree on busy street with large windows in nearby building.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [\"small cars\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact location of the car, the type of building, and the presence of windows and doors.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "A car parked near a meter under a tree on a street with a building having large windows and doors.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the car, the type of building, and the specific location of the window and door."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A car parked near a meter under a tree on a street with a building having large windows and doors.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the car, the type of building, and the specific location of the window and door.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "A red car parked near a meter under a tree on a busy street with a tall building and large windows and a door nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "parking meter",
+          "bench",
+          "tree",
+          "sign",
+          "storefront"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location or objects present in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the exact location and objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A red car parked near a meter under a tree on a busy street with a tall building and large windows and a door nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [\"parking meter\", \"bench\", \"tree\", \"sign\", \"storefront\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location or objects present in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the exact location and objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "A red car parked near a meter on a busy street with a tall building and large windows nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "parking meter",
+          "bench",
+          "tree",
+          "sign",
+          "storefront"
+        ],
+        "genericity_hint": "The image is not specific enough to be a busy street with a tall building and large windows nearby.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A red car parked near a meter on a busy street with a tall building and large windows nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [\"parking meter\", \"bench\", \"tree\", \"sign\", \"storefront\"],\n  \"genericity_hint\": \"The image is not specific enough to be a busy street with a tall building and large windows nearby.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "A car parked near a meter on a street with buildings and windows.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [
+          "parking meter",
+          "bench",
+          "tree",
+          "sign",
+          "storefront"
+        ],
+        "genericity_hint": "The image contains a car, but the caption does not mention it.",
+        "edit_instructions": [
+          "Remove the car from the caption and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A car parked near a meter on a street with buildings and windows.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [\"parking meter\", \"bench\", \"tree\", \"sign\", \"storefront\"],\n  \"genericity_hint\": \"The image contains a car, but the caption does not mention it.\",\n  \"edit_instructions\": \"Remove the car from the caption and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "A street with buildings and windows cars park nearby.",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meter",
+          "bench",
+          "tree",
+          "sign",
+          "storefront",
+          "car",
+          "street",
+          "building",
+          "window",
+          "door"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a parking meter, a bench, a tree, a sign, a storefront, a car, a street, a building, a window, and a door.",
+        "edit_instructions": [
+          "Remove the missing objects from the candidate caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [parking meter, bench, tree, sign, storefront, car, street, building, window, door, parking meter, bench, tree, sign, storefront, car, street, building, window, door]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A street with buildings and windows cars park nearby.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meter\", \"bench\", \"tree\", \"sign\", \"storefront\", \"car\", \"street\", \"building\", \"window\", \"door\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a parking meter, a bench, a tree, a sign, a storefront, a car, a street, a building, a window, and a door.\",\n  \"edit_instructions\": \"Remove the missing objects from the candidate caption.\",\n  \"score\": 0\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 203488,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000203488.jpg",
+    "final_caption": "A street with buildings and windows cars park nearby.",
+    "total_time_sec": 35.91
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"parking meter\",\n    \"bench\",\n    \"tree\",\n    \"sign\",\n    \"storefront\",\n    \"car\",\n    \"street\",\n    \"building\",\n    \"window\",\n    \"door\",\n    \"parking meter\",\n    \"bench\",\n    \"tree\",\n    \"sign\",\n    \"storefront\",\n    \"car\",\n    \"street\",\n    \"building\",\n    \"window\",\n    \"door\"\n  ]\n}"
+}

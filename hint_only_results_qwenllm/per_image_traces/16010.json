@@ -1,0 +1,233 @@
+{
+  "image_id": 16010,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000016010.jpg",
+  "objects": [
+    "rhinoceros",
+    "zebra",
+    "trees",
+    "rocks",
+    "water",
+    "grass",
+    "wire",
+    "branch",
+    "pole",
+    "bush",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra",
+    "zebra"
+  ],
+  "template": "We have an image with these objects: ['rhinoceros', 'zebra', 'trees', 'rocks', 'water', 'grass', 'wire', 'branch', 'pole', 'bush', 'zebra', 'zebra', 'zebra', 'zebra', 'zebra', 'zebra', 'zebra', 'zebra', 'zebra', 'zebra']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Zebras by water under trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "rhinoceros",
+          "water",
+          "branch",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "rocks",
+          "bush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the presence of rhinoceroses, water, and a branch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras by water under trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rhinoceros\", \"water\", \"branch\", \"pole\"],\n  \"hallucinated_objects\": [\"trees\", \"rocks\", \"bush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the presence of rhinoceroses, water, and a branch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Rhinoceros and zebras by water under a branch",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "branch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image and remove the branch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rhinoceros and zebras by water under a branch\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"branch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image and remove the branch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Rhinoceros and zebras by water under trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "wire",
+          "pole",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "water"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the presence of a wire, a pole, and a bush."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rhinoceros and zebras by water under trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"wire\", \"pole\", \"bush\"],\n  \"hallucinated_objects\": [\"water\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the presence of a wire, a pole, and a bush.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Rhinoceros and zebras near wire beside trees with a pole and bush",
+      "vlm_hint": {
+        "missing_objects": [
+          "water",
+          "branch",
+          "pole",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "wire"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rhinoceros and zebras near wire beside trees with a pole and bush\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\", \"branch\", \"pole\", \"bush\"],\n  \"hallucinated_objects\": [\"wire\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Rhinoceros and zebras by water under trees with branches and poles",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "bush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add more specific details about the environment, such as the presence of water and the type of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rhinoceros and zebras by water under trees with branches and poles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"bush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add more specific details about the environment, such as the presence of water and the type of trees.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Rhinoceros and zebras by watering hole under acacia trees with branches overhead",
+      "vlm_hint": {
+        "missing_objects": [
+          "watering hole",
+          "acacia trees",
+          "branches overhead"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment and the animals' behavior.",
+        "edit_instructions": [
+          "Provide more specific details about the environment and the animals' behavior."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rhinoceros and zebras by watering hole under acacia trees with branches overhead\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"watering hole\", \"acacia trees\", \"branches overhead\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment and the animals' behavior.\",\n  \"edit_instructions\": \"Provide more specific details about the environment and the animals' behavior.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Zebras gather near water beside rocky hills under towering acacias",
+      "vlm_hint": {
+        "missing_objects": [
+          "water",
+          "rocks",
+          "branch",
+          "pole",
+          "bush"
+        ],
+        "hallucinated_objects": [
+          "zebra"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the presence of water, rocks, and a branch."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras gather near water beside rocky hills under towering acacias\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\", \"rocks\", \"branch\", \"pole\", \"bush\"],\n  \"hallucinated_objects\": [\"zebra\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the presence of water, rocks, and a branch.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Zebras gather by water under tall trees near rocky hills and a branch.",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "pole",
+          "bush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as the presence of water and the type of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras gather by water under tall trees near rocky hills and a branch.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"pole\", \"bush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as the presence of water and the type of trees.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Zebras gather by water under tall trees near rocky hills and branches.",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "pole",
+          "bush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as the presence of water and the type of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras gather by water under tall trees near rocky hills and branches.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"pole\", \"bush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as the presence of water and the type of trees.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Zebras gather by water under tall trees near rocky hills and branches.",
+      "vlm_hint": {
+        "missing_objects": [
+          "water"
+        ],
+        "hallucinated_objects": [
+          "pole",
+          "bush"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the environment.",
+        "edit_instructions": [
+          "Add specific details about the environment, such as the presence of water and the type of trees."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [rhinoceros, zebra, trees, rocks, water, grass, wire, branch, pole, bush, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra, zebra]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Zebras gather by water under tall trees near rocky hills and branches.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"water\"],\n  \"hallucinated_objects\": [\"pole\", \"bush\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the environment.\",\n  \"edit_instructions\": \"Add specific details about the environment, such as the presence of water and the type of trees.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 16010,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000016010.jpg",
+    "final_caption": "Zebras gather by water under tall trees near rocky hills and branches.",
+    "total_time_sec": 30.68
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"rhinoceros\",\n    \"zebra\",\n    \"trees\",\n    \"rocks\",\n    \"water\",\n    \"grass\",\n    \"wire\",\n    \"branch\",\n    \"pole\",\n    \"bush\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\",\n    \"zebra\"\n  ]\n}"
+}

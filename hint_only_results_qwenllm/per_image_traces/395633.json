@@ -1,0 +1,247 @@
+{
+  "image_id": 395633,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000395633.jpg",
+  "objects": [
+    "boat",
+    "water",
+    "cityscape",
+    "flag",
+    "ladder",
+    "rope",
+    "hull",
+    "tire",
+    "deck",
+    "tower",
+    "building",
+    "sky",
+    "ocean",
+    "city",
+    "boat",
+    "water",
+    "cityscape",
+    "flag",
+    "ladder",
+    "rope"
+  ],
+  "template": "We have an image with these objects: ['boat', 'water', 'cityscape', 'flag', 'ladder', 'rope', 'hull', 'tire', 'deck', 'tower', 'building', 'sky', 'ocean', 'city', 'boat', 'water', 'cityscape', 'flag', 'ladder', 'rope']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cityscape reflected in calm water with boats and flags.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire",
+          "deck",
+          "tower"
+        ],
+        "hallucinated_objects": [
+          "flag",
+          "ladder",
+          "rope"
+        ],
+        "genericity_hint": "The image is specific to a boat and water, but the caption is too generic.",
+        "edit_instructions": [
+          "The caption should be more specific to the boat and water, and should not include objects that are not present in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cityscape reflected in calm water with boats and flags.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\", \"deck\", \"tower\"],\n  \"hallucinated_objects\": [\"flag\", \"ladder\", \"rope\"],\n  \"genericity_hint\": \"The image is specific to a boat and water, but the caption is too generic.\",\n  \"edit_instructions\": \"The caption should be more specific to the boat and water, and should not include objects that are not present in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boat on water with tire and deck reflecting cityscape.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire",
+          "deck"
+        ],
+        "hallucinated_objects": [
+          "flag",
+          "ladder",
+          "rope"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tire and deck, and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boat on water with tire and deck reflecting cityscape.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\", \"deck\"],\n  \"hallucinated_objects\": [\"flag\", \"ladder\", \"rope\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tire and deck, and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boat on water with tire and deck reflecting cityscape and buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire",
+          "deck"
+        ],
+        "hallucinated_objects": [
+          "flag",
+          "ladder",
+          "rope"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of boat, the presence of a tire and deck, and the reflection of the cityscape and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boat on water with tire and deck reflecting cityscape and buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\", \"deck\"],\n  \"hallucinated_objects\": [\"flag\", \"ladder\", \"rope\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of boat, the presence of a tire and deck, and the reflection of the cityscape and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Rowboat on water with tire and deck reflecting cityscape and tall buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "tower",
+          "building",
+          "cityscape"
+        ],
+        "hallucinated_objects": [
+          "tire",
+          "deck"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the presence of a flag, tower, and buildings in the cityscape."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rowboat on water with tire and deck reflecting cityscape and tall buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"tower\", \"building\", \"cityscape\"],\n  \"hallucinated_objects\": [\"tire\", \"deck\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the presence of a flag, tower, and buildings in the cityscape.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Rowboat on water with flag reflecting cityscape tall buildings and tower.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire",
+          "deck",
+          "tower"
+        ],
+        "hallucinated_objects": [
+          "flag"
+        ],
+        "genericity_hint": "The image is not generic.",
+        "edit_instructions": [
+          "Remove the tire, deck, and tower. Remove the flag."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rowboat on water with flag reflecting cityscape tall buildings and tower.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\", \"deck\", \"tower\"],\n  \"hallucinated_objects\": [\"flag\"],\n  \"genericity_hint\": \"The image is not generic.\",\n  \"edit_instructions\": \"Remove the tire, deck, and tower. Remove the flag.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Rowboat on water near cityscape and buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "flag",
+          "ladder",
+          "rope",
+          "tire",
+          "deck",
+          "tower",
+          "building",
+          "city",
+          "boat",
+          "water",
+          "cityscape"
+        ],
+        "hallucinated_objects": [
+          "hull"
+        ],
+        "genericity_hint": "The image is specific to a tugboat, not a rowboat.",
+        "edit_instructions": [
+          "Remove the objects that are not present in the image and add the objects that are present in the image."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rowboat on water near cityscape and buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"flag\", \"ladder\", \"rope\", \"tire\", \"deck\", \"tower\", \"building\", \"city\", \"boat\", \"water\", \"cityscape\"],\n  \"hallucinated_objects\": [\"hull\"],\n  \"genericity_hint\": \"The image is specific to a tugboat, not a rowboat.\",\n  \"edit_instructions\": \"Remove the objects that are not present in the image and add the objects that are present in the image.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tugboat alongside water near cityscape and flag.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire",
+          "deck",
+          "tower"
+        ],
+        "hallucinated_objects": [
+          "flag",
+          "ladder",
+          "rope"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of boat, the presence of a deck, and the absence of a tower."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tugboat alongside water near cityscape and flag.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\", \"deck\", \"tower\"],\n  \"hallucinated_objects\": [\"flag\", \"ladder\", \"rope\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of boat, the presence of a deck, and the absence of a tower.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Tugboat on water near cityscape and deck.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire",
+          "tower"
+        ],
+        "hallucinated_objects": [
+          "deck"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the boat and its surroundings.",
+        "edit_instructions": [
+          "Provide more specific details about the boat, its features, and its surroundings."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tugboat on water near cityscape and deck.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\", \"tower\"],\n  \"hallucinated_objects\": [\"deck\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the boat and its surroundings.\",\n  \"edit_instructions\": \"Provide more specific details about the boat, its features, and its surroundings.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tugboat with tire on hull near cityscape and tower.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire"
+        ],
+        "hallucinated_objects": [
+          "tower"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the tire and removes the tower."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tugboat with tire on hull near cityscape and tower.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\"],\n  \"hallucinated_objects\": [\"tower\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the tire and removes the tower.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tugboat with tire on hull near cityscape and flag.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tire"
+        ],
+        "hallucinated_objects": [
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the tire and flag from the caption and provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, cityscape, flag, ladder, rope, hull, tire, deck, tower, building, sky, ocean, city, boat, water, cityscape, flag, ladder, rope]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tugboat with tire on hull near cityscape and flag.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tire\"],\n  \"hallucinated_objects\": [\"flag\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the tire and flag from the caption and provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 395633,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000395633.jpg",
+    "final_caption": "Tugboat with tire on hull near cityscape and flag.",
+    "total_time_sec": 32.2
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"boat\",\n    \"water\",\n    \"cityscape\",\n    \"flag\",\n    \"ladder\",\n    \"rope\",\n    \"hull\",\n    \"tire\",\n    \"deck\",\n    \"tower\",\n    \"building\",\n    \"sky\",\n    \"ocean\",\n    \"city\",\n    \"boat\",\n    \"water\",\n    \"cityscape\",\n    \"flag\",\n    \"ladder\",\n    \"rope\"\n  ]\n}"
+}

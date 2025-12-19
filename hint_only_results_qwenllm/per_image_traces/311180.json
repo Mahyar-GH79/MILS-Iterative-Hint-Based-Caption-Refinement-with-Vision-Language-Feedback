@@ -1,0 +1,214 @@
+{
+  "image_id": 311180,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000311180.jpg",
+  "objects": [
+    "scissors",
+    "hand",
+    "grass",
+    "leaves",
+    "dirt",
+    "concrete"
+  ],
+  "template": "We have an image with these objects: ['scissors', 'hand', 'grass', 'leaves', 'dirt', 'concrete']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Hand holds scissors among grass leaves dirt on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "scissors"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "leaves",
+          "dirt",
+          "concrete"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds scissors among grass leaves dirt on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"scissors\"],\n  \"hallucinated_objects\": [\"grass\", \"leaves\", \"dirt\", \"concrete\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Hand holds scissors on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "leaves",
+          "dirt"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too general and does not specify the location or the condition of the hand and scissors.",
+        "edit_instructions": [
+          "Add more specific details about the location and condition of the hand and scissors."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds scissors on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"leaves\", \"dirt\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too general and does not specify the location or the condition of the hand and scissors.\",\n  \"edit_instructions\": \"Add more specific details about the location and condition of the hand and scissors.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Hand grips scissors among grass and dirt on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "concrete"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand grips scissors among grass and dirt on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\"],\n  \"hallucinated_objects\": [\"concrete\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Hand holds scissors amidst grass and leaves on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "dirt"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "leaves"
+        ],
+        "genericity_hint": "Concrete is not mentioned in the candidate caption.",
+        "edit_instructions": [
+          "Remove grass and leaves, and mention concrete."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds scissors amidst grass and leaves on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dirt\"],\n  \"hallucinated_objects\": [\"grass\", \"leaves\"],\n  \"genericity_hint\": \"Concrete is not mentioned in the candidate caption.\",\n  \"edit_instructions\": \"Remove grass and leaves, and mention concrete.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Hand holds scissors on concrete dirt",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "leaves"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and positions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds scissors on concrete dirt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"leaves\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and positions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Hand grips scissors against green grass and brown dirt on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "dirt",
+          "concrete"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand grips scissors against green grass and brown dirt on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\"],\n  \"hallucinated_objects\": [\"grass\", \"dirt\", \"concrete\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Hand grips scissors amidst fallen leaves on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "leaves",
+          "dirt"
+        ],
+        "hallucinated_objects": [
+          "concrete"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the grass, leaves, and dirt in the background, and clarify that the concrete is not part of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand grips scissors amidst fallen leaves on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"leaves\", \"dirt\"],\n  \"hallucinated_objects\": [\"concrete\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the grass, leaves, and dirt in the background, and clarify that the concrete is not part of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Hand grips scissors among leaves on grassy concrete overlooks dirt",
+      "vlm_hint": {
+        "missing_objects": [
+          "scissors"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "leaves",
+          "dirt",
+          "concrete"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Provide a more specific caption that focuses on the main objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand grips scissors among leaves on grassy concrete overlooks dirt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"scissors\"],\n  \"hallucinated_objects\": [\"grass\", \"leaves\", \"dirt\", \"concrete\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Provide a more specific caption that focuses on the main objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Hand holds scissors on concrete near dirt",
+      "vlm_hint": {
+        "missing_objects": [
+          "grass",
+          "leaves"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their colors and positions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand holds scissors on concrete near dirt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"grass\", \"leaves\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their colors and positions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Hand grips scissors over green grass near brown leaves on concrete",
+      "vlm_hint": {
+        "missing_objects": [
+          "scissors"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "leaves",
+          "dirt",
+          "concrete"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specificity.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [scissors, hand, grass, leaves, dirt, concrete]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Hand grips scissors over green grass near brown leaves on concrete\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"scissors\"],\n  \"hallucinated_objects\": [\"grass\", \"leaves\", \"dirt\", \"concrete\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specificity.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 311180,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000311180.jpg",
+    "final_caption": "Hand grips scissors over green grass near brown leaves on concrete",
+    "total_time_sec": 25.84
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"scissors\",\n    \"hand\",\n    \"grass\",\n    \"leaves\",\n    \"dirt\",\n    \"concrete\"\n  ]\n}"
+}

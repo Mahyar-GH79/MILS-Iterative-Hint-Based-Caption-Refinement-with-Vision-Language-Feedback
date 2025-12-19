@@ -1,0 +1,245 @@
+{
+  "image_id": 508602,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000508602.jpg",
+  "objects": [
+    "bird",
+    "car",
+    "roof",
+    "trees",
+    "hedge",
+    "building",
+    "sky",
+    "reflection",
+    "branch",
+    "leaves",
+    "pole",
+    "roof",
+    "car",
+    "roof",
+    "car",
+    "roof",
+    "car",
+    "roof",
+    "car",
+    "roof"
+  ],
+  "template": "We have an image with these objects: ['bird', 'car', 'roof', 'trees', 'hedge', 'building', 'sky', 'reflection', 'branch', 'leaves', 'pole', 'roof', 'car', 'roof', 'car', 'roof', 'car', 'roof', 'car', 'roof']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Roofs and cars under a sky with trees and birds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "hedge",
+          "building",
+          "reflection",
+          "branch",
+          "leaves",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "birds"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Roofs and cars under a sky with trees and birds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hedge\", \"building\", \"reflection\", \"branch\", \"leaves\", \"pole\"],\n  \"hallucinated_objects\": [\"trees\", \"birds\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Roofs cars reflection branch under sky building",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird",
+          "trees",
+          "hedge",
+          "pole"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the bird, trees, hedge, and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Roofs cars reflection branch under sky building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\", \"trees\", \"hedge\", \"pole\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the bird, trees, hedge, and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Birds cars roofs under blue sky with trees hedge poles",
+      "vlm_hint": {
+        "missing_objects": [
+          "reflection",
+          "branch",
+          "leaves"
+        ],
+        "hallucinated_objects": [
+          "blue sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the reflection on the car, the branch and leaves on the trees, and the blue sky."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Birds cars roofs under blue sky with trees hedge poles\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"reflection\", \"branch\", \"leaves\"],\n  \"hallucinated_objects\": [\"blue sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the reflection on the car, the branch and leaves on the trees, and the blue sky.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Cars roofs under clear sky with trees, branches, leaves, car reflection",
+      "vlm_hint": {
+        "missing_objects": [
+          "bird"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the bird.",
+        "edit_instructions": [
+          "Remove the generic 'cars roofs' and add the bird to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cars roofs under clear sky with trees, branches, leaves, car reflection\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"bird\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the bird.\",\n  \"edit_instructions\": \"Remove the generic 'cars roofs' and add the bird to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bird cars trees clear sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "hedge",
+          "building",
+          "reflection",
+          "branch",
+          "leaves",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "car",
+          "car",
+          "car",
+          "car",
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the repeated 'car' and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird cars trees clear sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hedge\", \"building\", \"reflection\", \"branch\", \"leaves\", \"pole\"],\n  \"hallucinated_objects\": [\"car\", \"car\", \"car\", \"car\", \"car\", \"car\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the repeated 'car' and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bird trees hedge building reflection",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "roof"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the car and the roof to the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird trees hedge building reflection\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"roof\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the car and the roof to the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bird cars reflect under roof canopy",
+      "vlm_hint": {
+        "missing_objects": [
+          "hedge",
+          "building",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "branch",
+          "leaves",
+          "pole"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the hedge, building, and sky, and remove the branch, leaves, and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird cars reflect under roof canopy\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hedge\", \"building\", \"sky\"],\n  \"hallucinated_objects\": [\"branch\", \"leaves\", \"pole\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the hedge, building, and sky, and remove the branch, leaves, and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bird cars reflect under roof canopy of building with hedge and sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "reflection"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and relationships to each other."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird cars reflect under roof canopy of building with hedge and sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\", \"pole\"],\n  \"hallucinated_objects\": [\"reflection\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and relationships to each other.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bird perches on branch as cars parked under building's roof near hedge and sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "branch",
+          "leaves",
+          "pole"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "roof"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the branch, leaves, and pole."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird perches on branch as cars parked under building's roof near hedge and sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"branch\", \"leaves\", \"pole\"],\n  \"hallucinated_objects\": [\"car\", \"roof\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the branch, leaves, and pole.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bird perches on branch among leaves near pole and sky.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "roof"
+        ],
+        "hallucinated_objects": [
+          "branch",
+          "leaves",
+          "pole",
+          "sky"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the car and the roof, and avoid using generic terms like 'branch', 'leaves', 'pole', and 'sky'."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bird, car, roof, trees, hedge, building, sky, reflection, branch, leaves, pole, roof, car, roof, car, roof, car, roof, car, roof]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bird perches on branch among leaves near pole and sky.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"roof\"],\n  \"hallucinated_objects\": [\"branch\", \"leaves\", \"pole\", \"sky\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the car and the roof, and avoid using generic terms like 'branch', 'leaves', 'pole', and 'sky'.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 508602,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000508602.jpg",
+    "final_caption": "Bird perches on branch among leaves near pole and sky.",
+    "total_time_sec": 30.26
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bird\",\n    \"car\",\n    \"roof\",\n    \"trees\",\n    \"hedge\",\n    \"building\",\n    \"sky\",\n    \"reflection\",\n    \"branch\",\n    \"leaves\",\n    \"pole\",\n    \"roof\",\n    \"car\",\n    \"roof\",\n    \"car\",\n    \"roof\",\n    \"car\",\n    \"roof\",\n    \"car\",\n    \"roof\"\n  ]\n}"
+}

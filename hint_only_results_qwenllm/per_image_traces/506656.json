@@ -1,0 +1,280 @@
+{
+  "image_id": 506656,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000506656.jpg",
+  "objects": [
+    "man",
+    "horses",
+    "carriage",
+    "house",
+    "trees",
+    "sky",
+    "building",
+    "street",
+    "shoes",
+    "pants",
+    "jacket",
+    "harness",
+    "reins",
+    "clouds",
+    "window",
+    "sign",
+    "grass",
+    "sidewalk",
+    "car"
+  ],
+  "template": "We have an image with these objects: ['man', 'horses', 'carriage', 'house', 'trees', 'sky', 'building', 'street', 'shoes', 'pants', 'jacket', 'harness', 'reins', 'clouds', 'window', 'sign', 'grass', 'sidewalk', 'car']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man drives horses in front of house amidst trees and sky",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "reins",
+          "sign",
+          "grass",
+          "sidewalk",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "harness"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of carriage, the presence of reins, and the specific details of the house and trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man drives horses in front of house amidst trees and sky\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"reins\", \"sign\", \"grass\", \"sidewalk\", \"car\"],\n  \"hallucinated_objects\": [\"harness\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of carriage, the presence of reins, and the specific details of the house and trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man drives horses in carriage down street past house and trees with grass and sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk"
+        ],
+        "hallucinated_objects": [
+          "building",
+          "street",
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of carriage, the presence of a sign, and the details of the street and sidewalk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man drives horses in carriage down street past house and trees with grass and sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\"],\n  \"hallucinated_objects\": [\"building\", \"street\", \"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of carriage, the presence of a sign, and the details of the street and sidewalk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man drives horses in ornate carriage down street past house and trees with grass and sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "building",
+          "trees",
+          "house"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the carriage, sign, grass, and sidewalk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man drives horses in ornate carriage down street past house and trees with grass and sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\"],\n  \"hallucinated_objects\": [\"street\", \"building\", \"trees\", \"house\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the carriage, sign, grass, and sidewalk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man drives ornate carriage down street with grass and sidewalk past sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "horses",
+          "street",
+          "building",
+          "trees",
+          "sky",
+          "window",
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the details of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the carriage, sign, grass, and sidewalk."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man drives ornate carriage down street with grass and sidewalk past sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\"],\n  \"hallucinated_objects\": [\"man\", \"horses\", \"street\", \"building\", \"trees\", \"sky\", \"window\", \"car\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the details of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the carriage, sign, grass, and sidewalk.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man drives ornate carriage down street past sign amid grass and sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "horses",
+          "street",
+          "building",
+          "trees",
+          "sky",
+          "window",
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man drives ornate carriage down street past sign amid grass and sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\"],\n  \"hallucinated_objects\": [\"man\", \"horses\", \"street\", \"building\", \"trees\", \"sky\", \"window\", \"car\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Ornate carriage driven down street past sign among grass and sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "building",
+          "window",
+          "car"
+        ],
+        "genericity_hint": "The image does not show a carriage or a sign.",
+        "edit_instructions": [
+          "Remove the carriage and sign from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ornate carriage driven down street past sign among grass and sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\"],\n  \"hallucinated_objects\": [\"street\", \"building\", \"window\", \"car\"],\n  \"genericity_hint\": \"The image does not show a carriage or a sign.\",\n  \"edit_instructions\": \"Remove the carriage and sign from the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Ornate carriage on street among grass and sidewalk",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "car"
+        ],
+        "genericity_hint": "The image does not show a carriage.",
+        "edit_instructions": [
+          "Remove the carriage and add a sign and grass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Ornate carriage on street among grass and sidewalk\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\"],\n  \"hallucinated_objects\": [\"street\", \"car\"],\n  \"genericity_hint\": \"The image does not show a carriage.\",\n  \"edit_instructions\": \"Remove the carriage and add a sign and grass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man with horses near grass by sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "street",
+          "sign",
+          "grass",
+          "sidewalk",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "harness",
+          "reins"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the carriage, street, sign, grass, sidewalk, and car."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man with horses near grass by sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"street\", \"sign\", \"grass\", \"sidewalk\", \"car\"],\n  \"hallucinated_objects\": [\"harness\", \"reins\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the carriage, street, sign, grass, sidewalk, and car.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and horses by carriage on street past sign through grass on sidewalk with car",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "harness",
+          "reins"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the carriage, sign, grass, sidewalk, and car."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and horses by carriage on street past sign through grass on sidewalk with car\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\", \"car\"],\n  \"hallucinated_objects\": [\"harness\", \"reins\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the carriage, sign, grass, sidewalk, and car.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man in jacket drives horses in carriage down street past sign through grass on sidewalk with car nearby",
+      "vlm_hint": {
+        "missing_objects": [
+          "carriage",
+          "sign",
+          "grass",
+          "sidewalk",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "horses",
+          "jacket",
+          "reins",
+          "harness"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the type of carriage, the sign, the grass, the sidewalk, and the car."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, horses, carriage, house, trees, sky, building, street, shoes, pants, jacket, harness, reins, clouds, window, sign, grass, sidewalk, car]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in jacket drives horses in carriage down street past sign through grass on sidewalk with car nearby\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"carriage\", \"sign\", \"grass\", \"sidewalk\", \"car\"],\n  \"hallucinated_objects\": [\"man\", \"horses\", \"jacket\", \"reins\", \"harness\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the type of carriage, the sign, the grass, the sidewalk, and the car.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 506656,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000506656.jpg",
+    "final_caption": "Man in jacket drives horses in carriage down street past sign through grass on sidewalk with car nearby",
+    "total_time_sec": 34.86
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"horses\",\n    \"carriage\",\n    \"house\",\n    \"trees\",\n    \"sky\",\n    \"building\",\n    \"street\",\n    \"shoes\",\n    \"pants\",\n    \"jacket\",\n    \"harness\",\n    \"reins\",\n    \"clouds\",\n    \"window\",\n    \"sign\",\n    \"grass\",\n    \"sidewalk\",\n    \"car\"\n  ]\n}"
+}

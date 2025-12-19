@@ -1,0 +1,198 @@
+{
+  "image_id": 551215,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000551215.jpg",
+  "objects": [
+    "tennis racket",
+    "tennis player",
+    "tennis court",
+    "white headband",
+    "white shorts",
+    "white shirt",
+    "white shoes",
+    "grass",
+    "white lines",
+    "tennis ball"
+  ],
+  "template": "We have an image with these objects: ['tennis racket', 'tennis player', 'tennis court', 'white headband', 'white shorts', 'white shirt', 'white shoes', 'grass', 'white lines', 'tennis ball']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Tennis player serves on court with racket",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the action of the player.",
+        "edit_instructions": [
+          "Specify the action of the player, such as 'serving' or 'hitting'."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player serves on court with racket\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the action of the player.\",\n  \"edit_instructions\": \"Specify the action of the player, such as 'serving' or 'hitting'.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Tennis player hitting ball on grass court",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the action of the player or the presence of a ball.",
+        "edit_instructions": [
+          "Add the tennis ball to the caption and specify the action of the player."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hitting ball on grass court\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the action of the player or the presence of a ball.\",\n  \"edit_instructions\": \"Add the tennis ball to the caption and specify the action of the player.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Tennis player swings hitting tennis ball on grasscourt",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the player's attire and the court.",
+        "edit_instructions": [
+          "Add details about the player's attire and the court to make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player swings hitting tennis ball on grasscourt\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the player's attire and the court.\",\n  \"edit_instructions\": \"Add details about the player's attire and the court to make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Tennis player in white shorts and shirt swings hitting ball on grass court with white lines.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball",
+          "white lines"
+        ],
+        "hallucinated_objects": [
+          "white headband"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in white shorts and shirt swings hitting ball on grass court with white lines.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\", \"white lines\"],\n  \"hallucinated_objects\": [\"white headband\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Tennis player swings hitting ball on grass court with white lines.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the player's attire and the court.",
+        "edit_instructions": [
+          "Add more specific details about the player's attire and the court to make the caption more accurate."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player swings hitting ball on grass court with white lines.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the player's attire and the court.\",\n  \"edit_instructions\": \"Add more specific details about the player's attire and the court to make the caption more accurate.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Tennis player in white shirt and shorts hits ball on grass court with white lines.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball",
+          "white lines"
+        ],
+        "hallucinated_objects": [
+          "white headband"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in white shirt and shorts hits ball on grass court with white lines.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\", \"white lines\"],\n  \"hallucinated_objects\": [\"white headband\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Tennis player in white shirt and shorts hits ball on grass court with white lines.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball",
+          "white lines"
+        ],
+        "hallucinated_objects": [
+          "white headband"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in white shirt and shorts hits ball on grass court with white lines.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\", \"white lines\"],\n  \"hallucinated_objects\": [\"white headband\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Tennis player hits ball with racket on grass court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the player's attire and the court.",
+        "edit_instructions": [
+          "Add details about the player's attire and the court to make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player hits ball with racket on grass court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the player's attire and the court.\",\n  \"edit_instructions\": \"Add details about the player's attire and the court to make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Tennis player in white shorts and shirt hits ball with racket on grass court.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball",
+          "white lines"
+        ],
+        "hallucinated_objects": [
+          "white headband"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in white shorts and shirt hits ball with racket on grass court.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\", \"white lines\"],\n  \"hallucinated_objects\": [\"white headband\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Tennis player in white shorts and shirt hits tennis ball with racket on grass court with white lines.",
+      "vlm_hint": {
+        "missing_objects": [
+          "tennis ball"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the player's attire and the court.",
+        "edit_instructions": [
+          "Add details about the player's attire and the court to make the caption more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [tennis racket, tennis player, tennis court, white headband, white shorts, white shirt, white shoes, grass, white lines, tennis ball]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Tennis player in white shorts and shirt hits tennis ball with racket on grass court with white lines.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"tennis ball\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the player's attire and the court.\",\n  \"edit_instructions\": \"Add details about the player's attire and the court to make the caption more specific.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 551215,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000551215.jpg",
+    "final_caption": "Tennis player in white shorts and shirt hits tennis ball with racket on grass court with white lines.",
+    "total_time_sec": 27.89
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"tennis racket\",\n    \"tennis player\",\n    \"tennis court\",\n    \"white headband\",\n    \"white shorts\",\n    \"white shirt\",\n    \"white shoes\",\n    \"grass\",\n    \"white lines\",\n    \"tennis ball\"\n  ]\n}"
+}

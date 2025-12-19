@@ -1,0 +1,339 @@
+{
+  "image_id": 101420,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000101420.jpg",
+  "objects": [
+    "cat",
+    "couch",
+    "pillow",
+    "blanket",
+    "window",
+    "leaves",
+    "street",
+    "house",
+    "grass",
+    "tree",
+    "branch",
+    "cat collar",
+    "cat ears",
+    "cat tail",
+    "cat eyes",
+    "cat nose",
+    "cat mouth",
+    "cat whiskers",
+    "cat paw",
+    "cat fur"
+  ],
+  "template": "We have an image with these objects: ['cat', 'couch', 'pillow', 'blanket', 'window', 'leaves', 'street', 'house', 'grass', 'tree', 'branch', 'cat collar', 'cat ears', 'cat tail', 'cat eyes', 'cat nose', 'cat mouth', 'cat whiskers', 'cat paw', 'cat fur']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Cat on couch near window",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves",
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "cat collar",
+          "cat ears",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed caption that includes specific objects and their positions in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch near window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\", \"street\", \"house\", \"grass\", \"tree\", \"branch\"],\n  \"hallucinated_objects\": [\"cat collar\", \"cat ears\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed caption that includes specific objects and their positions in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Cat on couch by window among leaves and tree outside.",
+      "vlm_hint": {
+        "missing_objects": [
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "leaves",
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and interactions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch by window among leaves and tree outside.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"street\", \"house\", \"grass\", \"tree\", \"branch\"],\n  \"hallucinated_objects\": [\"leaves\", \"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and interactions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Cat on couch near window looking out at street and house.",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves",
+          "street",
+          "house"
+        ],
+        "hallucinated_objects": [
+          "cat collar",
+          "cat ears",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color and type of the couch, the type of pillow, and the details of the window and the view outside."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Cat on couch near window looking out at street and house.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\", \"street\", \"house\"],\n  \"hallucinated_objects\": [\"cat collar\", \"cat ears\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color and type of the couch, the type of pillow, and the details of the window and the view outside.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Brown cat on soft gray pillow by window gazing at street and house.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "hallucinated_objects": [
+          "gray pillow",
+          "street",
+          "house"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the cat.",
+        "edit_instructions": [
+          "Provide more specific details about the cat, such as its collar, ears, tail, eyes, nose, mouth, whiskers, and paws."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat on soft gray pillow by window gazing at street and house.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"hallucinated_objects\": [\"gray pillow\", \"street\", \"house\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the cat.\",\n  \"edit_instructions\": \"Provide more specific details about the cat, such as its collar, ears, tail, eyes, nose, mouth, whiskers, and paws.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Brown cat with collar, ears, tail, eyes, nose, mouth, and whiskers gazing out window at leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "blanket",
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific details and focus on the general objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat with collar, ears, tail, eyes, nose, mouth, and whiskers gazing out window at leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blanket\", \"street\", \"house\", \"grass\", \"tree\", \"branch\"],\n  \"hallucinated_objects\": [\"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific details and focus on the general objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Brown cat on couch by window looking at street scene.",
+      "vlm_hint": {
+        "missing_objects": [
+          "leaves",
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch"
+        ],
+        "hallucinated_objects": [
+          "cat collar",
+          "cat ears",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat on couch by window looking at street scene.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"leaves\", \"street\", \"house\", \"grass\", \"tree\", \"branch\"],\n  \"hallucinated_objects\": [\"cat collar\", \"cat ears\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Brown cat on couch by window looking out at street with tree and leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "tree",
+          "branch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the cat.",
+        "edit_instructions": [
+          "Provide more specific details about the cat, such as its collar, ears, tail, eyes, nose, mouth, whiskers, and paws."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat on couch by window looking out at street with tree and leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"hallucinated_objects\": [\"street\", \"tree\", \"branch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the cat.\",\n  \"edit_instructions\": \"Provide more specific details about the cat, such as its collar, ears, tail, eyes, nose, mouth, whiskers, and paws.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Brown cat in cozy corner with collar, ears up, tail wagging, looking out window at leaves on tree.",
+      "vlm_hint": {
+        "missing_objects": [
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the cat's appearance and behavior.",
+        "edit_instructions": [
+          "Provide more specific details about the cat's appearance and behavior, and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat in cozy corner with collar, ears up, tail wagging, looking out window at leaves on tree.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"hallucinated_objects\": [\"street\", \"house\", \"grass\", \"tree\", \"branch\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the cat's appearance and behavior.\",\n  \"edit_instructions\": \"Provide more specific details about the cat's appearance and behavior, and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Brown cat with collar, ears perked, tail flicking, staring out window at falling leaves.",
+      "vlm_hint": {
+        "missing_objects": [
+          "blanket",
+          "leaves",
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch",
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "hallucinated_objects": [
+          "window",
+          "couch",
+          "pillow"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat with collar, ears perked, tail flicking, staring out window at falling leaves.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blanket\", \"leaves\", \"street\", \"house\", \"grass\", \"tree\", \"branch\", \"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"hallucinated_objects\": [\"window\", \"couch\", \"pillow\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Brown cat with collar, whiskers, and fur, staring at falling leaves on grass near a house.",
+      "vlm_hint": {
+        "missing_objects": [
+          "blanket",
+          "window",
+          "street",
+          "house",
+          "grass",
+          "tree",
+          "branch",
+          "cat collar",
+          "cat ears",
+          "cat tail",
+          "cat eyes",
+          "cat nose",
+          "cat mouth",
+          "cat whiskers",
+          "cat paw",
+          "cat fur"
+        ],
+        "hallucinated_objects": [
+          "leaves"
+        ],
+        "genericity_hint": "The caption is too specific and misses many objects in the image.",
+        "edit_instructions": [
+          "Remove the specific details and focus on the general objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [cat, couch, pillow, blanket, window, leaves, street, house, grass, tree, branch, cat collar, cat ears, cat tail, cat eyes, cat nose, cat mouth, cat whiskers, cat paw, cat fur]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Brown cat with collar, whiskers, and fur, staring at falling leaves on grass near a house.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blanket\", \"window\", \"street\", \"house\", \"grass\", \"tree\", \"branch\", \"cat collar\", \"cat ears\", \"cat tail\", \"cat eyes\", \"cat nose\", \"cat mouth\", \"cat whiskers\", \"cat paw\", \"cat fur\"],\n  \"hallucinated_objects\": [\"leaves\"],\n  \"genericity_hint\": \"The caption is too specific and misses many objects in the image.\",\n  \"edit_instructions\": \"Remove the specific details and focus on the general objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 101420,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000101420.jpg",
+    "final_caption": "Brown cat with collar, whiskers, and fur, staring at falling leaves on grass near a house.",
+    "total_time_sec": 41.43
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"cat\",\n    \"couch\",\n    \"pillow\",\n    \"blanket\",\n    \"window\",\n    \"leaves\",\n    \"street\",\n    \"house\",\n    \"grass\",\n    \"tree\",\n    \"branch\",\n    \"cat collar\",\n    \"cat ears\",\n    \"cat tail\",\n    \"cat eyes\",\n    \"cat nose\",\n    \"cat mouth\",\n    \"cat whiskers\",\n    \"cat paw\",\n    \"cat fur\"\n  ]\n}"
+}

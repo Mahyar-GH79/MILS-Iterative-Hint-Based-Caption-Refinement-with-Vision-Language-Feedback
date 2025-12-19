@@ -1,0 +1,260 @@
+{
+  "image_id": 255483,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000255483.jpg",
+  "objects": [
+    "papers",
+    "ink bottle",
+    "spindle hook",
+    "hand",
+    "pen",
+    "desk",
+    "photograph",
+    "text",
+    "ink",
+    "writing",
+    "desk lamp",
+    "desk surface",
+    "desk chair",
+    "desk drawer",
+    "desk lamp",
+    "desk surface",
+    "desk chair",
+    "desk drawer",
+    "desk lamp",
+    "desk surface"
+  ],
+  "template": "We have an image with these objects: ['papers', 'ink bottle', 'spindle hook', 'hand', 'pen', 'desk', 'photograph', 'text', 'ink', 'writing', 'desk lamp', 'desk surface', 'desk chair', 'desk drawer', 'desk lamp', 'desk surface', 'desk chair', 'desk drawer', 'desk lamp', 'desk surface']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Desk illuminated with multiple lamps shows papers and pen ready for work.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "spindle hook"
+        ],
+        "hallucinated_objects": [
+          "ink",
+          "writing"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the ink bottle and spindle hook."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk illuminated with multiple lamps shows papers and pen ready for work.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"spindle hook\"],\n  \"hallucinated_objects\": [\"ink\", \"writing\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the ink bottle and spindle hook.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Desk illuminated with lamps has papers, pen, ink bottle, and spindle hook.",
+      "vlm_hint": {
+        "missing_objects": [
+          "desk lamp",
+          "desk surface",
+          "desk chair",
+          "desk drawer",
+          "desk lamp",
+          "desk surface",
+          "desk chair",
+          "desk drawer",
+          "desk lamp",
+          "desk surface"
+        ],
+        "hallucinated_objects": [
+          "ink bottle",
+          "spindle hook",
+          "hand",
+          "pen",
+          "ink",
+          "writing"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the desk lamp, desk surface, desk chair, and desk drawer."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Desk illuminated with lamps has papers, pen, ink bottle, and spindle hook.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"desk lamp\", \"desk surface\", \"desk chair\", \"desk drawer\", \"desk lamp\", \"desk surface\", \"desk chair\", \"desk drawer\", \"desk lamp\", \"desk surface\"],\n  \"hallucinated_objects\": [\"ink bottle\", \"spindle hook\", \"hand\", \"pen\", \"ink\", \"writing\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the desk lamp, desk surface, desk chair, and desk drawer.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Lamps illuminate a desk with papers and a chair near drawers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "spindle hook",
+          "hand",
+          "pen"
+        ],
+        "hallucinated_objects": [
+          "ink",
+          "writing",
+          "desk lamp",
+          "desk surface",
+          "desk chair",
+          "desk drawer",
+          "desk lamp",
+          "desk surface",
+          "desk chair",
+          "desk drawer"
+        ],
+        "genericity_hint": "The candidate caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Please provide a more specific caption that includes the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Lamps illuminate a desk with papers and a chair near drawers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"spindle hook\", \"hand\", \"pen\"],\n  \"hallucinated_objects\": [\"ink\", \"writing\", \"desk lamp\", \"desk surface\", \"desk chair\", \"desk drawer\", \"desk lamp\", \"desk surface\", \"desk chair\", \"desk drawer\"],\n  \"genericity_hint\": \"The candidate caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Please provide a more specific caption that includes the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "A hand holds a pen near papers and an ink bottle on a desk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "hallucinated_objects": [
+          "desk chair",
+          "desk drawer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects and their arrangement.",
+        "edit_instructions": [
+          "Provide more specific details about the objects and their arrangement, and remove the generic language."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen near papers and an ink bottle on a desk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"hallucinated_objects\": [\"desk chair\", \"desk drawer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects and their arrangement.\",\n  \"edit_instructions\": \"Provide more specific details about the objects and their arrangement, and remove the generic language.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "A hand holds a pen beside papers and an ink bottle under a desk lamp.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "hallucinated_objects": [
+          "desk chair",
+          "desk drawer"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the desk lamp and desk chair."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen beside papers and an ink bottle under a desk lamp.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"hallucinated_objects\": [\"desk chair\", \"desk drawer\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the desk lamp and desk chair.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "A hand holds a pen near papers and an ink bottle under a desk lamp on a desk surface.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp",
+          "desk surface"
+        ],
+        "hallucinated_objects": [
+          "desk lamp",
+          "desk surface"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the ink bottle and desk lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen near papers and an ink bottle under a desk lamp on a desk surface.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\", \"desk surface\"],\n  \"hallucinated_objects\": [\"desk lamp\", \"desk surface\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the ink bottle and desk lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "A hand holds a pen near papers and an ink bottle under a desk lamp on a desk surface.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp",
+          "desk surface"
+        ],
+        "hallucinated_objects": [
+          "desk lamp",
+          "desk surface"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the ink bottle and desk lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen near papers and an ink bottle under a desk lamp on a desk surface.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\", \"desk surface\"],\n  \"hallucinated_objects\": [\"desk lamp\", \"desk surface\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the ink bottle and desk lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "A hand holds a pen over papers next to an ink bottle under a desk lamp on a desk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "hallucinated_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the desk.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the ink bottle and desk lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen over papers next to an ink bottle under a desk lamp on a desk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"hallucinated_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the desk.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the ink bottle and desk lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "A hand holds a pen over papers near an ink bottle and desk lamp on a desk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "hallucinated_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the desk.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the ink bottle and desk lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen over papers near an ink bottle and desk lamp on a desk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"hallucinated_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the desk.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the ink bottle and desk lamp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "A hand holds a pen over papers near an ink bottle and desk lamp on a desk.",
+      "vlm_hint": {
+        "missing_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "hallucinated_objects": [
+          "ink bottle",
+          "desk lamp"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the desk.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the ink bottle and desk lamp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [papers, ink bottle, spindle hook, hand, pen, desk, photograph, text, ink, writing, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface, desk chair, desk drawer, desk lamp, desk surface]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A hand holds a pen over papers near an ink bottle and desk lamp on a desk.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"hallucinated_objects\": [\"ink bottle\", \"desk lamp\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the desk.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the ink bottle and desk lamp.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 255483,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000255483.jpg",
+    "final_caption": "A hand holds a pen over papers near an ink bottle and desk lamp on a desk.",
+    "total_time_sec": 34.05
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"papers\",\n    \"ink bottle\",\n    \"spindle hook\",\n    \"hand\",\n    \"pen\",\n    \"desk\",\n    \"photograph\",\n    \"text\",\n    \"ink\",\n    \"writing\",\n    \"desk lamp\",\n    \"desk surface\",\n    \"desk chair\",\n    \"desk drawer\",\n    \"desk lamp\",\n    \"desk surface\",\n    \"desk chair\",\n    \"desk drawer\",\n    \"desk lamp\",\n    \"desk surface\",\n    \"desk chair\",\n    \"desk drawer\"\n  ]\n}"
+}

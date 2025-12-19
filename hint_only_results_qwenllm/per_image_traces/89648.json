@@ -1,0 +1,319 @@
+{
+  "image_id": 89648,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000089648.jpg",
+  "objects": [
+    "people",
+    "chairs",
+    "laptops",
+    "smartphones",
+    "papers",
+    "bags",
+    "socks",
+    "shorts",
+    "shoes",
+    "t-shirts",
+    "sweaters",
+    "pants",
+    "jackets",
+    "headphones",
+    "watches",
+    "glasses",
+    "hairbands",
+    "hair",
+    "feet"
+  ],
+  "template": "We have an image with these objects: ['people', 'chairs', 'laptops', 'smartphones', 'papers', 'bags', 'socks', 'shorts', 'shoes', 't-shirts', 'sweaters', 'pants', 'jackets', 'headphones', 'watches', 'glasses', 'hairbands', 'hair', 'feet']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People in various outfits working at desks with laptops smartphones and papers.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "watches",
+          "glasses",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "hallucinated_objects": [
+          "desks"
+        ],
+        "genericity_hint": "The image shows people sitting in chairs, but the caption suggests they are working at desks.",
+        "edit_instructions": [
+          "Remove the mention of desks and add details about the objects on the people's laps."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in various outfits working at desks with laptops smartphones and papers.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"watches\", \"glasses\", \"hairbands\", \"hair\", \"feet\"],\n  \"hallucinated_objects\": [\"desks\"],\n  \"genericity_hint\": \"The image shows people sitting in chairs, but the caption suggests they are working at desks.\",\n  \"edit_instructions\": \"Remove the mention of desks and add details about the objects on the people's laps.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "People in various outfits wearing laptops smartphones and papers on their laps.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "hallucinated_objects": [
+          "papers"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in various outfits wearing laptops smartphones and papers on their laps.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\", \"hairbands\", \"hair\", \"feet\"],\n  \"hallucinated_objects\": [\"papers\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "People in varied attire using laptops and smartphones while wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People in varied attire using laptops and smartphones while wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\", \"hairbands\", \"hair\", \"feet\"],\n  \"hallucinated_objects\": [\"papers\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+      "vlm_hint": {
+        "missing_objects": [
+          "headphones",
+          "glasses"
+        ],
+        "hallucinated_objects": [
+          "papers",
+          "bags",
+          "socks",
+          "shorts",
+          "shoes",
+          "t-shirts",
+          "sweaters",
+          "pants",
+          "jackets",
+          "hairbands",
+          "hair",
+          "feet"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the actual objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [people, chairs, laptops, smartphones, papers, bags, socks, shorts, shoes, t-shirts, sweaters, pants, jackets, headphones, watches, glasses, hairbands, hair, feet]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit with laptops and smartphones wearing glasses and headphones.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"headphones\", \"glasses\"],\n  \"hallucinated_objects\": [\"papers\", \"bags\", \"socks\", \"shorts\", \"shoes\", \"t-shirts\", \"sweaters\", \"pants\", \"jackets\", \"hairbands\", \"hair\", \"feet\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the actual objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 89648,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000089648.jpg",
+    "final_caption": "People sit with laptops and smartphones wearing glasses and headphones.",
+    "total_time_sec": 37.86
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"people\",\n    \"chairs\",\n    \"laptops\",\n    \"smartphones\",\n    \"papers\",\n    \"bags\",\n    \"socks\",\n    \"shorts\",\n    \"shoes\",\n    \"t-shirts\",\n    \"sweaters\",\n    \"pants\",\n    \"jackets\",\n    \"headphones\",\n    \"watches\",\n    \"glasses\",\n    \"hairbands\",\n    \"hair\",\n    \"feet\"\n  ]\n}"
+}

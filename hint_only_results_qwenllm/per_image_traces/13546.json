@@ -1,0 +1,233 @@
+{
+  "image_id": 13546,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000013546.jpg",
+  "objects": [
+    "skateboarder",
+    "skateboard",
+    "bench",
+    "trash can",
+    "parking meters",
+    "parking lot",
+    "street",
+    "sidewalk",
+    "graffiti",
+    "tree",
+    "parking sign",
+    "parking lot",
+    "parking lot",
+    "parking lot",
+    "parking lot",
+    "parking lot",
+    "parking lot",
+    "parking lot",
+    "parking lot"
+  ],
+  "template": "We have an image with these objects: ['skateboarder', 'skateboard', 'bench', 'trash can', 'parking meters', 'parking lot', 'street', 'sidewalk', 'graffiti', 'tree', 'parking sign', 'parking lot', 'parking lot', 'parking lot', 'parking lot', 'parking lot', 'parking lot', 'parking lot', 'parking lot']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Skateboarder on street near parking lot graffiti",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "trash can",
+          "tree",
+          "parking sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of trash can, the presence of parking meters, and the type of tree."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on street near parking lot graffiti\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"trash can\", \"tree\", \"parking sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of trash can, the presence of parking meters, and the type of tree.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Skateboarder on street by graffiti-covered bench near parking meters and tall tree",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "parking meters",
+          "tall tree"
+        ],
+        "genericity_hint": "The parking lot is not mentioned in the image.",
+        "edit_instructions": [
+          "Remove the parking meters and the tall tree from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on street by graffiti-covered bench near parking meters and tall tree\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking lot\"],\n  \"hallucinated_objects\": [\"parking meters\", \"tall tree\"],\n  \"genericity_hint\": \"The parking lot is not mentioned in the image.\",\n  \"edit_instructions\": \"Remove the parking meters and the tall tree from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Skateboarder on street by graffiti-covered bench in parking lot",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "trash can",
+          "street",
+          "sidewalk",
+          "tree",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the parking meters, trash can, street, sidewalk, tree, and parking sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on street by graffiti-covered bench in parking lot\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"trash can\", \"street\", \"sidewalk\", \"tree\", \"parking sign\"],\n  \"hallucinated_objects\": [\"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the parking meters, trash can, street, sidewalk, tree, and parking sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Skateboarder on sidewalk by graffiti-covered bench near parking meters and trash can on street beneath tree with parking sign",
+      "vlm_hint": {
+        "missing_objects": [
+          "skateboard",
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "parking meters",
+          "trash can",
+          "street",
+          "tree",
+          "parking sign"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific details of the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on sidewalk by graffiti-covered bench near parking meters and trash can on street beneath tree with parking sign\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"skateboard\", \"parking lot\"],\n  \"hallucinated_objects\": [\"parking meters\", \"trash can\", \"street\", \"tree\", \"parking sign\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific details of the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Skateboarder on sidewalk beside graffiti-covered bench under parking lots",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "parking meters",
+          "parking sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The parking lots are not necessary to describe the scene.",
+        "edit_instructions": [
+          "Remove the parking lots and focus on the main elements of the scene."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on sidewalk beside graffiti-covered bench under parking lots\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"parking meters\", \"parking sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The parking lots are not necessary to describe the scene.\",\n  \"edit_instructions\": \"Remove the parking lots and focus on the main elements of the scene.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Skateboarder with skateboard near graffiti-covered bench and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "parking sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image is specific to a skateboarding scene with a focus on the skateboarder and their immediate surroundings.",
+        "edit_instructions": [
+          "Remove the parking meters and parking sign from the list of objects."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder with skateboard near graffiti-covered bench and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"parking sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image is specific to a skateboarding scene with a focus on the skateboarder and their immediate surroundings.\",\n  \"edit_instructions\": \"Remove the parking meters and parking sign from the list of objects.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Skateboarder with skateboard by graffiti-covered bench and trash can near parking lot",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "street",
+          "sidewalk",
+          "tree",
+          "parking sign"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details about the location and objects.",
+        "edit_instructions": [
+          "Provide more specific details about the location and objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder with skateboard by graffiti-covered bench and trash can near parking lot\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"street\", \"sidewalk\", \"tree\", \"parking sign\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the location and objects.\",\n  \"edit_instructions\": \"Provide more specific details about the location and objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Skateboarder on skateboard by graffiti-covered bench and tree near street and parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "parking meters"
+        ],
+        "genericity_hint": "The parking lot is not mentioned in the image.",
+        "edit_instructions": [
+          "Remove the parking meters and mention the parking lot."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on skateboard by graffiti-covered bench and tree near street and parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking lot\"],\n  \"hallucinated_objects\": [\"parking meters\"],\n  \"genericity_hint\": \"The parking lot is not mentioned in the image.\",\n  \"edit_instructions\": \"Remove the parking meters and mention the parking lot.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Skateboarder on skateboard by graffiti-covered bench and tree in parking lot near street",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking meters",
+          "trash can",
+          "sidewalk",
+          "street",
+          "tree",
+          "parking sign"
+        ],
+        "hallucinated_objects": [
+          "parking lot"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of trash can, the presence of parking meters, and the specific location of the tree and parking sign."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on skateboard by graffiti-covered bench and tree in parking lot near street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking meters\", \"trash can\", \"sidewalk\", \"street\", \"tree\", \"parking sign\"],\n  \"hallucinated_objects\": [\"parking lot\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of trash can, the presence of parking meters, and the specific location of the tree and parking sign.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Skateboarder on skateboard by graffiti-covered bench and tree near street with trash can and parking meters",
+      "vlm_hint": {
+        "missing_objects": [
+          "parking lot"
+        ],
+        "hallucinated_objects": [
+          "parking meters"
+        ],
+        "genericity_hint": "The parking lot is not mentioned in the image.",
+        "edit_instructions": [
+          "Remove the parking meters and mention the parking lot."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [skateboarder, skateboard, bench, trash can, parking meters, parking lot, street, sidewalk, graffiti, tree, parking sign, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot, parking lot]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Skateboarder on skateboard by graffiti-covered bench and tree near street with trash can and parking meters\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"parking lot\"],\n  \"hallucinated_objects\": [\"parking meters\"],\n  \"genericity_hint\": \"The parking lot is not mentioned in the image.\",\n  \"edit_instructions\": \"Remove the parking meters and mention the parking lot.\",\n  \"score\": 5\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 13546,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000013546.jpg",
+    "final_caption": "Skateboarder on skateboard by graffiti-covered bench and tree near street with trash can and parking meters",
+    "total_time_sec": 32.31
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"skateboarder\",\n    \"skateboard\",\n    \"bench\",\n    \"trash can\",\n    \"parking meters\",\n    \"parking lot\",\n    \"street\",\n    \"sidewalk\",\n    \"graffiti\",\n    \"tree\",\n    \"parking sign\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\",\n    \"parking lot\"\n  ]\n}"
+}

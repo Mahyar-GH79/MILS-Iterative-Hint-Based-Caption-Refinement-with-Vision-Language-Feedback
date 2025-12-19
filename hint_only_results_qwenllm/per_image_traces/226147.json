@@ -1,0 +1,243 @@
+{
+  "image_id": 226147,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000226147.jpg",
+  "objects": [
+    "flowers",
+    "vase",
+    "plate",
+    "fork",
+    "knife",
+    "cup",
+    "tablecloth",
+    "flag",
+    "sandwich",
+    "lettuce",
+    "plate",
+    "flag",
+    "sandwich",
+    "lettuce",
+    "plate",
+    "flag",
+    "sandwich",
+    "lettuce",
+    "plate",
+    "flag"
+  ],
+  "template": "We have an image with these objects: ['flowers', 'vase', 'plate', 'fork', 'knife', 'cup', 'tablecloth', 'flag', 'sandwich', 'lettuce', 'plate', 'flag', 'sandwich', 'lettuce', 'plate', 'flag', 'sandwich', 'lettuce', 'plate', 'flag']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Flowers vase and plates with sandwiches on a cloth-table",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork",
+          "lettuce",
+          "sandwich"
+        ],
+        "hallucinated_objects": [
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the table.",
+        "edit_instructions": [
+          "Add specific objects to the caption and remove the flag."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Flowers vase and plates with sandwiches on a cloth-table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\", \"lettuce\", \"sandwich\"],\n  \"hallucinated_objects\": [\"flag\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the table.\",\n  \"edit_instructions\": \"Add specific objects to the caption and remove the flag.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Flowers vase plates forks knives sandwiches lettuce on a tablecloth",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "table",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "cup"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Add the woman, table, and flag to the caption. Remove the cup."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Flowers vase plates forks knives sandwiches lettuce on a tablecloth\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"table\", \"flag\"],\n  \"hallucinated_objects\": [\"cup\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Add the woman, table, and flag to the caption. Remove the cup.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Woman at table with flowers vase plates flags sandwiches lettuce on cloth",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "table",
+          "flowers",
+          "vase",
+          "plate",
+          "fork",
+          "knife",
+          "cup",
+          "tablecloth",
+          "flag",
+          "sandwich",
+          "lettuce"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the woman, the table, the flowers, the vase, the plates, the fork, the knife, the cup, the tablecloth, the flag, the sandwich, and the lettuce."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman at table with flowers vase plates flags sandwiches lettuce on cloth\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"table\", \"flowers\", \"vase\", \"plate\", \"fork\", \"knife\", \"cup\", \"tablecloth\", \"flag\", \"sandwich\", \"lettuce\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the woman, the table, the flowers, the vase, the plates, the fork, the knife, the cup, the tablecloth, the flag, the sandwich, and the lettuce.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Table with flowers vase plates flags and sandwiches lettuce",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects on the table.",
+        "edit_instructions": [
+          "Add the missing objects and remove the genericity."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Table with flowers vase plates flags and sandwiches lettuce\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects on the table.\",\n  \"edit_instructions\": \"Add the missing objects and remove the genericity.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Flowers vase plates flags sandwiches lettuce forks knives on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "woman",
+          "table",
+          "food"
+        ],
+        "hallucinated_objects": [
+          "flag",
+          "sandwich",
+          "lettuce"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the woman, table, and food items."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Flowers vase plates flags sandwiches lettuce forks knives on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"woman\", \"table\", \"food\"],\n  \"hallucinated_objects\": [\"flag\", \"sandwich\", \"lettuce\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the woman, table, and food items.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Woman dining on plates of food at a flower-decorated table",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "flag"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and corrects the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman dining on plates of food at a flower-decorated table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"flag\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and corrects the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Woman dining on plates of lettuce and sandwiches at a flower-decorated table with forks and knives.",
+      "vlm_hint": {
+        "missing_objects": [
+          "lettuce",
+          "sandwich",
+          "plate",
+          "flag"
+        ],
+        "hallucinated_objects": [
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the exact number of plates, sandwiches, and flags, and the color of the tablecloth."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Woman dining on plates of lettuce and sandwiches at a flower-decorated table with forks and knives.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"lettuce\", \"sandwich\", \"plate\", \"flag\"],\n  \"hallucinated_objects\": [\"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the exact number of plates, sandwiches, and flags, and the color of the tablecloth.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Four plates of lettuce and sandwiches on a flower-decorated table with four flags.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of objects.",
+        "edit_instructions": [
+          "Specify the number of objects and remove the generic term."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four plates of lettuce and sandwiches on a flower-decorated table with four flags.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of objects.\",\n  \"edit_instructions\": \"Specify the number of objects and remove the generic term.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Nine plates of lettuce and sandwiches on a table with flags, forks, and knives.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "cup",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of plates, forks, knives, and cups.",
+        "edit_instructions": [
+          "Specify the number of plates, forks, knives, and cups."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Nine plates of lettuce and sandwiches on a table with flags, forks, and knives.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"cup\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of plates, forks, knives, and cups.\",\n  \"edit_instructions\": \"Specify the number of plates, forks, knives, and cups.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Four plates of lettuce and sandwiches on a table with three forks, two knives, a cup, and a flag.",
+      "vlm_hint": {
+        "missing_objects": [
+          "vase",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "flowers"
+        ],
+        "genericity_hint": "The caption is too generic and does not capture the specific details of the image.",
+        "edit_instructions": [
+          "Remove the generic objects and add the missing objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [flowers, vase, plate, fork, knife, cup, tablecloth, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag, sandwich, lettuce, plate, flag]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Four plates of lettuce and sandwiches on a table with three forks, two knives, a cup, and a flag.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"vase\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"flowers\"],\n  \"genericity_hint\": \"The caption is too generic and does not capture the specific details of the image.\",\n  \"edit_instructions\": \"Remove the generic objects and add the missing objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 226147,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000226147.jpg",
+    "final_caption": "Four plates of lettuce and sandwiches on a table with three forks, two knives, a cup, and a flag.",
+    "total_time_sec": 31.59
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"flowers\",\n    \"vase\",\n    \"plate\",\n    \"fork\",\n    \"knife\",\n    \"cup\",\n    \"tablecloth\",\n    \"flag\",\n    \"sandwich\",\n    \"lettuce\",\n    \"plate\",\n    \"flag\",\n    \"sandwich\",\n    \"lettuce\",\n    \"plate\",\n    \"flag\",\n    \"sandwich\",\n    \"lettuce\",\n    \"plate\",\n    \"flag\"\n  ]\n}"
+}

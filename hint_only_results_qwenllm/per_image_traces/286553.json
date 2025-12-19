@@ -1,0 +1,257 @@
+{
+  "image_id": 286553,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000286553.jpg",
+  "objects": [
+    "man",
+    "woman",
+    "pizza",
+    "tablecloth",
+    "glass",
+    "bottle",
+    "chair",
+    "purse",
+    "window",
+    "curtain",
+    "table",
+    "fork",
+    "knife",
+    "shirt",
+    "jacket",
+    "earrings",
+    "necklace",
+    "turtleneck",
+    "background",
+    "light"
+  ],
+  "template": "We have an image with these objects: ['man', 'woman', 'pizza', 'tablecloth', 'glass', 'bottle', 'chair', 'purse', 'window', 'curtain', 'table', 'fork', 'knife', 'shirt', 'jacket', 'earrings', 'necklace', 'turtleneck', 'background', 'light']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man woman share pizza at table",
+      "vlm_hint": {
+        "missing_objects": [
+          "glass",
+          "bottle",
+          "chair",
+          "purse",
+          "window",
+          "curtain",
+          "table",
+          "fork",
+          "knife",
+          "shirt",
+          "jacket",
+          "earrings",
+          "necklace",
+          "turtleneck",
+          "background",
+          "light"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "woman",
+          "pizza",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the color of the tablecloth, and the type of glass."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man woman share pizza at table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"glass\", \"bottle\", \"chair\", \"purse\", \"window\", \"curtain\", \"table\", \"fork\", \"knife\", \"shirt\", \"jacket\", \"earrings\", \"necklace\", \"turtleneck\", \"background\", \"light\"],\n  \"hallucinated_objects\": [\"man\", \"woman\", \"pizza\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the color of the tablecloth, and the type of glass.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Couple shares slice from large pepperoni pizza on wood table with glass and bottle.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "chair",
+          "window",
+          "curtain"
+        ],
+        "hallucinated_objects": [
+          "large pepperoni pizza",
+          "wood table"
+        ],
+        "genericity_hint": "The caption is too specific and does not match the image.",
+        "edit_instructions": [
+          "Remove the specific objects and make the caption more generic."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couple shares slice from large pepperoni pizza on wood table with glass and bottle.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"chair\", \"window\", \"curtain\"],\n  \"hallucinated_objects\": [\"large pepperoni pizza\", \"wood table\"],\n  \"genericity_hint\": \"The caption is too specific and does not match the image.\",\n  \"edit_instructions\": \"Remove the specific objects and make the caption more generic.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Couple shares pizza on table with drinks and purse.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "purse"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the color of the tablecloth, and the type of purse."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Couple shares pizza on table with drinks and purse.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"purse\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the color of the tablecloth, and the type of purse.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man and woman share a slice of pizza on a clothed table with glasses and a bottle.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "chair",
+          "window",
+          "curtain"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of tablecloth, the color of the table, and the type of pizza."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a slice of pizza on a clothed table with glasses and a bottle.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"chair\", \"window\", \"curtain\"],\n  \"hallucinated_objects\": [\"background\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of tablecloth, the color of the table, and the type of pizza.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and woman share a slice of pizza on a red tablecloth with glasses and a bottle, sitting at a wooden chair near a window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "red tablecloth"
+        ],
+        "genericity_hint": "The tablecloth is not specified in the image.",
+        "edit_instructions": [
+          "Remove the red tablecloth and add a knife and fork."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a slice of pizza on a red tablecloth with glasses and a bottle, sitting at a wooden chair near a window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"red tablecloth\"],\n  \"genericity_hint\": \"The tablecloth is not specified in the image.\",\n  \"edit_instructions\": \"Remove the red tablecloth and add a knife and fork.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and woman share a slice of pizza on a table with glasses and a bottle, sitting at chairs near a window.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of pizza, the color of the tablecloth, and the presence of utensils."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a slice of pizza on a table with glasses and a bottle, sitting at chairs near a window.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"background\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of pizza, the color of the tablecloth, and the presence of utensils.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man and woman share a pepperoni pizza on a red tablecloth with glasses and a bottle, sitting at chairs near a window, using forks and knives.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "knife"
+        ],
+        "hallucinated_objects": [
+          "background",
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the color of the tablecloth, the type of pizza, and the specific items on the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a pepperoni pizza on a red tablecloth with glasses and a bottle, sitting at chairs near a window, using forks and knives.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"knife\"],\n  \"hallucinated_objects\": [\"background\", \"light\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the color of the tablecloth, the type of pizza, and the specific items on the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man and woman share a pepperoni pizza on a red tablecloth with glasses and a bottle, sitting at chairs near a window, using knives and forks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "red tablecloth"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the red tablecloth and add a knife and fork."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a pepperoni pizza on a red tablecloth with glasses and a bottle, sitting at chairs near a window, using knives and forks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"red tablecloth\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the red tablecloth and add a knife and fork.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and woman share a pepperoni pizza on a table with glasses and a bottle, sitting at chairs near a window, using knives and forks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "purse",
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "bottle",
+          "glass"
+        ],
+        "genericity_hint": "The caption is too specific and misses some objects.",
+        "edit_instructions": [
+          "Remove the bottle and glass, and add a knife and fork."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a pepperoni pizza on a table with glasses and a bottle, sitting at chairs near a window, using knives and forks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"purse\", \"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"bottle\", \"glass\"],\n  \"genericity_hint\": \"The caption is too specific and misses some objects.\",\n  \"edit_instructions\": \"Remove the bottle and glass, and add a knife and fork.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man and woman share a pepperoni pizza on a table near a window, using knives and forks.",
+      "vlm_hint": {
+        "missing_objects": [
+          "knife",
+          "fork"
+        ],
+        "hallucinated_objects": [
+          "purse",
+          "necklace"
+        ],
+        "genericity_hint": "The caption is too specific about the pizza and utensils.",
+        "edit_instructions": [
+          "Remove the specific details about the pizza and utensils."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [man, woman, pizza, tablecloth, glass, bottle, chair, purse, window, curtain, table, fork, knife, shirt, jacket, earrings, necklace, turtleneck, background, light]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and woman share a pepperoni pizza on a table near a window, using knives and forks.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"knife\", \"fork\"],\n  \"hallucinated_objects\": [\"purse\", \"necklace\"],\n  \"genericity_hint\": \"The caption is too specific about the pizza and utensils.\",\n  \"edit_instructions\": \"Remove the specific details about the pizza and utensils.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 286553,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000286553.jpg",
+    "final_caption": "Man and woman share a pepperoni pizza on a table near a window, using knives and forks.",
+    "total_time_sec": 35.11
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"man\",\n    \"woman\",\n    \"pizza\",\n    \"tablecloth\",\n    \"glass\",\n    \"bottle\",\n    \"chair\",\n    \"purse\",\n    \"window\",\n    \"curtain\",\n    \"table\",\n    \"fork\",\n    \"knife\",\n    \"shirt\",\n    \"jacket\",\n    \"earrings\",\n    \"necklace\",\n    \"turtleneck\",\n    \"background\",\n    \"light\"\n  ]\n}"
+}

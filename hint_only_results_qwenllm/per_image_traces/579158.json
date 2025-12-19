@@ -1,0 +1,284 @@
+{
+  "image_id": 579158,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000579158.jpg",
+  "objects": [
+    "airplane",
+    "luggage",
+    "airport",
+    "building",
+    "trees",
+    "road",
+    "sky",
+    "wing",
+    "engine",
+    "door",
+    "window",
+    "tarmac",
+    "car",
+    "building",
+    "building",
+    "building",
+    "building",
+    "building",
+    "building"
+  ],
+  "template": "We have an image with these objects: ['airplane', 'luggage', 'airport', 'building', 'trees', 'road', 'sky', 'wing', 'engine', 'door', 'window', 'tarmac', 'car', 'building', 'building', 'building', 'building', 'building', 'building']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Airport building with airplane on tarmac",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "road",
+          "sky",
+          "wing",
+          "engine",
+          "door",
+          "window",
+          "tarmac"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Add specific objects to the caption, such as luggage, car, and airport building."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airport building with airplane on tarmac\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"car\"],\n  \"hallucinated_objects\": [\"trees\", \"road\", \"sky\", \"wing\", \"engine\", \"door\", \"window\", \"tarmac\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Add specific objects to the caption, such as luggage, car, and airport building.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Airport building with airplane and luggage next to car",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "road",
+          "sky",
+          "wing",
+          "engine",
+          "door",
+          "window",
+          "tarmac",
+          "car"
+        ],
+        "hallucinated_objects": [
+          "airport building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building",
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the airplane, luggage, and car, and also includes the missing objects such as trees, road, sky, wing, engine, door, window, tarmac, and car."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airport building with airplane and luggage next to car\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"road\", \"sky\", \"wing\", \"engine\", \"door\", \"window\", \"tarmac\", \"car\"],\n  \"hallucinated_objects\": [\"airport building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\", \"building\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the airplane, luggage, and car, and also includes the missing objects such as trees, road, sky, wing, engine, door, window, tarmac, and car.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Airplane on tarmac near luggage and car under blue sky with trees and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "car"
+        ],
+        "hallucinated_objects": [
+          "luggage",
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane on tarmac near luggage and car under blue sky with trees and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\"],\n  \"hallucinated_objects\": [\"luggage\", \"building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Airplane on tarmac near car under clear sky with trees and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "car"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of luggage, the door and window of the airplane, and the presence of luggage on the tarmac."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane on tarmac near car under clear sky with trees and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"car\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of luggage, the door and window of the airplane, and the presence of luggage on the tarmac.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Luggage near airplane door and window on tarmac under clear sky with trees and buildings",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "road",
+          "engine",
+          "wing"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "road",
+          "engine",
+          "wing"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of luggage, the specific part of the airplane, and the exact location of the trees and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Luggage near airplane door and window on tarmac under clear sky with trees and buildings\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"road\", \"engine\", \"wing\"],\n  \"hallucinated_objects\": [\"car\", \"road\", \"engine\", \"wing\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of luggage, the specific part of the airplane, and the exact location of the trees and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Luggage by airplane door and window on tarmac beneath clear sky with nearby trees and buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "road"
+        ],
+        "hallucinated_objects": [
+          "engine",
+          "wing",
+          "door",
+          "window"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of luggage, the specific building, and the exact location of the trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Luggage by airplane door and window on tarmac beneath clear sky with nearby trees and buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"road\"],\n  \"hallucinated_objects\": [\"engine\", \"wing\", \"door\", \"window\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of luggage, the specific building, and the exact location of the trees.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Luggage near airplane door and window on tarmac under clear sky with cars and buildings.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "road",
+          "trees",
+          "engine",
+          "wing",
+          "door",
+          "window",
+          "building"
+        ],
+        "hallucinated_objects": [
+          "luggage",
+          "tarmac"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the car, road, trees, engine, wing, door, window, and buildings."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Luggage near airplane door and window on tarmac under clear sky with cars and buildings.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"road\", \"trees\", \"engine\", \"wing\", \"door\", \"window\", \"building\"],\n  \"hallucinated_objects\": [\"luggage\", \"tarmac\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the car, road, trees, engine, wing, door, window, and buildings.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Airplane with wing and engine next to car on road under clear sky amid buildings and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "luggage",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of luggage, the presence of a door and window on the airplane, and the specific type of vehicles and structures in the background."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Airplane with wing and engine next to car on road under clear sky amid buildings and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"luggage\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"car\", \"road\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of luggage, the presence of a door and window on the airplane, and the specific type of vehicles and structures in the background.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Luggage near airplane with window and wing on tarmac among airport buildings and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "road",
+          "engine",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "road",
+          "engine",
+          "door",
+          "window"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of luggage, the specific building, and the exact location of the window and wing."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Luggage near airplane with window and wing on tarmac among airport buildings and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"road\", \"engine\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"car\", \"road\", \"engine\", \"door\", \"window\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of luggage, the specific building, and the exact location of the window and wing.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Luggage by airplane with visible wing and engine on tarmac near airport buildings and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "road",
+          "sky"
+        ],
+        "hallucinated_objects": [
+          "building"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of luggage, the exact location of the airport buildings, and the color of the trees."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [airplane, luggage, airport, building, trees, road, sky, wing, engine, door, window, tarmac, car, building, building, building, building, building, building]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Luggage by airplane with visible wing and engine on tarmac near airport buildings and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"road\", \"sky\"],\n  \"hallucinated_objects\": [\"building\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of luggage, the exact location of the airport buildings, and the color of the trees.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 579158,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000579158.jpg",
+    "final_caption": "Luggage by airplane with visible wing and engine on tarmac near airport buildings and trees.",
+    "total_time_sec": 37.66
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"airplane\",\n    \"luggage\",\n    \"airport\",\n    \"building\",\n    \"trees\",\n    \"road\",\n    \"sky\",\n    \"wing\",\n    \"engine\",\n    \"door\",\n    \"window\",\n    \"tarmac\",\n    \"car\",\n    \"building\",\n    \"building\",\n    \"building\",\n    \"building\",\n    \"building\",\n    \"building\"\n  ]\n}"
+}

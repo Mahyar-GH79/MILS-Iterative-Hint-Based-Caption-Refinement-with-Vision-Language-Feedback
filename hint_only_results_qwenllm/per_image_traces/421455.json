@@ -1,0 +1,333 @@
+{
+  "image_id": 421455,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000421455.jpg",
+  "objects": [
+    "car",
+    "dog",
+    "mirror",
+    "hand",
+    "phone",
+    "street",
+    "trees",
+    "sky",
+    "road",
+    "vehicle",
+    "light",
+    "window",
+    "handle",
+    "seat",
+    "belt",
+    "dashboard",
+    "steering wheel",
+    "seatbelt",
+    "dashboard",
+    "steering wheel"
+  ],
+  "template": "We have an image with these objects: ['car', 'dog', 'mirror', 'hand', 'phone', 'street', 'trees', 'sky', 'road', 'vehicle', 'light', 'window', 'handle', 'seat', 'belt', 'dashboard', 'steering wheel', 'seatbelt', 'dashboard', 'steering wheel']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Car with dog by street at sunset",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "street",
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "dog",
+          "mirror",
+          "hand"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, or steering wheel.",
+        "edit_instructions": [
+          "Remove the missing objects and hallucinated objects from the caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Car with dog by street at sunset\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"street\", \"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"car\", \"dog\", \"mirror\", \"hand\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, or steering wheel.\",\n  \"edit_instructions\": \"Remove the missing objects and hallucinated objects from the caption.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Street scene with trees and sunset featuring a vehicle and steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "dog",
+          "mirror",
+          "hand",
+          "phone",
+          "street",
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "light"
+        ],
+        "genericity_hint": "The caption is too generic and does not match the image content.",
+        "edit_instructions": [
+          "Remove the generic objects and focus on the specific objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street scene with trees and sunset featuring a vehicle and steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"dog\", \"mirror\", \"hand\", \"phone\", \"street\", \"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"light\"],\n  \"genericity_hint\": \"The caption is too generic and does not match the image content.\",\n  \"edit_instructions\": \"Remove the generic objects and focus on the specific objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Street with trees and dog near car and steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "light",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "street",
+          "trees",
+          "vehicle"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the phone, light, seat, belt, dashboard, and steering wheel."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Street with trees and dog near car and steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"light\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"street\", \"trees\", \"vehicle\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the phone, light, seat, belt, dashboard, and steering wheel.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Dog near car with phone, light, seatbelt, dashboard, steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "hand",
+          "phone",
+          "street",
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "dog"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic objects and specify the exact objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog near car with phone, light, seatbelt, dashboard, steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hand\", \"phone\", \"street\", \"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"car\", \"dog\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic objects and specify the exact objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Dog by street with phone, light, dashboard, steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "mirror",
+          "hand",
+          "phone"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the car or the dog.",
+        "edit_instructions": [
+          "Specify the car and the dog in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog by street with phone, light, dashboard, steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"mirror\", \"hand\", \"phone\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the car or the dog.\",\n  \"edit_instructions\": \"Specify the car and the dog in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Dog by car on street with lights and dashboard",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "street",
+          "road"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the phone, handle, seat, belt, dashboard, and steering wheel."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog by car on street with lights and dashboard\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"light\", \"street\", \"road\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the phone, handle, seat, belt, dashboard, and steering wheel.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Dog by car window with phone and steering wheel inside",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog by car window with phone and steering wheel inside\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"light\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Dog near car window with phone and steering wheel inside",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "phone"
+        ],
+        "genericity_hint": "The image is specific to a car interior with a dog and a person holding a phone.",
+        "edit_instructions": [
+          "Remove the phone and add the missing objects to make the caption more accurate."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog near car window with phone and steering wheel inside\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"phone\"],\n  \"genericity_hint\": \"The image is specific to a car interior with a dog and a person holding a phone.\",\n  \"edit_instructions\": \"Remove the phone and add the missing objects to make the caption more accurate.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Dog by car window with owner inside near dashboard and steering wheel",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "street",
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "dog",
+          "mirror",
+          "hand"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, and steering wheel."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog by car window with owner inside near dashboard and steering wheel\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"street\", \"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"car\", \"dog\", \"mirror\", \"hand\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, and steering wheel.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Dog by window in car near dashboard and steering wheel with owner inside",
+      "vlm_hint": {
+        "missing_objects": [
+          "phone",
+          "street",
+          "trees",
+          "sky",
+          "road",
+          "vehicle",
+          "light",
+          "window",
+          "handle",
+          "seat",
+          "belt",
+          "dashboard",
+          "steering wheel"
+        ],
+        "hallucinated_objects": [
+          "car",
+          "dog",
+          "mirror",
+          "hand"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, and steering wheel."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, steering wheel, seatbelt, dashboard, steering wheel]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Dog by window in car near dashboard and steering wheel with owner inside\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"phone\", \"street\", \"trees\", \"sky\", \"road\", \"vehicle\", \"light\", \"window\", \"handle\", \"seat\", \"belt\", \"dashboard\", \"steering wheel\"],\n  \"hallucinated_objects\": [\"car\", \"dog\", \"mirror\", \"hand\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the car, dog, mirror, hand, phone, street, trees, sky, road, vehicle, light, window, handle, seat, belt, dashboard, and steering wheel.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 421455,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000421455.jpg",
+    "final_caption": "Dog by window in car near dashboard and steering wheel with owner inside",
+    "total_time_sec": 38.25
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"car\",\n    \"dog\",\n    \"mirror\",\n    \"hand\",\n    \"phone\",\n    \"street\",\n    \"trees\",\n    \"sky\",\n    \"road\",\n    \"vehicle\",\n    \"light\",\n    \"window\",\n    \"handle\",\n    \"seat\",\n    \"belt\",\n    \"dashboard\",\n    \"steering wheel\",\n    \"seatbelt\",\n    \"dashboard\",\n    \"steering wheel\"\n  ]\n}"
+}

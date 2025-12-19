@@ -1,0 +1,225 @@
+{
+  "image_id": 17436,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000017436.jpg",
+  "objects": [
+    "church",
+    "tower",
+    "clock",
+    "bench",
+    "man",
+    "lamp",
+    "tree",
+    "building",
+    "sky",
+    "clouds",
+    "hill",
+    "bush",
+    "fence",
+    "street",
+    "streetlight",
+    "streetlamp",
+    "streetlight",
+    "streetlight",
+    "streetlight",
+    "streetlight"
+  ],
+  "template": "We have an image with these objects: ['church', 'tower', 'clock', 'bench', 'man', 'lamp', 'tree', 'building', 'sky', 'clouds', 'hill', 'bush', 'fence', 'street', 'streetlight', 'streetlamp', 'streetlight', 'streetlight', 'streetlight', 'streetlight']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Church tower with clock stands tall against sky clouds",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "bench",
+          "tree",
+          "building",
+          "sky",
+          "clouds",
+          "hill",
+          "bush",
+          "fence",
+          "street",
+          "streetlight"
+        ],
+        "hallucinated_objects": [
+          "clock"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the man, bench, tree, building, sky, clouds, hill, bush, fence, street, and streetlight."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Church tower with clock stands tall against sky clouds\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"bench\", \"tree\", \"building\", \"sky\", \"clouds\", \"hill\", \"bush\", \"fence\", \"street\", \"streetlight\"],\n  \"hallucinated_objects\": [\"clock\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the man, bench, tree, building, sky, clouds, hill, bush, fence, street, and streetlight.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man sits on bench under tree near church tower and building amid sky, clouds, hill, and streetlights.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the clock and add a clock to the church tower. Remove the street and add a clock to the church tower."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower and building amid sky, clouds, hill, and streetlights.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the clock and add a clock to the church tower. Remove the street and add a clock to the church tower.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man sits on bench under tree near church tower with clock and building amid sky, clouds, and hills.",
+      "vlm_hint": {
+        "missing_objects": [
+          "man"
+        ],
+        "hallucinated_objects": [
+          "clock",
+          "building"
+        ],
+        "genericity_hint": "The image is in black and white.",
+        "edit_instructions": [
+          "Remove the clock and building from the caption. The man is sitting on the bench."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock and building amid sky, clouds, and hills.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\"],\n  \"hallucinated_objects\": [\"clock\", \"building\"],\n  \"genericity_hint\": \"The image is in black and white.\",\n  \"edit_instructions\": \"Remove the clock and building from the caption. The man is sitting on the bench.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man sits on bench under tree near church tower amid sky and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower amid sky and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man sits on bench under tree near church tower with clock amid sky and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Add a clock to the church tower and remove the street."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock amid sky and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Add a clock to the church tower and remove the street.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man sits on bench under tree near church tower with clock and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man sits on bench under tree near church tower with clock and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man sits on bench under tree near church tower with clock and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man sits on bench under tree near church tower with clock and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man sits on bench under tree near church tower with clock and clouds.",
+      "vlm_hint": {
+        "missing_objects": [
+          "clock"
+        ],
+        "hallucinated_objects": [
+          "street"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [church, tower, clock, bench, man, lamp, tree, building, sky, clouds, hill, bush, fence, street, streetlight, streetlamp, streetlight, streetlight, streetlight, streetlight]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man sits on bench under tree near church tower with clock and clouds.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"clock\"],\n  \"hallucinated_objects\": [\"street\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 17436,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000017436.jpg",
+    "final_caption": "Man sits on bench under tree near church tower with clock and clouds.",
+    "total_time_sec": 27.77
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"church\",\n    \"tower\",\n    \"clock\",\n    \"bench\",\n    \"man\",\n    \"lamp\",\n    \"tree\",\n    \"building\",\n    \"sky\",\n    \"clouds\",\n    \"hill\",\n    \"bush\",\n    \"fence\",\n    \"street\",\n    \"streetlight\",\n    \"streetlamp\",\n    \"streetlight\",\n    \"streetlight\",\n    \"streetlight\",\n    \"streetlight\"\n  ]\n}"
+}

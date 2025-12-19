@@ -1,0 +1,271 @@
+{
+  "image_id": 410456,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000410456.jpg",
+  "objects": [
+    "surfboards",
+    "wetsuits",
+    "beach",
+    "buildings",
+    "trees",
+    "people",
+    "surfing",
+    "water",
+    "ocean",
+    "coast",
+    "coastline",
+    "coastal",
+    "coastal",
+    "coastal",
+    "coastal",
+    "coastal",
+    "coastal",
+    "coastal",
+    "coastal",
+    "coastal"
+  ],
+  "template": "We have an image with these objects: ['surfboards', 'wetsuits', 'beach', 'buildings', 'trees', 'people', 'surfing', 'water', 'ocean', 'coast', 'coastline', 'coastal', 'coastal', 'coastal', 'coastal', 'coastal', 'coastal', 'coastal', 'coastal', 'coastal']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People surfing at the coastal beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "water",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "surfing",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the activity or the location.",
+        "edit_instructions": [
+          "Specify the activity and the location in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People surfing at the coastal beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"water\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"surfing\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the activity or the location.\",\n  \"edit_instructions\": \"Specify the activity and the location in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Surfboards in the coastal water near the beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "water"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "surfing",
+          "ocean",
+          "coast",
+          "coastline",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfboards in the coastal water near the beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"water\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"surfing\", \"ocean\", \"coast\", \"coastline\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Surfboards and wetsuits in the coastal water by the beach",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "wetsuits",
+          "beach",
+          "buildings",
+          "trees",
+          "people",
+          "surfing",
+          "water",
+          "ocean",
+          "coast",
+          "coastline",
+          "coastal"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The candidate caption is too generic and does not provide specific details about the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the details of the image, such as the number of surfboards, wetsuits, and people, as well as the location (beach, buildings, trees, etc.)."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfboards and wetsuits in the coastal water by the beach\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"wetsuits\", \"beach\", \"buildings\", \"trees\", \"people\", \"surfing\", \"water\", \"ocean\", \"coast\", \"coastline\", \"coastal\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The candidate caption is too generic and does not provide specific details about the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the details of the image, such as the number of surfboards, wetsuits, and people, as well as the location (beach, buildings, trees, etc.).\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Surfers in wetsuits and surfboards on the coastal beach near buildings and trees.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "people",
+          "water",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the number of surfboards, people, and their actions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers in wetsuits and surfboards on the coastal beach near buildings and trees.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"people\", \"water\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the number of surfboards, people, and their actions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Surfers in wetsuits ride surfboards in the ocean near the coast.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "coast"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers in wetsuits ride surfboards in the ocean near the coast.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"coast\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Surfers ride surfboards in the ocean by the coastal beach.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers ride surfboards in the ocean by the coastal beach.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Surfers ride waves on surfboards at the coastal beach.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "water",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers ride waves on surfboards at the coastal beach.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"water\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Surfers ride waves on surfboards at the coastal ocean.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "water",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers ride waves on surfboards at the coastal ocean.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"water\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Surfers in wetsuits catch waves on surfboards at the coastal ocean.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "water",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers in wetsuits catch waves on surfboards at the coastal ocean.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"water\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Surfers catch waves on surfboards at the coastal ocean.",
+      "vlm_hint": {
+        "missing_objects": [
+          "surfboards",
+          "water",
+          "ocean"
+        ],
+        "hallucinated_objects": [
+          "buildings",
+          "trees",
+          "people",
+          "coastal"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the location or the activity.",
+        "edit_instructions": [
+          "Specify the location and the activity in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [surfboards, wetsuits, beach, buildings, trees, people, surfing, water, ocean, coast, coastline, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal, coastal]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Surfers catch waves on surfboards at the coastal ocean.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"surfboards\", \"water\", \"ocean\"],\n  \"hallucinated_objects\": [\"buildings\", \"trees\", \"people\", \"coastal\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the location or the activity.\",\n  \"edit_instructions\": \"Specify the location and the activity in the caption.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 410456,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000410456.jpg",
+    "final_caption": "Surfers catch waves on surfboards at the coastal ocean.",
+    "total_time_sec": 34.01
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"surfboards\",\n    \"wetsuits\",\n    \"beach\",\n    \"buildings\",\n    \"trees\",\n    \"people\",\n    \"surfing\",\n    \"water\",\n    \"ocean\",\n    \"coast\",\n    \"coastline\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\",\n    \"coastal\"\n  ]\n}"
+}

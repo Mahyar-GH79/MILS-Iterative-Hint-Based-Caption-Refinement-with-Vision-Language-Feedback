@@ -1,0 +1,201 @@
+{
+  "image_id": 398237,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000398237.jpg",
+  "objects": [
+    "a child",
+    "a pink kite",
+    "a blue kite",
+    "a yellow and black kite",
+    "a grassy field"
+  ],
+  "template": "We have an image with these objects: ['a child', 'a pink kite', 'a blue kite', 'a yellow and black kite', 'a grassy field']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Child flies colorful kites in field",
+      "vlm_hint": {
+        "missing_objects": [
+          "a blue kite"
+        ],
+        "hallucinated_objects": [
+          "a yellow and black kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the colors of the kites.",
+        "edit_instructions": [
+          "Specify the colors of the kites in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies colorful kites in field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"a blue kite\"],\n  \"hallucinated_objects\": [\"a yellow and black kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the colors of the kites.\",\n  \"edit_instructions\": \"Specify the colors of the kites in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Child flies pink and blue kites in a grassy field",
+      "vlm_hint": {
+        "missing_objects": [
+          "yellow and black kite"
+        ],
+        "hallucinated_objects": [
+          "blue kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the colors of the kites.",
+        "edit_instructions": [
+          "Specify the colors of the kites in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies pink and blue kites in a grassy field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"yellow and black kite\"],\n  \"hallucinated_objects\": [\"blue kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the colors of the kites.\",\n  \"edit_instructions\": \"Specify the colors of the kites in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Child flies pink, yellow and black kites in a grassy field",
+      "vlm_hint": {
+        "missing_objects": [
+          "blue kite"
+        ],
+        "hallucinated_objects": [
+          "yellow and black kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the colors of the kites.",
+        "edit_instructions": [
+          "Specify the colors of the kites in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies pink, yellow and black kites in a grassy field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"blue kite\"],\n  \"hallucinated_objects\": [\"yellow and black kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the colors of the kites.\",\n  \"edit_instructions\": \"Specify the colors of the kites in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Child flies a pink, blue, and yellow kite in a grassy field",
+      "vlm_hint": {
+        "missing_objects": [
+          "a yellow and black kite"
+        ],
+        "hallucinated_objects": [
+          "a child"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact number of kites or their colors.",
+        "edit_instructions": [
+          "Specify the exact number of kites and their colors."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies a pink, blue, and yellow kite in a grassy field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"a yellow and black kite\"],\n  \"hallucinated_objects\": [\"a child\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact number of kites or their colors.\",\n  \"edit_instructions\": \"Specify the exact number of kites and their colors.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Child flies four kites\u2014pink, blue, yellow and black\u2014in a grassy field.",
+      "vlm_hint": {
+        "missing_objects": [
+          "a child"
+        ],
+        "hallucinated_objects": [
+          "four kites"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of kites.",
+        "edit_instructions": [
+          "Specify the number of kites in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies four kites\u2014pink, blue, yellow and black\u2014in a grassy field.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"a child\"],\n  \"hallucinated_objects\": [\"four kites\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of kites.\",\n  \"edit_instructions\": \"Specify the number of kites in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Child flies three colorful kites in a grassy field.",
+      "vlm_hint": {
+        "missing_objects": [
+          "a blue kite"
+        ],
+        "hallucinated_objects": [
+          "a yellow and black kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the number of kites.",
+        "edit_instructions": [
+          "Specify the number of kites and remove the incorrect kite color."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies three colorful kites in a grassy field.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"a blue kite\"],\n  \"hallucinated_objects\": [\"a yellow and black kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the number of kites.\",\n  \"edit_instructions\": \"Specify the number of kites and remove the incorrect kite color.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Child flies two colorful kites in a grassy field.",
+      "vlm_hint": {
+        "missing_objects": [
+          "a blue kite"
+        ],
+        "hallucinated_objects": [
+          "a yellow and black kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the colors of the kites.",
+        "edit_instructions": [
+          "Specify the colors of the kites in the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies two colorful kites in a grassy field.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"a blue kite\"],\n  \"hallucinated_objects\": [\"a yellow and black kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the colors of the kites.\",\n  \"edit_instructions\": \"Specify the colors of the kites in the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Child flies a pink and blue kite in a grassy field.",
+      "vlm_hint": {
+        "missing_objects": [
+          "yellow and black kite"
+        ],
+        "hallucinated_objects": [
+          "a child"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact colors of the kites.",
+        "edit_instructions": [
+          "Specify the exact colors of the kites and remove the mention of the child."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Child flies a pink and blue kite in a grassy field.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"yellow and black kite\"],\n  \"hallucinated_objects\": [\"a child\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact colors of the kites.\",\n  \"edit_instructions\": \"Specify the exact colors of the kites and remove the mention of the child.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Pink blue and yellow black kites fly over grass.",
+      "vlm_hint": {
+        "missing_objects": [
+          "a child"
+        ],
+        "hallucinated_objects": [
+          "a yellow and black kite"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Remove the generic caption and specify the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Pink blue and yellow black kites fly over grass.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"a child\"],\n  \"hallucinated_objects\": [\"a yellow and black kite\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Remove the generic caption and specify the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "A child flies a pink kite and a blue kite in a grassy field.",
+      "vlm_hint": {
+        "missing_objects": [
+          "yellow and black kite"
+        ],
+        "hallucinated_objects": [
+          "a child"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact number of kites or the presence of a yellow and black kite.",
+        "edit_instructions": [
+          "Remove the mention of a child and add a yellow and black kite to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [a child, a pink kite, a blue kite, a yellow and black kite, a grassy field]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A child flies a pink kite and a blue kite in a grassy field.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"yellow and black kite\"],\n  \"hallucinated_objects\": [\"a child\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact number of kites or the presence of a yellow and black kite.\",\n  \"edit_instructions\": \"Remove the mention of a child and add a yellow and black kite to the caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 398237,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000398237.jpg",
+    "final_caption": "A child flies a pink kite and a blue kite in a grassy field.",
+    "total_time_sec": 27.01
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"a child\",\n    \"a pink kite\",\n    \"a blue kite\",\n    \"a yellow and black kite\",\n    \"a grassy field\"\n  ]\n}"
+}

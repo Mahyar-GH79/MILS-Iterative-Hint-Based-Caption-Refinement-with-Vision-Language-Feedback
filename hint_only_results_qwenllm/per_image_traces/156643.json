@@ -1,0 +1,307 @@
+{
+  "image_id": 156643,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000156643.jpg",
+  "objects": [
+    "Carlsberg bottle",
+    "cake",
+    "microphone",
+    "beer glass",
+    "man",
+    "polar bear costume",
+    "table",
+    "people",
+    "ring",
+    "necklace",
+    "umbrella",
+    "chair",
+    "phone",
+    "cigarette case",
+    "microphone stand",
+    "umbrella",
+    "tablecloth",
+    "table",
+    "table"
+  ],
+  "template": "We have an image with these objects: ['Carlsberg bottle', 'cake', 'microphone', 'beer glass', 'man', 'polar bear costume', 'table', 'people', 'ring', 'necklace', 'umbrella', 'chair', 'phone', 'cigarette case', 'microphone stand', 'umbrella', 'tablecloth', 'table', 'table']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Man in polar bear costume with microphone at table",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "phone",
+          "cigarette case"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and removes the hallucinated ones."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in polar bear costume with microphone at table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"phone\", \"cigarette case\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and removes the hallucinated ones.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Man in polar bear costume with microphone on table under umbrella",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "polar bear costume",
+          "microphone",
+          "beer glass",
+          "cigarette case",
+          "table",
+          "people",
+          "ring",
+          "necklace",
+          "umbrella",
+          "chair",
+          "phone",
+          "microphone stand"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in polar bear costume with microphone on table under umbrella\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"man\", \"polar bear costume\", \"microphone\", \"beer glass\", \"cigarette case\", \"table\", \"people\", \"ring\", \"necklace\", \"umbrella\", \"chair\", \"phone\", \"microphone stand\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Carlsberg bottle on table under umbrella with tablecloth",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "polar bear costume",
+          "cake",
+          "microphone",
+          "beer glass",
+          "people",
+          "ring",
+          "necklace",
+          "umbrella",
+          "tablecloth",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "umbrella",
+          "tablecloth"
+        ],
+        "genericity_hint": "The image contains a man, a polar bear costume, a cake, a microphone, a beer glass, people, a ring, a necklace, an umbrella, a tablecloth, and a table.",
+        "edit_instructions": [
+          "Remove the missing objects and hallucinated objects from the candidate caption."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carlsberg bottle on table under umbrella with tablecloth\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"polar bear costume\", \"cake\", \"microphone\", \"beer glass\", \"people\", \"ring\", \"necklace\", \"umbrella\", \"tablecloth\", \"table\"],\n  \"hallucinated_objects\": [\"umbrella\", \"tablecloth\"],\n  \"genericity_hint\": \"The image contains a man, a polar bear costume, a cake, a microphone, a beer glass, people, a ring, a necklace, an umbrella, a tablecloth, and a table.\",\n  \"edit_instructions\": \"Remove the missing objects and hallucinated objects from the candidate caption.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man in polar bear costume with cake microphone and beer glass on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "polar bear costume",
+          "cake",
+          "microphone",
+          "beer glass",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the brand of the beer bottle, the type of cake, and the specific items on the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in polar bear costume with cake microphone and beer glass on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"man\", \"polar bear costume\", \"cake\", \"microphone\", \"beer glass\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the brand of the beer bottle, the type of cake, and the specific items on the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Carlsberg bottle ring necklace umbrella tablecloth on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "polar bear costume",
+          "cake",
+          "microphone",
+          "beer glass",
+          "people",
+          "umbrella",
+          "chair",
+          "phone",
+          "cigarette case",
+          "microphone stand"
+        ],
+        "hallucinated_objects": [
+          "ring",
+          "necklace",
+          "tablecloth"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carlsberg bottle ring necklace umbrella tablecloth on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"polar bear costume\", \"cake\", \"microphone\", \"beer glass\", \"people\", \"umbrella\", \"chair\", \"phone\", \"cigarette case\", \"microphone stand\"],\n  \"hallucinated_objects\": [\"ring\", \"necklace\", \"tablecloth\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man in polar bear costume with cake microphone and beer glass on table",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "polar bear costume",
+          "cake",
+          "microphone",
+          "beer glass",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide specific details about the objects in the image, such as the brand of the beer bottle, the type of cake, and the specific items on the table."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in polar bear costume with cake microphone and beer glass on table\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"man\", \"polar bear costume\", \"cake\", \"microphone\", \"beer glass\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide specific details about the objects in the image, such as the brand of the beer bottle, the type of cake, and the specific items on the table.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Carlsberg bottle rings and necklaces sit on a tablecloth-covered table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "microphone",
+          "beer glass",
+          "man",
+          "polar bear costume",
+          "table",
+          "tablecloth",
+          "umbrella",
+          "chair",
+          "phone",
+          "cigarette case",
+          "microphone stand",
+          "umbrella",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "ring",
+          "necklace"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Carlsberg bottle rings and necklaces sit on a tablecloth-covered table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"microphone\", \"beer glass\", \"man\", \"polar bear costume\", \"table\", \"tablecloth\", \"umbrella\", \"chair\", \"phone\", \"cigarette case\", \"microphone stand\", \"umbrella\", \"table\"],\n  \"hallucinated_objects\": [\"ring\", \"necklace\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man in polar bear costume stands by microphone with beer glass and umbrella on a table.",
+      "vlm_hint": {
+        "missing_objects": [
+          "umbrella",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "polar bear costume",
+          "microphone",
+          "beer glass",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and actions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man in polar bear costume stands by microphone with beer glass and umbrella on a table.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"umbrella\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"man\", \"polar bear costume\", \"microphone\", \"beer glass\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and actions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "People sit at a table with a Carlsberg bottle and cake covered by a tablecloth.",
+      "vlm_hint": {
+        "missing_objects": [
+          "microphone",
+          "umbrella",
+          "chair",
+          "tablecloth"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "polar bear costume",
+          "people",
+          "ring",
+          "necklace",
+          "phone",
+          "cigarette case",
+          "microphone stand",
+          "umbrella",
+          "table"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including their positions and interactions."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People sit at a table with a Carlsberg bottle and cake covered by a tablecloth.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"microphone\", \"umbrella\", \"chair\", \"tablecloth\"],\n  \"hallucinated_objects\": [\"man\", \"polar bear costume\", \"people\", \"ring\", \"necklace\", \"phone\", \"cigarette case\", \"microphone stand\", \"umbrella\", \"table\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including their positions and interactions.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "A table with a Carlsberg bottle and cake covered by a tablecloth and an umbrella.",
+      "vlm_hint": {
+        "missing_objects": [
+          "microphone",
+          "beer glass",
+          "people",
+          "ring",
+          "necklace",
+          "umbrella",
+          "chair",
+          "phone",
+          "cigarette case",
+          "microphone stand",
+          "tablecloth",
+          "table"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "polar bear costume"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, including the man, the polar bear costume, the microphone, the beer glass, the people, the ring, the necklace, the umbrella, the chair, the phone, the cigarette case, the microphone stand, the tablecloth, and the table."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [Carlsberg bottle, cake, microphone, beer glass, man, polar bear costume, table, people, ring, necklace, umbrella, chair, phone, cigarette case, microphone stand, umbrella, tablecloth, table, table]\nCandidate caption is provided but you must not quote it.\nCandidate caption: A table with a Carlsberg bottle and cake covered by a tablecloth and an umbrella.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"microphone\", \"beer glass\", \"people\", \"ring\", \"necklace\", \"umbrella\", \"chair\", \"phone\", \"cigarette case\", \"microphone stand\", \"tablecloth\", \"table\"],\n  \"hallucinated_objects\": [\"man\", \"polar bear costume\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, including the man, the polar bear costume, the microphone, the beer glass, the people, the ring, the necklace, the umbrella, the chair, the phone, the cigarette case, the microphone stand, the tablecloth, and the table.\",\n  \"score\": 1\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 156643,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000156643.jpg",
+    "final_caption": "A table with a Carlsberg bottle and cake covered by a tablecloth and an umbrella.",
+    "total_time_sec": 41.16
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"Carlsberg bottle\",\n    \"cake\",\n    \"microphone\",\n    \"beer glass\",\n    \"man\",\n    \"polar bear costume\",\n    \"table\",\n    \"people\",\n    \"ring\",\n    \"necklace\",\n    \"umbrella\",\n    \"chair\",\n    \"phone\",\n    \"cigarette case\",\n    \"microphone stand\",\n    \"umbrella\",\n    \"tablecloth\",\n    \"table\",\n    \"table\"\n  ]\n}"
+}

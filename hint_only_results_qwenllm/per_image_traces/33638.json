@@ -1,0 +1,301 @@
+{
+  "image_id": 33638,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000033638.jpg",
+  "objects": [
+    "person",
+    "stove",
+    "shorts",
+    "shoes",
+    "plate",
+    "bowl",
+    "pot",
+    "cup",
+    "spoon",
+    "ladder",
+    "shelf",
+    "bottle",
+    "jar",
+    "oven",
+    "sink",
+    "light",
+    "wall",
+    "floor",
+    "door",
+    "window"
+  ],
+  "template": "We have an image with these objects: ['person', 'stove', 'shorts', 'shoes', 'plate', 'bowl', 'pot', 'cup', 'spoon', 'ladder', 'shelf', 'bottle', 'jar', 'oven', 'sink', 'light', 'wall', 'floor', 'door', 'window']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Person stands near stove with pot on burner",
+      "vlm_hint": {
+        "missing_objects": [
+          "plate",
+          "bowl",
+          "cup",
+          "spoon",
+          "oven",
+          "sink",
+          "light",
+          "wall",
+          "floor",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "shelf",
+          "bottle",
+          "jar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the missing objects and avoids the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person stands near stove with pot on burner\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"plate\", \"bowl\", \"cup\", \"spoon\", \"oven\", \"sink\", \"light\", \"wall\", \"floor\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"shelf\", \"bottle\", \"jar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the missing objects and avoids the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Person stands by stove with pot, plates, and cup on burner",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "oven",
+          "sink",
+          "light",
+          "wall",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "shelf",
+          "bottle",
+          "jar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the light and window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person stands by stove with pot, plates, and cup on burner\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"oven\", \"sink\", \"light\", \"wall\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"shelf\", \"bottle\", \"jar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the light and window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Person by modern stove with pot, plates, cup, shoes near sink and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "sink",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "modern stove",
+          "oven"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of stove or the presence of a sink and window.",
+        "edit_instructions": [
+          "Specify the type of stove, include the sink and window in the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by modern stove with pot, plates, cup, shoes near sink and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"sink\", \"window\"],\n  \"hallucinated_objects\": [\"modern stove\", \"oven\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of stove or the presence of a sink and window.\",\n  \"edit_instructions\": \"Specify the type of stove, include the sink and window in the caption.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Person by range with pot plates cup near sink and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "oven",
+          "sink",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "shelf",
+          "bottle",
+          "jar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by range with pot plates cup near sink and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"oven\", \"sink\", \"window\"],\n  \"hallucinated_objects\": [\"light\", \"shelf\", \"bottle\", \"jar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Person by stove with pot plates near sink and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "oven",
+          "sink",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "light",
+          "wall",
+          "floor",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by stove with pot plates near sink and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"oven\", \"sink\", \"window\"],\n  \"hallucinated_objects\": [\"light\", \"wall\", \"floor\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Person by gas stove with pot and plate near sink and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "oven",
+          "sink",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "gas stove",
+          "pot",
+          "plate",
+          "shelf",
+          "bottle",
+          "jar",
+          "oven",
+          "sink",
+          "light",
+          "wall",
+          "floor",
+          "door"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person by gas stove with pot and plate near sink and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"oven\", \"sink\", \"window\"],\n  \"hallucinated_objects\": [\"gas stove\", \"pot\", \"plate\", \"shelf\", \"bottle\", \"jar\", \"oven\", \"sink\", \"light\", \"wall\", \"floor\", \"door\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Person in shorts at stove with plate near sink and window",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "bottle",
+          "jar",
+          "oven",
+          "sink",
+          "light",
+          "wall",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "plate",
+          "bowl",
+          "pot",
+          "cup",
+          "spoon"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts at stove with plate near sink and window\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"bottle\", \"jar\", \"oven\", \"sink\", \"light\", \"wall\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"plate\", \"bowl\", \"pot\", \"cup\", \"spoon\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Person in shorts using gas stove near sink and window with oven and bottles on shelf",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "bottle",
+          "jar",
+          "oven",
+          "sink",
+          "light",
+          "wall",
+          "floor",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "shelf"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts using gas stove near sink and window with oven and bottles on shelf\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"bottle\", \"jar\", \"oven\", \"sink\", \"light\", \"wall\", \"floor\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"shelf\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Person in shorts using gas stove by sink near window with oven and bottles on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "bottle",
+          "jar",
+          "oven",
+          "sink",
+          "light",
+          "wall",
+          "door",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "shelf",
+          "pot",
+          "cup",
+          "spoon"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts using gas stove by sink near window with oven and bottles on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"bottle\", \"jar\", \"oven\", \"sink\", \"light\", \"wall\", \"door\", \"window\"],\n  \"hallucinated_objects\": [\"shelf\", \"pot\", \"cup\", \"spoon\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Person in shorts using gas stove near sink by window with bottles and jars on wall",
+      "vlm_hint": {
+        "missing_objects": [
+          "shoes",
+          "oven",
+          "sink",
+          "window"
+        ],
+        "hallucinated_objects": [
+          "bottle",
+          "jar"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [person, stove, shorts, shoes, plate, bowl, pot, cup, spoon, ladder, shelf, bottle, jar, oven, sink, light, wall, floor, door, window]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Person in shorts using gas stove near sink by window with bottles and jars on wall\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"shoes\", \"oven\", \"sink\", \"window\"],\n  \"hallucinated_objects\": [\"bottle\", \"jar\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of stove, the presence of a sink, and the location of the window.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 33638,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000033638.jpg",
+    "final_caption": "Person in shorts using gas stove near sink by window with bottles and jars on wall",
+    "total_time_sec": 38.56
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"person\",\n    \"stove\",\n    \"shorts\",\n    \"shoes\",\n    \"plate\",\n    \"bowl\",\n    \"pot\",\n    \"cup\",\n    \"spoon\",\n    \"ladder\",\n    \"shelf\",\n    \"bottle\",\n    \"jar\",\n    \"oven\",\n    \"sink\",\n    \"light\",\n    \"wall\",\n    \"floor\",\n    \"door\",\n    \"window\"\n  ]\n}"
+}

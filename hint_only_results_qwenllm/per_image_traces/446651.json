@@ -1,0 +1,203 @@
+{
+  "image_id": 446651,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000446651.jpg",
+  "objects": [],
+  "template": "We have an image with these objects: []. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Unknown object dominates scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle"
+        ],
+        "hallucinated_objects": [
+          "unknown object"
+        ],
+        "genericity_hint": "The image is not specific about the object that dominates the scene.",
+        "edit_instructions": [
+          "Remove the unknown object and focus on the motorcycle."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Unknown object dominates scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": \"motorcycle\",\n  \"hallucinated_objects\": \"unknown object\",\n  \"genericity_hint\": \"The image is not specific about the object that dominates the scene.\",\n  \"edit_instructions\": \"Remove the unknown object and focus on the motorcycle.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Motorcycle dominates the scene",
+      "vlm_hint": {
+        "missing_objects": [
+          "man",
+          "girl"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Provide specific objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Motorcycle dominates the scene\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"man\", \"girl\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Provide specific objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Man on motorcycle with girl beside him",
+      "vlm_hint": {
+        "missing_objects": [
+          "helmet",
+          "sunglasses"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man on motorcycle with girl beside him\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"helmet\", \"sunglasses\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Man and girl on motorcycle sunglasses in hand",
+      "vlm_hint": {
+        "missing_objects": [
+          "helmet",
+          "motorcycle"
+        ],
+        "hallucinated_objects": [
+          "sunglasses"
+        ],
+        "genericity_hint": "The caption is too generic and does not provide enough detail about the objects in the image.",
+        "edit_instructions": [
+          "Add more specific details about the objects in the image, such as the type of motorcycle and the fact that the man and girl are wearing helmets."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on motorcycle sunglasses in hand\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"helmet\", \"motorcycle\"],\n  \"hallucinated_objects\": [\"sunglasses\"],\n  \"genericity_hint\": \"The caption is too generic and does not provide enough detail about the objects in the image.\",\n  \"edit_instructions\": \"Add more specific details about the objects in the image, such as the type of motorcycle and the fact that the man and girl are wearing helmets.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Man and girl on a motorcycle both wearing helmets",
+      "vlm_hint": {
+        "missing_objects": [
+          "car",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific about the location or the type of vehicle.",
+        "edit_instructions": [
+          "Add a car and a street to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on a motorcycle both wearing helmets\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"car\", \"street\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific about the location or the type of vehicle.\",\n  \"edit_instructions\": \"Add a car and a street to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Man and girl on a motorcycle with helmets parked on a street",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific about the type of motorcycle.",
+        "edit_instructions": [
+          "Remove the mention of the motorcycle and add a more specific object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on a motorcycle with helmets parked on a street\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific about the type of motorcycle.\",\n  \"edit_instructions\": \"Remove the mention of the motorcycle and add a more specific object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Man and girl parked on a street with helmets",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific about the location or the type of vehicle.",
+        "edit_instructions": [
+          "Add a motorcycle and a street to the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl parked on a street with helmets\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"street\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific about the location or the type of vehicle.\",\n  \"edit_instructions\": \"Add a motorcycle and a street to the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Man and girl on a street with a motorcycle",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated object."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on a street with a motorcycle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\", \"street\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated object.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Man and girl on street with motorcycle",
+      "vlm_hint": {
+        "missing_objects": [
+          "motorcycle"
+        ],
+        "hallucinated_objects": [
+          "unknown"
+        ],
+        "genericity_hint": "The image is not specific about the type of vehicle they are on.",
+        "edit_instructions": [
+          "Specify the type of vehicle they are on."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on street with motorcycle\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"motorcycle\"],\n  \"hallucinated_objects\": [\"unknown\"],\n  \"genericity_hint\": \"The image is not specific about the type of vehicle they are on.\",\n  \"edit_instructions\": \"Specify the type of vehicle they are on.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Man and girl on street with scooter",
+      "vlm_hint": {
+        "missing_objects": [
+          "scooter",
+          "street"
+        ],
+        "hallucinated_objects": [
+          "man",
+          "girl"
+        ],
+        "genericity_hint": "The image is not specific enough to identify the objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [unknown]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Man and girl on street with scooter\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"scooter\", \"street\"],\n  \"hallucinated_objects\": [\"man\", \"girl\"],\n  \"genericity_hint\": \"The image is not specific enough to identify the objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 446651,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000446651.jpg",
+    "final_caption": "Man and girl on street with scooter",
+    "total_time_sec": 24.63
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n[\"motorcycle\", \"man\", \"girl\", \"helmet\", \"sunglasses\", \"street\", \"car\", \"building\", \"tree\", \"streetlight\", \"sign\", \"tail light\", \"backpack\", \"shirt\", \"jacket\", \"mirror\", \"handle\", \"seat\", \"window\", \"tire\"]"
+}

@@ -1,0 +1,249 @@
+{
+  "image_id": 43816,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000043816.jpg",
+  "objects": [
+    "baseball bat",
+    "baseball glove",
+    "home plate",
+    "baseball",
+    "helmet",
+    "catcher's mask",
+    "uniform",
+    "grass",
+    "dirt",
+    "net",
+    "building",
+    "stairs",
+    "bench",
+    "tarp",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe",
+    "shoe"
+  ],
+  "template": "We have an image with these objects: ['baseball bat', 'baseball glove', 'home plate', 'baseball', 'helmet', \"catcher's mask\", 'uniform', 'grass', 'dirt', 'net', 'building', 'stairs', 'bench', 'tarp', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe', 'shoe']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Baseball game setup on grass field",
+      "vlm_hint": {
+        "missing_objects": [
+          "net",
+          "bench",
+          "tarp"
+        ],
+        "hallucinated_objects": [
+          "stairs"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact location or type of game.",
+        "edit_instructions": [
+          "Provide more specific details about the location and type of game."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball game setup on grass field\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"net\", \"bench\", \"tarp\"],\n  \"hallucinated_objects\": [\"stairs\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact location or type of game.\",\n  \"edit_instructions\": \"Provide more specific details about the location and type of game.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Baseball game setup with net on grass field near bench covered by tarp",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher",
+          "pitcher"
+        ],
+        "hallucinated_objects": [
+          "net",
+          "bench",
+          "tarp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the objects present in the image and excludes the objects that are not present."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball game setup with net on grass field near bench covered by tarp\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher\", \"pitcher\"],\n  \"hallucinated_objects\": [\"net\", \"bench\", \"tarp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the objects present in the image and excludes the objects that are not present.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Baseball players with bats gloves stand near home plate on grass",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher"
+        ],
+        "hallucinated_objects": [
+          "net",
+          "stairs",
+          "bench",
+          "tarp"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the exact objects in the image.",
+        "edit_instructions": [
+          "Add the catcher and remove the net, stairs, bench, and tarp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players with bats gloves stand near home plate on grass\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher\"],\n  \"hallucinated_objects\": [\"net\", \"stairs\", \"bench\", \"tarp\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the exact objects in the image.\",\n  \"edit_instructions\": \"Add the catcher and remove the net, stairs, bench, and tarp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Baseball players in uniforms hold bats and gloves near home plate on grass catcher in mask",
+      "vlm_hint": {
+        "missing_objects": [
+          "net",
+          "building",
+          "stairs",
+          "bench",
+          "tarp"
+        ],
+        "hallucinated_objects": [
+          "shoe",
+          "shoe",
+          "shoe",
+          "shoe",
+          "shoe"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the net, building, stairs, bench, and tarp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniforms hold bats and gloves near home plate on grass catcher in mask\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"net\", \"building\", \"stairs\", \"bench\", \"tarp\"],\n  \"hallucinated_objects\": [\"shoe\", \"shoe\", \"shoe\", \"shoe\", \"shoe\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the net, building, stairs, bench, and tarp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Baseball players in uniform with bat and glove near home plate under tarp by net and building",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher"
+        ],
+        "hallucinated_objects": [
+          "net",
+          "building",
+          "stairs",
+          "bench",
+          "tarp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add specific details about the objects in the image, such as the catcher, and remove the generic objects."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniform with bat and glove near home plate under tarp by net and building\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher\"],\n  \"hallucinated_objects\": [\"net\", \"building\", \"stairs\", \"bench\", \"tarp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add specific details about the objects in the image, such as the catcher, and remove the generic objects.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Baseball players in uniform with bat and glove near home plate and catcher",
+      "vlm_hint": {
+        "missing_objects": [
+          "net",
+          "bench",
+          "tarp"
+        ],
+        "hallucinated_objects": [
+          "stairs"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of net, bench, and tarp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniform with bat and glove near home plate and catcher\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"net\", \"bench\", \"tarp\"],\n  \"hallucinated_objects\": [\"stairs\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of net, bench, and tarp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Baseball players in uniform with bat and glove near home plate tarp and net",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher"
+        ],
+        "hallucinated_objects": [
+          "net",
+          "tarp"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Add a specific object to the caption and remove the net and tarp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniform with bat and glove near home plate tarp and net\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher\"],\n  \"hallucinated_objects\": [\"net\", \"tarp\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Add a specific object to the caption and remove the net and tarp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Baseball players in uniform with bat and glove near home plate and catcher",
+      "vlm_hint": {
+        "missing_objects": [
+          "net",
+          "bench",
+          "tarp"
+        ],
+        "hallucinated_objects": [
+          "stairs"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the type of net, bench, and tarp."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniform with bat and glove near home plate and catcher\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"net\", \"bench\", \"tarp\"],\n  \"hallucinated_objects\": [\"stairs\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the type of net, bench, and tarp.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Baseball players in uniform near home plate with bat, glove, and tarp-covered bench",
+      "vlm_hint": {
+        "missing_objects": [
+          "net",
+          "stairs",
+          "bench",
+          "tarp",
+          "shoe"
+        ],
+        "hallucinated_objects": [
+          "grass",
+          "dirt"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide more specific details about the objects in the image, such as the net, stairs, bench, tarp, and shoes."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniform near home plate with bat, glove, and tarp-covered bench\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"net\", \"stairs\", \"bench\", \"tarp\", \"shoe\"],\n  \"hallucinated_objects\": [\"grass\", \"dirt\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide more specific details about the objects in the image, such as the net, stairs, bench, tarp, and shoes.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Baseball players in uniform near home plate with net, tarp-covered bench and shoes",
+      "vlm_hint": {
+        "missing_objects": [
+          "catcher",
+          "ball"
+        ],
+        "hallucinated_objects": [
+          "net",
+          "tarp-covered bench",
+          "shoes"
+        ],
+        "genericity_hint": "The caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes the catcher, the ball, and the correct objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [baseball bat, baseball glove, home plate, baseball, helmet, catcher's mask, uniform, grass, dirt, net, building, stairs, bench, tarp, shoe, shoe, shoe, shoe, shoe, shoe]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Baseball players in uniform near home plate with net, tarp-covered bench and shoes\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"catcher\", \"ball\"],\n  \"hallucinated_objects\": [\"net\", \"tarp-covered bench\", \"shoes\"],\n  \"genericity_hint\": \"The caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes the catcher, the ball, and the correct objects in the image.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 43816,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000043816.jpg",
+    "final_caption": "Baseball players in uniform near home plate with net, tarp-covered bench and shoes",
+    "total_time_sec": 32.96
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"baseball bat\",\n    \"baseball glove\",\n    \"home plate\",\n    \"baseball\",\n    \"helmet\",\n    \"catcher's mask\",\n    \"uniform\",\n    \"grass\",\n    \"dirt\",\n    \"net\",\n    \"building\",\n    \"stairs\",\n    \"bench\",\n    \"tarp\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\",\n    \"shoe\"\n  ]\n}"
+}

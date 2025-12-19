@@ -1,0 +1,212 @@
+{
+  "image_id": 239274,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000239274.jpg",
+  "objects": [
+    "boat",
+    "water",
+    "rocks",
+    "people",
+    "trees",
+    "hills",
+    "ocean",
+    "boat",
+    "water",
+    "rocks",
+    "people",
+    "trees",
+    "hills",
+    "ocean",
+    "boat",
+    "water",
+    "rocks",
+    "people",
+    "trees",
+    "hills"
+  ],
+  "template": "We have an image with these objects: ['boat', 'water', 'rocks', 'people', 'trees', 'hills', 'ocean', 'boat', 'water', 'rocks', 'people', 'trees', 'hills', 'ocean', 'boat', 'water', 'rocks', 'people', 'trees', 'hills']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Boats people water hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "ocean"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a boat, people, water, and rocks, but it is missing trees and the ocean.",
+        "edit_instructions": [
+          "Add trees and the ocean to the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"ocean\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a boat, people, water, and rocks, but it is missing trees and the ocean.\",\n  \"edit_instructions\": \"Add trees and the ocean to the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Boats people water rocks ocean trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "hills"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and misses some key elements of the image.",
+        "edit_instructions": [
+          "Add 'hills' to the caption to make it more specific."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water rocks ocean trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"hills\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and misses some key elements of the image.\",\n  \"edit_instructions\": \"Add 'hills' to the caption to make it more specific.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Boats people water rocks hills ocean trees",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a boat, water, rocks, people, and trees, but the caption is missing the 'hills' object.",
+        "edit_instructions": [
+          "Add 'hills' to the caption."
+        ],
+        "score": 5,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water rocks hills ocean trees\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a boat, water, rocks, people, and trees, but the caption is missing the 'hills' object.\",\n  \"edit_instructions\": \"Add 'hills' to the caption.\",\n  \"score\": 5\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Boats people water rocks hills trees ocean",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills"
+        ],
+        "hallucinated_objects": [
+          "boats"
+        ],
+        "genericity_hint": "The image contains a boat, but the caption suggests there are multiple boats.",
+        "edit_instructions": [
+          "Remove the word 'boats' and add 'trees' and 'hills' to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boats people water rocks hills trees ocean\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\"],\n  \"hallucinated_objects\": [\"boats\"],\n  \"genericity_hint\": \"The image contains a boat, but the caption suggests there are multiple boats.\",\n  \"edit_instructions\": \"Remove the word 'boats' and add 'trees' and 'hills' to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "People water rocks trees hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "boat"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a boat, but the candidate caption does not mention it.",
+        "edit_instructions": [
+          "Add the word 'boat' to the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People water rocks trees hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boat\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a boat, but the candidate caption does not mention it.\",\n  \"edit_instructions\": \"Add the word 'boat' to the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Boat people water rocks trees hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "ocean"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The caption is too generic and does not specify the type of boat or the location.",
+        "edit_instructions": [
+          "Add more specific details to the caption, such as the type of boat and the location."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Boat people water rocks trees hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"ocean\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of boat or the location.\",\n  \"edit_instructions\": \"Add more specific details to the caption, such as the type of boat and the location.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Rowing boat people water hills oceanside trees rocks",
+      "vlm_hint": {
+        "missing_objects": [
+          "boat",
+          "people"
+        ],
+        "hallucinated_objects": [
+          "trees",
+          "hills",
+          "oceanside"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the type of boat or the number of people.",
+        "edit_instructions": [
+          "Specify the type of boat and the number of people."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rowing boat people water hills oceanside trees rocks\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boat\", \"people\"],\n  \"hallucinated_objects\": [\"trees\", \"hills\", \"oceanside\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the type of boat or the number of people.\",\n  \"edit_instructions\": \"Specify the type of boat and the number of people.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Rowing boat with people on calm water near rocky shore",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills"
+        ],
+        "hallucinated_objects": [
+          "rowing boat"
+        ],
+        "genericity_hint": "The image shows a large boat, not a rowing boat.",
+        "edit_instructions": [
+          "Remove the rowing boat and add trees and hills."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Rowing boat with people on calm water near rocky shore\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\"],\n  \"hallucinated_objects\": [\"rowing boat\"],\n  \"genericity_hint\": \"The image shows a large boat, not a rowing boat.\",\n  \"edit_instructions\": \"Remove the rowing boat and add trees and hills.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Large boat people calm water rocky shore trees hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "trees",
+          "hills"
+        ],
+        "hallucinated_objects": [
+          "boat"
+        ],
+        "genericity_hint": "The image contains a boat, but the caption suggests there are multiple boats.",
+        "edit_instructions": [
+          "Remove the mention of multiple boats and add the missing objects."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Large boat people calm water rocky shore trees hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trees\", \"hills\"],\n  \"hallucinated_objects\": [\"boat\"],\n  \"genericity_hint\": \"The image contains a boat, but the caption suggests there are multiple boats.\",\n  \"edit_instructions\": \"Remove the mention of multiple boats and add the missing objects.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "People calm water rocky shore trees hills",
+      "vlm_hint": {
+        "missing_objects": [
+          "boat"
+        ],
+        "hallucinated_objects": [],
+        "genericity_hint": "The image contains a boat, but the candidate caption does not mention it.",
+        "edit_instructions": [
+          "Add the word 'boat' to the candidate caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills, ocean, boat, water, rocks, people, trees, hills]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People calm water rocky shore trees hills\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"boat\"],\n  \"hallucinated_objects\": [],\n  \"genericity_hint\": \"The image contains a boat, but the candidate caption does not mention it.\",\n  \"edit_instructions\": \"Add the word 'boat' to the candidate caption.\",\n  \"score\": 3\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 239274,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000239274.jpg",
+    "final_caption": "People calm water rocky shore trees hills",
+    "total_time_sec": 27.06
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"boat\",\n    \"water\",\n    \"rocks\",\n    \"people\",\n    \"trees\",\n    \"hills\",\n    \"ocean\",\n    \"boat\",\n    \"water\",\n    \"rocks\",\n    \"people\",\n    \"trees\",\n    \"hills\",\n    \"ocean\",\n    \"boat\",\n    \"water\",\n    \"rocks\",\n    \"people\",\n    \"trees\",\n    \"hills\"\n  ]\n}"
+}

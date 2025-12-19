@@ -1,0 +1,242 @@
+{
+  "image_id": 187144,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000187144.jpg",
+  "objects": [
+    "bus",
+    "people",
+    "mountain",
+    "trees",
+    "train",
+    "grass",
+    "road",
+    "sign",
+    "trash can",
+    "sky",
+    "clouds",
+    "hill",
+    "hillside",
+    "mountain range",
+    "bus stop",
+    "bus route",
+    "bus number",
+    "bus destination",
+    "bus route number",
+    "bus route name"
+  ],
+  "template": "We have an image with these objects: ['bus', 'people', 'mountain', 'trees', 'train', 'grass', 'road', 'sign', 'trash can', 'sky', 'clouds', 'hill', 'hillside', 'mountain range', 'bus stop', 'bus route', 'bus number', 'bus destination', 'bus route number', 'bus route name']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "People and buses near a mountain range",
+      "vlm_hint": {
+        "missing_objects": [
+          "train",
+          "trash can",
+          "bus route number",
+          "bus route name"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "mountain range"
+        ],
+        "genericity_hint": "The image contains a bus, but the caption is too generic and does not specify the bus route number or name.",
+        "edit_instructions": [
+          "Add the bus route number and name to the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: People and buses near a mountain range\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"train\", \"trash can\", \"bus route number\", \"bus route name\"],\n  \"hallucinated_objects\": [\"people\", \"mountain range\"],\n  \"genericity_hint\": \"The image contains a bus, but the caption is too generic and does not specify the bus route number or name.\",\n  \"edit_instructions\": \"Add the bus route number and name to the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bus and people by a hillside with a bus route name",
+      "vlm_hint": {
+        "missing_objects": [
+          "train",
+          "trash can"
+        ],
+        "hallucinated_objects": [
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and people, but the specific details of the bus route and number are not provided.",
+        "edit_instructions": [
+          "Remove the bus route number and name from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and people by a hillside with a bus route name\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"train\", \"trash can\"],\n  \"hallucinated_objects\": [\"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and people, but the specific details of the bus route and number are not provided.\",\n  \"edit_instructions\": \"Remove the bus route number and name from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bus and people by a hillside with a train and trash can",
+      "vlm_hint": {
+        "missing_objects": [
+          "train",
+          "trash can"
+        ],
+        "hallucinated_objects": [
+          "people",
+          "hillside"
+        ],
+        "genericity_hint": "The image contains a bus, a train, and a trash can.",
+        "edit_instructions": [
+          "Remove the people and the hillside from the image."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and people by a hillside with a train and trash can\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"train\", \"trash can\"],\n  \"hallucinated_objects\": [\"people\", \"hillside\"],\n  \"genericity_hint\": \"The image contains a bus, a train, and a trash can.\",\n  \"edit_instructions\": \"Remove the people and the hillside from the image.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bus and train near trash can under mountains",
+      "vlm_hint": {
+        "missing_objects": [
+          "people"
+        ],
+        "hallucinated_objects": [
+          "trash can"
+        ],
+        "genericity_hint": "The image contains a bus and a train, but the caption is missing the people and the trash can.",
+        "edit_instructions": [
+          "Add people and remove the trash can from the caption."
+        ],
+        "score": 3,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near trash can under mountains\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"people\"],\n  \"hallucinated_objects\": [\"trash can\"],\n  \"genericity_hint\": \"The image contains a bus and a train, but the caption is missing the people and the trash can.\",\n  \"edit_instructions\": \"Add people and remove the trash can from the caption.\",\n  \"score\": 3\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bus and train near mountains with people on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "bus route",
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and a train near mountains with people on the road.",
+        "edit_instructions": [
+          "Remove the trash can and sign from the image. Do not include any bus route information."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near mountains with people on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"sign\"],\n  \"hallucinated_objects\": [\"bus route\", \"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and a train near mountains with people on the road.\",\n  \"edit_instructions\": \"Remove the trash can and sign from the image. Do not include any bus route information.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bus and train near mountains with people on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "bus route",
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and a train near mountains with people on the road.",
+        "edit_instructions": [
+          "Remove the trash can and sign from the image. Do not include any bus route information."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near mountains with people on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"sign\"],\n  \"hallucinated_objects\": [\"bus route\", \"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and a train near mountains with people on the road.\",\n  \"edit_instructions\": \"Remove the trash can and sign from the image. Do not include any bus route information.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bus and train near mountains with people on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "bus route",
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and a train near mountains with people on the road.",
+        "edit_instructions": [
+          "Remove the trash can and sign from the image. Do not include any bus route information."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near mountains with people on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"sign\"],\n  \"hallucinated_objects\": [\"bus route\", \"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and a train near mountains with people on the road.\",\n  \"edit_instructions\": \"Remove the trash can and sign from the image. Do not include any bus route information.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bus and train near mountains with people on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "bus route",
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and a train near mountains with people on the road.",
+        "edit_instructions": [
+          "Remove the trash can and sign from the image. Do not include any bus route information."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near mountains with people on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"sign\"],\n  \"hallucinated_objects\": [\"bus route\", \"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and a train near mountains with people on the road.\",\n  \"edit_instructions\": \"Remove the trash can and sign from the image. Do not include any bus route information.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bus and train near mountains with people on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "bus route",
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and a train near mountains with people on the road.",
+        "edit_instructions": [
+          "Remove the trash can and sign from the image. Do not include any bus route information."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near mountains with people on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"sign\"],\n  \"hallucinated_objects\": [\"bus route\", \"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and a train near mountains with people on the road.\",\n  \"edit_instructions\": \"Remove the trash can and sign from the image. Do not include any bus route information.\",\n  \"score\": 6\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bus and train near mountains with people on the road",
+      "vlm_hint": {
+        "missing_objects": [
+          "trash can",
+          "sign"
+        ],
+        "hallucinated_objects": [
+          "bus route",
+          "bus route number",
+          "bus route name"
+        ],
+        "genericity_hint": "The image contains a bus and a train near mountains with people on the road.",
+        "edit_instructions": [
+          "Remove the trash can and sign from the image. Do not include any bus route information."
+        ],
+        "score": 6,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [bus, people, mountain, trees, train, grass, road, sign, trash can, sky, clouds, hill, hillside, mountain range, bus stop, bus route, bus number, bus destination, bus route number, bus route name]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bus and train near mountains with people on the road\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"trash can\", \"sign\"],\n  \"hallucinated_objects\": [\"bus route\", \"bus route number\", \"bus route name\"],\n  \"genericity_hint\": \"The image contains a bus and a train near mountains with people on the road.\",\n  \"edit_instructions\": \"Remove the trash can and sign from the image. Do not include any bus route information.\",\n  \"score\": 6\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 187144,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000187144.jpg",
+    "final_caption": "Bus and train near mountains with people on the road",
+    "total_time_sec": 31.13
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"bus\",\n    \"people\",\n    \"mountain\",\n    \"trees\",\n    \"train\",\n    \"grass\",\n    \"road\",\n    \"sign\",\n    \"trash can\",\n    \"sky\",\n    \"clouds\",\n    \"hill\",\n    \"hillside\",\n    \"mountain range\",\n    \"bus stop\",\n    \"bus route\",\n    \"bus number\",\n    \"bus destination\",\n    \"bus route number\",\n    \"bus route name\"\n  ]\n}"
+}

@@ -1,0 +1,378 @@
+{
+  "image_id": 144798,
+  "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000144798.jpg",
+  "objects": [
+    "toilet",
+    "bathtub",
+    "cup",
+    "book",
+    "rubber duck",
+    "toy",
+    "soap dispenser",
+    "tile",
+    "rug",
+    "button",
+    "handle",
+    "spout",
+    "bath mat",
+    "bathtub caddy",
+    "bathtub faucet",
+    "bathtub drain",
+    "bathtub overflow",
+    "bathtub ledge",
+    "bathtub wall",
+    "bathtub floor"
+  ],
+  "template": "We have an image with these objects: ['toilet', 'bathtub', 'cup', 'book', 'rubber duck', 'toy', 'soap dispenser', 'tile', 'rug', 'button', 'handle', 'spout', 'bath mat', 'bathtub caddy', 'bathtub faucet', 'bathtub drain', 'bathtub overflow', 'bathtub ledge', 'bathtub wall', 'bathtub floor']. Generate a caption based only on these objects.",
+  "steps": [
+    {
+      "step": 0,
+      "caption": "Bathtub area with toyssoap dispenser rug",
+      "vlm_hint": {
+        "missing_objects": [
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "toilet"
+        ],
+        "genericity_hint": "The image is of a bathroom with a bathtub, but the caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "The caption should be more specific and include the objects in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathtub area with toyssoap dispenser rug\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"toilet\"],\n  \"genericity_hint\": \"The image is of a bathroom with a bathtub, but the caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"The caption should be more specific and include the objects in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 1,
+      "caption": "Bathtub with toys rubber duck soap dispenser",
+      "vlm_hint": {
+        "missing_objects": [
+          "book",
+          "button",
+          "handle",
+          "spout",
+          "tile",
+          "rug",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "rubber duck",
+          "soap dispenser"
+        ],
+        "genericity_hint": "The image is a bathroom with a bathtub, but the caption is too specific and misses many objects.",
+        "edit_instructions": [
+          "Remove the specific objects and add the missing objects to make the caption more generic."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathtub with toys rubber duck soap dispenser\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"book\", \"button\", \"handle\", \"spout\", \"tile\", \"rug\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"rubber duck\", \"soap dispenser\"],\n  \"genericity_hint\": \"The image is a bathroom with a bathtub, but the caption is too specific and misses many objects.\",\n  \"edit_instructions\": \"Remove the specific objects and add the missing objects to make the caption more generic.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 2,
+      "caption": "Bathroom with bathtub and toys on tile floor near handle and spout.",
+      "vlm_hint": {
+        "missing_objects": [
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "toilet"
+        ],
+        "genericity_hint": "The image is a bathroom with a bathtub and toys on the floor.",
+        "edit_instructions": [
+          "Remove the toilet and add the missing objects to the list."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bathtub and toys on tile floor near handle and spout.\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"toilet\"],\n  \"genericity_hint\": \"The image is a bathroom with a bathtub and toys on the floor.\",\n  \"edit_instructions\": \"Remove the toilet and add the missing objects to the list.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 3,
+      "caption": "Bathroom with bathtub toys soap dispenser and rug",
+      "vlm_hint": {
+        "missing_objects": [
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "toilet",
+          "book",
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bathtub toys soap dispenser and rug\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"toilet\", \"book\", \"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 4,
+      "caption": "Bathroom with bathtub toys soap dispenser rug",
+      "vlm_hint": {
+        "missing_objects": [
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "toilet",
+          "book",
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "genericity_hint": "The caption is too generic and does not specify the objects in the image.",
+        "edit_instructions": [
+          "Provide a more specific caption that includes all the objects in the image."
+        ],
+        "score": 1,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathroom with bathtub toys soap dispenser rug\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"toilet\", \"book\", \"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"genericity_hint\": \"The caption is too generic and does not specify the objects in the image.\",\n  \"edit_instructions\": \"Provide a more specific caption that includes all the objects in the image.\",\n  \"score\": 1\n}"
+      }
+    },
+    {
+      "step": 5,
+      "caption": "Bath with toys soap dispenser rug",
+      "vlm_hint": {
+        "missing_objects": [
+          "rubber duck",
+          "toy",
+          "soap dispenser",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "toilet"
+        ],
+        "genericity_hint": "The image is of a bathroom with a bathtub and a toilet.",
+        "edit_instructions": [
+          "Remove the toilet and add the missing objects to the list."
+        ],
+        "score": 0,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bath with toys soap dispenser rug\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rubber duck\", \"toy\", \"soap dispenser\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"toilet\"],\n  \"genericity_hint\": \"The image is of a bathroom with a bathtub and a toilet.\",\n  \"edit_instructions\": \"Remove the toilet and add the missing objects to the list.\",\n  \"score\": 0\n}"
+      }
+    },
+    {
+      "step": 6,
+      "caption": "Bathtub with toys soap dispenser rug and rubber duck",
+      "vlm_hint": {
+        "missing_objects": [
+          "cup",
+          "book",
+          "tile",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "rubber duck"
+        ],
+        "genericity_hint": "The image is a bathroom scene with a bathtub, but the caption is too generic and misses many details.",
+        "edit_instructions": [
+          "Add more specific details to the caption, such as the presence of a cup, book, and rug, and include the missing objects like the bathtub caddy, faucet, and drain."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathtub with toys soap dispenser rug and rubber duck\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cup\", \"book\", \"tile\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"rubber duck\"],\n  \"genericity_hint\": \"The image is a bathroom scene with a bathtub, but the caption is too generic and misses many details.\",\n  \"edit_instructions\": \"Add more specific details to the caption, such as the presence of a cup, book, and rug, and include the missing objects like the bathtub caddy, faucet, and drain.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 7,
+      "caption": "Bathtub with toys soap dispenser cup book tile caddy faucet drain",
+      "vlm_hint": {
+        "missing_objects": [
+          "rubber duck",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "tile",
+          "caddy"
+        ],
+        "genericity_hint": "The candidate caption is too generic and lacks specific details about the objects in the image.",
+        "edit_instructions": [
+          "Provide a more detailed and accurate caption that includes all the objects present in the image."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathtub with toys soap dispenser cup book tile caddy faucet drain\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"rubber duck\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"tile\", \"caddy\"],\n  \"genericity_hint\": \"The candidate caption is too generic and lacks specific details about the objects in the image.\",\n  \"edit_instructions\": \"Provide a more detailed and accurate caption that includes all the objects present in the image.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 8,
+      "caption": "Bathtub with toys soap dispenser rubber duck handle spout",
+      "vlm_hint": {
+        "missing_objects": [
+          "book",
+          "tile",
+          "rug",
+          "button",
+          "handle",
+          "spout",
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "hallucinated_objects": [
+          "rubber duck"
+        ],
+        "genericity_hint": "The image is of a bathroom with a bathtub, but the caption is too generic and misses many details.",
+        "edit_instructions": [
+          "Add more specific details to the caption, such as the presence of a book, tile, rug, and specific bathtub features."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathtub with toys soap dispenser rubber duck handle spout\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"book\", \"tile\", \"rug\", \"button\", \"handle\", \"spout\", \"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"hallucinated_objects\": [\"rubber duck\"],\n  \"genericity_hint\": \"The image is of a bathroom with a bathtub, but the caption is too generic and misses many details.\",\n  \"edit_instructions\": \"Add more specific details to the caption, such as the presence of a book, tile, rug, and specific bathtub features.\",\n  \"score\": 2\n}"
+      }
+    },
+    {
+      "step": 9,
+      "caption": "Bathtub with toys soap dispenser tile rug handle spout",
+      "vlm_hint": {
+        "missing_objects": [
+          "cup",
+          "book",
+          "rubber duck",
+          "button",
+          "tile",
+          "rug",
+          "handle",
+          "spout"
+        ],
+        "hallucinated_objects": [
+          "bathtub caddy",
+          "bathtub faucet",
+          "bathtub drain",
+          "bathtub overflow",
+          "bathtub ledge",
+          "bathtub wall",
+          "bathtub floor"
+        ],
+        "genericity_hint": "The image is a bathroom scene with a bathtub, but the caption is too generic and misses many key objects.",
+        "edit_instructions": [
+          "Add the missing objects and remove the hallucinated objects from the caption."
+        ],
+        "score": 2,
+        "raw": "system\nYou are a strict caption critic who must follow two rules:\nRule 1: Never quote, repeat, or reveal the candidate caption text.\nRule 2: Never provide a correct caption or a full description of the image.\nGive minimal hints only.\nReturn JSON with keys:\nmissing_objects, hallucinated_objects, genericity_hint, edit_instructions, score (0-10)\nNo other keys.\nuser\nProvided object list: [toilet, bathtub, cup, book, rubber duck, toy, soap dispenser, tile, rug, button, handle, spout, bath mat, bathtub caddy, bathtub faucet, bathtub drain, bathtub overflow, bathtub ledge, bathtub wall, bathtub floor]\nCandidate caption is provided but you must not quote it.\nCandidate caption: Bathtub with toys soap dispenser tile rug handle spout\nReturn only JSON.\nassistant\n{\n  \"missing_objects\": [\"cup\", \"book\", \"rubber duck\", \"button\", \"tile\", \"rug\", \"handle\", \"spout\"],\n  \"hallucinated_objects\": [\"bathtub caddy\", \"bathtub faucet\", \"bathtub drain\", \"bathtub overflow\", \"bathtub ledge\", \"bathtub wall\", \"bathtub floor\"],\n  \"genericity_hint\": \"The image is a bathroom scene with a bathtub, but the caption is too generic and misses many key objects.\",\n  \"edit_instructions\": \"Add the missing objects and remove the hallucinated objects from the caption.\",\n  \"score\": 2\n}"
+      }
+    }
+  ],
+  "summary": {
+    "image_id": 144798,
+    "image_path": "/home/mahyar/UMD_FinalProject/data/val2017/000000144798.jpg",
+    "final_caption": "Bathtub with toys soap dispenser tile rug handle spout",
+    "total_time_sec": 47.2
+  },
+  "qwen_objects_raw": "system\nYou are a visual object inventory tool. Only list objects that are clearly visible and important for a short and high-level image captioning. Return JSON with key 'objects' as a list of strings. Do not add any other keys. Do not describe the scene. Do not describe actions.\nuser\nList up to 20 visible objects. Return only JSON.\nassistant\n{\n  \"objects\": [\n    \"toilet\",\n    \"bathtub\",\n    \"cup\",\n    \"book\",\n    \"rubber duck\",\n    \"toy\",\n    \"soap dispenser\",\n    \"tile\",\n    \"rug\",\n    \"button\",\n    \"handle\",\n    \"spout\",\n    \"bath mat\",\n    \"bathtub caddy\",\n    \"bathtub faucet\",\n    \"bathtub drain\",\n    \"bathtub overflow\",\n    \"bathtub ledge\",\n    \"bathtub wall\",\n    \"bathtub floor\"\n  ]\n}"
+}
