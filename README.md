@@ -24,6 +24,7 @@ This project uses the **COCO 2017 validation dataset**.
 Download **val2017 images** from the official COCO website, and put them under the directory data/
 https://cocodataset.org/#download
 
+### Step 2: Change the directory
 Extract and place the images under:
 data/val2017
 
