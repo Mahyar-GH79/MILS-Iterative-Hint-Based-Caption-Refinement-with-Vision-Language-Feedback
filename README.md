@@ -43,7 +43,7 @@ source env/bin/activate
 
 Install the requirements by executing the following command:
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 ## Running the Pipeline
 Example command to run the batch caption refinement:
